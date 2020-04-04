@@ -58,7 +58,10 @@
      <Compile Include="Assets\Scripts\CSV\CSVReader.cs" />
      <Compile Include="Assets\Scripts\CSV\LocalizeUtil.cs" />
      <Compile Include="Assets\Scripts\CSV\StringUtil.cs" />
-     <Compile Include="Assets\Scripts\UI\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\LoadDataManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+     <Compile Include="Assets\Scripts\UI\UIControl.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/Git/SynergyDungeon/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

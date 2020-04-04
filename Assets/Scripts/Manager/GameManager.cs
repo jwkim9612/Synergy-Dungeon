@@ -21,11 +21,24 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        // 다른 씬으로 이동해도 소멸되지 않음
         DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
-        // uiManager.Initialize();
+        uiManager.Initialize();
+    }
+
+    public void Quit()
+    {
+        // 에디터인 경우 play모드를 false로
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        // 어플리케이션 종료
+        #else
+            Application.Quit();
+        #endif
+
     }
 }

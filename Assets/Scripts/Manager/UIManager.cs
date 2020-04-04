@@ -6,14 +6,22 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private bool isInitialized = false;
+    [SerializeField] private UIControl exitUIControl;
 
+    private bool isInitialized = false;
+    
     //UI 기록
     private Stack<UIControl> uiHistory = new Stack<UIControl>();
 
+    void Awake()
     {
         //매니저 등록
         GameManager.instance.uiManager = this;
+    }
+
+    public void Initialize()
+    {
+        isInitialized = true;
     }
 
     void Start()
@@ -29,7 +37,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowMessage(string _message)
     {
-        messageUI.ShowMessage(_message);
+        //messageUI.ShowMessage(_message);
     }
 
     void Update()
