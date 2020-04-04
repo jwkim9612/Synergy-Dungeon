@@ -18,7 +18,7 @@ public class LoadDataManager : MonoBehaviour
         LoadGameData();
         LoadPlayerData();
 
-        SceneManager.LoadScene("MainScreen");
+        SceneManager.LoadScene("MainScene");
     }
 
     void PlayLoadingAnimation()

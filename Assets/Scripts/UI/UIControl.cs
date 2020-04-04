@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UIControl : MonoBehaviour
 {
-    [SerializeField] private Canvas canvas;
-
     void Start()
     {
 
@@ -14,12 +12,12 @@ public class UIControl : MonoBehaviour
     // 화면에 표시
     public void OnShow()
     {
-        canvas.gameObject.SetActive(true);
+        this.gameObject.SetActive(true);
     }
 
     // 화면에서 숨김
     public void OnHide()
     {
-        canvas.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }
