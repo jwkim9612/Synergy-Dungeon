@@ -1,14 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIControl : MonoBehaviour
 {
-    void Start()
-    {
-
-    }
-
     // 화면에 표시
     public void OnShow()
     {

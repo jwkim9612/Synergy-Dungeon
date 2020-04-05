@@ -1,0 +1,305 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1248e6156bf5d0b42bae9b5a94c3f96a, type: 3}
+  m_Name: Main Character Sheet
+  m_EditorClassIdentifier: 
+  data:
+  - name: "\uB3C4\uB07C \uC804\uC0AC"
+    attack: 1
+    factor: 5
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 00000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uD640\uB9AC \uB098\uC774\uD2B8"
+    attack: 1
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 00000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 01000000
+  - name: "\uC880\uB3C4\uB451"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 00000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 03000000
+  - name: "\uD638\uD06C\uC544\uC774"
+    attack: 1
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 00000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 02000000
+  - name: "\uC2EC\uD310\uAD00"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 00000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uC5D8\uD504 \uAC80\uC0AC"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 01000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uC6B0\uB4DC \uC5D8\uD504"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 01000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 02000000
+  - name: "\uC6CC\uB85D"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 01000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uB3C4\uBE44"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 01000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 03000000
+  - name: "\uD398\uC5B4\uB9AC \uB4DC\uB798\uACE4"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 01000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 05000000
+  - name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 02000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 01000000
+  - name: "\uD751\uB9C8\uBC95\uC0AC"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 02000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uB460"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 02000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uD574\uACE8 \uBCD1\uC0AC"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 03000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uB9AC\uCE58"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 03000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uD761\uD608\uADC0"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 03000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 03000000
+  - name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 03000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 05000000
+  - name: "\uB300\uC9C0\uC758 \uC815\uB839"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 04000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uBB3C\uC758 \uC815\uB839"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 04000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 02000000
+  - name: "\uBD88\uC758 \uC815\uB839"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 04000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 01000000
+  - name: "\uC815\uC2E0\uC758 \uC815\uB839"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 04000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uB55C\uC7A5\uC774"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 05000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 00000000
+  - name: "\uACE0\uCCA0 \uAC70\uC778"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 05000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 01000000
+  - name: "\uC790\uC774\uB85C\uCF65\uD130"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 05000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 02000000
+  - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uB4DC\uB798\uACE4"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 05000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 05000000
+  - name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 06000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 01000000
+  - name: "\uC2A4\uD0EC\uD53C\uB4DC"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 06000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 03000000
+  - name: "\uD4E8\uB9AC\uC628"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 06000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 04000000
+  - name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
+    attack: 0
+    factor: 0
+    describe: 
+    tribeData:
+      Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
+      idxList: 06000000
+    originData:
+      Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+      idxList: 05000000
