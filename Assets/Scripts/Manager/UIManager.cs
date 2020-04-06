@@ -40,6 +40,11 @@ public class UIManager : MonoBehaviour
         //messageUI.ShowMessage(_message);
     }
 
+    public void test(string _message)
+    {
+        Debug.Log("Test");
+    }
+
     void Update()
     {
         //Back키 입력 시 뒤로 가기
