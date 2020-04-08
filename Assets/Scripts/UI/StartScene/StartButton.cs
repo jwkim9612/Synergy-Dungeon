@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadDataManager : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
     void Start()
     {
@@ -14,9 +14,7 @@ public class LoadDataManager : MonoBehaviour
     public void OnClickStartScreen()
     {
         PlayLoadingAnimation();
-
         LoadGameData();
-        LoadPlayerData();
 
         SceneManager.LoadScene("MainScene");
     }
@@ -26,13 +24,10 @@ public class LoadDataManager : MonoBehaviour
         // 로딩 애니메이션 시작
     }
 
-    void LoadPlayerData()
-    {
-        // 플레이어 데이터 로드
-    }
-
     void LoadGameData()
     {
         // 게임 데이터 로드
+        GameManager.instance.gameData = GameManager.instance.dataManager.Load();
+        //GameManager.instance.dataManager.Save(GameManager.instance.gameData);
     }
 }

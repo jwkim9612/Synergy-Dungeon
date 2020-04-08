@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     //매니저들
     public static GameManager instance = null;
     public UIManager uiManager = null;
+    public DataManager dataManager = null;
+
+    public GameData gameData = null;
 
     //파괴되지 않는 싱글턴
     void Awake()
@@ -28,6 +31,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         uiManager.Initialize();
+        dataManager.Initialize();
     }
 
     public void Quit()

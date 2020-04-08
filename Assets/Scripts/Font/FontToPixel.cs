@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FontToPixel : MonoBehaviour
 {
-    [SerializeField] private Font[] fonts;
+    [SerializeField] private Font[] fonts = null;
 
     void Start()
     {

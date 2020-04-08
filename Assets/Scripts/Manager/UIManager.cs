@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private UIControl exitUIControl;
+    [SerializeField] private UIControl exitUIControl = null;
 
     private bool isInitialized = false;
     

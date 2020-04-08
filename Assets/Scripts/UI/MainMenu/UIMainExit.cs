@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIMainExit : UIControl
 {
-    [SerializeField] private Button exitButton;
+    [SerializeField] private Button exitButton = null;
 
     void Start()
     {
