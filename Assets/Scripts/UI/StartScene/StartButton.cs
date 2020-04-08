@@ -27,7 +27,5 @@ public class StartButton : MonoBehaviour
     void LoadGameData()
     {
         // 게임 데이터 로드
-        GameManager.instance.gameData = GameManager.instance.dataManager.Load();
-        //GameManager.instance.dataManager.Save(GameManager.instance.gameData);
     }
 }
