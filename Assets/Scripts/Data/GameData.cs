@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-[System.Serializable]
+//[System.Serializable]
 public class GameData
 {
     public int level = 1;

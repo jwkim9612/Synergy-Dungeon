@@ -10,7 +10,8 @@ public class UIMainOption : UIControl
 
     void Start()
     {
-
+        bgmSoundSlider.value = PlayerPrefs.GetInt("BGMSound");
+        effectSoundSlider.value = PlayerPrefs.GetInt("EffectSound");
     }
 
     public void OnBGMSoundValueChanged()

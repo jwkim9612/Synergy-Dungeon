@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public UIManager uiManager = null;
     public SoundManager soundManager = null;
+    public DataManager dataManager = null;
 
     public GameData gameData = null;
 
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         uiManager.Initialize();
         soundManager.Initialize();
+        dataManager.Initialize();
     }
 
     public void Quit()

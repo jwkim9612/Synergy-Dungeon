@@ -6,7 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public void Initialize()
     {
-        if(!PlayerPrefs.HasKey("BGMSound") || !PlayerPrefs.HasKey("EffectSound"))
+        if(IsFirstTime())
         {
             PlayerPrefs.SetInt("BGMSound", 100);
             PlayerPrefs.SetInt("EffectSound", 100);
@@ -23,5 +23,17 @@ public class SoundManager : MonoBehaviour
     public void UpdateEffectSound()
     {
         // effect 소리 크기 변경
+    }
+
+    public bool IsFirstTime()
+    {
+        if(!PlayerPrefs.HasKey("BGMSound") || !PlayerPrefs.HasKey("EffectSound"))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
