@@ -8,16 +8,6 @@ public class DataManager : MonoBehaviour
 {
     public CharacterSheet characterDatas;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //GameData gameData = new GameData();
-      //  string jsonData = ObjectToJson(gameData);
-        //Debug.Log(jsonData);
-
-        
-    }
-
     public void Initialize()
     {
 

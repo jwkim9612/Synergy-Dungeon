@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class UICharacterSlot : MonoBehaviour
 {
-    [SerializeField] private GameObject chararcterSlot = null;
-
     [SerializeField] private Image character = null;
     // name으로하면 겹침
     [SerializeField] private Text characterName = null;
@@ -20,13 +18,13 @@ public class UICharacterSlot : MonoBehaviour
 
     }
 
-    public void setName(string name)
+    public void SetName(string name)
     {
         characterName.text = name;
     }
 
-    public void SetActive(bool Value)
+    public void OnClicked()
     {
-        chararcterSlot.SetActive(Value);
+        Debug.Log("Clicked");
     }
 }
