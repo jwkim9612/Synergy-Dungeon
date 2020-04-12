@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Main Tribe
   m_EditorClassIdentifier: 
   data:
-  - name: "\uD734\uBA3C"
-  - name: "\uC5D8\uD504"
-  - name: "\uC545\uB9C8"
-  - name: "\uC5B8\uB370\uB4DC"
-  - name: "\uC815\uB839"
-  - name: "\uAE30\uACC4"
-  - name: "\uBE44\uC2A4\uD2B8"
+  - tribe: 1
+  - tribe: 2
+  - tribe: 3
+  - tribe: 4
+  - tribe: 5
+  - tribe: 6
+  - tribe: 7

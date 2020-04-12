@@ -8,14 +8,11 @@ public class UICharacterSlot : MonoBehaviour
 {
     [SerializeField] private UICharacterInfo characterInfo = null;
 
-    [SerializeField] private Image character = null;
     // name으로하면 겹침
     [SerializeField] private Text characterName = null;
-    [SerializeField] private Text Upgrade = null;
-    [SerializeField] private Image tribe = null;
-    [SerializeField] private Image origin = null;
+    [SerializeField] private Image costBorder = null;
 
-    private CharacterData characterData;
+    public CharacterData characterData { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +25,33 @@ public class UICharacterSlot : MonoBehaviour
         characterData = newCharacterData;
 
         characterName.text = characterData.name;
+
+        SetCostBorder(characterData.cost);
+    }
+
+    public void SetCostBorder(Cost cost)
+    {
+        switch (cost)
+        {
+            case Cost.One:
+                costBorder.color = Color.gray;
+                break;
+            case Cost.Two:
+                costBorder.color = Color.green;
+                break;
+            case Cost.Three:
+                costBorder.color = Color.blue;
+                break;
+            case Cost.Four:
+                costBorder.color = Color.red;
+                break;
+            case Cost.Five:
+                costBorder.color = Color.yellow;
+                break;
+            default:
+                Debug.Log("Error SetCostBorder");
+                break;
+        }
     }
 
     public void OnClicked()

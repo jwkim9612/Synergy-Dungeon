@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - name: "\uC6CC\uB9AC\uC5B4"
+    origin: 1
   - name: "\uB098\uC774\uD2B8"
+    origin: 2
   - name: "\uC544\uCC98"
+    origin: 3
   - name: "\uC2DC\uD504"
+    origin: 4
   - name: "\uC0AC\uC81C"
+    origin: 5
   - name: "\uB4DC\uB798\uACE4"
+    origin: 6

@@ -8,7 +8,7 @@ namespace geniikw.DataSheetLab
     [Serializable]
     public class TribeData
     {
-        public string name;
+        public Tribe tribe;
         
     }
 

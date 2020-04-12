@@ -8,7 +8,7 @@ namespace geniikw.DataSheetLab
     [Serializable]
     public class OriginData
     {
-        public string name;
+        public Origin origin;
 
     }
 

@@ -15,16 +15,18 @@ namespace geniikw.DataSheetLab
         /// <summary>
         /// 종족
         /// </summary>
-        public string tribeStr { get { return tribeData.idxList.Count == 1 ? tribeData.Sheet[tribeData.idxList[0]].name : "null"; } }
+        public Tribe tribeEnum { get { return tribeData.idxList.Count == 1 ? tribeData.Sheet[tribeData.idxList[0]].tribe : Tribe.None; } }
         /// <summary>
         /// 태생
         /// </summary>
-        public string originStr { get { return originData.idxList.Count == 1 ? originData.Sheet[originData.idxList[0]].name : "null"; } }
+        public Origin originEnum { get { return originData.idxList.Count == 1 ? originData.Sheet[originData.idxList[0]].origin : Origin.None; } }
 
         [BigCheck(30)]
         public int attack;
         [BigCheck(30)]
         public float factor;
+        [BigCheck(30)]
+        public Cost cost;
 
         public string describe;
 
