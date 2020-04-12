@@ -20,7 +20,7 @@ public class UICharacterList : MonoBehaviour
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlot, girdLayoutGroup.transform);
-            slot.SetName(characterData.name);
+            slot.SetCharacterData(characterData);
         }
     }
 }

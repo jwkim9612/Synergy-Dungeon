@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIControl : MonoBehaviour
 {
     // 화면에 표시
-    public void OnShow()
+    public virtual void OnShow()
     {
         this.gameObject.SetActive(true);
     }
