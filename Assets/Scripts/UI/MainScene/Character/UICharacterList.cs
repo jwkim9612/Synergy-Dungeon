@@ -22,7 +22,7 @@ public class UICharacterList : MonoBehaviour
 
     private void CreateCharacterList()
     {
-        var characterDatas = GameManager.instance.dataManager.characterDatas;
+        var characterDatas = GameManager.instance.playerDataManager.characterDatas;
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlot, girdLayoutGroup.transform);

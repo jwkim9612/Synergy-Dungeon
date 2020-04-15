@@ -8,25 +8,43 @@ public class UICharacterSlot : MonoBehaviour
 {
     [SerializeField] private UICharacterInfo characterInfo = null;
 
-    // name으로하면 겹침
     [SerializeField] private Text characterName = null;
+    [SerializeField] private Image image = null;
     [SerializeField] private Image costBorder = null;
-
+    
     public CharacterData characterData { get; set; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public void SetCharacterData(CharacterData newCharacterData)
     {
         characterData = newCharacterData;
 
-        characterName.text = characterData.name;
-
+        SetName(characterData.name);
+        SetImage(characterData.image);
         SetCostBorder(characterData.cost);
+    }
+
+    public void SetName(string name)
+    {
+        if(name != null)
+        {
+            characterName.text = name;
+        }
+        else
+        {
+            Debug.Log("No Name");
+        }
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        if (sprite != null)
+        {
+            image.sprite = sprite;
+        }
+        else
+        {
+            Debug.Log("No Image");
+        }
     }
 
     public void SetCostBorder(Cost cost)

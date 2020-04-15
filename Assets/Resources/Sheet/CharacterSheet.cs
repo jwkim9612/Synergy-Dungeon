@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 namespace geniikw.DataSheetLab
@@ -12,6 +13,10 @@ namespace geniikw.DataSheetLab
         /// 이름
         /// </summary>
         public string name;
+        /// <summary>
+        /// 이미지
+        /// </summary>
+        public Sprite image;
         /// <summary>
         /// 종족
         /// </summary>
