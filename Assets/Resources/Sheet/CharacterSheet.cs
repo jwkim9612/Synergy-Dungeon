@@ -20,11 +20,11 @@ namespace geniikw.DataSheetLab
         /// <summary>
         /// 종족
         /// </summary>
-        public Tribe tribeEnum { get { return tribeData.idxList.Count == 1 ? tribeData.Sheet[tribeData.idxList[0]].tribe : Tribe.None; } }
+        public Tribe tribe { get { return tribeData.idxList.Count == 1 ? tribeData.Sheet[tribeData.idxList[0]].tribe : Tribe.None; } }
         /// <summary>
         /// 태생
         /// </summary>
-        public Origin originEnum { get { return originData.idxList.Count == 1 ? originData.Sheet[originData.idxList[0]].origin : Origin.None; } }
+        public Origin origin { get { return originData.idxList.Count == 1 ? originData.Sheet[originData.idxList[0]].origin : Origin.None; } }
 
         [BigCheck(30)]
         public int attack;

@@ -7,7 +7,7 @@ using geniikw.DataSheetLab;
 public class UICharacterInfo : UIControl
 { 
     [SerializeField] private Text characterName = null;
-    [SerializeField] private Image image = null;
+    [SerializeField] private Image characterimage = null;
 
     private CharacterData characterData;
 
@@ -27,7 +27,7 @@ public class UICharacterInfo : UIControl
         }
         else
         {
-            Debug.Log("No Name");
+            Debug.Log("No Character Name");
         }
     }
 
@@ -35,18 +35,11 @@ public class UICharacterInfo : UIControl
     {
         if (sprite != null)
         {
-            image.sprite = sprite;
+            characterimage.sprite = sprite;
         }
         else
         {
-            Debug.Log("No Image");
+            Debug.Log("No Character Image");
         }
-    }
-
-    public override void OnShow()
-    {
-        characterName.text = characterData.name;
-
-        base.OnShow();
     }
 }

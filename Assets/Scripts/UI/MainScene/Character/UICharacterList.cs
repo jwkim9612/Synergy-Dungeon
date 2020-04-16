@@ -42,13 +42,13 @@ public class UICharacterList : MonoBehaviour
                 continue;
             }
 
-            if (!(characterSlot.characterData.tribeEnum == currentTribe || Tribe.None == currentTribe))
+            if (!(characterSlot.characterData.tribe == currentTribe || Tribe.None == currentTribe))
             {
                 characterSlot.gameObject.SetActive(false);
                 continue;
             }
 
-            if (!(characterSlot.characterData.originEnum == currentOrigin || Origin.None == currentOrigin))
+            if (!(characterSlot.characterData.origin == currentOrigin || Origin.None == currentOrigin))
             {
                 characterSlot.gameObject.SetActive(false);
                 continue;

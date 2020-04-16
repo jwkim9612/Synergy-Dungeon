@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public PlayerDataManager playerDataManager = null;
     public MonsterDataManager monsterDataManager = null;
     public StageDataManager stageDataManager = null;
+    public SynergyManager synergyManager = null;
 
     public GameData gameData = null;
 

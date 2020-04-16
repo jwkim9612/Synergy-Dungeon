@@ -9,7 +9,8 @@ namespace geniikw.DataSheetLab
     public class OriginData
     {
         public Origin origin;
-
+        public Sprite image;
+        public string description;
     }
 
     [CreateAssetMenu]

@@ -9,7 +9,8 @@ namespace geniikw.DataSheetLab
     public class TribeData
     {
         public Tribe tribe;
-        
+        public Sprite image;
+        public string description;
     }
 
     [CreateAssetMenu]

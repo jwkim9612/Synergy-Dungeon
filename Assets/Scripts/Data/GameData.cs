@@ -34,7 +34,7 @@ public enum Origin
     None,
     Warrior,
     Knight,
-    Anchor,
+    Archer,
     Thief, 
     Priest,
     Dragon,
