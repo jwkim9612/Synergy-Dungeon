@@ -12,7 +12,7 @@ public class UIControl : MonoBehaviour
     }
 
     // 화면에서 숨김
-    public void OnHide()
+    public virtual void OnHide()
     {
         this.gameObject.SetActive(false);
     }

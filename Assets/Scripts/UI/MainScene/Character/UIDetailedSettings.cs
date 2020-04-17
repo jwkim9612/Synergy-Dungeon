@@ -8,10 +8,10 @@ public class UIDetailedSettings : MonoBehaviour
     delegate void OnDetailedSettingChangedDelegate();
     OnDetailedSettingChangedDelegate OnDetailedSettingChanged;
 
-    [SerializeField] private UICharacterList characterList;
-    [SerializeField] private Dropdown cost;
-    [SerializeField] private Dropdown tribe;
-    [SerializeField] private Dropdown origin;
+    [SerializeField] private UICharacterList characterList = null;
+    [SerializeField] private Dropdown cost = null;
+    [SerializeField] private Dropdown tribe = null;
+    [SerializeField] private Dropdown origin = null;
 
     void Start()
     {

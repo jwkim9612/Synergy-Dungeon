@@ -25,7 +25,7 @@ public class UIChooseStage : UIControl
         });
 
         backButton.onClick.AddListener(() => {
-            simpleScrollSnap.GoToPanel(uiWorld.selectedStage - 1); 
+            simpleScrollSnap.GoToPanel(uiWorld.selectedStage - 1);
         });
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
@@ -55,4 +55,8 @@ public class UIChooseStage : UIControl
         }
     }
 
+    //public override void OnHide()
+    //{
+    //    base.OnHide();
+    //}
 }

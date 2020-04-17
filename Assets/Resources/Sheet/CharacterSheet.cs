@@ -33,7 +33,37 @@ namespace geniikw.DataSheetLab
         [BigCheck(30)]
         public Cost cost;
 
-        public string describe;
+        public Color colorCost 
+        { 
+            get
+            {
+                Color temp = new Color();
+                switch (cost)
+                {
+                    case Cost.One:
+                        temp = Color.gray;
+                        break;
+                    case Cost.Two:
+                        temp = Color.green;
+                        break;
+                    case Cost.Three:
+                        temp = Color.blue;
+                        break;
+                    case Cost.Four:
+                        temp = Color.red;
+                        break;
+                    case Cost.Five:
+                        temp = Color.yellow;
+                        break;
+                    default:
+                        Debug.Log("Error SetCostBorder");
+                        break;
+                }
+                return temp;
+            }
+        }
+
+    public string describe;
 
         [BigCheck(30)]
         [SmallCheck(10)]

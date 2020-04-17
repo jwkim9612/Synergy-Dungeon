@@ -12,7 +12,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public void Initialize()
     {
-
+        
     }
 
     string ObjectToJson(object obj)

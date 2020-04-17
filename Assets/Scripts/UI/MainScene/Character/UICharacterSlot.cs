@@ -19,7 +19,7 @@ public class UICharacterSlot : MonoBehaviour
 
         SetName(characterData.name);
         SetImage(characterData.image);
-        SetCostBorder(characterData.cost);
+        SetCostBorder(characterData.colorCost);
     }
 
     public void SetName(string name)
@@ -46,29 +46,9 @@ public class UICharacterSlot : MonoBehaviour
         }
     }
 
-    public void SetCostBorder(Cost cost)
+    public void SetCostBorder(Color color)
     {
-        switch (cost)
-        {
-            case Cost.One:
-                costBorder.color = Color.gray;
-                break;
-            case Cost.Two:
-                costBorder.color = Color.green;
-                break;
-            case Cost.Three:
-                costBorder.color = Color.blue;
-                break;
-            case Cost.Four:
-                costBorder.color = Color.red;
-                break;
-            case Cost.Five:
-                costBorder.color = Color.yellow;
-                break;
-            default:
-                Debug.Log("Error SetCostBorder");
-                break;
-        }
+        costBorder.color = color;
     }
 
     public void OnClicked()

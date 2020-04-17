@@ -19,7 +19,7 @@ public class UISynergySlot : MonoBehaviour
         tribeData = newTribeData;
 
         Setimage(tribeData.image);
-        SetName(tribeData.tribe);
+        SetName(tribeData.strTribe);
     }
 
     public void SetSynergyData(OriginData newOriginData)
@@ -28,7 +28,7 @@ public class UISynergySlot : MonoBehaviour
         originData = newOriginData;
 
         Setimage(originData.image);
-        SetName(originData.origin);
+        SetName(originData.strOrigin);
     }
 
     public void Setimage(Sprite sprite)
@@ -43,57 +43,9 @@ public class UISynergySlot : MonoBehaviour
         }
     }
 
-    public void SetName(Tribe tribe)
+    public void SetName(string name)
     {
-        switch (tribe)
-        {
-            case Tribe.Human:
-                synergyName.text = "휴먼";
-                break;
-            case Tribe.Elf:
-                synergyName.text = "엘프";
-                break;
-            case Tribe.Devil:
-                synergyName.text = "악마";
-                break;
-            case Tribe.Undead:
-                synergyName.text = "언데드";
-                break;
-            case Tribe.Elemental:
-                synergyName.text = "정령";
-                break;
-            case Tribe.Machine:
-                synergyName.text = "기계";
-                break;
-            case Tribe.Beast:
-                synergyName.text = "야수";
-                break;
-        }
-    }
-
-    public void SetName(Origin origin)
-    {
-        switch (origin)
-        {
-            case Origin.Warrior:
-                synergyName.text = "전사";
-                break;
-            case Origin.Knight:
-                synergyName.text = "기사";
-                break;
-            case Origin.Archer:
-                synergyName.text = "궁수";
-                break; 
-            case Origin.Thief:
-                synergyName.text = "도적";
-                break;
-            case Origin.Priest:
-                synergyName.text = "프리스트";
-                break;
-            case Origin.Dragon:
-                synergyName.text = "드래곤";
-                break;
-        }
+        synergyName.text = name;
     }
 
     public void OnClicked()

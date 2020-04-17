@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class UIBattleLog : MonoBehaviour
 {
-    [SerializeField] private Text logText;
-    [SerializeField] private RectTransform logRect;
+    [SerializeField] private Text logText = null;
+    [SerializeField] private RectTransform logRect = null;
 
     [SerializeField] private float anchorMaxY = 0.8f;
     [SerializeField] private float anchorMinY = 0.6f;

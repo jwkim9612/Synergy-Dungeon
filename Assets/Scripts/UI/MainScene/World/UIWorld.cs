@@ -8,9 +8,9 @@ public class UIWorld : MonoBehaviour
 {
     public int selectedStage = 1;
 
-    [SerializeField] private Button playButton;
-    [SerializeField] private Text stageTitle;
-    [SerializeField] private Image stageImage;
+    [SerializeField] private Button playButton = null;
+    [SerializeField] private Text stageTitle = null;
+    [SerializeField] private Image stageImage = null;
 
     void Start()
     {
@@ -21,11 +21,6 @@ public class UIWorld : MonoBehaviour
 
         UpdateStageInfo();
     }
-
-    //public void SetStageTitle(string title)
-    //{
-    //    stageTitle.text = title;
-    //}
 
     // selectedStage를 설정한 후 사용해주면 된다.
     public void UpdateStageInfo()
