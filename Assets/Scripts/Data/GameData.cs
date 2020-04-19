@@ -7,7 +7,7 @@ public class GameData
     public int coin = 0;
 }
 
-public enum Cost
+public enum Tier
 { 
     None,
     One,

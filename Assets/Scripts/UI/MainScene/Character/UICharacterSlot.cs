@@ -19,7 +19,7 @@ public class UICharacterSlot : MonoBehaviour
 
         SetName(characterData.name);
         SetImage(characterData.image);
-        SetCostBorder(characterData.colorCost);
+        SetTierBorder(characterData.tierColor);
     }
 
     public void SetName(string name)
@@ -46,7 +46,7 @@ public class UICharacterSlot : MonoBehaviour
         }
     }
 
-    public void SetCostBorder(Color color)
+    public void SetTierBorder(Color color)
     {
         costBorder.color = color;
     }

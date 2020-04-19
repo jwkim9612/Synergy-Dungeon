@@ -15,7 +15,7 @@ public class UIWorld : MonoBehaviour
     void Start()
     {
         playButton.onClick.AddListener(() => {
-            // LoadStageData 추가
+            GameManager.instance.inGameManager.Initialize();
             SceneManager.LoadScene("InGame");
         });
 

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Main Character Sheet
   m_EditorClassIdentifier: 
   data:
-  - name: "\uB3C4\uB07C \uC804\uC0AC"
+  - id: 0
+    name: "\uB3C4\uB07C \uC804\uC0AC"
     image: {fileID: 21300000, guid: 95663a3a240a2244f855968fd7b1c547, type: 3}
     attack: 1
     factor: 5
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -25,11 +26,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uD640\uB9AC \uB098\uC774\uD2B8"
+  - id: 1
+    name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     image: {fileID: 21300000, guid: 8e9d6c8867798c0479dfe648c4437f50, type: 3}
     attack: 1
     factor: 0
-    cost: 2
+    tier: 2
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -37,11 +39,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 01000000
-  - name: "\uC880\uB3C4\uB451"
+  - id: 2
+    name: "\uC880\uB3C4\uB451"
     image: {fileID: 21300000, guid: 8d698d0a5263b7b4d91abffcf852a7f8, type: 3}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -49,11 +52,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 03000000
-  - name: "\uD638\uD06C\uC544\uC774"
+  - id: 3
+    name: "\uD638\uD06C\uC544\uC774"
     image: {fileID: 21300000, guid: b232b931b51e0dc4b81f864b0b568408, type: 3}
     attack: 1
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -61,11 +65,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 02000000
-  - name: "\uC2EC\uD310\uAD00"
+  - id: 4
+    name: "\uC2EC\uD310\uAD00"
     image: {fileID: 21300000, guid: d5c88da45fcb77240946683aac0dd7c4, type: 3}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -73,11 +78,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uC5D8\uD504 \uAC80\uC0AC"
+  - id: 5
+    name: "\uC5D8\uD504 \uAC80\uC0AC"
     image: {fileID: 21300000, guid: d27fd2d489b001440ac413fd1a763d86, type: 3}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -85,11 +91,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uC6B0\uB4DC \uC5D8\uD504"
+  - id: 6
+    name: "\uC6B0\uB4DC \uC5D8\uD504"
     image: {fileID: 21300000, guid: f1710865fc9e37c419779274d683cccc, type: 3}
     attack: 0
     factor: 0
-    cost: 2
+    tier: 2
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -97,11 +104,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 02000000
-  - name: "\uC6CC\uB85D"
+  - id: 7
+    name: "\uC6CC\uB85D"
     image: {fileID: 21300000, guid: ce6279794928c6c4e8f8715e5b7b182a, type: 3}
     attack: 0
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -109,11 +117,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uB3C4\uBE44"
+  - id: 8
+    name: "\uB3C4\uBE44"
     image: {fileID: 21300000, guid: 5f13a7c1e8ae7cc40881155bb1de15e8, type: 3}
     attack: 0
     factor: 0
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -121,11 +130,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 03000000
-  - name: "\uD398\uC5B4\uB9AC \uB4DC\uB798\uACE4"
+  - id: 9
+    name: "\uD398\uC5B4\uB9AC \uB4DC\uB798\uACE4"
     image: {fileID: 21300000, guid: 377fe1d6e7621c64f9fd0f81ddf5c29d, type: 3}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -133,11 +143,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 05000000
-  - name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
+  - id: 10
+    name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     image: {fileID: 21300000, guid: d95d7836fd3268543998f66154e57ead, type: 3}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -145,11 +156,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 01000000
-  - name: "\uD751\uB9C8\uBC95\uC0AC"
+  - id: 11
+    name: "\uD751\uB9C8\uBC95\uC0AC"
     image: {fileID: 21300000, guid: 9b7e73686de4ed147a2e14563b9379a3, type: 3}
     attack: 0
     factor: 0
-    cost: 2
+    tier: 2
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -157,11 +169,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uB460"
+  - id: 12
+    name: "\uB460"
     image: {fileID: 21300000, guid: 9d4460deafe53854182adb9167c91568, type: 3}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -169,11 +182,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uD574\uACE8 \uBCD1\uC0AC"
+  - id: 13
+    name: "\uD574\uACE8 \uBCD1\uC0AC"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 2
+    tier: 2
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -181,11 +195,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uB9AC\uCE58"
+  - id: 14
+    name: "\uB9AC\uCE58"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -193,11 +208,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uD761\uD608\uADC0"
+  - id: 15
+    name: "\uD761\uD608\uADC0"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -205,11 +221,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 03000000
-  - name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
+  - id: 16
+    name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -217,11 +234,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 05000000
-  - name: "\uB300\uC9C0\uC758 \uC815\uB839"
+  - id: 17
+    name: "\uB300\uC9C0\uC758 \uC815\uB839"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -229,11 +247,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uBB3C\uC758 \uC815\uB839"
+  - id: 18
+    name: "\uBB3C\uC758 \uC815\uB839"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -241,11 +260,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 02000000
-  - name: "\uBD88\uC758 \uC815\uB839"
+  - id: 19
+    name: "\uBD88\uC758 \uC815\uB839"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -253,11 +273,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 01000000
-  - name: "\uC815\uC2E0\uC758 \uC815\uB839"
+  - id: 20
+    name: "\uC815\uC2E0\uC758 \uC815\uB839"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -265,11 +286,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uB55C\uC7A5\uC774"
+  - id: 21
+    name: "\uB55C\uC7A5\uC774"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -277,11 +299,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 00000000
-  - name: "\uACE0\uCCA0 \uAC70\uC778"
+  - id: 22
+    name: "\uACE0\uCCA0 \uAC70\uC778"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -289,11 +312,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 01000000
-  - name: "\uC790\uC774\uB85C\uCF65\uD130"
+  - id: 23
+    name: "\uC790\uC774\uB85C\uCF65\uD130"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 5
+    tier: 5
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -301,11 +325,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 02000000
-  - name: "\uD06C\uB9AC\uC2A4\uD0C8 \uB4DC\uB798\uACE4"
+  - id: 24
+    name: "\uD06C\uB9AC\uC2A4\uD0C8 \uB4DC\uB798\uACE4"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -313,11 +338,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 05000000
-  - name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
+  - id: 25
+    name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 1
+    tier: 1
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -325,11 +351,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 01000000
-  - name: "\uC2A4\uD0EC\uD53C\uB4DC"
+  - id: 26
+    name: "\uC2A4\uD0EC\uD53C\uB4DC"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 3
+    tier: 3
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -337,11 +364,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 03000000
-  - name: "\uD4E8\uB9AC\uC628"
+  - id: 27
+    name: "\uD4E8\uB9AC\uC628"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 4
+    tier: 4
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
@@ -349,11 +377,12 @@ MonoBehaviour:
     originData:
       Sheet: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
       idxList: 04000000
-  - name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
+  - id: 28
+    name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 2
+    tier: 2
     describe: 
     tribeData:
       Sheet: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}

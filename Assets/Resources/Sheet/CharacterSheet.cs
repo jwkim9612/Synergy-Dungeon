@@ -10,6 +10,10 @@ namespace geniikw.DataSheetLab
     public class CharacterData
     {
         /// <summary>
+        /// 고유 아이디
+        /// </summary>
+        public int id;
+        /// <summary>
         /// 이름
         /// </summary>
         public string name;
@@ -31,35 +35,35 @@ namespace geniikw.DataSheetLab
         [BigCheck(30)]
         public float factor;
         [BigCheck(30)]
-        public Cost cost;
+        public Tier tier;
 
-        public Color colorCost 
+        public Color tierColor
         { 
             get
             {
-                Color temp = new Color();
-                switch (cost)
+                Color color = new Color();
+                switch (tier)
                 {
-                    case Cost.One:
-                        temp = Color.gray;
+                    case Tier.One:
+                        color = Color.gray;
                         break;
-                    case Cost.Two:
-                        temp = Color.green;
+                    case Tier.Two:
+                        color = Color.green;
                         break;
-                    case Cost.Three:
-                        temp = Color.blue;
+                    case Tier.Three:
+                        color = Color.blue;
                         break;
-                    case Cost.Four:
-                        temp = Color.red;
+                    case Tier.Four:
+                        color = Color.red;
                         break;
-                    case Cost.Five:
-                        temp = Color.yellow;
+                    case Tier.Five:
+                        color = Color.yellow;
                         break;
                     default:
                         Debug.Log("Error SetCostBorder");
                         break;
                 }
-                return temp;
+                return color;
             }
         }
 

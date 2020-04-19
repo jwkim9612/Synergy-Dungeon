@@ -10,7 +10,7 @@ public class UICharacterList : MonoBehaviour
 
     private List<UICharacterSlot> characterSlots = new List<UICharacterSlot>();
 
-    public Cost currentCost { get; set; } = Cost.None;
+    public Tier currentTier { get; set; } = Tier.None;
     public Tribe currentTribe { get; set; } = Tribe.None;
     public Origin currentOrigin { get; set; } = Origin.None;
 
@@ -22,7 +22,7 @@ public class UICharacterList : MonoBehaviour
 
     private void CreateCharacterList()
     {
-        var characterDatas = GameManager.instance.playerDataManager.characterDatas;
+        var characterDatas = GameManager.instance.characterManager.characterDatas;
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlot, girdLayoutGroup.transform);
@@ -36,7 +36,7 @@ public class UICharacterList : MonoBehaviour
         foreach (var characterSlot in characterSlots)
         {
             // 현재 정렬값이 캐릭터의 정렬값과 같지 않거나, 모든(None)값이 아니면
-            if (!(characterSlot.characterData.cost == currentCost || Cost.None == currentCost))
+            if (!(characterSlot.characterData.tier == currentTier || Tier.None == currentTier))
             {
                 characterSlot.gameObject.SetActive(false);
                 continue;

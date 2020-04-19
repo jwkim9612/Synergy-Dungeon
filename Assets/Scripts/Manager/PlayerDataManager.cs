@@ -8,8 +8,6 @@ public class PlayerDataManager : MonoBehaviour
 {
     // 플레이어의 데이터를 관리해주는 매니저
 
-    public CharacterSheet characterDatas;
-
     public void Initialize()
     {
         

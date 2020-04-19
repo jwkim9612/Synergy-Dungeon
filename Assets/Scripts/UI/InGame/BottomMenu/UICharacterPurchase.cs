@@ -1,27 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SharedService;
 
 public class UICharacterPurchase : MonoBehaviour
 {
-    const int NumOfCards = 29;
-
-    [SerializeField] private UICharacterCard[] card = null;
+    [SerializeField] private UICharacterCard[] cards = null;
+    public StockService stockService = null;
 
     void Start()
     {
-        card[0].SetCard(GameManager.instance.playerDataManager.characterDatas[0]);
-        card[1].SetCard(GameManager.instance.playerDataManager.characterDatas[1]);
-        card[2].SetCard(GameManager.instance.playerDataManager.characterDatas[2]);
-        card[3].SetCard(GameManager.instance.playerDataManager.characterDatas[3]);
+        stockService = GameManager.instance.inGameManager.stockService;
+
+        foreach(var card in cards)
+        {
+            card.isBoughtCard = true;
+        }
+
+        Shuffle();
     }
 
     public void Shuffle()
     {
-        for(int i = 0; i < 4; ++i)
+        foreach(var card in cards)
         {
-            int index = Random.Range(0, NumOfCards - 1);
-            card[i].SetCard(GameManager.instance.playerDataManager.characterDatas[index]);
+            if (!(card.isBoughtCard))
+            {
+                Debug.Log("In ! isboughtcard");
+                int cardId = card.characterData.id;
+                stockService.AddStockId(cardId);
+            }
+
+            int id = stockService.GetRandomId(Tier.One);
+            card.SetCard(GameManager.instance.characterManager.characterDatas[id]);
+            card.isBoughtCard = false;
         }
     }
 }

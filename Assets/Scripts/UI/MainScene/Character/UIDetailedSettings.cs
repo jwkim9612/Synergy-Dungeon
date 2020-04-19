@@ -9,7 +9,7 @@ public class UIDetailedSettings : MonoBehaviour
     OnDetailedSettingChangedDelegate OnDetailedSettingChanged;
 
     [SerializeField] private UICharacterList characterList = null;
-    [SerializeField] private Dropdown cost = null;
+    [SerializeField] private Dropdown tier = null;
     [SerializeField] private Dropdown tribe = null;
     [SerializeField] private Dropdown origin = null;
 
@@ -20,7 +20,7 @@ public class UIDetailedSettings : MonoBehaviour
 
     public void OnCostValueChanged()
     {
-        characterList.currentCost = (Cost)cost.value;
+        characterList.currentTier = (Tier)tier.value;
         OnDetailedSettingChanged();
     }
 

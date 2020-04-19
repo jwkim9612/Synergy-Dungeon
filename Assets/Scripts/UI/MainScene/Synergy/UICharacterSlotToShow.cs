@@ -18,7 +18,7 @@ public class UICharacterSlotToShow : MonoBehaviour
 
         SetName(characterData.name);
         SetImage(characterData.image);
-        SetCostBorder(characterData.cost);
+        SetCostBorder(characterData.tier);
     }
 
     public void SetName(string name)
@@ -45,23 +45,23 @@ public class UICharacterSlotToShow : MonoBehaviour
         }
     }
 
-    public void SetCostBorder(Cost cost)
+    public void SetCostBorder(Tier tier)
     {
-        switch (cost)
+        switch (tier)
         {
-            case Cost.One:
+            case Tier.One:
                 costBorder.color = Color.gray;
                 break;
-            case Cost.Two:
+            case Tier.Two:
                 costBorder.color = Color.green;
                 break;
-            case Cost.Three:
+            case Tier.Three:
                 costBorder.color = Color.blue;
                 break;
-            case Cost.Four:
+            case Tier.Four:
                 costBorder.color = Color.red;
                 break;
-            case Cost.Five:
+            case Tier.Five:
                 costBorder.color = Color.yellow;
                 break;
             default:

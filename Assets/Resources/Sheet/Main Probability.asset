@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72693c4ba0e06f04c8ba50ce9278d5d3, type: 3}
+  m_Name: Main Probability
+  m_EditorClassIdentifier: 
+  data:
+  - oneTier: 100
+    twoTier: 0
+    threeTier: 0
+    fourTier: 0
+    fiveTier: 0
+  - oneTier: 70
+    twoTier: 30
+    threeTier: 0
+    fourTier: 0
+    fiveTier: 0
+  - oneTier: 60
+    twoTier: 35
+    threeTier: 5
+    fourTier: 0
+    fiveTier: 0
+  - oneTier: 50
+    twoTier: 35
+    threeTier: 15
+    fourTier: 0
+    fiveTier: 0
+  - oneTier: 40
+    twoTier: 35
+    threeTier: 23
+    fourTier: 2
+    fiveTier: 0
+  - oneTier: 33
+    twoTier: 30
+    threeTier: 30
+    fourTier: 7
+    fiveTier: 0
+  - oneTier: 30
+    twoTier: 30
+    threeTier: 30
+    fourTier: 10
+    fiveTier: 0
+  - oneTier: 24
+    twoTier: 30
+    threeTier: 30
+    fourTier: 15
+    fiveTier: 1
+  - oneTier: 22
+    twoTier: 30
+    threeTier: 25
+    fourTier: 20
+    fiveTier: 3
+  - oneTier: 19
+    twoTier: 25
+    threeTier: 25
+    fourTier: 25
+    fiveTier: 6

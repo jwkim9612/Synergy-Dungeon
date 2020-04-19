@@ -88,7 +88,7 @@ public class UISynergyInfo : UIControl
 
     public void CreateCharacterList()
     {
-        var characterDatas = GameManager.instance.playerDataManager.characterDatas;
+        var characterDatas = GameManager.instance.characterManager.characterDatas;
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
