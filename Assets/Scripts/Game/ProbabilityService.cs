@@ -14,7 +14,27 @@ public class ProbabilityService
         InitializeProbabilities();
         InitializeTierList();
 
-        SetProbailities(GameManager.instance.probabilityDatas[9]);
+        UpdateProbability();
+    }
+
+    public void UpdateProbability()
+    {
+        float relativePercentageByStage = GameManager.instance.stageManager.GetRelativePercentageByStage();
+        float comparisonValue = 0.0f;
+        var probabilityDatas = GameManager.instance.dataSheet.probabilityDatas;
+
+        foreach (var probabilityData in probabilityDatas)
+        {
+            comparisonValue += probabilityData.relativePercentageByStage;
+
+            if (relativePercentageByStage <= comparisonValue)
+            {
+                SetProbabilities(probabilityData);
+                return;
+            }
+        }
+
+        Debug.LogWarning("Error UpdateProbability");
     }
 
     public void InitializeProbabilities()
@@ -39,7 +59,7 @@ public class ProbabilityService
         tiers.Add(Tier.Five);
     }
 
-    public void SetProbailities(ProbabilityData probabilityData)
+    public void SetProbabilities(ProbabilityData probabilityData)
     {
         Probabilities[Tier.One] = probabilityData.oneTier;
         Probabilities[Tier.Two] = probabilityData.twoTier;
@@ -69,7 +89,7 @@ public class ProbabilityService
             }
         }
 
-        Debug.Log("Error GetRandomTier");
+        Debug.LogWarning("Error GetRandomTier");
         return Tier.None;
     }
 }

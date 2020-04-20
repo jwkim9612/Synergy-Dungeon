@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using geniikw.DataSheetLab;
 
-public class SynergyManager : MonoBehaviour
+public class DataSheet : MonoBehaviour
 {
+    public CharacterSheet characterDatas;
     public TribeSheet tribeDatas;
     public OriginSheet originDatas;
 
+    public ProbabilitySheet probabilityDatas;
 }

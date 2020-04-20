@@ -13,52 +13,62 @@ MonoBehaviour:
   m_Name: Main Probability
   m_EditorClassIdentifier: 
   data:
-  - oneTier: 1
+  - relativePercentageByStage: 0.1
+    oneTier: 1
     twoTier: 0
     threeTier: 0
     fourTier: 0
     fiveTier: 0
-  - oneTier: 0.7
+  - relativePercentageByStage: 0.1
+    oneTier: 0.7
     twoTier: 0.3
     threeTier: 0
     fourTier: 0
     fiveTier: 0
-  - oneTier: 0.6
+  - relativePercentageByStage: 0.1
+    oneTier: 0.6
     twoTier: 0.35
     threeTier: 0.05
     fourTier: 0
     fiveTier: 0
-  - oneTier: 50
-    twoTier: 35
-    threeTier: 15
+  - relativePercentageByStage: 0.1
+    oneTier: 0.5
+    twoTier: 0.35
+    threeTier: 0.15
     fourTier: 0
     fiveTier: 0
-  - oneTier: 40
-    twoTier: 35
-    threeTier: 23
-    fourTier: 2
+  - relativePercentageByStage: 0.1
+    oneTier: 0.4
+    twoTier: 0.35
+    threeTier: 0.23
+    fourTier: 0.02
     fiveTier: 0
-  - oneTier: 33
-    twoTier: 30
-    threeTier: 30
-    fourTier: 7
+  - relativePercentageByStage: 0.1
+    oneTier: 0.33
+    twoTier: 0.3
+    threeTier: 0.3
+    fourTier: 0.07
     fiveTier: 0
-  - oneTier: 30
-    twoTier: 30
-    threeTier: 30
-    fourTier: 10
+  - relativePercentageByStage: 0.1
+    oneTier: 0.3
+    twoTier: 0.3
+    threeTier: 0.3
+    fourTier: 0.1
     fiveTier: 0
-  - oneTier: 24
-    twoTier: 30
-    threeTier: 30
-    fourTier: 15
-    fiveTier: 1
-  - oneTier: 0.22
+  - relativePercentageByStage: 0.1
+    oneTier: 0.24
+    twoTier: 0.3
+    threeTier: 0.3
+    fourTier: 0.15
+    fiveTier: 0.01
+  - relativePercentageByStage: 0.1
+    oneTier: 0.22
     twoTier: 0.3
     threeTier: 0.25
     fourTier: 0.2
     fiveTier: 0.03
-  - oneTier: 0.19
+  - relativePercentageByStage: 0.1
+    oneTier: 0.19
     twoTier: 0.25
     threeTier: 0.25
     fourTier: 0.25

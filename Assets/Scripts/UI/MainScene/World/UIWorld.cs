@@ -18,8 +18,6 @@ public class UIWorld : MonoBehaviour
         stageManager = GameManager.instance.stageManager;
 
         playButton.onClick.AddListener(() => {
-            GameManager.instance.stockService.Initialize();
-            GameManager.instance.probabilityService.Initialize();
             GameManager.instance.stageManager.Initialize();
             SceneManager.LoadScene("InGame");
         });

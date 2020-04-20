@@ -11,8 +11,8 @@ public class UICharacterPurchase : MonoBehaviour
 
     void Start()
     {
-        stockService = GameManager.instance.stockService;
-        probabilityService = GameManager.instance.probabilityService;
+        stockService = InGameManager.instance.stockService;
+        probabilityService = InGameManager.instance.probabilityService;
 
         foreach(var card in cards)
         {
@@ -22,6 +22,7 @@ public class UICharacterPurchase : MonoBehaviour
         Shuffle();
     }
 
+    // 카드 섞기
     public void Shuffle()
     {
         foreach(var card in cards)
@@ -34,7 +35,7 @@ public class UICharacterPurchase : MonoBehaviour
 
             Tier randomTier = probabilityService.GetRandomTier();
             int randomId = stockService.GetRandomId(randomTier);
-            card.SetCard(GameManager.instance.characterManager.characterDatas[randomId]);
+            card.SetCard(GameManager.instance.dataSheet.characterDatas[randomId]);
             card.isBoughtCard = false;
         }
     }

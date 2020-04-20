@@ -18,7 +18,7 @@ public class StockService
         Stock fourTierStock = new Stock();
         Stock fiveTierStock = new Stock();
 
-        var characterDatas = GameManager.instance.characterManager.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDatas;
 
         foreach(var characterData in characterDatas)
         {
@@ -83,7 +83,7 @@ public class StockService
 
     public void RemoveStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.characterManager.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDatas;
         Stock stock = null;
 
         stock = Stocks[characterDatas[stockId].tier];
@@ -94,7 +94,7 @@ public class StockService
 
     public void AddStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.characterManager.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDatas;
         Stock stock = null;
 
         stock = Stocks[characterDatas[stockId].tier];
