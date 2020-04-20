@@ -2,14 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+//using geniikw.DataSheetLab;
 
 namespace geniikw.DataSheetLab
 {
     [Serializable]
     public class StageData
     {
+        /// <summary>
+        /// 스테이지 이름
+        /// </summary>
         public string name;
+        /// <summary>
+        /// 스테이지 이미지
+        /// </summary>
         public Sprite worldImage;
+        /// <summary>
+        /// 스테이지 총 웨이브
+        /// </summary>
+        public int totalWave;
+        /// <summary>
+        /// 웨이브 데이터
+        /// </summary>
+        public WaveRefer waveData;
     }
 
     [CreateAssetMenu]

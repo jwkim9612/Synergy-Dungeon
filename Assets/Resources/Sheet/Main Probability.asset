@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Main Probability
   m_EditorClassIdentifier: 
   data:
-  - oneTier: 100
+  - oneTier: 1
     twoTier: 0
     threeTier: 0
     fourTier: 0
     fiveTier: 0
-  - oneTier: 70
-    twoTier: 30
+  - oneTier: 0.7
+    twoTier: 0.3
     threeTier: 0
     fourTier: 0
     fiveTier: 0
-  - oneTier: 60
-    twoTier: 35
-    threeTier: 5
+  - oneTier: 0.6
+    twoTier: 0.35
+    threeTier: 0.05
     fourTier: 0
     fiveTier: 0
   - oneTier: 50
@@ -53,13 +53,13 @@ MonoBehaviour:
     threeTier: 30
     fourTier: 15
     fiveTier: 1
-  - oneTier: 22
-    twoTier: 30
-    threeTier: 25
-    fourTier: 20
-    fiveTier: 3
-  - oneTier: 19
-    twoTier: 25
-    threeTier: 25
-    fourTier: 25
-    fiveTier: 6
+  - oneTier: 0.22
+    twoTier: 0.3
+    threeTier: 0.25
+    fourTier: 0.2
+    fiveTier: 0.03
+  - oneTier: 0.19
+    twoTier: 0.25
+    threeTier: 0.25
+    fourTier: 0.25
+    fiveTier: 0.06

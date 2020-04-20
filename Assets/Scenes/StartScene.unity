@@ -533,11 +533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterDatas: {fileID: 11400000, guid: 79b0e7b980c43b44eb2feeb4b150df4d, type: 2}
-  normalStock: []
-  magicStock: []
-  rareStock: []
-  uniqueStock: []
-  legendStock: []
 --- !u!1001 &573044116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,9 +963,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uiManager: {fileID: 1910762390}
   soundManager: {fileID: 1639656432}
+  stageManager: {fileID: 1956566830}
   playerDataManager: {fileID: 518514475}
   monsterDataManager: {fileID: 278726508}
-  stageDataManager: {fileID: 1956566830}
   synergyManager: {fileID: 417500817}
   characterManager: {fileID: 526336229}
   inGameManager: {fileID: 1894063087}
@@ -1274,6 +1269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cff33c9919058742baec3fce9353354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  probabilityService: {fileID: 0}
+  probabilityDatas: {fileID: 11400000, guid: 9e2dd72d46044d34484af0d773bcb18c, type: 2}
 --- !u!4 &1894063088
 Transform:
   m_ObjectHideFlags: 0
@@ -1343,7 +1340,7 @@ GameObject:
   - component: {fileID: 1956566829}
   - component: {fileID: 1956566830}
   m_Layer: 0
-  m_Name: StageDataManager
+  m_Name: StageManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1376,3 +1373,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageDatas: {fileID: 11400000, guid: 7acd7f6d237d692478569ca9a532c3a9, type: 2}
+  currentStage: 1
+  currentStageData:
+    name: 
+    worldImage: {fileID: 0}
+    totalWave: 0
+    waveData:
+      Sheet: {fileID: 0}
+      idxList: 

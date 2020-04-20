@@ -15,11 +15,31 @@ MonoBehaviour:
   data:
   - name: "1. \uD478\uB978 \uCD08\uC6D0"
     worldImage: {fileID: 21300000, guid: c37fe383c2b456d45b5ef3a2e5f9bbe0, type: 3}
+    totalWave: 20
+    waveData:
+      Sheet: {fileID: 11400000, guid: 64f735b52a2cf5547bed391f876d9fa4, type: 2}
+      idxList: 
   - name: "2. \uC5BC\uC74C \uB098\uB77C"
     worldImage: {fileID: 21300000, guid: d4ded52bb0a9aef4a987546c18d691eb, type: 3}
+    totalWave: 30
+    waveData:
+      Sheet: {fileID: 0}
+      idxList: 
   - name: "3. \uC0AC\uB9C9"
     worldImage: {fileID: 21300000, guid: 9a096b22dfee19845b53b62030b2be4a, type: 3}
+    totalWave: 50
+    waveData:
+      Sheet: {fileID: 0}
+      idxList: 
   - name: "4. \uC0B4\uC0C9 \uB098\uB77C"
     worldImage: {fileID: 21300000, guid: 96f1f281b5da658478b5a789a3eeed8f, type: 3}
+    totalWave: 80
+    waveData:
+      Sheet: {fileID: 0}
+      idxList: 
   - name: "5. \uC624\uC6B0\uC624\uC6B0"
     worldImage: {fileID: 21300000, guid: c0065a17334e2e34fae00b50683e0e8a, type: 3}
+    totalWave: 100
+    waveData:
+      Sheet: {fileID: 0}
+      idxList: 

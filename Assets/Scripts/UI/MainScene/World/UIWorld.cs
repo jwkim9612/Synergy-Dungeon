@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIWorld : MonoBehaviour
 {
+    public StageManager stageManager = null;
     public int selectedStage = 1;
 
     [SerializeField] private Button playButton = null;
@@ -14,8 +15,12 @@ public class UIWorld : MonoBehaviour
 
     void Start()
     {
+        stageManager = GameManager.instance.stageManager;
+
         playButton.onClick.AddListener(() => {
-            GameManager.instance.inGameManager.Initialize();
+            GameManager.instance.stockService.Initialize();
+            GameManager.instance.probabilityService.Initialize();
+            GameManager.instance.stageManager.Initialize();
             SceneManager.LoadScene("InGame");
         });
 
@@ -25,17 +30,19 @@ public class UIWorld : MonoBehaviour
     // selectedStage를 설정한 후 사용해주면 된다.
     public void UpdateStageInfo()
     {
+        selectedStage = stageManager.currentStage;
+
         UpdateStageTitle();
         UpdateStageImage();
     }
 
     public void UpdateStageTitle()
     {
-        stageTitle.text = GameManager.instance.stageDataManager.stageDatas[selectedStage - 1].name;
+        stageTitle.text = GameManager.instance.stageManager.stageDatas[selectedStage - 1].name;
     }
 
     public void UpdateStageImage()
     {
-        stageImage.sprite = GameManager.instance.stageDataManager.stageDatas[selectedStage - 1].worldImage;
+        stageImage.sprite = GameManager.instance.stageManager.stageDatas[selectedStage - 1].worldImage;
     }
 }

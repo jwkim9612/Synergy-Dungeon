@@ -37,37 +37,7 @@ namespace geniikw.DataSheetLab
         [BigCheck(30)]
         public Tier tier;
 
-        public Color tierColor
-        { 
-            get
-            {
-                Color color = new Color();
-                switch (tier)
-                {
-                    case Tier.One:
-                        color = Color.gray;
-                        break;
-                    case Tier.Two:
-                        color = Color.green;
-                        break;
-                    case Tier.Three:
-                        color = Color.blue;
-                        break;
-                    case Tier.Four:
-                        color = Color.red;
-                        break;
-                    case Tier.Five:
-                        color = Color.yellow;
-                        break;
-                    default:
-                        Debug.Log("Error SetCostBorder");
-                        break;
-                }
-                return color;
-            }
-        }
-
-    public string describe;
+        public string describe;
 
         [BigCheck(30)]
         [SmallCheck(10)]

@@ -7,10 +7,12 @@ public class UICharacterPurchase : MonoBehaviour
 {
     [SerializeField] private UICharacterCard[] cards = null;
     public StockService stockService = null;
+    public ProbabilityService probabilityService = null;
 
     void Start()
     {
-        stockService = GameManager.instance.inGameManager.stockService;
+        stockService = GameManager.instance.stockService;
+        probabilityService = GameManager.instance.probabilityService;
 
         foreach(var card in cards)
         {
@@ -26,13 +28,13 @@ public class UICharacterPurchase : MonoBehaviour
         {
             if (!(card.isBoughtCard))
             {
-                Debug.Log("In ! isboughtcard");
                 int cardId = card.characterData.id;
                 stockService.AddStockId(cardId);
             }
 
-            int id = stockService.GetRandomId(Tier.One);
-            card.SetCard(GameManager.instance.characterManager.characterDatas[id]);
+            Tier randomTier = probabilityService.GetRandomTier();
+            int randomId = stockService.GetRandomId(randomTier);
+            card.SetCard(GameManager.instance.characterManager.characterDatas[randomId]);
             card.isBoughtCard = false;
         }
     }

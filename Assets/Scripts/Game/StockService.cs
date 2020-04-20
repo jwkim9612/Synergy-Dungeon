@@ -8,7 +8,7 @@ public class StockService
 {
     public Dictionary<Tier, Stock> Stocks = new Dictionary<Tier, Stock>();
 
-    public void InitializeStock()
+    public void Initialize()
     {
         ClearAllStock();
 
@@ -70,7 +70,8 @@ public class StockService
         int randomId;
         int stockId;
 
-        SetStockByTier(ref stock, tier);
+        stock = Stocks[tier];
+        //SetStockByTier(ref stock, tier);
 
         stockId = Random.Range(0, stock.stockIds.Count);
         randomId = stock.stockIds[stockId];
@@ -85,7 +86,8 @@ public class StockService
         var characterDatas = GameManager.instance.characterManager.characterDatas;
         Stock stock = null;
 
-        SetStockByTier(ref stock, characterDatas[stockId].tier);
+        stock = Stocks[characterDatas[stockId].tier];
+        //SetStockByTier(ref stock, characterDatas[stockId].tier);
 
         stock.stockIds.Remove(stockId);
     }
@@ -95,36 +97,37 @@ public class StockService
         var characterDatas = GameManager.instance.characterManager.characterDatas;
         Stock stock = null;
 
-        SetStockByTier(ref stock, characterDatas[stockId].tier);
+        stock = Stocks[characterDatas[stockId].tier];
+        //SetStockByTier(ref stock, characterDatas[stockId].tier);
 
         stock.stockIds.Add(stockId);
     }
 
-    public Stock SetStockByTier(ref Stock stock, Tier tier)
-    {
-        switch (tier)
-        {
-            case Tier.One:
-                Stocks.TryGetValue(Tier.One, out stock);
-                break;
-            case Tier.Two:
-                Stocks.TryGetValue(Tier.Two, out stock);
-                break;
-            case Tier.Three:
-                Stocks.TryGetValue(Tier.Three, out stock);
-                break;
-            case Tier.Four:
-                Stocks.TryGetValue(Tier.Four, out stock);
-                break;
-            case Tier.Five:
-                Stocks.TryGetValue(Tier.Five, out stock);
-                break;
-            default:
-                Debug.Log("Erro GetRandomId");
-                stock = null;
-                break;
-        }
+    //public Stock SetStockByTier(ref Stock stock, Tier tier)
+    //{
+    //    switch (tier)
+    //    {
+    //        case Tier.One:
+    //            Stocks.TryGetValue(Tier.One, out stock);
+    //            break;
+    //        case Tier.Two:
+    //            Stocks.TryGetValue(Tier.Two, out stock);
+    //            break;
+    //        case Tier.Three:
+    //            Stocks.TryGetValue(Tier.Three, out stock);
+    //            break;
+    //        case Tier.Four:
+    //            Stocks.TryGetValue(Tier.Four, out stock);
+    //            break;
+    //        case Tier.Five:
+    //            Stocks.TryGetValue(Tier.Five, out stock);
+    //            break;
+    //        default:
+    //            Debug.Log("Erro GetRandomId");
+    //            stock = null;
+    //            break;
+    //    }
 
-        return stock;
-    }
+    //    return stock;
+    //}
 }

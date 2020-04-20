@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SharedService;
 using geniikw.DataSheetLab;
 
 public class UICharacterSlot : MonoBehaviour
@@ -19,7 +20,7 @@ public class UICharacterSlot : MonoBehaviour
 
         SetName(characterData.name);
         SetImage(characterData.image);
-        SetTierBorder(characterData.tierColor);
+        SetTierBorder(Card.GetColorByTier(characterData.tier));
     }
 
     public void SetName(string name)

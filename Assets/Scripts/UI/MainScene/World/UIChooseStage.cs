@@ -20,7 +20,7 @@ public class UIChooseStage : UIControl
         CreateStageList();
 
         entranceButton.onClick.AddListener(() => {
-            uiWorld.selectedStage = simpleScrollSnap.CurrentPanel + 1;
+            GameManager.instance.stageManager.currentStage = simpleScrollSnap.CurrentPanel + 1;
             uiWorld.UpdateStageInfo();
         });
 
@@ -30,7 +30,7 @@ public class UIChooseStage : UIControl
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
-            stageTitle.text = GameManager.instance.stageDataManager.stageDatas[simpleScrollSnap.TargetPanel].name;
+            stageTitle.text = GameManager.instance.stageManager.stageDatas[simpleScrollSnap.TargetPanel].name;
         });
     }
 
@@ -38,7 +38,7 @@ public class UIChooseStage : UIControl
     {
         int dataIndex = 0;
 
-        var stageDatas = GameManager.instance.stageDataManager.stageDatas;
+        var stageDatas = GameManager.instance.stageManager.stageDatas;
         foreach (var stageData in stageDatas)
         { 
             if(dataIndex == 0)
@@ -54,9 +54,4 @@ public class UIChooseStage : UIControl
             ++dataIndex;
         }
     }
-
-    //public override void OnHide()
-    //{
-    //    base.OnHide();
-    //}
 }

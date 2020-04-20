@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using geniikw.DataSheetLab;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,14 +9,21 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public UIManager uiManager = null;
     public SoundManager soundManager = null;
+
+    public StageManager stageManager = null;
+
     public PlayerDataManager playerDataManager = null;
     public MonsterDataManager monsterDataManager = null;
-    public StageDataManager stageDataManager = null;
     public SynergyManager synergyManager = null;
     public CharacterManager characterManager = null;
     public InGameManager inGameManager = null;
 
     public GameData gameData = null;
+
+    public StockService stockService = new StockService();
+    public ProbabilityService probabilityService = new ProbabilityService();
+
+    public ProbabilitySheet probabilityDatas;
 
     //파괴되지 않는 싱글턴
     void Awake()
