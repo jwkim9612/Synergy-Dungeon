@@ -15,14 +15,14 @@ public class UICharacterCard : MonoBehaviour
     [SerializeField] private Text originText = null;
     [SerializeField] private Text characterNameText = null;
     [SerializeField] private Image tierBorderImage = null;
-    [SerializeField] private Button buttonBuy = null;
+    [SerializeField] private Button buyButton = null;
 
     public CharacterData characterData;
     public bool isBoughtCard = false;
 
     void Start()
     {
-        buttonBuy.onClick.AddListener(() => {
+        buyButton.onClick.AddListener(() => {
             isBoughtCard = true;
             OnHide();
         });
@@ -87,13 +87,13 @@ public class UICharacterCard : MonoBehaviour
 
     void OnHide()
     {
-        buttonBuy.interactable = false;
+        buyButton.interactable = false;
         this.gameObject.SetActive(false);
     }
 
     void OnShow()
     {
-        buttonBuy.interactable = true;
+        buyButton.interactable = true;
         this.gameObject.SetActive(true);
     }
 }

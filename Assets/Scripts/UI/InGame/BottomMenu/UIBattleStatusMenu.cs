@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class UIBattleStatusMenu : MonoBehaviour
 {
-    [SerializeField] private Button btnReload = null;
+    [SerializeField] private Button startButton = null;
+    [SerializeField] private Button reloadButton = null;
    
     [SerializeField] private UICharacterPurchase characterPurchase = null;
 
     void Start()
     {
-        btnReload.onClick.AddListener(() => {
+        reloadButton.onClick.AddListener(() => {
             characterPurchase.Shuffle();
+        });
+
+        startButton.onClick.AddListener(() => {
+            InGameManager.instance.gameState.timer.TimeOut();
         });
     }
 }

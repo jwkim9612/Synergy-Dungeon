@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using geniikw.DataSheetLab;
 
 public class InGameManager : MonoBehaviour
 {
     public static InGameManager instance = null;
 
-    public StockService stockService = new StockService();
-    public ProbabilityService probabilityService = new ProbabilityService();
+    public StockService stockService;
+    public ProbabilityService probabilityService;
+    public GameState gameState;
+
+    public Button ClearButton;
 
     void Awake()
     {
@@ -29,7 +33,16 @@ public class InGameManager : MonoBehaviour
 
     public void Start()
     {
+        stockService = new StockService();
+        probabilityService = new ProbabilityService();
+
         stockService.Initialize();
         probabilityService.Initialize();
+
+        ClearButton.onClick.AddListener(() => {
+            GameManager.instance.stageManager.currentWave++;
+            gameState.timer.TimerStart();
+            
+        });
     }
 }
