@@ -1,4 +1,4 @@
-﻿using DBModel;
+﻿using Shared.Model;
 using System;
 
 namespace Shared.NetworkProtocol
