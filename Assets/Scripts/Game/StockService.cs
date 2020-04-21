@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SharedService;
 using geniikw.DataSheetLab;
 
 public class StockService
@@ -22,7 +21,7 @@ public class StockService
 
         foreach(var characterData in characterDatas)
         {
-            for (int i = 0; i < Card.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
+            for (int i = 0; i < CardService.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
             {
                 switch (characterData.tier)
                 {

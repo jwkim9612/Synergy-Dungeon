@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using SharedService;
 using geniikw.DataSheetLab;
 
 public class UICharacterCard : MonoBehaviour
@@ -39,7 +38,7 @@ public class UICharacterCard : MonoBehaviour
         SetOriginImage(characterData.originData.Sheet[characterData.originData.idxList[0]].image);
         SetOriginText(characterData.originData.Sheet[characterData.originData.idxList[0]].strOrigin);
         SetCharacterNameText(characterData.name);
-        SetTierBorderImage(Card.GetColorByTier(characterData.tier));
+        SetTierBorderImage(CardService.GetColorByTier(characterData.tier));
 
         OnShow();
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using geniikw.DataSheetLab;
-using SharedService;
+using Shared.Service;
 
 public class ProbabilityService
 {
