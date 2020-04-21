@@ -6652,7 +6652,7 @@ GameObject:
   - component: {fileID: 826212233}
   - component: {fileID: 826212232}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Tier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6728,17 +6728,17 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: "\uBAA8\uB4E0 \uCF54\uC2A4\uD2B8"
+    - m_Text: "\uBAA8\uB4E0 \uD2F0\uC5B4"
       m_Image: {fileID: 0}
-    - m_Text: "1\uCF54\uC2A4\uD2B8"
+    - m_Text: "1\uD2F0\uC5B4"
       m_Image: {fileID: 0}
-    - m_Text: "2\uCF54\uC2A4\uD2B8"
+    - m_Text: "2\uD2F0\uC5B4"
       m_Image: {fileID: 0}
-    - m_Text: "3\uCF54\uC2A4\uD2B8"
+    - m_Text: "3\uD2F0\uC5B4"
       m_Image: {fileID: 0}
-    - m_Text: "4\uCF54\uC2A4\uD2B8"
+    - m_Text: "4\uD2F0\uC5B4"
       m_Image: {fileID: 0}
-    - m_Text: "5\uCF54\uC2A4\uD2B8"
+    - m_Text: "5\uD2F0\uC5B4"
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8035,7 +8035,7 @@ GameObject:
   - component: {fileID: 952574222}
   - component: {fileID: 952574221}
   m_Layer: 5
-  m_Name: CostBorder
+  m_Name: TierBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9095,10 +9095,10 @@ RectTransform:
   m_Father: {fileID: 250646115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 115, y: -147.5}
+  m_SizeDelta: {x: 230, y: 295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070424375
 MonoBehaviour:
@@ -13007,7 +13007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBAA8\uB4E0 \uCF54\uC2A4\uD2B8"
+  m_Text: "\uBAA8\uB4E0 \uD2F0\uC5B4"
 --- !u!222 &1483565629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14880,7 +14880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterList: {fileID: 744996678}
-  cost: {fileID: 826212232}
+  tier: {fileID: 826212232}
   tribe: {fileID: 18423750}
   origin: {fileID: 1587278860}
 --- !u!1 &1748332867
@@ -17205,6 +17205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084ad2065a4509747a503b37d0d1d8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageManager: {fileID: 0}
   selectedStage: 1
   playButton: {fileID: 1129853357}
   stageTitle: {fileID: 518500265}
@@ -17694,11 +17695,12 @@ MonoBehaviour:
   image: {fileID: 1326491834}
   costBorder: {fileID: 1008217325}
   characterData:
+    id: 0
     name: 
     image: {fileID: 0}
     attack: 0
     factor: 0
-    cost: 0
+    tier: 0
     describe: 
     tribeData:
       Sheet: {fileID: 0}

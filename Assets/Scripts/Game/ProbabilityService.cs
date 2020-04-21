@@ -70,7 +70,7 @@ public class ProbabilityService
 
     public Tier GetRandomTier()
     {
-        float randomProbability = SharedRandom.GetRandom();
+        float randomProbability = RandomService.GetRandom();
         Debug.Log(randomProbability);
         float comparisonValue = 0.0f;
 
