@@ -19,6 +19,7 @@ public class UICharacterPurchase : MonoBehaviour
         }
 
         Shuffle();
+        InGameManager.instance.gameState.OnPrepare += Shuffle;
     }
 
     // 카드 섞기

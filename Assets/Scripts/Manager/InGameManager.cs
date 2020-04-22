@@ -40,9 +40,9 @@ public class InGameManager : MonoBehaviour
         probabilityService.Initialize();
 
         ClearButton.onClick.AddListener(() => {
-            GameManager.instance.stageManager.currentWave++;
-            gameState.timer.TimerStart();
-            
+            Debug.Log("Clear");
+            gameState.isWaveClear = true;
+            //gameState.SetInGameState(InGameState.Complete);
         });
     }
 }

@@ -13,17 +13,15 @@ public class Timer : MonoBehaviour
     public float timeLimitSetting;
     public float timeLimit = 0.0f;
     public bool isStarted = false;
-    public bool isDone = false;
 
     private void Start()
     {
-        TimerSetting();
-        OnTimeOut += TimeOut;
+        TimerStart();
     }
 
     public void TimerStart()
     {
-        //IsDone = false;
+        TimerSetting();
         isStarted = true;
         OnTimerStart(); 
     }
@@ -35,23 +33,24 @@ public class Timer : MonoBehaviour
             timeLimit -= Time.deltaTime;
         }
 
-        if(IsTimeOut())
+        if(isStarted && IsTimeOut())
         {
-            OnTimeOut();
+            TimeOut();
         }
     }
 
     public void TimeOut()
     {
-        isDone = true;
+        OnTimeOut();
         isStarted = false;
-        TimerSetting();
+        timeLimit = 0.0f;
+        InGameManager.instance.gameState.SetInGameState(InGameState.Play);
     }
 
     public bool IsTimeOut()
     {
         // 타이머 text가 1에서 0이 되는 순간 없어지게 하기 위해
-        return timeLimit < 1.0f || isDone;
+        return timeLimit < 1.0f;
     }
 
     void TimerSetting()

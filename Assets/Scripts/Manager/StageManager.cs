@@ -32,4 +32,15 @@ public class StageManager : MonoBehaviour
 
         return currentWave / totalWave;
     }
+
+    public void IncreaseWave(int increaseValue)
+    {
+        currentWave = Mathf.Clamp(currentWave + increaseValue, 0, currentStageData.totalWave);
+    }
+
+    public bool IsFinalWave()
+    {
+        return currentWave == currentStageData.totalWave;
+    }
+
 }

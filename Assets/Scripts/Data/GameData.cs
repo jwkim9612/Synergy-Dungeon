@@ -39,3 +39,13 @@ public enum Origin
     Priest,
     Dragon,
 }
+
+public enum InGameState
+{ 
+    None,
+    Prepare,
+    Play,
+    Complete,
+    Lose
+}
+

@@ -6,8 +6,14 @@ using Shared.Service;
 
 public class ProbabilityService
 {
-    public Dictionary<Tier, float> Probabilities = new Dictionary<Tier, float>();
-    public List<Tier> tiers = new List<Tier>();
+    public Dictionary<Tier, float> Probabilities;
+    public List<Tier> tiers;
+
+    public ProbabilityService()
+    {
+        Probabilities = new Dictionary<Tier, float>();
+        tiers = new List<Tier>();
+    }
 
     public void Initialize()
     {
