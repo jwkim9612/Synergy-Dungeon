@@ -10,6 +10,8 @@ public class UIBattleStatusMenu : MonoBehaviour
    
     [SerializeField] private UICharacterPurchase characterPurchase = null;
 
+    public Timer timer;
+
     void Start()
     {
         reloadButton.onClick.AddListener(() => {
@@ -17,7 +19,7 @@ public class UIBattleStatusMenu : MonoBehaviour
         });
 
         startButton.onClick.AddListener(() => {
-            InGameManager.instance.gameState.timer.TimeOut();
+            timer.TimeOut();
         });
     }
 }

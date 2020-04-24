@@ -5,14 +5,16 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public delegate void OnPrepareDelegate();
+    public delegate void OnBattleDelegate();
     public OnPrepareDelegate OnPrepare;
+    public OnBattleDelegate OnBattle;
 
     public InGameState inGameState = InGameState.None;
 
-    public Timer timer;
+    //public Timer timer;
     public StageManager stageManager;
 
-    [SerializeField] private UIBattleMenu uiBattleMenu;
+    //[SerializeField] private UIBattleMenu uiBattleMenu;
 
     public bool isWaveClear = false;
     public bool isPlayerLose = false;
@@ -26,13 +28,14 @@ public class GameState : MonoBehaviour
     
     void Update()
     {
-        if (inGameState == InGameState.Play && isWaveClear)
+        if (inGameState == InGameState.Battle && isWaveClear)
         {
             SetInGameState(InGameState.Complete);
         }
-        else if(inGameState == InGameState.Play && isPlayerLose)
+        else if(inGameState == InGameState.Battle && isPlayerLose)
         {
             Debug.Log("패배");
+            SetInGameState(InGameState.Lose);
         }
     }
 
@@ -44,13 +47,13 @@ public class GameState : MonoBehaviour
         {
             case InGameState.Prepare:
                 OnPrepare();
-                timer.TimerStart();
-                OnHideBattleMenu();
+                //OnHideBattleMenu();
                 break;
 
-            case InGameState.Play:
+            case InGameState.Battle:
                 isWaveClear = false;
-                OnShowBattleMenu(); 
+                OnBattle();
+                //OnShowBattleMenu(); 
                 break;
 
             case InGameState.Complete:
@@ -72,13 +75,13 @@ public class GameState : MonoBehaviour
 
     }
 
-    public void OnShowBattleMenu()
-    {
-        uiBattleMenu.gameObject.SetActive(true);
-    }
+    //public void OnShowBattleMenu()
+    //{
+    //    uiBattleMenu.gameObject.SetActive(true);
+    //}
 
-    public void OnHideBattleMenu()
-    {
-        uiBattleMenu.gameObject.SetActive(false);
-    }
+    //public void OnHideBattleMenu()
+    //{
+    //    uiBattleMenu.gameObject.SetActive(false);
+    //}
 }

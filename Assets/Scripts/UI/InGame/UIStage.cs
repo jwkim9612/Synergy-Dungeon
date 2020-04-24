@@ -11,7 +11,7 @@ public class UIStage : MonoBehaviour
     public void Start()
     {
         stageManager = GameManager.instance.stageManager;
-        InGameManager.instance.gameState.timer.OnTimerStart += UpdateText;
+        GameManager.instance.stageManager.OnChangedWave += UpdateText;
 
         UpdateText();
     }

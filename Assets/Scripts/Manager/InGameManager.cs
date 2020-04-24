@@ -11,6 +11,7 @@ public class InGameManager : MonoBehaviour
     public StockService stockService;
     public ProbabilityService probabilityService;
     public GameState gameState;
+    public UIPrepareArea uiPrepareArea;
 
     public Button ClearButton;
 

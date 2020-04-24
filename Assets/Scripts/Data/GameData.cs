@@ -44,7 +44,7 @@ public enum InGameState
 { 
     None,
     Prepare,
-    Play,
+    Battle,
     Complete,
     Lose
 }

@@ -16,7 +16,9 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        TimerStart();
+        //TimerStart();
+
+        InGameManager.instance.gameState.OnPrepare += TimerStart;
     }
 
     public void TimerStart()
@@ -44,7 +46,7 @@ public class Timer : MonoBehaviour
         OnTimeOut();
         isStarted = false;
         timeLimit = 0.0f;
-        InGameManager.instance.gameState.SetInGameState(InGameState.Play);
+        InGameManager.instance.gameState.SetInGameState(InGameState.Battle);
     }
 
     public bool IsTimeOut()
