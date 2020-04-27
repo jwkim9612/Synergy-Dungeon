@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Arranger : MonoBehaviour
 {
-    List<Transform> children;
+    public List<UICharacter> uiCharacters;
 
     void Start()
     {
-        children = new List<Transform>();
+        uiCharacters = new List<UICharacter>();
 
         UpdateChildren();
     }
@@ -17,30 +17,31 @@ public class Arranger : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; ++i)
         {
-            if (i == children.Count)
+            if (i == uiCharacters.Count)
             {
-                children.Add(null);
+                uiCharacters.Add(null);
             }
 
             // border안에 또 캐릭터가 있어서 GetChild를 두 번 써줌
-            var child = transform.GetChild(i).GetChild(0);
+            var uicharacter = gameObject.GetComponentsInChildren<UISlot>()[i].GetComponentInChildren<UICharacter>();
+            //var child = transform.GetChild(i).GetChild(0);
 
-            if(child != children[i])
+            if(uicharacter != uiCharacters[i])
             {
-                children[i] = child;
+                uiCharacters[i] = uicharacter;
             }
         }
   }
 
-    public Transform GetCharacterByPosition(Transform character)
+    public UICharacter GetCharacterByPosition(UICharacter character)
     {
-        Transform targetCharacter = null;
+        UICharacter targetCharacter = null;
 
-        for(int i = 0; i < children.Count; ++i)
+        for(int i = 0; i < uiCharacters.Count; ++i)
         { 
-            if(TransformService.ContainPos(children[i] as RectTransform, character.position))
+            if(TransformService.ContainPos(uiCharacters[i].transform as RectTransform, character.transform.position))
             {
-                targetCharacter = children[i];
+                targetCharacter = uiCharacters[i];
                 break;
             }
         }

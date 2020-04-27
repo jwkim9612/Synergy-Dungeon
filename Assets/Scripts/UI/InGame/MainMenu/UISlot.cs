@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UISlot : MonoBehaviour
 {
-    UICharacter uiCharacter;
+    public UICharacter uiCharacter;
 
     public bool HasCharacter()
     {
         uiCharacter = gameObject.GetComponentInChildren<UICharacter>();
 
-        if(uiCharacter.characterInfo != null)
+        if (uiCharacter.characterInfo.id != -1)
         {
             return true;
         }
@@ -22,6 +22,7 @@ public class UISlot : MonoBehaviour
 
     public void SetUICharacter(int characterIndex)
     {
+        uiCharacter.OnCanClick();
         uiCharacter.SetCharacterInfo(characterIndex);
     }
 }

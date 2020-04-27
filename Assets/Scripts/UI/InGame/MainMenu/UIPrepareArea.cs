@@ -2,37 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPrepareArea : MonoBehaviour
+public class UIPrepareArea : Arranger
 {
-    List<UISlot> uiSlots;
-
-    void Start()
+    public (bool isBuying, UICharacter uiCharacter) BuyCharacter()
     {
-        uiSlots = new List<UISlot>();
-
-        var slots = gameObject.GetComponentsInChildren<UISlot>();
-        
-        for(int i = 0; i < slots.Length; ++i)
+        foreach(var uiCharacter in uiCharacters)
         {
-            uiSlots.Add(slots[i]);
-        }
-    }
-
-    public bool BuyCharacter(int characterIndex)
-    {
-        foreach(var uiSlot in uiSlots)
-        {
-            if(uiSlot.HasCharacter())
-            {
+            if (uiCharacter.characterInfo.star != 0)
                 continue;
-            }
-            else
-            {
-                uiSlot.SetUICharacter(characterIndex);
-                return true;
-            }
+
+            return (true, uiCharacter);
         }
 
-        return false;
+        return (false, null);
     }
 }

@@ -7,16 +7,21 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
     Transform root;
     Camera mainCamera;
+    //[SerializeField] private UICharacter uiCharacter;
+    UICharacter uiCharacter;
 
     void Start()
     {
         mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
         root = transform.root;
+
+        uiCharacter = GetComponent<UICharacter>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver);
+        //root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver);
+        root.BroadcastMessage("BeginDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -26,11 +31,13 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
         currentPos = mainCamera.ScreenToWorldPoint(currentPos);
 
         transform.position = currentPos;
-        root.BroadcastMessage("Drag", transform, SendMessageOptions.DontRequireReceiver);
+        //root.BroadcastMessage("Drag", transform, SendMessageOptions.DontRequireReceiver);
+        root.BroadcastMessage("Drag", uiCharacter, SendMessageOptions.DontRequireReceiver);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        root.BroadcastMessage("EndDrag", transform, SendMessageOptions.DontRequireReceiver);
+       // root.BroadcastMessage("EndDrag", transform, SendMessageOptions.DontRequireReceiver);
+        root.BroadcastMessage("EndDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
     }
 }

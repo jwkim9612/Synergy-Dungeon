@@ -10,8 +10,10 @@ public class InGameManager : MonoBehaviour
 
     public StockService stockService;
     public ProbabilityService probabilityService;
+    public CombinationService combinationService;
     public GameState gameState;
     public UIPrepareArea uiPrepareArea;
+    public DraggableCentral draggableCentral;
 
     public Button ClearButton;
 
@@ -36,9 +38,11 @@ public class InGameManager : MonoBehaviour
     {
         stockService = new StockService();
         probabilityService = new ProbabilityService();
+        combinationService = new CombinationService();
 
         stockService.Initialize();
         probabilityService.Initialize();
+        combinationService.Initialize();
 
         ClearButton.onClick.AddListener(() => {
             Debug.Log("Clear");

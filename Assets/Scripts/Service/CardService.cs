@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardService
 {
     public const int NUM_OF_CARDS = 29;
     public const int MAX_NUM_OF_CARDS_PER_CHARACTER = 9;
+
+    public const string DEFAULT_IMAGE_NAME = "Empty";
 
     public static Color GetColorByTier(Tier tier)
     {

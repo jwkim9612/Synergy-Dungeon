@@ -70,7 +70,6 @@ public class StockService
         int stockId;
 
         stock = Stocks[tier];
-        //SetStockByTier(ref stock, tier);
 
         stockId = Random.Range(0, stock.stockIds.Count);
         randomId = stock.stockIds[stockId];
@@ -86,7 +85,6 @@ public class StockService
         Stock stock = null;
 
         stock = Stocks[characterDatas[stockId].tier];
-        //SetStockByTier(ref stock, characterDatas[stockId].tier);
 
         stock.stockIds.Remove(stockId);
     }
@@ -97,9 +95,46 @@ public class StockService
         Stock stock = null;
 
         stock = Stocks[characterDatas[stockId].tier];
-        //SetStockByTier(ref stock, characterDatas[stockId].tier);
 
         stock.stockIds.Add(stockId);
+    }
+
+    public void AddStockId(CharacterInfo characterInfo)
+    {
+        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        Stock stock = null;
+
+        stock = Stocks[characterDatas[characterInfo.id].tier];
+
+        int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
+
+        for(int i = 0; i < numOfAdditions; ++i)
+        {
+            stock.stockIds.Add(characterInfo.id);
+        }
+    }
+
+    public int GetNumOfCharactersPerStar(int star)
+    {
+        int numOfCharacters = 0;
+
+        switch (star)
+        {
+            case 1:
+                numOfCharacters = 1;
+                break;
+            case 2:
+                numOfCharacters = 3;
+                break;
+            case 3:
+                numOfCharacters = 9;
+                break;
+            default:
+                Debug.Log("Error AddStockId");
+                break;
+        }
+
+        return numOfCharacters;
     }
 
     //public Stock SetStockByTier(ref Stock stock, Tier tier)

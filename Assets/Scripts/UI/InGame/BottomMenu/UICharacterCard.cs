@@ -22,8 +22,12 @@ public class UICharacterCard : MonoBehaviour
     void Start()
     {
         buyButton.onClick.AddListener(() => {
-            if(InGameManager.instance.uiPrepareArea.BuyCharacter(characterData.id))
+            var purchaseResult = InGameManager.instance.uiPrepareArea.BuyCharacter();
+            if (purchaseResult.uiCharacter == null) { Debug.Log("purchase character is null"); } 
+
+            if (purchaseResult.isBuying)
             {
+                purchaseResult.uiCharacter.SetCharacterInfo(characterData.id);
                 isBoughtCard = true;
                 OnHide();
             }
