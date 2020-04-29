@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public StageManager stageManager = null;
     public PlayerDataManager playerDataManager = null;
 
+    public ParticleService particleService = null;
+
     //public InGameManager inGameManager = null;
 
     ////public GameData gameData = null;

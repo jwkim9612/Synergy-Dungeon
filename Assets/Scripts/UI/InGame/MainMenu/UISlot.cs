@@ -20,9 +20,9 @@ public class UISlot : MonoBehaviour
         }
     }
 
-    public void SetUICharacter(int characterIndex)
-    {
-        uiCharacter.OnCanClick();
-        uiCharacter.SetCharacterInfo(characterIndex);
-    }
+    //public void SetUICharacter(int characterIndex)
+    //{
+    //    uiCharacter.OnCanClick();
+    //    uiCharacter.SetCharacterInfo(characterIndex);
+    //}
 }

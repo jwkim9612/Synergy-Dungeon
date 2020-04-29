@@ -8,22 +8,17 @@ public class UICharacter : MonoBehaviour
     public CharacterInfo characterInfo;
     [SerializeField] private Image image = null;
 
-    public void SetCharacterInfo(int characterIndex)
+    public void SetCharacterInfo(CharacterInfo newCharacterInfo)
     {
         OnCanClick();
-
-        //characterInfo = new CharacterInfo(characterIndex, CharacterService.NUM_OF_DEFAULT_STAR);
-        characterInfo.id = characterIndex;
-        characterInfo.star = CharacterService.NUM_OF_DEFAULT_STAR;
-
-        image.sprite = GameManager.instance.dataSheet.characterDatas[characterIndex].image;
-
-        InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        characterInfo = newCharacterInfo;
+        image.sprite = GameManager.instance.dataSheet.characterDatas[characterInfo.id].image;
     }
 
     public void DeleteCharacterBySell()
     {
         InGameManager.instance.stockService.AddStockId(characterInfo);
+        InGameManager.instance.combinationService.SubCharacter(characterInfo);
         DeleteCharacter();
     }
 
@@ -42,6 +37,8 @@ public class UICharacter : MonoBehaviour
     {
         ++characterInfo.star;
         InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
+        // 파티클 재생 함수
     }
 
     public void OnCanClick()

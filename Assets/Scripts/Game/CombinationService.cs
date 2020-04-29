@@ -30,4 +30,31 @@ public class CombinationService
             ownedCharacter.Remove(characterInfo);
         }
     }
+
+    public void SubCharacter(CharacterInfo characterInfo)
+    {
+        if (ownedCharacter.ContainsKey(characterInfo))
+        {
+            --ownedCharacter[characterInfo];
+        }
+        else
+        {
+            Debug.Log("Error No Character");
+        }
+    }
+
+    public bool IsCanUpgrade(CharacterInfo characterInfo)
+    {
+        // 해당 키가 있고
+        if(ownedCharacter.ContainsKey(characterInfo))
+        {
+            // 2개가 있으면
+            if(ownedCharacter[characterInfo] == CharacterService.NUMBER_REQUIRED_FOR_COMBINATION - 1)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

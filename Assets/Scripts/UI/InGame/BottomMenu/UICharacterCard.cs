@@ -21,19 +21,33 @@ public class UICharacterCard : MonoBehaviour
 
     void Start()
     {
-        buyButton.onClick.AddListener(() => {
-            var purchaseResult = InGameManager.instance.uiPrepareArea.BuyCharacter();
-            if (purchaseResult.uiCharacter == null) { Debug.Log("purchase character is null"); } 
+        CombinationService combinationService = InGameManager.instance.combinationService;
 
-            if (purchaseResult.isBuying)
+        buyButton.onClick.AddListener(() => {
+            CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
+
+            if(combinationService.IsCanUpgrade(characterInfo))
             {
-                purchaseResult.uiCharacter.SetCharacterInfo(characterData.id);
+                combinationService.AddCharacter(characterInfo);
                 isBoughtCard = true;
                 OnHide();
             }
             else
             {
-                Debug.Log("꽉참");
+                var purchaseResult = InGameManager.instance.uiPrepareArea.BuyCharacter();
+                if (purchaseResult.uiCharacter == null) { Debug.Log("purchase character is null"); }
+
+                if (purchaseResult.isBuying)
+                {
+                    purchaseResult.uiCharacter.SetCharacterInfo(characterInfo);
+                    combinationService.AddCharacter(characterInfo);
+                    isBoughtCard = true;
+                    OnHide();
+                }
+                else
+                {
+                    Debug.Log("꽉참");
+                }
             }
         });
     }

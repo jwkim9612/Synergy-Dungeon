@@ -121,6 +121,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52332908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 52332909}
+  - component: {fileID: 52332910}
+  m_Layer: 0
+  m_Name: ParticleService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &52332909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52332908}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8373588, y: -1.1630224, z: 261.88965}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1418237318}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52332910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52332908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a126ccf8b01d21e459deed943b01b7b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeParticle: {fileID: 19800008, guid: e3d819d8722fa1f47a3f68574b56dfb3, type: 3}
 --- !u!1 &183611371
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,6 +878,7 @@ MonoBehaviour:
   dataSheet: {fileID: 1914056023}
   stageManager: {fileID: 1956566830}
   playerDataManager: {fileID: 518514475}
+  particleService: {fileID: 52332910}
 --- !u!4 &1418237318
 Transform:
   m_ObjectHideFlags: 0
@@ -849,6 +894,7 @@ Transform:
   - {fileID: 1639656431}
   - {fileID: 1956566829}
   - {fileID: 1914056022}
+  - {fileID: 52332909}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

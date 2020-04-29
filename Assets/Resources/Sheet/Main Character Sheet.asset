@@ -197,7 +197,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 14
     name: "\uB9AC\uCE58"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 9d4460deafe53854182adb9167c91568, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 18
     name: "\uBB3C\uC758 \uC815\uB839"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: d5c88da45fcb77240946683aac0dd7c4, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -288,7 +288,7 @@ MonoBehaviour:
       idxList: 04000000
   - id: 21
     name: "\uB55C\uC7A5\uC774"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 377fe1d6e7621c64f9fd0f81ddf5c29d, type: 3}
     attack: 0
     factor: 0
     tier: 1
