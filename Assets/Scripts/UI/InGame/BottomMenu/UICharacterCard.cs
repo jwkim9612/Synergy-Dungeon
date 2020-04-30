@@ -21,35 +21,42 @@ public class UICharacterCard : MonoBehaviour
 
     void Start()
     {
+        InGameManager.instance.playerState.OnCoinChanged += UpdateBuyable;
+
         CombinationService combinationService = InGameManager.instance.combinationService;
 
-        buyButton.onClick.AddListener(() => {
+        buyButton.onClick.AddListener(() =>
+        {
             CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
 
-            if(combinationService.IsCanUpgrade(characterInfo))
+            if (combinationService.IsUpgradable(characterInfo))
             {
-                combinationService.AddCharacter(characterInfo);
-                isBoughtCard = true;
-                OnHide();
+                BuyCharacter(combinationService);
             }
             else
             {
-                var purchaseResult = InGameManager.instance.uiPrepareArea.BuyCharacter();
-                if (purchaseResult.uiCharacter == null) { Debug.Log("purchase character is null"); }
-
-                if (purchaseResult.isBuying)
+                var emptyUICharacter = InGameManager.instance.uiPrepareArea.GetEmptyUICharacter();
+                if (emptyUICharacter == null)
                 {
-                    purchaseResult.uiCharacter.SetCharacterInfo(characterInfo);
-                    combinationService.AddCharacter(characterInfo);
-                    isBoughtCard = true;
-                    OnHide();
+                    Debug.Log("uiCharacter is full");
                 }
                 else
                 {
-                    Debug.Log("꽉참");
+                    emptyUICharacter.SetCharacterInfo(characterInfo);
+                    BuyCharacter(combinationService);
                 }
             }
         });
+    }
+
+    private void BuyCharacter(CombinationService combinationService)
+    {
+        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
+
+        combinationService.AddCharacter(characterInfo);
+        isBoughtCard = true;
+        OnHide();
+        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.tier));
     }
 
     public void SetCard(CharacterData newCharacterData)
@@ -57,15 +64,13 @@ public class UICharacterCard : MonoBehaviour
         characterData = newCharacterData;
 
         SetCharacterImage(characterData.image);
-        SetPriceText(((int)(characterData.tier)).ToString());
+        SetPriceText(CardService.GetPriceByTier(characterData.tier).ToString());
         SetTribeImage(characterData.tribeData.Sheet[characterData.tribeData.idxList[0]].image);
         SetTribeText(characterData.tribeData.Sheet[characterData.tribeData.idxList[0]].strTribe);
         SetOriginImage(characterData.originData.Sheet[characterData.originData.idxList[0]].image);
         SetOriginText(characterData.originData.Sheet[characterData.originData.idxList[0]].strOrigin);
         SetCharacterNameText(characterData.name);
         SetTierBorderImage(CardService.GetColorByTier(characterData.tier));
-
-        OnShow();
     }
 
     public void SetCharacterImage(Sprite sprite)
@@ -109,15 +114,33 @@ public class UICharacterCard : MonoBehaviour
         tierBorderImage.color = color;
     }
 
-    void OnHide()
+    public void OnHide()
     {
-        buyButton.interactable = false;
         this.gameObject.SetActive(false);
     }
 
-    void OnShow()
+    public void OnShow()
     {
-        buyButton.interactable = true;
         this.gameObject.SetActive(true);
+    }
+
+    public void UpdateBuyable()
+    {
+        if (IsBuyable())
+        {
+            buyButton.interactable = true;
+        }
+        else
+        {
+            buyButton.interactable = false;
+        }
+    }
+
+    public bool IsBuyable()
+    {
+        int currentPlayerCoin = InGameManager.instance.playerState.Coin;
+        int cardPrice = CardService.GetPriceByTier(characterData.tier);
+
+        return currentPlayerCoin >= cardPrice;
     }
 }

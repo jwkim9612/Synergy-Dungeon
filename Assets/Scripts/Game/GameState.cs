@@ -46,6 +46,7 @@ public class GameState : MonoBehaviour
         switch (inGameState)
         {
             case InGameState.Prepare:
+                InGameManager.instance.playerState.IncreaseCoin(3);
                 OnPrepare();
                 //OnHideBattleMenu();
                 break;

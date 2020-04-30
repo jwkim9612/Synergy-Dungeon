@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class UIPrepareArea : Arranger
 {
-    public (bool isBuying, UICharacter uiCharacter) BuyCharacter()
+    public UICharacter GetEmptyUICharacter()
     {
         foreach(var uiCharacter in uiCharacters)
         {
             if (uiCharacter.characterInfo.star != 0)
                 continue;
 
-            return (true, uiCharacter);
+            return uiCharacter;
         }
 
-        return (false, null);
+        return null;
     }
 }

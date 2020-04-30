@@ -36,6 +36,8 @@ public class UICharacterPurchase : MonoBehaviour
             Tier randomTier = probabilityService.GetRandomTier();
             int randomId = stockService.GetRandomId(randomTier);
             card.SetCard(GameManager.instance.dataSheet.characterDatas[randomId]);
+            card.UpdateBuyable();
+            card.OnShow();
             card.isBoughtCard = false;
         }
     }

@@ -11,6 +11,7 @@ public class InGameManager : MonoBehaviour
     public StockService stockService;
     public ProbabilityService probabilityService;
     public CombinationService combinationService;
+    public PlayerState playerState;
     public GameState gameState;
     public UIPrepareArea uiPrepareArea;
     public DraggableCentral draggableCentral;
@@ -46,6 +47,7 @@ public class InGameManager : MonoBehaviour
 
         ClearButton.onClick.AddListener(() => {
             Debug.Log("Clear");
+            probabilityService.UpdateProbability();
             gameState.isWaveClear = true;
             //gameState.SetInGameState(InGameState.Complete);
         });

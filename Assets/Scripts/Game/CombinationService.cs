@@ -43,7 +43,7 @@ public class CombinationService
         }
     }
 
-    public bool IsCanUpgrade(CharacterInfo characterInfo)
+    public bool IsUpgradable(CharacterInfo characterInfo)
     {
         // 해당 키가 있고
         if(ownedCharacter.ContainsKey(characterInfo))
