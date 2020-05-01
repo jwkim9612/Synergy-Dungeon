@@ -8,6 +8,7 @@ public class DataSheet : MonoBehaviour
     public CharacterSheet characterDatas;
     public TribeSheet tribeDatas;
     public OriginSheet originDatas;
+    public EnemySheet enemyDatas;
 
     public ProbabilitySheet probabilityDatas;
 }

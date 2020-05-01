@@ -7,7 +7,7 @@ public class PlayerState : MonoBehaviour
     public delegate void OnCoinChangedDelegate();
     public OnCoinChangedDelegate OnCoinChanged;
 
-    [SerializeField] private UIBattleStatusMenu uiBattleStatusMenu;
+    [SerializeField] private UIBattleStatusMenu uiBattleStatusMenu = null;
 
     public int Coin { get; set; }
 

@@ -8,12 +8,8 @@ namespace geniikw.DataSheetLab
     [Serializable]
     public class WaveData
     {
-        public int waveNum;
-        public string name;
-        public Sprite Image;
-        public int count;
-        public int attack;
-        public int defense;
+        public int[] count;
+        public int[] monsterNum;
     }
 
     [CreateAssetMenu]

@@ -20,24 +20,30 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //root.BroadcastMessage("BeginDrag", transform, SendMessageOptions.DontRequireReceiver);
-        root.BroadcastMessage("BeginDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+        if(!uiCharacter.isFightingOnBattlefield)
+        {
+            root.BroadcastMessage("BeginDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector2 currentPos = Input.mousePosition;
-        //mousePosition의 좌표를 카메라의 월드 좌표로 변환
-        currentPos = mainCamera.ScreenToWorldPoint(currentPos);
+        if(!uiCharacter.isFightingOnBattlefield)
+        {
+            Vector2 currentPos = Input.mousePosition;
+            //mousePosition의 좌표를 카메라의 월드 좌표로 변환
+            currentPos = mainCamera.ScreenToWorldPoint(currentPos);
 
-        transform.position = currentPos;
-        //root.BroadcastMessage("Drag", transform, SendMessageOptions.DontRequireReceiver);
-        root.BroadcastMessage("Drag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+            transform.position = currentPos;
+            root.BroadcastMessage("Drag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-       // root.BroadcastMessage("EndDrag", transform, SendMessageOptions.DontRequireReceiver);
-        root.BroadcastMessage("EndDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+        if(!uiCharacter.isFightingOnBattlefield)
+        {
+            root.BroadcastMessage("EndDrag", uiCharacter, SendMessageOptions.DontRequireReceiver);
+        }
     }
 }

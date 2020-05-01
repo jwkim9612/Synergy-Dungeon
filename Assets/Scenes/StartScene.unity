@@ -1238,6 +1238,7 @@ MonoBehaviour:
   characterDatas: {fileID: 11400000, guid: 79b0e7b980c43b44eb2feeb4b150df4d, type: 2}
   tribeDatas: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
   originDatas: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
+  enemyDatas: {fileID: 11400000, guid: 7ff7206e9a02632439c9a96a4779a78e, type: 2}
   probabilityDatas: {fileID: 11400000, guid: 9e2dd72d46044d34484af0d773bcb18c, type: 2}
 --- !u!1 &1956566828
 GameObject:

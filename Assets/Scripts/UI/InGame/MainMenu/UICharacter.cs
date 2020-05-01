@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class UICharacter : MonoBehaviour
 {
+    public bool isFightingOnBattlefield;
+
+    private void Start()
+    {
+        isFightingOnBattlefield = false;
+    }
+
     public CharacterInfo characterInfo;
     [SerializeField] private Image image = null;
 

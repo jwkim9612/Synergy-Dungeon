@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DraggableCentral : MonoBehaviour
 {
     public UICharacter invisibleCharacter;
 
-    List<Arranger> arrangers;
+    private UIBattleArea uiBattleArea;
+    private UIPrepareArea uiPrepareArea;
+    private List<Arranger> arrangers;
 
     [SerializeField] private Transform Sell = null;
     bool isSelling;
@@ -25,14 +28,19 @@ public class DraggableCentral : MonoBehaviour
 
     void InitializeArrangers()
     {
+        uiBattleArea = transform.GetComponentInChildren<UIBattleArea>();
+        uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
+
         arrangers = new List<Arranger>();
+        arrangers.Add(uiBattleArea);
+        arrangers.Add(uiPrepareArea);
 
-        var arrs = transform.GetComponentsInChildren<Arranger>();
+        //var arrs = transform.GetComponentsInChildren<Arranger>();
 
-        for (int i = 0; i < arrs.Length; ++i)
-        {
-            arrangers.Add(arrs[i]);
-        }
+        //for (int i = 0; i < arrs.Length; ++i)
+        //{
+        //    arrangers.Add(arrs[i]);
+        //}
     }
 
     void SwapCharacters(UICharacter source, UICharacter destination)
@@ -65,7 +73,25 @@ public class DraggableCentral : MonoBehaviour
 
     void Drag(UICharacter character)
     {
-        var whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, character.transform.position));
+        Arranger whichArrangersCharacter;
+
+        // 전투중이라면
+        if (InGameManager.instance.gameState.inGameState == InGameState.Battle)
+        {
+            // 드래그가 준비중인 캐릭터들 위치에 있다면
+            if(TransformService.ContainPos(uiPrepareArea.transform as RectTransform, character.transform.position))
+            {
+                whichArrangersCharacter = uiPrepareArea;
+            }
+            else
+            {
+                whichArrangersCharacter = null;
+            }
+        }
+        else
+        {
+            whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, character.transform.position));
+        }
 
         if (whichArrangersCharacter != null)
         {
@@ -107,13 +133,16 @@ public class DraggableCentral : MonoBehaviour
             }
         }
 
+        // Sell에 드래그했을 때
         if (TransformService.ContainPos(Sell as RectTransform, character.transform.position))
         {
             isSelling = true;
+            Sell.gameObject.GetComponent<Image>().color = Color.red;
         }
         else
         {
             isSelling = false;
+            Sell.gameObject.GetComponent<Image>().color = Color.white;
         }
     }
 
@@ -122,6 +151,7 @@ public class DraggableCentral : MonoBehaviour
         if(isSelling)
         {
             character.DeleteCharacterBySell();
+            Sell.gameObject.GetComponent<Image>().color = Color.white;
         }
 
         SwapCharacters(invisibleCharacter, character);

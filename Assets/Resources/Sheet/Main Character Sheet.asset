@@ -184,7 +184,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 13
     name: "\uD574\uACE8 \uBCD1\uC0AC"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: f3791394a92974f469368d7d5d85e9d4, type: 3}
     attack: 0
     factor: 0
     tier: 2
@@ -197,7 +197,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 14
     name: "\uB9AC\uCE58"
-    image: {fileID: 21300000, guid: 9d4460deafe53854182adb9167c91568, type: 3}
+    image: {fileID: 21300000, guid: d4f70b2234891804ebc260654e574c86, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -210,7 +210,7 @@ MonoBehaviour:
       idxList: 04000000
   - id: 15
     name: "\uD761\uD608\uADC0"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 3b704301d52b1794b924de88cc183bfa, type: 3}
     attack: 0
     factor: 0
     tier: 5
@@ -223,7 +223,7 @@ MonoBehaviour:
       idxList: 03000000
   - id: 16
     name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: c2cc8ff3eb6188c4899b9932f772e415, type: 3}
     attack: 0
     factor: 0
     tier: 3
@@ -236,7 +236,7 @@ MonoBehaviour:
       idxList: 05000000
   - id: 17
     name: "\uB300\uC9C0\uC758 \uC815\uB839"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 61ce7bc8b2bd0c44c91e43c28c47cd8f, type: 3}
     attack: 0
     factor: 0
     tier: 3
@@ -249,7 +249,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 18
     name: "\uBB3C\uC758 \uC815\uB839"
-    image: {fileID: 21300000, guid: d5c88da45fcb77240946683aac0dd7c4, type: 3}
+    image: {fileID: 21300000, guid: 3f0d9a70a58f70e46ad318d96fbe7a0e, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -262,7 +262,7 @@ MonoBehaviour:
       idxList: 02000000
   - id: 19
     name: "\uBD88\uC758 \uC815\uB839"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: e951c1ddf19e8284a8ab72445d9eecd2, type: 3}
     attack: 0
     factor: 0
     tier: 5
@@ -275,7 +275,7 @@ MonoBehaviour:
       idxList: 01000000
   - id: 20
     name: "\uC815\uC2E0\uC758 \uC815\uB839"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 70840c2ee6861d947a870eaa52880ec8, type: 3}
     attack: 0
     factor: 0
     tier: 4
@@ -288,7 +288,7 @@ MonoBehaviour:
       idxList: 04000000
   - id: 21
     name: "\uB55C\uC7A5\uC774"
-    image: {fileID: 21300000, guid: 377fe1d6e7621c64f9fd0f81ddf5c29d, type: 3}
+    image: {fileID: 21300000, guid: b9f1d16098e64984db7de55f8ccf4094, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -301,7 +301,7 @@ MonoBehaviour:
       idxList: 00000000
   - id: 22
     name: "\uACE0\uCCA0 \uAC70\uC778"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 41662143aa292324b890b7cb6da77543, type: 3}
     attack: 0
     factor: 0
     tier: 3
@@ -314,7 +314,7 @@ MonoBehaviour:
       idxList: 01000000
   - id: 23
     name: "\uC790\uC774\uB85C\uCF65\uD130"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 02d0cd4512c4ee743abc924b4ed2d8e3, type: 3}
     attack: 0
     factor: 0
     tier: 5
@@ -327,7 +327,7 @@ MonoBehaviour:
       idxList: 02000000
   - id: 24
     name: "\uD06C\uB9AC\uC2A4\uD0C8 \uB4DC\uB798\uACE4"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 05a400005a38a28408d831c15c150c6d, type: 3}
     attack: 0
     factor: 0
     tier: 4
@@ -340,7 +340,7 @@ MonoBehaviour:
       idxList: 05000000
   - id: 25
     name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 9cc6821e68aaec8469caefdd2bb0fbb8, type: 3}
     attack: 0
     factor: 0
     tier: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
       idxList: 01000000
   - id: 26
     name: "\uC2A4\uD0EC\uD53C\uB4DC"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 2d1bcf94a8cfd25408f9381b4879c96a, type: 3}
     attack: 0
     factor: 0
     tier: 3
@@ -366,7 +366,7 @@ MonoBehaviour:
       idxList: 03000000
   - id: 27
     name: "\uD4E8\uB9AC\uC628"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 390de044cdee89d42adfc533dab0eb86, type: 3}
     attack: 0
     factor: 0
     tier: 4
@@ -379,7 +379,7 @@ MonoBehaviour:
       idxList: 04000000
   - id: 28
     name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: dc20d540e0355aa44800e476196ad20c, type: 3}
     attack: 0
     factor: 0
     tier: 2

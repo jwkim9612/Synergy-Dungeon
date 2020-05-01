@@ -13,123 +13,43 @@ MonoBehaviour:
   m_Name: 1Stage
   m_EditorClassIdentifier: 
   data:
-  - waveNum: 1
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 2
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 3
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 4
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 5
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 6
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 7
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 8
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 9
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 10
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 11
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 12
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 13
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 14
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 15
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 16
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 17
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 18
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 19
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
-  - waveNum: 20
-    name: 
-    Image: {fileID: 0}
-    count: 0
-    attack: 0
-    defense: 0
+  - count: 0100000002000000
+    monsterNum: 0000000001000000
+  - count: 02000000
+    monsterNum: 02000000
+  - count: 010000000100000001000000
+    monsterNum: 000000000100000002000000
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
+  - count: 
+    monsterNum: 
