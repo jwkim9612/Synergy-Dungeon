@@ -6,15 +6,22 @@ using geniikw.DataSheetLab;
 
 public class UIEnemy : MonoBehaviour
 {
-    private EnemyData enemyData;
+    //private EnemyData enemyData;
+    public Enemy enemy;
 
     [SerializeField] private Image image = null;
     
-    public void SetEnemyData(EnemyData newEnmeyData)
+    public void SetEnemy(EnemyData newEnmeyData)
     {
-        enemyData = newEnmeyData;
+        enemy = new Enemy();
+        enemy.SetAbility(newEnmeyData.ability);
 
-        image.sprite = enemyData.image;
+        image.sprite = newEnmeyData.image;
+        enemy.OnIsDead += OnHide;
     }
 
+    public void OnHide()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

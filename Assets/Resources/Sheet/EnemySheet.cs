@@ -11,8 +11,10 @@ namespace geniikw.DataSheetLab
         public int id;
         public string name;
         public Sprite image;
-        public int attack;
-        public int defense;
+        public AbilityRefer abilityData;
+        public PawnType pawnType;
+        
+        public AbilityData ability { get { return abilityData.idxList.Count == 1 ? abilityData.Sheet[abilityData.idxList[0]] : new AbilityData(); } }
     }
 
     [CreateAssetMenu]

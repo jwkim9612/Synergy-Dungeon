@@ -16,25 +16,35 @@ MonoBehaviour:
   - id: 0
     name: monster one
     image: {fileID: 21300000, guid: c2cc8ff3eb6188c4899b9932f772e415, type: 3}
-    attack: 0
-    defense: 0
+    abilityData:
+      Sheet: {fileID: 11400000, guid: 855864e2ebd847e48ba16ffb54260148, type: 2}
+      idxList: 00000000
+    pawnType: 1
   - id: 1
     name: monster two
     image: {fileID: 21300000, guid: 02d0cd4512c4ee743abc924b4ed2d8e3, type: 3}
-    attack: 0
-    defense: 0
+    abilityData:
+      Sheet: {fileID: 11400000, guid: 855864e2ebd847e48ba16ffb54260148, type: 2}
+      idxList: 01000000
+    pawnType: 1
   - id: 2
     name: monster three
     image: {fileID: 21300000, guid: f3791394a92974f469368d7d5d85e9d4, type: 3}
-    attack: 0
-    defense: 0
+    abilityData:
+      Sheet: {fileID: 11400000, guid: 855864e2ebd847e48ba16ffb54260148, type: 2}
+      idxList: 02000000
+    pawnType: 1
   - id: 3
     name: monster four
     image: {fileID: 0}
-    attack: 0
-    defense: 0
+    abilityData:
+      Sheet: {fileID: 11400000, guid: 855864e2ebd847e48ba16ffb54260148, type: 2}
+      idxList: 03000000
+    pawnType: 1
   - id: 4
     name: monster five
     image: {fileID: 0}
-    attack: 0
-    defense: 0
+    abilityData:
+      Sheet: {fileID: 11400000, guid: 855864e2ebd847e48ba16ffb54260148, type: 2}
+      idxList: 04000000
+    pawnType: 1

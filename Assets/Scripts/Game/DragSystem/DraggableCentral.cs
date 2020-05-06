@@ -7,7 +7,7 @@ public class DraggableCentral : MonoBehaviour
 {
     public UICharacter invisibleCharacter;
 
-    private UIBattleArea uiBattleArea;
+    private UICharacterArea uiCharacterArea;
     private UIPrepareArea uiPrepareArea;
     private List<Arranger> arrangers;
 
@@ -28,11 +28,11 @@ public class DraggableCentral : MonoBehaviour
 
     void InitializeArrangers()
     {
-        uiBattleArea = transform.GetComponentInChildren<UIBattleArea>();
+        uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
         uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
 
         arrangers = new List<Arranger>();
-        arrangers.Add(uiBattleArea);
+        arrangers.Add(uiCharacterArea);
         arrangers.Add(uiPrepareArea);
 
         //var arrs = transform.GetComponentsInChildren<Arranger>();

@@ -76,6 +76,14 @@ public class GameState : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 웨이브 클리어함으로 바꿔주는 함수
+    /// </summary>
+    public void SetIsWaveClear()
+    {
+        isWaveClear = true;
+    }
+
     //public void OnShowBattleMenu()
     //{
     //    uiBattleMenu.gameObject.SetActive(true);

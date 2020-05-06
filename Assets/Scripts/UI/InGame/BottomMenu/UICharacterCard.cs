@@ -42,7 +42,7 @@ public class UICharacterCard : MonoBehaviour
                 }
                 else
                 {
-                    emptyUICharacter.SetCharacterInfo(characterInfo);
+                    emptyUICharacter.SetCharacter(characterInfo);
                     BuyCharacter(combinationService);
                 }
             }

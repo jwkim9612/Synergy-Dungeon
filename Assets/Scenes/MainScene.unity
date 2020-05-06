@@ -4990,7 +4990,18 @@ MonoBehaviour:
   m_Group: {fileID: 226766965}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167611158}
+        m_MethodName: OnOneStarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &612078759
 GameObject:
@@ -10054,8 +10065,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31a39abdd287e164ba1f86633ba8c510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: {fileID: 950771978}
-  characterimage: {fileID: 1814737836}
+  textName: {fileID: 950771978}
+  image: {fileID: 1814737836}
+  textMaxHP: {fileID: 2045361248}
+  textMaxMP: {fileID: 1317836547}
+  textAttack: {fileID: 1983002083}
+  textDefense: {fileID: 1593803719}
+  textDexterity: {fileID: 859562319}
+  textIntellect: {fileID: 420860590}
 --- !u!222 &1167611159
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14966,7 +14983,18 @@ MonoBehaviour:
   m_Group: {fileID: 226766965}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167611158}
+        m_MethodName: OnTwoStarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!224 &1752794335 stripped
 RectTransform:
@@ -15886,7 +15914,18 @@ MonoBehaviour:
   m_Group: {fileID: 226766965}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1167611158}
+        m_MethodName: OnThreeStarClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &1853259013
 GameObject:
@@ -17698,8 +17737,15 @@ MonoBehaviour:
     id: 0
     name: 
     image: {fileID: 0}
-    attack: 0
-    factor: 0
+    oneStarAbilityData:
+      Sheet: {fileID: 0}
+      idxList: 
+    twoStarAbilityData:
+      Sheet: {fileID: 0}
+      idxList: 
+    threeStarAbilityData:
+      Sheet: {fileID: 0}
+      idxList: 
     tier: 0
     describe: 
     tribeData:

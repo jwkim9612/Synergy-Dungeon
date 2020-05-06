@@ -17,5 +17,10 @@ namespace Shared.Service
 
             return randomNum;
         }
+
+        public static int RandRange(int min, int max)
+        {
+            return random.Next(min, max);
+        }
     }
 }

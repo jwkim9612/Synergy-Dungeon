@@ -30,30 +30,48 @@ namespace geniikw.DataSheetLab
         /// </summary>
         public Origin origin { get { return originData.idxList.Count == 1 ? originData.Sheet[originData.idxList[0]].origin : Origin.None; } }
 
-        [BigCheck(30)]
-        public int attack;
-        [BigCheck(30)]
-        public float factor;
+        public AbilityRefer oneStarAbilityData;
+        public AbilityRefer twoStarAbilityData;
+        public AbilityRefer threeStarAbilityData;
+
+        public AbilityData oneStarAbility { get { return oneStarAbilityData.idxList.Count == 1 ? oneStarAbilityData.Sheet[oneStarAbilityData.idxList[0]] : new AbilityData(); } }
+        public AbilityData twoStarAbility { get { return twoStarAbilityData.idxList.Count == 1 ? twoStarAbilityData.Sheet[twoStarAbilityData.idxList[0]] : new AbilityData(); } }
+        public AbilityData threeStarAbility { get { return threeStarAbilityData.idxList.Count == 1 ? threeStarAbilityData.Sheet[threeStarAbilityData.idxList[0]] : new AbilityData(); } }
+
+        public AbilityData GetAbilityDataByStar(int star)
+        {
+            AbilityData abilityData = null;
+
+            switch (star)
+            {
+                case 1:
+                    abilityData = oneStarAbility;
+                    break;
+                case 2:
+                    abilityData = twoStarAbility;
+                    break;
+                case 3:
+                    abilityData = threeStarAbility;
+                    break;
+                default:
+                    Debug.Log("Error GetAbilityDataByStar");
+                    break;
+            }
+
+            return abilityData;
+        }
+
         [BigCheck(30)]
         public Tier tier;
-
         public string describe;
+        public PawnType pawnType;
 
-        [BigCheck(30)]
-        [SmallCheck(10)]
-        public float AttackResult
-        {
-            get
-            {
-                return attack * factor;
-            }
-        }
         /// <summary>
         /// 데이터 세팅 값
         /// </summary>
         public TribeRefer tribeData;
         public OriginRefer originData;
-    }    
+    }
 
     [CreateAssetMenu]
     public class CharacterSheet : Sheet<CharacterData> { }

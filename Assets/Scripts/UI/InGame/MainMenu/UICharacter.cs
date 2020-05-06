@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UICharacter : MonoBehaviour
 {
+    public Character character;
     public bool isFightingOnBattlefield;
 
     private void Start()
@@ -14,6 +15,18 @@ public class UICharacter : MonoBehaviour
 
     public CharacterInfo characterInfo;
     [SerializeField] private Image image = null;
+
+    public void SetCharacter(CharacterInfo newCharacterInfo)
+    {
+        OnCanClick();
+        SetCharacterInfo(newCharacterInfo);
+
+        character = new Character();
+
+        // 캐릭터 능력치 설정해주고 할것.
+        character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
+        character.OnIsDead += OnHide;
+    }
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
     {
@@ -56,5 +69,10 @@ public class UICharacter : MonoBehaviour
     public void OnCanNotClick()
     {
         image.raycastTarget = false;
+    }
+
+    public void OnHide()
+    {
+        this.gameObject.SetActive(false);
     }
 }

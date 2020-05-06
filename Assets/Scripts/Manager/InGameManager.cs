@@ -16,7 +16,7 @@ public class InGameManager : MonoBehaviour
     public UIPrepareArea uiPrepareArea;
     public DraggableCentral draggableCentral;
 
-    public Button ClearButton;
+    //public Button ClearButton;
 
     void Awake()
     {
@@ -45,11 +45,10 @@ public class InGameManager : MonoBehaviour
         probabilityService.Initialize();
         combinationService.Initialize();
 
-        ClearButton.onClick.AddListener(() => {
-            Debug.Log("Clear");
-            probabilityService.UpdateProbability();
-            gameState.isWaveClear = true;
-            //gameState.SetInGameState(InGameState.Complete);
-        });
+        //ClearButton.onClick.AddListener(() => {
+        //    //probabilityService.UpdateProbability();
+        //    //gameState.isWaveClear = true;
+        //    //gameState.SetInGameState(InGameState.Complete);
+        //});
     }
 }

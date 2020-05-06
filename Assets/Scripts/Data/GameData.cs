@@ -1,10 +1,16 @@
 ﻿using System.Collections.Generic;
 
 //[System.Serializable]
-public class GameData
+public class PlayerData
 {
-    public int level = 1;
-    public int coin = 0;
+    public PlayerData()
+    {
+        level = 1;
+        coin = 0;
+    }
+
+    public int level;
+    public int coin;
 }
 
 public enum Tier
@@ -47,5 +53,11 @@ public enum InGameState
     Battle,
     Complete,
     Lose
+}
+
+public enum PawnType
+{ 
+    Character,
+    Enemy
 }
 

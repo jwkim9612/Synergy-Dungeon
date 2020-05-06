@@ -8,11 +8,11 @@ public class UIEnemyArea : MonoBehaviour
     [SerializeField] private VerticalLayoutGroup verticalLayoutGroup = null;
     [SerializeField] private UIEnemy uiEnemy = null;
 
-    private List<UIEnemy> enemies;
+    private List<UIEnemy> uiEnemies;
 
     void Start()
     {
-        enemies = new List<UIEnemy>();
+        uiEnemies = new List<UIEnemy>();
 
         InGameManager.instance.gameState.OnPrepare += CreateMonsters;
         //CreateMonsters();
@@ -29,8 +29,8 @@ public class UIEnemyArea : MonoBehaviour
             for (int j = 0; j < currentWaveData.count[i]; ++j)
             {
                 var enemy = Instantiate(uiEnemy, verticalLayoutGroup.transform);
-                enemy.SetEnemyData(GameManager.instance.dataSheet.enemyDatas[currentWaveData.monsterNum[i]]);
-                enemies.Add(enemy);
+                enemy.SetEnemy(GameManager.instance.dataSheet.enemyDatas[currentWaveData.monsterNum[i]]);
+                uiEnemies.Add(enemy);
             }
         }
         /////////////////////////////// //////////////////// //////////////////////////////////////////////////
@@ -42,13 +42,28 @@ public class UIEnemyArea : MonoBehaviour
 
     public void DestroyMonsters()
     {
-        foreach(var enemy in enemies)
+        foreach(var uiEnemy in uiEnemies)
         {
-            Destroy(enemy.gameObject);
+            Destroy(uiEnemy.gameObject);
         }
 
-        enemies.Clear();
+        uiEnemies.Clear();
 
         uiEnemy.gameObject.SetActive(true);
+    }
+
+    public List<Enemy> GetEnemyList()
+    {
+        List<Enemy> enemys = new List<Enemy>();
+        
+        foreach(var uiEnemy in uiEnemies)
+        {
+            if (uiEnemy.enemy != null)
+            {
+                enemys.Add(uiEnemy.enemy);
+            }
+        }
+
+        return enemys;
     }
 }
