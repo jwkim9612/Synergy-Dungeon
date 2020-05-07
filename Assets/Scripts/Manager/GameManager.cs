@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public DataSheet dataSheet = null;
 
     public StageManager stageManager = null;
-    public PlayerDataManager playerDataManager = null;
+    //public PlayerDataManager playerDataManager = null;
 
     public ParticleService particleService = null;
 
@@ -44,7 +44,9 @@ public class GameManager : MonoBehaviour
     {
         uiManager.Initialize();
         soundManager.Initialize();
-        playerDataManager.Initialize();
+        //playerDataManager.Initialize();
+        SaveManager.Instance.Initialize();
+        PlayerDataManager.Instance.Initialize();
     }
 
     public void Quit()

@@ -6,7 +6,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using geniikw.DataSheetLab;
 
-public class PlayerDataManager : MonoBehaviour
+public class PlayerDataManager : MonoSingleton<PlayerDataManager>
 {
     // 플레이어의 데이터를 관리해주는 매니저
     public PlayerData playerData;
@@ -27,15 +27,16 @@ public class PlayerDataManager : MonoBehaviour
         return JsonConvert.SerializeObject(obj);
     }
 
-    void CreateJsonFile(string createPath, string fileName, string jsonData)
+    public void CreateJsonFile(string createPath, string fileName, string jsonData)
     {
         FileStream fileStream = new FileStream(string.Format("{0}/{1}.json", createPath, fileName), FileMode.Create);
         byte[] data = Encoding.UTF8.GetBytes(jsonData);
         fileStream.Write(data, 0, data.Length);
         fileStream.Close();
+        Debug.Log(Application.dataPath.ToString());
     }
 
-    T LoadJsonFile<T>(string loadPath, string fileName)
+    public T LoadJsonFile<T>(string loadPath, string fileName)
     {
         //파일이 없으면
         if(!File.Exists(string.Format("{0}/{1}.json", loadPath, fileName)))

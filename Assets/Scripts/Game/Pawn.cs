@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using geniikw.DataSheetLab;
+using Newtonsoft.Json;
 
 public class Pawn
 {
     public delegate void OnAttackDelegate();
-    public OnAttackDelegate OnAttack; 
+    [JsonIgnore] public OnAttackDelegate OnAttack; 
     public delegate void OnHitDelegate();
-    public OnHitDelegate OnHit;
+    [JsonIgnore] public OnHitDelegate OnHit;
     public delegate void OnIsDeadDelegate();
-    public OnIsDeadDelegate OnIsDead;
+    [JsonIgnore] public OnIsDeadDelegate OnIsDead;
 
     public AbilityData ability;
     public PawnType pawnType;
