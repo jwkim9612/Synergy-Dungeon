@@ -8,13 +8,13 @@ public class UICharacter : MonoBehaviour
     public Character character;
     public bool isFightingOnBattlefield;
 
+    public CharacterInfo characterInfo;
+    public Image image = null;
+
     private void Start()
     {
         isFightingOnBattlefield = false;
     }
-
-    public CharacterInfo characterInfo;
-    [SerializeField] private Image image = null;
 
     public void SetCharacter(CharacterInfo newCharacterInfo)
     {
@@ -26,6 +26,8 @@ public class UICharacter : MonoBehaviour
         // 캐릭터 능력치 설정해주고 할것.
         character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
         character.OnIsDead += OnHide;
+        character.OnAttack += PlayAttackAnimation;
+        character.OnHit += PlayHitParticle;
     }
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
@@ -74,5 +76,22 @@ public class UICharacter : MonoBehaviour
     public void OnHide()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public void PlayAttackAnimation()
+    {
+        StartCoroutine(AttackAnimation());
+    }
+
+    IEnumerator AttackAnimation()
+    {
+        gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
+        yield return new WaitForSeconds(0.5f);
+        gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
+    }
+
+    private void PlayHitParticle()
+    {
+        Instantiate(GameManager.instance.particleService.hitParticle, transform);
     }
 }

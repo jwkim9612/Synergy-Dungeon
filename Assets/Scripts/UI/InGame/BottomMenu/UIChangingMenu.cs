@@ -8,6 +8,8 @@ public class UIChangingMenu : MonoBehaviour
 
     void Start()
     {
+        uiBattleMenu.Initialize();
+
         InGameManager.instance.gameState.OnPrepare += uiBattleMenu.OnHide;
         InGameManager.instance.gameState.OnBattle += uiBattleMenu.OnShow;
     }

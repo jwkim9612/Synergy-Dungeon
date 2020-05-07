@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,10 +19,29 @@ public class UIEnemy : MonoBehaviour
 
         image.sprite = newEnmeyData.image;
         enemy.OnIsDead += OnHide;
+        enemy.OnAttack += PlayAttackAnimation;
+        enemy.OnHit += PlayHitParticle;
     }
 
     public void OnHide()
     {
-        this.gameObject.SetActive(false);
+        image.enabled = false;
+    }
+
+    public void PlayAttackAnimation()
+    {
+        StartCoroutine(AttackAnimation());
+    }
+
+    IEnumerator AttackAnimation()
+    {
+        gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
+        yield return new WaitForSeconds(0.5f);
+        gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
+    }
+
+    private void PlayHitParticle()
+    {
+        Instantiate(GameManager.instance.particleService.hitParticle, transform);
     }
 }

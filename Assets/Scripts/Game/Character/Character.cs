@@ -5,6 +5,8 @@ using geniikw.DataSheetLab;
 
 public class Character : Pawn
 {
+    Action action;
+
     public Character()
     {
         pawnType = PawnType.Character;

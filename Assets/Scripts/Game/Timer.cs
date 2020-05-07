@@ -43,6 +43,11 @@ public class Timer : MonoBehaviour
 
     public void TimeOut()
     {
+        if(!isStarted)
+        {
+            return;
+        }
+
         OnTimeOut();
         isStarted = false;
         timeLimit = 0.0f;

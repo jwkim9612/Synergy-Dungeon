@@ -41,4 +41,32 @@ public class UICharacterArea : Arranger
 
         return characters;
     }
+
+    /// <summary>
+    /// 캐릭터가 들어있는 UICharacter리스트를 반환
+    /// </summary>
+    /// <returns> 캐릭터가 들어있는 UICharacter리스트 </returns>
+    public List<UICharacter> GetUICharacterListWithCharacters()
+    {
+        List<UICharacter> emptyUICharacters = new List<UICharacter>();
+
+        foreach (var uiCharacter in uiCharacters)
+        {
+            if (uiCharacter.character != null)
+            {
+                emptyUICharacters.Add(uiCharacter);
+            }
+
+        }
+
+        return emptyUICharacters;
+    }
+
+    public void ShowAllUICharacters()
+    {
+        foreach(var uiCharacter in uiCharacters)
+        {
+            uiCharacter.gameObject.SetActive(true);
+        }
+    }
 }

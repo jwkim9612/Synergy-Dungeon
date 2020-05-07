@@ -25,26 +25,4 @@ public class CharacterService
 
         return characterInfo;
     }
-
-    //public int temp(CharacterInfo characterInfo, CharacterData characterData)
-    //{
-    //    int temp;
-
-    //    switch (characterInfo.star)
-    //    {
-    //        case 1:
-    //            temp = CardService.GetPriceByTier(characterData.tier);
-    //            break;
-    //        case 2:
-
-    //            break;
-    //        case 3:
-
-    //            break;
-    //        default:
-    //            Debug.Log("Error temp");
-    //            break;
-    //    }
-
-    //}
 }

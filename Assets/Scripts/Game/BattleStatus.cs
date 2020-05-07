@@ -7,7 +7,7 @@ using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
-public class BattleStatus
+public class BattleStatus : MonoBehaviour
 {
     public delegate void OnWinTheBattleDelegate();
     public OnWinTheBattleDelegate OnWinTheBattle;
@@ -26,31 +26,39 @@ public class BattleStatus
         InitializeAnnihilation();
         InitializePawns();
 
+        StartCoroutine(Battle());
+    }
+
+    IEnumerator Battle()
+    {
+        yield return new WaitForSeconds(0.5f);
+
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {
             List<Pawn> removePawnList = new List<Pawn>();
 
             foreach (var pawn in pawnsAttackSequenceList)
             {
-
-
-                if(pawn.isDead)
+                if (pawn.isDead)
                 {
                     continue;
                 }
 
+                //switch(pawn.)
+
                 Pawn target = RandomAttackAndGetTarget(pawn);
-                if(target.isDead)
+                yield return new WaitForSeconds(1.0f);
+                if (target.isDead)
                 {
                     RemoveFromAttackList(target);
                     removePawnList.Add(target);
 
-                    if(characters.Count == 0)
+                    if (characters.Count == 0)
                     {
                         isCharacterAnnihilation = true;
                         break;
                     }
-                    else if(enemies.Count == 0)
+                    else if (enemies.Count == 0)
                     {
                         isEnemyAnnihilation = true;
                         break;
@@ -62,11 +70,11 @@ public class BattleStatus
         }
 
         // 배틀 종료 
-        if(isCharacterAnnihilation)
+        if (isCharacterAnnihilation)
         {
-            
+
         }
-        else if(isEnemyAnnihilation)
+        else if (isEnemyAnnihilation)
         {
             OnWinTheBattle();
         }
@@ -76,6 +84,9 @@ public class BattleStatus
         }
     }
 
+    /// <summary>
+    /// 공격 순서 초기화
+    /// </summary>
     private void InitializeAttackSequence()
     {
         List<Pawn> pawns = new List<Pawn>();

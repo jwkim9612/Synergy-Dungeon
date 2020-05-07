@@ -61,3 +61,10 @@ public enum PawnType
     Enemy
 }
 
+public enum Action
+{ 
+    Attack,
+    Defense,
+    Skill
+}
+

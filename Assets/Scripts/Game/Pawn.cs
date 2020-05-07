@@ -5,6 +5,10 @@ using geniikw.DataSheetLab;
 
 public class Pawn
 {
+    public delegate void OnAttackDelegate();
+    public OnAttackDelegate OnAttack; 
+    public delegate void OnHitDelegate();
+    public OnHitDelegate OnHit;
     public delegate void OnIsDeadDelegate();
     public OnIsDeadDelegate OnIsDead;
 
@@ -16,12 +20,15 @@ public class Pawn
     public void Attack(Pawn pawn)
     {
         pawn.TakeDamage(ability.attack);
+        OnAttack();
     }
 
     public void TakeDamage(int damage)
     {
         Debug.Log(GetType());
         Debug.Log("원래 HP : " + currentHP);
+
+        OnHit();
 
         int finalDamage = Mathf.Clamp(damage - ability.defense, 1, damage);
         currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);

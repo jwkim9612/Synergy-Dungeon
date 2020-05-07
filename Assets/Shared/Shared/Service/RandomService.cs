@@ -22,5 +22,7 @@ namespace Shared.Service
         {
             return random.Next(min, max);
         }
+
+
     }
 }
