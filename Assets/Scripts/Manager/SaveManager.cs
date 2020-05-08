@@ -29,7 +29,7 @@ public class SaveManager
     public void Initialize()
     {
         inGameSaveData = new InGameSaveData();
-        playDataPath = Path.Combine(Application.persistentDataPath, "InGameData.dat");
+        playDataPath = Path.Combine(Application.persistentDataPath, "InGameData.json");
 
         if (!File.Exists(playDataPath))
         {
@@ -45,7 +45,7 @@ public class SaveManager
     {
         Debug.Log("InGame Save Start !");
         var inGameData = PlayerDataManager.Instance.ObjectToJson(inGameSaveData);
-        PlayerDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData.dat", inGameData);
+        PlayerDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", inGameData);
         Debug.Log("InGame Save Done !");
     }
 
@@ -53,5 +53,22 @@ public class SaveManager
     {
         inGameSaveData.Characters = characters;
         inGameSaveData.Enemies = enemies;
+    }
+
+    public InGameSaveData LoadInGameData()
+    {
+        //파일이 없으면
+        if (!File.Exists(string.Format(playDataPath)))
+        {
+            return default;
+        }
+
+        FileStream fileStream = new FileStream(string.Format(playDataPath), FileMode.Open);
+        byte[] data = new byte[fileStream.Length];
+        fileStream.Read(data, 0, data.Length);
+        fileStream.Close();
+
+        string jsonData = Encoding.UTF8.GetString(data);
+        return JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
     }
 }

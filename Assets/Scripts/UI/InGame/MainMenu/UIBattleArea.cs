@@ -11,8 +11,6 @@ public class UIBattleArea : MonoBehaviour
 
     private void Start()
     {
-        //battleStatus = new BattleStatus();
-
         InGameManager.instance.gameState.OnBattle += BattleStart;
         battleStatus.OnWinTheBattle += uiEnemyArea.DestroyMonsters;
         battleStatus.OnWinTheBattle += uiCharacterArea.ShowAllUICharacters;

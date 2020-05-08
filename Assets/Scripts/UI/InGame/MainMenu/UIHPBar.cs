@@ -9,32 +9,50 @@ public class UIHPBar : MonoBehaviour
     [SerializeField] private Slider slider = null;
     [SerializeField] private Slider afterImageSlider = null;
     private Pawn controllingPawn = null;
-
-    Coroutine coroutine;
+    private Coroutine afterImageCoroutine;
 
     public void Initialize()
     {
-        var uiPawn = GetComponentInParent<UIEnemy>();
-        if(uiPawn != null)
+        InGameManager.instance.gameState.OnBattle += UpdateHPBar;
+
+        var uiEnemy = GetComponentInParent<UIEnemy>();
+        if(uiEnemy != null)
         {
-            controllingPawn = uiPawn.enemy;
-            controllingPawn.OnHit += UpdateHpBar;
+            controllingPawn = uiEnemy.enemy;
+            controllingPawn.OnHit += UpdateHPBarAndAfterImage;
             return;
         }
-        else
+
+        var uiCharacter = GetComponentInParent<UICharacter>();
+        if(uiCharacter != null)
         {
-            Debug.Log("Error UIHPBar Initialize");
+            controllingPawn = uiCharacter.character;
+            controllingPawn.OnHit += UpdateHPBarAndAfterImage;
+            return;
         }
+
+        Debug.Log("Error UIHPBar Initialize");
     }
 
-    public void UpdateHpBar()
+    public void UpdateHPBarAndAfterImage()
+    {
+        UpdateHPBar();
+        afterImageCoroutine = StartCoroutine(PlayAfterImage());
+    }
+
+    public void UpdateHPBar()
     {
         slider.value = controllingPawn.GetHPRatio();
-        coroutine = StartCoroutine(PlayAfterImage());
     }
+
+    //public void PlayAfterImageCoroutine()
+    //{
+    //    Debug.Log("PlayAfterImageCoroutine");
+    //}
 
     private IEnumerator PlayAfterImage()
     {
+
         float subValue = (afterImageSlider.value - controllingPawn.GetHPRatio()) / InGameService.Rate_At_Which_Afterimages_Disappear ;
 
         while(true)
@@ -43,10 +61,20 @@ public class UIHPBar : MonoBehaviour
 
             if (afterImageSlider.value <= controllingPawn.GetHPRatio())
             {
-                StopCoroutine(coroutine);
+                StopCoroutine(afterImageCoroutine);
             }
 
             afterImageSlider.value -= subValue;
         }
+    }
+
+    public void OnShow()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void OnHide()
+    {
+        this.gameObject.SetActive(false);
     }
 }

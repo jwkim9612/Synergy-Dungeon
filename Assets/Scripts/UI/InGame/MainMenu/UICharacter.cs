@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UICharacter : MonoBehaviour
 {
+    [SerializeField] private UIHitText[] uiHitTexts = null;
+    [SerializeField] private UIHPBar uiHPBar = null;
     public Character character;
     public bool isFightingOnBattlefield;
 
@@ -25,9 +27,16 @@ public class UICharacter : MonoBehaviour
         character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
         character.SetName(GameManager.instance.dataSheet.characterDatas[characterInfo.id].name);
         character.OnIsDead += OnHide;
-        character.OnAttack += PlayAttackAnimation;
+        character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
-        character.OnHitForDamage += PlayFloatingText;
+        character.OnHit += PlayHitStateCoroutine;
+        character.SetUIHitTexts(uiHitTexts);
+        character.InitializeUIHitTexts();
+
+        uiHPBar.Initialize();
+
+        InGameManager.instance.gameState.OnBattle += UpdateHPBarVisibility;
+        InGameManager.instance.gameState.OnPrepare += UpdateHPBarVisibility;
     }
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
@@ -48,7 +57,6 @@ public class UICharacter : MonoBehaviour
     {
         image.sprite = Resources.Load<Sprite>(CardService.DEFAULT_IMAGE_NAME);
 
-        //characterInfo = null;
         characterInfo.id = -1;
         characterInfo.star = 0;
 
@@ -78,16 +86,30 @@ public class UICharacter : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void PlayAttackAnimation()
+    public void PlayAttackCoroutine()
     {
-        StartCoroutine(AttackAnimation());
+        StartCoroutine(AttackCoroutine());
     }
 
-    IEnumerator AttackAnimation()
+    public void PlayHitStateCoroutine()
+    {
+        StartCoroutine(HitStateCoroutine());
+    }
+
+    private IEnumerator AttackCoroutine()
     {
         gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
         yield return new WaitForSeconds(0.5f);
         gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
+        yield break;
+    }
+
+    private IEnumerator HitStateCoroutine()
+    {
+        image.color = Color.red;
+        yield return new WaitForSeconds(0.4f);
+        image.color = Color.white;
+        yield break;
     }
 
     private void PlayHitParticle()
@@ -95,12 +117,15 @@ public class UICharacter : MonoBehaviour
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
     }
 
-    private void PlayFloatingText(float damage)
+    private void UpdateHPBarVisibility()
     {
-        var clone = Instantiate(InGameManager.instance.floatingText, transform.localPosition, Quaternion.Euler(Vector3.zero));
-        clone.transform.SetParent(this.transform);
-        clone.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-        clone.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        clone.GetComponent<UIFloatingText>().text.text = damage.ToString();
+        if(isFightingOnBattlefield)
+        {
+            uiHPBar.OnShow();
+        }
+        else
+        {
+            uiHPBar.OnHide();
+        }
     }
 }

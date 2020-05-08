@@ -7,7 +7,6 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
 {
     Transform root;
     Camera mainCamera;
-    //[SerializeField] private UICharacter uiCharacter;
     UICharacter uiCharacter;
 
     void Start()

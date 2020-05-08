@@ -7,11 +7,10 @@ using geniikw.DataSheetLab;
 
 public class UIEnemy : MonoBehaviour
 {
-    //private EnemyData enemyData;
     [SerializeField] private UIHPBar uiHPBar = null;
-    public Enemy enemy;
-
     [SerializeField] private Image image = null;
+    [SerializeField] private UIHitText[] uiHitTexts = null;
+    public Enemy enemy;
     
     public void SetEnemy(EnemyData newEnmeyData)
     {
@@ -21,12 +20,14 @@ public class UIEnemy : MonoBehaviour
 
         image.sprite = newEnmeyData.image;
         enemy.OnIsDead += OnHide;
-        enemy.OnAttack += PlayAttackAnimation;
+        enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
-        enemy.OnHitForDamage += PlayFloatingText;
+        enemy.OnHit += PlayHitStateCoroutine;
+        enemy.SetUIHitTexts(uiHitTexts);
+        enemy.InitializeUIHitTexts();
 
         uiHPBar.Initialize();
-        uiHPBar.UpdateHpBar();
+        uiHPBar.UpdateHPBar();
     }
 
     public void OnHide()
@@ -34,27 +35,35 @@ public class UIEnemy : MonoBehaviour
         image.enabled = false;
     }
 
-    public void PlayAttackAnimation()
+    public void PlayAttackCoroutine()
     {
-        StartCoroutine(AttackAnimation());
+        StartCoroutine(AttackCoroutine());
     }
 
-    IEnumerator AttackAnimation()
+    public void PlayHitStateCoroutine()
+    {
+        StartCoroutine(HitStateCoroutine());
+    }
+
+    private IEnumerator AttackCoroutine()
     {
         gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
         yield return new WaitForSeconds(0.5f);
         gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
+        yield break;
     }
+
+    private IEnumerator HitStateCoroutine()
+    {
+        image.color = Color.red;
+        yield return new WaitForSeconds(0.4f);
+        image.color = Color.white;
+        yield break;
+    }
+     
 
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
-    }
-
-    private void PlayFloatingText(float damage)
-    {
-        var clone = Instantiate(InGameManager.instance.floatingText, transform.position, Quaternion.Euler(Vector3.zero));
-        clone.GetComponent<UIFloatingText>().text.text = damage.ToString();
-        clone.transform.SetParent(this.transform);
     }
 }

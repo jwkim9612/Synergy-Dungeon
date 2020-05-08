@@ -10,8 +10,6 @@ public class Pawn
     [JsonIgnore] public OnAttackDelegate OnAttack;
     public delegate void OnHitDelegate();
     [JsonIgnore] public OnHitDelegate OnHit;
-    public delegate void OnHitForDamageDelegate(float damage);
-    [JsonIgnore] public OnHitForDamageDelegate OnHitForDamage;
     public delegate void OnIsDeadDelegate();
     [JsonIgnore] public OnIsDeadDelegate OnIsDead;
 
@@ -20,6 +18,14 @@ public class Pawn
     public PawnType pawnType;
     public bool isDead;
     private int currentHP;
+
+    [JsonIgnore] public UIHitText[] uiHitTexts = null;
+    [JsonIgnore] private int hitTextIndex;
+
+    private void Start()
+    {
+        hitTextIndex = 0;
+    }
 
     public void Attack(Pawn target)
     {
@@ -40,7 +46,8 @@ public class Pawn
         currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);
 
         OnHit();
-        OnHitForDamage(finalDamage);
+
+        PlayHitText(finalDamage);
 
         if (currentHP <= 0)
         {
@@ -72,5 +79,32 @@ public class Pawn
     public void SetName(string name)
     {
         this.name = name;
+    }
+
+    public void SetUIHitTexts(UIHitText[] uiHitTexts)
+    {
+        this.uiHitTexts = uiHitTexts;
+    }
+
+    public void InitializeUIHitTexts()
+    {
+        if (uiHitTexts != null)
+        {
+            foreach(var uiHitText in uiHitTexts)
+            {
+                uiHitText.Initialize();
+            }
+        }
+    }
+
+    private void PlayHitText(int damage)
+    {
+        uiHitTexts[hitTextIndex].SetDamageText(damage.ToString());
+        uiHitTexts[hitTextIndex].Play();
+
+        ++hitTextIndex;
+
+        if (hitTextIndex >= uiHitTexts.Length)
+            hitTextIndex = 0;
     }
 }

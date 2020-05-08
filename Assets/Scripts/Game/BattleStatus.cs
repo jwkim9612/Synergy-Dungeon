@@ -29,7 +29,7 @@ public class BattleStatus : MonoBehaviour
         StartCoroutine(Battle());
     }
 
-    IEnumerator Battle()
+    private IEnumerator Battle()
     {
         yield return new WaitForSeconds(0.5f);
 

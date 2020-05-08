@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 45366340130474620}
   - component: {fileID: 45366340130474622}
-  - component: {fileID: 45366340130474608}
+  - component: {fileID: 7618492651073860859}
   - component: {fileID: 45366340130474621}
   - component: {fileID: 45366340130474623}
   m_Layer: 5
-  m_Name: FloatingText
+  m_Name: HitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 28.6}
+  m_AnchoredPosition: {x: 0, y: 0.61}
+  m_SizeDelta: {x: 160, y: 46.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &45366340130474622
 CanvasRenderer:
@@ -47,7 +47,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45366340130474619}
   m_CullTransparentMesh: 0
---- !u!114 &45366340130474608
+--- !u!114 &7618492651073860859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a06a6207d54a81478ba163c7afc407c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  destroyTime: 5
-  text: {fileID: 45366340130474621}
+  canvas: {fileID: 0}
+  moveSpeed: 0.5
+  duration: 1.5
+  damageText: {fileID: 45366340130474621}
 --- !u!114 &45366340130474621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b28bd1552e0aeb64b897c2518298168b, type: 3}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1

@@ -9,6 +9,7 @@ public class InGameSaveData
 {
     public List<Character> Characters { get; set; }
     public List<Enemy> Enemies { get; set; }
+    public int Coin { get; set; }
 
     public void SetInGameData(List<Character> characters, List<Enemy> enemies)
     {
