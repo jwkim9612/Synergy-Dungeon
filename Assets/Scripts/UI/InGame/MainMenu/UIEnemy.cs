@@ -8,6 +8,7 @@ using geniikw.DataSheetLab;
 public class UIEnemy : MonoBehaviour
 {
     //private EnemyData enemyData;
+    [SerializeField] private UIHPBar uiHPBar = null;
     public Enemy enemy;
 
     [SerializeField] private Image image = null;
@@ -16,11 +17,16 @@ public class UIEnemy : MonoBehaviour
     {
         enemy = new Enemy();
         enemy.SetAbility(newEnmeyData.ability);
+        enemy.SetName(newEnmeyData.name);
 
         image.sprite = newEnmeyData.image;
         enemy.OnIsDead += OnHide;
         enemy.OnAttack += PlayAttackAnimation;
         enemy.OnHit += PlayHitParticle;
+        enemy.OnHitForDamage += PlayFloatingText;
+
+        uiHPBar.Initialize();
+        uiHPBar.UpdateHpBar();
     }
 
     public void OnHide()
@@ -43,5 +49,12 @@ public class UIEnemy : MonoBehaviour
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
+    }
+
+    private void PlayFloatingText(float damage)
+    {
+        var clone = Instantiate(InGameManager.instance.floatingText, transform.position, Quaternion.Euler(Vector3.zero));
+        clone.GetComponent<UIFloatingText>().text.text = damage.ToString();
+        clone.transform.SetParent(this.transform);
     }
 }

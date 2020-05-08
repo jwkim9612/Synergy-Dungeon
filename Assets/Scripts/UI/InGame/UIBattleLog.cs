@@ -30,4 +30,10 @@ public class UIBattleLog : MonoBehaviour
         battleLog.Append(log);
         logText.text = battleLog.ToString();
     }
+
+    public void LogClear()
+    {
+        battleLog.Clear();
+        logText.text = "";
+    }
 }

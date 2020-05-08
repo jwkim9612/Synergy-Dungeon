@@ -7,21 +7,9 @@ public class GameManager : MonoBehaviour
 {
     //매니저들
     public static GameManager instance = null;
-    public UIManager uiManager = null;
-    public SoundManager soundManager = null;
     public DataSheet dataSheet = null;
-
     public StageManager stageManager = null;
-    //public PlayerDataManager playerDataManager = null;
-
     public ParticleService particleService = null;
-
-    //public InGameManager inGameManager = null;
-
-    ////public GameData gameData = null;
-
-    //public StockService stockService = new StockService();
-    //public ProbabilityService probabilityService = new ProbabilityService();
 
     //파괴되지 않는 싱글턴
     void Awake()
@@ -42,9 +30,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        uiManager.Initialize();
-        soundManager.Initialize();
-        //playerDataManager.Initialize();
+        UIManager.Instance.Initialize();
+        SoundManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
     }

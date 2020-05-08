@@ -7,42 +7,48 @@ using Newtonsoft.Json;
 public class Pawn
 {
     public delegate void OnAttackDelegate();
-    [JsonIgnore] public OnAttackDelegate OnAttack; 
+    [JsonIgnore] public OnAttackDelegate OnAttack;
     public delegate void OnHitDelegate();
     [JsonIgnore] public OnHitDelegate OnHit;
+    public delegate void OnHitForDamageDelegate(float damage);
+    [JsonIgnore] public OnHitForDamageDelegate OnHitForDamage;
     public delegate void OnIsDeadDelegate();
     [JsonIgnore] public OnIsDeadDelegate OnIsDead;
 
+    public string name;
     public AbilityData ability;
     public PawnType pawnType;
     public bool isDead;
     private int currentHP;
 
-    public void Attack(Pawn pawn)
+    public void Attack(Pawn target)
     {
-        pawn.TakeDamage(ability.attack);
+        int finalDamage = target.TakeDamage(ability.attack);
         OnAttack();
+
+        InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
 
-    public void TakeDamage(int damage)
+    /// <summary>
+    /// 데미지를 받는 함수
+    /// </summary>
+    /// <param name="damage">받은 데미지</param>
+    /// <returns>최종적으로 입은 데미지</returns>
+    public int TakeDamage(int damage)
     {
-        Debug.Log(GetType());
-        Debug.Log("원래 HP : " + currentHP);
-
-        OnHit();
-
         int finalDamage = Mathf.Clamp(damage - ability.defense, 1, damage);
         currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);
 
-        if(currentHP <= 0)
+        OnHit();
+        OnHitForDamage(finalDamage);
+
+        if (currentHP <= 0)
         {
             isDead = true;
             OnIsDead();
-            Debug.Log(GetType());
-            Debug.Log("주금");
         }
 
-        Debug.Log("공격 받은 후 HP : " + currentHP);
+        return finalDamage;
     }
 
     public void SetAbility(AbilityData newAbility)
@@ -58,4 +64,13 @@ public class Pawn
         isDead = false;
     }
 
+    public float GetHPRatio()
+    {
+        return currentHP / (float)ability.maxHP;
+    }
+
+    public void SetName(string name)
+    {
+        this.name = name;
+    }
 }

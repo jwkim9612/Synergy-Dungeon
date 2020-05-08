@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private UIControl exitUIControl = null;
 
@@ -12,12 +12,6 @@ public class UIManager : MonoBehaviour
     
     //UI 기록
     private Stack<UIControl> uiHistory = new Stack<UIControl>();
-
-    void Awake()
-    {
-        //매니저 등록
-        GameManager.instance.uiManager = this;
-    }
 
     public void Initialize()
     {

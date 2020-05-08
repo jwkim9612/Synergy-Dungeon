@@ -54,6 +54,6 @@ public class UICharacterSlot : MonoBehaviour
     public void OnClicked()
     {
         characterInfo.SetCharacterData(characterData);
-        GameManager.instance.uiManager.ShowNew(characterInfo);
+        UIManager.Instance.ShowNew(characterInfo);
     }
 }

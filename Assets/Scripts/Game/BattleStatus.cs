@@ -89,6 +89,8 @@ public class BattleStatus : MonoBehaviour
         {
             Debug.Log("Error Battle End");
         }
+
+
     }
 
     /// <summary>

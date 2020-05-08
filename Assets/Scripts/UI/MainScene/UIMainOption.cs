@@ -17,12 +17,12 @@ public class UIMainOption : UIControl
     public void OnBGMSoundValueChanged()
     {
         PlayerPrefs.SetInt("BGMSound", (int)bgmSoundSlider.value);
-        GameManager.instance.soundManager.UpdateBgmSound();
+        SoundManager.Instance.UpdateBgmSound();
     }
 
     public void OnEffectSoundValueChanged()
     {
         PlayerPrefs.SetInt("EffectSound", (int)effectSoundSlider.value);
-        GameManager.instance.soundManager.UpdateEffectSound();
+        SoundManager.Instance.UpdateEffectSound();
     }
 }

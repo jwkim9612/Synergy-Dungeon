@@ -63,6 +63,6 @@ public class UISynergySlot : MonoBehaviour
             Debug.Log("No SynergyData");
         }
 
-        GameManager.instance.uiManager.ShowNew(synergyInfo);
+        UIManager.Instance.ShowNew(synergyInfo);
     }
 }

@@ -27,6 +27,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoSingleton<T>
                     if (_instance == null)
                     {
                         GameObject singleton = new GameObject();
+                        singleton.transform.parent = GameManager.instance.transform;
 
                         _instance = singleton.AddComponent<T>();
                         singleton.name = typeof(T).Name;

@@ -15,15 +15,15 @@ public class InGameManager : MonoBehaviour
     public GameState gameState;
     public UIPrepareArea uiPrepareArea;
     public DraggableCentral draggableCentral;
+    public BattleLogService battleLogService = null;
 
-    //public Button ClearButton;
+    public GameObject floatingText;
 
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            //Initialize();
         }
         else if (instance != this)
         {
@@ -44,11 +44,5 @@ public class InGameManager : MonoBehaviour
         stockService.Initialize();
         probabilityService.Initialize();
         combinationService.Initialize();
-
-        //ClearButton.onClick.AddListener(() => {
-        //    //probabilityService.UpdateProbability();
-        //    //gameState.isWaveClear = true;
-        //    //gameState.SetInGameState(InGameState.Complete);
-        //});
     }
 }

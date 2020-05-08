@@ -22,12 +22,12 @@ public class UICharacter : MonoBehaviour
         SetCharacterInfo(newCharacterInfo);
 
         character = new Character();
-
-        // 캐릭터 능력치 설정해주고 할것.
         character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
+        character.SetName(GameManager.instance.dataSheet.characterDatas[characterInfo.id].name);
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackAnimation;
         character.OnHit += PlayHitParticle;
+        character.OnHitForDamage += PlayFloatingText;
     }
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
@@ -93,5 +93,14 @@ public class UICharacter : MonoBehaviour
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
+    }
+
+    private void PlayFloatingText(float damage)
+    {
+        var clone = Instantiate(InGameManager.instance.floatingText, transform.localPosition, Quaternion.Euler(Vector3.zero));
+        clone.transform.SetParent(this.transform);
+        clone.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        clone.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        clone.GetComponent<UIFloatingText>().text.text = damage.ToString();
     }
 }
