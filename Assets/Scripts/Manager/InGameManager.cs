@@ -17,7 +17,7 @@ public class InGameManager : MonoBehaviour
     public DraggableCentral draggableCentral;
     public BattleLogService battleLogService = null;
 
-    public GameObject floatingText;
+    //public GameObject floatingText;
 
     void Awake()
     {

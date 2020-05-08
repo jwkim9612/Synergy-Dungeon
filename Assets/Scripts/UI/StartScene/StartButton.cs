@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class StartButton : MonoBehaviour
 {
+    [SerializeField] private AskInGameContinue askInGameContinue = null;
+
     void Start()
     {
         
@@ -19,7 +21,7 @@ public class StartButton : MonoBehaviour
         var inGameData = SaveManager.Instance.LoadInGameData();
         if(inGameData != null)
         {
-
+            askInGameContinue.gameObject.SetActive(true);
             return;
         }
 

@@ -6,7 +6,7 @@ public class Arranger : MonoBehaviour
 {
     public List<UICharacter> uiCharacters;
 
-    void Start()
+    protected void Start()
     {
         uiCharacters = new List<UICharacter>();
 
@@ -47,5 +47,31 @@ public class Arranger : MonoBehaviour
         }
 
         return targetCharacter;
+    }
+
+    public List<CharacterInfo> GetAllCharacterInfo()
+    {
+        List<CharacterInfo> characterInfoList = new List<CharacterInfo>();
+
+        foreach (var uiCharacter in uiCharacters)
+        {
+            characterInfoList.Add(uiCharacter.characterInfo);
+        }
+
+        return characterInfoList;
+    }
+
+    protected void InitializeByLoadInGameData(List<CharacterInfo> characterInfoList)
+    {
+        for (int i = 0; i < uiCharacters.Count; ++i)
+        {
+            if (characterInfoList[i].star == 0)
+            {
+                continue;
+            }
+
+            InGameManager.instance.stockService.RemoveStockId(characterInfoList[i]);
+            uiCharacters[i].SetCharacter(characterInfoList[i]);
+        }
     }
 }

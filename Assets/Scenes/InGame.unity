@@ -4282,6 +4282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329802308}
+  - component: {fileID: 329802309}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -4310,6 +4311,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &329802309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329802307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd426f6d0d723c4b902260d324a9112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invisibleCharacter: {fileID: 1388448804}
+  uiCharacterArea: {fileID: 0}
+  uiPrepareArea: {fileID: 0}
+  Sell: {fileID: 74168565}
 --- !u!1 &332212685
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,7 +6826,6 @@ GameObject:
   - component: {fileID: 557020183}
   - component: {fileID: 557020182}
   - component: {fileID: 557020181}
-  - component: {fileID: 557020185}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6900,20 +6916,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &557020185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557020180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd426f6d0d723c4b902260d324a9112, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invisibleCharacter: {fileID: 1388448804}
-  Sell: {fileID: 74168565}
 --- !u!1 &576166378
 GameObject:
   m_ObjectHideFlags: 0
@@ -11257,10 +11259,8 @@ MonoBehaviour:
   playerState: {fileID: 975819011}
   gameState: {fileID: 40335903}
   uiPrepareArea: {fileID: 868949781}
-  draggableCentral: {fileID: 557020185}
+  draggableCentral: {fileID: 329802309}
   battleLogService: {fileID: 176878926}
-  floatingText: {fileID: 45366340130474619, guid: 059f82623abdd8141b05baf324fd2004,
-    type: 3}
 --- !u!4 &1056662528
 Transform:
   m_ObjectHideFlags: 0
@@ -24207,6 +24207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HPBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 58804060608803001, guid: 9d441cfa5ac1f9449ad22e184a1dec2f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 58804060608803006, guid: 9d441cfa5ac1f9449ad22e184a1dec2f,
         type: 3}

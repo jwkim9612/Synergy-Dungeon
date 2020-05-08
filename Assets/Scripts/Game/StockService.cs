@@ -89,6 +89,21 @@ public class StockService
         stock.stockIds.Remove(stockId);
     }
 
+    public void RemoveStockId(CharacterInfo characterInfo)
+    {
+        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        Stock stock = null;
+
+        stock = Stocks[characterDatas[characterInfo.id].tier];
+
+        int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
+
+        for (int i = 0; i < numOfAdditions; ++i)
+        {
+            stock.stockIds.Remove(characterInfo.id);
+        }
+    }
+
     public void AddStockId(int stockId)
     {
         var characterDatas = GameManager.instance.dataSheet.characterDatas;

@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class UICharacterArea : Arranger
 {
-    private void Start()
+    protected void Start()
     {
+        base.Start();
+
         InGameManager.instance.gameState.OnBattle += OnFighting;
         InGameManager.instance.gameState.OnPrepare += OffFighting;
+
+        var loadInGameData = SaveManager.Instance.LoadInGameData();
+        if (loadInGameData != null)
+        {
+            InitializeByLoadInGameData(loadInGameData.characterAreaInfoList);
+        }
     }
 
     public void OnFighting()

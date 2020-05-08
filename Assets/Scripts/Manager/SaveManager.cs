@@ -8,28 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class SaveManager
+public class SaveManager : MonoSingleton<SaveManager>
 {
-    private static SaveManager instance = null;
-    public static SaveManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = new SaveManager();
-            }
-            return instance;
-        }
-    }
-
     private string playDataPath;
     private InGameSaveData inGameSaveData = null;
 
     public void Initialize()
     {
         inGameSaveData = new InGameSaveData();
-        playDataPath = Path.Combine(Application.persistentDataPath, "InGameData.json");
+        playDataPath = Path.Combine(Application.dataPath, "InGameData.json");
 
         if (!File.Exists(playDataPath))
         {
@@ -49,10 +36,13 @@ public class SaveManager
         Debug.Log("InGame Save Done !");
     }
 
-    public void SetInGameData(List<Character> characters, List<Enemy> enemies)
+    public void SetInGameData()
     {
-        inGameSaveData.Characters = characters;
-        inGameSaveData.Enemies = enemies;
+        inGameSaveData.Coin = InGameManager.instance.playerState.Coin;
+        inGameSaveData.Stage = GameManager.instance.stageManager.currentStage;
+        inGameSaveData.Wave = GameManager.instance.stageManager.currentWave + 1;
+        inGameSaveData.characterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
+        inGameSaveData.prepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
     }
 
     public InGameSaveData LoadInGameData()
@@ -60,6 +50,7 @@ public class SaveManager
         //파일이 없으면
         if (!File.Exists(string.Format(playDataPath)))
         {
+            Debug.Log(playDataPath);
             return default;
         }
 
@@ -70,5 +61,20 @@ public class SaveManager
 
         string jsonData = Encoding.UTF8.GetString(data);
         return JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
+    }
+
+    /// <summary>
+    /// 인게임 데이터 삭제
+    /// </summary>
+    /// <returns> 성공 여부 </returns>
+    public bool DeleteInGameData()
+    {
+        if (!File.Exists(string.Format(playDataPath)))
+        {
+            return false;
+        }
+
+        File.Delete(playDataPath);
+        return true;
     }
 }

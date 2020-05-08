@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class UIHitText : MonoBehaviour
 {
     [SerializeField] private Transform canvas = null;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float duration;
-    [SerializeField] private Text damageText;
+    [SerializeField] private float moveSpeed = 0.0f;
+    [SerializeField] private float duration = 0.0f;
+    [SerializeField] private Text damageText = null;
     private Vector3 originPosition;
     private Coroutine updateCoroutine;
 

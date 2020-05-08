@@ -7,8 +7,8 @@ public class DraggableCentral : MonoBehaviour
 {
     public UICharacter invisibleCharacter;
 
-    private UICharacterArea uiCharacterArea;
-    private UIPrepareArea uiPrepareArea;
+    public UICharacterArea uiCharacterArea;
+    public UIPrepareArea uiPrepareArea;
     private List<Arranger> arrangers;
 
     [SerializeField] private Transform Sell = null;
@@ -17,7 +17,7 @@ public class DraggableCentral : MonoBehaviour
     bool isSwapped;
     UICharacter swappedCharacter;
 
-    void Start()
+    private void Start()
     {
         InitializeArrangers();
 
@@ -26,7 +26,7 @@ public class DraggableCentral : MonoBehaviour
         swappedCharacter = null;
     }
 
-    void InitializeArrangers()
+    private void InitializeArrangers()
     {
         uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
         uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
@@ -34,13 +34,6 @@ public class DraggableCentral : MonoBehaviour
         arrangers = new List<Arranger>();
         arrangers.Add(uiCharacterArea);
         arrangers.Add(uiPrepareArea);
-
-        //var arrs = transform.GetComponentsInChildren<Arranger>();
-
-        //for (int i = 0; i < arrs.Length; ++i)
-        //{
-        //    arrangers.Add(arrs[i]);
-        //}
     }
 
     void SwapCharacters(UICharacter source, UICharacter destination)

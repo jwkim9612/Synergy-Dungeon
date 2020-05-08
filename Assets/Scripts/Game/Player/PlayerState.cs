@@ -13,7 +13,15 @@ public class PlayerState : MonoBehaviour
 
     private void Start()
     {
-        Coin = 0;
+        var loadInGameData = SaveManager.Instance.LoadInGameData();
+        if (loadInGameData != null)
+        {
+            Coin = loadInGameData.Coin;
+        }
+        else
+        {
+            Coin = 0;
+        }
 
         OnCoinChanged += uiBattleStatusMenu.UpdateCoinText;
     }

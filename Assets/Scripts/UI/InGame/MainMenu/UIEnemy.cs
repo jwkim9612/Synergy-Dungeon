@@ -19,7 +19,7 @@ public class UIEnemy : MonoBehaviour
         enemy.SetName(newEnmeyData.name);
 
         image.sprite = newEnmeyData.image;
-        enemy.OnIsDead += OnHide;
+        enemy.OnIsDead += PlayDeadCoroutine;
         enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayHitStateCoroutine;
@@ -45,6 +45,11 @@ public class UIEnemy : MonoBehaviour
         StartCoroutine(HitStateCoroutine());
     }
 
+    public void PlayDeadCoroutine()
+    {
+        StartCoroutine(DeadCoroutine());
+    }
+
     private IEnumerator AttackCoroutine()
     {
         gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
@@ -60,7 +65,21 @@ public class UIEnemy : MonoBehaviour
         image.color = Color.white;
         yield break;
     }
-     
+
+    private IEnumerator DeadCoroutine()
+    {
+        image.enabled = false;
+        yield return new WaitForSeconds(0.3f);
+        image.enabled = true;
+        yield return new WaitForSeconds(0.3f);
+        image.enabled = false;
+        yield return new WaitForSeconds(0.4f);
+        image.enabled = true;
+        yield return new WaitForSeconds(0.4f);
+        image.enabled = false;
+        uiHPBar.enabled = false;
+        yield break;
+    }
 
     private void PlayHitParticle()
     {
