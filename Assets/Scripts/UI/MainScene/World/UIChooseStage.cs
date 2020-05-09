@@ -7,7 +7,6 @@ using DanielLochner.Assets.SimpleScrollSnap;
 public class UIChooseStage : UIControl
 {
     [SerializeField] private UIWorld uiWorld = null;
-
     [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
     [SerializeField] private GameObject content = null;
     [SerializeField] private UIWorldStage worldStage = null;
@@ -20,7 +19,7 @@ public class UIChooseStage : UIControl
         CreateStageList();
 
         entranceButton.onClick.AddListener(() => {
-            GameManager.instance.stageManager.currentStage = simpleScrollSnap.CurrentPanel + 1;
+            uiWorld.selectedStage = simpleScrollSnap.CurrentPanel + 1;
             uiWorld.UpdateStageInfo();
         });
 
@@ -30,7 +29,7 @@ public class UIChooseStage : UIControl
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
-            stageTitle.text = GameManager.instance.stageManager.stageDatas[simpleScrollSnap.TargetPanel].name;
+            stageTitle.text = GameManager.instance.dataSheet.stageDatas[simpleScrollSnap.TargetPanel].name;
         });
     }
 
@@ -38,7 +37,7 @@ public class UIChooseStage : UIControl
     {
         int dataIndex = 0;
 
-        var stageDatas = GameManager.instance.stageManager.stageDatas;
+        var stageDatas = GameManager.instance.dataSheet.stageDatas;
         foreach (var stageData in stageDatas)
         { 
             if(dataIndex == 0)

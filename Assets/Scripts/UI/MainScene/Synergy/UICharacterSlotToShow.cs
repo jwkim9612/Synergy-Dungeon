@@ -10,7 +10,7 @@ public class UICharacterSlotToShow : MonoBehaviour
     [SerializeField] private Image image = null;
     [SerializeField] private Image costBorder = null;
 
-    public CharacterData characterData = null;
+    public CharacterData characterData { get; set; } = null;
 
     public void SetCharacterData(CharacterData newCharacterData)
     {

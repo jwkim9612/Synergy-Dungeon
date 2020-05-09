@@ -49,7 +49,7 @@ MonoBehaviour:
     defense: 0
     dexterity: 1
     intellect: 0
-  - maxHP: 68
+  - maxHP: 10
     maxMP: 0
     attack: 0
     defense: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     defense: 0
     dexterity: 1
     intellect: 0
-  - maxHP: 80
+  - maxHP: 8
     maxMP: 0
     attack: 0
     defense: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     defense: 0
     dexterity: 3
     intellect: 0
-  - maxHP: 410
+  - maxHP: 4
     maxMP: 0
     attack: 0
     defense: 0
@@ -127,13 +127,13 @@ MonoBehaviour:
     defense: 0
     dexterity: 3
     intellect: 0
-  - maxHP: 786
+  - maxHP: 7
     maxMP: 0
     attack: 0
     defense: 0
     dexterity: 2
     intellect: 0
-  - maxHP: 68
+  - maxHP: 6
     maxMP: 0
     attack: 0
     defense: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     defense: 0
     dexterity: 5
     intellect: 0
-  - maxHP: 75
+  - maxHP: 7
     maxMP: 0
     attack: 0
     defense: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
     defense: 0
     dexterity: 2
     intellect: 0
-  - maxHP: 56
+  - maxHP: 5
     maxMP: 0
     attack: 0
     defense: 0

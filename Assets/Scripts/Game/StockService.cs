@@ -5,7 +5,7 @@ using geniikw.DataSheetLab;
 
 public class StockService
 {
-    public Dictionary<Tier, Stock> Stocks = new Dictionary<Tier, Stock>();
+    public Dictionary<Tier, Stock> Stocks { get; set; } = new Dictionary<Tier, Stock>();
 
     public void Initialize()
     {

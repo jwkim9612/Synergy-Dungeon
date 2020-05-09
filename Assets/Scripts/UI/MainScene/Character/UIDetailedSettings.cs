@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIDetailedSettings : MonoBehaviour
 {
     delegate void OnDetailedSettingChangedDelegate();
-    OnDetailedSettingChangedDelegate OnDetailedSettingChanged;
+    OnDetailedSettingChangedDelegate OnDetailedSettingChanged { get; set; }
 
     [SerializeField] private UICharacterList characterList = null;
     [SerializeField] private Dropdown tier = null;

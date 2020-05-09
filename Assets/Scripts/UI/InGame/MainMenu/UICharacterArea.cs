@@ -11,10 +11,9 @@ public class UICharacterArea : Arranger
         InGameManager.instance.gameState.OnBattle += OnFighting;
         InGameManager.instance.gameState.OnPrepare += OffFighting;
 
-        var loadInGameData = SaveManager.Instance.LoadInGameData();
-        if (loadInGameData != null)
+        if (SaveManager.Instance.HasInGameData())
         {
-            InitializeByLoadInGameData(loadInGameData.characterAreaInfoList);
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
         }
     }
 
@@ -44,7 +43,11 @@ public class UICharacterArea : Arranger
             {
                 characters.Add(uiCharacter.character);
             }
-            
+        }
+
+        if(characters.Count == 0)
+        {
+            return null;
         }
 
         return characters;
@@ -56,18 +59,17 @@ public class UICharacterArea : Arranger
     /// <returns> 캐릭터가 들어있는 UICharacter리스트 </returns>
     public List<UICharacter> GetUICharacterListWithCharacters()
     {
-        List<UICharacter> emptyUICharacters = new List<UICharacter>();
+        List<UICharacter> uiCharacters = new List<UICharacter>();
 
-        foreach (var uiCharacter in uiCharacters)
+        foreach (var uiCharacter in this.uiCharacters)
         {
             if (uiCharacter.character != null)
             {
-                emptyUICharacters.Add(uiCharacter);
+                uiCharacters.Add(uiCharacter);
             }
-
         }
 
-        return emptyUICharacters;
+        return uiCharacters;
     }
 
     public void ShowAllUICharacters()

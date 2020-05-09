@@ -39,7 +39,7 @@ public class UIHitText : MonoBehaviour
     {
         var originParent = this.transform.parent;
 
-        this.transform.parent = canvas.transform;
+        this.transform.SetParent(canvas.transform);
         float runningTime = 0.0f;
 
         while (true)
@@ -51,7 +51,7 @@ public class UIHitText : MonoBehaviour
             if (runningTime >= duration)
             {
                 this.gameObject.SetActive(false);
-                this.transform.parent = originParent;
+                this.transform.SetParent(originParent);
                 this.transform.localPosition = originPosition;
                 StopCoroutine(updateCoroutine);
             }

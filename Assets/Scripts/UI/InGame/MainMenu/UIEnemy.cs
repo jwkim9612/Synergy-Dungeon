@@ -10,8 +10,8 @@ public class UIEnemy : MonoBehaviour
     [SerializeField] private UIHPBar uiHPBar = null;
     [SerializeField] private Image image = null;
     [SerializeField] private UIHitText[] uiHitTexts = null;
-    public Enemy enemy;
-    
+    public Enemy enemy { get; set; }
+
     public void SetEnemy(EnemyData newEnmeyData)
     {
         enemy = new Enemy();
@@ -30,9 +30,10 @@ public class UIEnemy : MonoBehaviour
         uiHPBar.UpdateHPBar();
     }
 
-    public void OnHide()
+    public void OnShowUI()
     {
-        image.enabled = false;
+        image.enabled = true;
+        uiHPBar.gameObject.SetActive(true);
     }
 
     public void PlayAttackCoroutine()
@@ -73,11 +74,11 @@ public class UIEnemy : MonoBehaviour
         image.enabled = true;
         yield return new WaitForSeconds(0.3f);
         image.enabled = false;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         image.enabled = true;
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         image.enabled = false;
-        uiHPBar.enabled = false;
+        uiHPBar.gameObject.SetActive(false);
         yield break;
     }
 

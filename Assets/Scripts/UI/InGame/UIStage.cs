@@ -6,20 +6,18 @@ using UnityEngine.UI;
 public class UIStage : MonoBehaviour
 {
     public Text stageText = null;
-    public StageManager stageManager;
 
     public void Start()
     {
-        stageManager = GameManager.instance.stageManager;
-        GameManager.instance.stageManager.OnChangedWave += UpdateText;
+        StageManager.Instance.OnChangedWave += UpdateText;
 
         UpdateText();
     }
 
     public void UpdateText()
     {
-        int stage = stageManager.currentStage;
-        int wave = stageManager.currentWave;
+        int stage = StageManager.Instance.currentStage;
+        int wave = StageManager.Instance.currentWave;
 
         stageText.text = (stage + " - " + wave);
     }

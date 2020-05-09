@@ -5,13 +5,12 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public delegate void OnTimeOutDelegate();
-    public OnTimeOutDelegate OnTimeOut;
-
     public delegate void OnTimerStartDelegate();
-    public OnTimerStartDelegate OnTimerStart;
+    public OnTimeOutDelegate OnTimeOut { get; set; }
+    public OnTimerStartDelegate OnTimerStart { get; set; }
 
     public float timeLimitSetting;
-    public float timeLimit = 0.0f;
+    public float timeLimit { get; set; }
     public bool isStarted = false;
 
     private void Start()

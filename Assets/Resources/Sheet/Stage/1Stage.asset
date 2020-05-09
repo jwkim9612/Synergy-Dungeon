@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 1Stage
   m_EditorClassIdentifier: 
   data:
-  - count: 0100000002000000
-    monsterNum: 0000000001000000
+  - count: 01000000
+    monsterNum: 00000000
   - count: 02000000
+    monsterNum: 01000000
+  - count: 03000000
     monsterNum: 02000000
-  - count: 010000000100000001000000
-    monsterNum: 000000000100000002000000
   - count: 
     monsterNum: 
   - count: 

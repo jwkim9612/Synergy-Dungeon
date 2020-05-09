@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UISlot : MonoBehaviour
 {
-    public UICharacter uiCharacter;
+    public UICharacter uiCharacter { get; set; }
 
     public bool HasCharacter()
     {

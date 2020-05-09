@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     //매니저들
     public static GameManager instance = null;
     public DataSheet dataSheet = null;
-    public StageManager stageManager = null;
     public ParticleService particleService = null;
 
     //파괴되지 않는 싱글턴

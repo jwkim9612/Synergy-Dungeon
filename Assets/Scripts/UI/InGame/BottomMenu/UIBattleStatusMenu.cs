@@ -8,10 +8,8 @@ public class UIBattleStatusMenu : MonoBehaviour
     [SerializeField] private Text coinText = null;
     [SerializeField] private Button startButton = null;
     [SerializeField] private Button reloadButton = null;
-   
     [SerializeField] private UICharacterPurchase characterPurchase = null;
-
-    public Timer timer;
+    [SerializeField] private Timer timer = null;
 
     void Start()
     {
@@ -43,7 +41,7 @@ public class UIBattleStatusMenu : MonoBehaviour
 
     public bool IsReloadable()
     {
-        int currentPlayerCoin = InGameManager.instance.playerState.Coin;
+        int currentPlayerCoin = InGameManager.instance.playerState.coin;
         int reloadPrice = CardService.RELOAD_PRICE;
 
         return currentPlayerCoin >= reloadPrice;
@@ -51,6 +49,6 @@ public class UIBattleStatusMenu : MonoBehaviour
 
     public void UpdateCoinText()
     {
-        coinText.text = InGameManager.instance.playerState.Coin.ToString();
+        coinText.text = InGameManager.instance.playerState.coin.ToString();
     }
 }

@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 
 public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    Transform root;
-    Camera mainCamera;
-    UICharacter uiCharacter;
+    private Transform root;
+    private Camera mainCamera;
+    private UICharacter uiCharacter;
 
     void Start()
     {

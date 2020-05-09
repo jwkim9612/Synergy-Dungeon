@@ -11,10 +11,14 @@ public class UIHPBar : MonoBehaviour
     private Pawn controllingPawn = null;
     private Coroutine afterImageCoroutine;
 
-    public void Initialize()
+    private void Start()
     {
         InGameManager.instance.gameState.OnBattle += UpdateHPBar;
+        //InGameManager.instance.gameState.OnBattle += InitializeAfterImageSlider;
+    }
 
+    public void Initialize()
+    {
         var uiEnemy = GetComponentInParent<UIEnemy>();
         if(uiEnemy != null)
         {
@@ -34,6 +38,11 @@ public class UIHPBar : MonoBehaviour
         Debug.Log("Error UIHPBar Initialize");
     }
 
+    private void InitializeAfterImageSlider()
+    {
+        afterImageSlider.value = 1;
+    }
+
     public void UpdateHPBarAndAfterImage()
     {
         UpdateHPBar();
@@ -42,13 +51,17 @@ public class UIHPBar : MonoBehaviour
 
     public void UpdateHPBar()
     {
-        slider.value = controllingPawn.GetHPRatio();
-    }
+        Debug.Log(controllingPawn.name + " : Update Hp Bar");
 
-    //public void PlayAfterImageCoroutine()
-    //{
-    //    Debug.Log("PlayAfterImageCoroutine");
-    //}
+        if(controllingPawn != null)
+        {
+            slider.value = controllingPawn.GetHPRatio();
+        }
+        else
+        {
+            Debug.Log("Error Update HP Bar. ControllingPawn is null");
+        }
+    }
 
     private IEnumerator PlayAfterImage()
     {

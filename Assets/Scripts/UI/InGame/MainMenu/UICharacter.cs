@@ -7,9 +7,8 @@ public class UICharacter : MonoBehaviour
 {
     [SerializeField] private UIHitText[] uiHitTexts = null;
     [SerializeField] private UIHPBar uiHPBar = null;
-    public Character character;
-    public bool isFightingOnBattlefield;
-
+    public Character character { get; set; }
+    public bool isFightingOnBattlefield { get; set; }
     public CharacterInfo characterInfo;
     public Image image = null;
 

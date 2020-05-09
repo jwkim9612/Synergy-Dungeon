@@ -7,11 +7,10 @@ public class UIPrepareArea : Arranger
     private void Start()
     {
         base.Start();
-
-        var loadInGameData = SaveManager.Instance.LoadInGameData();
-        if (loadInGameData != null)
+        
+        if(SaveManager.Instance.HasInGameData())
         {
-            InitializeByLoadInGameData(loadInGameData.prepareAreaInfoList);
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.prepareAreaInfoList);
         }
     }
 

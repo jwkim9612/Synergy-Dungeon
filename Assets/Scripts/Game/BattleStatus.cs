@@ -10,15 +10,14 @@ using UnityEngine;
 public class BattleStatus : MonoBehaviour
 {
     public delegate void OnWinTheBattleDelegate();
-    public OnWinTheBattleDelegate OnWinTheBattle;
+    public OnWinTheBattleDelegate OnWinTheBattle { get; set; }
 
-    public List<Character> characters;
-    public List<Enemy> enemies;
+    public List<Character> characters { get; set; }
+    public List<Enemy> enemies { get; set; }
+    public List<Pawn> pawnsAttackSequenceList { get; set; }
 
-    public List<Pawn> pawnsAttackSequenceList;
-
-    bool isCharacterAnnihilation;
-    bool isEnemyAnnihilation;
+    private bool isCharacterAnnihilation;
+    private bool isEnemyAnnihilation;
 
     public void BattleStart()
     {
@@ -44,12 +43,13 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-                //switch(pawn.)
+
 
                 Pawn target = RandomAttackAndGetTarget(pawn);
                 yield return new WaitForSeconds(1.0f);
                 if (target.isDead)
                 {
+                    yield return new WaitForSeconds(1.0f);
                     RemoveFromAttackList(target);
                     removePawnList.Add(target);
 

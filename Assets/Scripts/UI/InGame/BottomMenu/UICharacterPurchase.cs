@@ -5,8 +5,8 @@ using UnityEngine;
 public class UICharacterPurchase : MonoBehaviour
 {
     [SerializeField] private UICharacterCard[] cards = null;
-    public StockService stockService = null;
-    public ProbabilityService probabilityService = null;
+    public StockService stockService { get; set; } = null;
+    public ProbabilityService probabilityService { get; set; } = null;
 
     void Start()
     {

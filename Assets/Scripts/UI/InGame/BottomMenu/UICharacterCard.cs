@@ -16,8 +16,8 @@ public class UICharacterCard : MonoBehaviour
     [SerializeField] private Image tierBorderImage = null;
     [SerializeField] private Button buyButton = null;
 
-    public CharacterData characterData;
-    public bool isBoughtCard = false;
+    public CharacterData characterData { get; set; }
+    public bool isBoughtCard { get; set; } = false;
 
     void Start()
     {
@@ -138,7 +138,7 @@ public class UICharacterCard : MonoBehaviour
 
     public bool IsBuyable()
     {
-        int currentPlayerCoin = InGameManager.instance.playerState.Coin;
+        int currentPlayerCoin = InGameManager.instance.playerState.coin;
         int cardPrice = CardService.GetPriceByTier(characterData.tier);
 
         return currentPlayerCoin >= cardPrice;

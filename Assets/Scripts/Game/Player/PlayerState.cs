@@ -1,26 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
     public delegate void OnCoinChangedDelegate();
-    public OnCoinChangedDelegate OnCoinChanged;
+    public OnCoinChangedDelegate OnCoinChanged { get; set; }
 
     [SerializeField] private UIBattleStatusMenu uiBattleStatusMenu = null;
-
-    public int Coin { get; set; }
+    
+    public int coin { get; set; }
 
     private void Start()
     {
-        var loadInGameData = SaveManager.Instance.LoadInGameData();
-        if (loadInGameData != null)
+        if (SaveManager.Instance.HasInGameData())
         {
-            Coin = loadInGameData.Coin;
+            coin = SaveManager.Instance.inGameSaveData.coin;
         }
         else
         {
-            Coin = 0;
+            coin = 0;
         }
 
         OnCoinChanged += uiBattleStatusMenu.UpdateCoinText;
@@ -28,13 +28,13 @@ public class PlayerState : MonoBehaviour
 
     public void IncreaseCoin(int increaseValue)
     {
-        Coin += increaseValue;
+        coin += increaseValue;
         OnCoinChanged();
     }
 
     public void UseCoin(int usedValue)
     {
-        Coin = Mathf.Clamp(Coin - usedValue, 0, Coin);
+        coin = Mathf.Clamp(coin - usedValue, 0, coin);
         OnCoinChanged();
     }
 }

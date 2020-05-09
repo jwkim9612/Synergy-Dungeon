@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -11,11 +12,13 @@ using UnityEngine;
 public class SaveManager : MonoSingleton<SaveManager>
 {
     private string playDataPath;
-    private InGameSaveData inGameSaveData = null;
+    private InGameSaveData _inGameSaveData;
+    public InGameSaveData inGameSaveData { get { return _inGameSaveData; } }
 
     public void Initialize()
     {
-        inGameSaveData = new InGameSaveData();
+        _inGameSaveData = new InGameSaveData();
+
         playDataPath = Path.Combine(Application.dataPath, "InGameData.json");
 
         if (!File.Exists(playDataPath))
@@ -38,20 +41,20 @@ public class SaveManager : MonoSingleton<SaveManager>
 
     public void SetInGameData()
     {
-        inGameSaveData.Coin = InGameManager.instance.playerState.Coin;
-        inGameSaveData.Stage = GameManager.instance.stageManager.currentStage;
-        inGameSaveData.Wave = GameManager.instance.stageManager.currentWave + 1;
-        inGameSaveData.characterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
-        inGameSaveData.prepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
+        _inGameSaveData.coin = InGameManager.instance.playerState.coin;
+        _inGameSaveData.stage = StageManager.Instance.currentStage;
+        _inGameSaveData.wave = StageManager.Instance.currentWave + 1;
+        _inGameSaveData.characterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
+        _inGameSaveData.prepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
     }
 
-    public InGameSaveData LoadInGameData()
+    public void LoadInGameData()
     {
         //파일이 없으면
-        if (!File.Exists(string.Format(playDataPath)))
+        if (!HasInGameData())
         {
             Debug.Log(playDataPath);
-            return default;
+            return;
         }
 
         FileStream fileStream = new FileStream(string.Format(playDataPath), FileMode.Open);
@@ -59,8 +62,9 @@ public class SaveManager : MonoSingleton<SaveManager>
         fileStream.Read(data, 0, data.Length);
         fileStream.Close();
 
+        Debug.Log("!! Load");
         string jsonData = Encoding.UTF8.GetString(data);
-        return JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
+        _inGameSaveData = JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
     }
 
     /// <summary>
@@ -69,12 +73,17 @@ public class SaveManager : MonoSingleton<SaveManager>
     /// <returns> 성공 여부 </returns>
     public bool DeleteInGameData()
     {
-        if (!File.Exists(string.Format(playDataPath)))
+        if (HasInGameData())
         {
-            return false;
+            File.Delete(playDataPath);
+            return true;
         }
 
-        File.Delete(playDataPath);
-        return true;
+        return false;
+    }
+
+    public bool HasInGameData()
+    {
+        return File.Exists(string.Format(playDataPath));
     }
 }

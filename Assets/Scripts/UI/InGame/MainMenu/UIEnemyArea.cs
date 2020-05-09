@@ -5,51 +5,45 @@ using UnityEngine.UI;
 
 public class UIEnemyArea : MonoBehaviour
 {
-    [SerializeField] private VerticalLayoutGroup verticalLayoutGroup = null;
-    [SerializeField] private UIEnemy uiEnemy = null;
-
-    private List<UIEnemy> uiEnemies;
+    [SerializeField] private List<UIEnemy> uiEnemies = null;
 
     void Start()
     {
-        uiEnemies = new List<UIEnemy>();
-
-        InGameManager.instance.gameState.OnPrepare += CreateMonsters;
-        //CreateMonsters();
-        //Destroy(monsterSlot.gameObject);
+        InGameManager.instance.gameState.OnPrepare += OnShowEnemiesUI;
+        InGameManager.instance.gameState.OnPrepare += CreateEnemies;
     }
 
-    public void CreateMonsters()
+    public void CreateEnemies()
     {
-        /////////////////////////////// 몬스터 데이터 받아오기 //////////////////////////////////////////////////
-        var currentWaveData = GameManager.instance.stageManager.currentStageData.waveData.Sheet[GameManager.instance.stageManager.currentWave - 1];
+        var currentWaveData = StageManager.Instance.currentStageData.waveData.Sheet[StageManager.Instance.currentWave - 1];
+
+        int currentEnemyIndex = 0;
 
         for (int i = 0; i < currentWaveData.count.Length; ++i)
         {
             for (int j = 0; j < currentWaveData.count[i]; ++j)
             {
-                var enemy = Instantiate(uiEnemy, verticalLayoutGroup.transform);
-                enemy.SetEnemy(GameManager.instance.dataSheet.enemyDatas[currentWaveData.monsterNum[i]]);
-                uiEnemies.Add(enemy);
+                if (currentEnemyIndex > uiEnemies.Count)
+                    break;
+
+                uiEnemies[currentEnemyIndex].gameObject.SetActive(true);
+                uiEnemies[currentEnemyIndex].SetEnemy(GameManager.instance.dataSheet.enemyDatas[currentWaveData.monsterNum[i]]);
+                ++currentEnemyIndex;
             }
         }
-        /////////////////////////////// //////////////////// //////////////////////////////////////////////////
-        ///
 
-        // 후에 수정 필요
-        uiEnemy.gameObject.SetActive(false);
+        for(int i = currentEnemyIndex; i < uiEnemies.Count; ++i)
+        {
+            uiEnemies[i].gameObject.SetActive(false);
+        }
     }
 
-    public void DestroyMonsters()
+    public void OnShowEnemiesUI()
     {
-        foreach(var uiEnemy in uiEnemies)
+        foreach (var uiEnemy in uiEnemies)
         {
-            Destroy(uiEnemy.gameObject);
+            uiEnemy.OnShowUI();
         }
-
-        uiEnemies.Clear();
-
-        uiEnemy.gameObject.SetActive(true);
     }
 
     public List<Enemy> GetEnemyList()
@@ -58,7 +52,7 @@ public class UIEnemyArea : MonoBehaviour
         
         foreach(var uiEnemy in uiEnemies)
         {
-            if (uiEnemy.enemy != null)
+            if (uiEnemy.gameObject.activeSelf)
             {
                 enemys.Add(uiEnemy.enemy);
             }

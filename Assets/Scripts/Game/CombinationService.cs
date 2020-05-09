@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CombinationService
 {
-    Dictionary<CharacterInfo, int> ownedCharacter;
+    private Dictionary<CharacterInfo, int> ownedCharacter;
 
     public void Initialize()
     {

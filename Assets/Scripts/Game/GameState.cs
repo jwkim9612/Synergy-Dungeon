@@ -6,22 +6,18 @@ public class GameState : MonoBehaviour
 {
     public delegate void OnPrepareDelegate();
     public delegate void OnBattleDelegate();
-    public OnPrepareDelegate OnPrepare;
-    public OnBattleDelegate OnBattle;
+    public OnPrepareDelegate OnPrepare { get; set; }
+    public OnBattleDelegate OnBattle { get; set; }
 
-    public InGameState inGameState = InGameState.None;
+    public InGameState inGameState { get; set; } = InGameState.None;
+    public StageManager stageManager { get; set; }
 
-    //public Timer timer;
-    public StageManager stageManager;
-
-    //[SerializeField] private UIBattleMenu uiBattleMenu;
-
-    public bool isWaveClear = false;
-    public bool isPlayerLose = false;
+    public bool isWaveClear { get; set; } = false;
+    public bool isPlayerLose { get; set; } = false;
 
     void Start()
     {
-        stageManager = GameManager.instance.stageManager;
+        stageManager = StageManager.Instance;
 
         SetInGameState(InGameState.Prepare);
     }

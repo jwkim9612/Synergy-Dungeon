@@ -6,8 +6,8 @@ using Shared.Service;
 
 public class ProbabilityService
 {
-    public Dictionary<Tier, float> Probabilities;
-    public List<Tier> tiers;
+    public Dictionary<Tier, float> Probabilities { get; set; }
+    public List<Tier> tiers { get; set; }
 
     public ProbabilityService()
     {
@@ -25,7 +25,7 @@ public class ProbabilityService
 
     public void UpdateProbability()
     {
-        float relativePercentageByStage = GameManager.instance.stageManager.GetRelativePercentageByStage();
+        float relativePercentageByStage = StageManager.Instance.GetRelativePercentageByStage();
         float comparisonValue = 0.0f;
         var probabilityDatas = GameManager.instance.dataSheet.probabilityDatas;
 
@@ -77,7 +77,7 @@ public class ProbabilityService
     public Tier GetRandomTier()
     {
         float randomProbability = RandomService.GetRandom();
-        Debug.Log(randomProbability);
+        //Debug.Log(randomProbability);
         float comparisonValue = 0.0f;
 
         foreach(var tier in tiers)

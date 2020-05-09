@@ -16,6 +16,6 @@ public class Stock
         this.stockIds = stockIds;
     }
 
-    public float probability;
-    public List<int> stockIds;
+    public float probability { get; set; }
+    public List<int> stockIds { get; set; }
 }

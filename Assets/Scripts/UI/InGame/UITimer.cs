@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class UITimer : MonoBehaviour
 {
-    public Text textTimer = null;
+    public Text textTimer;
     public Timer timer;
-
     private void Start()
     {
         timer.OnTimeOut += OnHide;

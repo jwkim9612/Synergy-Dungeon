@@ -7,7 +7,10 @@ public class UICharacterStatus : MonoBehaviour
 {
     [SerializeField] private Image characterIcon = null;
     [SerializeField] private HorizontalLayoutGroup starGrade = null;
+    [SerializeField] private UIStatusHPBar uiStatusHPbar = null;
+    [SerializeField] private UIBehaviorMenu uiBehaviorMenu = null;
     private Image[] stars = null;
+    private Character ControllingPawn { get; set; }
     
     public void Initialize()
     {
@@ -24,6 +27,10 @@ public class UICharacterStatus : MonoBehaviour
 
         SetCharacterIcon(uiCharacter.image);
         SetStarGrade(uiCharacter.characterInfo.star);
+        ControllingPawn = uiCharacter.character;
+        uiStatusHPbar.SetControllingPawn(ControllingPawn);
+        uiBehaviorMenu.SetControllingPawn(ControllingPawn);
+        uiBehaviorMenu.Initialize();
     }
 
     private void SetCharacterIcon(Image image)
@@ -45,6 +52,4 @@ public class UICharacterStatus : MonoBehaviour
             }
         }
     }
-
-
 }

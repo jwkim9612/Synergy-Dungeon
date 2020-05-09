@@ -9,9 +9,9 @@ public class InGameSaveData
 {
     public List<CharacterInfo> characterAreaInfoList { get; set; }
     public List<CharacterInfo> prepareAreaInfoList { get; set; }
-    public int Coin { get; set; }
-    public int Stage { get; set; }
-    public int Wave { get; set; }
+    public int coin { get; set; }
+    public int stage { get; set; }
+    public int wave { get; set; }
 
     //public void SetInGameData(List<Character> characters, List<Enemy> enemies)
     //{

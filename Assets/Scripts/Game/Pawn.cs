@@ -7,19 +7,19 @@ using Newtonsoft.Json;
 public class Pawn
 {
     public delegate void OnAttackDelegate();
-    public OnAttackDelegate OnAttack;
     public delegate void OnHitDelegate();
-    public OnHitDelegate OnHit;
     public delegate void OnIsDeadDelegate();
-    public OnIsDeadDelegate OnIsDead;
+    public OnAttackDelegate OnAttack { get; set; }
+    public OnHitDelegate OnHit { get; set; }
+    public OnIsDeadDelegate OnIsDead { get; set; }
 
-    public string name;
-    public AbilityData ability;
-    public PawnType pawnType;
-    public bool isDead;
+    public string name { get; set; }
+    public AbilityData ability { get; set; }
+    public PawnType pawnType { get; set; }
+    public bool isDead { get; set; }
     private int currentHP;
 
-    public UIHitText[] uiHitTexts = null;
+    public UIHitText[] uiHitTexts { get; set; } = null;
     private int hitTextIndex;
 
     private void Start()

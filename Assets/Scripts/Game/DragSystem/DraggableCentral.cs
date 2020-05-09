@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class DraggableCentral : MonoBehaviour
 {
-    public UICharacter invisibleCharacter;
+    public UICharacterArea uiCharacterArea { get; set; }
+    public UIPrepareArea uiPrepareArea { get; set; }
 
-    public UICharacterArea uiCharacterArea;
-    public UIPrepareArea uiPrepareArea;
-    private List<Arranger> arrangers;
-
+    [SerializeField] private UICharacter invisibleCharacter = null;
     [SerializeField] private Transform Sell = null;
-    bool isSelling;
 
-    bool isSwapped;
-    UICharacter swappedCharacter;
+    private List<Arranger> arrangers;
+    private UICharacter swappedCharacter;
+    private bool isSelling;
+    private bool isSwapped;
 
     private void Start()
     {

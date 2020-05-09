@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arranger : MonoBehaviour
 {
-    public List<UICharacter> uiCharacters;
+    public List<UICharacter> uiCharacters { get; set; }
 
     protected void Start()
     {
@@ -61,7 +61,7 @@ public class Arranger : MonoBehaviour
         return characterInfoList;
     }
 
-    protected void InitializeByLoadInGameData(List<CharacterInfo> characterInfoList)
+    protected void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
     {
         for (int i = 0; i < uiCharacters.Count; ++i)
         {
