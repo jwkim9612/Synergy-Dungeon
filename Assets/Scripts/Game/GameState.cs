@@ -44,13 +44,11 @@ public class GameState : MonoBehaviour
             case InGameState.Prepare:
                 InGameManager.instance.playerState.IncreaseCoin(3);
                 OnPrepare();
-                //OnHideBattleMenu();
                 break;
 
             case InGameState.Battle:
                 isWaveClear = false;
                 OnBattle();
-                //OnShowBattleMenu(); 
                 break;
 
             case InGameState.Complete:
@@ -80,13 +78,8 @@ public class GameState : MonoBehaviour
         isWaveClear = true;
     }
 
-    //public void OnShowBattleMenu()
-    //{
-    //    uiBattleMenu.gameObject.SetActive(true);
-    //}
-
-    //public void OnHideBattleMenu()
-    //{
-    //    uiBattleMenu.gameObject.SetActive(false);
-    //}
+    public bool IsInBattle()
+    {
+        return inGameState == InGameState.Battle;
+    }
 }

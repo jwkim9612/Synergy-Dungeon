@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UIMainExit : UIControl
 {
-    [SerializeField] private Button exitButton = null;
+    [SerializeField] private Button yesButton = null;
 
     void Start()
     {
-        exitButton.onClick.AddListener(() => {
+        yesButton.onClick.AddListener(() => {
             GameManager.instance.Quit();
         });
     }

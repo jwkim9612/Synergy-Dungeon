@@ -11,13 +11,10 @@ public class InGameManager : MonoBehaviour
     public StockService stockService;
     public ProbabilityService probabilityService;
     public CombinationService combinationService;
+    public BattleLogService battleLogService;
     public PlayerState playerState;
     public GameState gameState;
-    public UIPrepareArea uiPrepareArea;
     public DraggableCentral draggableCentral;
-    public BattleLogService battleLogService = null;
-
-    //public GameObject floatingText;
 
     void Awake()
     {
@@ -30,9 +27,6 @@ public class InGameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        // 다른 씬으로 이동해도 소멸되지 않음
-        // DontDestroyOnLoad(gameObject);
     }
 
     public void Start()

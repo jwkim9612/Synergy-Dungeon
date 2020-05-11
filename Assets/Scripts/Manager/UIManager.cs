@@ -87,6 +87,11 @@ public class UIManager : MonoSingleton<UIManager>
         {
             //아무 UI도 표시 안되있을 경우 종료 UI 표시
             ShowNew(exitUIControl);
+
+            if(InGameManager.instance != null)
+            {
+                Time.timeScale = 0;
+            }
         }
     }
 }

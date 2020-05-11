@@ -14,7 +14,6 @@ public class UIHPBar : MonoBehaviour
     private void Start()
     {
         InGameManager.instance.gameState.OnBattle += UpdateHPBar;
-        //InGameManager.instance.gameState.OnBattle += InitializeAfterImageSlider;
     }
 
     public void Initialize()
@@ -51,8 +50,6 @@ public class UIHPBar : MonoBehaviour
 
     public void UpdateHPBar()
     {
-        Debug.Log(controllingPawn.name + " : Update Hp Bar");
-
         if(controllingPawn != null)
         {
             slider.value = controllingPawn.GetHPRatio();

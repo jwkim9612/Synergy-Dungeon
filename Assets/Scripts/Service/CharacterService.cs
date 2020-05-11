@@ -25,4 +25,27 @@ public class CharacterService
 
         return characterInfo;
     }
+
+    public static int GetSalePrice(CharacterInfo characterInfo)
+    {
+        int price = 0;
+
+        switch (characterInfo.star)
+        {
+            case 1:
+                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier);
+                break;
+            case 2:
+                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier) + 2;
+                break;
+            case 3:
+                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier) + 4;
+                break;
+            default:
+                Debug.Log("Error GetSalePrice");
+                break;
+        }
+
+        return price;
+    }
 }

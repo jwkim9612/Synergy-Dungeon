@@ -23,19 +23,17 @@ public class UICharacterCard : MonoBehaviour
     {
         InGameManager.instance.playerState.OnCoinChanged += UpdateBuyable;
 
-        CombinationService combinationService = InGameManager.instance.combinationService;
-
         buyButton.onClick.AddListener(() =>
         {
             CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
 
-            if (combinationService.IsUpgradable(characterInfo))
+            if (InGameManager.instance.combinationService.IsUpgradable(characterInfo))
             {
-                BuyCharacter(combinationService);
+                BuyCharacter();
             }
             else
             {
-                var emptyUICharacter = InGameManager.instance.uiPrepareArea.GetEmptyUICharacter();
+                var emptyUICharacter = InGameManager.instance.draggableCentral.uiPrepareArea.GetEmptyUICharacter();
                 if (emptyUICharacter == null)
                 {
                     Debug.Log("uiCharacter is full");
@@ -43,20 +41,20 @@ public class UICharacterCard : MonoBehaviour
                 else
                 {
                     emptyUICharacter.SetCharacter(characterInfo);
-                    BuyCharacter(combinationService);
+                    BuyCharacter();
                 }
             }
         });
     }
 
-    private void BuyCharacter(CombinationService combinationService)
+    private void BuyCharacter()
     {
         CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
 
-        combinationService.AddCharacter(characterInfo);
+        InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.tier));
         isBoughtCard = true;
         OnHide();
-        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.tier));
     }
 
     public void SetCard(CharacterData newCharacterData)

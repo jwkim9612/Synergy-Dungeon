@@ -47,6 +47,7 @@ public class UICharacter : MonoBehaviour
 
     public void DeleteCharacterBySell()
     {
+        InGameManager.instance.playerState.IncreaseCoin(CharacterService.GetSalePrice(characterInfo));
         InGameManager.instance.stockService.AddStockId(characterInfo);
         InGameManager.instance.combinationService.SubCharacter(characterInfo);
         DeleteCharacter();
@@ -55,6 +56,10 @@ public class UICharacter : MonoBehaviour
     public void DeleteCharacter()
     {
         image.sprite = Resources.Load<Sprite>(CardService.DEFAULT_IMAGE_NAME);
+
+        character = null;
+        InGameManager.instance.gameState.OnBattle -= UpdateHPBarVisibility;
+        InGameManager.instance.gameState.OnPrepare -= UpdateHPBarVisibility;
 
         characterInfo.id = -1;
         characterInfo.star = 0;

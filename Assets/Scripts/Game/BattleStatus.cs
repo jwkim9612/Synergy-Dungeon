@@ -30,6 +30,9 @@ public class BattleStatus : MonoBehaviour
 
     private IEnumerator Battle()
     {
+        if (characters.Count == 0)
+            isCharacterAnnihilation = true;
+
         yield return new WaitForSeconds(0.5f);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)

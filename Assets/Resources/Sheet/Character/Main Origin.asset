@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - origin: 1
+    image: {fileID: 0}
     description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    charactersheet: {fileID: 11400000, guid: 79b0e7b980c43b44eb2feeb4b150df4d, type: 2}
   - origin: 2
+    image: {fileID: 0}
     description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    charactersheet: {fileID: 0}
   - origin: 3
+    image: {fileID: 0}
     description: 
-    charactersheet: {fileID: 0}
   - origin: 4
+    image: {fileID: 0}
     description: 
-    charactersheet: {fileID: 0}
   - origin: 5
+    image: {fileID: 0}
     description: 
-    charactersheet: {fileID: 0}
   - origin: 6
+    image: {fileID: 0}
     description: 
-    charactersheet: {fileID: 0}

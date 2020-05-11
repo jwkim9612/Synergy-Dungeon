@@ -58,12 +58,12 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
-    void BeginDrag(UICharacter character)
+    void BeginDrag(UICharacter uiCharacter)
     {
-        SwapCharacters(invisibleCharacter, character);
+        SwapCharacters(invisibleCharacter, uiCharacter);
     }
 
-    void Drag(UICharacter character)
+    void Drag(UICharacter uiCharacter)
     {
         Arranger whichArrangersCharacter;
 
@@ -71,7 +71,7 @@ public class DraggableCentral : MonoBehaviour
         if (InGameManager.instance.gameState.inGameState == InGameState.Battle)
         {
             // 드래그가 준비중인 캐릭터들 위치에 있다면
-            if(TransformService.ContainPos(uiPrepareArea.transform as RectTransform, character.transform.position))
+            if(TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
             {
                 whichArrangersCharacter = uiPrepareArea;
             }
@@ -82,12 +82,12 @@ public class DraggableCentral : MonoBehaviour
         }
         else
         {
-            whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, character.transform.position));
+            whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, uiCharacter.transform.position));
         }
 
         if (whichArrangersCharacter != null)
         {
-            UICharacter targetCharacter = whichArrangersCharacter.GetCharacterByPosition(character);
+            UICharacter targetCharacter = whichArrangersCharacter.GetCharacterByPosition(uiCharacter);
 
             if (targetCharacter != null)
             {
@@ -126,7 +126,7 @@ public class DraggableCentral : MonoBehaviour
         }
 
         // Sell에 드래그했을 때
-        if (TransformService.ContainPos(Sell as RectTransform, character.transform.position))
+        if (TransformService.ContainPos(Sell as RectTransform, uiCharacter.transform.position))
         {
             isSelling = true;
             Sell.gameObject.GetComponent<Image>().color = Color.red;
@@ -138,15 +138,15 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
-    void EndDrag(UICharacter character)
+    void EndDrag(UICharacter uiCharacter)
     {
         if(isSelling)
         {
-            character.DeleteCharacterBySell();
+            uiCharacter.DeleteCharacterBySell();
             Sell.gameObject.GetComponent<Image>().color = Color.white;
         }
 
-        SwapCharacters(invisibleCharacter, character);
+        SwapCharacters(invisibleCharacter, uiCharacter);
         isSwapped = false;
     }
 

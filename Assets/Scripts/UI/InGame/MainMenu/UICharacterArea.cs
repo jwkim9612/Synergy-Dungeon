@@ -79,4 +79,17 @@ public class UICharacterArea : Arranger
             uiCharacter.gameObject.SetActive(true);
         }
     }
+
+    public bool IsEmpty()
+    {
+        foreach (var uiCharacter in uiCharacters)
+        {
+            if(uiCharacter.character != null)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
