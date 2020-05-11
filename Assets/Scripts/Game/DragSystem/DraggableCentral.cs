@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,7 +72,7 @@ public class DraggableCentral : MonoBehaviour
         if (InGameManager.instance.gameState.inGameState == InGameState.Battle)
         {
             // 드래그가 준비중인 캐릭터들 위치에 있다면
-            if(TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
+            if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
             {
                 whichArrangersCharacter = uiPrepareArea;
             }
@@ -91,9 +92,9 @@ public class DraggableCentral : MonoBehaviour
 
             if (targetCharacter != null)
             {
-                if(!isSwapped)
+                if (!isSwapped)
                 {
-                    // 원래 자리면
+                    // 옆으로 옮기면
                     if (targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
@@ -101,13 +102,14 @@ public class DraggableCentral : MonoBehaviour
                         isSwapped = true;
                     }
                 }
-                else if (isSwapped && targetCharacter != invisibleCharacter)
+                else
                 {
-                    if(swappedCharacter == targetCharacter)
+                    if(targetCharacter == swappedCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
+                        isSwapped = false;
                     }
-                    else
+                    else if(targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, swappedCharacter);
                         SwapCharacters(invisibleCharacter, targetCharacter);
@@ -147,6 +149,9 @@ public class DraggableCentral : MonoBehaviour
         }
 
         SwapCharacters(invisibleCharacter, uiCharacter);
+
+        UpdateSynergyService(uiCharacter);
+
         isSwapped = false;
     }
 
@@ -174,5 +179,46 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
+    // 시너지서비스에 넣어주기
+    public void UpdateSynergyService(UICharacter uiCharacter)
+    {
+        if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
+        {
+            Debug.Log("uicharacter 빼주기");
+            return;
+        }
 
+        //CharacterArea에서 PrepareArea로 바꿨을 경우
+            if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
+        {
+            if (swappedCharacter.character == null)
+            {
+                // uiCharacter를 하나 빼준다.
+                Debug.Log("uicharacter 빼주기");
+            }
+            else
+            {
+                // uiCharacter를 하나 빼주고,
+                Debug.Log("uicharacter 빼주기");
+                Debug.Log("swappeed 더해주기");
+                // swappedCharacter를 하나 더해준다.
+            }
+        }
+        // PrepareArea에서 CharacterArea로 바꿨을 경우
+        else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
+        {
+            if (swappedCharacter.character == null)
+            {
+                Debug.Log("uicharacter 더해주기");
+                // uicharacter를 하나 더해준다.
+            }
+            else
+            {
+                // uicharacter를 하나 더해주고
+                Debug.Log("uicharacter 더해주기");
+                Debug.Log("swappeed 빼주기");
+                // swapped를 하나 빼준다.
+            }
+        }
+    }
 }

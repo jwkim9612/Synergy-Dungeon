@@ -77,6 +77,7 @@ public class BattleStatus : MonoBehaviour
         {
             SaveManager.Instance.SetInGameData();
             SaveManager.Instance.SaveInGameData();
+            InGameManager.instance.gameState.isPlayerLose = true;
             Debug.Log("Battle End");
             yield break;
         }

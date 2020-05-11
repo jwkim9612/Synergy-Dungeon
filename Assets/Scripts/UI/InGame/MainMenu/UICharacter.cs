@@ -132,4 +132,9 @@ public class UICharacter : MonoBehaviour
             uiHPBar.OnHide();
         }
     }
+
+    public T GetArea<T>()
+    {
+        return this.GetComponentInParent<UISlot>().GetComponentInParent<T>();
+    }
 }

@@ -17,6 +17,21 @@ public class UICharacterArea : Arranger
         }
     }
 
+    //private void Update()
+    //{
+
+    //    if (Input.GetKeyDown(KeyCode.B))
+    //    {
+    //        foreach (var a in uiCharacters)
+    //        {
+    //            if (a.character != null)
+    //                Debug.Log(a.character.name);
+    //        }
+
+    //    }
+
+    //}
+
     public void OnFighting()
     {
         foreach(var uiCharacter in uiCharacters)
