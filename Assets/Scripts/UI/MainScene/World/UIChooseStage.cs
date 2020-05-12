@@ -30,6 +30,15 @@ public class UIChooseStage : UIControl
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
             stageTitle.text = GameManager.instance.dataSheet.stageDatas[simpleScrollSnap.TargetPanel].name;
+            
+            if(IsPlayableStage(simpleScrollSnap.TargetPanel + 1))
+            {
+                entranceButton.interactable = true;
+            }
+            else
+            {
+                entranceButton.interactable = false;
+            }
         });
     }
 
@@ -39,8 +48,8 @@ public class UIChooseStage : UIControl
 
         var stageDatas = GameManager.instance.dataSheet.stageDatas;
         foreach (var stageData in stageDatas)
-        { 
-            if(dataIndex == 0)
+        {
+            if (dataIndex == 0)
             {
                 worldStage.SetStageData(stageData);
             }
@@ -48,9 +57,18 @@ public class UIChooseStage : UIControl
             {
                 var stage = Instantiate(worldStage, content.transform);
                 stage.SetStageData(stageData);
+                if (!IsPlayableStage(dataIndex + 1))
+                {
+                    stage.ToBlurry();
+                }
             }
 
             ++dataIndex;
         }
+    }
+
+    private bool IsPlayableStage(int stage)
+    {
+        return PlayerDataManager.Instance.playerData.playableStage >= stage ? true : false;
     }
 }

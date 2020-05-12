@@ -29,7 +29,13 @@ public class UIBattleSynergyList : MonoBehaviour
 
         synergyService = InGameManager.instance.synergyService;
         synergyService.OnTribeChanged += UpdateTribes;
-        synergyService.OnOriginChanged += UpdateOrigins;
+        synergyService.OnOriginChanged += UpdateOrigins; ;
+
+
+        if (SaveManager.Instance.HasInGameData())
+        {
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
+        }
     }
 
     public void UpdateTribes()
@@ -65,6 +71,19 @@ public class UIBattleSynergyList : MonoBehaviour
         for (int i = originIndex; i < uiOrigins.Count; ++i)
         {
             uiOrigins[i].gameObject.SetActive(false);
+        }
+    }
+
+    private void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
+    {
+        foreach(var characterInfo in characterInfoList)
+        {
+            if (characterInfo.star == 0)
+            {
+                continue;
+            }
+
+            synergyService.AddCharacter(characterInfo);
         }
     }
 }

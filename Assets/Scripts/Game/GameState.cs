@@ -57,6 +57,8 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 if(stageManager.IsFinalWave())
                 {
+                    ++PlayerDataManager.Instance.playerData.playableStage;
+                    PlayerDataManager.Instance.SavePlayerData();
                     ShowStageClear();
                 }
                 else

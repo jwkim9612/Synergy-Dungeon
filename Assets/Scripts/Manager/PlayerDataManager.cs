@@ -22,6 +22,12 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
         playerData = loadedPlayerData;
     }
 
+    public void SavePlayerData()
+    {
+        Debug.Log("플레이어 정보 저장 완료!");
+        CreateJsonFile(Application.dataPath, "PlayerData", ObjectToJson(playerData));
+    }
+
     public string ObjectToJson(object obj)
     {
         return JsonConvert.SerializeObject(obj);

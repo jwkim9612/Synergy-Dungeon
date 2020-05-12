@@ -7,10 +7,12 @@ public class PlayerData
     {
         level = 1;
         coin = 0;
+        playableStage = 1;
     }
 
     public int level;
     public int coin;
+    public int playableStage;
 }
 
 public struct CharacterInfo
