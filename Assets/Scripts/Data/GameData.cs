@@ -13,6 +13,42 @@ public class PlayerData
     public int coin;
 }
 
+public struct CharacterInfo
+{
+    public CharacterInfo(int id, int star)
+    {
+        this.id = id;
+        this.star = star;
+    }
+
+    public int id;
+    public int star;
+}
+
+public struct TribeInfo
+{
+    public TribeInfo(Tribe tribe, int id)
+    {
+        this.tribe = tribe;
+        this.id = id;
+    }
+
+    public Tribe tribe;
+    public int id;
+}
+
+public struct OriginInfo
+{
+    public OriginInfo(Origin origin, int id)
+    {
+        this.origin = origin;
+        this.id = id;
+    }
+
+    public Origin origin;
+    public int id;
+}
+
 public enum Tier
 { 
     None,
@@ -60,11 +96,3 @@ public enum PawnType
     Character,
     Enemy
 }
-
-public enum Action
-{ 
-    Attack,
-    Defense,
-    Skill
-}
-

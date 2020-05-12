@@ -6,14 +6,16 @@ using UnityEngine.UI;
 
 public class DraggableCentral : MonoBehaviour
 {
-    public UICharacterArea uiCharacterArea { get; set; }
-    public UIPrepareArea uiPrepareArea { get; set; }
+    public UICharacterArea uiCharacterArea;
+    public UIPrepareArea uiPrepareArea;
 
     [SerializeField] private UICharacter invisibleCharacter = null;
     [SerializeField] private Transform Sell = null;
 
     private List<Arranger> arrangers;
     private UICharacter swappedCharacter;
+    private UISlot parentWhenBeginDrag;
+    private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
 
@@ -28,8 +30,8 @@ public class DraggableCentral : MonoBehaviour
 
     private void InitializeArrangers()
     {
-        uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
-        uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
+        //uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
+        //uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
 
         arrangers = new List<Arranger>();
         arrangers.Add(uiCharacterArea);
@@ -61,6 +63,7 @@ public class DraggableCentral : MonoBehaviour
 
     void BeginDrag(UICharacter uiCharacter)
     {
+        parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
     }
 
@@ -144,7 +147,7 @@ public class DraggableCentral : MonoBehaviour
     {
         if(isSelling)
         {
-            uiCharacter.DeleteCharacterBySell();
+            selledCharacterInfo = uiCharacter.DeleteCharacterBySell();
             Sell.gameObject.GetComponent<Image>().color = Color.white;
         }
 
@@ -158,7 +161,7 @@ public class DraggableCentral : MonoBehaviour
     public void CombinationCharacter(CharacterInfo characterInfo)
     {
 
-        bool isFindFirstCharacter = false;
+        bool isFirstCharacter = true;
 
         foreach (var arranger in arrangers)
         {
@@ -166,9 +169,11 @@ public class DraggableCentral : MonoBehaviour
 
             if (uiCharacter.characterInfo.Equals(characterInfo))
             {
-                if (!isFindFirstCharacter)
+                InGameManager.instance.synergyService.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
+
+                if (isFirstCharacter)
                 {
-                    isFindFirstCharacter = true;
+                    isFirstCharacter = false;
                     uiCharacter.UpgradeStar();
                 }
                 else
@@ -182,8 +187,15 @@ public class DraggableCentral : MonoBehaviour
     // 시너지서비스에 넣어주기
     public void UpdateSynergyService(UICharacter uiCharacter)
     {
+        if(uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
+        {
+            Debug.Log("제자리");
+            return;
+        }
+
         if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
         {
+            InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
             Debug.Log("uicharacter 빼주기");
             return;
         }
@@ -195,12 +207,15 @@ public class DraggableCentral : MonoBehaviour
             {
                 // uiCharacter를 하나 빼준다.
                 Debug.Log("uicharacter 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
             }
             else
             {
                 // uiCharacter를 하나 빼주고,
                 Debug.Log("uicharacter 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
                 Debug.Log("swappeed 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
                 // swappedCharacter를 하나 더해준다.
             }
         }
@@ -210,15 +225,20 @@ public class DraggableCentral : MonoBehaviour
             if (swappedCharacter.character == null)
             {
                 Debug.Log("uicharacter 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
                 // uicharacter를 하나 더해준다.
             }
             else
             {
                 // uicharacter를 하나 더해주고
                 Debug.Log("uicharacter 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
                 Debug.Log("swappeed 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
                 // swapped를 하나 빼준다.
             }
         }
     }
+
+
 }

@@ -5,15 +5,8 @@ using geniikw.DataSheetLab;
 
 public class Character : Pawn
 {
-    Action currentAction;
-
     public Character()
     {
         pawnType = PawnType.Character;
-    }
-
-    public void SetAction(Action action)
-    {
-        currentAction = action;
     }
 }

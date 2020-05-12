@@ -20,7 +20,7 @@ public class PlayerState : MonoBehaviour
         }
         else
         {
-            coin = 0;
+            coin = 100;
         }
 
         OnCoinChanged += uiBattleStatusMenu.UpdateCoinText;
