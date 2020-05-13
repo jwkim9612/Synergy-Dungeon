@@ -15,7 +15,7 @@ MonoBehaviour:
   data:
   - id: 0
     name: "\uB3C4\uB07C \uC804\uC0AC"
-    image: {fileID: 21300000, guid: 95663a3a240a2244f855968fd7b1c547, type: 3}
+    image: {fileID: 21300000, guid: 41ab191be45781e4a97e33e6f8b9b7fb, type: 3}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 00000000
@@ -120,7 +120,7 @@ MonoBehaviour:
       idxList: 04000000
   - id: 5
     name: "\uC5D8\uD504 \uAC80\uC0AC"
-    image: {fileID: 21300000, guid: d27fd2d489b001440ac413fd1a763d86, type: 3}
+    image: {fileID: 21300000, guid: 41ab191be45781e4a97e33e6f8b9b7fb, type: 3}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 05000000
