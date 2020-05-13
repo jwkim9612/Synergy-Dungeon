@@ -11,7 +11,7 @@ public class InGameManager : MonoBehaviour
     public StockService stockService;
     public ProbabilityService probabilityService;
     public CombinationService combinationService;
-    public BattleLogService battleLogService;
+    public SynergyService synergyService;
     public PlayerState playerState;
     public GameState gameState;
     public DraggableCentral draggableCentral;
@@ -34,9 +34,11 @@ public class InGameManager : MonoBehaviour
         stockService = new StockService();
         probabilityService = new ProbabilityService();
         combinationService = new CombinationService();
+        synergyService = new SynergyService();
 
         stockService.Initialize();
         probabilityService.Initialize();
         combinationService.Initialize();
+        synergyService.Initialize();
     }
 }

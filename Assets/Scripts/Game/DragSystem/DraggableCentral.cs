@@ -1,18 +1,21 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DraggableCentral : MonoBehaviour
 {
-    public UICharacterArea uiCharacterArea { get; set; }
-    public UIPrepareArea uiPrepareArea { get; set; }
+    public UICharacterArea uiCharacterArea;
+    public UIPrepareArea uiPrepareArea;
 
     [SerializeField] private UICharacter invisibleCharacter = null;
     [SerializeField] private Transform Sell = null;
 
     private List<Arranger> arrangers;
     private UICharacter swappedCharacter;
+    private UISlot parentWhenBeginDrag;
+    private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
 
@@ -27,8 +30,8 @@ public class DraggableCentral : MonoBehaviour
 
     private void InitializeArrangers()
     {
-        uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
-        uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
+        //uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
+        //uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
 
         arrangers = new List<Arranger>();
         arrangers.Add(uiCharacterArea);
@@ -60,6 +63,7 @@ public class DraggableCentral : MonoBehaviour
 
     void BeginDrag(UICharacter uiCharacter)
     {
+        parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
     }
 
@@ -71,7 +75,7 @@ public class DraggableCentral : MonoBehaviour
         if (InGameManager.instance.gameState.inGameState == InGameState.Battle)
         {
             // 드래그가 준비중인 캐릭터들 위치에 있다면
-            if(TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
+            if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
             {
                 whichArrangersCharacter = uiPrepareArea;
             }
@@ -91,9 +95,9 @@ public class DraggableCentral : MonoBehaviour
 
             if (targetCharacter != null)
             {
-                if(!isSwapped)
+                if (!isSwapped)
                 {
-                    // 원래 자리면
+                    // 옆으로 옮기면
                     if (targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
@@ -101,13 +105,14 @@ public class DraggableCentral : MonoBehaviour
                         isSwapped = true;
                     }
                 }
-                else if (isSwapped && targetCharacter != invisibleCharacter)
+                else
                 {
-                    if(swappedCharacter == targetCharacter)
+                    if(targetCharacter == swappedCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
+                        isSwapped = false;
                     }
-                    else
+                    else if(targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, swappedCharacter);
                         SwapCharacters(invisibleCharacter, targetCharacter);
@@ -142,18 +147,21 @@ public class DraggableCentral : MonoBehaviour
     {
         if(isSelling)
         {
-            uiCharacter.DeleteCharacterBySell();
+            selledCharacterInfo = uiCharacter.DeleteCharacterBySell();
             Sell.gameObject.GetComponent<Image>().color = Color.white;
         }
 
         SwapCharacters(invisibleCharacter, uiCharacter);
+
+        UpdateSynergyService(uiCharacter);
+
         isSwapped = false;
     }
 
     public void CombinationCharacter(CharacterInfo characterInfo)
     {
 
-        bool isFindFirstCharacter = false;
+        bool isFirstCharacter = true;
 
         foreach (var arranger in arrangers)
         {
@@ -161,15 +169,73 @@ public class DraggableCentral : MonoBehaviour
 
             if (uiCharacter.characterInfo.Equals(characterInfo))
             {
-                if (!isFindFirstCharacter)
+                InGameManager.instance.synergyService.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
+
+                if (isFirstCharacter)
                 {
-                    isFindFirstCharacter = true;
+                    isFirstCharacter = false;
                     uiCharacter.UpgradeStar();
                 }
                 else
                 {
                     uiCharacter.DeleteCharacter();
                 }
+            }
+        }
+    }
+
+    // 시너지서비스에 넣어주기
+    public void UpdateSynergyService(UICharacter uiCharacter)
+    {
+        if(uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
+        {
+            Debug.Log("제자리");
+            return;
+        }
+
+        if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
+        {
+            InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
+            Debug.Log("uicharacter 빼주기");
+            return;
+        }
+
+        //CharacterArea에서 PrepareArea로 바꿨을 경우
+            if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
+        {
+            if (swappedCharacter.character == null)
+            {
+                // uiCharacter를 하나 빼준다.
+                Debug.Log("uicharacter 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+            }
+            else
+            {
+                // uiCharacter를 하나 빼주고,
+                Debug.Log("uicharacter 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+                Debug.Log("swappeed 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
+                // swappedCharacter를 하나 더해준다.
+            }
+        }
+        // PrepareArea에서 CharacterArea로 바꿨을 경우
+        else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
+        {
+            if (swappedCharacter.character == null)
+            {
+                Debug.Log("uicharacter 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
+                // uicharacter를 하나 더해준다.
+            }
+            else
+            {
+                // uicharacter를 하나 더해주고
+                Debug.Log("uicharacter 더해주기");
+                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
+                Debug.Log("swappeed 빼주기");
+                InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
+                // swapped를 하나 빼준다.
             }
         }
     }

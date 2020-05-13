@@ -32,7 +32,7 @@ public class Pawn
         int finalDamage = target.TakeDamage(ability.attack);
         OnAttack();
 
-        InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
+        //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
 
     /// <summary>

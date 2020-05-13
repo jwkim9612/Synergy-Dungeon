@@ -15,6 +15,9 @@ public class GameState : MonoBehaviour
     public bool isWaveClear { get; set; } = false;
     public bool isPlayerLose { get; set; } = false;
 
+    [SerializeField] private UIStageClear uiStageClear = null;
+    [SerializeField] private UIGameOver uiGameOver = null;
+
     void Start()
     {
         stageManager = StageManager.Instance;
@@ -54,7 +57,9 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 if(stageManager.IsFinalWave())
                 {
-                    Debug.Log("스테이지 클리어");
+                    ++PlayerDataManager.Instance.playerData.playableStage;
+                    PlayerDataManager.Instance.SavePlayerData();
+                    ShowStageClear();
                 }
                 else
                 {
@@ -64,7 +69,7 @@ public class GameState : MonoBehaviour
                 break;
 
             case InGameState.Lose:
-
+                ShowGameOver();
                 break;
         }
 
@@ -81,5 +86,15 @@ public class GameState : MonoBehaviour
     public bool IsInBattle()
     {
         return inGameState == InGameState.Battle;
+    }
+
+    private void ShowGameOver()
+    {
+        uiGameOver.gameObject.SetActive(true);
+    }
+
+    private void ShowStageClear()
+    {
+        uiStageClear.gameObject.SetActive(true);
     }
 }

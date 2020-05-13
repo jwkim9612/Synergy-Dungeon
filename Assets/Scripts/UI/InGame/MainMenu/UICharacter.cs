@@ -45,12 +45,16 @@ public class UICharacter : MonoBehaviour
         image.sprite = GameManager.instance.dataSheet.characterDatas[characterInfo.id].image;
     }
 
-    public void DeleteCharacterBySell()
+    public CharacterInfo DeleteCharacterBySell()
     {
+        CharacterInfo deletedCharacterInfo = characterInfo;
+
         InGameManager.instance.playerState.IncreaseCoin(CharacterService.GetSalePrice(characterInfo));
         InGameManager.instance.stockService.AddStockId(characterInfo);
         InGameManager.instance.combinationService.SubCharacter(characterInfo);
         DeleteCharacter();
+
+        return deletedCharacterInfo;
     }
 
     public void DeleteCharacter()
@@ -131,5 +135,10 @@ public class UICharacter : MonoBehaviour
         {
             uiHPBar.OnHide();
         }
+    }
+
+    public T GetArea<T>()
+    {
+        return this.GetComponentInParent<UISlot>().GetComponentInParent<T>();
     }
 }

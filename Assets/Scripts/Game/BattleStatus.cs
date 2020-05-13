@@ -77,23 +77,31 @@ public class BattleStatus : MonoBehaviour
         {
             SaveManager.Instance.SetInGameData();
             SaveManager.Instance.SaveInGameData();
+            InGameManager.instance.gameState.isPlayerLose = true;
             Debug.Log("Battle End");
             yield break;
         }
         else if (isEnemyAnnihilation)
         {
-            SaveManager.Instance.SetInGameData();
-            SaveManager.Instance.SaveInGameData();
+            Debug.Log(StageManager.Instance.currentWave);
+
+            if(StageManager.Instance.IsFinalWave())
+            {
+                SaveManager.Instance.DeleteInGameData();
+                Debug.Log("데이터 삭제!");
+            }
+            else
+            {
+                SaveManager.Instance.SetInGameData();
+                SaveManager.Instance.SaveInGameData();
+            }
             OnWinTheBattle();
-            Debug.Log("Battle End");
             yield break;
         }
         else
         {
             Debug.Log("Error Battle End");
         }
-
-
     }
 
     /// <summary>
