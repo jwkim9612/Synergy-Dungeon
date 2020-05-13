@@ -24,15 +24,22 @@ public class UICharacterStatus : MonoBehaviour
             return;
         }
 
-        SetCharacterIcon(uiCharacter.image);
+        ShowAll();
+
+        
+        SetCharacterIcon(uiCharacter.character.spriteRenderer.sprite);
+        //SetCharacterIcon(GameManager.instance.dataSheet.characterDatas[uiCharacter.characterInfo.id].statusImage);
         SetStarGrade(uiCharacter.characterInfo.star);
         ControllingPawn = uiCharacter.character;
         uiStatusHPbar.SetControllingPawn(ControllingPawn);
     }
 
-    private void SetCharacterIcon(Image image)
+    private void SetCharacterIcon(Sprite sprite)
     {
-        characterIcon.sprite = image.sprite;
+        if (sprite == null)
+            return;
+
+        characterIcon.sprite = sprite;
     }
 
     private void SetStarGrade(int star)
@@ -48,5 +55,19 @@ public class UICharacterStatus : MonoBehaviour
                 stars[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void ShowAll()
+    {
+        characterIcon.gameObject.SetActive(true);
+        starGrade.gameObject.SetActive(true);
+        uiStatusHPbar.gameObject.SetActive(true);
+    }
+
+    public void HideAll()
+    {
+        characterIcon.gameObject.SetActive(false);
+        starGrade.gameObject.SetActive(false);
+        uiStatusHPbar.gameObject.SetActive(false);
     }
 }

@@ -8,4 +8,10 @@ public class TransformService
     {
         return RectTransformUtility.RectangleContainsScreenPoint(rt, pos);
     }
+
+    public static void SetFullSize(RectTransform rt)
+    {
+        rt.offsetMax = new Vector2(0.0f, 0.0f);
+        rt.offsetMin = new Vector2(0.0f, 0.0f);
+    }
 }

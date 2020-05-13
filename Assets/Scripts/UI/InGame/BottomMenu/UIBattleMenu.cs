@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityScript.Scripting.Pipeline;
 
 public class UIBattleMenu : MonoBehaviour
 {
-    [SerializeField] private UICharacterArea uiCharacterArea = null;
-    private UICharacterStatus[] characterStatusList = null;
+    private UICharacterStatuses[] uiCharacterStatusesList;
 
     public void Initialize()
     {
-        characterStatusList = gameObject.GetComponentsInChildren<UICharacterStatus>();
-        InGameManager.instance.gameState.OnBattle += InitializeCharacterStatusList;
+        uiCharacterStatusesList = GetComponentsInChildren<UICharacterStatuses>();
 
-        foreach(var characterStatus in characterStatusList)
+        foreach(var uiCharacterStatuses in uiCharacterStatusesList)
         {
-            characterStatus.Initialize();
+            uiCharacterStatuses.Initialize();
         }
+
+        InGameManager.instance.gameState.OnBattle += InitializeCharacterStatusList;
     }
 
     public void OnShow()
@@ -31,18 +32,24 @@ public class UIBattleMenu : MonoBehaviour
 
     public void InitializeCharacterStatusList()
     {
-        var uiCharacterList = uiCharacterArea.GetUICharacterListWithCharacters();
+        var uiCharacterList = InGameManager.instance.draggableCentral.uiCharacterArea.GetUICharacterListWithCharacters();
 
-        for(int i = 0; i < characterStatusList.Count(); ++i)
+        int characterIndex = 0;
+
+        for(int statusesIndex = 0; statusesIndex < uiCharacterStatusesList.Length; ++statusesIndex)
         {
-            if(uiCharacterList.Count > i)
+            for(int statusIndex = 0; statusIndex < uiCharacterStatusesList[statusesIndex].characterStatusList.Length; ++statusIndex)
             {
-                characterStatusList[i].gameObject.SetActive(true);
-                characterStatusList[i].SetCharacterStatus(uiCharacterList[i]);
-            }
-            else
-            {
-                characterStatusList[i].gameObject.SetActive(false);
+                if(uiCharacterList.Count > characterIndex)
+                {
+                    uiCharacterStatusesList[statusesIndex].characterStatusList[statusIndex].SetCharacterStatus(uiCharacterList[characterIndex]);
+                }
+                else
+                {
+                    uiCharacterStatusesList[statusesIndex].characterStatusList[statusIndex].HideAll();
+                }
+
+                ++characterIndex;
             }
         }
     }

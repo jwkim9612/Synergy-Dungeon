@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class InGameService : MonoBehaviour
 {
-    public const int Rate_At_Which_Afterimages_Disappear = 200;
-    public const float Size_To_Expand_The_Battle_Area = -200.0f;
-    public const float Size_To_Shrink_The_Battle_Area = 0.0f;
-    public static float Size_To_Blur = 0.5f;
+    public const int RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR = 200;
+    public const float SIZE_TO_EXPAND_THE_BATTLE_AREA = -200.0f;
+    public const float SIZE_TO_SHRINK_THE_BATTLE_AREA = 0.0f;
+    public const float SIZE_TO_BLUR = 0.5f;
+    public const int NUMBER_OF_BACKAREA = 4;
+    public const int NUMBER_OF_FRONTAREA = 3;
+
+
+    public static Character character = GameObject.Find("DefaultCharacter").GetComponent<Character>();
+    public static Enemy enemy = GameObject.Find("DefaultEnemy").GetComponent<Enemy>();
 }

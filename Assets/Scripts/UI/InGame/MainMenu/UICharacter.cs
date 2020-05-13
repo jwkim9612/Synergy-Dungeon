@@ -10,7 +10,7 @@ public class UICharacter : MonoBehaviour
     public Character character { get; set; }
     public bool isFightingOnBattlefield { get; set; }
     public CharacterInfo characterInfo;
-    public Image image = null;
+    public Image clickableImage = null;
 
     private void Start()
     {
@@ -22,16 +22,18 @@ public class UICharacter : MonoBehaviour
         OnCanClick();
         SetCharacterInfo(newCharacterInfo);
 
-        character = new Character();
+        character = Instantiate(InGameService.character, transform.root.parent);
+        character.SetSize(0.5f);
+        character.SetImage(GameManager.instance.dataSheet.characterDatas[characterInfo.id].image);
         character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
         character.SetName(GameManager.instance.dataSheet.characterDatas[characterInfo.id].name);
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
-        character.OnHit += PlayHitStateCoroutine;
         character.SetUIHitTexts(uiHitTexts);
         character.InitializeUIHitTexts();
-
+        
+        FollowCharacter();
         uiHPBar.Initialize();
 
         InGameManager.instance.gameState.OnBattle += UpdateHPBarVisibility;
@@ -40,9 +42,7 @@ public class UICharacter : MonoBehaviour
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
     {
-        OnCanClick();
         characterInfo = newCharacterInfo;
-        image.sprite = GameManager.instance.dataSheet.characterDatas[characterInfo.id].image;
     }
 
     public CharacterInfo DeleteCharacterBySell()
@@ -59,8 +59,7 @@ public class UICharacter : MonoBehaviour
 
     public void DeleteCharacter()
     {
-        image.sprite = Resources.Load<Sprite>(CardService.DEFAULT_IMAGE_NAME);
-
+        character.DestoryPawn();
         character = null;
         InGameManager.instance.gameState.OnBattle -= UpdateHPBarVisibility;
         InGameManager.instance.gameState.OnPrepare -= UpdateHPBarVisibility;
@@ -81,12 +80,12 @@ public class UICharacter : MonoBehaviour
 
     public void OnCanClick()
     {
-        image.raycastTarget = true;
+        clickableImage.raycastTarget = true;
     }
 
     public void OnCanNotClick()
     {
-        image.raycastTarget = false;
+        clickableImage.raycastTarget = false;
     }
 
     public void OnHide()
@@ -99,24 +98,11 @@ public class UICharacter : MonoBehaviour
         StartCoroutine(AttackCoroutine());
     }
 
-    public void PlayHitStateCoroutine()
-    {
-        StartCoroutine(HitStateCoroutine());
-    }
-
     private IEnumerator AttackCoroutine()
     {
         gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
         yield return new WaitForSeconds(0.5f);
         gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
-        yield break;
-    }
-
-    private IEnumerator HitStateCoroutine()
-    {
-        image.color = Color.red;
-        yield return new WaitForSeconds(0.4f);
-        image.color = Color.white;
         yield break;
     }
 
@@ -140,5 +126,22 @@ public class UICharacter : MonoBehaviour
     public T GetArea<T>()
     {
         return this.GetComponentInParent<UISlot>().GetComponentInParent<T>();
+    }
+
+    public IEnumerator Co_FollowCharacter()
+    {
+        if (character != null)
+        {
+            yield return new WaitForEndOfFrame();
+            character.transform.position = this.transform.position;
+        }
+    }
+
+    public void FollowCharacter()
+    {
+        if (character != null)
+        {
+            character.transform.position = this.transform.position;
+        }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIStage : MonoBehaviour
+public class UIWave : MonoBehaviour
 {
-    public Text stageText = null;
+    public Text waveText = null;
 
     public void Start()
     {
@@ -16,9 +16,9 @@ public class UIStage : MonoBehaviour
 
     public void UpdateText()
     {
-        int stage = StageManager.Instance.currentStage;
+        //int stage = StageManager.Instance.currentStage;
         int wave = StageManager.Instance.currentWave;
 
-        stageText.text = (stage + " - " + wave);
+        waveText.text = ("" + wave);
     }
 }

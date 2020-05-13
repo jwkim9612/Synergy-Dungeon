@@ -4,7 +4,7 @@ using UnityEngine;
 using geniikw.DataSheetLab;
 using Newtonsoft.Json;
 
-public class Pawn
+public class Pawn : MonoBehaviour
 {
     public delegate void OnAttackDelegate();
     public delegate void OnHitDelegate();
@@ -13,6 +13,7 @@ public class Pawn
     public OnHitDelegate OnHit { get; set; }
     public OnIsDeadDelegate OnIsDead { get; set; }
 
+    public SpriteRenderer spriteRenderer;
     public string name { get; set; }
     public AbilityData ability { get; set; }
     public PawnType pawnType { get; set; }
@@ -24,7 +25,19 @@ public class Pawn
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         hitTextIndex = 0;
+    }
+
+
+    public void SetSize(float size)
+    {
+        spriteRenderer.transform.localScale = new Vector3(size, size, size);
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
     }
 
     public void Attack(Pawn target)
@@ -106,5 +119,10 @@ public class Pawn
 
         if (hitTextIndex >= uiHitTexts.Length)
             hitTextIndex = 0;
+    }
+
+    public void DestoryPawn()
+    {
+        Destroy(this.gameObject);
     }
 }

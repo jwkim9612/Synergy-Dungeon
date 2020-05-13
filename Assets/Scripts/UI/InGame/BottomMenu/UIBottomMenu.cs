@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIButtonMenu : MonoBehaviour
+public class UIBottomMenu : MonoBehaviour
 {
     [SerializeField] private UIBattleMenu battleMenu = null;
     [SerializeField] private GameObject prepareMenu = null;
@@ -17,13 +17,13 @@ public class UIButtonMenu : MonoBehaviour
 
     private void ShowBattleMenu()
     {
-        battleMenu.gameObject.SetActive(true);
+        battleMenu.OnShow();
         prepareMenu.SetActive(false);
     }
 
     private void ShowPrepareMenu()
     {
-        battleMenu.gameObject.SetActive(false);
+        battleMenu.OnHide();
         prepareMenu.SetActive(true);
     }
 }

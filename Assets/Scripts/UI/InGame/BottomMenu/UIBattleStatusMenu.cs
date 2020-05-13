@@ -26,7 +26,7 @@ public class UIBattleStatusMenu : MonoBehaviour
         });
 
         startButton.onClick.AddListener(() => {
-            if(InGameManager.instance.draggableCentral.uiCharacterArea.IsEmpty())
+            if (InGameManager.instance.draggableCentral.uiCharacterArea.IsEmpty())
             {
                 ShowCanNotStart();
             }

@@ -34,6 +34,11 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
             currentPos = mainCamera.ScreenToWorldPoint(currentPos);
 
             transform.position = currentPos;
+
+            //
+            uiCharacter.FollowCharacter();
+            //
+
             root.BroadcastMessage("Drag", uiCharacter, SendMessageOptions.DontRequireReceiver);
         }
     }

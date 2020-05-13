@@ -14,6 +14,7 @@ public class UIHPBar : MonoBehaviour
     private void Start()
     {
         InGameManager.instance.gameState.OnBattle += UpdateHPBar;
+        InGameManager.instance.gameState.OnBattle += InitializeAfterImageSlider;
     }
 
     public void Initialize()
@@ -63,7 +64,7 @@ public class UIHPBar : MonoBehaviour
     private IEnumerator PlayAfterImage()
     {
 
-        float subValue = (afterImageSlider.value - controllingPawn.GetHPRatio()) / InGameService.Rate_At_Which_Afterimages_Disappear ;
+        float subValue = (afterImageSlider.value - controllingPawn.GetHPRatio()) / InGameService.RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR ;
 
         while(true)
         {

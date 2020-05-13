@@ -21,13 +21,13 @@ public class UIBattleArea : MonoBehaviour
     private void SpaceExpansion()
     {
         RectTransform rec = transform as RectTransform;
-        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.Size_To_Expand_The_Battle_Area);
+        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA);
     }
 
     private void SpaceReduction()
     {
         RectTransform rec = transform as RectTransform;
-        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.Size_To_Shrink_The_Battle_Area);
+        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.SIZE_TO_SHRINK_THE_BATTLE_AREA);
     }
 
     private void BattleStart()
@@ -36,5 +36,4 @@ public class UIBattleArea : MonoBehaviour
         battleStatus.enemies = uiEnemyArea.GetEnemyList();
         battleStatus.BattleStart();
     }
-
 }

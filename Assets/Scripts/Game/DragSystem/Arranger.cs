@@ -13,25 +13,26 @@ public class Arranger : MonoBehaviour
         UpdateChildren();
     }
 
-    public void UpdateChildren()
+    public virtual void UpdateChildren()
     {
-        for (int i = 0; i < transform.childCount; ++i)
-        {
-            if (i == uiCharacters.Count)
-            {
-                uiCharacters.Add(null);
-            }
+        //for (int i = 0; i < transform.childCount; ++i)
+        //{
+        //    if (i == uiCharacters.Count)
+        //    {
+        //        uiCharacters.Add(null);
+        //    }
 
-            // border안에 또 캐릭터가 있어서 GetChild를 두 번 써줌
-            var uicharacter = gameObject.GetComponentsInChildren<UISlot>()[i].GetComponentInChildren<UICharacter>();
-            //var child = transform.GetChild(i).GetChild(0);
+        //    // border안에 또 캐릭터가 있어서 GetChild를 두 번 써줌
+        //    var uicharacter = gameObject.GetComponentsInChildren<UISlot>()[i].GetComponentInChildren<UICharacter>();
+        //    //var child = transform.GetChild(i).GetChild(0);
 
-            if(uicharacter != uiCharacters[i])
-            {
-                uiCharacters[i] = uicharacter;
-            }
-        }
-  }
+        //    if(uicharacter != uiCharacters[i])
+        //    {
+        //        uiCharacters[i] = uicharacter;
+        //        //uiCharacters[i].character.SetSize(1.0f);
+        //    }
+        //}
+    }
 
     public UICharacter GetCharacterByPosition(UICharacter character)
     {
@@ -61,7 +62,7 @@ public class Arranger : MonoBehaviour
         return characterInfoList;
     }
 
-    protected void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
+    public void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
     {
         for (int i = 0; i < uiCharacters.Count; ++i)
         {

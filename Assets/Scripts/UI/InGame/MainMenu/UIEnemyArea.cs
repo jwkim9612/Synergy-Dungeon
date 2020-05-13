@@ -10,6 +10,7 @@ public class UIEnemyArea : MonoBehaviour
     void Start()
     {
         InGameManager.instance.gameState.OnPrepare += OnShowEnemiesUI;
+        InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;
     }
 
@@ -59,5 +60,16 @@ public class UIEnemyArea : MonoBehaviour
         }
 
         return enemys;
+    }
+
+    public void InitializeEnemyPositions()
+    {
+        foreach (var uiEnemy in uiEnemies)
+        {
+            if (uiEnemy.enemy == null)
+                continue;
+
+            StartCoroutine(uiEnemy.Co_FollowEnemy());
+        }
     }
 }

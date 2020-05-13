@@ -31,6 +31,6 @@ public class UIWorldStage : MonoBehaviour
 
     public void ToBlurry()
     {
-        image.color = new Color(image.color.r, image.color.g, image.color.g, InGameService.Size_To_Blur);
+        image.color = new Color(image.color.r, image.color.g, image.color.g, InGameService.SIZE_TO_BLUR);
     }
 }

@@ -2,65 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UICharacterArea : Arranger
+public class UICharacterArea : MonoBehaviour
 {
-    protected void Start()
+    public UIPlacementArea backArea;
+    public UIPlacementArea frontArea;
+
+    private void Start()
     {
-        base.Start();
-
-        InGameManager.instance.gameState.OnBattle += OnFighting;
-        InGameManager.instance.gameState.OnPrepare += OffFighting;
-
         if (SaveManager.Instance.HasInGameData())
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
         }
     }
 
-    //private void Update()
-    //{
-
-    //    if (Input.GetKeyDown(KeyCode.B))
-    //    {
-    //        foreach (var a in uiCharacters)
-    //        {
-    //            if (a.character != null)
-    //                Debug.Log(a.character.name);
-    //        }
-
-    //    }
-
-    //}
-
-    public void OnFighting()
+    public bool IsEmpty()
     {
-        foreach(var uiCharacter in uiCharacters)
-        {
-            uiCharacter.isFightingOnBattlefield = true;
-        }
+        return backArea.IsEmpty() && frontArea.IsEmpty() ? true : false;
     }
 
-    public void OffFighting()
+    public List<CharacterInfo> GetAllCharacterInfo()
     {
-        foreach (var uiCharacter in uiCharacters)
+        List<CharacterInfo> characterInfoList = new List<CharacterInfo>();
+
+        foreach (var uiCharacter in backArea.uiCharacters)
         {
-            uiCharacter.isFightingOnBattlefield = false;
+            characterInfoList.Add(uiCharacter.characterInfo);
         }
+
+        foreach (var uiCharacter in frontArea.uiCharacters)
+        {
+            characterInfoList.Add(uiCharacter.characterInfo);
+        }
+
+        return characterInfoList;
+    }
+
+    protected void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
+    {
+        List<CharacterInfo> backAreaInfos = characterInfoList.GetRange(0, InGameService.NUMBER_OF_BACKAREA);
+        List<CharacterInfo> frontAreaInfos = characterInfoList.GetRange(InGameService.NUMBER_OF_BACKAREA, InGameService.NUMBER_OF_FRONTAREA);
+
+        backArea.InitializeByInGameSaveData(backAreaInfos);
+        frontArea.InitializeByInGameSaveData(frontAreaInfos);
+    }
+
+    public void ShowAllUICharacters()
+    {
+        backArea.ShowAllUICharacters();
+        frontArea.ShowAllUICharacters();
     }
 
     public List<Character> GetCharacterList()
     {
         List<Character> characters = new List<Character>();
 
-        foreach (var uiCharacter in uiCharacters)
+        var backAreaCharacterList = backArea.GetCharacterList();
+        var frontAreaCharacterList = frontArea.GetCharacterList();
+
+        if (backAreaCharacterList != null)
         {
-            if(uiCharacter.character != null)
-            {
-                characters.Add(uiCharacter.character);
-            }
+            characters.AddRange(backArea.GetCharacterList());
         }
 
-        if(characters.Count == 0)
+        if (frontAreaCharacterList != null)
+        {
+            characters.AddRange(frontArea.GetCharacterList());
+        }
+
+        if (characters.Count == 0)
         {
             return null;
         }
@@ -68,43 +77,13 @@ public class UICharacterArea : Arranger
         return characters;
     }
 
-    /// <summary>
-    /// 캐릭터가 들어있는 UICharacter리스트를 반환
-    /// </summary>
-    /// <returns> 캐릭터가 들어있는 UICharacter리스트 </returns>
     public List<UICharacter> GetUICharacterListWithCharacters()
     {
         List<UICharacter> uiCharacters = new List<UICharacter>();
 
-        foreach (var uiCharacter in this.uiCharacters)
-        {
-            if (uiCharacter.character != null)
-            {
-                uiCharacters.Add(uiCharacter);
-            }
-        }
+        uiCharacters.AddRange(backArea.GetUICharacterListWithCharacters());
+        uiCharacters.AddRange(frontArea.GetUICharacterListWithCharacters());
 
         return uiCharacters;
-    }
-
-    public void ShowAllUICharacters()
-    {
-        foreach(var uiCharacter in uiCharacters)
-        {
-            uiCharacter.gameObject.SetActive(true);
-        }
-    }
-
-    public bool IsEmpty()
-    {
-        foreach (var uiCharacter in uiCharacters)
-        {
-            if(uiCharacter.character != null)
-            {
-                return false;
-            }
-        }
-
-        return true;
     }
 }

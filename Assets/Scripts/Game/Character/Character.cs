@@ -9,4 +9,20 @@ public class Character : Pawn
     {
         pawnType = PawnType.Character;
     }
+
+    public float GetSize()
+    {
+        return spriteRenderer.transform.localScale.x;
+    }
+
+    public void OnHide()
+    {
+        spriteRenderer.gameObject.SetActive(false);
+    }
+
+    public void OnShow()
+    {
+        spriteRenderer.gameObject.SetActive(true);
+
+    }
 }

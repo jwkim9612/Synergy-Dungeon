@@ -8,42 +8,36 @@ using geniikw.DataSheetLab;
 public class UIEnemy : MonoBehaviour
 {
     [SerializeField] private UIHPBar uiHPBar = null;
-    [SerializeField] private Image image = null;
     [SerializeField] private UIHitText[] uiHitTexts = null;
     public Enemy enemy { get; set; }
 
     public void SetEnemy(EnemyData newEnmeyData)
     {
-        enemy = new Enemy();
+        enemy = Instantiate(InGameService.enemy, transform.root.parent);
+        enemy.SetSize(0.8f);
+        enemy.SetImage(newEnmeyData.image);
         enemy.SetAbility(newEnmeyData.ability);
         enemy.SetName(newEnmeyData.name);
 
-        image.sprite = newEnmeyData.image;
         enemy.OnIsDead += PlayDeadCoroutine;
         enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
-        enemy.OnHit += PlayHitStateCoroutine;
         enemy.SetUIHitTexts(uiHitTexts);
         enemy.InitializeUIHitTexts();
 
+        StartCoroutine(Co_FollowEnemy());
         uiHPBar.Initialize();
         uiHPBar.UpdateHPBar();
     }
 
     public void OnShowUI()
     {
-        image.enabled = true;
         uiHPBar.gameObject.SetActive(true);
     }
 
     public void PlayAttackCoroutine()
     {
         StartCoroutine(AttackCoroutine());
-    }
-
-    public void PlayHitStateCoroutine()
-    {
-        StartCoroutine(HitStateCoroutine());
     }
 
     public void PlayDeadCoroutine()
@@ -59,25 +53,18 @@ public class UIEnemy : MonoBehaviour
         yield break;
     }
 
-    private IEnumerator HitStateCoroutine()
-    {
-        image.color = Color.red;
-        yield return new WaitForSeconds(0.4f);
-        image.color = Color.white;
-        yield break;
-    }
-
     private IEnumerator DeadCoroutine()
     {
-        image.enabled = false;
+        //image.enabled = false;
         yield return new WaitForSeconds(0.3f);
-        image.enabled = true;
+        //image.enabled = true;
         yield return new WaitForSeconds(0.3f);
-        image.enabled = false;
+        //image.enabled = false;
         yield return new WaitForSeconds(0.3f);
-        image.enabled = true;
+        //image.enabled = true;
         yield return new WaitForSeconds(0.3f);
-        image.enabled = false;
+        //image.enabled = false;
+        enemy.DestoryPawn();
         uiHPBar.gameObject.SetActive(false);
         yield break;
     }
@@ -85,5 +72,22 @@ public class UIEnemy : MonoBehaviour
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
+    }
+
+    public IEnumerator Co_FollowEnemy()
+    {
+        if (enemy != null)
+        {
+            yield return new WaitForEndOfFrame();
+            enemy.transform.position = this.transform.position;
+        }
+    }
+
+    public void FollowEnemy()
+    {
+        if (enemy != null)
+        {
+            enemy.transform.position = this.transform.position;
+        }
     }
 }
