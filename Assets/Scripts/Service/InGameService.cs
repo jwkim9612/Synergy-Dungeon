@@ -5,13 +5,19 @@ using UnityEngine;
 public class InGameService : MonoBehaviour
 {
     public const int RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR = 200;
-    public const float SIZE_TO_EXPAND_THE_BATTLE_AREA = -200.0f;
-    public const float SIZE_TO_SHRINK_THE_BATTLE_AREA = 0.0f;
+    public const float SIZE_TO_EXPAND_THE_BATTLE_AREA = 100.0f;
     public const float SIZE_TO_BLUR = 0.5f;
     public const int NUMBER_OF_BACKAREA = 4;
     public const int NUMBER_OF_FRONTAREA = 3;
+    public const int MAX_NUMBER_OF_CAN_PLACED = 6;
+    public const int MIN_NUMBER_OF_CAN_PLACED = 0;
 
+    public static Character defaultCharacter;
+    public static Enemy defaultEnemy;
 
-    public static Character character = GameObject.Find("DefaultCharacter").GetComponent<Character>();
-    public static Enemy enemy = GameObject.Find("DefaultEnemy").GetComponent<Enemy>();
+    public static void Initialize()
+    {
+        defaultCharacter = GameObject.Find("DefaultCharacter").GetComponent<Character>();
+        defaultEnemy = GameObject.Find("DefaultEnemy").GetComponent<Enemy>();
+    }
 }

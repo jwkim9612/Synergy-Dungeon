@@ -6,11 +6,16 @@ using geniikw.DataSheetLab;
 public class StageManager : MonoSingleton<StageManager>
 {
     public delegate void OnChangedWaveDelegate();
-    public OnChangedWaveDelegate OnChangedWave;
+    public OnChangedWaveDelegate OnChangedWave { get; set; }
     
     public int currentStage = 1;
     public int currentWave = 1;
     public StageData currentStageData = null;
+
+    public void Initialize()
+    {
+
+    }
 
     public void SetStageData(int stage)
     {

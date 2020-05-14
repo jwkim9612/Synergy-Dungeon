@@ -1,6 +1,8 @@
 ﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -169,15 +171,35 @@ public class DraggableCentral : MonoBehaviour
 
     void EndDrag(UICharacter uiCharacter)
     {
-        if(isSelling)
+        SellArea.gameObject.SetActive(false);
+
+        if (isSelling)
         {
             selledCharacterInfo = uiCharacter.DeleteCharacterBySell();
             SellArea.gameObject.GetComponent<Image>().color = Color.white;
         }
-        SellArea.gameObject.SetActive(false);
+        else
+        {
+            if (IsPlaceableSpaceFull())
+            {
+                if (IsMoveFromPrepareAreaToEmptyBattleArea())
+                {
+                    SwapCharacters(invisibleCharacter, swappedCharacter);
+                    SwapCharacters(invisibleCharacter, uiCharacter);
+                    isSwapped = false;
+                    return;
+                }
+            }
+        }
 
-        SwapCharacters(invisibleCharacter, uiCharacter);
+
+        //SwapCharacters(invisibleCharacter, uiCharacter);
+        //UpdateSynergyService(uiCharacter);
+        //Updatetest(uiCharacter);
+
         UpdateSynergyService(uiCharacter);
+        UpdateCurrentPlacedCharacters();
+        SwapCharacters(invisibleCharacter, uiCharacter);
 
         isSwapped = false;
     }
@@ -194,6 +216,7 @@ public class DraggableCentral : MonoBehaviour
             if (uiCharacter.characterInfo.Equals(characterInfo))
             {
                 InGameManager.instance.synergyService.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
+                uiCharacterArea.SubCurrentPlacedCharacterFromCombinations(uiCharacter, isFirstCharacter);
 
                 if (isFirstCharacter)
                 {
@@ -209,52 +232,178 @@ public class DraggableCentral : MonoBehaviour
     }
 
     // 시너지서비스에 넣어주기
+    //public void UpdateSynergyService(UICharacter uiCharacter)
+    //{
+    //    if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
+    //    {
+    //        InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
+    //        return;
+    //    }
+
+    //    if (uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
+    //        return;
+
+    //    //CharacterArea에서 PrepareArea로 바꿨을 경우
+    //    if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
+    //    {
+    //        if (swappedCharacter.character == null)
+    //        {
+    //            // uiCharacter를 하나 빼준다.
+    //            InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+    //        }
+    //        else
+    //        {
+    //            // uiCharacter를 하나 빼주고,
+    //            InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+    //            InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
+    //            // swappedCharacter를 하나 더해준다.
+    //        }
+    //    }
+    //    // PrepareArea에서 CharacterArea로 바꿨을 경우
+    //    else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
+    //    {
+    //        if (swappedCharacter.character == null)
+    //        {
+    //            InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
+    //            // uicharacter를 하나 더해준다.
+    //        }
+    //        else
+    //        {
+    //            // uicharacter를 하나 더해주고
+    //            InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
+    //            InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
+    //            // swapped를 하나 빼준다.
+    //        }
+    //    }
+    //}
+
     public void UpdateSynergyService(UICharacter uiCharacter)
     {
-        if(uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
-        {
-            return;
-        }
-
-        if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
+        if (IsMoveToSell())
         {
             InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
             return;
         }
 
-        //CharacterArea에서 PrepareArea로 바꿨을 경우
-            if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
+        if (IsNotChanged())
+            return;
+
+        if (IsMoveFromBattleAreaToPrepareArea())
         {
-            if (swappedCharacter.character == null)
-            {
-                // uiCharacter를 하나 빼준다.
+            if (IsReplaceWithEmptySpace())
                 InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
-            }
             else
             {
-                // uiCharacter를 하나 빼주고,
                 InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
                 InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
-                // swappedCharacter를 하나 더해준다.
             }
         }
-        // PrepareArea에서 CharacterArea로 바꿨을 경우
-        else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
+        else if (IsMoveFromPrepareAreaToBattleArea())
         {
-            if (swappedCharacter.character == null)
-            {
+            if (IsReplaceWithEmptySpace())
                 InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
-                // uicharacter를 하나 더해준다.
-            }
             else
             {
-                // uicharacter를 하나 더해주고
                 InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
                 InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
-                // swapped를 하나 빼준다.
             }
         }
     }
 
+    //public void Updatetest(UICharacter uiCharacter)
+    //{
+    //    if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
+    //    {
+    //        --uiCharacterArea.NumOfCurrentPlacedCharacters;
+    //        return;
+    //    }
 
+    //    if (uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
+    //        return;
+
+    //    //CharacterArea에서 PrepareArea로 바꿨을 경우
+    //    if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
+    //    {
+    //        if (swappedCharacter.character == null)
+    //        {
+    //            --uiCharacterArea.NumOfCurrentPlacedCharacters;
+    //            Debug.Log(uiCharacterArea.NumOfCurrentPlacedCharacters);
+    //        }
+    //    }
+    //    // PrepareArea에서 CharacterArea로 바꿨을 경우
+    //    else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
+    //    {
+    //        if (swappedCharacter.character == null)
+    //        {
+    //            ++uiCharacterArea.NumOfCurrentPlacedCharacters;
+    //            Debug.Log(uiCharacterArea.NumOfCurrentPlacedCharacters);
+    //        }
+    //    }
+    //}
+
+    public void UpdateCurrentPlacedCharacters()
+    {
+        if (IsMoveToSell())
+        {
+            uiCharacterArea.SubCurrentPlacedCharacter();
+            return;
+        }
+
+        if (IsNotChanged())
+            return;
+
+        if (IsMoveFromBattleAreaToEmptyPrepareArea()) 
+            uiCharacterArea.SubCurrentPlacedCharacter();
+
+        else if (IsMoveFromPrepareAreaToEmptyBattleArea())
+            uiCharacterArea.AddCurrentPlacedCharacter();
+    }
+
+    private bool IsMoveFromPrepareAreaToEmptyBattleArea()
+    {
+        if(IsMoveFromPrepareAreaToBattleArea())
+            if(IsReplaceWithEmptySpace())
+                return true;
+
+        return false;
+    }
+
+    private bool IsMoveFromBattleAreaToEmptyPrepareArea()
+    {
+        if (IsMoveFromBattleAreaToPrepareArea())
+            if (IsReplaceWithEmptySpace())
+                return true;
+
+        return false;
+    }
+
+    private bool IsReplaceWithEmptySpace()
+    {
+        return swappedCharacter.character == null ? true : false;
+    }
+
+    private bool IsMoveFromPrepareAreaToBattleArea()
+    {
+        return (invisibleCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null) ? true : false;
+    }
+
+    private bool IsMoveFromBattleAreaToPrepareArea()
+    {
+        return (invisibleCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null) ? true : false;
+    }
+
+    private bool IsNotChanged()
+    {
+        return invisibleCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag ? true : false;
+    }
+
+    private bool IsMoveToSell()
+    {
+        return (invisibleCharacter.GetArea<UICharacterArea>() != null && isSelling) ? true : false;
+    }
+
+    private bool IsPlaceableSpaceFull()
+    {
+        return uiCharacterArea.NumOfCurrentPlacedCharacters >= InGameManager.instance.playerState.NumOfCanBePlacedInBattleArea ? true : false;
+    }
 }

@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         SoundManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
+        StageManager.Instance.Initialize();
     }
 
     public void Quit()

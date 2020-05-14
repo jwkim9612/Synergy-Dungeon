@@ -9,7 +9,6 @@ public class UIEnemyArea : MonoBehaviour
 
     void Start()
     {
-        InGameManager.instance.gameState.OnPrepare += OnShowEnemiesUI;
         InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;
     }
@@ -36,14 +35,6 @@ public class UIEnemyArea : MonoBehaviour
         for(int i = currentEnemyIndex; i < uiEnemies.Count; ++i)
         {
             uiEnemies[i].gameObject.SetActive(false);
-        }
-    }
-
-    public void OnShowEnemiesUI()
-    {
-        foreach (var uiEnemy in uiEnemies)
-        {
-            uiEnemy.OnShowUI();
         }
     }
 

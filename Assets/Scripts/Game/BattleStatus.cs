@@ -33,7 +33,7 @@ public class BattleStatus : MonoBehaviour
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.0f);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {

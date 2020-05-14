@@ -9,11 +9,11 @@ public class UIEnemy : MonoBehaviour
 {
     [SerializeField] private UIHPBar uiHPBar = null;
     [SerializeField] private UIHitText[] uiHitTexts = null;
-    public Enemy enemy { get; set; }
+    public Enemy enemy;
 
     public void SetEnemy(EnemyData newEnmeyData)
     {
-        enemy = Instantiate(InGameService.enemy, transform.root.parent);
+        enemy = Instantiate(InGameService.defaultEnemy, transform.root.parent);
         enemy.SetSize(0.8f);
         enemy.SetImage(newEnmeyData.image);
         enemy.SetAbility(newEnmeyData.ability);
@@ -22,17 +22,13 @@ public class UIEnemy : MonoBehaviour
         enemy.OnIsDead += PlayDeadCoroutine;
         enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
+        enemy.OnHit += PlayShowHPBarForMoment;
         enemy.SetUIHitTexts(uiHitTexts);
         enemy.InitializeUIHitTexts();
 
         StartCoroutine(Co_FollowEnemy());
         uiHPBar.Initialize();
         uiHPBar.UpdateHPBar();
-    }
-
-    public void OnShowUI()
-    {
-        uiHPBar.gameObject.SetActive(true);
     }
 
     public void PlayAttackCoroutine()
@@ -43,6 +39,11 @@ public class UIEnemy : MonoBehaviour
     public void PlayDeadCoroutine()
     {
         StartCoroutine(DeadCoroutine());
+    }
+
+    public void PlayShowHPBarForMoment()
+    {
+        StartCoroutine(Co_ShowHPBarForMoment());
     }
 
     private IEnumerator AttackCoroutine()
@@ -69,6 +70,14 @@ public class UIEnemy : MonoBehaviour
         yield break;
     }
 
+    private IEnumerator Co_ShowHPBarForMoment()
+    {
+        uiHPBar.OnShow();
+        yield return new WaitForSeconds(1.5f);
+        uiHPBar.OnHide();
+        yield break;
+    }
+
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
@@ -89,5 +98,9 @@ public class UIEnemy : MonoBehaviour
         {
             enemy.transform.position = this.transform.position;
         }
+    }
+
+    void OnDestroy()
+    {
     }
 }

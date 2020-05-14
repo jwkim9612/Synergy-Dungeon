@@ -7,7 +7,7 @@ public class UICharacter : MonoBehaviour
 {
     [SerializeField] private UIHitText[] uiHitTexts = null;
     [SerializeField] private UIHPBar uiHPBar = null;
-    public Character character { get; set; }
+    public Character character;
     public bool isFightingOnBattlefield { get; set; }
     public CharacterInfo characterInfo;
     public Image clickableImage = null;
@@ -22,7 +22,7 @@ public class UICharacter : MonoBehaviour
         OnCanClick();
         SetCharacterInfo(newCharacterInfo);
 
-        character = Instantiate(InGameService.character, transform.root.parent);
+        character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
         character.SetSize(0.5f);
         character.SetImage(GameManager.instance.dataSheet.characterDatas[characterInfo.id].image);
         character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
@@ -30,14 +30,12 @@ public class UICharacter : MonoBehaviour
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
+        character.OnHit += PlayShowHPBarForMoment;
         character.SetUIHitTexts(uiHitTexts);
         character.InitializeUIHitTexts();
         
         FollowCharacter();
         uiHPBar.Initialize();
-
-        InGameManager.instance.gameState.OnBattle += UpdateHPBarVisibility;
-        InGameManager.instance.gameState.OnPrepare += UpdateHPBarVisibility;
     }
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
@@ -61,8 +59,6 @@ public class UICharacter : MonoBehaviour
     {
         character.DestoryPawn();
         character = null;
-        InGameManager.instance.gameState.OnBattle -= UpdateHPBarVisibility;
-        InGameManager.instance.gameState.OnPrepare -= UpdateHPBarVisibility;
 
         characterInfo.id = -1;
         characterInfo.star = 0;
@@ -95,10 +91,15 @@ public class UICharacter : MonoBehaviour
 
     public void PlayAttackCoroutine()
     {
-        StartCoroutine(AttackCoroutine());
+        StartCoroutine(Co_AttackAnimation());
     }
 
-    private IEnumerator AttackCoroutine()
+    public void PlayShowHPBarForMoment()
+    {
+        StartCoroutine(Co_ShowHPBarForMoment());
+    }
+
+    private IEnumerator Co_AttackAnimation()
     {
         gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
         yield return new WaitForSeconds(0.5f);
@@ -106,21 +107,17 @@ public class UICharacter : MonoBehaviour
         yield break;
     }
 
+    private IEnumerator Co_ShowHPBarForMoment()
+    {
+        uiHPBar.OnShow();
+        yield return new WaitForSeconds(1.5f);
+        uiHPBar.OnHide();
+        yield break;
+    }
+
     private void PlayHitParticle()
     {
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
-    }
-
-    private void UpdateHPBarVisibility()
-    {
-        if(isFightingOnBattlefield)
-        {
-            uiHPBar.OnShow();
-        }
-        else
-        {
-            uiHPBar.OnHide();
-        }
     }
 
     public T GetArea<T>()
@@ -130,10 +127,25 @@ public class UICharacter : MonoBehaviour
 
     public IEnumerator Co_FollowCharacter()
     {
+        //if (character != null)
+        //{
+        //    yield return new WaitForEndOfFrame();
+        //    //character.transform.position = this.transform.position;
+        //    character.transform.position = this.transform.position;
+        //}
+
         if (character != null)
         {
-            yield return new WaitForEndOfFrame();
-            character.transform.position = this.transform.position;
+            while(true)
+            {
+                yield return new WaitForEndOfFrame();
+                character.transform.position = Vector2.Lerp(character.transform.position, this.transform.position, 0.05f);
+
+                if(Mathf.Abs((character.transform.position - this.transform.position).y) < 0.01 )
+                {
+                    break;
+                }
+            }
         }
     }
 

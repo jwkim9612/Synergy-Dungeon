@@ -11,16 +11,19 @@ public class PlayerState : MonoBehaviour
     [SerializeField] private UIBattleStatusMenu uiBattleStatusMenu = null;
     
     public int coin { get; set; }
+    public int NumOfCanBePlacedInBattleArea;
 
     private void Start()
     {
         if (SaveManager.Instance.HasInGameData())
         {
             coin = SaveManager.Instance.inGameSaveData.coin;
+            NumOfCanBePlacedInBattleArea = 3;
         }
         else
         {
             coin = 100;
+            NumOfCanBePlacedInBattleArea = 3;
         }
 
         OnCoinChanged += uiBattleStatusMenu.UpdateCoinText;

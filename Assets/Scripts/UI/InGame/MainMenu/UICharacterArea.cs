@@ -6,6 +6,7 @@ public class UICharacterArea : MonoBehaviour
 {
     public UIPlacementArea backArea;
     public UIPlacementArea frontArea;
+    public int NumOfCurrentPlacedCharacters;
 
     private void Start()
     {
@@ -13,6 +14,8 @@ public class UICharacterArea : MonoBehaviour
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
         }
+
+        NumOfCurrentPlacedCharacters = 0;
     }
 
     public bool IsEmpty()
@@ -85,5 +88,42 @@ public class UICharacterArea : MonoBehaviour
         uiCharacters.AddRange(frontArea.GetUICharacterListWithCharacters());
 
         return uiCharacters;
+    }
+
+    public void SpaceExpansion()
+    {
+        backArea.SpaceExpansion();
+        frontArea.SpaceExpansion();
+    }
+
+    public void SpaceReduction()
+    {
+        backArea.SpaceReduction();
+        frontArea.SpaceReduction();
+    }
+
+    public void AddCurrentPlacedCharacter()
+    {
+        if (NumOfCurrentPlacedCharacters == InGameService.MAX_NUMBER_OF_CAN_PLACED)
+            return;
+
+        ++NumOfCurrentPlacedCharacters;
+    }
+
+    public void SubCurrentPlacedCharacter()
+    {
+        if (NumOfCurrentPlacedCharacters == InGameService.MIN_NUMBER_OF_CAN_PLACED)
+            return;
+
+        --NumOfCurrentPlacedCharacters;
+    }
+
+    public void SubCurrentPlacedCharacterFromCombinations(UICharacter uiCharacter, bool isFirstCharacter)
+    {
+        if (isFirstCharacter)
+            return;
+
+        if (uiCharacter.GetArea<UIBattleArea>() != null)
+            --NumOfCurrentPlacedCharacters;
     }
 }

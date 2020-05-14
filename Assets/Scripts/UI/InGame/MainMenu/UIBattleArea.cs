@@ -21,13 +21,17 @@ public class UIBattleArea : MonoBehaviour
     private void SpaceExpansion()
     {
         RectTransform rec = transform as RectTransform;
-        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA);
+        rec.offsetMin = new Vector2(rec.offsetMin.x, rec.offsetMin.y + InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA * -2);
+
+        uiCharacterArea.SpaceExpansion();
     }
 
     private void SpaceReduction()
     {
         RectTransform rec = transform as RectTransform;
-        rec.offsetMin = new Vector2(rec.offsetMin.x, InGameService.SIZE_TO_SHRINK_THE_BATTLE_AREA);
+        rec.offsetMin = new Vector2(rec.offsetMin.x, rec.offsetMin.y + InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA * 2);
+        
+        uiCharacterArea.SpaceReduction();
     }
 
     private void BattleStart()

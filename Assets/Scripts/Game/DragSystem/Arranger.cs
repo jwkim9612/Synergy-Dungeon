@@ -76,4 +76,17 @@ public class Arranger : MonoBehaviour
             uiCharacters[i].SetCharacter(characterInfoList[i]);
         }
     }
+
+    public void SpaceExpansion()
+    {
+        RectTransform rect = transform as RectTransform;
+        rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y + InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA);
+
+    }
+
+    public void SpaceReduction()
+    {
+        RectTransform rect = transform as RectTransform;
+        rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y - InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA);
+    }
 }
