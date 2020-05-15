@@ -15,6 +15,13 @@ public class PlayerData
     public int playableStage;
 }
 
+public class AccountData
+{ 
+    public string id;
+    public string pw;
+    public bool isLoginToGoogle;
+}
+
 public struct CharacterInfo
 {
     public CharacterInfo(int id, int star)

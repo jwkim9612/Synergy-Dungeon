@@ -13,11 +13,11 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
 
     public void Initialize()
     {
-        PlayerData loadedPlayerData = LoadJsonFile<PlayerData>(Application.dataPath, "PlayerData");
+        PlayerData loadedPlayerData = JsonDataManager.Instance.LoadJsonFile<PlayerData>(Application.dataPath, "PlayerData");
         if(loadedPlayerData == null)
         {
             loadedPlayerData = new PlayerData();
-            CreateJsonFile(Application.dataPath, "PlayerData", ObjectToJson(loadedPlayerData));
+            JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "PlayerData", JsonDataManager.Instance.ObjectToJson(loadedPlayerData));
         }
         playerData = loadedPlayerData;
     }
@@ -25,37 +25,6 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
     public void SavePlayerData()
     {
         Debug.Log("플레이어 정보 저장 완료!");
-        CreateJsonFile(Application.dataPath, "PlayerData", ObjectToJson(playerData));
-    }
-
-    public string ObjectToJson(object obj)
-    {
-        return JsonConvert.SerializeObject(obj);
-    }
-
-    public void CreateJsonFile(string createPath, string fileName, string jsonData)
-    {
-        FileStream fileStream = new FileStream(string.Format("{0}/{1}.json", createPath, fileName), FileMode.Create);
-        byte[] data = Encoding.UTF8.GetBytes(jsonData);
-        fileStream.Write(data, 0, data.Length);
-        fileStream.Close();
-        Debug.Log(Application.dataPath.ToString());
-    }
-
-    public T LoadJsonFile<T>(string loadPath, string fileName)
-    {
-        //파일이 없으면
-        if(!File.Exists(string.Format("{0}/{1}.json", loadPath, fileName)))
-        {
-            return default;
-        }
-
-        FileStream fileStream = new FileStream(string.Format("{0}/{1}.json", loadPath, fileName), FileMode.Open);
-        byte[] data = new byte[fileStream.Length];
-        fileStream.Read(data, 0, data.Length);
-        fileStream.Close();
-
-        string jsonData = Encoding.UTF8.GetString(data);
-        return JsonConvert.DeserializeObject<T>(jsonData);
+        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "PlayerData", JsonDataManager.Instance.ObjectToJson(playerData));
     }
 }

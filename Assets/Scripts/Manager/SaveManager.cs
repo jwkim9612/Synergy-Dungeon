@@ -34,8 +34,7 @@ public class SaveManager : MonoSingleton<SaveManager>
     public void SaveInGameData()
     {
         Debug.Log("InGame Save Start !");
-        var inGameData = PlayerDataManager.Instance.ObjectToJson(inGameSaveData);
-        PlayerDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", inGameData);
+        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", JsonDataManager.Instance.ObjectToJson(inGameSaveData));
         Debug.Log("InGame Save Done !");
     }
 

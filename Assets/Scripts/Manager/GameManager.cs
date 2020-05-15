@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     //매니저들
     public static GameManager instance = null;
+    public AccountManager accountManager = null;
     public DataSheet dataSheet = null;
     public ParticleService particleService = null;
+
 
     //파괴되지 않는 싱글턴
     void Awake()
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        accountManager.Initialize();
+        JsonDataManager.Instance.Initialize();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
