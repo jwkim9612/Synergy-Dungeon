@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIDoubleSpeed : MonoBehaviour
 {
-    [SerializeField] private Text speedText;
+    [SerializeField] private Text speedText = null;
     private float currentSpeed;
     private float defaultSpeed;
 

@@ -6054,7 +6054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70725d7ca88cc5041afa9d2e8d90449f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitUIControl: {fileID: 2049045687}
+  exitUIControl: {fileID: 2049045686}
 --- !u!4 &768625573
 Transform:
   m_ObjectHideFlags: 0
@@ -8936,10 +8936,10 @@ RectTransform:
   m_Father: {fileID: 250646115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 115, y: -147.5}
+  m_SizeDelta: {x: 230, y: 295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070424375
 MonoBehaviour:
@@ -17906,6 +17906,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 718367949}
     m_Modifications:
+    - target: {fileID: 3245224475880377165, guid: e7ffce1db427c984791b2dd27d0ea1e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7976575537394351307, guid: e7ffce1db427c984791b2dd27d0ea1e9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17915,6 +17920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7976575537785699651, guid: e7ffce1db427c984791b2dd27d0ea1e9,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7976575538448256324, guid: e7ffce1db427c984791b2dd27d0ea1e9,
         type: 3}
@@ -18046,39 +18056,20 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: e7ffce1db427c984791b2dd27d0ea1e9, type: 3}
 --- !u!224 &2049045685 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7976575538448256324, guid: e7ffce1db427c984791b2dd27d0ea1e9,
+  m_CorrespondingSourceObject: {fileID: 3245224475880377164, guid: e7ffce1db427c984791b2dd27d0ea1e9,
     type: 3}
   m_PrefabInstance: {fileID: 2049045684}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2049045686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7976575538448256325, guid: e7ffce1db427c984791b2dd27d0ea1e9,
-    type: 3}
-  m_PrefabInstance: {fileID: 2049045684}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2049045687
+--- !u!114 &2049045686 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049045686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18f3241f76458643ab58c17215cdc78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yesButton: {fileID: 2049045688}
---- !u!114 &2049045688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7976575537394351307, guid: e7ffce1db427c984791b2dd27d0ea1e9,
+  m_CorrespondingSourceObject: {fileID: 3245224475880377161, guid: e7ffce1db427c984791b2dd27d0ea1e9,
     type: 3}
   m_PrefabInstance: {fileID: 2049045684}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 40f473d1067c41b4eb7d3b11ad1687ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2063751443
