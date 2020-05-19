@@ -18,7 +18,7 @@ MonoBehaviour:
     Tribe: 1
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_22
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     Tribe: 1
     Origin: 5
     Tier: 3
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_21
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
     Tribe: 1
     Origin: 1
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_23
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 1
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_16
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 3
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_28
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_FairyDragon
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 5
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_24
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
     Tribe: 3
     Origin: 4
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_30
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     Tribe: 3
     Origin: 3
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_ BlackWizard
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
     Tribe: 4
     Origin: 2
     Tier: 3
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_26
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
     Tribe: 4
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_25
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
     Tribe: 4
     Origin: 3
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_27
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     Tribe: 5
     Origin: 3
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_14
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
     Tribe: 5
     Origin: 5
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_13
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
     Tribe: 5
     Origin: 2
     Tier: 3
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_15
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
     Tribe: 6
     Origin: 5
     Tier: 2
-    ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+    ImagePath: "Images/Character/\uC5D8\uD504 \uAC80\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
     Tribe: 6
     Origin: 1
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_WoodElf
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
     Tribe: 6
     Origin: 3
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_Warlock
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     Tribe: 6
     Origin: 2
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_Dobi
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
     Tribe: 7
     Origin: 5
     Tier: 3
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_17
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     Tribe: 7
     Origin: 1
     Tier: 3
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_18
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
     Tribe: 7
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_19
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -409,7 +409,7 @@ MonoBehaviour:
     Tribe: 7
     Origin: 3
     Tier: 2
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/Character_20
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 5
     Tier: 3
-    ImagePath: "Images/Character/\uC778\uAC04\uC804\uC0AC"
+    ImagePath: Images/Old Character/Character_29
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 3
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: "Images/Character/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 2
     Tier: 1
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: Images/Old Character/character_sneak
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 1
     Tier: 3
-    ImagePath: "Images/Character/\uC778\uAC04\uAD81\uC218"
+    ImagePath: "Images/Character/\uC778\uAC04 \uAD81\uC218"
     Image: {fileID: 0}
     OriginData:
       Name: 0

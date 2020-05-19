@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UICharacterStatus : MonoBehaviour
 {
     [SerializeField] private Image characterIcon = null;
+    [SerializeField] private Text characterName = null;
     [SerializeField] private HorizontalLayoutGroup starGrade = null;
     [SerializeField] private UIStatusHPBar uiStatusHPbar = null;
     private Image[] stars = null;
@@ -28,6 +29,7 @@ public class UICharacterStatus : MonoBehaviour
 
         
         SetCharacterIcon(uiCharacter.character.spriteRenderer.sprite);
+        SetCharacterName(GameManager.instance.dataSheet.characterDataSheet.characterDatas[uiCharacter.characterInfo.id].Name);
         //SetCharacterIcon(GameManager.instance.dataSheet.characterDatas[uiCharacter.characterInfo.id].statusImage);
         SetStarGrade(uiCharacter.characterInfo.star);
         ControllingPawn = uiCharacter.character;
@@ -40,6 +42,11 @@ public class UICharacterStatus : MonoBehaviour
             return;
 
         characterIcon.sprite = sprite;
+    }
+
+    private void SetCharacterName(string name)
+    {
+        characterName.text = name;
     }
 
     private void SetStarGrade(int star)
@@ -62,6 +69,7 @@ public class UICharacterStatus : MonoBehaviour
         characterIcon.gameObject.SetActive(true);
         starGrade.gameObject.SetActive(true);
         uiStatusHPbar.gameObject.SetActive(true);
+        characterName.gameObject.SetActive(true);
     }
 
     public void HideAll()
@@ -69,5 +77,6 @@ public class UICharacterStatus : MonoBehaviour
         characterIcon.gameObject.SetActive(false);
         starGrade.gameObject.SetActive(false);
         uiStatusHPbar.gameObject.SetActive(false);
+        characterName.gameObject.SetActive(false);
     }
 }

@@ -22,6 +22,43 @@ public class AccountData
     public bool isLoginToGoogle;
 }
 
+public struct Ability
+{
+    public void SetAbility(CharacterAbilityData characterAbilityData)
+    {
+        Attack = characterAbilityData.Attack;
+        MagicAttack = characterAbilityData.MagicAttack;
+        Health = characterAbilityData.Health;
+        Defence = characterAbilityData.Defence;
+        MagicDefence = characterAbilityData.MagicDefence;
+        Shield = characterAbilityData.Shield;
+        Evasion = characterAbilityData.Evasion;
+        AttackSpeed = characterAbilityData.AttackSpeed;
+    }
+
+    public void SetAbility(EnemyData enemyData)
+    {
+        Attack = enemyData.Attack;
+        MagicAttack = enemyData.MagicAttack;
+        Health = enemyData.Health;
+        Defence = enemyData.Defence;
+        MagicDefence = enemyData.MagicDefence;
+        Shield = enemyData.Shield;
+        Evasion = enemyData.Evasion;
+        AttackSpeed = enemyData.AttackSpeed;
+    }
+
+    public long Attack;
+    public long MagicAttack;
+    public long Health;
+    public long Defence;
+    public long MagicDefence;
+    public long Shield;
+    public long Evasion;
+    public long AttackSpeed;
+}
+
+
 public struct CharacterInfo
 {
     public CharacterInfo(int id, int star)

@@ -115,7 +115,7 @@ public class BattleStatus : MonoBehaviour
         pawns.AddRange(characters);
         pawns.AddRange(enemies);
 
-        pawnsAttackSequenceList = pawns.OrderBy(x => x.currentAttackSpeed).ToList();
+        pawnsAttackSequenceList = pawns.OrderBy(x => x.ability.AttackSpeed).ToList();
     }
 
     private void InitializeAnnihilation()

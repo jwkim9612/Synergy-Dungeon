@@ -50,6 +50,13 @@ public class UICharacterArea : MonoBehaviour
 
         backArea.InitializeByInGameSaveData(backAreaInfos);
         frontArea.InitializeByInGameSaveData(frontAreaInfos);
+
+        var uiCharacterListWithCharacter = GetUICharacterListWithCharacters();
+        foreach(var uiCharacter in uiCharacterListWithCharacter)
+        {
+            uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
+        }
+
     }
 
     public void ShowAllUICharacters()

@@ -17,8 +17,8 @@ public class Pawn : MonoBehaviour
     public string name { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
+    public Ability ability;
     protected long currentHP;
-    public long currentAttackSpeed;
 
     public UIHitText[] uiHitTexts { get; set; } = null;
     private int hitTextIndex;
@@ -40,8 +40,16 @@ public class Pawn : MonoBehaviour
         spriteRenderer.sprite = sprite;
     }
 
-    public virtual void Attack(Pawn target)
+    public void Attack(Pawn target)
     {
+        if (target == null)
+        {
+            Debug.Log("target is null");
+            return;
+        }
+
+        long finalDamage = target.TakeDamage(ability.Attack);
+        OnAttack();
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
@@ -51,42 +59,34 @@ public class Pawn : MonoBehaviour
     /// </summary>
     /// <param name="damage">받은 데미지</param>
     /// <returns>최종적으로 입은 데미지</returns>
-    public virtual long TakeDamage(long damage)
+    public long TakeDamage(long damage)
     {
-        //float finalDamage = Mathf.Clamp(damage - ability.defense, 1, damage);
-        //currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);
+        long finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
+        currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)currentHP);
 
-        //OnHit();
+        OnHit();
 
-        //PlayHitText(finalDamage);
+        PlayHitText(finalDamage);
 
-        //if (currentHP <= 0)
-        //{
-        //    isDead = true;
-        //    OnIsDead();
-        //}
+        if (currentHP <= 0)
+        {
+            isDead = true;
+            OnIsDead();
+        }
 
-        //return finalDamage;
-        return 0;
+        return finalDamage;
     }
-
-    //public void SetAbility(AbilityData newAbility)
-    //{
-    //    ability = newAbility;
-
-    //    currentHP = ability.maxHP;
-    //}
 
     public virtual void ResetStat()
     {
         isDead = false;
     }
 
-    public virtual float GetHPRatio()
+    public float GetHPRatio()
     {
-        return 0.0f;
+        return currentHP / (float)ability.Health;
     }
-        
+
 
     public void SetName(string name)
     {
