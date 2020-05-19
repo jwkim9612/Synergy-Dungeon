@@ -7,7 +7,7 @@ public class UIEnemyPlacementArea : MonoBehaviour
 {
     public List<UIEnemy> uiEnemies = null;
 
-    private void Start()
+    public void Initialize()
     {
         uiEnemies = GetComponentsInChildren<UIEnemy>().ToList();
     }
@@ -18,7 +18,7 @@ public class UIEnemyPlacementArea : MonoBehaviour
 
         foreach (var uiEnemy in uiEnemies)
         {
-            if (uiEnemy.gameObject.activeSelf)
+            if (uiEnemy.enemy != null)
             {
                 enemies.Add(uiEnemy.enemy);
             }

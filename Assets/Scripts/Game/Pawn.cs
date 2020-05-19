@@ -17,7 +17,8 @@ public class Pawn : MonoBehaviour
     public string name { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
-    protected float currentHP;
+    protected long currentHP;
+    public long currentAttackSpeed;
 
     public UIHitText[] uiHitTexts { get; set; } = null;
     private int hitTextIndex;
@@ -50,7 +51,7 @@ public class Pawn : MonoBehaviour
     /// </summary>
     /// <param name="damage">받은 데미지</param>
     /// <returns>최종적으로 입은 데미지</returns>
-    public virtual float TakeDamage(float damage)
+    public virtual long TakeDamage(long damage)
     {
         //float finalDamage = Mathf.Clamp(damage - ability.defense, 1, damage);
         //currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);
@@ -66,7 +67,7 @@ public class Pawn : MonoBehaviour
         //}
 
         //return finalDamage;
-        return 0.0f;
+        return 0;
     }
 
     //public void SetAbility(AbilityData newAbility)

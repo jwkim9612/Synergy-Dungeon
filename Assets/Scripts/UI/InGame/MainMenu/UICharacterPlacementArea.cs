@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UICharacterPlacementArea : Arranger
 {
-    protected void Start()
+    public void Initialize()
     {
-        base.Start();
+        base.Initialize();
 
         InGameManager.instance.gameState.OnBattle += OnFighting;
         InGameManager.instance.gameState.OnBattle += InitializeCharacterPositions;
@@ -119,6 +119,17 @@ public class UICharacterPlacementArea : Arranger
                 continue;
 
             StartCoroutine(uiCharacter.Co_FollowCharacter());
+        }
+    }
+
+    public void InitializePrepareCharacterPositions()
+    {
+        foreach (var uiCharacter in uiCharacters)
+        {
+            if (uiCharacter.character == null)
+                continue;
+
+            StartCoroutine(uiCharacter.Co_PrepareFollowCharacter());
         }
     }
 }

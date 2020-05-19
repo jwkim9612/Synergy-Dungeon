@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class UICharacterArea : MonoBehaviour
 {
-    public UICharacterPlacementArea backArea;
     public UICharacterPlacementArea frontArea;
+    public UICharacterPlacementArea backArea;
     public int NumOfCurrentPlacedCharacters;
 
-    private void Start()
+    public void Initialize()
     {
+        frontArea.Initialize();
+        backArea.Initialize();
+
         if (SaveManager.Instance.HasInGameData())
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);

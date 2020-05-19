@@ -2613,6 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d8f76b39e0005478a86be4f3a473f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  askInGameContinue: {fileID: 1491104892}
   signMain: {fileID: 1899914208}
   uiEnterDisplayName: {fileID: 2003712066}
 --- !u!1 &1491104887
@@ -3309,6 +3310,7 @@ MonoBehaviour:
     type: 2}
   characterAbilityDataSheet: {fileID: 11400000, guid: e28b78dd3f5398b4c996445f84bd2873,
     type: 2}
+  enemyDataSheet: {fileID: 11400000, guid: fe5d18d92b280eb40857258baecc7677, type: 2}
   probabilityDataSheet: {fileID: 11400000, guid: 29315747a085c9c44aa10b46f2854d4b,
     type: 2}
 --- !u!1 &1881094288

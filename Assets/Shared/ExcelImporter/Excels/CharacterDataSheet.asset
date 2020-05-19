@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterDataSheet
   m_EditorClassIdentifier: 
   characterDatas:
-  - Id: 1
+  - Id: 0
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Tribe: 1
     Origin: 4
@@ -30,7 +30,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 2
+  - Id: 1
     Name: "\uB55C\uC7A5\uC774"
     Tribe: 1
     Origin: 5
@@ -47,7 +47,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 3
+  - Id: 2
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Tribe: 1
     Origin: 1
@@ -64,7 +64,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 4
+  - Id: 3
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Tribe: 2
     Origin: 1
@@ -81,7 +81,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 5
+  - Id: 4
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Tribe: 2
     Origin: 3
@@ -98,7 +98,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 6
+  - Id: 5
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Tribe: 2
     Origin: 4
@@ -115,7 +115,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 7
+  - Id: 6
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Tribe: 2
     Origin: 5
@@ -132,7 +132,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 8
+  - Id: 7
     Name: "\uB460"
     Tribe: 3
     Origin: 5
@@ -149,7 +149,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 9
+  - Id: 8
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Tribe: 3
     Origin: 4
@@ -166,7 +166,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 10
+  - Id: 9
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Tribe: 3
     Origin: 3
@@ -183,7 +183,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 11
+  - Id: 10
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Tribe: 4
     Origin: 2
@@ -200,7 +200,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 12
+  - Id: 11
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Tribe: 4
     Origin: 4
@@ -217,7 +217,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 13
+  - Id: 12
     Name: "\uD4E8\uB9AC\uC628"
     Tribe: 4
     Origin: 3
@@ -234,7 +234,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 14
+  - Id: 13
     Name: "\uB9AC\uCE58"
     Tribe: 5
     Origin: 3
@@ -251,7 +251,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 15
+  - Id: 14
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Tribe: 5
     Origin: 5
@@ -268,7 +268,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 16
+  - Id: 15
     Name: "\uD761\uD608\uADC0"
     Tribe: 5
     Origin: 2
@@ -285,7 +285,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 17
+  - Id: 16
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Tribe: 6
     Origin: 5
@@ -302,7 +302,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 18
+  - Id: 17
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Tribe: 6
     Origin: 1
@@ -319,7 +319,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 19
+  - Id: 18
     Name: "\uC6CC\uB85D"
     Tribe: 6
     Origin: 3
@@ -336,7 +336,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 20
+  - Id: 19
     Name: "\uC77C\uC77C\uC774"
     Tribe: 6
     Origin: 2
@@ -353,7 +353,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 21
+  - Id: 20
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Tribe: 7
     Origin: 5
@@ -370,7 +370,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 22
+  - Id: 21
     Name: "\uBB3C\uC758 \uC815\uB839"
     Tribe: 7
     Origin: 1
@@ -387,7 +387,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 23
+  - Id: 22
     Name: "\uBD88\uC758 \uC815\uB839"
     Tribe: 7
     Origin: 4
@@ -404,7 +404,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 24
+  - Id: 23
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Tribe: 7
     Origin: 3
@@ -421,7 +421,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 25
+  - Id: 24
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Tribe: 8
     Origin: 5
@@ -438,7 +438,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 26
+  - Id: 25
     Name: "\uC2EC\uD310\uAD00"
     Tribe: 8
     Origin: 3
@@ -455,7 +455,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 27
+  - Id: 26
     Name: "\uC880\uB3C4\uB451"
     Tribe: 8
     Origin: 2
@@ -472,7 +472,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 28
+  - Id: 27
     Name: "\uD638\uD06C\uC544\uC774"
     Tribe: 8
     Origin: 1
@@ -489,7 +489,7 @@ MonoBehaviour:
       Description: 
       ImagePath: 
       Image: {fileID: 0}
-  - Id: 29
+  - Id: 28
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Tribe: 8
     Origin: 4

@@ -33,8 +33,8 @@ public class UICharacter : MonoBehaviour
         character.OnHit += PlayShowHPBarForMoment;
         character.SetUIHitTexts(uiHitTexts);
         character.InitializeUIHitTexts();
-        
-        FollowCharacter();
+
+        StartCoroutine(Co_PrepareFollowCharacter());
         uiHPBar.Initialize();
     }
 
@@ -125,15 +125,17 @@ public class UICharacter : MonoBehaviour
         return this.GetComponentInParent<UISlot>().GetComponentInParent<T>();
     }
 
+    public IEnumerator Co_PrepareFollowCharacter()
+    {
+        if (character != null)
+        {
+            yield return new WaitForEndOfFrame();
+            character.transform.position = this.transform.position;
+        }
+    }
+
     public IEnumerator Co_FollowCharacter()
     {
-        //if (character != null)
-        //{
-        //    yield return new WaitForEndOfFrame();
-        //    //character.transform.position = this.transform.position;
-        //    character.transform.position = this.transform.position;
-        //}
-
         if (character != null)
         {
             while(true)

@@ -2315,7 +2315,7 @@ GameObject:
   - component: {fileID: 66515907}
   - component: {fileID: 66515906}
   m_Layer: 5
-  m_Name: Enemy_3
+  m_Name: Enemy_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,7 +2361,7 @@ MonoBehaviour:
   - {fileID: 1162125119}
   - {fileID: 379373277}
   - {fileID: 374018928}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &66515907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3845,7 +3845,7 @@ RectTransform:
   - {fileID: 1245031361}
   - {fileID: 1393064839}
   m_Father: {fileID: 877358561}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3889,6 +3889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2954dc9d0c8aee46a33f7e14509173b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEnemies: []
 --- !u!1 &158729481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,7 +4353,7 @@ GameObject:
   - component: {fileID: 183614445}
   - component: {fileID: 183614444}
   m_Layer: 5
-  m_Name: Enemy_9
+  m_Name: Enemy_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4398,7 +4399,7 @@ MonoBehaviour:
   - {fileID: 1355528827}
   - {fileID: 2120621400}
   - {fileID: 1891604701}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &183614445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4953,7 +4954,7 @@ GameObject:
   - component: {fileID: 194332853}
   - component: {fileID: 194332852}
   m_Layer: 5
-  m_Name: Slot_2
+  m_Name: Slot_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7121,7 +7122,7 @@ GameObject:
   - component: {fileID: 326252100}
   - component: {fileID: 326252099}
   m_Layer: 5
-  m_Name: Slot_7
+  m_Name: Slot_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9378,7 +9379,7 @@ GameObject:
   - component: {fileID: 437936559}
   - component: {fileID: 437936558}
   m_Layer: 5
-  m_Name: Enemy_5
+  m_Name: Enemy_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9424,7 +9425,7 @@ MonoBehaviour:
   - {fileID: 635917673}
   - {fileID: 946200117}
   - {fileID: 1782047137}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &437936559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10361,11 +10362,11 @@ RectTransform:
   - {fileID: 870308017}
   - {fileID: 1864160656}
   m_Father: {fileID: 650220138}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 86.4, y: -273.79202}
   m_SizeDelta: {x: 120, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &497520654
@@ -10418,7 +10419,7 @@ GameObject:
   - component: {fileID: 498385733}
   - component: {fileID: 498385732}
   m_Layer: 5
-  m_Name: Slot_6
+  m_Name: Slot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13564,7 +13565,6 @@ GameObject:
   m_Component:
   - component: {fileID: 650220138}
   - component: {fileID: 650220139}
-  - component: {fileID: 650220140}
   m_Layer: 5
   m_Name: CharacterArea
   m_TagString: Untagged
@@ -13583,8 +13583,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 497520653}
   - {fileID: 1934003598}
+  - {fileID: 497520653}
   m_Father: {fileID: 1090360168}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13608,31 +13608,6 @@ MonoBehaviour:
   backArea: {fileID: 497520655}
   frontArea: {fileID: 1934003600}
   NumOfCurrentPlacedCharacters: 0
---- !u!114 &650220140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650220137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
 --- !u!1 &659883135
 GameObject:
   m_ObjectHideFlags: 0
@@ -14877,7 +14852,7 @@ GameObject:
   - component: {fileID: 753684959}
   - component: {fileID: 753684958}
   m_Layer: 5
-  m_Name: Enemy_10
+  m_Name: Enemy_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14923,7 +14898,7 @@ MonoBehaviour:
   - {fileID: 1489717644}
   - {fileID: 798796766}
   - {fileID: 1783450893}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &753684959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17359,7 +17334,7 @@ GameObject:
   - component: {fileID: 859166271}
   - component: {fileID: 859166270}
   m_Layer: 5
-  m_Name: Enemy_6
+  m_Name: Enemy_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17405,7 +17380,7 @@ MonoBehaviour:
   - {fileID: 1774136273}
   - {fileID: 1287839553}
   - {fileID: 2100172942}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &859166271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17668,7 +17643,7 @@ GameObject:
   - component: {fileID: 870308019}
   - component: {fileID: 870308018}
   m_Layer: 5
-  m_Name: Slot_3
+  m_Name: Slot_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17987,8 +17962,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1052327664}
   - {fileID: 158103105}
+  - {fileID: 1052327664}
   m_Father: {fileID: 1090360168}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18009,13 +17984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcfa34631c3c4d49be9d1688452a6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiEnemies:
-  - {fileID: 1980073238}
-  - {fileID: 183614444}
-  - {fileID: 753684958}
-  - {fileID: 1936103717}
-  backArea: {fileID: 1052327666}
   frontArea: {fileID: 158103107}
+  backArea: {fileID: 1052327666}
 --- !u!1 &894181393
 GameObject:
   m_ObjectHideFlags: 0
@@ -20279,11 +20249,11 @@ RectTransform:
   - {fileID: 859166269}
   - {fileID: 1174723262}
   m_Father: {fileID: 877358561}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.24997, y: -273.77}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 68.24997, y: 0.22998047}
   m_SizeDelta: {x: 135.5, y: 547.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052327665
@@ -20323,6 +20293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2954dc9d0c8aee46a33f7e14509173b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiEnemies: []
 --- !u!1 &1052473572
 GameObject:
   m_ObjectHideFlags: 0
@@ -22416,7 +22387,7 @@ GameObject:
   - component: {fileID: 1174723264}
   - component: {fileID: 1174723263}
   m_Layer: 5
-  m_Name: Enemy_7
+  m_Name: Enemy_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22462,7 +22433,7 @@ MonoBehaviour:
   - {fileID: 727918719}
   - {fileID: 1424733375}
   - {fileID: 594692432}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1174723264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23118,7 +23089,7 @@ GameObject:
   - component: {fileID: 1245031363}
   - component: {fileID: 1245031362}
   m_Layer: 5
-  m_Name: Enemy_12
+  m_Name: Enemy_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23164,7 +23135,7 @@ MonoBehaviour:
   - {fileID: 1620088402}
   - {fileID: 826380570}
   - {fileID: 1396896296}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1245031363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26924,7 +26895,7 @@ GameObject:
   - component: {fileID: 1393064841}
   - component: {fileID: 1393064840}
   m_Layer: 5
-  m_Name: Enemy_13
+  m_Name: Enemy_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26970,7 +26941,7 @@ MonoBehaviour:
   - {fileID: 1259137507}
   - {fileID: 506861091}
   - {fileID: 1330678702}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1393064841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27162,7 +27133,7 @@ GameObject:
   - component: {fileID: 1398681298}
   - component: {fileID: 1398681297}
   m_Layer: 5
-  m_Name: Enemy_2
+  m_Name: Enemy_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27208,7 +27179,7 @@ MonoBehaviour:
   - {fileID: 184956894}
   - {fileID: 206031784}
   - {fileID: 696011148}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1398681298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32833,7 +32804,7 @@ GameObject:
   - component: {fileID: 1629075107}
   - component: {fileID: 1629075109}
   m_Layer: 5
-  m_Name: Slot_1
+  m_Name: Slot_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33510,7 +33481,7 @@ GameObject:
   - component: {fileID: 1674356218}
   - component: {fileID: 1674356217}
   m_Layer: 5
-  m_Name: Slot_5
+  m_Name: Slot_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37193,7 +37164,7 @@ GameObject:
   - component: {fileID: 1825447165}
   - component: {fileID: 1825447164}
   m_Layer: 5
-  m_Name: Enemy_4
+  m_Name: Enemy_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37239,7 +37210,7 @@ MonoBehaviour:
   - {fileID: 1846838199}
   - {fileID: 1757313233}
   - {fileID: 1760921803}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1825447165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37343,6 +37314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1837402588}
+  currentAttackSpeed: 0
 --- !u!212 &1837402588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37874,7 +37846,7 @@ GameObject:
   - component: {fileID: 1864160658}
   - component: {fileID: 1864160657}
   m_Layer: 5
-  m_Name: Slot_4
+  m_Name: Slot_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38581,7 +38553,7 @@ GameObject:
   - component: {fileID: 1911413111}
   - component: {fileID: 1911413110}
   m_Layer: 5
-  m_Name: Enemy_1
+  m_Name: Enemy_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38627,7 +38599,7 @@ MonoBehaviour:
   - {fileID: 873843069}
   - {fileID: 2060240855}
   - {fileID: 1825162016}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1911413111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39243,11 +39215,11 @@ RectTransform:
   - {fileID: 498385731}
   - {fileID: 326252098}
   m_Father: {fileID: 650220138}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 259.2, y: -273.79202}
   m_SizeDelta: {x: 120, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934003599
@@ -39300,7 +39272,7 @@ GameObject:
   - component: {fileID: 1936103718}
   - component: {fileID: 1936103717}
   m_Layer: 5
-  m_Name: Enemy_11
+  m_Name: Enemy_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39346,7 +39318,7 @@ MonoBehaviour:
   - {fileID: 1806758904}
   - {fileID: 1479040303}
   - {fileID: 17579623}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1936103718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40035,7 +40007,7 @@ GameObject:
   - component: {fileID: 1980073240}
   - component: {fileID: 1980073238}
   m_Layer: 5
-  m_Name: Enemy_8
+  m_Name: Enemy_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40081,7 +40053,7 @@ MonoBehaviour:
   - {fileID: 370122507}
   - {fileID: 1564726696}
   - {fileID: 1128870601}
-  enemy: {fileID: 1837402587}
+  enemy: {fileID: 0}
 --- !u!114 &1980073240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42524,6 +42496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 2074292876}
+  currentAttackSpeed: 0
 --- !u!1 &2077382479
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,12 +32,9 @@ public class CharacterDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler
             Vector2 currentPos = Input.mousePosition;
             //mousePosition의 좌표를 카메라의 월드 좌표로 변환
             currentPos = mainCamera.ScreenToWorldPoint(currentPos);
-
             transform.position = currentPos;
 
-            //
             uiCharacter.FollowCharacter();
-            //
 
             root.BroadcastMessage("Drag", uiCharacter, SendMessageOptions.DontRequireReceiver);
         }

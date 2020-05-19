@@ -17,6 +17,7 @@ public class Character : Pawn
         ability = newAbility;
 
         currentHP = ability.Health;
+        currentAttackSpeed = ability.AttackSpeed;
     }
 
     public override void Attack(Pawn target)
@@ -27,10 +28,10 @@ public class Character : Pawn
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
 
-    public override float TakeDamage(float damage)
+    public override long TakeDamage(long damage)
     {
-        float finalDamage = Mathf.Clamp(damage - ability.Defence, 1, damage);
-        currentHP = Mathf.Clamp(currentHP - finalDamage, 0, currentHP);
+        long finalDamage = Mathf.Clamp((int)(damage) - (int)(ability.Defence), 1, (int)(damage));
+        currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)(currentHP));
 
         OnHit();
 

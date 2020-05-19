@@ -34,8 +34,8 @@ public class DraggableCentral : MonoBehaviour
 
     private void InitializeArrangers()
     {
-        //uiCharacterArea = transform.GetComponentInChildren<UICharacterArea>();
-        //uiPrepareArea = transform.GetComponentInChildren<UIPrepareArea>();
+        uiCharacterArea.Initialize();
+        uiPrepareArea.Initialize();
 
         arrangers = new List<Arranger>();
         arrangers.Add(uiCharacterArea.backArea);

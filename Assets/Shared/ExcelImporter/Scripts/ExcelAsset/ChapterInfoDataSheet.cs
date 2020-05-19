@@ -10,21 +10,21 @@ public class ChapterInfoDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeMonsterIds();
+		InitializeEnemyIds();
 		InitializeFrontIds();
 		InitializeBackIds();
 	}
 
-	private void InitializeMonsterIds()
+	private void InitializeEnemyIds()
 	{
 		foreach (var ChapterInfoData in ChapterInfoDatas)
 		{
-			ChapterInfoData.MonsterIdList.Clear();
+			ChapterInfoData.EnemyIdList.Clear();
 
-			string[] monsterIdsStr = ChapterInfoData.MonsterIds.Split(',');
-			foreach (var monsterId in monsterIdsStr)
+			string[] enemyIdsStr = ChapterInfoData.EnemyIds.Split(',');
+			foreach (var enemyId in enemyIdsStr)
 			{
-				ChapterInfoData.MonsterIdList.Add(monsterId[0] - '0');
+				ChapterInfoData.EnemyIdList.Add(enemyId[0] - '0');
 			}
 		}
 	}

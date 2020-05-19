@@ -11,11 +11,11 @@ public class ChapterInfoData
     public int StageId;
     public int GoldAmount;
     public int ExpAmount;
-    public string MonsterIds;
+    public string EnemyIds;
     public string FrontIds;
     public string BackIds;
 
-    public List<int> MonsterIdList;
+    public List<int> EnemyIdList;
     public List<int> FrontIdList;
     public List<int> BackIdList;
 }

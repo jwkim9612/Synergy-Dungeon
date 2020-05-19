@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using geniikw.DataSheetLab;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class DataSheet : MonoBehaviour
 	public ChapterDataSheet chapterDataSheet;
 	public ChapterInfoDataSheet chapterInfoDataSheet;
 	public CharacterAbilityDataSheet characterAbilityDataSheet;
+	public EnemyDataSheet enemyDataSheet;
 	public ProbabilityDataSheet probabilityDataSheet;
 
     public void Initialize()
@@ -19,6 +21,7 @@ public class DataSheet : MonoBehaviour
 		originDataSheet.Initialize();
 		chapterDataSheet.Initialize();
 		chapterInfoDataSheet.Initialize();
+		enemyDataSheet.Initialize();
 
 		//InitializeCharacterData();
 	}

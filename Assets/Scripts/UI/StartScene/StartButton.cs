@@ -18,11 +18,7 @@ public class StartButton : MonoBehaviour
         PlayLoadingAnimation();
         LoadGameData();
 
-        if (SaveManager.Instance.HasInGameData())
-        {
-            askInGameContinue.gameObject.SetActive(true);
-            return;
-        }
+
 
         SceneManager.LoadScene("MainScene");
     }

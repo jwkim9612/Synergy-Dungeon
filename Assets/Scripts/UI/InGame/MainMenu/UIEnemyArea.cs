@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class UIEnemyArea : MonoBehaviour
 {
-    [SerializeField] private List<UIEnemy> uiEnemies = null;
-    public UIEnemyPlacementArea backArea;
+    //[SerializeField] private List<UIEnemy> uiEnemies = null;
     public UIEnemyPlacementArea frontArea;
+    public UIEnemyPlacementArea backArea;
 
     void Start()
     {
         InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;
+
+        frontArea.Initialize();
+        backArea.Initialize();
     }
 
     public void CreateEnemies()
@@ -21,23 +24,17 @@ public class UIEnemyArea : MonoBehaviour
 
         int currentEnemyIndex = 0;
 
-        //for (int i = 0; i < currentWaveData.count.Length; ++i)
-        //{
-        //    for (int j = 0; j < currentWaveData.count[i]; ++j)
-        //    {
-        //        if (currentEnemyIndex > uiEnemies.Count)
-        //            break;
+        for (int frontIndex = 0; frontIndex < currentWaveData.FrontIdList.Count; ++frontIndex)
+        {
+            frontArea.uiEnemies[currentWaveData.FrontIdList[frontIndex]].SetEnemy(GameManager.instance.dataSheet.enemyDataSheet.EnemyDatas[currentWaveData.EnemyIdList[currentEnemyIndex]]);
+            ++currentEnemyIndex;
+        }
 
-        //        uiEnemies[currentEnemyIndex].gameObject.SetActive(true);
-        //        uiEnemies[currentEnemyIndex].SetEnemy(GameManager.instance.dataSheet.enemyDatas[currentWaveData.monsterNum[i]]);
-        //        ++currentEnemyIndex;
-        //    }
-        //}
-
-        //for(int i = currentEnemyIndex; i < uiEnemies.Count; ++i)
-        //{
-        //    uiEnemies[i].gameObject.SetActive(false);
-        //}
+        for (int backIndex = 0; backIndex < currentWaveData.BackIdList.Count; ++backIndex)
+        {
+            backArea.uiEnemies[currentWaveData.BackIdList[backIndex]].SetEnemy(GameManager.instance.dataSheet.enemyDataSheet.EnemyDatas[currentWaveData.EnemyIdList[currentEnemyIndex]]);
+            ++currentEnemyIndex;
+        }
     }
 
     public List<Enemy> GetEnemyList()

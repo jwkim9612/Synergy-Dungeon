@@ -30,6 +30,8 @@ public class BattleStatus : MonoBehaviour
 
     private IEnumerator Battle()
     {
+        Debug.Log("Battle");
+
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
@@ -113,9 +115,7 @@ public class BattleStatus : MonoBehaviour
         pawns.AddRange(characters);
         pawns.AddRange(enemies);
 
-        // 나중에 리스트에 추가해서 해야함.
-        
-        //pawnsAttackSequenceList = pawns.OrderBy(x => x.ability.dexterity).ToList();
+        pawnsAttackSequenceList = pawns.OrderBy(x => x.currentAttackSpeed).ToList();
     }
 
     private void InitializeAnnihilation()

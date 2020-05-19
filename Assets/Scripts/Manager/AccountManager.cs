@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class AccountManager : MonoSingleton<AccountManager>
 {
     private AccountData accountData;
+    [SerializeField] private AskInGameContinue askInGameContinue = null;
 
     [SerializeField] private UIControl signMain = null;
     [SerializeField] private UIControl uiEnterDisplayName = null;
@@ -65,8 +66,8 @@ public class AccountManager : MonoSingleton<AccountManager>
             {
                 if (!response.HasErrors)
                 {
-                    AccountManager.Instance.SetAccountData(id, pw);
-                    AccountManager.Instance.SaveAccountData();
+                    SetAccountData(id, pw);
+                    SaveAccountData();
                     //HideAccountWindow();
                     Debug.Log("로그인 성공...");
                     if(isFromSignUp)
@@ -76,7 +77,11 @@ public class AccountManager : MonoSingleton<AccountManager>
                     }
                     else
                     {
-                        SceneManager.LoadScene("MainScene");
+                        if (SaveManager.Instance.HasInGameData())
+                            askInGameContinue.gameObject.SetActive(true);
+                        else
+                            SceneManager.LoadScene("MainScene");
+
                         //  Main Scene으로 이동
                     }
                 }

@@ -80,7 +80,7 @@ public class ProbabilityService
     public Tier GetRandomTier()
     {
         float randomProbability = RandomService.GetRandom();
-        //Debug.Log(randomProbability);
+        Debug.Log(randomProbability);
         float comparisonValue = 0.0f;
 
         foreach(var tier in tiers)

@@ -15,9 +15,9 @@ public class UIEnemy : MonoBehaviour
     {
         enemy = Instantiate(InGameService.defaultEnemy, transform.root.parent);
         enemy.SetSize(0.8f);
-        enemy.SetImage(newEnmeyData.image);
-        //enemy.SetAbility(newEnmeyData.ability);
-        enemy.SetName(newEnmeyData.name);
+        enemy.SetImage(newEnmeyData.Image);
+        enemy.SetAbility(newEnmeyData);
+        enemy.SetName(newEnmeyData.Name);
 
         enemy.OnIsDead += PlayDeadCoroutine;
         enemy.OnAttack += PlayAttackCoroutine;
@@ -26,7 +26,7 @@ public class UIEnemy : MonoBehaviour
         enemy.SetUIHitTexts(uiHitTexts);
         enemy.InitializeUIHitTexts();
 
-        StartCoroutine(Co_FollowEnemy());
+        StartCoroutine(Co_PrepareFollowEnemy());
         uiHPBar.Initialize();
         uiHPBar.UpdateHPBar();
     }
@@ -83,13 +83,32 @@ public class UIEnemy : MonoBehaviour
         Instantiate(GameManager.instance.particleService.hitParticle, transform);
     }
 
-    public IEnumerator Co_FollowEnemy()
+    public IEnumerator Co_PrepareFollowEnemy()
     {
         if (enemy != null)
         {
             yield return new WaitForEndOfFrame();
             enemy.transform.position = this.transform.position;
         }
+    }
+
+    public IEnumerator Co_FollowEnemy()
+    {
+        if (enemy != null)
+        {
+            while (true)
+            {
+                yield return new WaitForEndOfFrame();
+                enemy.transform.position = Vector2.Lerp(enemy.transform.position, this.transform.position, 0.05f);
+
+                if (Mathf.Abs((enemy.transform.position - this.transform.position).y) < 0.01)
+                {
+                    break;
+                }
+            }
+        }
+
+        yield break;
     }
 
     public void FollowEnemy()

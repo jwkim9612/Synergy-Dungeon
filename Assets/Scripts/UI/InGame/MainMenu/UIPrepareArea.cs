@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UIPrepareArea : Arranger
 {
-    private void Start()
+    public void Initialize()
     {
-        base.Start();
+        base.Initialize();
         
         if(SaveManager.Instance.HasInGameData())
         {

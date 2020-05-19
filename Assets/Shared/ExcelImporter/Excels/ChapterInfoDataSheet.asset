@@ -18,10 +18,10 @@ MonoBehaviour:
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,2,3,4
+    FrontIds: 1,3
+    BackIds: 2,6
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -29,10 +29,10 @@ MonoBehaviour:
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 2,3,4,5
-    FrontIds: 
-    BackIds: 1,2,3,4
-    MonsterIdList: 
+    EnemyIds: 2,3,4,5
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -40,10 +40,10 @@ MonoBehaviour:
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,2,3
+    FrontIds: 1
+    BackIds: 1,2
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -51,10 +51,10 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -62,10 +62,10 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -73,10 +73,10 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -84,10 +84,10 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -95,10 +95,10 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -106,10 +106,10 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -117,10 +117,10 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -128,10 +128,10 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -139,10 +139,10 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -150,10 +150,10 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -161,10 +161,10 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -172,10 +172,10 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -183,10 +183,10 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -194,10 +194,10 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -205,10 +205,10 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -216,10 +216,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -227,10 +227,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -238,10 +238,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -249,10 +249,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -260,10 +260,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -271,10 +271,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -282,10 +282,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -293,10 +293,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -304,10 +304,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -315,10 +315,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -326,10 +326,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -337,10 +337,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -348,10 +348,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -359,10 +359,10 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
   - ChapterId: 1
@@ -370,9 +370,9 @@ MonoBehaviour:
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
-    MonsterIds: 1,1,1,1
-    FrontIds: 1,2,3,4
-    BackIds: 5,6,7
-    MonsterIdList: 
+    EnemyIds: 1,1,1,1
+    FrontIds: 1
+    BackIds: 1,2,3
+    EnemyIdList: 
     FrontIdList: 
     BackIdList: 
