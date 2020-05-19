@@ -1,15 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using geniikw.DataSheetLab;
 
 public class DataSheet : MonoBehaviour
 {
-    public CharacterSheet characterDatas;
-    public TribeSheet tribeDatas;
-    public OriginSheet originDatas;
-    public EnemySheet enemyDatas;
-    public StageSheet stageDatas;
+    public CharacterDataSheet characterDataSheet;
+	public TribeDataSheet tribeDataSheet;
+	public OriginDataSheet originDataSheet;
+	public ChapterDataSheet chapterDataSheet;
+	public ChapterInfoDataSheet chapterInfoDataSheet;
+	public CharacterAbilityDataSheet characterAbilityDataSheet;
+	public ProbabilityDataSheet probabilityDataSheet;
 
-    public ProbabilitySheet probabilityDatas;
+    public void Initialize()
+    {
+		characterDataSheet.Initialize();
+		tribeDataSheet.Initialize();
+		originDataSheet.Initialize();
+		chapterDataSheet.Initialize();
+		chapterInfoDataSheet.Initialize();
+
+		//InitializeCharacterData();
+	}
+
+	//private void InitializeCharacterData()
+	//{
+	//	foreach (var characterData in characterData.characterData3)
+	//	{
+	//		characterData.sprite = Resources.Load<Sprite>(characterData.ImagePath);
+	//	}
+	//}
 }

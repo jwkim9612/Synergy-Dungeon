@@ -68,28 +68,28 @@ public enum Tier
     Five
 }
 
-public enum Tribe
-{ 
-    None,
-    Human,
-    Elf,
-    Devil,
-    Undead,
-    Elemental,
-    Machine,
-    Beast
-}
+//public enum Tribe
+//{ 
+//    None,
+//    Human,
+//    Elf,
+//    Devil,
+//    Undead,
+//    Elemental,
+//    Machine,
+//    Beast
+//}
 
-public enum Origin
-{ 
-    None,
-    Warrior,
-    Knight,
-    Archer,
-    Thief, 
-    Priest,
-    Dragon,
-}
+//public enum Origin
+//{ 
+//    None,
+//    Warrior,
+//    Knight,
+//    Archer,
+//    Thief, 
+//    Priest,
+//    Dragon,
+//}
 
 public enum InGameState
 { 
@@ -104,4 +104,27 @@ public enum PawnType
 { 
     Character,
     Enemy
+}
+
+public enum Tribe
+{
+    None,
+    기계,
+    드래곤,
+    악마,
+    야수,
+    언데드,
+    엘프,
+    정령,
+    휴먼
+}
+
+public enum Origin
+{
+    None,
+    궁수,
+    도적,
+    법사,
+    성기사,
+    전사
 }

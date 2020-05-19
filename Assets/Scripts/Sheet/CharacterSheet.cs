@@ -7,7 +7,7 @@ using System;
 namespace geniikw.DataSheetLab
 {
     [Serializable]
-    public class CharacterData
+    public class CharacterData22
     {
         /// <summary>
         /// 고유 아이디
@@ -74,5 +74,5 @@ namespace geniikw.DataSheetLab
     }
 
     [CreateAssetMenu]
-    public class CharacterSheet : Sheet<CharacterData> { }
+    public class CharacterSheet : Sheet<CharacterData22> { }
 }

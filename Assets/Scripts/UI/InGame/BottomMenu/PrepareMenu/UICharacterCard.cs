@@ -25,7 +25,7 @@ public class UICharacterCard : MonoBehaviour
 
         buyButton.onClick.AddListener(() =>
         {
-            CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
+            CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
 
             if (InGameManager.instance.combinationService.IsUpgradable(characterInfo))
             {
@@ -49,10 +49,10 @@ public class UICharacterCard : MonoBehaviour
 
     private void BuyCharacter()
     {
-        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.id);
+        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
 
         InGameManager.instance.combinationService.AddCharacter(characterInfo);
-        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.tier));
+        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.Tier));
         isBoughtCard = true;
         OnHide();
     }
@@ -61,14 +61,14 @@ public class UICharacterCard : MonoBehaviour
     {
         characterData = newCharacterData;
 
-        SetCharacterImage(characterData.image);
-        SetPriceText(CardService.GetPriceByTier(characterData.tier).ToString());
-        SetTribeImage(characterData.tribeData.Sheet[characterData.tribeData.idxList[0]].image);
-        SetTribeText(characterData.tribeData.Sheet[characterData.tribeData.idxList[0]].strTribe);
-        SetOriginImage(characterData.originData.Sheet[characterData.originData.idxList[0]].image);
-        SetOriginText(characterData.originData.Sheet[characterData.originData.idxList[0]].strOrigin);
-        SetCharacterNameText(characterData.name);
-        SetTierBorderImage(CardService.GetColorByTier(characterData.tier));
+        SetCharacterImage(characterData.Image);
+        SetPriceText(CardService.GetPriceByTier(characterData.Tier).ToString());
+        SetTribeImage(characterData.TribeData.Image);
+        SetTribeText(characterData.TribeData.Name.ToString());
+        SetOriginImage(characterData.OriginData.Image);
+        SetOriginText(characterData.OriginData.Name.ToString());
+        SetCharacterNameText(characterData.Name);
+        SetTierBorderImage(CardService.GetColorByTier(characterData.Tier));
     }
 
     public void SetCharacterImage(Sprite sprite)
@@ -137,7 +137,7 @@ public class UICharacterCard : MonoBehaviour
     public bool IsBuyable()
     {
         int currentPlayerCoin = InGameManager.instance.playerState.coin;
-        int cardPrice = CardService.GetPriceByTier(characterData.tier);
+        int cardPrice = CardService.GetPriceByTier(characterData.Tier);
 
         return currentPlayerCoin >= cardPrice;
     }

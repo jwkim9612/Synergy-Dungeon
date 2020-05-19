@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UICharacterArea : MonoBehaviour
 {
-    public UIPlacementArea backArea;
-    public UIPlacementArea frontArea;
+    public UICharacterPlacementArea backArea;
+    public UICharacterPlacementArea frontArea;
     public int NumOfCurrentPlacedCharacters;
 
     private void Start()

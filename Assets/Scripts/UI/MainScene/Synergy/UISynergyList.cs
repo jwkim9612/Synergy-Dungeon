@@ -25,7 +25,7 @@ public class UISynergyList : MonoBehaviour
 
     private void CreateTribeList()
     {
-        var tribeDatas = GameManager.instance.dataSheet.tribeDatas;
+        var tribeDatas = GameManager.instance.dataSheet.tribeDataSheet.TribeDatas;
         foreach (var tribeData in tribeDatas)
         {
             var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
@@ -35,7 +35,7 @@ public class UISynergyList : MonoBehaviour
 
     private void CreateOriginList()
     {
-        var originDatas = GameManager.instance.dataSheet.originDatas;
+        var originDatas = GameManager.instance.dataSheet.originDataSheet.OriginDatas;
         foreach (var originData in originDatas)
         {
             var slot = Instantiate(synergySlot, girdLayoutGroup.transform);

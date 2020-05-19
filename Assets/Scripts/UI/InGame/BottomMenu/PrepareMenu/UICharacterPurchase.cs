@@ -29,13 +29,13 @@ public class UICharacterPurchase : MonoBehaviour
         {
             if (!(card.isBoughtCard))
             {
-                int cardId = card.characterData.id;
+                int cardId = card.characterData.Id;
                 stockService.AddStockId(cardId);
             }
 
             Tier randomTier = probabilityService.GetRandomTier();
             int randomId = stockService.GetRandomId(randomTier);
-            card.SetCard(GameManager.instance.dataSheet.characterDatas[randomId]);
+            card.SetCard(GameManager.instance.dataSheet.characterDataSheet.characterDatas[randomId]);
             card.UpdateBuyable();
             card.OnShow();
             card.isBoughtCard = false;

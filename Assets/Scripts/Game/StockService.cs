@@ -17,28 +17,28 @@ public class StockService
         Stock fourTierStock = new Stock();
         Stock fiveTierStock = new Stock();
 
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
 
         foreach(var characterData in characterDatas)
         {
             for (int i = 0; i < CardService.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
             {
-                switch (characterData.tier)
+                switch (characterData.Tier)
                 {
                     case Tier.One:
-                        oneTierStock.stockIds.Add(characterData.id);
+                        oneTierStock.stockIds.Add(characterData.Id);
                         break;
                     case Tier.Two:
-                        twoTierStock.stockIds.Add(characterData.id);
+                        twoTierStock.stockIds.Add(characterData.Id);
                         break;
                     case Tier.Three:
-                        threeTierStock.stockIds.Add(characterData.id);
+                        threeTierStock.stockIds.Add(characterData.Id);
                         break;
                     case Tier.Four:
-                        fourTierStock.stockIds.Add(characterData.id);
+                        fourTierStock.stockIds.Add(characterData.Id);
                         break;
                     case Tier.Five:
-                        fiveTierStock.stockIds.Add(characterData.id);
+                        fiveTierStock.stockIds.Add(characterData.Id);
                         break;
                     default:
                         Debug.Log("Error InitializeStock");
@@ -81,20 +81,20 @@ public class StockService
 
     public void RemoveStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         Stock stock = null;
 
-        stock = Stocks[characterDatas[stockId].tier];
+        stock = Stocks[characterDatas[stockId].Tier];
 
         stock.stockIds.Remove(stockId);
     }
 
     public void RemoveStockId(CharacterInfo characterInfo)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         Stock stock = null;
 
-        stock = Stocks[characterDatas[characterInfo.id].tier];
+        stock = Stocks[characterDatas[characterInfo.id].Tier];
 
         int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
 
@@ -106,20 +106,20 @@ public class StockService
 
     public void AddStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         Stock stock = null;
 
-        stock = Stocks[characterDatas[stockId].tier];
+        stock = Stocks[characterDatas[stockId].Tier];
 
         stock.stockIds.Add(stockId);
     }
 
     public void AddStockId(CharacterInfo characterInfo)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         Stock stock = null;
 
-        stock = Stocks[characterDatas[characterInfo.id].tier];
+        stock = Stocks[characterDatas[characterInfo.id].Tier];
 
         int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
 
@@ -151,32 +151,4 @@ public class StockService
 
         return numOfCharacters;
     }
-
-    //public Stock SetStockByTier(ref Stock stock, Tier tier)
-    //{
-    //    switch (tier)
-    //    {
-    //        case Tier.One:
-    //            Stocks.TryGetValue(Tier.One, out stock);
-    //            break;
-    //        case Tier.Two:
-    //            Stocks.TryGetValue(Tier.Two, out stock);
-    //            break;
-    //        case Tier.Three:
-    //            Stocks.TryGetValue(Tier.Three, out stock);
-    //            break;
-    //        case Tier.Four:
-    //            Stocks.TryGetValue(Tier.Four, out stock);
-    //            break;
-    //        case Tier.Five:
-    //            Stocks.TryGetValue(Tier.Five, out stock);
-    //            break;
-    //        default:
-    //            Debug.Log("Erro GetRandomId");
-    //            stock = null;
-    //            break;
-    //    }
-
-    //    return stock;
-    //}
 }

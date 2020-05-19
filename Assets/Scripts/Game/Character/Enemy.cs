@@ -10,4 +10,9 @@ public class Enemy : Pawn
     {
         pawnType = PawnType.Enemy;
     }
+
+    public override float GetHPRatio()
+    {
+        return 0.0f;
+    }
 }

@@ -18,8 +18,8 @@ public class UISynergySlot : MonoBehaviour
         originData = null;
         tribeData = newTribeData;
 
-        Setimage(tribeData.image);
-        SetName(tribeData.strTribe);
+        Setimage(tribeData.Image);
+        SetName(tribeData.Name.ToString());
     }
 
     public void SetSynergyData(OriginData newOriginData)
@@ -27,8 +27,8 @@ public class UISynergySlot : MonoBehaviour
         tribeData = null;
         originData = newOriginData;
 
-        Setimage(originData.image);
-        SetName(originData.strOrigin);
+        Setimage(originData.Image);
+        SetName(originData.Name.ToString());
     }
 
     public void Setimage(Sprite sprite)
@@ -52,11 +52,11 @@ public class UISynergySlot : MonoBehaviour
     {
         if(tribeData != null)
         {
-            synergyInfo.SetSynergyData(tribeData, synergyName.text, tribeData.description, tribeData.image);
+            synergyInfo.SetSynergyData(tribeData, synergyName.text, tribeData.Description, tribeData.Image);
         }
         else if(originData != null)
         {
-            synergyInfo.SetSynergyData(originData, synergyName.text, originData.description, originData.image);
+            synergyInfo.SetSynergyData(originData, synergyName.text, originData.Description, originData.Image);
         }
         else
         {

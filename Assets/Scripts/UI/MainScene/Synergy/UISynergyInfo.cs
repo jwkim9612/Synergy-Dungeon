@@ -17,7 +17,7 @@ public class UISynergyInfo : UIControl
     private TribeData tribeData = null;
     private OriginData originData = null;
 
-    bool isTribe = false;
+    bool isTribe { get; set; } = false;
     bool isOrigin = false;
 
     public void Initialize()
@@ -88,7 +88,7 @@ public class UISynergyInfo : UIControl
 
     public void CreateCharacterList()
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDatas;
+        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
@@ -104,7 +104,7 @@ public class UISynergyInfo : UIControl
         {
             foreach (var characterSlotToShow in characterSlotsToShow)
             {
-                if(tribeData.tribe == characterSlotToShow.characterData.tribe)
+                if(tribeData.Name == characterSlotToShow.characterData.Tribe)
                 {
                     characterSlotToShow.gameObject.SetActive(true);
                 }
@@ -118,7 +118,7 @@ public class UISynergyInfo : UIControl
         {
             foreach (var characterSlotToShow in characterSlotsToShow)
             {
-                if (originData.origin == characterSlotToShow.characterData.origin)
+                if (originData.Name == characterSlotToShow.characterData.Origin)
                 {
                     characterSlotToShow.gameObject.SetActive(true);
                 }

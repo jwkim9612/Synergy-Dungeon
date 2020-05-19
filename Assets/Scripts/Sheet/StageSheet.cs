@@ -7,7 +7,7 @@ using System;
 namespace geniikw.DataSheetLab
 {
     [Serializable]
-    public class StageData
+    public class StageData333
     {
         /// <summary>
         /// 스테이지 이름
@@ -28,8 +28,8 @@ namespace geniikw.DataSheetLab
     }
 
     [CreateAssetMenu]
-    public class StageSheet : Sheet<StageData> { }
+    public class StageSheet : Sheet<StageData333> { }
 
     [Serializable]
-    public class StageRefer : ReferSheet<StageSheet, StageData> { }
+    public class StageRefer : ReferSheet<StageSheet, StageData333> { }
 }

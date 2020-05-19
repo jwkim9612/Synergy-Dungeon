@@ -17,10 +17,19 @@ public class UICharacterSlot : MonoBehaviour
     {
         characterData = newCharacterData;
 
-        SetName(characterData.name);
-        SetImage(characterData.image);
-        SetTierBorder(CardService.GetColorByTier(characterData.tier));
+        SetName(characterData.Name);
+        SetImage(characterData.Image);
+        SetTierBorder(CardService.GetColorByTier(characterData.Tier));
     }
+
+    //public void SetCharacterData(CharacterData newCharacterData)
+    //{
+    //    characterData = newCharacterData;
+
+    //    SetName(characterData.name);
+    //    SetImage(characterData.image);
+    //    SetTierBorder(CardService.GetColorByTier(characterData.tier));
+    //}
 
     public void SetName(string name)
     {

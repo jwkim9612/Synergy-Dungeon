@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     //매니저들
     public static GameManager instance = null;
-    //public AccountManager accountManager = null;
     public DataSheet dataSheet = null;
     public ParticleService particleService = null;
 
@@ -38,6 +37,7 @@ public class GameManager : MonoBehaviour
         SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         StageManager.Instance.Initialize();
+        dataSheet.Initialize();
     }
 
     public void Quit()

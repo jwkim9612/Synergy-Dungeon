@@ -7,7 +7,7 @@ public class StringUtil
 {
     public static string NewLine(string dest)
     {
-        int length = dest.Length;
+        long length = dest.Length;
 
         char[] charArrayDest = dest.ToCharArray();
         for (int i = 0; i < length - 1; i++)

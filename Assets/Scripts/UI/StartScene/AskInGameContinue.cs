@@ -14,7 +14,7 @@ public class AskInGameContinue : MonoBehaviour
         yesButton.onClick.AddListener(() =>
         {
             SaveManager.Instance.LoadInGameData();
-            StageManager.Instance.SetStageData(SaveManager.Instance.inGameSaveData.stage);
+            StageManager.Instance.SetChapterData(SaveManager.Instance.inGameSaveData.chapter);
             StageManager.Instance.currentWave = SaveManager.Instance.inGameSaveData.wave;
             SceneManager.LoadScene("InGame");
         });

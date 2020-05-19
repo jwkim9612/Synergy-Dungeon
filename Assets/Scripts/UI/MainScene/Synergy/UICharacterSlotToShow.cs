@@ -16,9 +16,9 @@ public class UICharacterSlotToShow : MonoBehaviour
     {
         characterData = newCharacterData;
 
-        SetName(characterData.name);
-        SetImage(characterData.image);
-        SetCostBorder(characterData.tier);
+        SetName(characterData.Name);
+        SetImage(characterData.Image);
+        SetCostBorder(characterData.Tier);
     }
 
     public void SetName(string name)

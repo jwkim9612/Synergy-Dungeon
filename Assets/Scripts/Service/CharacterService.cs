@@ -36,13 +36,13 @@ public class CharacterService
         switch (characterInfo.star)
         {
             case 1:
-                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier);
+                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier);
                 break;
             case 2:
-                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier) + 2;
+                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier) + 2;
                 break;
             case 3:
-                price = (int)(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tier) + 4;
+                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier) + 4;
                 break;
             default:
                 Debug.Log("Error GetSalePrice");

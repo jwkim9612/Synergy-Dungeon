@@ -21,10 +21,10 @@ public class UICharacterInfo : UIControl
     {
         characterData = newCharacterData;
 
-        SetName(characterData.name);
-        SetImage(characterData.image);
+        SetName(characterData.Name);
+        SetImage(characterData.Image);
 
-        SetCharacterAbility(characterData.oneStarAbility);
+        SetCharacterAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
     }
 
     public void SetName(string name)
@@ -53,26 +53,26 @@ public class UICharacterInfo : UIControl
 
     public void OnOneStarClick()
     {
-        SetCharacterAbility(characterData.oneStarAbility);
+        SetCharacterAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
     }
 
     public void OnTwoStarClick()
     {
-        SetCharacterAbility(characterData.twoStarAbility);
+        SetCharacterAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.TwoStarDatas[characterData.Id]);
     }
 
     public void OnThreeStarClick()
     {
-        SetCharacterAbility(characterData.threeStarAbility);
+        SetCharacterAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.ThreeStarDatas[characterData.Id]);
     }
 
-    private void SetCharacterAbility(AbilityData abilityData)
+    private void SetCharacterAbility(CharacterAbilityData characterAbilityData)
     {
-        textMaxHP.text = abilityData.maxHP.ToString();
-        textMaxMP.text = abilityData.maxMP.ToString();
-        textAttack.text = abilityData.attack.ToString();
-        textDefense.text = abilityData.defense.ToString();
-        textDexterity.text = abilityData.dexterity.ToString();
-        textIntellect.text = abilityData.intellect.ToString();
+        textMaxHP.text = characterAbilityData.Health.ToString();
+        textMaxMP.text = characterAbilityData.MagicDefence.ToString();
+        textAttack.text = characterAbilityData.Attack.ToString();
+        textDefense.text = characterAbilityData.Defence.ToString();
+        textDexterity.text = characterAbilityData.AttackSpeed.ToString();
+        textIntellect.text = characterAbilityData.MagicAttack.ToString();
     }
 }

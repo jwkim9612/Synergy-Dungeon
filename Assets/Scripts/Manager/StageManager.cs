@@ -8,37 +8,37 @@ public class StageManager : MonoSingleton<StageManager>
     public delegate void OnChangedWaveDelegate();
     public OnChangedWaveDelegate OnChangedWave { get; set; }
     
-    public int currentStage = 1;
+    public int currentChapter = 1;
     public int currentWave = 1;
-    public StageData currentStageData = null;
+    public ChapterData currentChapterData = null;
 
     public void Initialize()
     {
 
     }
 
-    public void SetStageData(int stage)
+    public void SetChapterData(int chapter)
     {
-        currentStage = stage;
-        currentStageData = GameManager.instance.dataSheet.stageDatas[currentStage - 1];
+        currentChapter = chapter;
+        currentChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[currentChapter - 1];
     }
 
     public float GetRelativePercentageByStage()
     {
-        float totalWave = currentStageData.totalWave;
+        float totalWave = currentChapterData.TotalWave;
 
         return currentWave / totalWave;
     }
 
     public void IncreaseWave(int increaseValue)
     {
-        currentWave = Mathf.Clamp(currentWave + increaseValue, 1, currentStageData.totalWave);
+        currentWave = Mathf.Clamp(currentWave + increaseValue, 1, (currentChapterData.TotalWave));
         OnChangedWave();
     }
 
     public bool IsFinalWave()
     {
-        return currentWave == currentStageData.totalWave;
+        return currentWave == currentChapterData.TotalWave;
     }
 
 }

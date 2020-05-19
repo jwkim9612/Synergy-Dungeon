@@ -16,7 +16,7 @@ public class UIEnemy : MonoBehaviour
         enemy = Instantiate(InGameService.defaultEnemy, transform.root.parent);
         enemy.SetSize(0.8f);
         enemy.SetImage(newEnmeyData.image);
-        enemy.SetAbility(newEnmeyData.ability);
+        //enemy.SetAbility(newEnmeyData.ability);
         enemy.SetName(newEnmeyData.name);
 
         enemy.OnIsDead += PlayDeadCoroutine;

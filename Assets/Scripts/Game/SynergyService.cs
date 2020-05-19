@@ -25,8 +25,8 @@ public class SynergyService
 
     public void AddCharacter(CharacterInfo characterInfo)
     {
-        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tribe, characterInfo.id);
-        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDatas[characterInfo.id].origin, characterInfo.id);
+        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tribe, characterInfo.id);
+        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Origin, characterInfo.id);
 
         if (deployedTribes.ContainsKey(tribeInfo))
         {
@@ -51,8 +51,8 @@ public class SynergyService
 
     public void SubCharacter(CharacterInfo characterInfo)
     {
-        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDatas[characterInfo.id].tribe, characterInfo.id);
-        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDatas[characterInfo.id].origin, characterInfo.id);
+        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tribe, characterInfo.id);
+        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Origin, characterInfo.id);
 
         if (deployedTribes.ContainsKey(tribeInfo))
         {

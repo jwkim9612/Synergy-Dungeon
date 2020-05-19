@@ -16,7 +16,6 @@ MonoBehaviour:
   - id: 0
     name: "\uB3C4\uB07C \uC804\uC0AC"
     image: {fileID: 21300000, guid: 41ab191be45781e4a97e33e6f8b9b7fb, type: 3}
-    statusImage: {fileID: 21300000, guid: 5f07012f25aaa514b97f026c25b892aa, type: 3}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 00000000
@@ -38,7 +37,6 @@ MonoBehaviour:
   - id: 1
     name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     image: {fileID: 21300000, guid: 8e9d6c8867798c0479dfe648c4437f50, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 01000000
@@ -60,7 +58,6 @@ MonoBehaviour:
   - id: 2
     name: "\uC880\uB3C4\uB451"
     image: {fileID: 21300000, guid: 8d698d0a5263b7b4d91abffcf852a7f8, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 02000000
@@ -82,7 +79,6 @@ MonoBehaviour:
   - id: 3
     name: "\uD638\uD06C\uC544\uC774"
     image: {fileID: 21300000, guid: b232b931b51e0dc4b81f864b0b568408, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 03000000
@@ -104,7 +100,6 @@ MonoBehaviour:
   - id: 4
     name: "\uC2EC\uD310\uAD00"
     image: {fileID: 21300000, guid: d5c88da45fcb77240946683aac0dd7c4, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 04000000
@@ -126,7 +121,6 @@ MonoBehaviour:
   - id: 5
     name: "\uC5D8\uD504 \uAC80\uC0AC"
     image: {fileID: 21300000, guid: 41ab191be45781e4a97e33e6f8b9b7fb, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 05000000
@@ -148,7 +142,6 @@ MonoBehaviour:
   - id: 6
     name: "\uC6B0\uB4DC \uC5D8\uD504"
     image: {fileID: 21300000, guid: f1710865fc9e37c419779274d683cccc, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 06000000
@@ -170,7 +163,6 @@ MonoBehaviour:
   - id: 7
     name: "\uC6CC\uB85D"
     image: {fileID: 21300000, guid: ce6279794928c6c4e8f8715e5b7b182a, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 07000000
@@ -192,7 +184,6 @@ MonoBehaviour:
   - id: 8
     name: "\uB3C4\uBE44"
     image: {fileID: 21300000, guid: 5f13a7c1e8ae7cc40881155bb1de15e8, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 08000000
@@ -214,7 +205,6 @@ MonoBehaviour:
   - id: 9
     name: "\uD398\uC5B4\uB9AC \uB4DC\uB798\uACE4"
     image: {fileID: 21300000, guid: 377fe1d6e7621c64f9fd0f81ddf5c29d, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 09000000
@@ -236,7 +226,6 @@ MonoBehaviour:
   - id: 10
     name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     image: {fileID: 21300000, guid: d95d7836fd3268543998f66154e57ead, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0a000000
@@ -258,7 +247,6 @@ MonoBehaviour:
   - id: 11
     name: "\uD751\uB9C8\uBC95\uC0AC"
     image: {fileID: 21300000, guid: 9b7e73686de4ed147a2e14563b9379a3, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0b000000
@@ -280,7 +268,6 @@ MonoBehaviour:
   - id: 12
     name: "\uB460"
     image: {fileID: 21300000, guid: 9d4460deafe53854182adb9167c91568, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0c000000
@@ -302,7 +289,6 @@ MonoBehaviour:
   - id: 13
     name: "\uD574\uACE8 \uBCD1\uC0AC"
     image: {fileID: 21300000, guid: f3791394a92974f469368d7d5d85e9d4, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0d000000
@@ -324,7 +310,6 @@ MonoBehaviour:
   - id: 14
     name: "\uB9AC\uCE58"
     image: {fileID: 21300000, guid: d4f70b2234891804ebc260654e574c86, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0e000000
@@ -346,7 +331,6 @@ MonoBehaviour:
   - id: 15
     name: "\uD761\uD608\uADC0"
     image: {fileID: 21300000, guid: 3b704301d52b1794b924de88cc183bfa, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 0f000000
@@ -368,7 +352,6 @@ MonoBehaviour:
   - id: 16
     name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     image: {fileID: 21300000, guid: c2cc8ff3eb6188c4899b9932f772e415, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 10000000
@@ -390,7 +373,6 @@ MonoBehaviour:
   - id: 17
     name: "\uB300\uC9C0\uC758 \uC815\uB839"
     image: {fileID: 21300000, guid: 61ce7bc8b2bd0c44c91e43c28c47cd8f, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 11000000
@@ -412,7 +394,6 @@ MonoBehaviour:
   - id: 18
     name: "\uBB3C\uC758 \uC815\uB839"
     image: {fileID: 21300000, guid: 3f0d9a70a58f70e46ad318d96fbe7a0e, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 12000000
@@ -434,7 +415,6 @@ MonoBehaviour:
   - id: 19
     name: "\uBD88\uC758 \uC815\uB839"
     image: {fileID: 21300000, guid: e951c1ddf19e8284a8ab72445d9eecd2, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 13000000
@@ -456,7 +436,6 @@ MonoBehaviour:
   - id: 20
     name: "\uC815\uC2E0\uC758 \uC815\uB839"
     image: {fileID: 21300000, guid: 70840c2ee6861d947a870eaa52880ec8, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 14000000
@@ -478,7 +457,6 @@ MonoBehaviour:
   - id: 21
     name: "\uB55C\uC7A5\uC774"
     image: {fileID: 21300000, guid: b9f1d16098e64984db7de55f8ccf4094, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 15000000
@@ -500,7 +478,6 @@ MonoBehaviour:
   - id: 22
     name: "\uACE0\uCCA0 \uAC70\uC778"
     image: {fileID: 21300000, guid: 41662143aa292324b890b7cb6da77543, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 16000000
@@ -522,7 +499,6 @@ MonoBehaviour:
   - id: 23
     name: "\uC790\uC774\uB85C\uCF65\uD130"
     image: {fileID: 21300000, guid: 02d0cd4512c4ee743abc924b4ed2d8e3, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 17000000
@@ -544,7 +520,6 @@ MonoBehaviour:
   - id: 24
     name: "\uD06C\uB9AC\uC2A4\uD0C8 \uB4DC\uB798\uACE4"
     image: {fileID: 21300000, guid: 05a400005a38a28408d831c15c150c6d, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 18000000
@@ -566,7 +541,6 @@ MonoBehaviour:
   - id: 25
     name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     image: {fileID: 21300000, guid: 9cc6821e68aaec8469caefdd2bb0fbb8, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 19000000
@@ -588,7 +562,6 @@ MonoBehaviour:
   - id: 26
     name: "\uC2A4\uD0EC\uD53C\uB4DC"
     image: {fileID: 21300000, guid: 2d1bcf94a8cfd25408f9381b4879c96a, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 1a000000
@@ -610,7 +583,6 @@ MonoBehaviour:
   - id: 27
     name: "\uD4E8\uB9AC\uC628"
     image: {fileID: 21300000, guid: 390de044cdee89d42adfc533dab0eb86, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 1b000000
@@ -632,7 +604,6 @@ MonoBehaviour:
   - id: 28
     name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     image: {fileID: 21300000, guid: dc20d540e0355aa44800e476196ad20c, type: 3}
-    statusImage: {fileID: 0}
     oneStarAbilityData:
       Sheet: {fileID: 11400000, guid: 4afa5275ce907ab4c87f4fc4b66d28c8, type: 2}
       idxList: 1c000000

@@ -112,7 +112,10 @@ public class BattleStatus : MonoBehaviour
         List<Pawn> pawns = new List<Pawn>();
         pawns.AddRange(characters);
         pawns.AddRange(enemies);
-        pawnsAttackSequenceList = pawns.OrderBy(x => x.ability.dexterity).ToList();
+
+        // 나중에 리스트에 추가해서 해야함.
+        
+        //pawnsAttackSequenceList = pawns.OrderBy(x => x.ability.dexterity).ToList();
     }
 
     private void InitializeAnnihilation()

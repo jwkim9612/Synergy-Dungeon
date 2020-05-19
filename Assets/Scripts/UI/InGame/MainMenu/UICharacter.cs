@@ -24,9 +24,9 @@ public class UICharacter : MonoBehaviour
 
         character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
         character.SetSize(0.5f);
-        character.SetImage(GameManager.instance.dataSheet.characterDatas[characterInfo.id].image);
-        character.SetAbility(GameManager.instance.dataSheet.characterDatas[characterInfo.id].GetAbilityDataByStar(characterInfo.star));
-        character.SetName(GameManager.instance.dataSheet.characterDatas[characterInfo.id].name);
+        character.SetImage(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Image);
+        character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo));
+        character.SetName(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Name);
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;

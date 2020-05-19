@@ -15,7 +15,7 @@ public class UIDetailedSettings : MonoBehaviour
 
     void Start()
     {
-        OnDetailedSettingChanged = characterList.Sort;
+        OnDetailedSettingChanged += characterList.Sort;
     }
 
     public void OnCostValueChanged()
