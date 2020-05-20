@@ -45,7 +45,9 @@ public class GameState : MonoBehaviour
         switch (inGameState)
         {
             case InGameState.Prepare:
-                InGameManager.instance.playerState.IncreaseCoin(3);
+                InGameManager.instance.playerState.IncreaseCoin(
+                    GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas[StageManager.Instance.currentWave-1].GoldAmount);
+                Debug.Log(StageManager.Instance.currentWave - 1);
                 OnPrepare();
                 break;
 

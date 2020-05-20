@@ -103,7 +103,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_FairyDragon
+    ImagePath: "Images/Character/\uC778\uAC04 \uAD81\uC218"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     Tribe: 2
     Origin: 5
     Tier: 1
-    ImagePath: Images/Old Character/Character_24
+    ImagePath: "Images/Character/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     Tribe: 3
     Origin: 5
     Tier: 3
-    ImagePath: "Images/Character/\uC545\uB9C8\uC804\uC0AC"
+    ImagePath: "Images/Character/\uC545\uB9C8 \uC804\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
     Tribe: 3
     Origin: 4
     Tier: 2
-    ImagePath: Images/Old Character/Character_30
+    ImagePath: Images/Old Character/Character_DevilKnight
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
     Tribe: 4
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_25
+    ImagePath: "Images/Character/\uC778\uAC04 \uC131\uAE30\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -392,7 +392,7 @@ MonoBehaviour:
     Tribe: 7
     Origin: 4
     Tier: 1
-    ImagePath: Images/Old Character/Character_19
+    ImagePath: "Images/Character/\uC778\uAC04 \uC804\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -426,7 +426,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 5
     Tier: 3
-    ImagePath: Images/Old Character/Character_29
+    ImagePath: "Images/Character/\uC778\uAC04 \uC804\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 2
     Tier: 1
-    ImagePath: Images/Old Character/character_sneak
+    ImagePath: "Images/Character/\uC778\uAC04 \uB3C4\uC801"
     Image: {fileID: 0}
     OriginData:
       Name: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 4
     Tier: 4
-    ImagePath: Images/Old Character/Character_HolyKnight
+    ImagePath: "Images/Character/\uC778\uAC04 \uC131\uAE30\uC0AC"
     Image: {fileID: 0}
     OriginData:
       Name: 0
