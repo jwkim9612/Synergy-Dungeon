@@ -16,8 +16,6 @@ public class Enemy : Pawn
         ability.SetAbility(enemyData);
 
         currentHP = ability.Health;
-        Debug.Log("ability.Healdth :" +ability.Health);
-        Debug.Log("currentHP :" +currentHP);
     }
 
     //public override void Attack(Pawn target)

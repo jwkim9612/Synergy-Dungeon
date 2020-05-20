@@ -9,6 +9,7 @@ public class CardService
     public const int NUM_OF_CARDS = 29;
     public const int MAX_NUM_OF_CARDS_PER_CHARACTER = 9;
     public const int RELOAD_PRICE = 2;
+    public const int ADDEXP_PRICE = 1;
 
     public const string DEFAULT_IMAGE_NAME = "Empty";
 

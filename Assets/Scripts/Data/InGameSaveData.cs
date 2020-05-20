@@ -12,6 +12,8 @@ public class InGameSaveData
     public int coin { get; set; }
     public int chapter { get; set; }
     public int wave { get; set; }
+    public int level { get; set; }
+    public int exp { get; set; }
 
     //public void SetInGameData(List<Character> characters, List<Enemy> enemies)
     //{

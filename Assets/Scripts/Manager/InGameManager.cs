@@ -36,6 +36,7 @@ public class InGameManager : MonoBehaviour
         combinationService = new CombinationService();
         synergyService = new SynergyService();
 
+        playerState.Initialize();
         stockService.Initialize();
         probabilityService.Initialize();
         combinationService.Initialize();

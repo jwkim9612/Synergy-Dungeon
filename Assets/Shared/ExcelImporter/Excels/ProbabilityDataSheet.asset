@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: ProbabilityDataSheet
   m_EditorClassIdentifier: 
   ProbabilityDatas:
-  - Level: 2
+  - Level: 1
     OneTier: 100
     TwoTier: 0
+    ThreeTier: 0
+    FourTier: 0
+  - Level: 2
+    OneTier: 85
+    TwoTier: 15
     ThreeTier: 0
     FourTier: 0
   - Level: 3
@@ -29,17 +34,17 @@ MonoBehaviour:
     ThreeTier: 15
     FourTier: 0
   - Level: 5
-    OneTier: 35
-    TwoTier: 42
-    ThreeTier: 22
-    FourTier: 1
-  - Level: 6
-    OneTier: 20
+    OneTier: 30
     TwoTier: 35
-    ThreeTier: 35
+    ThreeTier: 30
+    FourTier: 5
+  - Level: 6
+    OneTier: 25
+    TwoTier: 35
+    ThreeTier: 30
     FourTier: 10
   - Level: 7
-    OneTier: 14
+    OneTier: 15
     TwoTier: 30
-    ThreeTier: 40
-    FourTier: 16
+    ThreeTier: 35
+    FourTier: 20

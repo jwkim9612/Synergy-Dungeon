@@ -18,6 +18,15 @@ namespace Shared.Service
             return randomNum;
         }
 
+        /// <summary>
+        /// 0부터 100까지의 수 중 랜덤으로 하나 리턴
+        /// </summary>
+        /// <returns></returns>
+        public static long GetRandomLong()
+        {
+            return (long)(GetRandom() * 100);
+        }
+
         public static int RandRange(int min, int max)
         {
             return random.Next(min, max);

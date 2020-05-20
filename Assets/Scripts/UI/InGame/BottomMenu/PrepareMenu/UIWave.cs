@@ -9,8 +9,6 @@ public class UIWave : MonoBehaviour
 
     public void Start()
     {
-        StageManager.Instance.OnChangedWave += UpdateText;
-
         UpdateText();
     }
 

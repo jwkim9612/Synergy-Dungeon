@@ -12,7 +12,7 @@ public class DraggableCentral : MonoBehaviour
     public UIPrepareArea uiPrepareArea;
 
     [SerializeField] private UICharacter invisibleCharacter = null;
-    [SerializeField] private Transform SellArea = null;
+    [SerializeField] private UISellArea sellArea = null;
 
     private List<Arranger> arrangers;
     private UICharacter swappedCharacter;
@@ -77,7 +77,8 @@ public class DraggableCentral : MonoBehaviour
         parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
         originalSize = uiCharacter.character.GetSize();
-        SellArea.gameObject.SetActive(true);
+        sellArea.UpdatePrice(uiCharacter.characterInfo);
+        sellArea.gameObject.SetActive(true);
     }
 
     void Drag(UICharacter uiCharacter)
@@ -157,26 +158,26 @@ public class DraggableCentral : MonoBehaviour
         }
 
         // Sell에 드래그했을 때
-        if (TransformService.ContainPos(SellArea as RectTransform, uiCharacter.transform.position))
+        if (TransformService.ContainPos(sellArea.transform as RectTransform, uiCharacter.transform.position))
         {
             isSelling = true;
-            SellArea.gameObject.GetComponent<Image>().color = Color.red;
+            sellArea.gameObject.GetComponent<Image>().color = Color.red;
         }
         else
         {
             isSelling = false;
-            SellArea.gameObject.GetComponent<Image>().color = Color.white;
+            sellArea.gameObject.GetComponent<Image>().color = Color.white;
         }
     }
 
     void EndDrag(UICharacter uiCharacter)
     {
-        SellArea.gameObject.SetActive(false);
+        sellArea.gameObject.SetActive(false);
 
         if (isSelling)
         {
             selledCharacterInfo = uiCharacter.DeleteCharacterBySell();
-            SellArea.gameObject.GetComponent<Image>().color = Color.white;
+            sellArea.gameObject.GetComponent<Image>().color = Color.white;
         }
         else
         {
@@ -404,6 +405,9 @@ public class DraggableCentral : MonoBehaviour
 
     private bool IsPlaceableSpaceFull()
     {
-        return uiCharacterArea.NumOfCurrentPlacedCharacters >= InGameManager.instance.playerState.NumOfCanBePlacedInBattleArea ? true : false;
+        int numOfCurrentPlacedCharacters = uiCharacterArea.numOfCurrentPlacedCharacters;
+        int numOfCanBePlacedInBattleArea = InGameManager.instance.playerState.numOfCanBePlacedInBattleArea;
+
+        return numOfCurrentPlacedCharacters >= numOfCanBePlacedInBattleArea ? true : false;
     }
 }

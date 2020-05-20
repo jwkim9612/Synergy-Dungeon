@@ -3313,6 +3313,7 @@ MonoBehaviour:
   enemyDataSheet: {fileID: 11400000, guid: fe5d18d92b280eb40857258baecc7677, type: 2}
   probabilityDataSheet: {fileID: 11400000, guid: 29315747a085c9c44aa10b46f2854d4b,
     type: 2}
+  inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
 --- !u!1 &1881094288
 GameObject:
   m_ObjectHideFlags: 0

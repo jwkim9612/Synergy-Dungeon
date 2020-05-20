@@ -4,12 +4,9 @@ using UnityEngine;
 using System;
 
 [Serializable]
-
-public class ProbabilityData
+public class InGameExpData
 {
     public int Level;
-    public int OneTier;
-    public int TwoTier;
-    public int ThreeTier;
-    public int FourTier;
+    public int SatisfyExp;
+    public int CumulativeExp;
 }

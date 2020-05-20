@@ -5,8 +5,8 @@ using geniikw.DataSheetLab;
 
 public class StageManager : MonoSingleton<StageManager>
 {
-    public delegate void OnChangedWaveDelegate();
-    public OnChangedWaveDelegate OnChangedWave { get; set; }
+    //public delegate void OnChangedWaveDelegate();
+    //public OnChangedWaveDelegate OnChangedWave { get; set; }
     
     public int currentChapter = 1;
     public int currentWave = 1;
@@ -14,7 +14,7 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void Initialize()
     {
-
+        currentWave = 1;
     }
 
     public void SetChapterData(int chapter)
@@ -33,7 +33,7 @@ public class StageManager : MonoSingleton<StageManager>
     public void IncreaseWave(int increaseValue)
     {
         currentWave = Mathf.Clamp(currentWave + increaseValue, 1, (currentChapterData.TotalWave));
-        OnChangedWave();
+        //OnChangedWave();
     }
 
     public bool IsFinalWave()

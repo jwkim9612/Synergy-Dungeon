@@ -9,8 +9,9 @@ public class InGameService : MonoBehaviour
     public const float SIZE_TO_BLUR = 0.5f;
     public const int NUMBER_OF_BACKAREA = 4;
     public const int NUMBER_OF_FRONTAREA = 3;
-    public const int MAX_NUMBER_OF_CAN_PLACED = 6;
+    public const int MAX_NUMBER_OF_CAN_PLACED = 7;
     public const int MIN_NUMBER_OF_CAN_PLACED = 0;
+    public const int CAN_BUY_EXP = 1;
 
     public static Character defaultCharacter;
     public static Enemy defaultEnemy;

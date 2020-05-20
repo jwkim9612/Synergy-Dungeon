@@ -13,6 +13,7 @@ public class DataSheet : MonoBehaviour
 	public CharacterAbilityDataSheet characterAbilityDataSheet;
 	public EnemyDataSheet enemyDataSheet;
 	public ProbabilityDataSheet probabilityDataSheet;
+	public InGameExpDataSheet inGameExpDataSheet;
 
     public void Initialize()
     {

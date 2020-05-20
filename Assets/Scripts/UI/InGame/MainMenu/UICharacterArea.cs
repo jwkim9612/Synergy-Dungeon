@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class UICharacterArea : MonoBehaviour
 {
+    public delegate void OnPlacementChangedDelegate();
+    public OnPlacementChangedDelegate OnPlacementChanged { get; set; }
+
     public UICharacterPlacementArea frontArea;
     public UICharacterPlacementArea backArea;
-    public int NumOfCurrentPlacedCharacters;
+    public int numOfCurrentPlacedCharacters { get; set; }
 
     public void Initialize()
     {
@@ -16,9 +19,12 @@ public class UICharacterArea : MonoBehaviour
         if (SaveManager.Instance.HasInGameData())
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
+            OnPlacementChanged();
         }
-
-        NumOfCurrentPlacedCharacters = 0;
+        else
+        {
+            numOfCurrentPlacedCharacters = 0;
+        }
     }
 
     public bool IsEmpty()
@@ -52,6 +58,8 @@ public class UICharacterArea : MonoBehaviour
         frontArea.InitializeByInGameSaveData(frontAreaInfos);
 
         var uiCharacterListWithCharacter = GetUICharacterListWithCharacters();
+        numOfCurrentPlacedCharacters = uiCharacterListWithCharacter.Count;
+
         foreach(var uiCharacter in uiCharacterListWithCharacter)
         {
             uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
@@ -114,18 +122,21 @@ public class UICharacterArea : MonoBehaviour
 
     public void AddCurrentPlacedCharacter()
     {
-        if (NumOfCurrentPlacedCharacters == InGameService.MAX_NUMBER_OF_CAN_PLACED)
+        if (numOfCurrentPlacedCharacters == InGameService.MAX_NUMBER_OF_CAN_PLACED)
             return;
 
-        ++NumOfCurrentPlacedCharacters;
+        ++numOfCurrentPlacedCharacters;
+        OnPlacementChanged();
+
     }
 
     public void SubCurrentPlacedCharacter()
     {
-        if (NumOfCurrentPlacedCharacters == InGameService.MIN_NUMBER_OF_CAN_PLACED)
+        if (numOfCurrentPlacedCharacters == InGameService.MIN_NUMBER_OF_CAN_PLACED)
             return;
 
-        --NumOfCurrentPlacedCharacters;
+        --numOfCurrentPlacedCharacters;
+        OnPlacementChanged();
     }
 
     public void SubCurrentPlacedCharacterFromCombinations(UICharacter uiCharacter, bool isFirstCharacter)
@@ -134,6 +145,9 @@ public class UICharacterArea : MonoBehaviour
             return;
 
         if (uiCharacter.GetArea<UIBattleArea>() != null)
-            --NumOfCurrentPlacedCharacters;
+        {
+            --numOfCurrentPlacedCharacters;
+            OnPlacementChanged();
+        }
     }
 }

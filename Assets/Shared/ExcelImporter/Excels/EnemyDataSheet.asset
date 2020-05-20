@@ -29,7 +29,7 @@ MonoBehaviour:
     Name: "\uB9C8\uBC29\uC2AC\uB77C\uC784"
     Attack: 40
     MagicAttack: 0
-    Health: 50
+    Health: 20
     Defence: 10
     MagicDefence: 20
     Shield: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     Name: "\uADFC\uC811\uC2AC\uB77C\uC784"
     Attack: 50
     MagicAttack: 0
-    Health: 100
+    Health: 20
     Defence: 5
     MagicDefence: 5
     Shield: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     Name: "\uAD81\uC218\uC2AC\uB77C\uC784"
     Attack: 50
     MagicAttack: 0
-    Health: 200
+    Health: 20
     Defence: 10
     MagicDefence: 10
     Shield: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
     Name: "\uBC95\uC0AC\uC2AC\uB77C\uC784"
     Attack: 0
     MagicAttack: 50
-    Health: 350
+    Health: 20
     Defence: 10
     MagicDefence: 15
     Shield: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
     Name: "\uBC29\uC5B4\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
     MagicAttack: 0
-    Health: 450
+    Health: 20
     Defence: 25
     MagicDefence: 10
     Shield: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
     Name: "\uB9C8\uBC29\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
     MagicAttack: 0
-    Health: 450
+    Health: 20
     Defence: 10
     MagicDefence: 25
     Shield: 0

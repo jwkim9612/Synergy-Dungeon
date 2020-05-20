@@ -41,6 +41,8 @@ public class SaveManager : MonoSingleton<SaveManager>
     public void SetInGameData()
     {
         _inGameSaveData.coin = InGameManager.instance.playerState.coin;
+        _inGameSaveData.level = InGameManager.instance.playerState.level ;
+        _inGameSaveData.exp = InGameManager.instance.playerState.exp;
         _inGameSaveData.chapter = StageManager.Instance.currentChapter;
         _inGameSaveData.wave = StageManager.Instance.currentWave + 1;
         _inGameSaveData.characterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();

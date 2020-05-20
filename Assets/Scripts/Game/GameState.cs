@@ -6,8 +6,10 @@ public class GameState : MonoBehaviour
 {
     public delegate void OnPrepareDelegate();
     public delegate void OnBattleDelegate();
+    public delegate void OnCompleteDelegate();
     public OnPrepareDelegate OnPrepare { get; set; }
     public OnBattleDelegate OnBattle { get; set; }
+    public OnCompleteDelegate OnComplete { get; set; }
 
     public InGameState inGameState { get; set; } = InGameState.None;
     public StageManager stageManager { get; set; }
@@ -45,9 +47,6 @@ public class GameState : MonoBehaviour
         switch (inGameState)
         {
             case InGameState.Prepare:
-                InGameManager.instance.playerState.IncreaseCoin(
-                    GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas[StageManager.Instance.currentWave-1].GoldAmount);
-                Debug.Log(StageManager.Instance.currentWave - 1);
                 OnPrepare();
                 break;
 
@@ -68,6 +67,7 @@ public class GameState : MonoBehaviour
                     stageManager.IncreaseWave(1);
                     SetInGameState(InGameState.Prepare);
                 }
+                OnComplete();
                 break;
 
             case InGameState.Lose:
