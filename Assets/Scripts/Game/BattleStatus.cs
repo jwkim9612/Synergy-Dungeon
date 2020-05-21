@@ -77,8 +77,9 @@ public class BattleStatus : MonoBehaviour
         // 배틀 종료 
         if (isCharacterAnnihilation)
         {
-            SaveManager.Instance.SetInGameData();
-            SaveManager.Instance.SaveInGameData();
+            //SaveManager.Instance.SetInGameData();
+            //SaveManager.Instance.SaveInGameData();
+            SaveManager.Instance.DeleteInGameData();
             InGameManager.instance.gameState.isPlayerLose = true;
             Debug.Log("Battle End");
             yield break;
