@@ -25,6 +25,5 @@ public class UIAskBackToMainMenu : UIControl
         {
             UIManager.Instance.HideAndShowPreview();
         });
-
     }
 }

@@ -32,6 +32,7 @@ public struct Ability
         Defence = characterAbilityData.Defence;
         MagicDefence = characterAbilityData.MagicDefence;
         Shield = characterAbilityData.Shield;
+        Accuracy = characterAbilityData.Accuracy;
         Evasion = characterAbilityData.Evasion;
         AttackSpeed = characterAbilityData.AttackSpeed;
     }
@@ -44,6 +45,7 @@ public struct Ability
         Defence = enemyData.Defence;
         MagicDefence = enemyData.MagicDefence;
         Shield = enemyData.Shield;
+        Accuracy = enemyData.Accuracy;
         Evasion = enemyData.Evasion;
         AttackSpeed = enemyData.AttackSpeed;
     }
@@ -54,6 +56,7 @@ public struct Ability
     public long Defence;
     public long MagicDefence;
     public long Shield;
+    public long Accuracy;
     public long Evasion;
     public long AttackSpeed;
 }

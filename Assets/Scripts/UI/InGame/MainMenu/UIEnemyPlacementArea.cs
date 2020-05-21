@@ -10,6 +10,11 @@ public class UIEnemyPlacementArea : MonoBehaviour
     public void Initialize()
     {
         uiEnemies = GetComponentsInChildren<UIEnemy>().ToList();
+        
+        foreach(var uiEnemy in uiEnemies)
+        {
+            uiEnemy.Initialize();
+        }
     }
 
     public List<Enemy> GetEnemyList()
@@ -37,5 +42,4 @@ public class UIEnemyPlacementArea : MonoBehaviour
             StartCoroutine(uiEnemy.Co_FollowEnemy());
         }
     }
-
 }

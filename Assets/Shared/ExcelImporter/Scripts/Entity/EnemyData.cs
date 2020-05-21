@@ -14,6 +14,7 @@ public class EnemyData
     public long Defence;
     public long MagicDefence;
     public long Shield;
+    public long Accuracy;
     public long Evasion;
     public long AttackSpeed;
     public string ImagePath;

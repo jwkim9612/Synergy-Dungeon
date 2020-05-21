@@ -85,24 +85,6 @@ public class DraggableCentral : MonoBehaviour
     {
         Arranger whichArrangersCharacter;
 
-        // 전투중이라면
-        //if (InGameManager.instance.gameState.inGameState == InGameState.Battle)
-        //{
-        //    // 드래그가 준비중인 캐릭터들 위치에 있다면
-        //    if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
-        //    {
-        //        whichArrangersCharacter = uiPrepareArea;
-        //    }
-        //    else
-        //    {
-        //        whichArrangersCharacter = null;
-        //    }
-        //}
-        //else
-        //{
-        //    whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, uiCharacter.transform.position));
-        //}
-
         whichArrangersCharacter = arrangers.Find(t => TransformService.ContainPos(t.transform as RectTransform, uiCharacter.transform.position));
 
         if (whichArrangersCharacter != null)
@@ -193,11 +175,6 @@ public class DraggableCentral : MonoBehaviour
             }
         }
 
-
-        //SwapCharacters(invisibleCharacter, uiCharacter);
-        //UpdateSynergyService(uiCharacter);
-        //Updatetest(uiCharacter);
-
         UpdateSynergyService(uiCharacter);
         UpdateCurrentPlacedCharacters();
         SwapCharacters(invisibleCharacter, uiCharacter);
@@ -232,52 +209,6 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
-    // 시너지서비스에 넣어주기
-    //public void UpdateSynergyService(UICharacter uiCharacter)
-    //{
-    //    if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
-    //    {
-    //        InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
-    //        return;
-    //    }
-
-    //    if (uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
-    //        return;
-
-    //    //CharacterArea에서 PrepareArea로 바꿨을 경우
-    //    if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
-    //    {
-    //        if (swappedCharacter.character == null)
-    //        {
-    //            // uiCharacter를 하나 빼준다.
-    //            InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
-    //        }
-    //        else
-    //        {
-    //            // uiCharacter를 하나 빼주고,
-    //            InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
-    //            InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
-    //            // swappedCharacter를 하나 더해준다.
-    //        }
-    //    }
-    //    // PrepareArea에서 CharacterArea로 바꿨을 경우
-    //    else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
-    //    {
-    //        if (swappedCharacter.character == null)
-    //        {
-    //            InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
-    //            // uicharacter를 하나 더해준다.
-    //        }
-    //        else
-    //        {
-    //            // uicharacter를 하나 더해주고
-    //            InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
-    //            InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
-    //            // swapped를 하나 빼준다.
-    //        }
-    //    }
-    //}
-
     public void UpdateSynergyService(UICharacter uiCharacter)
     {
         if (IsMoveToSell())
@@ -310,37 +241,6 @@ public class DraggableCentral : MonoBehaviour
             }
         }
     }
-
-    //public void Updatetest(UICharacter uiCharacter)
-    //{
-    //    if (uiCharacter.GetArea<UICharacterArea>() != null && isSelling)
-    //    {
-    //        --uiCharacterArea.NumOfCurrentPlacedCharacters;
-    //        return;
-    //    }
-
-    //    if (uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag)
-    //        return;
-
-    //    //CharacterArea에서 PrepareArea로 바꿨을 경우
-    //    if (uiCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null)
-    //    {
-    //        if (swappedCharacter.character == null)
-    //        {
-    //            --uiCharacterArea.NumOfCurrentPlacedCharacters;
-    //            Debug.Log(uiCharacterArea.NumOfCurrentPlacedCharacters);
-    //        }
-    //    }
-    //    // PrepareArea에서 CharacterArea로 바꿨을 경우
-    //    else if (uiCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null)
-    //    {
-    //        if (swappedCharacter.character == null)
-    //        {
-    //            ++uiCharacterArea.NumOfCurrentPlacedCharacters;
-    //            Debug.Log(uiCharacterArea.NumOfCurrentPlacedCharacters);
-    //        }
-    //    }
-    //}
 
     public void UpdateCurrentPlacedCharacters()
     {

@@ -61,9 +61,6 @@ public class UICharacterSlotToShow : MonoBehaviour
             case Tier.Four:
                 costBorder.color = Color.red;
                 break;
-            case Tier.Five:
-                costBorder.color = Color.yellow;
-                break;
             default:
                 Debug.Log("Error SetCostBorder");
                 break;

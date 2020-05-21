@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using geniikw.DataSheetLab;
+using System.Linq;
 
 public class UIEnemy : MonoBehaviour
 {
     [SerializeField] private UIHPBar uiHPBar = null;
-    [SerializeField] private UIHitText[] uiHitTexts = null;
+    [SerializeField] private List<UIFloatingText> uiFloatingTextList = null;
     public Enemy enemy;
+
+    public void Initialize()
+    {
+        uiFloatingTextList = new List<UIFloatingText>();
+        uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
+    }
 
     public void SetEnemy(EnemyData newEnmeyData)
     {
@@ -18,13 +25,12 @@ public class UIEnemy : MonoBehaviour
         enemy.SetImage(newEnmeyData.Image);
         enemy.SetAbility(newEnmeyData);
         enemy.SetName(newEnmeyData.Name);
-
         enemy.OnIsDead += PlayDeadCoroutine;
         enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayShowHPBarForMoment;
-        enemy.SetUIHitTexts(uiHitTexts);
-        enemy.InitializeUIHitTexts();
+        enemy.SetUIFloatingTextList(uiFloatingTextList);
+        enemy.InitializeUIFloatingTextList();
 
         StartCoroutine(Co_PrepareFollowEnemy());
         uiHPBar.Initialize();
@@ -117,9 +123,5 @@ public class UIEnemy : MonoBehaviour
         {
             enemy.transform.position = this.transform.position;
         }
-    }
-
-    void OnDestroy()
-    {
     }
 }

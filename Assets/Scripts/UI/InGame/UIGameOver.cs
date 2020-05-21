@@ -15,5 +15,4 @@ public class UIGameOver : MonoBehaviour
             SceneManager.LoadScene("MainScene");
         });
     }
-
 }

@@ -54,7 +54,6 @@ public class UIBattleStatusMenu : MonoBehaviour
             }
         });
 
-//        StageManager.Instance.OnChangedWave += uiWave.UpdateText;
         InGameManager.instance.gameState.OnPrepare += uiWave.UpdateText;
         InGameManager.instance.draggableCentral.uiCharacterArea.OnPlacementChanged += uiPlacementStatus.UpdatePlacementStatus;
         InGameManager.instance.playerState.OnLevelUp += uiPlacementStatus.UpdatePlacementStatus;

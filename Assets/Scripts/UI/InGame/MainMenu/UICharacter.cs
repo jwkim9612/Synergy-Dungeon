@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UICharacter : MonoBehaviour
 {
-    [SerializeField] private UIHitText[] uiHitTexts = null;
+    [SerializeField] private List<UIFloatingText> uiFloatingTextList = null;
     [SerializeField] private UIHPBar uiHPBar = null;
     public Character character;
     public bool isFightingOnBattlefield { get; set; }
@@ -15,6 +16,9 @@ public class UICharacter : MonoBehaviour
     private void Start()
     {
         isFightingOnBattlefield = false;
+
+        uiFloatingTextList = new List<UIFloatingText>();
+        uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
     }
 
     public void SetCharacter(CharacterInfo newCharacterInfo)
@@ -31,8 +35,8 @@ public class UICharacter : MonoBehaviour
         character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
         character.OnHit += PlayShowHPBarForMoment;
-        character.SetUIHitTexts(uiHitTexts);
-        character.InitializeUIHitTexts();
+        character.SetUIFloatingTextList(uiFloatingTextList);
+        character.InitializeUIFloatingTextList();
 
         StartCoroutine(Co_PrepareFollowCharacter());
         uiHPBar.Initialize();

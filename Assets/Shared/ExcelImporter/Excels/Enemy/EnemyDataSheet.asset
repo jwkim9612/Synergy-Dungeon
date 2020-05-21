@@ -21,7 +21,8 @@ MonoBehaviour:
     Defence: 20
     MagicDefence: 10
     Shield: 0
-    Evasion: 5
+    Accuracy: 100
+    Evasion: 100
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_16
     Image: {fileID: 0}
@@ -33,7 +34,8 @@ MonoBehaviour:
     Defence: 10
     MagicDefence: 20
     Shield: 0
-    Evasion: 5
+    Accuracy: 100
+    Evasion: 50
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_28
     Image: {fileID: 0}
@@ -45,6 +47,7 @@ MonoBehaviour:
     Defence: 5
     MagicDefence: 5
     Shield: 0
+    Accuracy: 100
     Evasion: 7
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_FairyDragon
@@ -57,6 +60,7 @@ MonoBehaviour:
     Defence: 10
     MagicDefence: 10
     Shield: 0
+    Accuracy: 100
     Evasion: 6
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_Doom
@@ -69,6 +73,7 @@ MonoBehaviour:
     Defence: 10
     MagicDefence: 15
     Shield: 0
+    Accuracy: 100
     Evasion: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -81,6 +86,7 @@ MonoBehaviour:
     Defence: 25
     MagicDefence: 10
     Shield: 0
+    Accuracy: 100
     Evasion: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -93,6 +99,7 @@ MonoBehaviour:
     Defence: 10
     MagicDefence: 25
     Shield: 0
+    Accuracy: 100
     Evasion: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -105,6 +112,7 @@ MonoBehaviour:
     Defence: 7
     MagicDefence: 7
     Shield: 0
+    Accuracy: 100
     Evasion: 7
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -117,6 +125,7 @@ MonoBehaviour:
     Defence: 12
     MagicDefence: 12
     Shield: 0
+    Accuracy: 100
     Evasion: 6
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -129,6 +138,7 @@ MonoBehaviour:
     Defence: 10
     MagicDefence: 18
     Shield: 0
+    Accuracy: 100
     Evasion: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
@@ -141,6 +151,7 @@ MonoBehaviour:
     Defence: 71
     MagicDefence: 71
     Shield: 0
+    Accuracy: 100
     Evasion: 71
     AttackSpeed: 71
     ImagePath: Images/Tribe/Logo_HUMAN

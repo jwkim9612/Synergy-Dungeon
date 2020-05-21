@@ -12,7 +12,8 @@ public class UISynergyInfo : UIControl
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
     [SerializeField] private UICharacterSlotToShow characterSlotToShow = null;
 
-    private List<UICharacterSlotToShow> characterSlotsToShow = new List<UICharacterSlotToShow>();
+    //private List<UICharacterSlotToShow> characterSlotsToShow = new List<UICharacterSlotToShow>();
+    private List<UICharacterSlotToShow> characterSlotsToShow { get; set; }
 
     private TribeData tribeData = null;
     private OriginData originData = null;
@@ -88,6 +89,8 @@ public class UISynergyInfo : UIControl
 
     public void CreateCharacterList()
     {
+        characterSlotsToShow = new List<UICharacterSlotToShow>();
+
         var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
         foreach (var characterData in characterDatas)
         {

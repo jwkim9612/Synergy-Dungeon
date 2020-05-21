@@ -22,15 +22,6 @@ public class UICharacterSlot : MonoBehaviour
         SetTierBorder(CardService.GetColorByTier(characterData.Tier));
     }
 
-    //public void SetCharacterData(CharacterData newCharacterData)
-    //{
-    //    characterData = newCharacterData;
-
-    //    SetName(characterData.name);
-    //    SetImage(characterData.image);
-    //    SetTierBorder(CardService.GetColorByTier(characterData.tier));
-    //}
-
     public void SetName(string name)
     {
         if(name != null)

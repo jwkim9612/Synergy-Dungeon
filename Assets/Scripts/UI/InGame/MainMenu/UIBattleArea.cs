@@ -14,7 +14,6 @@ public class UIBattleArea : MonoBehaviour
         InGameManager.instance.gameState.OnBattle += SpaceExpansion;
         InGameManager.instance.gameState.OnPrepare += SpaceReduction;
         battleStatus.OnWinTheBattle += uiCharacterArea.ShowAllUICharacters;
-        //battleStatus.OnWinTheBattle += InGameManager.instance.probabilityService.UpdateProbability;
         battleStatus.OnWinTheBattle += InGameManager.instance.gameState.SetIsWaveClear;
     }
 

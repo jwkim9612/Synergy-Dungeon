@@ -18,9 +18,4 @@ public class UIWave : MonoBehaviour
 
         waveText.text = ("" + wave);
     }
-
-    //void OnDestroy()
-    //{
-    //    StageManager.Instance.OnChangedWave -= UpdateText;
-    //}
 }

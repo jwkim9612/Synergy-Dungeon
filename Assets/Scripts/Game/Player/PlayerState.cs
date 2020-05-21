@@ -44,27 +44,6 @@ public class PlayerState : MonoBehaviour
         InGameManager.instance.gameState.OnPrepare += IncreaseCoinByPrepare;
         InGameManager.instance.gameState.OnComplete += IncreaseExpByBattleWin;
     }
-    private void Start()
-    {
-        //if (SaveManager.Instance.HasInGameData())
-        //{
-        //    coin = SaveManager.Instance.inGameSaveData.coin;
-        //    level = SaveManager.Instance.inGameSaveData.level;
-        //    SatisfyExp = GameManager.instance.dataSheet.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
-        //    exp = SaveManager.Instance.inGameSaveData.exp;
-        //    numOfCanBePlacedInBattleArea = 3;
-        //}
-        //else
-        //{
-        //    coin = 100;
-        //    level = 1;
-        //    SatisfyExp = 2;
-        //    exp = 0;
-        //    numOfCanBePlacedInBattleArea = 3;
-        //}
-
-        //OnCoinChanged += uiBattleStatusMenu.UpdateCoinText;
-    }
 
     public void IncreaseCoin(int increaseValue)
     {

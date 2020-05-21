@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Permissions;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIHitText : MonoBehaviour
+public class UIFloatingText : MonoBehaviour
 {
     [SerializeField] private Transform canvas = null;
     [SerializeField] private float moveSpeed = 0.0f;
     [SerializeField] private float duration = 0.0f;
-    [SerializeField] private Text damageText = null;
+    [SerializeField] private Text text = null;
     private Vector3 originPosition;
     private Coroutine updateCoroutine;
 
@@ -30,9 +28,15 @@ public class UIHitText : MonoBehaviour
         updateCoroutine = StartCoroutine(UpdateText());
     }
 
-    public void SetDamageText(string text)
+    public void SetText(string text, Color color)
     {
-        damageText.text = text;
+        this.text.text = text;
+        this.text.color = color;
+    }
+
+    public void SetText(string text)
+    {
+        this.text.text = text;
     }
 
     private IEnumerator UpdateText()

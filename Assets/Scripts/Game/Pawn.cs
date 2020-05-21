@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using geniikw.DataSheetLab;
 using Newtonsoft.Json;
+using Shared.Service;
+using System.Linq;
 
 public class Pawn : MonoBehaviour
 {
@@ -20,15 +22,14 @@ public class Pawn : MonoBehaviour
     public Ability ability;
     protected long currentHP;
 
-    public UIHitText[] uiHitTexts { get; set; } = null;
-    private int hitTextIndex;
+    public List<UIFloatingText> uiFloatingTextList { get; set; } = null;
+    private int floatingTextIndex;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        hitTextIndex = 0;
+        floatingTextIndex = 0;
     }
-
 
     public void SetSize(float size)
     {
@@ -48,7 +49,14 @@ public class Pawn : MonoBehaviour
             return;
         }
 
-        long finalDamage = target.TakeDamage(ability.Attack);
+        if (GetAttackSuccessful(target))
+        {
+            long finalDamage = target.TakeDamage(ability.Attack);
+        }
+        else
+            target.PlayMissText();
+
+
         OnAttack();
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
@@ -87,37 +95,57 @@ public class Pawn : MonoBehaviour
         return currentHP / (float)ability.Health;
     }
 
+    private bool GetAttackSuccessful(Pawn target)
+    {
+        long currentAccuracy = ability.Accuracy - target.ability.Evasion;
+        long randomAccuracyNum = RandomService.GetRandomLong();
+
+        if (currentAccuracy <= randomAccuracyNum)
+            return false;
+        else
+            return true;
+    }
 
     public void SetName(string name)
     {
         this.name = name;
     }
 
-    public void SetUIHitTexts(UIHitText[] uiHitTexts)
+    public void SetUIFloatingTextList(List<UIFloatingText> uiFloatingTextList)
     {
-        this.uiHitTexts = uiHitTexts;
+        this.uiFloatingTextList = uiFloatingTextList;
     }
 
-    public void InitializeUIHitTexts()
+    public void InitializeUIFloatingTextList()
     {
-        if (uiHitTexts != null)
+        if (uiFloatingTextList != null)
         {
-            foreach(var uiHitText in uiHitTexts)
+            foreach(var uiFloatingText in uiFloatingTextList)
             {
-                uiHitText.Initialize();
+                uiFloatingText.Initialize();
             }
         }
     }
 
-    protected void PlayHitText(float damage)
+    private void PlayHitText(float damage)
     {
-        uiHitTexts[hitTextIndex].SetDamageText(damage.ToString());
-        uiHitTexts[hitTextIndex].Play();
+        uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
+        PlayFloatingText();
+    }
 
-        ++hitTextIndex;
+    private void PlayMissText()
+    {
+        uiFloatingTextList[floatingTextIndex].SetText("Miss", Color.gray);
+        PlayFloatingText();
+    }
 
-        if (hitTextIndex >= uiHitTexts.Length)
-            hitTextIndex = 0;
+    private void PlayFloatingText()
+    {
+        uiFloatingTextList[floatingTextIndex].Play();
+        ++floatingTextIndex;
+
+        if (floatingTextIndex >= uiFloatingTextList.Count)
+            floatingTextIndex = 0;
     }
 
     public void DestoryPawn()

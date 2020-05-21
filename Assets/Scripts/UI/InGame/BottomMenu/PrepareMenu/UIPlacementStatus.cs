@@ -11,7 +11,7 @@ public class UIPlacementStatus : MonoBehaviour
     {
         int numOfCurrentPlacedCharacters = InGameManager.instance.draggableCentral.uiCharacterArea.numOfCurrentPlacedCharacters;
         int numOfCanBePlacedInBattleArea = InGameManager.instance.playerState.numOfCanBePlacedInBattleArea;
-        Debug.Log("numOfCurrentPlacedCharacters" + numOfCurrentPlacedCharacters);
+
         placementStatus.text = numOfCurrentPlacedCharacters + "/" + numOfCanBePlacedInBattleArea;
     }
 }

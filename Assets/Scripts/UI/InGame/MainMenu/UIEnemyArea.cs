@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIEnemyArea : MonoBehaviour
 {
-    //[SerializeField] private List<UIEnemy> uiEnemies = null;
     public UIEnemyPlacementArea frontArea;
     public UIEnemyPlacementArea backArea;
 

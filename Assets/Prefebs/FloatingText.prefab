@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 45366340130474620}
   - component: {fileID: 45366340130474622}
-  - component: {fileID: 7618492651073860859}
+  - component: {fileID: 6688839274797431601}
   - component: {fileID: 45366340130474621}
   - component: {fileID: 45366340130474623}
   m_Layer: 5
-  m_Name: HitText
+  m_Name: FloatingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45366340130474619}
   m_CullTransparentMesh: 0
---- !u!114 &7618492651073860859
+--- !u!114 &6688839274797431601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56,13 +56,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 45366340130474619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a06a6207d54a81478ba163c7afc407c, type: 3}
+  m_Script: {fileID: 11500000, guid: 864aa09bf5c9645468d8ee41d5be9118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   moveSpeed: 0.5
   duration: 1.5
-  damageText: {fileID: 45366340130474621}
+  text: {fileID: 45366340130474621}
 --- !u!114 &45366340130474621
 MonoBehaviour:
   m_ObjectHideFlags: 0

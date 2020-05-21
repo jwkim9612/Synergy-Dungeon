@@ -1,0 +1,508 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4c0dee2b40834943acfce86b4181ab9, type: 3}
+  m_Name: CharacterDataSheet
+  m_EditorClassIdentifier: 
+  characterDatas:
+  - Id: 0
+    Name: "\uACE0\uCCA0\uAC70\uC778"
+    Tribe: 1
+    Origin: 4
+    Tier: 1
+    ImagePath: Images/Old Character/Character_22
+    Image: {fileID: 21300000, guid: 41662143aa292324b890b7cb6da77543, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 1
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 1
+    Name: "\uB55C\uC7A5\uC774"
+    Tribe: 1
+    Origin: 5
+    Tier: 3
+    ImagePath: Images/Old Character/Character_21
+    Image: {fileID: 21300000, guid: b9f1d16098e64984db7de55f8ccf4094, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 1
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 2
+    Name: "\uC790\uC774\uB85C\uCF65\uD130"
+    Tribe: 1
+    Origin: 1
+    Tier: 4
+    ImagePath: Images/Old Character/Character_23
+    Image: {fileID: 21300000, guid: 02d0cd4512c4ee743abc924b4ed2d8e3, type: 3}
+    OriginData:
+      Name: 1
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 1
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 3
+    Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
+    Tribe: 2
+    Origin: 1
+    Tier: 2
+    ImagePath: Images/Old Character/Character_16
+    Image: {fileID: 21300000, guid: c2cc8ff3eb6188c4899b9932f772e415, type: 3}
+    OriginData:
+      Name: 1
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 2
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 4
+    Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
+    Tribe: 2
+    Origin: 3
+    Tier: 2
+    ImagePath: Images/Old Character/Character_28
+    Image: {fileID: 21300000, guid: dc20d540e0355aa44800e476196ad20c, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 2
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 5
+    Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
+    Tribe: 2
+    Origin: 4
+    Tier: 1
+    ImagePath: "Images/Character/\uC778\uAC04 \uAD81\uC218"
+    Image: {fileID: 21300000, guid: a8e9f7b856634504b9ca1034c8e64c0d, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 2
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 6
+    Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
+    Tribe: 2
+    Origin: 5
+    Tier: 1
+    ImagePath: "Images/Character/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
+    Image: {fileID: 21300000, guid: 4cb2ea99f84a96a43838de5af423c9d7, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 2
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 7
+    Name: "\uB460"
+    Tribe: 3
+    Origin: 5
+    Tier: 3
+    ImagePath: "Images/Character/\uC545\uB9C8 \uC804\uC0AC"
+    Image: {fileID: 21300000, guid: c0014a59a13e12d4cbb4272e05bf9649, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 3
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 8
+    Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
+    Tribe: 3
+    Origin: 4
+    Tier: 2
+    ImagePath: Images/Old Character/Character_DevilKnight
+    Image: {fileID: 21300000, guid: d95d7836fd3268543998f66154e57ead, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 3
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 9
+    Name: "\uD751\uB9C8\uBC95\uC0AC"
+    Tribe: 3
+    Origin: 3
+    Tier: 4
+    ImagePath: Images/Old Character/Character_ BlackWizard
+    Image: {fileID: 21300000, guid: 9b7e73686de4ed147a2e14563b9379a3, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 3
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 10
+    Name: "\uC2A4\uD0EC\uD53C\uB4DC"
+    Tribe: 4
+    Origin: 2
+    Tier: 3
+    ImagePath: Images/Old Character/Character_26
+    Image: {fileID: 21300000, guid: 2d1bcf94a8cfd25408f9381b4879c96a, type: 3}
+    OriginData:
+      Name: 2
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 4
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 11
+    Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
+    Tribe: 4
+    Origin: 4
+    Tier: 1
+    ImagePath: "Images/Character/\uC778\uAC04 \uC131\uAE30\uC0AC"
+    Image: {fileID: 21300000, guid: 4defef3650405094c91e3c37310b9e27, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 4
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 12
+    Name: "\uD4E8\uB9AC\uC628"
+    Tribe: 4
+    Origin: 3
+    Tier: 2
+    ImagePath: Images/Old Character/Character_27
+    Image: {fileID: 21300000, guid: 390de044cdee89d42adfc533dab0eb86, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 4
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 13
+    Name: "\uB9AC\uCE58"
+    Tribe: 5
+    Origin: 3
+    Tier: 1
+    ImagePath: Images/Old Character/Character_14
+    Image: {fileID: 21300000, guid: d4f70b2234891804ebc260654e574c86, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 5
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 14
+    Name: "\uD574\uACE8 \uBCD1\uC0AC"
+    Tribe: 5
+    Origin: 5
+    Tier: 4
+    ImagePath: Images/Old Character/Character_13
+    Image: {fileID: 21300000, guid: f3791394a92974f469368d7d5d85e9d4, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 5
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 15
+    Name: "\uD761\uD608\uADC0"
+    Tribe: 5
+    Origin: 2
+    Tier: 3
+    ImagePath: Images/Old Character/Character_15
+    Image: {fileID: 21300000, guid: 3b704301d52b1794b924de88cc183bfa, type: 3}
+    OriginData:
+      Name: 2
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 5
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 16
+    Name: "\uC5D8\uD504 \uAC80\uC0AC"
+    Tribe: 6
+    Origin: 5
+    Tier: 2
+    ImagePath: "Images/Character/\uC5D8\uD504 \uAC80\uC0AC"
+    Image: {fileID: 21300000, guid: 41ab191be45781e4a97e33e6f8b9b7fb, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 6
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 17
+    Name: "\uC6B0\uB4DC \uC5D8\uD504"
+    Tribe: 6
+    Origin: 1
+    Tier: 4
+    ImagePath: Images/Old Character/Character_WoodElf
+    Image: {fileID: 21300000, guid: f1710865fc9e37c419779274d683cccc, type: 3}
+    OriginData:
+      Name: 1
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 6
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 18
+    Name: "\uC6CC\uB85D"
+    Tribe: 6
+    Origin: 3
+    Tier: 1
+    ImagePath: Images/Old Character/Character_Warlock
+    Image: {fileID: 21300000, guid: ce6279794928c6c4e8f8715e5b7b182a, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 6
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 19
+    Name: "\uC77C\uC77C\uC774"
+    Tribe: 6
+    Origin: 2
+    Tier: 2
+    ImagePath: Images/Old Character/Character_Dobi
+    Image: {fileID: 21300000, guid: 5f13a7c1e8ae7cc40881155bb1de15e8, type: 3}
+    OriginData:
+      Name: 2
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 6
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 20
+    Name: "\uB300\uC9C0\uC758 \uC815\uB839"
+    Tribe: 7
+    Origin: 5
+    Tier: 3
+    ImagePath: Images/Old Character/Character_17
+    Image: {fileID: 21300000, guid: 61ce7bc8b2bd0c44c91e43c28c47cd8f, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 7
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 21
+    Name: "\uBB3C\uC758 \uC815\uB839"
+    Tribe: 7
+    Origin: 1
+    Tier: 3
+    ImagePath: Images/Old Character/Character_18
+    Image: {fileID: 21300000, guid: 3f0d9a70a58f70e46ad318d96fbe7a0e, type: 3}
+    OriginData:
+      Name: 1
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 7
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 22
+    Name: "\uBD88\uC758 \uC815\uB839"
+    Tribe: 7
+    Origin: 4
+    Tier: 1
+    ImagePath: "Images/Character/\uC778\uAC04 \uC804\uC0AC"
+    Image: {fileID: 21300000, guid: 2c03ce83207d3624da06e2f172722457, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 7
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 23
+    Name: "\uC815\uC2E0\uC758 \uC815\uB839"
+    Tribe: 7
+    Origin: 3
+    Tier: 2
+    ImagePath: Images/Old Character/Character_20
+    Image: {fileID: 21300000, guid: 70840c2ee6861d947a870eaa52880ec8, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 7
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 24
+    Name: "\uB3C4\uB07C \uC804\uC0AC"
+    Tribe: 8
+    Origin: 5
+    Tier: 3
+    ImagePath: "Images/Character/\uC778\uAC04 \uC804\uC0AC"
+    Image: {fileID: 21300000, guid: 2c03ce83207d3624da06e2f172722457, type: 3}
+    OriginData:
+      Name: 5
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 8
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 25
+    Name: "\uC2EC\uD310\uAD00"
+    Tribe: 8
+    Origin: 3
+    Tier: 4
+    ImagePath: "Images/Character/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
+    Image: {fileID: 21300000, guid: 4cb2ea99f84a96a43838de5af423c9d7, type: 3}
+    OriginData:
+      Name: 3
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 8
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 26
+    Name: "\uC880\uB3C4\uB451"
+    Tribe: 8
+    Origin: 2
+    Tier: 1
+    ImagePath: "Images/Character/\uC778\uAC04 \uB3C4\uC801"
+    Image: {fileID: 21300000, guid: 14fe86f1843922e4d9f916b22c265025, type: 3}
+    OriginData:
+      Name: 2
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 8
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 27
+    Name: "\uD638\uD06C\uC544\uC774"
+    Tribe: 8
+    Origin: 1
+    Tier: 3
+    ImagePath: "Images/Character/\uC778\uAC04 \uAD81\uC218"
+    Image: {fileID: 21300000, guid: a8e9f7b856634504b9ca1034c8e64c0d, type: 3}
+    OriginData:
+      Name: 1
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 8
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}
+  - Id: 28
+    Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
+    Tribe: 8
+    Origin: 4
+    Tier: 4
+    ImagePath: "Images/Character/\uC778\uAC04 \uC131\uAE30\uC0AC"
+    Image: {fileID: 21300000, guid: 4defef3650405094c91e3c37310b9e27, type: 3}
+    OriginData:
+      Name: 4
+      Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+      Image: {fileID: 0}
+    TribeData:
+      Name: 8
+      Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      ImagePath: Images/Tribe/Logo_HUMAN
+      Image: {fileID: 21300000, guid: 4918840e35980a146b984a72ce6cde63, type: 3}

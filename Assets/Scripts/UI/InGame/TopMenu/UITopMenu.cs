@@ -24,5 +24,4 @@ public class UITopMenu : MonoBehaviour
         battleMenu.SetActive(false);
         prepareMenu.SetActive(true);
     }
-
 }
