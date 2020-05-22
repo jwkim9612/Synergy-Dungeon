@@ -16,7 +16,7 @@ public class Pawn : MonoBehaviour
     public OnIsDeadDelegate OnIsDead { get; set; }
 
     public SpriteRenderer spriteRenderer;
-    public string name { get; set; }
+    public string pawnName { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
     public Ability ability;
@@ -69,7 +69,7 @@ public class Pawn : MonoBehaviour
     /// <returns>최종적으로 입은 데미지</returns>
     public long TakeDamage(long damage)
     {
-        long finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
+       long finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
         currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)currentHP);
 
         OnHit();
@@ -108,7 +108,7 @@ public class Pawn : MonoBehaviour
 
     public void SetName(string name)
     {
-        this.name = name;
+        pawnName = name;
     }
 
     public void SetUIFloatingTextList(List<UIFloatingText> uiFloatingTextList)

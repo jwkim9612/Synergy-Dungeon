@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 [Serializable]
 public class InGameSaveData
 {
-    public List<CharacterInfo> characterAreaInfoList { get; set; }
-    public List<CharacterInfo> prepareAreaInfoList { get; set; }
-    public int coin { get; set; }
-    public int chapter { get; set; }
-    public int wave { get; set; }
-    public int level { get; set; }
-    public int exp { get; set; }
+    public int Chapter { get; set; }
+    public int Wave { get; set; }
+    public int Coin { get; set; }
+    public int Level { get; set; }
+    public int Exp { get; set; }
+    public List<CharacterInfo> CharacterAreaInfoList { get; set; }
+    public List<CharacterInfo> PrepareAreaInfoList { get; set; }
 
     //public void SetInGameData(List<Character> characters, List<Enemy> enemies)
     //{

@@ -23,16 +23,16 @@ public class TimeManager : MonoSingleton<TimeManager>
             .Send((response) => {
             if (!response.HasErrors)
             {
-                GSData scriptData = response.ScriptData.GetGSData("ServerTime");
-                var timeInEpoch = scriptData.GetString("TimeInEpoch");
-
-                Debug.Log($"{timeInEpoch}");
-                Debug.Log("Success Time Load !");
+                long test2 = (long)(response.ScriptData.GetLong("ServerTime"));
+                Debug.Log(test2);
+                //Debug.Log($"{timeInEpoch}");
+                //Debug.Log("Success Time Load !");
 
             }
             else
             {
                 Debug.Log("Error Time Load !");
+                Debug.Log(response.Errors.JSON);
             }
         });
     }

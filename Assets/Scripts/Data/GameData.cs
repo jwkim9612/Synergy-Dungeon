@@ -95,29 +95,6 @@ public enum Tier
     Five
 }
 
-//public enum Tribe
-//{ 
-//    None,
-//    Human,
-//    Elf,
-//    Devil,
-//    Undead,
-//    Elemental,
-//    Machine,
-//    Beast
-//}
-
-//public enum Origin
-//{ 
-//    None,
-//    Warrior,
-//    Knight,
-//    Archer,
-//    Thief, 
-//    Priest,
-//    Dragon,
-//}
-
 public enum InGameState
 { 
     None,

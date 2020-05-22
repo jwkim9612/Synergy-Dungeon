@@ -11,6 +11,11 @@ public class Arranger : MonoBehaviour
         uiCharacters = new List<UICharacter>();
 
         UpdateChildren();
+
+        foreach (var uiCharacter in uiCharacters)
+        {
+            uiCharacter.Initialize();
+        }
     }
 
     public virtual void UpdateChildren()

@@ -23,12 +23,12 @@ public class PlayerState : MonoBehaviour
 
     public void Initialize()
     {
-        if (SaveManager.Instance.HasInGameData())
+        if (SaveManager.Instance.IsLoadedData)
         {
-            coin = SaveManager.Instance.inGameSaveData.coin;
-            level = SaveManager.Instance.inGameSaveData.level;
+            coin = SaveManager.Instance.inGameSaveData.Coin;
+            level = SaveManager.Instance.inGameSaveData.Level;
             SatisfyExp = GameManager.instance.dataSheet.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
-            exp = SaveManager.Instance.inGameSaveData.exp;
+            exp = SaveManager.Instance.inGameSaveData.Exp;
             numOfCanBePlacedInBattleArea = level;
         }
         else

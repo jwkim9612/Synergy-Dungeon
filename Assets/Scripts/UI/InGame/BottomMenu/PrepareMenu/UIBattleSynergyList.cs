@@ -32,9 +32,9 @@ public class UIBattleSynergyList : MonoBehaviour
         synergyService.OnOriginChanged += UpdateOrigins; ;
 
 
-        if (SaveManager.Instance.HasInGameData())
+        if (SaveManager.Instance.IsLoadedData)
         {
-            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.characterAreaInfoList);
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.CharacterAreaInfoList);
         }
     }
 

@@ -8,9 +8,9 @@ public class UIPrepareArea : Arranger
     {
         base.Initialize();
         
-        if(SaveManager.Instance.HasInGameData())
+        if(SaveManager.Instance.IsLoadedData)
         {
-            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.prepareAreaInfoList);
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.PrepareAreaInfoList);
         }
 
         InGameManager.instance.gameState.OnBattle += HideAllCharacters;

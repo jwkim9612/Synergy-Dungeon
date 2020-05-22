@@ -77,9 +77,7 @@ public class BattleStatus : MonoBehaviour
         // 배틀 종료 
         if (isCharacterAnnihilation)
         {
-            //SaveManager.Instance.SetInGameData();
-            //SaveManager.Instance.SaveInGameData();
-            SaveManager.Instance.DeleteInGameData();
+            SaveManager.Instance.RemoveInGameData();
             InGameManager.instance.gameState.isPlayerLose = true;
             Debug.Log("Battle End");
             yield break;
@@ -90,7 +88,7 @@ public class BattleStatus : MonoBehaviour
 
             if(StageManager.Instance.IsFinalWave())
             {
-                SaveManager.Instance.DeleteInGameData();
+                SaveManager.Instance.RemoveInGameData();
                 Debug.Log("데이터 삭제!");
             }
             else

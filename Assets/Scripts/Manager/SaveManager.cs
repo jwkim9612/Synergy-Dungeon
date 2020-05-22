@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using GameSparks.Api.Requests;
+using GameSparks.Core;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
 using System;
 using System.Collections.Generic;
@@ -8,83 +10,194 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoSingleton<SaveManager>
 {
-    private string playDataPath;
+    [SerializeField] private AskInGameContinue askInGameContinue = null;
+
+   // private string playDataPath;
     private InGameSaveData _inGameSaveData;
     public InGameSaveData inGameSaveData { get { return _inGameSaveData; } }
+    public bool IsLoadedData;
 
     public void Initialize()
     {
         _inGameSaveData = new InGameSaveData();
 
-        playDataPath = Path.Combine(Application.dataPath, "InGameData.json");
+        //playDataPath = Path.Combine(Application.dataPath, "InGameData.json");
 
-        if (!File.Exists(playDataPath))
-        {
-            //SaveSPSData();
-        }
-        else
-        {
-            //LoadSPSData();
-        }
+        //if (!File.Exists(playDataPath))
+        //{
+        //    //SaveSPSData();
+        //}
+        //else
+        //{
+        //    //LoadSPSData();
+        //}
     }
 
-    public void SaveInGameData()
-    {
-        Debug.Log("InGame Save Start !");
-        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", JsonDataManager.Instance.ObjectToJson(inGameSaveData));
-        Debug.Log("InGame Save Done !");
-    }
+    //public void SaveInGameData()
+    //{
+    //    Debug.Log("InGame Save Start !");
+    //    JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", JsonDataManager.Instance.ObjectToJson(inGameSaveData));
+    //    Debug.Log("InGame Save Done !");
+    //}
 
     public void SetInGameData()
     {
-        _inGameSaveData.coin = InGameManager.instance.playerState.coin;
-        _inGameSaveData.level = InGameManager.instance.playerState.level ;
-        _inGameSaveData.exp = InGameManager.instance.playerState.exp;
-        _inGameSaveData.chapter = StageManager.Instance.currentChapter;
-        _inGameSaveData.wave = StageManager.Instance.currentWave + 1;
-        _inGameSaveData.characterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
-        _inGameSaveData.prepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
+        _inGameSaveData.Coin = InGameManager.instance.playerState.coin;
+        _inGameSaveData.Level = InGameManager.instance.playerState.level ;
+        _inGameSaveData.Exp = InGameManager.instance.playerState.exp;
+        _inGameSaveData.Chapter = StageManager.Instance.currentChapter;
+        _inGameSaveData.Wave = StageManager.Instance.currentWave + 1;
+        _inGameSaveData.CharacterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
+        _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
     }
 
-    public void LoadInGameData()
-    {
-        //파일이 없으면
-        if (!HasInGameData())
-        {
-            Debug.Log(playDataPath);
-            return;
-        }
+    //public void LoadInGameData()
+    //{
+    //    //파일이 없으면
+    //    if (!HasInGameData())
+    //    {
+    //        Debug.Log(playDataPath);
+    //        return;
+    //    }
 
-        FileStream fileStream = new FileStream(string.Format(playDataPath), FileMode.Open);
-        byte[] data = new byte[fileStream.Length];
-        fileStream.Read(data, 0, data.Length);
-        fileStream.Close();
+    //    FileStream fileStream = new FileStream(string.Format(playDataPath), FileMode.Open);
+    //    byte[] data = new byte[fileStream.Length];
+    //    fileStream.Read(data, 0, data.Length);
+    //    fileStream.Close();
 
-        Debug.Log("!! Load");
-        string jsonData = Encoding.UTF8.GetString(data);
-        _inGameSaveData = JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
-    }
+    //    Debug.Log("!! Load");
+    //    string jsonData = Encoding.UTF8.GetString(data);
+    //    _inGameSaveData = JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
+    //}
 
     /// <summary>
     /// 인게임 데이터 삭제
     /// </summary>
     /// <returns> 성공 여부 </returns>
-    public bool DeleteInGameData()
-    {
-        if (HasInGameData())
-        {
-            File.Delete(playDataPath);
-            return true;
-        }
+    //public bool DeleteInGameData()
+    //{
+    //    if (HasInGameData())
+    //    {
+    //        File.Delete(playDataPath);
+    //        return true;
+    //    }
 
-        return false;
+    //    return false;
+    //}
+
+    // 최초 게임 진입 시에 초기 값으로 해서 저장
+    // 이후에는 관련된 프로퍼티 변경할 때마다 저장
+    public void SaveInGameData()
+    {
+        new LogEventRequest()
+            .SetEventKey("SaveInGameData")
+            .SetEventAttribute("Chapter", _inGameSaveData.Chapter)
+            .SetEventAttribute("Wave", _inGameSaveData.Wave)
+            .SetEventAttribute("Coin", _inGameSaveData.Coin)
+            .SetEventAttribute("Level", _inGameSaveData.Level)
+            .SetEventAttribute("Exp", _inGameSaveData.Exp)
+            .SetEventAttribute("CharacterAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.CharacterAreaInfoList))
+            .SetEventAttribute("PrepareAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.PrepareAreaInfoList))
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success InGame Data Save !");
+                }
+                else
+                {
+                    Debug.Log("Error Data Save !");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
     }
 
-    public bool HasInGameData()
+    public void RemoveInGameData()
     {
-        return File.Exists(string.Format(playDataPath));
+        new LogEventRequest()
+            .SetEventKey("RemoveInGameData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success InGame Data Remove !");
+                }
+                else
+                {
+                    Debug.Log("Error Data Remove !");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
+
+    public void LoadInGameData()
+    {
+        new LogEventRequest()
+            .SetEventKey("LoadInGameData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    GSData scriptData = response.ScriptData.GetGSData("InGameData");
+
+                    var data = new InGameSaveData
+                    {
+
+                        Chapter = (int)scriptData.GetInt("InGameChapter"),
+                        Wave = (int)scriptData.GetInt("InGameWave"),
+                        Coin = (int)scriptData.GetInt("InGameCoin"),
+                        Level = (int)scriptData.GetInt("InGameLevel"),
+                        Exp = (int)scriptData.GetInt("InGameExp"),
+                        CharacterAreaInfoList = JsonConvert.DeserializeObject<List<CharacterInfo>>(scriptData.GetString("InGameCharacterAreaInfoList")),
+                        PrepareAreaInfoList = JsonConvert.DeserializeObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList"))
+                    };
+
+                    _inGameSaveData = data;
+                    Debug.Log("Player Data Load Successfully !");
+                    Debug.Log($"Chapter : {_inGameSaveData.Chapter}, Wave : {_inGameSaveData.Wave}, Coin : {_inGameSaveData.Coin}, Level : {_inGameSaveData.Level}, Exp : {_inGameSaveData.Exp}");
+
+                    IsLoadedData = true;
+
+                    StageManager.Instance.SetChapterData(data.Chapter);
+                    StageManager.Instance.currentWave = _inGameSaveData.Wave;
+                    SceneManager.LoadScene("InGame");
+                }
+                else
+                {
+                    Debug.Log("Error Player Data Load");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
+
+    public void CheckHasInGameData()
+    {
+        new LogEventRequest()
+           .SetEventKey("HasInGameData")
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       askInGameContinue.gameObject.SetActive(true);
+                   }
+                   else
+                   {
+                       IsLoadedData = false;
+                       SceneManager.LoadScene("MainScene");
+                   }
+               }
+               else
+               {
+                   Debug.Log("Error CheckHasInGameData");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
     }
 }

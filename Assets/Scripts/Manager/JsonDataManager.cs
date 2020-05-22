@@ -42,4 +42,9 @@ public class JsonDataManager : MonoSingleton<JsonDataManager>
         string jsonData = Encoding.UTF8.GetString(data);
         return JsonConvert.DeserializeObject<T>(jsonData);
     }
+
+    public T LoadJson<T>(string String)
+    {
+        return JsonConvert.DeserializeObject<T>(String);
+    }
 }

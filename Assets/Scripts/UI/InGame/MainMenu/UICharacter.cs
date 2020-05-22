@@ -13,7 +13,7 @@ public class UICharacter : MonoBehaviour
     public CharacterInfo characterInfo;
     public Image clickableImage = null;
 
-    private void Start()
+    public void Initialize()
     {
         isFightingOnBattlefield = false;
 

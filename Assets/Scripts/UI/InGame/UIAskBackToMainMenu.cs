@@ -13,10 +13,12 @@ public class UIAskBackToMainMenu : UIControl
     {
         yesButton.onClick.AddListener(() =>
         {
-            if (SaveManager.Instance.DeleteInGameData())
-            {
-                Debug.Log("Delete in game data true!");
-            }
+            //if (SaveManager.Instance.DeleteInGameData())
+            //{
+            //    Debug.Log("Delete in game data true!");
+            //}
+            SaveManager.Instance.RemoveInGameData();
+
             Time.timeScale = 1;
             SceneManager.LoadScene("MainScene");
         });

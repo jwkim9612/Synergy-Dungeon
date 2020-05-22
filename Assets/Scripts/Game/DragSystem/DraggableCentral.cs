@@ -161,7 +161,8 @@ public class DraggableCentral : MonoBehaviour
             selledCharacterInfo = uiCharacter.DeleteCharacterBySell();
             sellArea.gameObject.GetComponent<Image>().color = Color.white;
         }
-        else
+
+        if(!IsNotChanged())
         {
             if (IsPlaceableSpaceFull())
             {
@@ -253,11 +254,14 @@ public class DraggableCentral : MonoBehaviour
         if (IsNotChanged())
             return;
 
-        if (IsMoveFromBattleAreaToEmptyPrepareArea()) 
+        if (IsMoveFromBattleAreaToEmptyPrepareArea())
+        {
             uiCharacterArea.SubCurrentPlacedCharacter();
-
+        }
         else if (IsMoveFromPrepareAreaToEmptyBattleArea())
+        {
             uiCharacterArea.AddCurrentPlacedCharacter();
+        }
     }
 
     private bool IsMoveFromPrepareAreaToEmptyBattleArea()
