@@ -1,6 +1,6 @@
 ﻿using Server_API.Model;
-using Server_API.Shared;
 using Server_API.Utility;
+using Shared.NetworkProtocol;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;

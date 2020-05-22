@@ -1,19 +1,6 @@
 ﻿using System.Collections.Generic;
 
 //[System.Serializable]
-public class PlayerData
-{
-    public PlayerData()
-    {
-        level = 1;
-        coin = 0;
-        playableStage = 1;
-    }
-
-    public int level;
-    public int coin;
-    public int playableStage;
-}
 
 public class AccountData
 { 

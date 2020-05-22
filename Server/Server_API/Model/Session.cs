@@ -1,4 +1,4 @@
-﻿using DBModel;
+﻿using Shared.Model;
 using System;
 using System.ComponentModel.DataAnnotations;
 

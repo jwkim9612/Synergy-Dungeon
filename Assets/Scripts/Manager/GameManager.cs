@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         AccountManager.Instance.Initialize();
         JsonDataManager.Instance.Initialize();
+        TimeManager.Instance.Initialize();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
         SaveManager.Instance.Initialize();

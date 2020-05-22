@@ -43,7 +43,7 @@ public class UIBattlefield : MonoBehaviour
 
     public void UpdateBestStage()
     {
-        if (selectedChapter < PlayerDataManager.Instance.playerData.playableStage)
+        if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableStage)
             bestStage.text = "챕터 클리어";
         else
             bestStage.text = "최고 스테이지 : " + 1 + "/" + GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1].TotalWave;

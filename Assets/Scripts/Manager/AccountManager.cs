@@ -28,6 +28,7 @@ public class AccountManager : MonoSingleton<AccountManager>
         {
             accountData = loadedAccoutnData;
             Sign(accountData.id, accountData.pw, false);
+            PlayerDataManager.Instance.LoadPlayerData();
             // 로그인 완료.
         }
     }
@@ -70,6 +71,7 @@ public class AccountManager : MonoSingleton<AccountManager>
                     SaveAccountData();
                     //HideAccountWindow();
                     Debug.Log("로그인 성공...");
+                    Debug.Log($"ID : {accountData.id}, PW : {accountData.pw}");
                     if(isFromSignUp)
                     {
                         ShowEnterDisplayName();

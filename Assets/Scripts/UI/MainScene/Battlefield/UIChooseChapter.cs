@@ -69,6 +69,6 @@ public class UIChooseChapter : UIControl
 
     private bool IsPlayableChapter(int chapter)
     {
-        return PlayerDataManager.Instance.playerData.playableStage >= chapter ? true : false;
+        return PlayerDataManager.Instance.playerData.PlayableStage >= chapter ? true : false;
     }
 }
