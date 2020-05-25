@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using GameSparks.Api.Requests;
 
 public class UIBattlefield : MonoBehaviour
 {
@@ -16,9 +17,7 @@ public class UIBattlefield : MonoBehaviour
     void Start()
     {
         playButton.onClick.AddListener(() => {
-            StageManager.Instance.SetChapterData(selectedChapter);
-            StageManager.Instance.Initialize();
-            SceneManager.LoadScene("InGame");
+            UseHeart();
         });
 
         UpdateChapterInfo();
@@ -47,5 +46,34 @@ public class UIBattlefield : MonoBehaviour
             bestStage.text = "챕터 클리어";
         else
             bestStage.text = "최고 스테이지 : " + 1 + "/" + GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1].TotalWave;
+    }
+
+    public void UseHeart()
+    {
+        new LogEventRequest()
+            .SetEventKey("UseHeart")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+
+                    if(result)
+                    {
+                        StageManager.Instance.SetChapterData(selectedChapter);
+                        StageManager.Instance.Initialize();
+                        SceneManager.LoadScene("InGame");
+                    }
+                    else
+                    {
+                        Debug.Log("No heart Man");
+                    }
+                }
+                else
+                {
+                    Debug.Log("Error Use Heart"); 
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
     }
 }
