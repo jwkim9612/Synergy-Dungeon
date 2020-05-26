@@ -16,143 +16,154 @@ MonoBehaviour:
   - Id: 0
     Name: "\uBC29\uC5B4\uC2AC\uB77C\uC784"
     Attack: 40
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 20
     MagicDefence: 10
     Shield: 0
     Accuracy: 100
-    Evasion: 100
+    Evasion: 5
+    Critical: 5
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_16
     Image: {fileID: 0}
   - Id: 1
     Name: "\uB9C8\uBC29\uC2AC\uB77C\uC784"
     Attack: 40
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 10
     MagicDefence: 20
     Shield: 0
     Accuracy: 100
     Evasion: 50
+    Critical: 5
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_28
     Image: {fileID: 0}
   - Id: 2
     Name: "\uADFC\uC811\uC2AC\uB77C\uC784"
     Attack: 50
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 5
     MagicDefence: 5
     Shield: 0
     Accuracy: 100
     Evasion: 7
+    Critical: 5
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_FairyDragon
     Image: {fileID: 0}
   - Id: 3
     Name: "\uAD81\uC218\uC2AC\uB77C\uC784"
     Attack: 50
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 10
     MagicDefence: 10
     Shield: 0
     Accuracy: 100
     Evasion: 6
+    Critical: 5
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_Doom
     Image: {fileID: 0}
   - Id: 4
     Name: "\uBC95\uC0AC\uC2AC\uB77C\uC784"
     Attack: 0
-    MagicAttack: 50
+    MagicalAttack: 50
     Health: 20
     Defence: 10
     MagicDefence: 15
     Shield: 0
     Accuracy: 100
     Evasion: 5
+    Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 5
     Name: "\uBC29\uC5B4\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 25
     MagicDefence: 10
     Shield: 0
     Accuracy: 100
     Evasion: 5
+    Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 6
     Name: "\uB9C8\uBC29\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 20
     Defence: 10
     MagicDefence: 25
     Shield: 0
     Accuracy: 100
     Evasion: 5
+    Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 7
     Name: "\uADFC\uC811\uD0B9\uC2AC\uB77C\uC784"
     Attack: 60
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 400
     Defence: 7
     MagicDefence: 7
     Shield: 0
     Accuracy: 100
     Evasion: 7
+    Critical: 5
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 8
     Name: "\uAD81\uC218\uD0B9\uC2AC\uB77C\uC784"
     Attack: 60
-    MagicAttack: 0
+    MagicalAttack: 0
     Health: 400
     Defence: 12
     MagicDefence: 12
     Shield: 0
     Accuracy: 100
     Evasion: 6
+    Critical: 5
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 9
     Name: "\uBC95\uC0AC\uD0B9\uC2AC\uB77C\uC784"
     Attack: 0
-    MagicAttack: 60
+    MagicalAttack: 60
     Health: 400
     Defence: 10
     MagicDefence: 18
     Shield: 0
     Accuracy: 100
     Evasion: 5
+    Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
   - Id: 10
     Name: "\uBB3C\uACE071"
     Attack: 71
-    MagicAttack: 71
+    MagicalAttack: 71
     Health: 71
     Defence: 71
     MagicDefence: 71
     Shield: 0
     Accuracy: 100
     Evasion: 71
+    Critical: 5
     AttackSpeed: 71
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
