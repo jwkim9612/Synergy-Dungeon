@@ -14,37 +14,54 @@ public struct Ability
     public void SetAbility(CharacterAbilityData characterAbilityData)
     {
         Attack = characterAbilityData.Attack;
-        MagicAttack = characterAbilityData.MagicAttack;
+        MagicalAttack = characterAbilityData.MagicalAttack;
         Health = characterAbilityData.Health;
         Defence = characterAbilityData.Defence;
         MagicDefence = characterAbilityData.MagicDefence;
         Shield = characterAbilityData.Shield;
         Accuracy = characterAbilityData.Accuracy;
         Evasion = characterAbilityData.Evasion;
+        Critical = characterAbilityData.Critical;
         AttackSpeed = characterAbilityData.AttackSpeed;
     }
 
     public void SetAbility(EnemyData enemyData)
     {
         Attack = enemyData.Attack;
-        MagicAttack = enemyData.MagicAttack;
+        MagicalAttack = enemyData.MagicalAttack;
         Health = enemyData.Health;
         Defence = enemyData.Defence;
         MagicDefence = enemyData.MagicDefence;
         Shield = enemyData.Shield;
         Accuracy = enemyData.Accuracy;
         Evasion = enemyData.Evasion;
+        Critical = enemyData.Critical;
         AttackSpeed = enemyData.AttackSpeed;
     }
 
+    public void SetAbility(RuneData runeData)
+    {
+        Attack = runeData.Attack;
+        MagicalAttack = runeData.MagicalAttack;
+        Health = runeData.Health;
+        Defence = runeData.Defence;
+        MagicDefence = runeData.MagicDefence;
+        Shield = runeData.Shield;
+        Accuracy = runeData.Accuracy;
+        Evasion = runeData.Evasion;
+        Critical = runeData.Critical;
+        AttackSpeed = runeData.AttackSpeed;
+    }
+
     public long Attack;
-    public long MagicAttack;
+    public long MagicalAttack;
     public long Health;
     public long Defence;
     public long MagicDefence;
     public long Shield;
     public long Accuracy;
     public long Evasion;
+    public long Critical;
     public long AttackSpeed;
 }
 
@@ -113,22 +130,22 @@ public enum PawnType
 public enum Tribe
 {
     None,
-    기계,
-    드래곤,
-    악마,
-    야수,
-    언데드,
-    엘프,
-    정령,
-    휴먼
+    Beast,
+    Devil,
+    Dragon,
+    Elemental,
+    Elf,
+    Human,
+    Machine,
+    Undead
 }
 
 public enum Origin
 {
     None,
-    궁수,
-    도적,
-    법사,
-    성기사,
-    전사
+    Archer,
+    Paladin,
+    Thief,
+    Warrior,
+    Wizard
 }

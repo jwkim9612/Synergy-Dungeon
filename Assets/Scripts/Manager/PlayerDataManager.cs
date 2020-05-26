@@ -31,30 +31,40 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
     {
         new LogEventRequest()
             .SetEventKey("LoadPlayerData")
-            .Send((response) => {
-            if (!response.HasErrors)
+            .Send((response) =>
             {
-                GSData scriptData = response.ScriptData.GetGSData("PlayerData");
-
-                var data = new PlayerData
+                if (!response.HasErrors)
                 {
-                    Level = (int)scriptData.GetInt("PlayerLevel"),
-                    Diamond = (int)scriptData.GetInt("PlayerDiamond"),
-                    Gold = (int)scriptData.GetInt("PlayerGold"),
-                    PlayableStage = (int)scriptData.GetInt("PlayerPlayableStage"),
-                };
+                    bool result = (bool)response.ScriptData.GetBoolean("Result");
 
-                playerData = data;
-                Debug.Log("Player Data Load Successfully !");
-                Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}");
+                    if (result)
+                    {
+                        GSData scriptData = response.ScriptData.GetGSData("PlayerData");
 
-            }
-            else
-            {
-                Debug.Log("Error Player Data Load");
-                Debug.Log(response.Errors.JSON);
-            }
-        });
+                        var data = new PlayerData
+                        {
+                            Level = (int)scriptData.GetInt("PlayerLevel"),
+                            Diamond = (int)scriptData.GetInt("PlayerDiamond"),
+                            Gold = (int)scriptData.GetInt("PlayerGold"),
+                            PlayableStage = (int)scriptData.GetInt("PlayerPlayableStage"),
+                        };
+
+                        playerData = data;
+                        Debug.Log("Player Data Load Successfully !");
+                        Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}");
+                    }
+                    else
+                    {
+                        Debug.Log("Player Data가 없습니다.");
+                    }
+
+                }
+                else
+                {
+                    Debug.Log("Error Player Data Load");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
     }
 
     // 최초 게임 진입 시에 초기 값으로 해서 저장

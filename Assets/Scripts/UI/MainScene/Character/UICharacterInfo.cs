@@ -73,6 +73,6 @@ public class UICharacterInfo : UIControl
         textAttack.text = characterAbilityData.Attack.ToString();
         textDefense.text = characterAbilityData.Defence.ToString();
         textDexterity.text = characterAbilityData.AttackSpeed.ToString();
-        textIntellect.text = characterAbilityData.MagicAttack.ToString();
+        textIntellect.text = characterAbilityData.MagicalAttack.ToString();
     }
 }

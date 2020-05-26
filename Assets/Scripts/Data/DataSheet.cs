@@ -14,6 +14,7 @@ public class DataSheet : MonoBehaviour
 	public EnemyDataSheet enemyDataSheet;
 	public ProbabilityDataSheet probabilityDataSheet;
 	public InGameExpDataSheet inGameExpDataSheet;
+	public RuneDataSheet runeDataSheet;
 
     public void Initialize()
     {
@@ -23,6 +24,7 @@ public class DataSheet : MonoBehaviour
 		chapterDataSheet.Initialize();
 		chapterInfoDataSheet.Initialize();
 		enemyDataSheet.Initialize();
+		runeDataSheet.Initialize();
 
 		//InitializeCharacterData();
 	}

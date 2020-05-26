@@ -6,13 +6,23 @@ using UnityEngine.UI;
 public class UIRune : MonoBehaviour
 {
     [SerializeField] private Image image;
+    private RuneData runeData;
     private Rune rune;
 
-    public void SetRune()
+    public void SetUIRune(RuneData newRuneData)
     {
-        rune = new Rune();
-        rune.SetRuneData();
+        runeData = newRuneData;
 
-        // 이미지 넣어주기.
+        rune = new Rune();
+        rune.SetRune(newRuneData);
+
+        SetImage(runeData.Image);
     }
+
+    public void SetImage(Sprite sprite)
+    {
+        image.sprite = sprite;
+    }
+
+    
 }

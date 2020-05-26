@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Rune
 {
-    // Rune 데이터 변수
+    private RuneData runeData;
     private Ability ability;
 
-    public void SetRuneData()
+    public void SetRune(RuneData newRuneData)
     {
-        // 룬 세팅.
-    }
-
-    public void SetAbility(Ability newAbility)
-    {
-        ability = newAbility;
+        runeData = newRuneData;
+        ability.SetAbility(runeData);
     }
 }
