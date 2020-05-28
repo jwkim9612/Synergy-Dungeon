@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UITopMenu : MonoBehaviour
+public class UIInGameTopMenu : MonoBehaviour
 {
     [SerializeField] private GameObject prepareMenu = null;
     [SerializeField] private GameObject battleMenu = null;

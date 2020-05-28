@@ -10,6 +10,11 @@ using GameSparks.Api.Requests;
 
 public class PlayerDataManager : MonoSingleton<PlayerDataManager>
 {
+    public delegate void OnGoldChangedDelegate();
+    public delegate void OnDiamondChangedDelegate();
+    public OnGoldChangedDelegate OnGoldChanged { get; set; }
+    public OnDiamondChangedDelegate OnDiamondChanged { get; set; }
+
     // 플레이어의 데이터를 관리해주는 매니저
     public PlayerData playerData;
 
@@ -88,5 +93,57 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                     Debug.Log("Error Data Save !");
                 }
             });
+    }
+
+    public void UseGold(int useValue)
+    {
+        if (useValue > playerData.Gold)
+        {
+            Debug.Log("골드 사용값이 소유한 골드값보다 많습니다.");
+            return;
+        }
+
+        Mathf.Clamp(playerData.Gold - useValue, 0, playerData.Gold);
+        SavePlayerData();
+        OnGoldChanged();
+    }
+
+    public void AddGold(int addValue)
+    {
+        if(addValue < 0)
+        {
+            Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
+            return;
+        }
+
+        playerData.Gold += addValue;
+        SavePlayerData();
+        OnGoldChanged();
+    }
+
+    public void UseDiamond(int useValue)
+    {
+        if (useValue > playerData.Diamond)
+        {
+            Debug.Log("다이아몬드 사용값이 소유한 다이아몬드값보다 많습니다.");
+            return;
+        }
+
+        Mathf.Clamp(playerData.Diamond - useValue, 0, playerData.Diamond);
+        SavePlayerData();
+        OnDiamondChanged();
+    }
+
+    public void AddDiamond(int addValue)
+    {
+        if (addValue < 0)
+        {
+            Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
+            return;
+        }
+
+        playerData.Diamond += addValue;
+        SavePlayerData();
+        OnDiamondChanged();
     }
 }

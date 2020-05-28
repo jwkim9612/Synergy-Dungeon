@@ -11,7 +11,7 @@ public class UIHeart : MonoBehaviour
     [SerializeField] private Text timeText;
     private long remainingTime;
 
-    private void Start()
+    public void Initialize()
     {
         HeartUpdate();
     }

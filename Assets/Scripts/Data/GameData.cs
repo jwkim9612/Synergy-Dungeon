@@ -184,3 +184,12 @@ public enum Origin
     Warrior,
     Wizard
 }
+
+public enum PurchaseCurrency
+{ 
+    Gold,
+    Rune,
+    RandomRune,
+    Relic,
+    Artifact
+}
