@@ -104,19 +104,19 @@ public class RuneManager : MonoSingleton<RuneManager>
         switch (origin)
         {
             case Origin.Archer:
-                rune = uiEquippedRunes[0].rune;
+                rune = uiEquippedRunes[RuneService.INDEX_OF_ARCHER_SOCKET].rune;
                 break;
             case Origin.Paladin:
-                rune = uiEquippedRunes[1].rune;
+                rune = uiEquippedRunes[RuneService.INDEX_OF_PALADIN_SOCKET].rune;
                 break;
             case Origin.Thief:
-                rune = uiEquippedRunes[2].rune;
+                rune = uiEquippedRunes[RuneService.INDEX_OF_THIEF_SOCKET].rune;
                 break;
             case Origin.Warrior:
-                rune = uiEquippedRunes[3].rune;
+                rune = uiEquippedRunes[RuneService.INDEX_OF_WARRIOR_SOCKET].rune;
                 break;
             case Origin.Wizard:
-                rune = uiEquippedRunes[4].rune;
+                rune = uiEquippedRunes[RuneService.INDEX_OF_WIZARD_SOCKET].rune;
                 break;
             default:
                 rune = null;
