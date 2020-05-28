@@ -7,7 +7,7 @@ public class UIOwnedRunes : MonoBehaviour
 {
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
     [SerializeField] private UIRune uiRune;
-    private List<UIRune> uiOwnedRunes;
+    public List<UIRune> uiRunes;
     
     public void Initialize()
     {
@@ -16,7 +16,7 @@ public class UIOwnedRunes : MonoBehaviour
 
     private void CreateOwnedRuneList()
     {
-        uiOwnedRunes = new List<UIRune>();
+        uiRunes = new List<UIRune>();
 
         var ownedRuneIds = RuneManager.Instance.ownedRunes;
         foreach (var ownedRuneId in ownedRuneIds)
@@ -25,7 +25,7 @@ public class UIOwnedRunes : MonoBehaviour
             {
                 var rune = Instantiate(uiRune, girdLayoutGroup.transform);
                 rune.SetUIRune(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[ownedRuneId.Key]);
-                uiOwnedRunes.Add(rune);
+                uiRunes.Add(rune);
             }
         }
     }
@@ -36,8 +36,16 @@ public class UIOwnedRunes : MonoBehaviour
 
         var rune = Instantiate(uiRune, girdLayoutGroup.transform);
         rune.SetUIRune(runeData);
-        uiOwnedRunes.Add(rune);
+        uiRunes.Add(rune);
 
         RuneManager.Instance.AddRune(runeId);
+    }
+
+    public void AddUIRuneByEquipRelease(int runeId)
+    {
+        RuneData runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
+
+        var rune = Instantiate(uiRune, girdLayoutGroup.transform);
+        rune.SetUIRune(runeData);
     }
 }

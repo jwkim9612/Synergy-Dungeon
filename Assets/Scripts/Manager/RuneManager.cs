@@ -7,9 +7,11 @@ using UnityEngine;
 public class RuneManager : MonoSingleton<RuneManager>
 {
     public Dictionary<int, int> ownedRunes;
+    public List<UIEquipRune> uiEquippedRunes { get; set; }
 
     public void Initialize()
     {
+        uiEquippedRunes = new List<UIEquipRune>();
         LoadOwnedRunes();
     }
 
@@ -93,5 +95,34 @@ public class RuneManager : MonoSingleton<RuneManager>
         }
 
         SaveOwnedRunes();
+    }
+
+    public Rune GetEquippedRuneOfOrigin(Origin origin)
+    {
+        Rune rune;
+
+        switch (origin)
+        {
+            case Origin.Archer:
+                rune = uiEquippedRunes[0].rune;
+                break;
+            case Origin.Paladin:
+                rune = uiEquippedRunes[1].rune;
+                break;
+            case Origin.Thief:
+                rune = uiEquippedRunes[2].rune;
+                break;
+            case Origin.Warrior:
+                rune = uiEquippedRunes[3].rune;
+                break;
+            case Origin.Wizard:
+                rune = uiEquippedRunes[4].rune;
+                break;
+            default:
+                rune = null;
+                break;
+        }
+
+        return rune;
     }
 }

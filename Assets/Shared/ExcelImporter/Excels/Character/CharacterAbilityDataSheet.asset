@@ -179,7 +179,7 @@ MonoBehaviour:
     Shield: 0
     Accuracy: 100
     Evasion: 12
-    Critical: 5
+    Critical: 100
     AttackSpeed: 118
   - Id: 14
     Name: "\uD574\uACE8 \uBCD1\uC0AC"

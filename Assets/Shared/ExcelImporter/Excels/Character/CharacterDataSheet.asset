@@ -239,7 +239,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 5
     Tier: 1
-    ImagePath: Images/Old Character/Character_14
+    ImagePath: "Images/Character/\uC5D8\uD504 \uC778\uAC04"
     Image: {fileID: 0}
     OriginData:
       Name: 0

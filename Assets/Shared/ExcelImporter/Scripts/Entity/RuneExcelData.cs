@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class RuneData
+public class RuneExcelData
 {
     public int Id;
     public string Name;
@@ -21,7 +21,6 @@ public class RuneData
     public long Evasion;
     public long Critical;
     public long AttackSpeed;
-
+    public string Description;
     public string ImagePath;
-    public Sprite Image;
 }

@@ -12,9 +12,196 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8c549e09966cf046bd1ba65101eb267, type: 3}
   m_Name: RuneDataSheet
   m_EditorClassIdentifier: 
-  RuneDatas:
+  RuneExcelDatas:
   - Id: 1000
-    Name: "\uAE30\uBCF8 \uC804\uC0AC \uB8EC"
+    Name: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 0
+    Attack: 2
+    MagicalAttack: 2
+    Health: 5
+    Defence: 1
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
+  - Id: 1001
+    Name: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 2000
+    Attack: 5
+    MagicalAttack: 0
+    Health: 10
+    Defence: 1
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1002
+    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 5
+    Health: 10
+    Defence: 1
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1003
+    Name: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 30
+    Defence: 1
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1004
+    Name: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 10
+    Defence: 3
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1005
+    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 1
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 10
+    Defence: 1
+    MagicDefence: 3
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1006
+    Name: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 2
+    Prob: 2000
+    Attack: 10
+    MagicalAttack: 0
+    Health: 15
+    Defence: 2
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1007
+    Name: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 2
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 10
+    Health: 15
+    Defence: 2
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1008
+    Name: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 2
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 60
+    Defence: 2
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1009
+    Name: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 2
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 0
+    Defence: 5
+    MagicDefence: 1
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 1010
+    Name: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uAD81\uC218 \uB8EC"
+    SocketPosition: 0
+    Tier: 2
+    Prob: 2000
+    Attack: 0
+    MagicalAttack: 0
+    Health: 0
+    Defence: 2
+    MagicDefence: 4
+    Shield: 0
+    Accuracy: 0
+    Evasion: 0
+    Critical: 0
+    AttackSpeed: 0
+    Description: 
+    ImagePath: Images/Tribe/Logo_DEVIL
+  - Id: 2000
+    Name: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 0
@@ -28,10 +215,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: Images/Tribe/Logo_HUMAN
-    Image: {fileID: 0}
-  - Id: 1001
-    Name: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2001
+    Name: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 2000
@@ -45,10 +232,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: Images/Tribe/Logo_DEVIL
-    Image: {fileID: 0}
-  - Id: 1002
-    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2002
+    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 2000
@@ -62,10 +249,11 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1003
-    Name: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2003
+    Name: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 2000
@@ -79,10 +267,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1004
-    Name: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC804\uC0AC\uB8EC"
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2004
+    Name: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 2000
@@ -96,10 +284,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1005
-    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC804\uC0AC\uB8EC"
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2005
+    Name: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 1
     Prob: 2000
@@ -113,10 +301,11 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1006
-    Name: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
+  - Id: 2006
+    Name: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 2
     Prob: 2000
@@ -130,10 +319,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1007
-    Name: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2007
+    Name: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 2
     Prob: 2000
@@ -147,10 +336,11 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1008
-    Name: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2008
+    Name: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 2
     Prob: 2000
@@ -164,10 +354,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1009
-    Name: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2009
+    Name: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 2
     Prob: 2000
@@ -181,10 +371,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1010
-    Name: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC804\uC0AC \uB8EC"
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
+  - Id: 2010
+    Name: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
     Tier: 2
     Prob: 2000
@@ -198,90 +388,6 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1011
-    Name: 
-    SocketPosition: 0
-    Tier: 0
-    Prob: 0
-    Attack: 0
-    MagicalAttack: 0
-    Health: 0
-    Defence: 0
-    MagicDefence: 0
-    Shield: 0
-    Accuracy: 0
-    Evasion: 0
-    Critical: 0
-    AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1012
-    Name: 
-    SocketPosition: 0
-    Tier: 0
-    Prob: 0
-    Attack: 0
-    MagicalAttack: 0
-    Health: 0
-    Defence: 0
-    MagicDefence: 0
-    Shield: 0
-    Accuracy: 0
-    Evasion: 0
-    Critical: 0
-    AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1013
-    Name: 
-    SocketPosition: 0
-    Tier: 0
-    Prob: 0
-    Attack: 0
-    MagicalAttack: 0
-    Health: 0
-    Defence: 0
-    MagicDefence: 0
-    Shield: 0
-    Accuracy: 0
-    Evasion: 0
-    Critical: 0
-    AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1014
-    Name: 
-    SocketPosition: 0
-    Tier: 0
-    Prob: 0
-    Attack: 0
-    MagicalAttack: 0
-    Health: 0
-    Defence: 0
-    MagicDefence: 0
-    Shield: 0
-    Accuracy: 0
-    Evasion: 0
-    Critical: 0
-    AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
-  - Id: 1015
-    Name: 
-    SocketPosition: 0
-    Tier: 0
-    Prob: 0
-    Attack: 0
-    MagicalAttack: 0
-    Health: 0
-    Defence: 0
-    MagicDefence: 0
-    Shield: 0
-    Accuracy: 0
-    Evasion: 0
-    Critical: 0
-    AttackSpeed: 0
-    ImagePath: 
-    Image: {fileID: 0}
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead

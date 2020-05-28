@@ -26,11 +26,12 @@ public class UICharacter : MonoBehaviour
         OnCanClick();
         SetCharacterInfo(newCharacterInfo);
 
+        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+
         character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
-        character.SetSize(0.5f);
-        character.SetImage(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Image);
-        character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo));
-        character.SetName(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Name);
+        character.SetImage(characterData.Image);
+        character.SetName(characterData.Name);
+        character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), characterData.Origin);
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;

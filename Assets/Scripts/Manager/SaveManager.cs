@@ -19,13 +19,16 @@ public class SaveManager : MonoSingleton<SaveManager>
    // private string playDataPath;
     private InGameSaveData _inGameSaveData;
     public InGameSaveData inGameSaveData { get { return _inGameSaveData; } }
-    public bool IsLoadedData;
+    public bool IsLoadedData { get; set; }
+    public List<int> equippedRuneIdsSaveData;
+    string equippedRuneIdsSaveDataPath;
 
     public void Initialize()
     {
         _inGameSaveData = new InGameSaveData();
 
-        //playDataPath = Path.Combine(Application.dataPath, "InGameData.json");
+        equippedRuneIdsSaveDataPath = Path.Combine(Application.dataPath, "EquippedRuneIds.json");
+        IntializeEquippedRuneIdsSaveData();
 
         //if (!File.Exists(playDataPath))
         //{
@@ -37,12 +40,35 @@ public class SaveManager : MonoSingleton<SaveManager>
         //}
     }
 
-    //public void SaveInGameData()
-    //{
-    //    Debug.Log("InGame Save Start !");
-    //    JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "InGameData", JsonDataManager.Instance.ObjectToJson(inGameSaveData));
-    //    Debug.Log("InGame Save Done !");
-    //}
+    private void IntializeEquippedRuneIdsSaveData()
+    {
+        equippedRuneIdsSaveData = new List<int>(RuneService.NUMBER_OF_RUNE_SOCKETS);
+        
+        for(int i = 0; i < RuneService.NUMBER_OF_RUNE_SOCKETS; ++i)
+        {
+            equippedRuneIdsSaveData.Add(-1);
+        }
+
+        bool result = LoadEquippedRuneIdsSaveData();
+        if (!result)
+            SaveEquippedRuneIds();
+    }
+
+    public void SaveEquippedRuneIds()
+    {
+        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "EquippedRuneIds", JsonDataManager.Instance.ObjectToJson(equippedRuneIdsSaveData));
+        Debug.Log("EquippedRuneIds Save Done !");
+    }
+
+    public void SetEquippedRuneIdsSaveData(int socketId, int runeId)
+    {
+        equippedRuneIdsSaveData[socketId] = runeId;
+    }
+
+    public void SetEquippedRuneIdsSaveDataByRelease(int socketId)
+    {
+        equippedRuneIdsSaveData[socketId] = -1;
+    }
 
     public void SetInGameData()
     {
@@ -55,24 +81,27 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
     }
 
-    //public void LoadInGameData()
-    //{
-    //    //파일이 없으면
-    //    if (!HasInGameData())
-    //    {
-    //        Debug.Log(playDataPath);
-    //        return;
-    //    }
+    public bool LoadEquippedRuneIdsSaveData()
+    {
+        //파일이 없으면
+        if (!File.Exists(equippedRuneIdsSaveDataPath))
+        {
+            Debug.Log(equippedRuneIdsSaveDataPath);
+            return false;
+        }
 
-    //    FileStream fileStream = new FileStream(string.Format(playDataPath), FileMode.Open);
-    //    byte[] data = new byte[fileStream.Length];
-    //    fileStream.Read(data, 0, data.Length);
-    //    fileStream.Close();
+        FileStream fileStream = new FileStream(string.Format(equippedRuneIdsSaveDataPath), FileMode.Open);
+        byte[] data = new byte[fileStream.Length];
+        fileStream.Read(data, 0, data.Length);
+        fileStream.Close();
 
-    //    Debug.Log("!! Load");
-    //    string jsonData = Encoding.UTF8.GetString(data);
-    //    _inGameSaveData = JsonConvert.DeserializeObject<InGameSaveData>(jsonData);
-    //}
+        Debug.Log("!! Load");
+        string jsonData = Encoding.UTF8.GetString(data);
+        equippedRuneIdsSaveData = JsonConvert.DeserializeObject<List<int>>(jsonData);
+        return true;
+    }
+
+    
 
     /// <summary>
     /// 인게임 데이터 삭제

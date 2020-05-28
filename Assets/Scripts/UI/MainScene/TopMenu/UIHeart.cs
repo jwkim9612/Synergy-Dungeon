@@ -45,8 +45,6 @@ public class UIHeart : MonoBehaviour
 
     private void SetHeart(long heart)
     {
-        Debug.Log(heart);
-
         if(heart == 0)
         {
             image.color = Color.black;

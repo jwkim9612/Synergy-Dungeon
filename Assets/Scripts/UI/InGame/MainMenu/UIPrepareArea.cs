@@ -35,7 +35,7 @@ public class UIPrepareArea : Arranger
 
                 if (uiCharacters[i].character != null)
                 {
-                    uiCharacters[i].character.SetSize(0.5f);
+                    uiCharacters[i].character.SetSize(CharacterService.SIZE_IN_PREPARE_AREA);
                 }
             }
         }

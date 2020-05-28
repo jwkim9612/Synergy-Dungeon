@@ -11,6 +11,41 @@ public class AccountData
 
 public struct Ability
 {
+    public static Ability operator +(Ability ability1, Ability ability2)
+    {
+        Ability ability = new Ability();
+        ability.Attack = ability1.Attack + ability2.Attack;
+        ability.MagicalAttack = ability1.MagicalAttack + ability2.MagicalAttack;
+        ability.Health = ability1.Health + ability2.Health;
+        ability.Defence = ability1.Defence + ability2.Defence;
+        ability.MagicDefence = ability1.MagicDefence + ability2.MagicDefence;
+        ability.Shield = ability1.Shield + ability2.Shield;
+        ability.Accuracy = ability1.Accuracy + ability2.Accuracy;
+        ability.Evasion = ability1.Evasion + ability2.Evasion;
+        ability.Critical = ability1.Critical + ability2.Critical;
+        ability.AttackSpeed = ability1.AttackSpeed + ability2.AttackSpeed;
+
+        return ability;
+    }
+
+    public List<long> GetAbilityList()
+    {
+        List<long> abilityList = new List<long>();
+
+        abilityList.Add(Attack);
+        abilityList.Add(MagicalAttack);
+        abilityList.Add(Health);
+        abilityList.Add(Defence);
+        abilityList.Add(MagicDefence);
+        abilityList.Add(Shield);
+        abilityList.Add(Accuracy);
+        abilityList.Add(Evasion);
+        abilityList.Add(Critical);
+        abilityList.Add(AttackSpeed);
+
+        return abilityList;
+    }
+
     public void SetAbility(CharacterAbilityData characterAbilityData)
     {
         Attack = characterAbilityData.Attack;
@@ -39,18 +74,18 @@ public struct Ability
         AttackSpeed = enemyData.AttackSpeed;
     }
 
-    public void SetAbility(RuneData runeData)
+    public void SetAbility(RuneExcelData runeExcelData)
     {
-        Attack = runeData.Attack;
-        MagicalAttack = runeData.MagicalAttack;
-        Health = runeData.Health;
-        Defence = runeData.Defence;
-        MagicDefence = runeData.MagicDefence;
-        Shield = runeData.Shield;
-        Accuracy = runeData.Accuracy;
-        Evasion = runeData.Evasion;
-        Critical = runeData.Critical;
-        AttackSpeed = runeData.AttackSpeed;
+        Attack = runeExcelData.Attack;
+        MagicalAttack = runeExcelData.MagicalAttack;
+        Health = runeExcelData.Health;
+        Defence = runeExcelData.Defence;
+        MagicDefence = runeExcelData.MagicDefence;
+        Shield = runeExcelData.Shield;
+        Accuracy = runeExcelData.Accuracy;
+        Evasion = runeExcelData.Evasion;
+        Critical = runeExcelData.Critical;
+        AttackSpeed = runeExcelData.AttackSpeed;
     }
 
     public long Attack;

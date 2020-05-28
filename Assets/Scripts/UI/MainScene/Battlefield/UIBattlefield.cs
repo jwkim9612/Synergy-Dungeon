@@ -32,7 +32,9 @@ public class UIBattlefield : MonoBehaviour
 
     public void UpdateChapterTitle()
     {
-        chapterTitle.text = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1].Name;
+        var ChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1];
+
+        chapterTitle.text = ChapterData.Id + ". " + ChapterData.Name;
     }
 
     public void UpdateChapterImage()

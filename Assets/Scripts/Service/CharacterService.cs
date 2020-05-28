@@ -8,8 +8,8 @@ public class CharacterService
     public const int NUM_OF_DEFAULT_STAR = 1;
     public const int NUMBER_REQUIRED_FOR_COMBINATION = 3;
 
-    public const float SIZE_IN_PREPARE_AREA = 0.5f;
-    public const float SIZE_IN_BATTLE_AREA = 1.0f;
+    public const float SIZE_IN_PREPARE_AREA = 1.0f;
+    public const float SIZE_IN_BATTLE_AREA = 1.5f;
 
     public static CharacterInfo CreateCharacterInfo(int id)
     {

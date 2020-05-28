@@ -18,9 +18,9 @@ MonoBehaviour:
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 0,1,3,4
-    FrontIds: 1,3
-    BackIds: 2,6
+    EnemyIds: 0
+    FrontIds: 1
+    BackIds: 
     EnemyIdList: 
     FrontIdList: 
     BackIdList: 

@@ -269,7 +269,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1418237318}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52332910
 MonoBehaviour:
@@ -2564,7 +2564,6 @@ Transform:
   m_LocalPosition: {x: 0.7349585, y: 1.0377632, z: 58.464844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1914056022}
   - {fileID: 1870278361}
   - {fileID: 52332909}
   - {fileID: 2057947886}
@@ -3288,7 +3287,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1418237318}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1870278362
 MonoBehaviour:
@@ -3547,55 +3546,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1914056021
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1914056022}
-  - component: {fileID: 1914056023}
-  m_Layer: 0
-  m_Name: DataSheet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1914056022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914056021}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.872229, y: -0.974056, z: -22.694336}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1418237318}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1914056023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914056021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d70fce2717cbbb40afd36a394791eb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterDatas: {fileID: 11400000, guid: 79b0e7b980c43b44eb2feeb4b150df4d, type: 2}
-  tribeDatas: {fileID: 11400000, guid: 2b71104b2f253824f8948cbbf0213cd7, type: 2}
-  originDatas: {fileID: 11400000, guid: dbc923a9ee3cc294c8d95cfd225932a2, type: 2}
-  enemyDatas: {fileID: 11400000, guid: 7ff7206e9a02632439c9a96a4779a78e, type: 2}
-  stageDatas: {fileID: 11400000, guid: 7acd7f6d237d692478569ca9a532c3a9, type: 2}
-  probabilityDatas: {fileID: 11400000, guid: 9e2dd72d46044d34484af0d773bcb18c, type: 2}
 --- !u!1 &1932773697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3765,7 +3715,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1418237318}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2057947887
 MonoBehaviour:
@@ -3780,7 +3730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   askInGameContinue: {fileID: 1491104892}
-  IsLoadedData: 0
+  equippedRuneIdsSaveData: 
 --- !u!1 &2063158024
 GameObject:
   m_ObjectHideFlags: 0

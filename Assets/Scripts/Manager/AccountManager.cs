@@ -104,7 +104,7 @@ public class AccountManager : MonoSingleton<AccountManager>
                 if (!response.HasErrors)
                 {
                     PlayerDataManager.Instance.SavePlayerData();
-                    AccountManager.Instance.Sign(id, pw, true);
+                    Sign(id, pw, true);
                     Debug.Log("회원가입 완료");
                 }
                 else
@@ -127,7 +127,7 @@ public class AccountManager : MonoSingleton<AccountManager>
                     Debug.Log("닉네임 변경 완료");
 
                     if(isFromSignUp)
-                        SceneManager.LoadScene("MainScene");
+                        SceneManager.LoadScene("1080 1920/MainScene");
                 }
                 else
                 {

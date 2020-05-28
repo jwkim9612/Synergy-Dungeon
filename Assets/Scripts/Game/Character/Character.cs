@@ -10,9 +10,21 @@ public class Character : Pawn
         pawnType = PawnType.Character;
     }
 
-    public void SetAbility(CharacterAbilityData characterAbilityData)
+    public void SetAbility(CharacterAbilityData characterAbilityData, Origin origin)
     {
         ability.SetAbility(characterAbilityData);
+        Debug.Log(origin);
+
+        ///////////////////////////////////// 룬 능력치 + ///////////////////////////////////////////////
+        Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(origin);
+        if(rune != null)
+        {
+            ability += rune.runeData.Ability;
+            Debug.Log("어빌맅  더하기");
+        }
+        ///////////////////////////////////// ///////////// ///////////////////////////////////////////////
+
+
 
         currentHP = ability.Health;
     }

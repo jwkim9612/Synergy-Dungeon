@@ -18,12 +18,12 @@ public class UIRunePage : MonoBehaviour
 
         button1.onClick.AddListener(() =>
         {
-            uiOwnedRunes.AddUIRune(0);
+            uiOwnedRunes.AddUIRune(2001);
         });
 
         button2.onClick.AddListener(() =>
         {
-            uiOwnedRunes.AddUIRune(1);
+            uiOwnedRunes.AddUIRune(1000);
         });
     }
 }

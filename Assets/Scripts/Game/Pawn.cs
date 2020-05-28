@@ -51,7 +51,10 @@ public class Pawn : MonoBehaviour
 
         if (GetAttackSuccessful(target))
         {
-            long finalDamage = target.TakeDamage(ability.Attack);
+            if (IsCriticalAttack())
+                target.TakeDamage(ability.Attack, true);
+            else
+                target.TakeDamage(ability.Attack, false);
         }
         else
             target.PlayMissText();
@@ -67,14 +70,23 @@ public class Pawn : MonoBehaviour
     /// </summary>
     /// <param name="damage">받은 데미지</param>
     /// <returns>최종적으로 입은 데미지</returns>
-    public long TakeDamage(long damage)
+    public long TakeDamage(long damage, bool isCritical)
     {
-       long finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
+        long finalDamage;
+
+        if (isCritical)
+        {
+            finalDamage = Mathf.Clamp((int)(damage * 2) - (int)(ability.Defence), 1, (int)damage);
+            PlayCriticalHitText(finalDamage);
+        }
+        else
+        {
+            finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
+            PlayHitText(finalDamage);
+        }
+
         currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)currentHP);
-
         OnHit();
-
-        PlayHitText(finalDamage);
 
         if (currentHP <= 0)
         {
@@ -106,6 +118,17 @@ public class Pawn : MonoBehaviour
             return true;
     }
 
+    private bool IsCriticalAttack()
+    {
+        long currentCritical = ability.Critical;
+        long randomCriticalNum = RandomService.GetRandomLong();
+
+        if (currentCritical <= randomCriticalNum)
+            return false;
+        else
+            return true;
+    }
+
     public void SetName(string name)
     {
         pawnName = name;
@@ -129,13 +152,25 @@ public class Pawn : MonoBehaviour
 
     private void PlayHitText(float damage)
     {
+        Debug.Log("PlayHitText");
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
+        uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.DEFAULT_DAMAGE_FONT_SIZE);
+        PlayFloatingText();
+    }
+
+    private void PlayCriticalHitText(float damage)
+    {
+        Debug.Log("PlayCriticalHitText");
+        Color orange = new Color(1.0f, 0.64f, 0.0f);
+        uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), orange);
+        uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.CRITICAL_DAMAGE_FONT_SIZE);
         PlayFloatingText();
     }
 
     private void PlayMissText()
     {
         uiFloatingTextList[floatingTextIndex].SetText("Miss", Color.gray);
+        uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.MISS_FONT_SIZE);
         PlayFloatingText();
     }
 

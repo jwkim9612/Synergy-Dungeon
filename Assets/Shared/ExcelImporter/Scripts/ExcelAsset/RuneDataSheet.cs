@@ -6,18 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class RuneDataSheet : ScriptableObject
 {
-	public List<RuneData> RuneDatas;
+	public List<RuneExcelData> RuneExcelDatas;
+    public Dictionary<int, RuneData> RuneDatas;
 
     public void Initialize()
     {
-        InitializeImage();
+        InitializeRuneDatas();
     }
 
-    private void InitializeImage()
+    private void InitializeRuneDatas()
     {
-        foreach (var runeData in RuneDatas)
+        RuneDatas = new Dictionary<int, RuneData>();
+
+        foreach (var runeExcelData in RuneExcelDatas)
         {
-            runeData.Image = Resources.Load<Sprite>(runeData.ImagePath);
+            RuneData runeData = new RuneData(runeExcelData);
+            RuneDatas.Add(runeData.Id, runeData);
         }
     }
 }

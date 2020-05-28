@@ -32,7 +32,7 @@ public class UICharacterPlacementArea : Arranger
 
                 if(uiCharacters[i].character != null)
                 {
-                    uiCharacters[i].character.SetSize(1.0f);
+                    uiCharacters[i].character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
                 }
             }
         }

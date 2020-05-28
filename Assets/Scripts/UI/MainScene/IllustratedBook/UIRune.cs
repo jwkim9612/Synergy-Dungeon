@@ -5,23 +5,25 @@ using UnityEngine.UI;
 
 public class UIRune : MonoBehaviour
 {
-    [SerializeField] private Image image;
-    private RuneData runeData;
-    private Rune rune;
+    [SerializeField] private Image unclickedImage;
+    [SerializeField] private Image clickedImage;
+    //public RuneData runeData;
+    public Rune rune { get; set; }
 
     public void SetUIRune(RuneData newRuneData)
     {
-        runeData = newRuneData;
+        //runeData = newRuneData;
 
         rune = new Rune();
         rune.SetRune(newRuneData);
 
-        SetImage(runeData.Image);
+        SetImage(newRuneData.Image);
     }
 
     public void SetImage(Sprite sprite)
     {
-        image.sprite = sprite;
+        unclickedImage.sprite = sprite;
+        clickedImage.sprite = sprite;
     }
 
     

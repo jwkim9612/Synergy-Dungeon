@@ -39,6 +39,11 @@ public class UIFloatingText : MonoBehaviour
         this.text.text = text;
     }
 
+    public void SetTextSize(int size)
+    {
+        text.fontSize = size;
+    }
+
     private IEnumerator UpdateText()
     {
         var originParent = this.transform.parent;
