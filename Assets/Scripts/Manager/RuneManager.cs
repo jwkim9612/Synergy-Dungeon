@@ -1,18 +1,22 @@
 ﻿using GameSparks.Api.Requests;
+using GameSparks.Core;
 using Newtonsoft.Json;
-using System.Collections;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RuneManager : MonoSingleton<RuneManager>
 {
-    public Dictionary<int, int> ownedRunes;
+
+    public delegate void OnAddRuneDelegate(int runeId);
+    public OnAddRuneDelegate OnAddRune { get; set; }
+    public Dictionary<int, int> ownedRunes { get; set; }
     public List<UIEquipRune> uiEquippedRunes { get; set; }
 
     public void Initialize()
     {
         uiEquippedRunes = new List<UIEquipRune>();
-        LoadOwnedRunes();
+        LoadOwnedRuneData();
     }
 
     public void SaveOwnedRunes()
@@ -34,10 +38,10 @@ public class RuneManager : MonoSingleton<RuneManager>
             });
     }
 
-    public void LoadOwnedRunes()
+    public void LoadOwnedRuneData()
     {
         new LogEventRequest()
-            .SetEventKey("LoadOwnedRunes")
+            .SetEventKey("LoadOwnedRuneData")
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -45,13 +49,18 @@ public class RuneManager : MonoSingleton<RuneManager>
                     bool result = (bool)response.ScriptData.GetBoolean("Result");
                     if(result)
                     {
-                        ownedRunes = JsonConvert.DeserializeObject<Dictionary<int, int>>(response.ScriptData.GetString("OwnedRunes"));
-                        Debug.Log("Rune데이터 있음");
+                        GSData ownedRuneScriptData = response.ScriptData.GetGSData("OwnedRuneData");
+                        JObject ownedRuneJsonObject = JsonDataManager.Instance.LoadJson<JObject>(ownedRuneScriptData.JSON);
+
+                        ownedRunes = new Dictionary<int, int>();
+                        foreach (var ownedRunePair in ownedRuneJsonObject)
+                        {
+                            ownedRunes.Add(int.Parse(ownedRunePair.Key), int.Parse(ownedRunePair.Value.ToString()));
+                        }
                     }
                     else
                     {
-                        Debug.Log("Rune데이터 없음");
-                        ownedRunes = new Dictionary<int, int>();
+                        InitializeOwnedRuneData();
                     }
                 }
                 else
@@ -73,6 +82,7 @@ public class RuneManager : MonoSingleton<RuneManager>
             ownedRunes.Add(runeId, 1);
         }
 
+        OnAddRune(runeId);
         SaveOwnedRunes();
     }
 
@@ -124,5 +134,23 @@ public class RuneManager : MonoSingleton<RuneManager>
         }
 
         return rune;
+    }
+
+    public void InitializeOwnedRuneData()
+    {
+        new LogEventRequest()
+            .SetEventKey("InitializeOwnedRuneData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success Initialize OwnedRuneData !");
+                    LoadOwnedRuneData();
+                }
+                else
+                {
+                    Debug.Log("Error Initialize OwnedRuneData !");
+                }
+            });
     }
 }

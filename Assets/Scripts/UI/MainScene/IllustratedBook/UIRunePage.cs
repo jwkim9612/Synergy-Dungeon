@@ -19,12 +19,14 @@ public class UIRunePage : MonoBehaviour
 
         button1.onClick.AddListener(() =>
         {
-            uiOwnedRunes.AddUIRune(2001);
+            RuneManager.Instance.AddRune(1000);
+            //uiOwnedRunes.AddUIRune(2001);
         });
 
         button2.onClick.AddListener(() =>
         {
-            uiOwnedRunes.AddUIRune(1000);
+            RuneManager.Instance.AddRune(2001);
+            //uiOwnedRunes.AddUIRune(1000);
         });
     }
 

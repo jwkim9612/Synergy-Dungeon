@@ -103,7 +103,7 @@ public class AccountManager : MonoSingleton<AccountManager>
             {
                 if (!response.HasErrors)
                 {
-                    PlayerDataManager.Instance.SavePlayerData();
+                    PlayerDataManager.Instance.InitializePlayerData();
                     Sign(id, pw, true);
                     Debug.Log("회원가입 완료");
                 }

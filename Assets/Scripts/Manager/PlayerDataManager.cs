@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using UnityEngine;
-using Newtonsoft.Json;
+﻿using UnityEngine;
 using geniikw.DataSheetLab;
 using GameSparks.Core;
 using GameSparks.Api.Requests;
+using System;
+using System.Linq.Expressions;
 
 public class PlayerDataManager : MonoSingleton<PlayerDataManager>
 {
@@ -57,10 +54,20 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                         playerData = data;
                         Debug.Log("Player Data Load Successfully !");
                         Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}");
+                   
+                        if(OnGoldChanged == null)
+                        {
+                            Debug.Log("델리게이트가 비어있습니다.");
+                        }
+                        else
+                        {
+                            OnGoldChanged();
+                        }
                     }
                     else
                     {
-                        Debug.Log("Player Data가 없습니다.");
+                        Debug.Log("저장된 플레이어 데이터가 없어 새로 생성합니다.");
+                        InitializePlayerData();
                     }
 
                 }
@@ -95,55 +102,73 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
             });
     }
 
-    public void UseGold(int useValue)
+    public void InitializePlayerData()
     {
-        if (useValue > playerData.Gold)
-        {
-            Debug.Log("골드 사용값이 소유한 골드값보다 많습니다.");
-            return;
-        }
-
-        Mathf.Clamp(playerData.Gold - useValue, 0, playerData.Gold);
-        SavePlayerData();
-        OnGoldChanged();
+        new LogEventRequest()
+            .SetEventKey("InitializePlayerData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success Initialize PlayerData !");
+                    LoadPlayerData();
+                }
+                else
+                {
+                    Debug.Log("Error Initialize PlayerData !");
+                }
+            });
     }
 
-    public void AddGold(int addValue)
-    {
-        if(addValue < 0)
-        {
-            Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
-            return;
-        }
+    //public void UseGold(int useValue)
+    //{
+    //    if (useValue > playerData.Gold)
+    //    {
+    //        Debug.Log("골드 사용값이 소유한 골드값보다 많습니다.");
+    //        return;
+    //    }
 
-        playerData.Gold += addValue;
-        SavePlayerData();
-        OnGoldChanged();
-    }
+    //    Mathf.Clamp(playerData.Gold - useValue, 0, playerData.Gold);
+    //    SavePlayerData();
+    //    OnGoldChanged();
+    //}
 
-    public void UseDiamond(int useValue)
-    {
-        if (useValue > playerData.Diamond)
-        {
-            Debug.Log("다이아몬드 사용값이 소유한 다이아몬드값보다 많습니다.");
-            return;
-        }
+    //public void AddGold(int addValue)
+    //{
+    //    if(addValue < 0)
+    //    {
+    //        Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
+    //        return;
+    //    }
 
-        Mathf.Clamp(playerData.Diamond - useValue, 0, playerData.Diamond);
-        SavePlayerData();
-        OnDiamondChanged();
-    }
+    //    playerData.Gold += addValue;
+    //    SavePlayerData();
+    //    OnGoldChanged();
+    //}
 
-    public void AddDiamond(int addValue)
-    {
-        if (addValue < 0)
-        {
-            Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
-            return;
-        }
+    //public void UseDiamond(int useValue)
+    //{
+    //    if (useValue > playerData.Diamond)
+    //    {
+    //        Debug.Log("다이아몬드 사용값이 소유한 다이아몬드값보다 많습니다.");
+    //        return;
+    //    }
 
-        playerData.Diamond += addValue;
-        SavePlayerData();
-        OnDiamondChanged();
-    }
+    //    Mathf.Clamp(playerData.Diamond - useValue, 0, playerData.Diamond);
+    //    SavePlayerData();
+    //    OnDiamondChanged();
+    //}
+
+    //public void AddDiamond(int addValue)
+    //{
+    //    if (addValue < 0)
+    //    {
+    //        Debug.Log("더하는 양이 0보다 적을 수 없습니다.");
+    //        return;
+    //    }
+
+    //    playerData.Diamond += addValue;
+    //    SavePlayerData();
+    //    OnDiamondChanged();
+    //}
 }
