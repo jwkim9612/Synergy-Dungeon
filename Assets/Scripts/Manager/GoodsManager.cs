@@ -6,43 +6,65 @@ using UnityEngine;
 
 public class GoodsManager : MonoSingleton<GoodsManager>
 {
+    [SerializeField] private GameObject beingBuy;
+    [SerializeField] private UIAskGoToStore uiAskGoToStore;
+    [SerializeField] private UIFloatingText buyCompletedFloatingText;
+    public UIStore uiStore;
+
     private int rewardAmount;
     private int rewardId;
 
+    private void Start()
+    {
+        buyCompletedFloatingText.Initialize();
+    }
+
     public void BuyingGoods(int id)
     {
+        ShowBeingBuy(); // 구매중 팝업 띄우기.
+
         new LogEventRequest()
            .SetEventKey("BuyingGoods")
            .SetEventAttribute("ItemId", id)
            .Send((response) =>
            {
+               HideBeginBuy(); // 구매중 팝업 없애기.
+
                if (!response.HasErrors)
                {
                    bool result = (bool)(response.ScriptData.GetBoolean("Result"));
                    if (result)
                    {
-                       string rewardCurrencyType = (response.ScriptData.GetString("RewardCurrencyType"));
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrencyType"));
                        rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
                        rewardId = (int)(response.ScriptData.GetInt("RewardId"));
 
-                       PurchaseCurrency pruchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), rewardCurrencyType);
+                       RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
-                       Debug.Log("test = " + pruchaseCurrency);
-                       Debug.Log("타입 = " + rewardCurrencyType);
+                       Debug.Log("test = " + rewardCurrency);
+                       Debug.Log("타입 = " + strRewardCurrency);
                        Debug.Log("수량 = " + rewardAmount);
                        Debug.Log("id = " + rewardId);
 
                        Debug.Log("구매 완료");
 
-                       GetItems(pruchaseCurrency);
+                       GetItems(rewardCurrency);
+                       buyCompletedFloatingText.Play(); // 구매 완료! 띄우기
                    }
                    else
                    {
-                       Debug.Log("구매 실패 : 돈이 부족합니다.");
+                       string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
+                       PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
+
+
+                       uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(uiAskGoToStore);
+                       // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
                {
+                   // 서버 문제로 구매 실패 팝업 띄우기.
                    Debug.Log("Error BuyTest");
                    Debug.Log(response.Errors.JSON);
                }
@@ -50,18 +72,28 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     }
 
     // 구매한 아이템을 플레이어 인벤토리에 넣어주는 함수
-    private void GetItems(PurchaseCurrency purchaseCurremncy)
+    private void GetItems(RewardCurrency rewardCurrency)
     {
-        switch(purchaseCurremncy)
+        switch(rewardCurrency)
         {
-            case PurchaseCurrency.Gold:
+            case RewardCurrency.Gold:
                 PlayerDataManager.Instance.LoadPlayerData();
                 break;
-            case PurchaseCurrency.Rune:
+            case RewardCurrency.Rune:
                 Debug.Log("룬 구입!!");
                 RuneManager.Instance.AddRune(rewardId);
                 break;
 
         }
+    }
+
+    private void ShowBeingBuy()
+    {
+        beingBuy.SetActive(true);
+    }
+
+    private void HideBeginBuy()
+    {
+        beingBuy.SetActive(false);
     }
 }

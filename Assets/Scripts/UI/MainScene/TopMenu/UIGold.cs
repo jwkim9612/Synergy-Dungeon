@@ -9,7 +9,7 @@ public class UIGold : MonoBehaviour
 
     public void Initialize()
     {
-        PlayerDataManager.Instance.OnDiamondChanged += UpdateGoldText;
+        PlayerDataManager.Instance.OnGoldChanged += UpdateGoldText;
         UpdateGoldText();
     }
 

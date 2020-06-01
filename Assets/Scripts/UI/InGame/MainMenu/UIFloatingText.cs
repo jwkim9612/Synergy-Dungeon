@@ -18,10 +18,6 @@ public class UIFloatingText : MonoBehaviour
         originPosition = transform.localPosition;
     }
 
-    /// <summary>
-    /// HitText를 실행
-    /// </summary>
-    /// <param name="damage"> 받은 데미지 </param>
     public void Play()
     {
         this.gameObject.SetActive(true);

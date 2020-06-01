@@ -39,6 +39,8 @@ public class UIEquippedRunes : MonoBehaviour
             else
                 Debug.Log("장착되었던 룬을 찾을 수 없습니다.");
         }
+
+        RuneManager.Instance.uiEquippedRunes = uiEquippedRunes;
     }
 
     /// <summary>

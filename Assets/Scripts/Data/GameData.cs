@@ -187,6 +187,15 @@ public enum Origin
 
 public enum PurchaseCurrency
 { 
+    None,
+    Gold,
+    Diamond
+}
+
+
+public enum RewardCurrency
+{ 
+    None,
     Gold,
     Rune,
     RandomRune,

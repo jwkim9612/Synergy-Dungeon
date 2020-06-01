@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
 
-public class ScrollViewEx : ScrollRect
+public class PotentialDraggableScrollView : ScrollRect
 {
     private bool routeToParent = false;
 
@@ -74,5 +74,19 @@ public class ScrollViewEx : ScrollRect
         else
             base.OnEndDrag(eventData);
         routeToParent = false;
+    }
+
+    public void GoToTarget(RectTransform target)
+    {
+        StartCoroutine(Co_GoToTarget(target));
+    }
+
+    IEnumerator Co_GoToTarget(RectTransform target)
+    {
+        while (!Input.GetMouseButton(0))
+        {
+            verticalNormalizedPosition = Mathf.Lerp(verticalNormalizedPosition, 1 + (target.localPosition.y / content.rect.height), 0.1f);
+            yield return new WaitForEndOfFrame();
+        }
     }
 }

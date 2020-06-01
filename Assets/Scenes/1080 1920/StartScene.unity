@@ -3314,6 +3314,7 @@ MonoBehaviour:
     type: 2}
   inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
   runeDataSheet: {fileID: 11400000, guid: b5fd6ea962aaf0b40b4b4e99e73c6e24, type: 2}
+  goodsDataSheet: {fileID: 11400000, guid: e00092dc774f97548a1929e8f9bea0d7, type: 2}
 --- !u!1 &1881094288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,7 +3698,7 @@ GameObject:
   - component: {fileID: 2057947886}
   - component: {fileID: 2057947887}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SaveManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

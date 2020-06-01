@@ -55,13 +55,14 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                         Debug.Log("Player Data Load Successfully !");
                         Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}");
                    
-                        if(OnGoldChanged == null)
-                        {
-                            Debug.Log("델리게이트가 비어있습니다.");
-                        }
-                        else
+                        if(OnGoldChanged != null)
                         {
                             OnGoldChanged();
+                        }
+
+                        if (OnDiamondChanged != null)
+                        {
+                            OnDiamondChanged();
                         }
                     }
                     else
