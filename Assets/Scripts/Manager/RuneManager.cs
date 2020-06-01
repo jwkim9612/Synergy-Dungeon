@@ -38,6 +38,27 @@ public class RuneManager : MonoSingleton<RuneManager>
             });
     }
 
+    public void AddRune(int runeId, int amount = 1)
+    {
+        new LogEventRequest()
+            .SetEventKey("AddRune")
+            .SetEventAttribute("RuneId", runeId)
+            .SetEventAttribute("Amount", amount)
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    AddRuneToRuneList(runeId);
+                    Debug.Log("Success Add Rune!");
+                }
+                else
+                {
+                    Debug.Log("Error Add Rune!");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
+
     public void LoadOwnedRuneData()
     {
         new LogEventRequest()
@@ -71,7 +92,7 @@ public class RuneManager : MonoSingleton<RuneManager>
             });
     }
 
-    public void AddRune(int runeId)
+    public void AddRuneToRuneList(int runeId)
     {
         if (ownedRunes.ContainsKey(runeId))
         {
@@ -82,8 +103,9 @@ public class RuneManager : MonoSingleton<RuneManager>
             ownedRunes.Add(runeId, 1);
         }
 
+        Debug.Log("AddRuneToRuneList");
         OnAddRune(runeId);
-        SaveOwnedRunes();
+        //SaveOwnedRunes();
     }
 
     public void SubRune(int runeId)
@@ -104,7 +126,7 @@ public class RuneManager : MonoSingleton<RuneManager>
             Debug.Log("Error SubRune");
         }
 
-        SaveOwnedRunes();
+        //SaveOwnedRunes();
     }
 
     public Rune GetEquippedRuneOfOrigin(Origin origin)

@@ -18,6 +18,7 @@ public class UIOwnedRune : UIRune
             if(equipResult.Item1)
             {
                 SetUIRune(equipResult.Item2.runeData);
+                uiEquippedRunes.uiOwnedRunes.Sort();
             }
             else
             {

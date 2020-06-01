@@ -7,13 +7,10 @@ public class UIRune : MonoBehaviour
 {
     [SerializeField] private Image unclickedImage;
     [SerializeField] private Image clickedImage;
-    //public RuneData runeData;
     public Rune rune { get; set; }
 
     public void SetUIRune(RuneData newRuneData)
     {
-        //runeData = newRuneData;
-
         rune = new Rune();
         rune.SetRune(newRuneData);
 
