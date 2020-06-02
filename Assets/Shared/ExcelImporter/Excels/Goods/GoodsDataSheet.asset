@@ -38,19 +38,19 @@ MonoBehaviour:
     RewardId: 0
     ImagePath: Images/Goods/BigGold
   - Id: 4
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
+    Name: "\uB8EC \uBF51\uAE30 1\uD68C"
+    PurchaseCurrency: 2
+    PurchasePrice: 100
+    RewardCurrencyType: 3
+    RewardAmount: 1
     RewardId: 0
     ImagePath: 
   - Id: 5
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
+    Name: "\uB8EC \uBF51\uAE30 10\uD68C"
+    PurchaseCurrency: 2
+    PurchasePrice: 990
+    RewardCurrencyType: 3
+    RewardAmount: 10
     RewardId: 0
     ImagePath: 
   - Id: 6

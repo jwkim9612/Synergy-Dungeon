@@ -34,6 +34,8 @@ public class UIOwnedRunes : MonoBehaviour
                 uiRunes.Add(rune);
             }
         }
+
+        Sort();
     }
 
     public void AddUIRune(int runeId)

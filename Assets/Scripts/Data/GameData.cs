@@ -202,3 +202,9 @@ public enum RewardCurrency
     Relic,
     Artifact
 }
+
+public enum RuneRating
+{
+
+
+}

@@ -13,6 +13,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     private int rewardAmount;
     private int rewardId;
+    private List<string> runeRatingList;
 
     private void Start()
     {
@@ -35,18 +36,30 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    bool result = (bool)(response.ScriptData.GetBoolean("Result"));
                    if (result)
                    {
-                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrencyType"));
                        rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
-                       rewardId = (int)(response.ScriptData.GetInt("RewardId"));
 
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrencyType"));
                        RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
-                       Debug.Log("test = " + rewardCurrency);
-                       Debug.Log("타입 = " + strRewardCurrency);
-                       Debug.Log("수량 = " + rewardAmount);
-                       Debug.Log("id = " + rewardId);
+                       switch (rewardCurrency)
+                       {
+                           case RewardCurrency.Rune:
+                               rewardId = (int)(response.ScriptData.GetInt("RewardId"));
+                               break;
+                           case RewardCurrency.RandomRune:
+                               runeRatingList = response.ScriptData.GetStringList("RuneRatingList");
+                               break;
+                                
 
-                       Debug.Log("구매 완료");
+                       }
+
+
+                       //Debug.Log("test = " + rewardCurrency);
+                       //Debug.Log("타입 = " + strRewardCurrency);
+                       //Debug.Log("수량 = " + rewardAmount);
+                       //Debug.Log("id = " + rewardId);
+
+                       //Debug.Log("구매 완료");
 
                        GetItems(rewardCurrency);
                        buyCompletedFloatingText.Play(); // 구매 완료! 띄우기
@@ -82,6 +95,9 @@ public class GoodsManager : MonoSingleton<GoodsManager>
             case RewardCurrency.Rune:
                 Debug.Log("룬 구입!!");
                 RuneManager.Instance.AddRune(rewardId);
+                break;
+            case RewardCurrency.RandomRune:
+
                 break;
 
         }
