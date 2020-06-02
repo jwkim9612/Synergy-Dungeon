@@ -9,7 +9,7 @@ public class RuneExcelData
     public int Id;
     public string Name;
     public int SocketPosition;
-    public int Tier;
+    public RuneGrade Grade;
     public int Prob;
     public long Attack;
     public long MagicalAttack;

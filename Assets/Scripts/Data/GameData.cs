@@ -203,8 +203,21 @@ public enum RewardCurrency
     Artifact
 }
 
-public enum RuneRating
+public enum RuneGrade
 {
-
-
+    None,
+    F_0,
+    D_0,
+    C_0,
+    B_0,
+    A_0,
+    S_0,
+    S_1,
+    SS_0,
+    SS_1,
+    SS_2,
+    SSS_0,
+    SSS_1,
+    SSS_2,
+    SSS_3
 }

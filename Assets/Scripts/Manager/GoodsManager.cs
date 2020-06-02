@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GoodsManager : MonoSingleton<GoodsManager>
@@ -13,7 +14,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     private int rewardAmount;
     private int rewardId;
-    private List<string> runeRatingList;
+    private List<RuneGrade> randomlyPickedRuneGradeList;
 
     private void Start()
     {
@@ -47,7 +48,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                                rewardId = (int)(response.ScriptData.GetInt("RewardId"));
                                break;
                            case RewardCurrency.RandomRune:
-                               runeRatingList = response.ScriptData.GetStringList("RuneRatingList");
+                               var strGradeList = response.ScriptData.GetStringList("RuneGradeList");
+                               SetRandomlyPickedRuneGradeList(strGradeList);
                                break;
                                 
 
@@ -71,8 +73,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
 
                        uiAskGoToStore.SetText(purchaseCurrency);
-                       UIManager.Instance.ShowNew(uiAskGoToStore);
-                       // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                       UIManager.Instance.ShowNew(uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
@@ -97,9 +98,11 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 RuneManager.Instance.AddRune(rewardId);
                 break;
             case RewardCurrency.RandomRune:
-
+                foreach(var runeGrade in randomlyPickedRuneGradeList)
+                {
+                    RuneManager.Instance.AddRune(RuneService.GetRandomIdByGrade(runeGrade));
+                }
                 break;
-
         }
     }
 
@@ -111,5 +114,17 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     private void HideBeginBuy()
     {
         beingBuy.SetActive(false);
+    }
+
+    private void SetRandomlyPickedRuneGradeList(List<string> strRuneGradeList)
+    {
+        List<RuneGrade> runeGrades = new List<RuneGrade>();
+
+        foreach (var strRuneGrade in strRuneGradeList)
+        {
+            runeGrades.Add((RuneGrade)Enum.Parse(typeof(RuneGrade), strRuneGrade));
+        }
+
+        randomlyPickedRuneGradeList = runeGrades;
     }
 }

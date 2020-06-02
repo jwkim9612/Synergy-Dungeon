@@ -17,6 +17,7 @@ public class RuneManager : MonoSingleton<RuneManager>
     {
         uiEquippedRunes = new List<UIEquipRune>();
         LoadOwnedRuneData();
+        RuneService.Initialize();
     }
 
     public void SaveOwnedRunes()

@@ -9,7 +9,7 @@ public class RuneData
         Id = runeExcelData.Id;
         Name = runeExcelData.Name;
         SocketPosition = runeExcelData.SocketPosition;
-        Tier = runeExcelData.Tier;
+        Grade = runeExcelData.Grade;
         Prob = runeExcelData.Prob;
         Description = runeExcelData.Description;
 
@@ -21,7 +21,7 @@ public class RuneData
     public int Id;
     public string Name;
     public int SocketPosition;
-    public int Tier;
+    public RuneGrade Grade;
     public int Prob;
     public string Description;
     public Ability Ability;

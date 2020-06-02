@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
         SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         StageManager.Instance.Initialize();
-        RuneManager.Instance.Initialize();
         dataSheet.Initialize();
+        RuneManager.Instance.Initialize();
     }
 
     public void Quit()
