@@ -55,14 +55,6 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                        }
 
-
-                       //Debug.Log("test = " + rewardCurrency);
-                       //Debug.Log("타입 = " + strRewardCurrency);
-                       //Debug.Log("수량 = " + rewardAmount);
-                       //Debug.Log("id = " + rewardId);
-
-                       //Debug.Log("구매 완료");
-
                        GetItems(rewardCurrency);
                        buyCompletedFloatingText.Play(); // 구매 완료! 띄우기
                    }
@@ -98,10 +90,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 RuneManager.Instance.AddRune(rewardId);
                 break;
             case RewardCurrency.RandomRune:
-                foreach(var runeGrade in randomlyPickedRuneGradeList)
-                {
-                    RuneManager.Instance.AddRune(RuneService.GetRandomIdByGrade(runeGrade));
-                }
+                AddRunesAndShowObtainedRunes();
                 break;
         }
     }
@@ -126,5 +115,29 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         }
 
         randomlyPickedRuneGradeList = runeGrades;
+    }
+
+    private void AddRunesAndShowObtainedRunes()
+    {
+        List<int> obtainedRandomIds = new List<int>();
+
+        foreach (var runeGrade in randomlyPickedRuneGradeList)
+        {
+            int randomId = RuneService.GetRandomIdByGrade(runeGrade);
+            obtainedRandomIds.Add(randomId);
+            RuneManager.Instance.AddRune(randomId);
+        }
+
+        // 뽑은 갯수에 따라 획득한 룬 화면 띄우기
+        if (randomlyPickedRuneGradeList.Count == GoodsService.MIN_NUMBER_OF_RANDOM_RUNES)
+        {
+            uiStore.uiObtainedRuneScreen.SetUIObtainedRune(obtainedRandomIds[0]);
+            UIManager.Instance.ShowNew(uiStore.uiObtainedRuneScreen);
+        }
+        else
+        {
+            uiStore.uiObtainedRunesScreen.SetUIObtainedRuneList(obtainedRandomIds);
+            UIManager.Instance.ShowNew(uiStore.uiObtainedRunesScreen);
+        }
     }
 }

@@ -22,7 +22,7 @@ public class UIOwnedRunes : MonoBehaviour
         uiRunes = new List<UIRune>();
 
         var ownedRuneIds = RuneManager.Instance.ownedRunes;
-        if (ownedRuneIds.Count == 0)
+        if (ownedRuneIds == null)
             return;
 
         foreach (var ownedRuneId in ownedRuneIds)

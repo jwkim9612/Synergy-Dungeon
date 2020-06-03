@@ -11,6 +11,8 @@ public class GoodsService : MonoBehaviour
     public const int FIRST_RUNE_SALES_ID = 4;
     public const int SECOND_RUNE_SALES_ID = 5;
 
+    public const int MIN_NUMBER_OF_RANDOM_RUNES = 1;
+
     public const string GOLD_IMAGE_PATH = "Images/Main/Coin";
     public const string DIAMOND_IMAGE_PATH = "Images/Main/Diamond";
 

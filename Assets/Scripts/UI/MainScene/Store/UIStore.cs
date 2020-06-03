@@ -8,6 +8,8 @@ public class UIStore : MonoBehaviour
 {
     [SerializeField] private UIGoldSalesList uiGoldSalesList;
     [SerializeField] private UIRuneSalesList uiRuneSalesList;
+    public UIObtainedRunesScreen uiObtainedRunesScreen;
+    public UIObtainedRuneScreen uiObtainedRuneScreen;
     public PotentialDraggableScrollView scrollView;
 
 
@@ -15,5 +17,6 @@ public class UIStore : MonoBehaviour
     {
         uiGoldSalesList.Initialize();
         uiRuneSalesList.Initialize();
+        uiObtainedRunesScreen.Initialize();
     }
 }
