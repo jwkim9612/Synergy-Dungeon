@@ -3,53 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIAskBuyIt : UIControl
+public class UIAskPurchase : UIControl
 {
-    [SerializeField] private Text askBuyItText;
-    [SerializeField] private Text goodsAmount;
-    [SerializeField] private Image goodsImage;
-    [SerializeField] private Text goodsPrice;
-    [SerializeField] private Image purchaseCurrencyImage;
-    [SerializeField] private Button buyButton;
-    [SerializeField] private Button cancelButton;
-    private int goodsId;
+    [SerializeField] private Text askPurchaseText = null;
+    [SerializeField] private Image goodsImage = null;
+    [SerializeField] private Text goodsPrice = null;
+    [SerializeField] private Image purchaseCurrencyImage = null;
+    [SerializeField] private Button cancelButton = null;
+    [SerializeField] protected Button purchaseButton = null;
+    protected int goodsId;
 
-    private void Start()
+    protected void Start()
     {
-        buyButton.onClick.AddListener(() =>
-        {
-            UIManager.Instance.HideAndShowPreview();
-            GoodsManager.Instance.BuyingGoods(goodsId);
-        });
-
         cancelButton.onClick.AddListener(() =>
         {
             UIManager.Instance.HideAndShowPreview();
         });
     }
 
-    public void SetUIAskItBuy(GoodsData goodsData, int goodsId)
+    protected void SetAskPurchaseText(string name)
     {
-        SetAskBuyItText(goodsData.Name);
-        SetGoodsAmount(goodsData.RewardAmount);
-        SetGoodsImage(goodsData.Image);
-        SetGoodsPrice(goodsData.PurchasePrice, goodsData.PurchaseCurrency);
-        SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
-
-        this.goodsId = goodsId;
+        askPurchaseText.text = name + "를 구매하시겠습니까?";
     }
 
-    private void SetAskBuyItText(string name)
-    {
-        askBuyItText.text = name + "를 구매하시겠습니까?";
-    }
-
-    private void SetGoodsAmount(int amount)
-    {
-        goodsAmount.text = amount.ToString();
-    }
-
-    private void SetPurchaseCurrencyImage(PurchaseCurrency purchaseCurrency)
+    protected void SetPurchaseCurrencyImage(PurchaseCurrency purchaseCurrency)
     {
         switch (purchaseCurrency)
         {
@@ -65,7 +42,7 @@ public class UIAskBuyIt : UIControl
         }
     }
 
-    private void SetGoodsPrice(int price, PurchaseCurrency purchaseCurrency)
+    protected void SetGoodsPrice(int price, PurchaseCurrency purchaseCurrency)
     {
         goodsPrice.text = price.ToString();
 
@@ -94,7 +71,7 @@ public class UIAskBuyIt : UIControl
         }
     }
 
-    private void SetGoodsImage(Sprite image)
+    protected void SetGoodsImage(Sprite image)
     {
         goodsImage.sprite = image;
     }

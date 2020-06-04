@@ -14,84 +14,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GoodsExcelDatas:
   - Id: 1
-    Name: "\uACE8\uB4DC \uC8FC\uBA38\uB2C8"
-    PurchaseCurrency: 2
-    PurchasePrice: 60
-    RewardCurrencyType: 1
-    RewardAmount: 1000
-    RewardId: 0
-    ImagePath: Images/Main/Coin
-  - Id: 2
-    Name: "\uACE8\uB4DC \uBC14\uAD6C\uB2C8"
-    PurchaseCurrency: 2
-    PurchasePrice: 500
-    RewardCurrencyType: 1
-    RewardAmount: 10000
-    RewardId: 0
-    ImagePath: Images/Goods/MiddleGold
-  - Id: 3
-    Name: "\uACE8\uB4DC \uC218\uB808"
-    PurchaseCurrency: 2
-    PurchasePrice: 4500
-    RewardCurrencyType: 1
-    RewardAmount: 100000
-    RewardId: 0
-    ImagePath: Images/Goods/BigGold
-  - Id: 4
-    Name: "\uB8EC \uBF51\uAE30 1\uD68C"
-    PurchaseCurrency: 2
-    PurchasePrice: 100
-    RewardCurrencyType: 3
-    RewardAmount: 1
-    RewardId: 0
-    ImagePath: 
-  - Id: 5
-    Name: "\uB8EC \uBF51\uAE30 10\uD68C"
-    PurchaseCurrency: 2
-    PurchasePrice: 990
-    RewardCurrencyType: 3
-    RewardAmount: 10
-    RewardId: 0
-    ImagePath: 
-  - Id: 6
-    Name: "1001\uBC88 \uB8EC"
+    Name: "F \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 10
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 1001
+    RewardId: 0
     ImagePath: 
-  - Id: 7
-    Name: "2001\uBC88 \uB8EC 2\uAC1C"
+  - Id: 2
+    Name: "D \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 20
     RewardCurrencyType: 2
-    RewardAmount: 2
-    RewardId: 2001
+    RewardAmount: 1
+    RewardId: 0
     ImagePath: 
-  - Id: 8
-    Name: "3001\uBC88 \uB8EC"
+  - Id: 3
+    Name: "C \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 30
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 3001
+    RewardId: 0
     ImagePath: 
-  - Id: 9
-    Name: "4002\uBC88 \uB8EC"
+  - Id: 4
+    Name: "B \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 40
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 4002
+    RewardId: 0
     ImagePath: 
-  - Id: 10
-    Name: "5003\uBC88 \uB8EC"
+  - Id: 5
+    Name: "A \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 50
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 5003
+    RewardId: 0
+    ImagePath: 
+  - Id: 6
+    Name: "S \uB8EC"
+    PurchaseCurrency: 1
+    PurchasePrice: 60
+    RewardCurrencyType: 2
+    RewardAmount: 1
+    RewardId: 0
+    ImagePath: 
+  - Id: 7
+    Name: "SS \uB8EC"
+    PurchaseCurrency: 1
+    PurchasePrice: 70
+    RewardCurrencyType: 2
+    RewardAmount: 1
+    RewardId: 0
+    ImagePath: 
+  - Id: 8
+    Name: "SSS \uB8EC"
+    PurchaseCurrency: 1
+    PurchasePrice: 80
+    RewardCurrencyType: 2
+    RewardAmount: 1
+    RewardId: 0
+    ImagePath: 
+  - Id: 9
+    Name: "\uB79C\uB364 \uD3EC\uC158"
+    PurchaseCurrency: 0
+    PurchasePrice: 0
+    RewardCurrencyType: 0
+    RewardAmount: 0
+    RewardId: 0
+    ImagePath: 
+  - Id: 10
+    Name: 
+    PurchaseCurrency: 0
+    PurchasePrice: 0
+    RewardCurrencyType: 0
+    RewardAmount: 0
+    RewardId: 0
     ImagePath: 
   - Id: 11
     Name: 
@@ -116,4 +116,4 @@ MonoBehaviour:
     RewardCurrencyType: 0
     RewardAmount: 0
     RewardId: 0
-    ImagePath: 
+    ImagePath: Images/Main/Coin

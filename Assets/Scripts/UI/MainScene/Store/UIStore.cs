@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class UIStore : MonoBehaviour
 {
+    [SerializeField] private UIRuneOnSalesList uiRuneOnSalesList;
     [SerializeField] private UIGoldSalesList uiGoldSalesList;
-    [SerializeField] private UIRuneSalesList uiRuneSalesList;
+    [SerializeField] private UIRandomRuneSalesList uiRandomRuneSalesList;
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
     public PotentialDraggableScrollView scrollView;
@@ -15,8 +16,9 @@ public class UIStore : MonoBehaviour
 
     private void Start()
     {
+        uiRuneOnSalesList.Initialize();
         uiGoldSalesList.Initialize();
-        uiRuneSalesList.Initialize();
+        uiRandomRuneSalesList.Initialize();
         uiObtainedRunesScreen.Initialize();
     }
 }

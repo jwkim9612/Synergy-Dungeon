@@ -3,6 +3,7 @@ using GameSparks.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Bson;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -219,7 +220,8 @@ public class SaveManager : MonoSingleton<SaveManager>
                    else
                    {
                        IsLoadedData = false;
-                       SceneManager.LoadScene("MainScene");
+                       //SceneManager.LoadScene("MainScene");
+                       StartCoroutine(Co_Test());
                    }
                }
                else
@@ -228,5 +230,11 @@ public class SaveManager : MonoSingleton<SaveManager>
                    Debug.Log(response.Errors.JSON);
                }
            });
+    }
+
+    IEnumerator Co_Test()
+    {
+        yield return new WaitForSeconds(3.0f);
+        SceneManager.LoadScene("MainScene");
     }
 }

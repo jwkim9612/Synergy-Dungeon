@@ -31,13 +31,14 @@ public class GameManager : MonoBehaviour
     {
         AccountManager.Instance.Initialize();
         JsonDataManager.Instance.Initialize();
+        dataSheet.Initialize();
+        GoodsManager.Instance.Initialize();
         TimeManager.Instance.Initialize();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         StageManager.Instance.Initialize();
-        dataSheet.Initialize();
         RuneManager.Instance.Initialize();
     }
 
