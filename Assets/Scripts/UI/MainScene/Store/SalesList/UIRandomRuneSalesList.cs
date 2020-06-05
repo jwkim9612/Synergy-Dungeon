@@ -11,7 +11,7 @@ public class UIRandomRuneSalesList : MonoBehaviour
     {
         uiRuneGoodsList = GetComponentsInChildren<UIAmountRequiredGoods>().ToList();
 
-        uiRuneGoodsList[0].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.FIRST_RUNE_SALES_ID], GoodsService.FIRST_RUNE_SALES_ID);
-        uiRuneGoodsList[1].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.SECOND_RUNE_SALES_ID], GoodsService.SECOND_RUNE_SALES_ID);
+        //uiRuneGoodsList[0].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.FIRST_RUNE_SALES_ID], GoodsService.FIRST_RUNE_SALES_ID);
+        //uiRuneGoodsList[1].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.SECOND_RUNE_SALES_ID], GoodsService.SECOND_RUNE_SALES_ID);
     }
 }

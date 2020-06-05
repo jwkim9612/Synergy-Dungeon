@@ -11,7 +11,6 @@ public class GoodsData
         PurchasePrice = goodsExcelData.PurchasePrice;
         RewardCurrencyType = goodsExcelData.RewardCurrencyType;
         RewardAmount = goodsExcelData.RewardAmount;
-        RewardId = goodsExcelData.RewardId;
 
         Image = Resources.Load<Sprite>(goodsExcelData.ImagePath);
     }
@@ -21,6 +20,5 @@ public class GoodsData
     public int PurchasePrice;
     public RewardCurrency RewardCurrencyType;
     public int RewardAmount;
-    public int RewardId;
     public Sprite Image;
 }

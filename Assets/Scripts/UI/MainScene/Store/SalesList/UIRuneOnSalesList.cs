@@ -11,20 +11,15 @@ public class UIRuneOnSalesList : MonoBehaviour
 
     public void Initialize()
     {
-        Debug.Log("여기가 먼저되면 안됨");
         runeOnSalesList = GoodsManager.Instance.runeOnSalesList;
         uiRuneOnSalesList = GetComponentsInChildren<UIRuneGoods>().ToList();
         
-        for(int i = 0; i < GoodsService.RUNE_SALES_ID_LIST.Count; ++i)
+        for(int index = 0; index < GoodsService.RUNE_SALES_ID_LIST.Count; ++index)
         {
-            int goodsId = GoodsService.RUNE_SALES_ID_LIST[i];
+            int goodsId = GoodsService.RUNE_SALES_ID_LIST[index];
             var goodsData = GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[goodsId];
-            if (uiRuneOnSalesList == null)
-                Debug.Log("uirunelist = null");
-            if (runeOnSalesList == null)
-                Debug.Log("runeList = null");
 
-            uiRuneOnSalesList[i].SetUIGoods(goodsData, goodsId, runeOnSalesList[i].Item1);
+            uiRuneOnSalesList[index].SetUIGoods(goodsData, goodsId, runeOnSalesList[index].Item1, index);
         }
     }
 }

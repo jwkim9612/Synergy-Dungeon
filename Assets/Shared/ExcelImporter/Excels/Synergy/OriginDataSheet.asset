@@ -17,19 +17,19 @@ MonoBehaviour:
     Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
     Image: {fileID: 0}
-  - Name: 2
-    Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
-    Image: {fileID: 0}
   - Name: 3
     Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
     Image: {fileID: 0}
-  - Name: 4
+  - Name: 5
     Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
     Image: {fileID: 0}
-  - Name: 5
+  - Name: 2
+    Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
+    Image: {fileID: 0}
+  - Name: 4
     Description: "\uACF5\uACA9\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: "Images/Character/\uC5D8\uD504\uAC80\uC0AC"
     Image: {fileID: 0}

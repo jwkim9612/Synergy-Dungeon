@@ -19,7 +19,6 @@ MonoBehaviour:
     PurchasePrice: 10
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 2
     Name: "D \uB8EC"
@@ -27,7 +26,6 @@ MonoBehaviour:
     PurchasePrice: 20
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 3
     Name: "C \uB8EC"
@@ -35,7 +33,6 @@ MonoBehaviour:
     PurchasePrice: 30
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 4
     Name: "B \uB8EC"
@@ -43,7 +40,6 @@ MonoBehaviour:
     PurchasePrice: 40
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 5
     Name: "A \uB8EC"
@@ -51,7 +47,6 @@ MonoBehaviour:
     PurchasePrice: 50
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 6
     Name: "S \uB8EC"
@@ -59,7 +54,6 @@ MonoBehaviour:
     PurchasePrice: 60
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 7
     Name: "SS \uB8EC"
@@ -67,7 +61,6 @@ MonoBehaviour:
     PurchasePrice: 70
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 8
     Name: "SSS \uB8EC"
@@ -75,7 +68,6 @@ MonoBehaviour:
     PurchasePrice: 80
     RewardCurrencyType: 2
     RewardAmount: 1
-    RewardId: 0
     ImagePath: 
   - Id: 9
     Name: "\uB79C\uB364 \uD3EC\uC158"
@@ -83,7 +75,6 @@ MonoBehaviour:
     PurchasePrice: 0
     RewardCurrencyType: 0
     RewardAmount: 0
-    RewardId: 0
     ImagePath: 
   - Id: 10
     Name: 
@@ -91,7 +82,6 @@ MonoBehaviour:
     PurchasePrice: 0
     RewardCurrencyType: 0
     RewardAmount: 0
-    RewardId: 0
     ImagePath: 
   - Id: 11
     Name: 
@@ -99,7 +89,6 @@ MonoBehaviour:
     PurchasePrice: 0
     RewardCurrencyType: 0
     RewardAmount: 0
-    RewardId: 0
     ImagePath: 
   - Id: 12
     Name: 
@@ -107,7 +96,6 @@ MonoBehaviour:
     PurchasePrice: 0
     RewardCurrencyType: 0
     RewardAmount: 0
-    RewardId: 0
     ImagePath: 
   - Id: 13
     Name: 
@@ -115,5 +103,4 @@ MonoBehaviour:
     PurchasePrice: 0
     RewardCurrencyType: 0
     RewardAmount: 0
-    RewardId: 0
     ImagePath: Images/Main/Coin

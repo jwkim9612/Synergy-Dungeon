@@ -25,6 +25,7 @@ public class UIAskPurchaseForRuneGoods : UIAskPurchase
         SetGoodsPrice(goodsData.PurchasePrice, goodsData.PurchaseCurrency);
         SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
         SetRuneGrade(runeData.Grade);
+        runeOnSalesIndex = salesIndex;
 
         this.goodsId = goodsId;
     }

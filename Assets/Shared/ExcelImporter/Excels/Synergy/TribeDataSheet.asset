@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: TribeDataSheet
   m_EditorClassIdentifier: 
   TribeDatas:
-  - Name: 1
-    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
-    Image: {fileID: 0}
-  - Name: 2
+  - Name: 7
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
@@ -25,7 +21,15 @@ MonoBehaviour:
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
-  - Name: 4
+  - Name: 2
+    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
+    Image: {fileID: 0}
+  - Name: 1
+    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
+    Image: {fileID: 0}
+  - Name: 8
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
@@ -33,15 +37,11 @@ MonoBehaviour:
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}
+  - Name: 4
+    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
+    Image: {fileID: 0}
   - Name: 6
-    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
-    Image: {fileID: 0}
-  - Name: 7
-    Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
-    Image: {fileID: 0}
-  - Name: 8
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN
     Image: {fileID: 0}

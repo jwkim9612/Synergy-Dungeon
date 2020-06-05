@@ -26,7 +26,7 @@ public class UIAskGoToStore : UIControl
         goToStoreButton.onClick.AddListener(() =>
         {
             simpleScrollSnap.GoToPanel(MainService.INDEX_OF_STORE);
-            GoodsManager.Instance.uiStore.scrollView.GoToTarget(target);
+            MainManager.instance.uiStore.scrollView.GoToTarget(target);
             UIManager.Instance.HideAndShowPreview();
         });
     }

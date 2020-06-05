@@ -12,6 +12,5 @@ public class GoodsExcelData
     public int PurchasePrice;
     public RewardCurrency RewardCurrencyType;
     public int RewardAmount;
-    public int RewardId;
     public string ImagePath;
 }

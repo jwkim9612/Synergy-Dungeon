@@ -9,11 +9,6 @@ using UnityEngine;
 
 public class GoodsManager : MonoSingleton<GoodsManager>
 {
-    [SerializeField] private GameObject beingPurchase = null;
-    [SerializeField] private UIAskGoToStore uiAskGoToStore = null;
-    //[SerializeField] private UIFloatingText buyCompletedFloatingText = null;
-    public UIStore uiStore;
-
     private int rewardAmount;
     private int rewardId;
     private List<RuneGrade> randomlyPickedRuneGradeList;
@@ -21,19 +16,12 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     public void Initialize()
     {
-        Debug.Log("여기가 먼저되야햄");
         InitializeRuneOnSalesData();
-        Debug.Log("여기가 먼저되야햄");
-    }
-
-    private void Start()
-    {
-        //buyCompletedFloatingText.Initialize();
     }
 
     public void PurchaseGoods(int id)
     {
-        ShowBeingPurchase(); // 구매중 팝업 띄우기.
+        MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseGoods")
@@ -69,8 +57,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
 
-                       uiAskGoToStore.SetText(purchaseCurrency);
-                       UIManager.Instance.ShowNew(uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                       MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
@@ -84,13 +72,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     public void PurchaseGoods(int id, int runeOnSalesIndex, RuneGrade runeGrade)
     {
-        ShowBeingPurchase(); // 구매중 팝업 띄우기.
+        MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseGoods")
            .SetEventAttribute("ItemId", id)
            .SetEventAttribute("RuneOnSalesIndex", runeOnSalesIndex)
-           .SetEventAttribute("RuneGrade", runeGrade.ToString())
+           .SetEventAttribute("RuneOnSalesGrade", runeGrade.ToString())
            .Send((response) =>
            {
                if (!response.HasErrors)
@@ -118,8 +106,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
 
-                       uiAskGoToStore.SetText(purchaseCurrency);
-                       UIManager.Instance.ShowNew(uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                       MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
@@ -137,8 +125,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         PlayerDataManager.Instance.LoadPlayerData();
         yield return new WaitForSeconds(1.0f);
 
-        HideBeginPurchase(); // 구매중 팝업 없애기.
-        //buyCompletedFloatingText.Play(); // 구매 완료! 띄우기
+        MainManager.instance.uiStore.HideBeginPurchase(); // 구매중 팝업 없애기.
+        MainManager.instance.uiStore.PlayPurchaseCompletedFloatingText(); // 구매 완료! 띄우기
 
 
         switch (rewardCurrency)
@@ -147,23 +135,12 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 //PlayerDataManager.Instance.LoadPlayerData();
                 break;
             case RewardCurrency.Rune:
-                Debug.Log("룬 구입!!");
-                RuneManager.Instance.AddRune(rewardId);
+                RuneManager.Instance.AddRuneToRuneList(rewardId);
                 break;
             case RewardCurrency.RandomRune:
                 AddRunesAndShowObtainedRunes();
                 break;
         }
-    }
-
-    private void ShowBeingPurchase()
-    {
-        beingPurchase.SetActive(true);
-    }
-
-    private void HideBeginPurchase()
-    {
-        beingPurchase.SetActive(false);
     }
 
     private void SetRandomlyPickedRuneGradeList(List<string> strRuneGradeList)
@@ -192,13 +169,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         // 뽑은 갯수에 따라 획득한 룬 화면 띄우기
         if (randomlyPickedRuneGradeList.Count == GoodsService.MIN_NUMBER_OF_RANDOM_RUNES)
         {
-            uiStore.uiObtainedRuneScreen.SetUIObtainedRune(obtainedRandomIds[0]);
-            UIManager.Instance.ShowNew(uiStore.uiObtainedRuneScreen);
+            MainManager.instance.uiStore.uiObtainedRuneScreen.SetUIObtainedRune(obtainedRandomIds[0]);
+            UIManager.Instance.ShowNew(MainManager.instance.uiStore.uiObtainedRuneScreen);
         }
         else
         {
-            uiStore.uiObtainedRunesScreen.SetUIObtainedRuneList(obtainedRandomIds);
-            UIManager.Instance.ShowNew(uiStore.uiObtainedRunesScreen);
+            MainManager.instance.uiStore.uiObtainedRunesScreen.SetUIObtainedRuneList(obtainedRandomIds);
+            UIManager.Instance.ShowNew(MainManager.instance.uiStore.uiObtainedRunesScreen);
         }
     }
 
@@ -254,10 +231,20 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    foreach(var runeOnSalesScriptData in runeOnSalesScriptDataList)
                    {
                        JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptData.JSON);
+
+                       int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
+                       int id = 0;
+                       bool isSoldOut = false;
                        foreach(var runeOnSalesPair in runeOnSalesJsonObject)
                        {
-                           runeOnSalesList.Add(new Tuple<int, bool>(int.Parse(runeOnSalesPair.Key), (bool)(runeOnSalesPair.Value)));
+                           if (index == idIndex)
+                               id = int.Parse(runeOnSalesPair.Value.ToString());
+                           else if(index == isSoldOutIndex)
+                               isSoldOut = (bool)(runeOnSalesPair.Value);
+
+                           ++index;
                        }
+                       runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
                    }
 
                    Debug.Log("runeslaes 초기화 완료");
