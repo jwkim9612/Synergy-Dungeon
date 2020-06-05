@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class UIRuneGoods : UIGoods
 {
     [SerializeField] protected UIAskPurchaseForRuneGoods uiAskPurchase;
+    [SerializeField] private Text goodsGrade;
     private int runeOnSalesIndex;
 
     public void SetUIGoods(GoodsData goodsData, int goodsId, int runeId, int index)
@@ -13,6 +13,7 @@ public class UIRuneGoods : UIGoods
 
         SetGoodsName(runeData.Name);
         SetGoodsImage(runeData.Image);
+        SetGoodsGrade(runeData.Grade);
         SetGoodsPrice(goodsData.PurchasePrice);
         SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
         runeOnSalesIndex = index;
@@ -22,5 +23,10 @@ public class UIRuneGoods : UIGoods
             uiAskPurchase.SetUIAskPurchase(goodsData, goodsId, runeData, runeOnSalesIndex);
             UIManager.Instance.ShowNew(uiAskPurchase);
         });
+    }
+
+    public void SetGoodsGrade(RuneGrade runeGrade)
+    {
+        goodsGrade.text = RuneService.GetNameStrByGrade(runeGrade);
     }
 }

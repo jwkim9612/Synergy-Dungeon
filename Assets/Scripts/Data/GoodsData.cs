@@ -9,7 +9,7 @@ public class GoodsData
         Name = goodsExcelData.Name;
         PurchaseCurrency = goodsExcelData.PurchaseCurrency;
         PurchasePrice = goodsExcelData.PurchasePrice;
-        RewardCurrencyType = goodsExcelData.RewardCurrencyType;
+        RewardCurrency = goodsExcelData.RewardCurrency;
         RewardAmount = goodsExcelData.RewardAmount;
 
         Image = Resources.Load<Sprite>(goodsExcelData.ImagePath);
@@ -18,7 +18,7 @@ public class GoodsData
     public string Name;
     public PurchaseCurrency PurchaseCurrency;
     public int PurchasePrice;
-    public RewardCurrency RewardCurrencyType;
+    public RewardCurrency RewardCurrency;
     public int RewardAmount;
     public Sprite Image;
 }

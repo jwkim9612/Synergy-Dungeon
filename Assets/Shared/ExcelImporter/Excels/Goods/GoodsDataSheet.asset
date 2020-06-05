@@ -17,90 +17,90 @@ MonoBehaviour:
     Name: "F \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 10
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 2
     Name: "D \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 20
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 3
     Name: "C \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 30
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 4
     Name: "B \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 40
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 5
     Name: "A \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 50
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 6
     Name: "S \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 60
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 7
     Name: "SS \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 70
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 8
     Name: "SSS \uB8EC"
     PurchaseCurrency: 1
     PurchasePrice: 80
-    RewardCurrencyType: 2
+    RewardCurrency: 2
     RewardAmount: 1
     ImagePath: 
   - Id: 9
     Name: "\uB79C\uB364 \uD3EC\uC158"
     PurchaseCurrency: 0
     PurchasePrice: 0
-    RewardCurrencyType: 0
+    RewardCurrency: 0
     RewardAmount: 0
     ImagePath: 
   - Id: 10
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
+    Name: "\uB8EC \uBF51\uAE30 1\uD68C (F~B)"
+    PurchaseCurrency: 2
+    PurchasePrice: 100
+    RewardCurrency: 3
+    RewardAmount: 1
     ImagePath: 
   - Id: 11
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
+    Name: "\uB8EC \uBF51\uAE30 10\uD68C (F~B)"
+    PurchaseCurrency: 2
+    PurchasePrice: 990
+    RewardCurrency: 3
+    RewardAmount: 10
     ImagePath: 
   - Id: 12
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
+    Name: "\uB8EC \uBF51\uAE30 1\uD68C (A~SSS)"
+    PurchaseCurrency: 2
+    PurchasePrice: 1000
+    RewardCurrency: 3
+    RewardAmount: 1
     ImagePath: 
   - Id: 13
-    Name: 
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrencyType: 0
-    RewardAmount: 0
-    ImagePath: Images/Main/Coin
+    Name: "\uB8EC \uBF51\uAE30 10\uD68C (A~SSS)"
+    PurchaseCurrency: 2
+    PurchasePrice: 9900
+    RewardCurrency: 3
+    RewardAmount: 10
+    ImagePath: 

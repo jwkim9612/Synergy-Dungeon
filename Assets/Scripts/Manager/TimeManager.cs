@@ -9,38 +9,38 @@ using UnityEngine;
 
 public class TimeManager : MonoSingleton<TimeManager>
 {
-    public DateTime serverTime;
+    //public DateTime serverTime;
 
     public void Initialize()
     {
-        GetServerTime();
+        //GetServerTime();
         AttendanceCheck();
         SaveLastConnectTime();
         //        GetLastConnectTime();
         //SaveLastConnectTime();
     }
 
-    public void GetServerTime()
-    {
-        new LogEventRequest()
-            .SetEventKey("G_ServerTime")
-            .Send((response) => {
-            if (!response.HasErrors)
-            {
-                long test2 = (long)(response.ScriptData.GetLong("ServerTime"));
+    //public void GetServerTime()
+    //{
+    //    new LogEventRequest()
+    //        .SetEventKey("G_ServerTime")
+    //        .Send((response) => {
+    //        if (!response.HasErrors)
+    //        {
+    //            long test2 = (long)(response.ScriptData.GetLong("ServerTime"));
                     
-                Debug.Log(test2);
-                Debug.Log(UnixTimeStampToDateTime(test2));
-                serverTime = UnixTimeStampToDateTime(test2);
+    //            Debug.Log(test2);
+    //            Debug.Log(UnixTimeStampToDateTime(test2));
+    //            serverTime = UnixTimeStampToDateTime(test2);
 
-                }
-                else
-            {
-                Debug.Log("Error Time Load !");
-                Debug.Log(response.Errors.JSON);
-            }
-        });
-    }
+    //            }
+    //            else
+    //        {
+    //            Debug.Log("Error Time Load !");
+    //            Debug.Log(response.Errors.JSON);
+    //        }
+    //    });
+    //}
 
     private static DateTime UnixTimeStampToDateTime(long unixTimeStamp)
     {

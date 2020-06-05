@@ -221,3 +221,10 @@ public enum RuneGrade
     SSS_2,
     SSS_3
 }
+
+public enum RuneRating
+{ 
+    None,
+    Normal,
+    Unique
+}

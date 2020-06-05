@@ -14,7 +14,7 @@ public class UIAskPurchaseForRuneGoods : UIAskPurchase
         purchaseButton.onClick.AddListener(() =>
         {
             UIManager.Instance.HideAndShowPreview();
-            GoodsManager.Instance.PurchaseGoods(goodsId, runeOnSalesIndex, runeGrade);
+            GoodsManager.Instance.PurchaseRune(goodsId, runeOnSalesIndex, runeGrade);
         });
     }
 

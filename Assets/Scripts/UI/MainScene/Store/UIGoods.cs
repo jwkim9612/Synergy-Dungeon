@@ -11,21 +11,6 @@ public class UIGoods : MonoBehaviour
     [SerializeField] private Text goodsPrice;
     [SerializeField] private Image purchaseCurrencyImage;
 
-    //public void SetUIGoods(GoodsData goodsData, int goodsId)
-    //{
-    //    SetGoodsName(goodsData.Name);
-    //    SetGoodsAmount(goodsData.RewardAmount);
-    //    SetGoodsImage(goodsData.Image);
-    //    SetGoodsPrice(goodsData.PurchasePrice);
-    //    SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
-
-    //    showAskBuyItButton.onClick.AddListener(() =>
-    //    {
-    //        uiAskBuyIt.SetUIAskItBuy(goodsData, goodsId);
-    //        UIManager.Instance.ShowNew(uiAskBuyIt);
-    //    });
-    //}
-
     protected void SetGoodsName(string name)
     {
         goodsName.text = name;

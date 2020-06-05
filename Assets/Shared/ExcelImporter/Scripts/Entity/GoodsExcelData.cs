@@ -10,7 +10,7 @@ public class GoodsExcelData
     public string Name;
     public PurchaseCurrency PurchaseCurrency;
     public int PurchasePrice;
-    public RewardCurrency RewardCurrencyType;
+    public RewardCurrency RewardCurrency;
     public int RewardAmount;
     public string ImagePath;
 }

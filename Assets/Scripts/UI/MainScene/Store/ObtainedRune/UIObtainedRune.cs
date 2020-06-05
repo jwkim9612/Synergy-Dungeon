@@ -7,6 +7,7 @@ public class UIObtainedRune : MonoBehaviour
 {
     [SerializeField] private Image runeImage;
     [SerializeField] private Text runeName;
+    [SerializeField] private Text runeGrade;
 
     public void SetUIObtainedRune(int runeId)
     {
@@ -14,6 +15,7 @@ public class UIObtainedRune : MonoBehaviour
         
         SetRuneImage(runeData.Image);
         SetRuneName(runeData.Name);
+        SetRuneGrade(runeData.Grade);
     }
 
     private void SetRuneImage(Sprite sprite)
@@ -24,5 +26,10 @@ public class UIObtainedRune : MonoBehaviour
     private void SetRuneName(string name)
     {
         runeName.text = name;
+    }
+
+    private void SetRuneGrade(RuneGrade runeGrade)
+    {
+        this.runeGrade.text = RuneService.GetNameStrByGrade(runeGrade);
     }
 }

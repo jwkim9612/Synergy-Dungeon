@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class UIRandomRuneSalesList : MonoBehaviour
 {
-    private List<UIAmountRequiredGoods> uiRuneGoodsList;
+    private List<UIRandomRuneGoods> uiRadomRuneGoodsList;
 
     public void Initialize()
     {
-        uiRuneGoodsList = GetComponentsInChildren<UIAmountRequiredGoods>().ToList();
+        uiRadomRuneGoodsList = GetComponentsInChildren<UIRandomRuneGoods>().ToList();
 
-        //uiRuneGoodsList[0].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.FIRST_RUNE_SALES_ID], GoodsService.FIRST_RUNE_SALES_ID);
-        //uiRuneGoodsList[1].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[GoodsService.SECOND_RUNE_SALES_ID], GoodsService.SECOND_RUNE_SALES_ID);
+        var randomRuneIdAndRatingList = GoodsService.RANDOM_RUNE_SALES_ID_AND_RATING_LIST;
+        for (int i = 0; i < randomRuneIdAndRatingList.Count; ++i)
+        {
+            uiRadomRuneGoodsList[i].SetUIGoods(GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[randomRuneIdAndRatingList[i].Item1], randomRuneIdAndRatingList[i].Item1, randomRuneIdAndRatingList[i].Item2);
+        }
     }
 }

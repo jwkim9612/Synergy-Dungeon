@@ -16,7 +16,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     public void Initialize()
     {
-        InitializeRuneOnSalesData();
+        ResetRuneOnSales();
     }
 
     public void PurchaseGoods(int id)
@@ -25,7 +25,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
         new LogEventRequest()
            .SetEventKey("PurchaseGoods")
-           .SetEventAttribute("ItemId", id)
+           .SetEventAttribute("GoodsId", id)
            .Send((response) =>
            {
                if (!response.HasErrors)
@@ -35,17 +35,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    {
                        rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
 
-                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrencyType"));
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
                        RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
                        switch (rewardCurrency)
                        {
                            case RewardCurrency.Rune:
                                rewardId = (int)(response.ScriptData.GetInt("RewardId"));
-                               break;
-                           case RewardCurrency.RandomRune:
-                               var strGradeList = response.ScriptData.GetStringList("RuneGradeList");
-                               SetRandomlyPickedRuneGradeList(strGradeList);
                                break;
                        }
 
@@ -56,13 +52,14 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
-
+                       MainManager.instance.uiStore.HideBeginPurchase();
                        MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
                {
+                   MainManager.instance.uiStore.HideBeginPurchase();
                    // 서버 문제로 구매 실패 팝업 띄우기.
                    Debug.Log("Error BuyTest");
                    Debug.Log(response.Errors.JSON);
@@ -70,13 +67,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-    public void PurchaseGoods(int id, int runeOnSalesIndex, RuneGrade runeGrade)
+    public void PurchaseRune(int id, int runeOnSalesIndex, RuneGrade runeGrade)
     {
         MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
-           .SetEventKey("PurchaseGoods")
-           .SetEventAttribute("ItemId", id)
+           .SetEventKey("PurchaseRune")
+           .SetEventAttribute("GoodsId", id)
            .SetEventAttribute("RuneOnSalesIndex", runeOnSalesIndex)
            .SetEventAttribute("RuneOnSalesGrade", runeGrade.ToString())
            .Send((response) =>
@@ -88,15 +85,10 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    {
                        rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
 
-                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrencyType"));
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
                        RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
-                       switch (rewardCurrency)
-                       {
-                           case RewardCurrency.Rune:
-                               rewardId = (int)(response.ScriptData.GetInt("RewardId"));
-                               break;
-                       }
+                       rewardId = (int)(response.ScriptData.GetInt("RewardId"));
 
                        StartCoroutine(Co_GetItems(rewardCurrency));
                    }
@@ -105,13 +97,65 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
-
+                       MainManager.instance.uiStore.HideBeginPurchase();
                        MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
                else
                {
+                   MainManager.instance.uiStore.HideBeginPurchase();
+                   // 서버 문제로 구매 실패 팝업 띄우기.
+                   Debug.Log("Error BuyTest");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
+
+    public void PurchaseRandomRune(int id, RuneRating runeRating)
+    {
+        MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
+
+        new LogEventRequest()
+           .SetEventKey("PurchaseRandomRune")
+           .SetEventAttribute("GoodsId", id)
+           .SetEventAttribute("RatingOfRandomRune", runeRating.ToString())
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
+
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
+                       RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
+
+                       var strGradeList = response.ScriptData.GetStringList("RuneGradeList");
+
+                       foreach(var a in strGradeList)
+                       {
+                           Debug.Log(a);
+                       }
+
+                       SetRandomlyPickedRuneGradeList(strGradeList);
+
+                       StartCoroutine(Co_GetItems(rewardCurrency));
+                   }
+                   else
+                   {
+                       string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
+                       PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
+
+                       MainManager.instance.uiStore.HideBeginPurchase();
+                       MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                   }
+               }
+               else
+               {
+                   MainManager.instance.uiStore.HideBeginPurchase();
                    // 서버 문제로 구매 실패 팝업 띄우기.
                    Debug.Log("Error BuyTest");
                    Debug.Log(response.Errors.JSON);
@@ -179,28 +223,18 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         }
     }
 
-    private void InitializeRuneOnSalesData()
+    private void InitializeRuneOnSalesData(List<int> runeIdList)
     {
-        List<int> aa = new List<int>();
-        aa.Add(1001);
-        aa.Add(2001);
-        aa.Add(3001);
-        aa.Add(4001);
-        aa.Add(1002);
-        aa.Add(1003);
-        aa.Add(1004);
-        aa.Add(1005);
-
-        List<int> amount = new List<int>();
-        for(int i = 0; i < aa.Count; ++i)
-        {
-            amount.Add(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[aa[i]].Id);
-        }
+        //List<int> amount = new List<int>();
+        //for(int i = 0; i < aa.Count; ++i)
+        //{
+        //    amount.Add(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[aa[i]].Id);
+        //}
 
         new LogEventRequest()
            .SetEventKey("InitializeRuneOnSalesData")
-           .SetEventAttribute("RuneOnSalesIds", aa)
-           .SetEventAttribute("RuneOnSalesAmounts", amount)
+           .SetEventAttribute("RuneOnSalesIds", runeIdList)
+           //.SetEventAttribute("RuneOnSalesAmounts", amount)
            .Send((response) =>
            {
                if (!response.HasErrors)
@@ -252,6 +286,28 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                else
                {
                    Debug.Log("Error BuyTest");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
+
+
+    private void ResetRuneOnSales()
+    {
+        new LogEventRequest()
+           .SetEventKey("GetRuneOnSalesGradeList")
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   List<string> runeOnSalesGradeListStr = response.ScriptData.GetStringList("RuneOnSalesGradeList");
+                   List<RuneGrade> runeOnSalesGradeList = RuneService.stringGradeListToRuneGradeList(runeOnSalesGradeListStr);
+                   List<int> runeIdList = RuneService.GetRandomIdListByRuneGradeList(runeOnSalesGradeList);
+                   InitializeRuneOnSalesData(runeIdList);
+               }
+               else
+               {
+                   Debug.Log("Error InitializeRuneOnSales");
                    Debug.Log(response.Errors.JSON);
                }
            });
