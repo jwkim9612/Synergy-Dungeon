@@ -29,7 +29,7 @@ public class UISynergyList : MonoBehaviour
         foreach (var tribeData in tribeDatas)
         {
             var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
-            slot.SetSynergyData(tribeData);
+            slot.SetSynergyData(tribeData.Value);
         }
     }
 
@@ -39,7 +39,7 @@ public class UISynergyList : MonoBehaviour
         foreach (var originData in originDatas)
         {
             var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
-            slot.SetSynergyData(originData);
+            slot.SetSynergyData(originData.Value);
         }
     }
 }

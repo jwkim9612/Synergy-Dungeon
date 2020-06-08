@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIDiamond : MonoBehaviour
 {
-    [SerializeField] private Text diamondText;
+    [SerializeField] private Text diamondText = null;
 
     public void Initialize()
     {

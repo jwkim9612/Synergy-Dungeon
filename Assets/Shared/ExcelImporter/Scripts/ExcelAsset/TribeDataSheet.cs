@@ -6,18 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class TribeDataSheet : ScriptableObject
 {
-	public List<TribeData> TribeDatas;
+	public List<TribeExcelData> TribeExcelDatas;
+	public Dictionary<Tribe, TribeData> TribeDatas;
 
 	public void Initialize()
 	{
-		InitializeImage();
+		InitializeTribeDatas();
 	}
 
-	private void InitializeImage()
+	private void InitializeTribeDatas()
 	{
-		foreach (var tribeData in TribeDatas)
+		TribeDatas = new Dictionary<Tribe, TribeData>();
+
+		foreach (var tribeExcelData in TribeExcelDatas)
 		{
-			tribeData.Image = Resources.Load<Sprite>(tribeData.ImagePath);
+			TribeData tribeData = new TribeData(tribeExcelData);
+			TribeDatas.Add(tribeData.Name, tribeData);
 		}
 	}
 }

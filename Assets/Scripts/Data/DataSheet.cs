@@ -19,23 +19,14 @@ public class DataSheet : MonoBehaviour
 
     public void Initialize()
     {
-		characterDataSheet.Initialize();
 		tribeDataSheet.Initialize();
 		originDataSheet.Initialize();
+		characterDataSheet.Initialize();
 		chapterDataSheet.Initialize();
 		chapterInfoDataSheet.Initialize();
 		enemyDataSheet.Initialize();
+		probabilityDataSheet.Initialize();
 		runeDataSheet.Initialize();
 		goodsDataSheet.Initialize();
-
-		//InitializeCharacterData();
 	}
-
-	//private void InitializeCharacterData()
-	//{
-	//	foreach (var characterData in characterData.characterData3)
-	//	{
-	//		characterData.sprite = Resources.Load<Sprite>(characterData.ImagePath);
-	//	}
-	//}
 }

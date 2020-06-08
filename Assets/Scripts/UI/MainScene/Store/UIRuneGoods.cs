@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class UIRuneGoods : UIGoods
 {
-    [SerializeField] protected UIAskPurchaseForRuneGoods uiAskPurchase;
-    [SerializeField] private Text goodsGrade;
+    [SerializeField] protected UIAskPurchaseForRuneGoods uiAskPurchase = null;
+    [SerializeField] private Text goodsGrade = null;
     private int runeOnSalesIndex;
 
     public void SetUIGoods(GoodsData goodsData, int goodsId, int runeId, int index)

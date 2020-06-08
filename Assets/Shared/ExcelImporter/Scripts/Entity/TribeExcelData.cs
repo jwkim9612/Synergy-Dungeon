@@ -4,11 +4,10 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class OriginData
+
+public class TribeExcelData
 { 
-    public Origin Name;
+    public Tribe Name;
     public string Description;
     public string ImagePath;
-
-    public Sprite Image;
 }

@@ -9,7 +9,6 @@ public class UIRunePage : MonoBehaviour
     [SerializeField] private UIEquippedRunes uiEquippedRunes = null;
     [SerializeField] private Button button1 = null;
     [SerializeField] private Button button2 = null;
-    [SerializeField] private Button button3 = null;
 
 
     private void Start()

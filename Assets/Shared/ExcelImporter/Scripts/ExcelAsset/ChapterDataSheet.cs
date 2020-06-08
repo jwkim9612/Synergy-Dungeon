@@ -6,28 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class ChapterDataSheet : ScriptableObject
 {
-	public List<ChapterData> ChapterDatas;
+	public List<ChapterExcelData> ChapterExcelDatas;
+	public Dictionary<int, ChapterData> ChapterDatas;
 
 	public void Initialize()
 	{
-		InitializeImage();
-		InitializeChaprterInfoData();
+		InitializeChapterDatas();
 	}
 
-	private void InitializeImage()
+	private void InitializeChapterDatas()
 	{
-		foreach (var chapterData in ChapterDatas)
-		{
-			chapterData.Image = Resources.Load<Sprite>(chapterData.ImagePath);
-		}
-	}
+		ChapterDatas = new Dictionary<int, ChapterData>();
 
-	private void InitializeChaprterInfoData()
-	{
-		foreach (var chapterData in ChapterDatas)
+		foreach (var chapterExcelData in ChapterExcelDatas)
 		{
-			// 후에 수정해야함. 
-			chapterData.chapterInfoDataList = GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas;
+			ChapterData chapterData = new ChapterData(chapterExcelData);
+			ChapterDatas.Add(chapterData.Id, chapterData);
 		}
 	}
 }

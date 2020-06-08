@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIObtainedRuneScreen : UIControl
 {
-    [SerializeField] private UIObtainedRune uiObtainedRune;
+    [SerializeField] private UIObtainedRune uiObtainedRune = null;
 
     public void SetUIObtainedRune(int runeId)
     {

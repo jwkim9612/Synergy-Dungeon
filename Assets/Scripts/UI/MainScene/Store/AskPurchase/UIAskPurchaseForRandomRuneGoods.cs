@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIAskPurchaseForRandomRuneGoods : UIAskPurchase
 {
-    [SerializeField] private Text goodsAmount;
+    [SerializeField] private Text goodsAmount = null;
     private RuneRating runeRating;
 
     private new void Start()

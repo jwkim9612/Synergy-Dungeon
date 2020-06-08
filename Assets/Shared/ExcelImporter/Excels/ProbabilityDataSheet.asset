@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c303575ad73355745b016890790aa845, type: 3}
   m_Name: ProbabilityDataSheet
   m_EditorClassIdentifier: 
-  ProbabilityDatas:
+  ProbabilityExcelDatas:
   - Level: 1
     OneTier: 100
     TwoTier: 0

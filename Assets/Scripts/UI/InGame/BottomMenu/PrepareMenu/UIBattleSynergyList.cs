@@ -45,7 +45,8 @@ public class UIBattleSynergyList : MonoBehaviour
         var tribes = synergyService.appliedTribes;
         foreach(var tribe in tribes)
         {
-            uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[(int)(tribe.Key) - 1].Image);
+            uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[tribe.Key].Image);
+            uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[tribe.Key].Image);
             uiTribes[tribeIndex].gameObject.SetActive(true);
             ++tribeIndex;
         }
@@ -63,7 +64,7 @@ public class UIBattleSynergyList : MonoBehaviour
         var origins = synergyService.appliedOrigins;
         foreach (var origin in origins)
         {
-            uiOrigins[originIndex].SetImage(GameManager.instance.dataSheet.originDataSheet.OriginDatas[(int)(origin.Key) - 1].Image);
+            uiOrigins[originIndex].SetImage(GameManager.instance.dataSheet.originDataSheet.OriginDatas[origin.Key].Image);
             uiOrigins[originIndex].gameObject.SetActive(true);
             ++originIndex;
         }

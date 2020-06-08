@@ -3,6 +3,7 @@ using GameSparks.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using UnityEngine;
 
 public class RuneManager : MonoSingleton<RuneManager>
@@ -11,13 +12,34 @@ public class RuneManager : MonoSingleton<RuneManager>
     public delegate void OnAddRuneDelegate(int runeId);
     public OnAddRuneDelegate OnAddRune { get; set; }
     public Dictionary<int, int> ownedRunes { get; set; }
-    public List<UIEquipRune> uiEquippedRunes { get; set; }
+    public List<Rune> equippedRunes { get; set; }
 
     public void Initialize()
     {
-        uiEquippedRunes = new List<UIEquipRune>();
-        LoadOwnedRuneData();
         RuneService.Initialize();
+        InitializeEquippedRunes();
+        LoadOwnedRuneData();
+    }
+
+    private void InitializeEquippedRunes()
+    {
+        var equippedRuneIdsSaveData = SaveManager.Instance.equippedRuneIdsSaveData;
+
+        equippedRunes = new List<Rune>();
+        for (int i = 0; i < equippedRuneIdsSaveData.Count; ++i)
+        {
+            int equippedRuneId = equippedRuneIdsSaveData[i];
+            if (equippedRuneId != -1)
+            {
+                Rune rune = new Rune();
+                rune.SetRune(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[equippedRuneId]);
+                equippedRunes.Add(rune);
+            }
+            else
+            {
+                equippedRunes.Add(null);
+            }
+        }
     }
 
     public void SaveOwnedRunes()
@@ -137,19 +159,19 @@ public class RuneManager : MonoSingleton<RuneManager>
         switch (origin)
         {
             case Origin.Archer:
-                rune = uiEquippedRunes[RuneService.INDEX_OF_ARCHER_SOCKET].rune;
+                rune = equippedRunes[RuneService.INDEX_OF_ARCHER_SOCKET];
                 break;
             case Origin.Paladin:
-                rune = uiEquippedRunes[RuneService.INDEX_OF_PALADIN_SOCKET].rune;
+                rune = equippedRunes[RuneService.INDEX_OF_PALADIN_SOCKET];
                 break;
             case Origin.Thief:
-                rune = uiEquippedRunes[RuneService.INDEX_OF_THIEF_SOCKET].rune;
+                rune = equippedRunes[RuneService.INDEX_OF_THIEF_SOCKET];
                 break;
             case Origin.Warrior:
-                rune = uiEquippedRunes[RuneService.INDEX_OF_WARRIOR_SOCKET].rune;
+                rune = equippedRunes[RuneService.INDEX_OF_WARRIOR_SOCKET];
                 break;
             case Origin.Wizard:
-                rune = uiEquippedRunes[RuneService.INDEX_OF_WIZARD_SOCKET].rune;
+                rune = equippedRunes[RuneService.INDEX_OF_WIZARD_SOCKET];
                 break;
             default:
                 rune = null;
@@ -175,5 +197,13 @@ public class RuneManager : MonoSingleton<RuneManager>
                     Debug.Log("Error Initialize OwnedRuneData !");
                 }
             });
+    }
+
+    public void SetEquippedRune(Rune rune)
+    {
+        if (rune != null)
+            equippedRunes[rune.runeData.SocketPosition] = rune;
+        else
+            Debug.LogError("Error SetEquippedRune");
     }
 }

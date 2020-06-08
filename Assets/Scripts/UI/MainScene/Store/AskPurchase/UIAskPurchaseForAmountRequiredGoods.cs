@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIAskPurchaseForAmountRequiredGoods : UIAskPurchase
 {
-    [SerializeField] private Text goodsAmount;
+    [SerializeField] private Text goodsAmount = null;
 
     private new void Start()
     {

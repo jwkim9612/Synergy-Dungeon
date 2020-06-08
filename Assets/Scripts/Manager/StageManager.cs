@@ -11,13 +11,13 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void Initialize()
     {
-        currentWave = 1;
+        //currentWave = 1;
     }
 
     public void SetChapterData(int chapter)
     {
         currentChapter = chapter;
-        currentChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[currentChapter - 1];
+        currentChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[currentChapter];
     }
 
     public float GetRelativePercentageByStage()

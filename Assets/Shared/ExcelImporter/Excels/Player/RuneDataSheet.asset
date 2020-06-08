@@ -15,7 +15,7 @@ MonoBehaviour:
   RuneExcelDatas:
   - Id: 1000
     Name: "\uAE30\uBCF8 \uC804\uC0AC \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 0
     Attack: 1
@@ -32,7 +32,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1001
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 3
@@ -49,7 +49,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1003
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1009
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 6
@@ -185,7 +185,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1011
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Elf
   - Id: 1017
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 9
@@ -323,7 +323,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1019
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -410,7 +410,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -444,7 +444,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1025
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 12
@@ -461,7 +461,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1027
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1033
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 15
@@ -597,7 +597,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -614,7 +614,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1035
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -648,7 +648,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -665,7 +665,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -699,7 +699,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -716,7 +716,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1041
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 18
@@ -733,7 +733,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1043
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -801,7 +801,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 6
     Prob: 875
     Attack: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1049
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 19
@@ -869,7 +869,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -886,7 +886,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1051
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -937,7 +937,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -971,7 +971,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 7
     Prob: 375
     Attack: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1057
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 21
@@ -1005,7 +1005,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1059
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1039,7 +1039,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1056,7 +1056,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1090,7 +1090,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 8
     Prob: 625
     Attack: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1065
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 22
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1158,7 +1158,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1067
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1175,7 +1175,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1192,7 +1192,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1209,7 +1209,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1226,7 +1226,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1243,7 +1243,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 9
     Prob: 375
     Attack: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1073
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 230
@@ -1277,7 +1277,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1075
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1311,7 +1311,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1328,7 +1328,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1379,7 +1379,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 10
     Prob: 250
     Attack: 0
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1081
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 24
@@ -1413,7 +1413,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1083
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1481,7 +1481,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 11
     Prob: 500
     Attack: 0
@@ -1532,7 +1532,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1089
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 25
@@ -1549,7 +1549,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1566,7 +1566,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1091
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1583,7 +1583,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1600,7 +1600,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1617,7 +1617,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1634,7 +1634,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 12
     Prob: 375
     Attack: 0
@@ -1668,7 +1668,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1097
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 26
@@ -1685,7 +1685,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1702,7 +1702,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1099
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1719,7 +1719,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1736,7 +1736,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1753,7 +1753,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1770,7 +1770,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1787,7 +1787,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 13
     Prob: 250
     Attack: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1105
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 27
@@ -1821,7 +1821,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1838,7 +1838,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1107
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1855,7 +1855,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1872,7 +1872,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1889,7 +1889,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1906,7 +1906,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1923,7 +1923,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 1112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 1
+    SocketPosition: 0
     Grade: 14
     Prob: 125
     Attack: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2000
     Name: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 0
     Attack: 1
@@ -1957,7 +1957,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 2001
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 3
@@ -1974,7 +1974,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 2002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -1991,7 +1991,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 2003
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2008,7 +2008,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2025,7 +2025,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2042,7 +2042,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2059,7 +2059,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2076,7 +2076,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -2093,7 +2093,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2009
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 6
@@ -2110,7 +2110,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2127,7 +2127,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2011
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2144,7 +2144,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2161,7 +2161,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2178,7 +2178,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2195,7 +2195,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2212,7 +2212,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -2229,7 +2229,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2017
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 9
@@ -2246,7 +2246,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2263,7 +2263,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2019
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2280,7 +2280,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2297,7 +2297,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2314,7 +2314,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2331,7 +2331,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2348,7 +2348,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -2365,7 +2365,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2025
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 12
@@ -2382,7 +2382,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2399,7 +2399,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2027
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2416,7 +2416,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2433,7 +2433,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2450,7 +2450,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2467,7 +2467,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2484,7 +2484,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -2501,7 +2501,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2033
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 15
@@ -2518,7 +2518,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2535,7 +2535,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2035
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2552,7 +2552,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2569,7 +2569,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2586,7 +2586,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2603,7 +2603,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2620,7 +2620,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -2637,7 +2637,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2041
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 18
@@ -2654,7 +2654,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2671,7 +2671,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2043
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2688,7 +2688,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2705,7 +2705,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2722,7 +2722,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2739,7 +2739,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2756,7 +2756,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 6
     Prob: 875
     Attack: 0
@@ -2773,7 +2773,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2049
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 19
@@ -2790,7 +2790,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2807,7 +2807,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2051
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2824,7 +2824,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2841,7 +2841,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2858,7 +2858,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2875,7 +2875,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2892,7 +2892,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 7
     Prob: 375
     Attack: 0
@@ -2909,7 +2909,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2057
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 21
@@ -2926,7 +2926,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -2943,7 +2943,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2059
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -2960,7 +2960,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -2977,7 +2977,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -2994,7 +2994,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -3011,7 +3011,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -3028,7 +3028,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 8
     Prob: 625
     Attack: 0
@@ -3045,7 +3045,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2065
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 22
@@ -3062,7 +3062,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3079,7 +3079,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2067
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3096,7 +3096,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3113,7 +3113,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3130,7 +3130,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3147,7 +3147,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3164,7 +3164,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 9
     Prob: 375
     Attack: 0
@@ -3181,7 +3181,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2073
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 230
@@ -3198,7 +3198,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3215,7 +3215,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2075
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3232,7 +3232,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3249,7 +3249,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3266,7 +3266,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3283,7 +3283,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3300,7 +3300,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 10
     Prob: 250
     Attack: 0
@@ -3317,7 +3317,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2081
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 24
@@ -3334,7 +3334,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3351,7 +3351,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2083
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3368,7 +3368,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3385,7 +3385,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3402,7 +3402,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3419,7 +3419,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3436,7 +3436,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 11
     Prob: 500
     Attack: 0
@@ -3453,7 +3453,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2089
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 25
@@ -3470,7 +3470,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3487,7 +3487,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2091
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3504,7 +3504,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3521,7 +3521,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3538,7 +3538,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3555,7 +3555,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3572,7 +3572,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 12
     Prob: 375
     Attack: 0
@@ -3589,7 +3589,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2097
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 26
@@ -3606,7 +3606,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3623,7 +3623,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2099
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3640,7 +3640,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3657,7 +3657,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3674,7 +3674,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3691,7 +3691,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3708,7 +3708,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 13
     Prob: 250
     Attack: 0
@@ -3725,7 +3725,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2105
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 27
@@ -3742,7 +3742,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3759,7 +3759,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2107
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3776,7 +3776,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3793,7 +3793,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3810,7 +3810,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3827,7 +3827,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3844,7 +3844,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 2112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 2
+    SocketPosition: 1
     Grade: 14
     Prob: 125
     Attack: 0
@@ -3861,7 +3861,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3000
     Name: "\uAE30\uBCF8 \uB3C4\uC801 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 0
     Attack: 0
@@ -3878,7 +3878,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3001
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 3
@@ -3895,7 +3895,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3912,7 +3912,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3003
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3929,7 +3929,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3946,7 +3946,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3963,7 +3963,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3980,7 +3980,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -3997,7 +3997,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -4014,7 +4014,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3009
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 6
@@ -4031,7 +4031,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4048,7 +4048,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3011
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4065,7 +4065,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4082,7 +4082,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4099,7 +4099,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4116,7 +4116,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4133,7 +4133,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -4150,7 +4150,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3017
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 9
@@ -4167,7 +4167,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4184,7 +4184,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3019
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4201,7 +4201,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4218,7 +4218,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4235,7 +4235,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4252,7 +4252,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4269,7 +4269,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -4286,7 +4286,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3025
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 12
@@ -4303,7 +4303,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4320,7 +4320,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3027
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4337,7 +4337,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4354,7 +4354,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4371,7 +4371,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4405,7 +4405,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -4422,7 +4422,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3033
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 15
@@ -4439,7 +4439,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4456,7 +4456,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3035
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4473,7 +4473,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4490,7 +4490,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4507,7 +4507,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4524,7 +4524,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4541,7 +4541,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -4558,7 +4558,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3041
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 18
@@ -4575,7 +4575,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4592,7 +4592,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3043
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4609,7 +4609,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4626,7 +4626,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4643,7 +4643,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4660,7 +4660,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -4677,7 +4677,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 3048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 3
+    SocketPosition: 2
     Grade: 6
     Prob: 875
     Attack: 0
@@ -5782,7 +5782,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4000
     Name: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 0
     Attack: 1
@@ -5799,7 +5799,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4001
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 3
@@ -5816,7 +5816,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5833,7 +5833,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4003
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5850,7 +5850,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5867,7 +5867,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5884,7 +5884,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5901,7 +5901,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5918,7 +5918,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -5935,7 +5935,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4009
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 6
@@ -5952,7 +5952,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -5969,7 +5969,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4011
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -5986,7 +5986,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -6003,7 +6003,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -6020,7 +6020,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -6037,7 +6037,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -6054,7 +6054,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -6071,7 +6071,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4017
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 9
@@ -6088,7 +6088,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6105,7 +6105,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4019
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6122,7 +6122,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6139,7 +6139,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6156,7 +6156,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6173,7 +6173,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6190,7 +6190,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -6207,7 +6207,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4025
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 12
@@ -6224,7 +6224,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6241,7 +6241,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4027
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6258,7 +6258,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6275,7 +6275,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6292,7 +6292,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6309,7 +6309,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6326,7 +6326,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -6343,7 +6343,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4033
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 15
@@ -6360,7 +6360,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6377,7 +6377,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4035
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6394,7 +6394,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6411,7 +6411,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6428,7 +6428,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6445,7 +6445,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6462,7 +6462,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -6479,7 +6479,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4041
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 18
@@ -6496,7 +6496,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6513,7 +6513,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4043
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6530,7 +6530,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6547,7 +6547,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6564,7 +6564,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6581,7 +6581,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6598,7 +6598,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 6
     Prob: 875
     Attack: 0
@@ -6615,7 +6615,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4049
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 19
@@ -6632,7 +6632,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6649,7 +6649,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4051
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6666,7 +6666,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6683,7 +6683,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6700,7 +6700,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6717,7 +6717,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6734,7 +6734,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 7
     Prob: 375
     Attack: 0
@@ -6751,7 +6751,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4057
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 21
@@ -6768,7 +6768,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6785,7 +6785,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4059
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6802,7 +6802,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6819,7 +6819,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6836,7 +6836,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6853,7 +6853,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6870,7 +6870,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 8
     Prob: 625
     Attack: 0
@@ -6887,7 +6887,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4065
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 22
@@ -6904,7 +6904,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -6921,7 +6921,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4067
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -6938,7 +6938,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -6955,7 +6955,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -6972,7 +6972,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -6989,7 +6989,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -7006,7 +7006,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 9
     Prob: 375
     Attack: 0
@@ -7023,7 +7023,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4073
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 230
@@ -7040,7 +7040,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7057,7 +7057,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4075
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7074,7 +7074,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7091,7 +7091,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7108,7 +7108,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7125,7 +7125,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7142,7 +7142,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 10
     Prob: 250
     Attack: 0
@@ -7159,7 +7159,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4081
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 24
@@ -7176,7 +7176,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7193,7 +7193,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4083
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7210,7 +7210,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7227,7 +7227,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7244,7 +7244,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7261,7 +7261,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7278,7 +7278,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 11
     Prob: 500
     Attack: 0
@@ -7295,7 +7295,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4089
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 25
@@ -7312,7 +7312,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7329,7 +7329,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4091
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7346,7 +7346,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7363,7 +7363,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7380,7 +7380,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7397,7 +7397,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7414,7 +7414,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 12
     Prob: 375
     Attack: 0
@@ -7431,7 +7431,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4097
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 26
@@ -7448,7 +7448,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7465,7 +7465,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4099
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7482,7 +7482,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7499,7 +7499,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7516,7 +7516,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7533,7 +7533,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7550,7 +7550,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 13
     Prob: 250
     Attack: 0
@@ -7567,7 +7567,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4105
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 27
@@ -7584,7 +7584,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7601,7 +7601,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4107
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7618,7 +7618,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7635,7 +7635,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7652,7 +7652,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7669,7 +7669,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7686,7 +7686,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 4112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 4
+    SocketPosition: 3
     Grade: 14
     Prob: 125
     Attack: 0
@@ -7703,7 +7703,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5000
     Name: "\uAE30\uBCF8 \uB9C8\uBC95\uC0AC \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 0
     Attack: 0
@@ -7720,7 +7720,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5001
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 3
@@ -7737,7 +7737,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7754,7 +7754,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5003
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7771,7 +7771,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7788,7 +7788,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7805,7 +7805,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7822,7 +7822,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7839,7 +7839,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 1
     Prob: 1250
     Attack: 0
@@ -7856,7 +7856,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5009
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 6
@@ -7873,7 +7873,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7890,7 +7890,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5011
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7907,7 +7907,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7924,7 +7924,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7941,7 +7941,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7958,7 +7958,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7975,7 +7975,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 2
     Prob: 1250
     Attack: 0
@@ -7992,7 +7992,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5017
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 9
@@ -8009,7 +8009,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8026,7 +8026,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5019
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8043,7 +8043,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8060,7 +8060,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8077,7 +8077,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8094,7 +8094,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8111,7 +8111,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 3
     Prob: 1250
     Attack: 0
@@ -8128,7 +8128,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5025
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 12
@@ -8145,7 +8145,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8162,7 +8162,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5027
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8179,7 +8179,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8196,7 +8196,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8213,7 +8213,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8230,7 +8230,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8247,7 +8247,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 4
     Prob: 1250
     Attack: 0
@@ -8264,7 +8264,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5033
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 15
@@ -8281,7 +8281,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8298,7 +8298,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5035
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8315,7 +8315,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8332,7 +8332,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8349,7 +8349,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8366,7 +8366,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8383,7 +8383,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 5
     Prob: 1250
     Attack: 0
@@ -8400,7 +8400,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5041
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 18
@@ -8417,7 +8417,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8434,7 +8434,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5043
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8451,7 +8451,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8468,7 +8468,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8485,7 +8485,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8502,7 +8502,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8519,7 +8519,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 6
     Prob: 875
     Attack: 0
@@ -8536,7 +8536,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5049
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 19
@@ -8553,7 +8553,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8570,7 +8570,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5051
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8587,7 +8587,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8604,7 +8604,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8621,7 +8621,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8638,7 +8638,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8655,7 +8655,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 7
     Prob: 375
     Attack: 0
@@ -8672,7 +8672,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5057
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 21
@@ -8689,7 +8689,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8706,7 +8706,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5059
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8723,7 +8723,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8740,7 +8740,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8757,7 +8757,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8774,7 +8774,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8791,7 +8791,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 8
     Prob: 625
     Attack: 0
@@ -8808,7 +8808,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5065
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 22
@@ -8825,7 +8825,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8842,7 +8842,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5067
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8859,7 +8859,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8876,7 +8876,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8893,7 +8893,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8910,7 +8910,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8927,7 +8927,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 9
     Prob: 375
     Attack: 0
@@ -8944,7 +8944,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5073
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 230
@@ -8961,7 +8961,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -8978,7 +8978,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5075
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -8995,7 +8995,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -9012,7 +9012,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -9029,7 +9029,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -9046,7 +9046,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -9063,7 +9063,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 10
     Prob: 250
     Attack: 0
@@ -9080,7 +9080,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5081
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 24
@@ -9097,7 +9097,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9114,7 +9114,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5083
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9131,7 +9131,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9148,7 +9148,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9165,7 +9165,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9182,7 +9182,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9199,7 +9199,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 11
     Prob: 500
     Attack: 0
@@ -9216,7 +9216,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5089
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 25
@@ -9233,7 +9233,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9250,7 +9250,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5091
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9267,7 +9267,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9284,7 +9284,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9301,7 +9301,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9318,7 +9318,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9335,7 +9335,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 12
     Prob: 375
     Attack: 0
@@ -9352,7 +9352,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5097
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 26
@@ -9369,7 +9369,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9386,7 +9386,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5099
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9403,7 +9403,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9420,7 +9420,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9437,7 +9437,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9454,7 +9454,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9471,7 +9471,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 13
     Prob: 250
     Attack: 0
@@ -9488,7 +9488,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5105
     Name: "\uBD84\uB178\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 27
@@ -9505,7 +9505,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9522,7 +9522,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5107
     Name: "\uD65C\uB825\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9539,7 +9539,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9556,7 +9556,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9573,7 +9573,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9590,7 +9590,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0
@@ -9607,7 +9607,7 @@ MonoBehaviour:
     ImagePath: 
   - Id: 5112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
-    SocketPosition: 5
+    SocketPosition: 4
     Grade: 14
     Prob: 125
     Attack: 0

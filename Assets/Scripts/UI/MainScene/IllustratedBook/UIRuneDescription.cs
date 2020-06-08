@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIRuneDescription : MonoBehaviour
 {
-    [SerializeField] private Text description;
-    [SerializeField] private ToggleGroup toggleGroup;
+    [SerializeField] private Text description = null;
+    [SerializeField] private ToggleGroup toggleGroup = null;
 
     private void Start()
     {

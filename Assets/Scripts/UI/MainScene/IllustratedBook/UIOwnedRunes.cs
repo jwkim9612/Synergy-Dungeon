@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIOwnedRunes : MonoBehaviour
 {
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
-    [SerializeField] private UIRune uiRune;
+    [SerializeField] private UIRune uiRune = null;
     public List<UIRune> uiRunes;
 
     public void Initialize()

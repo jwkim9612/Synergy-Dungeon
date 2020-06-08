@@ -29,7 +29,8 @@ public class UIChooseChapter : UIControl
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
-            chapterTitle.text = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[simpleScrollSnap.TargetPanel].Name;
+            var chapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[simpleScrollSnap.TargetPanel + 1];
+            chapterTitle.text = chapterData.Id + ". " + chapterData.Name;
             
             if(IsPlayableChapter(simpleScrollSnap.TargetPanel + 1))
             {
@@ -51,12 +52,12 @@ public class UIChooseChapter : UIControl
         {
             if (dataIndex == 0)
             {
-                uiChapter.SetChapterData(chapterData);
+                uiChapter.SetChapterData(chapterData.Value);
             }
             else
             {
                 var chapter = Instantiate(uiChapter, content.transform);
-                chapter.SetChapterData(chapterData);
+                chapter.SetChapterData(chapterData.Value);
                 if (!IsPlayableChapter(dataIndex + 1))
                 {
                     chapter.ToBlurry();

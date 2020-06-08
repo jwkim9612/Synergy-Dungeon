@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIRune : MonoBehaviour
 {
-    [SerializeField] private Image unclickedImage;
-    [SerializeField] private Image clickedImage;
+    [SerializeField] private Image unclickedImage = null;
+    [SerializeField] private Image clickedImage = null;
     public Rune rune { get; set; }
 
     public void SetUIRune(RuneData newRuneData)

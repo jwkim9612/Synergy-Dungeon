@@ -12,34 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfa92551f059774694c8d945ba6e84a, type: 3}
   m_Name: ChapterDataSheet
   m_EditorClassIdentifier: 
-  ChapterDatas:
+  ChapterExcelDatas:
   - Id: 1
     Name: "\uD478\uB978\uCD08\uC6D0"
     TotalWave: 20
     ImagePath: Images/Tribe/Logo_HUMAN
-    chapterInfoDataList: []
-    Image: {fileID: 0}
   - Id: 2
     Name: "\uC5BC\uC74C\uB098\uB77C"
     TotalWave: 30
     ImagePath: Images/Tribe/Logo_HUMAN
-    chapterInfoDataList: []
-    Image: {fileID: 0}
   - Id: 3
     Name: "\uC0AC\uB9C9"
     TotalWave: 50
     ImagePath: Images/Tribe/Logo_HUMAN
-    chapterInfoDataList: []
-    Image: {fileID: 0}
   - Id: 4
     Name: "\uC0B4\uC0C9\uB098\uB77C"
     TotalWave: 80
     ImagePath: Images/Tribe/Logo_HUMAN
-    chapterInfoDataList: []
-    Image: {fileID: 0}
   - Id: 5
     Name: "\uC624\uC6B0\uC624\uC6B0"
     TotalWave: 100
     ImagePath: Images/Tribe/Logo_HUMAN
-    chapterInfoDataList: []
-    Image: {fileID: 0}

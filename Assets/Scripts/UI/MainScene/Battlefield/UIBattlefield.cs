@@ -32,14 +32,14 @@ public class UIBattlefield : MonoBehaviour
 
     public void UpdateChapterTitle()
     {
-        var ChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1];
+        var ChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter];
 
         chapterTitle.text = ChapterData.Id + ". " + ChapterData.Name;
     }
 
     public void UpdateChapterImage()
     {
-        chapterImage.sprite = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1].Image;
+        chapterImage.sprite = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter].Image;
     }
 
     public void UpdateBestStage()
@@ -47,7 +47,7 @@ public class UIBattlefield : MonoBehaviour
         if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableStage)
             bestStage.text = "챕터 클리어";
         else
-            bestStage.text = "최고 스테이지 : " + 1 + "/" + GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter - 1].TotalWave;
+            bestStage.text = "최고 스테이지 : " + 1 + "/" + GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter].TotalWave;
     }
 
     public void UseHeart()
@@ -64,7 +64,7 @@ public class UIBattlefield : MonoBehaviour
                     {
                         StageManager.Instance.SetChapterData(selectedChapter);
                         StageManager.Instance.Initialize();
-                        SceneManager.LoadScene("InGame");
+                        SceneManager.LoadScene("InGameScene");
                     }
                     else
                     {

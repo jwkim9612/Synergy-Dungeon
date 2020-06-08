@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class CharacterData
+public class CharacterExcelData
 {
     public int Id;
     public string Name;
@@ -12,9 +12,6 @@ public class CharacterData
     public Origin Origin;
     public Tier Tier;
     public string ImagePath;
-
-    public Sprite Image;
-    public OriginData OriginData;
-    public TribeData TribeData;
+    public string AnimatorPath;
 }
 

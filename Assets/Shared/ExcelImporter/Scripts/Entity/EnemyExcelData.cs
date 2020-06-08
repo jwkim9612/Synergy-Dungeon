@@ -4,9 +4,9 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class EnemyData
+public class EnemyExcelData
 {
-    public long Id;
+    public int Id;
     public string Name;
     public long Attack;
     public long MagicalAttack;
@@ -19,6 +19,5 @@ public class EnemyData
     public long Critical;
     public long AttackSpeed;
     public string ImagePath;
-
-    public Sprite Image;
+    public string AnimatorPath;
 }

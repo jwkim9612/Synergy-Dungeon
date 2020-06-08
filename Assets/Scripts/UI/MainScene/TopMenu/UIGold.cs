@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIGold : MonoBehaviour
 {
-    [SerializeField] private Text goldText;
+    [SerializeField] private Text goldText = null;
 
     public void Initialize()
     {

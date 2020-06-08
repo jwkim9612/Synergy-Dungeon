@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,15 +32,45 @@ public class GameManager : MonoBehaviour
     {
         AccountManager.Instance.Initialize();
         JsonDataManager.Instance.Initialize();
+        SaveManager.Instance.Initialize();
         dataSheet.Initialize();
+    }
+
+    private void LoadManagers()
+    {
         GoodsManager.Instance.Initialize();
         TimeManager.Instance.Initialize();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
-        SaveManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         StageManager.Instance.Initialize();
         RuneManager.Instance.Initialize();
+    }
+
+    public void LoadGameAndLoadMainScene()
+    {
+        StartCoroutine(Co_LoadGameAndLoadMainScene());
+    }
+
+    private IEnumerator Co_LoadGameAndLoadMainScene()
+    {
+        LoadManagers();
+
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void LoadGameAndLoadInGameScene()
+    {
+        StartCoroutine(Co_LoadGameAndLoadInGameScene());
+    }
+
+    private IEnumerator Co_LoadGameAndLoadInGameScene()
+    {
+        LoadManagers();
+
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("InGameScene");
     }
 
     public void Quit()

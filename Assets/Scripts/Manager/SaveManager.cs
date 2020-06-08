@@ -96,7 +96,6 @@ public class SaveManager : MonoSingleton<SaveManager>
         fileStream.Read(data, 0, data.Length);
         fileStream.Close();
 
-        Debug.Log("!! Load");
         string jsonData = Encoding.UTF8.GetString(data);
         equippedRuneIdsSaveData = JsonConvert.DeserializeObject<List<int>>(jsonData);
         return true;
@@ -192,9 +191,9 @@ public class SaveManager : MonoSingleton<SaveManager>
 
                     IsLoadedData = true;
 
+                    GameManager.instance.LoadGameAndLoadInGameScene();
                     StageManager.Instance.SetChapterData(data.Chapter);
                     StageManager.Instance.currentWave = _inGameSaveData.Wave;
-                    SceneManager.LoadScene("InGame");
                 }
                 else
                 {
@@ -220,8 +219,7 @@ public class SaveManager : MonoSingleton<SaveManager>
                    else
                    {
                        IsLoadedData = false;
-                       //SceneManager.LoadScene("MainScene");
-                       StartCoroutine(Co_Test());
+                       GameManager.instance.LoadGameAndLoadMainScene();
                    }
                }
                else
@@ -230,11 +228,5 @@ public class SaveManager : MonoSingleton<SaveManager>
                    Debug.Log(response.Errors.JSON);
                }
            });
-    }
-
-    IEnumerator Co_Test()
-    {
-        yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("MainScene");
     }
 }

@@ -16,6 +16,7 @@ public class Pawn : MonoBehaviour
     public OnIsDeadDelegate OnIsDead { get; set; }
 
     public SpriteRenderer spriteRenderer;
+    public Animator animator;
     public string pawnName { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
@@ -25,9 +26,11 @@ public class Pawn : MonoBehaviour
     public List<UIFloatingText> uiFloatingTextList { get; set; } = null;
     private int floatingTextIndex;
 
-    private void Start()
+    public void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        //animator.runtimeAnimatorController = 
         floatingTextIndex = 0;
     }
 
@@ -152,7 +155,6 @@ public class Pawn : MonoBehaviour
 
     private void PlayHitText(float damage)
     {
-        Debug.Log("PlayHitText");
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
         uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.DEFAULT_DAMAGE_FONT_SIZE);
         PlayFloatingText();
@@ -160,7 +162,6 @@ public class Pawn : MonoBehaviour
 
     private void PlayCriticalHitText(float damage)
     {
-        Debug.Log("PlayCriticalHitText");
         Color orange = new Color(1.0f, 0.64f, 0.0f);
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), orange);
         uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.CRITICAL_DAMAGE_FONT_SIZE);

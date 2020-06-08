@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class UIAskGoToStore : UIControl
 {
-    [SerializeField] private Text titleText;
-    [SerializeField] private Text contentText;
-    [SerializeField] private Button cancelButton;
-    [SerializeField] private Button goToStoreButton;
+    [SerializeField] private Text titleText = null;
+    [SerializeField] private Text contentText = null;
+    [SerializeField] private Button cancelButton = null;
+    [SerializeField] private Button goToStoreButton = null;
 
-    [SerializeField] private SimpleScrollSnap simpleScrollSnap;
-    [SerializeField] private RectTransform goldGoods;
-    [SerializeField] private RectTransform diamondGoods;
+    [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
+    [SerializeField] private RectTransform goldGoods = null;
+    [SerializeField] private RectTransform diamondGoods = null;
     private RectTransform target;
 
     private void Start()

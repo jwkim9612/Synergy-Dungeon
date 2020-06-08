@@ -4,12 +4,10 @@ using UnityEngine;
 using System;
 
 [Serializable]
-
-public class TribeData
-{ 
-    public Tribe Name;
-    public string Description;
+public class ChapterExcelData
+{
+    public int Id;
+    public string Name;
+    public int TotalWave;
     public string ImagePath;
-
-    public Sprite Image;
 }

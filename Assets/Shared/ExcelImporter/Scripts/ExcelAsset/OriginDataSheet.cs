@@ -6,18 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class OriginDataSheet : ScriptableObject
 {
-	public List<OriginData> OriginDatas;
+	public List<OriginExcelData> OriginExcelDatas;
+	public Dictionary<Origin, OriginData> OriginDatas;
 
 	public void Initialize()
 	{
-		InitializeImage();
+		InitializeOriginDatas();
 	}
 
-	private void InitializeImage()
+	private void InitializeOriginDatas()
 	{
-		foreach (var originData in OriginDatas)
+		OriginDatas = new Dictionary<Origin, OriginData>();
+
+		foreach (var originExcelData in OriginExcelDatas)
 		{
-			originData.Image = Resources.Load<Sprite>(originData.ImagePath);
+			OriginData originData = new OriginData(originExcelData);
+			OriginDatas.Add(originData.Name, originData);
 		}
 	}
 }

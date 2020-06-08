@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UIGoods : MonoBehaviour
 {
-    [SerializeField] protected Button showAskBuyItButton;
-    [SerializeField] private Text goodsName;
-    [SerializeField] private Image goodsImage;
-    [SerializeField] private Text goodsPrice;
-    [SerializeField] private Image purchaseCurrencyImage;
+    [SerializeField] protected Button showAskBuyItButton = null;
+    [SerializeField] private Text goodsName = null;
+    [SerializeField] private Image goodsImage = null;
+    [SerializeField] private Text goodsPrice = null;
+    [SerializeField] private Image purchaseCurrencyImage = null;
 
     protected void SetGoodsName(string name)
     {

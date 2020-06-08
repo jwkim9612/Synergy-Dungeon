@@ -6,50 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class CharacterDataSheet : ScriptableObject
 {
-	public List<CharacterData> characterDatas; // Replace 'EntityType' to an actual type that is serializable.
+	public List<CharacterExcelData> characterExcelDatas;
+	public Dictionary<int, CharacterData> characterDatas;
 
 	public void Initialize()
 	{
-		InitializeImage();
-		InitializeOriginData();
-		InitializeTribeData();
+		InitializeCharacterDatas();
 	}
 
-	private void InitializeImage()
+	private void InitializeCharacterDatas()
 	{
-		foreach (var characterData in characterDatas)
-		{
-			characterData.Image = Resources.Load<Sprite>(characterData.ImagePath);
-		}
-	}
+        characterDatas = new Dictionary<int, CharacterData>();
 
-	private void InitializeOriginData()
-	{
-		foreach (var characterData in characterDatas)
-		{
-			foreach(var originData in GameManager.instance.dataSheet.originDataSheet.OriginDatas)
-			{
-				if(originData.Name == characterData.Origin)
-				{
-					characterData.OriginData = originData;
-					break;
-				}
-			}
-		}
-	}
-
-	private void InitializeTribeData()
-	{
-		foreach (var characterData in characterDatas)
-		{
-			foreach (var tribeData in GameManager.instance.dataSheet.tribeDataSheet.TribeDatas)
-			{
-				if (tribeData.Name == characterData.Tribe)
-				{
-					characterData.TribeData = tribeData;
-					break;
-				}
-			}
-		}
-	}
+        foreach (var characterExcelData in characterExcelDatas)
+        {
+			CharacterData characterData = new CharacterData(characterExcelData);
+            characterDatas.Add(characterData.Id, characterData);
+        }
+    }
 }

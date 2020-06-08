@@ -29,6 +29,7 @@ public class UICharacter : MonoBehaviour
         var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
 
         character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
+        character.Initialize();
         character.SetImage(characterData.Image);
         character.SetName(characterData.Name);
         character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), characterData.Origin);

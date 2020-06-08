@@ -95,7 +95,7 @@ public class UISynergyInfo : UIControl
         foreach (var characterData in characterDatas)
         {
             var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
-            slot.SetCharacterData(characterData);
+            slot.SetCharacterData(characterData.Value);
             characterSlotsToShow.Add(slot);
         }
     }

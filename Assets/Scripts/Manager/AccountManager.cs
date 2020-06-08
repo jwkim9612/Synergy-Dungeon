@@ -126,8 +126,8 @@ public class AccountManager : MonoSingleton<AccountManager>
                 {
                     Debug.Log("닉네임 변경 완료");
 
-                    if(isFromSignUp)
-                        SceneManager.LoadScene("1080 1920/MainScene");
+                    if (isFromSignUp)
+                        GameManager.instance.LoadGameAndLoadMainScene();
                 }
                 else
                 {

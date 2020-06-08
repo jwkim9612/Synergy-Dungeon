@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIOwnedRune : UIRune
 {
-    [SerializeField] private UIEquippedRunes uiEquippedRunes;
-    [SerializeField] private Button equipButton;
+    [SerializeField] private UIEquippedRunes uiEquippedRunes = null;
+    [SerializeField] private Button equipButton = null;
 
     private void Start()
     {

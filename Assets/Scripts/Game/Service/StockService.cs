@@ -24,22 +24,22 @@ public class StockService
         {
             for (int i = 0; i < CardService.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
             {
-                switch (characterData.Tier)
+                switch (characterData.Value.Tier)
                 {
                     case Tier.One:
-                        oneTierStock.stockIds.Add(characterData.Id);
+                        oneTierStock.stockIds.Add(characterData.Key);
                         break;
                     case Tier.Two:
-                        twoTierStock.stockIds.Add(characterData.Id);
+                        twoTierStock.stockIds.Add(characterData.Key);
                         break;
                     case Tier.Three:
-                        threeTierStock.stockIds.Add(characterData.Id);
+                        threeTierStock.stockIds.Add(characterData.Key);
                         break;
                     case Tier.Four:
-                        fourTierStock.stockIds.Add(characterData.Id);
+                        fourTierStock.stockIds.Add(characterData.Key);
                         break;
                     case Tier.Five:
-                        fiveTierStock.stockIds.Add(characterData.Id);
+                        fiveTierStock.stockIds.Add(characterData.Key);
                         break;
                     default:
                         Debug.Log("Error InitializeStock");

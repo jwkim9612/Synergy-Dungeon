@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UIObtainedRune : MonoBehaviour
 {
-    [SerializeField] private Image runeImage;
-    [SerializeField] private Text runeName;
-    [SerializeField] private Text runeGrade;
+    [SerializeField] private Image runeImage = null;
+    [SerializeField] private Text runeName = null;
+    [SerializeField] private Text runeGrade = null;
 
     public void SetUIObtainedRune(int runeId)
     {

@@ -5,7 +5,7 @@ using System;
 
 [Serializable]
 
-public class ProbabilityData
+public class ProbabilityExcelData
 {
     public int Level;
     public int OneTier;

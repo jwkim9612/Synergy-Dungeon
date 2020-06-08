@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIRandomRuneGoods : UIGoods
 {
-    [SerializeField] protected UIAskPurchaseForRandomRuneGoods uiAskPurchase;
-    [SerializeField] private Text goodsAmount;
+    [SerializeField] protected UIAskPurchaseForRandomRuneGoods uiAskPurchase = null;
+    [SerializeField] private Text goodsAmount = null;
 
     public void SetUIGoods(GoodsData goodsData, int goodsId, RuneRating runeRating)
     {

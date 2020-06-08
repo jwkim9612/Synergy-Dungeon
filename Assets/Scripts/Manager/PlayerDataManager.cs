@@ -18,13 +18,13 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
     // 임시 생성, 플로우가 정해지면 제거
     public void Initialize()
     {
-        playerData = new PlayerData
-        {
-            Gold = 0,
-            Diamond = 0,
-            Level = 1,
-            PlayableStage = 1,
-        };
+        //playerData = new PlayerData
+        //{
+        //    Gold = 0,
+        //    Diamond = 0,
+        //    Level = 1,
+        //    PlayableStage = 1,
+        //};
     }
 
     // 게임 진입 이후 로드

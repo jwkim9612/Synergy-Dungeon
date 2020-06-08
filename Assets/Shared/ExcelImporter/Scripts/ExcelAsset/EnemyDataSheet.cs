@@ -6,18 +6,22 @@ using UnityEngine;
 [ExcelAsset]
 public class EnemyDataSheet : ScriptableObject
 {
-    public List<EnemyData> EnemyDatas;
+    public List<EnemyExcelData> EnemyExcelDatas;
+	public Dictionary<int, EnemyData> EnemyDatas;
 
 	public void Initialize()
 	{
-		InitializeImage();
+		InitializeEnemyDatas();
 	}
 
-	private void InitializeImage()
+	private void InitializeEnemyDatas()
 	{
-		foreach (var enemyData in EnemyDatas)
+		EnemyDatas = new Dictionary<int, EnemyData>();
+
+		foreach (var enemyExcelData in EnemyExcelDatas)
 		{
-			enemyData.Image = Resources.Load<Sprite>(enemyData.ImagePath);
+			EnemyData enemyData = new EnemyData(enemyExcelData);
+			EnemyDatas.Add(enemyData.Id, enemyData);
 		}
 	}
 }

@@ -28,7 +28,7 @@ public class ProbabilityService
 
     public void UpdateProbability()
     {
-        var probabilityData = GameManager.instance.dataSheet.probabilityDataSheet.ProbabilityDatas[InGameManager.instance.playerState.level-1];
+        var probabilityData = GameManager.instance.dataSheet.probabilityDataSheet.ProbabilityDatas[InGameManager.instance.playerState.level];
        
         SetProbabilities(probabilityData);
     }

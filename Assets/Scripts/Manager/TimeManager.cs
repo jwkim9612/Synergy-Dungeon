@@ -113,9 +113,9 @@ public class TimeManager : MonoSingleton<TimeManager>
                 if (!response.HasErrors)
                 {
                     bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-                    long remainingTime = (long)response.ScriptData.GetLong("RemainingTime");
-                    long noLoginTime = (long)response.ScriptData.GetLong("NoLoginTime");
-                    Debug.Log("남은 시간 : " + remainingTime + "    로그인 안한 시간 : " + noLoginTime);
+                    //long remainingTime = (long)response.ScriptData.GetLong("RemainingTime");
+                    //long noLoginTime = (long)response.ScriptData.GetLong("NoLoginTime");
+                    //Debug.Log("남은 시간 : " + remainingTime + "    로그인 안한 시간 : " + noLoginTime);
 
 
                     if (result)
