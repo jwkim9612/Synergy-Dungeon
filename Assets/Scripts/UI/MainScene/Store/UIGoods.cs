@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class UIGoods : MonoBehaviour
 {
-    [SerializeField] protected Button showAskBuyItButton = null;
+    [SerializeField] protected Button showAskPurchaseButton = null;
     [SerializeField] private Text goodsName = null;
     [SerializeField] private Image goodsImage = null;
-    [SerializeField] private Text goodsPrice = null;
+    [SerializeField] protected Text goodsPrice = null;
     [SerializeField] private Image purchaseCurrencyImage = null;
 
     protected void SetGoodsName(string name)
@@ -37,5 +37,15 @@ public class UIGoods : MonoBehaviour
     protected void SetGoodsImage(Sprite image)
     {
         goodsImage.sprite = image;
+    }
+
+    protected void DisableAskPurchaseButton()
+    {
+        showAskPurchaseButton.interactable = false;
+    }
+
+    protected void ActivateAskPurchaseButton()
+    {
+        showAskPurchaseButton.interactable = true;
     }
 }

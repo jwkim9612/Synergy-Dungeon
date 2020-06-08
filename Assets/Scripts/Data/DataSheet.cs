@@ -16,6 +16,7 @@ public class DataSheet : MonoBehaviour
 	public InGameExpDataSheet inGameExpDataSheet;
 	public RuneDataSheet runeDataSheet;
 	public GoodsDataSheet goodsDataSheet;
+	public RunePurchaseableLevelDataSheet runePurchaseableLevelDataSheet;
 
     public void Initialize()
     {
@@ -28,5 +29,6 @@ public class DataSheet : MonoBehaviour
 		probabilityDataSheet.Initialize();
 		runeDataSheet.Initialize();
 		goodsDataSheet.Initialize();
+		runePurchaseableLevelDataSheet.Initialize();
 	}
 }

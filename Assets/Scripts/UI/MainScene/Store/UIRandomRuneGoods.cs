@@ -16,7 +16,7 @@ public class UIRandomRuneGoods : UIGoods
         SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
         SetGoodsAmount(goodsData.RewardAmount);
 
-        showAskBuyItButton.onClick.AddListener(() =>
+        showAskPurchaseButton.onClick.AddListener(() =>
         {
             uiAskPurchase.SetUIAskPurchase(goodsData, goodsId, runeRating);
             UIManager.Instance.ShowNew(uiAskPurchase);

@@ -20,7 +20,7 @@ public class EnemyData
         AttackSpeed = enemyExcelData.AttackSpeed;
 
         Image = Resources.Load<Sprite>(enemyExcelData.ImagePath);
-        Animator = Resources.Load<Animator>(enemyExcelData.AnimatorPath);
+        RuntimeAnimatorController = Resources.Load<RuntimeAnimatorController>(enemyExcelData.RuntimeAnimatorControllerPath);
     }
 
     public int Id;
@@ -36,5 +36,5 @@ public class EnemyData
     public long Critical;
     public long AttackSpeed;
     public Sprite Image;
-    public Animator Animator;
+    public RuntimeAnimatorController RuntimeAnimatorController;
 }

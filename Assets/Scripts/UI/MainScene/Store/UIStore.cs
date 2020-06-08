@@ -8,9 +8,10 @@ public class UIStore : MonoBehaviour
 {
     [SerializeField] private GameObject beingPurchase = null;
     [SerializeField] private UIFloatingText purchaseCompletedFloatingText = null;
-    [SerializeField] private UIRuneOnSalesList uiRuneOnSalesList = null;
+    [SerializeField] private UIFloatingText soldOutFloatingText = null;
     [SerializeField] private UIGoldSalesList uiGoldSalesList = null;
     [SerializeField] private UIRandomRuneSalesList uiRandomRuneSalesList = null;
+    public UIRuneOnSalesList uiRuneOnSalesList = null;
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
     public PotentialDraggableScrollView scrollView;
@@ -38,5 +39,10 @@ public class UIStore : MonoBehaviour
     public void PlayPurchaseCompletedFloatingText()
     {
         purchaseCompletedFloatingText.Play();
+    }
+
+    public void PlaySoldOutFloatingText()
+    {
+        soldOutFloatingText.Play();
     }
 }

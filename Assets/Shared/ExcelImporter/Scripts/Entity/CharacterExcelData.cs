@@ -12,6 +12,6 @@ public class CharacterExcelData
     public Origin Origin;
     public Tier Tier;
     public string ImagePath;
-    public string AnimatorPath;
+    public string RuntimeAnimatorControllerPath;
 }
 

@@ -19,5 +19,5 @@ public class EnemyExcelData
     public long Critical;
     public long AttackSpeed;
     public string ImagePath;
-    public string AnimatorPath;
+    public string RuntimeAnimatorControllerPath;
 }

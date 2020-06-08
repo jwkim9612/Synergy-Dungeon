@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GoodsService : MonoBehaviour
 {
-    public static readonly List<int> RUNE_SALES_ID_LIST = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+    //public static readonly List<int> RUNE_SALES_ID_LIST = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
     public static readonly List<Tuple<int, RuneRating>> RANDOM_RUNE_SALES_ID_AND_RATING_LIST =
         new List<Tuple<int, RuneRating>> { 
             new Tuple<int, RuneRating>(10, RuneRating.Normal),
@@ -15,7 +15,7 @@ public class GoodsService : MonoBehaviour
             new Tuple<int, RuneRating>(13, RuneRating.Unique)
         };
 
-    public const int FIRST_GOLD_SALES_ID = 1;
+    public const int FIRST_RUNE_SALES_ID = 1;
     public const int SECOND_GOLD_SALES_ID = 2;
     public const int THIRD_GOLD_SALES_ID = 3;
 

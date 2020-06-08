@@ -6,20 +6,37 @@ using UnityEngine;
 
 public class UIRuneOnSalesList : MonoBehaviour
 {
-    private List<UIRuneGoods> uiRuneOnSalesList;
+    private Dictionary<int, UIRuneGoods> uiRuneOnSalesList;
+    //private List<UIRuneGoods> uiRuneOnSalesList;
+    /// <summary>
+    /// item1은 룬 id, item2는 팔렸는지에 대한 여부
+    /// </summary>
     public List<Tuple<int, bool>> runeOnSalesList;
 
     public void Initialize()
     {
+        uiRuneOnSalesList = new Dictionary<int, UIRuneGoods>();
+
         runeOnSalesList = GoodsManager.Instance.runeOnSalesList;
-        uiRuneOnSalesList = GetComponentsInChildren<UIRuneGoods>().ToList();
-        
-        for(int index = 0; index < GoodsService.RUNE_SALES_ID_LIST.Count; ++index)
+        var uiRuneGoods = GetComponentsInChildren<UIRuneGoods>().ToList();
+
+        var runePurchaseableLevelDatas = GameManager.instance.dataSheet.runePurchaseableLevelDataSheet.RunePurchaseableLevelDatas;
+        int listIndex = 0;
+
+        for(int id = GoodsService.FIRST_RUNE_SALES_ID; id <= runePurchaseableLevelDatas.Count; ++id)
         {
-            int goodsId = GoodsService.RUNE_SALES_ID_LIST[index];
+            uiRuneOnSalesList.Add(id, uiRuneGoods[listIndex]);
+
+            int goodsId = id;
             var goodsData = GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[goodsId];
 
-            uiRuneOnSalesList[index].SetUIGoods(goodsData, goodsId, runeOnSalesList[index].Item1, index);
+            uiRuneOnSalesList[id].SetUIGoods(goodsData, goodsId, runeOnSalesList[listIndex].Item1, goodsId, runeOnSalesList[listIndex].Item2);
+            ++listIndex;
         }
+    }
+
+    public void SetIsSoldOutToId(int id)
+    {
+        uiRuneOnSalesList[id].SetIsSoldOut();
     }
 }

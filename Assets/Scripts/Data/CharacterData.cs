@@ -13,7 +13,7 @@ public class CharacterData
         Tier = characterExcelData.Tier;
 
         Image = Resources.Load<Sprite>(characterExcelData.ImagePath);
-        Animator = Resources.Load<Animator>(characterExcelData.AnimatorPath);
+        RuntimeAnimatorController = Resources.Load<RuntimeAnimatorController>(characterExcelData.RuntimeAnimatorControllerPath);
         OriginData = GameManager.instance.dataSheet.originDataSheet.OriginDatas[Origin];
         TribeData = GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[Tribe];
     }
@@ -24,7 +24,7 @@ public class CharacterData
     public Origin Origin;
     public Tier Tier;
     public Sprite Image;
-    public Animator Animator;
+    public RuntimeAnimatorController RuntimeAnimatorController;
     public OriginData OriginData;
     public TribeData TribeData;
 }

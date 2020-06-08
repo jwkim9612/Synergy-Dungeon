@@ -16,7 +16,7 @@ public class UIAmountRequiredGoods : UIGoods
         SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
         SetGoodsAmount(goodsData.RewardAmount);
 
-        showAskBuyItButton.onClick.AddListener(() =>
+        showAskPurchaseButton.onClick.AddListener(() =>
         {
             uiAskPurchase.SetUIAskPurchase(goodsData, goodsId);
             UIManager.Instance.ShowNew(uiAskPurchase);

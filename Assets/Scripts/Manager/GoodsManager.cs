@@ -12,12 +12,16 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     private int rewardAmount;
     private int rewardId;
     private List<RuneGrade> randomlyPickedRuneGradeList;
-    public List<Tuple<int, bool>> runeOnSalesList;
+    /// <summary>
+    /// item1은 룬 id, item2는 팔렸는지에 대한 여부
+    /// </summary>
+    public List<Tuple<int, bool>> runeOnSalesList { get; set; }  
 
     public void Initialize()
     {
         ResetRuneOnSales();
     }
+
 
     public void PurchaseGoods(int id)
     {
@@ -67,21 +71,21 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-    public void PurchaseRune(int id, int runeOnSalesIndex, RuneGrade runeGrade)
+    public void PurchaseRune(int id, int runeOnSalesId, RuneGrade runeGrade)
     {
         MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseRune")
            .SetEventAttribute("GoodsId", id)
-           .SetEventAttribute("RuneOnSalesIndex", runeOnSalesIndex)
+           .SetEventAttribute("RuneOnSalesId", runeOnSalesId)
            .SetEventAttribute("RuneOnSalesGrade", runeGrade.ToString())
            .Send((response) =>
            {
                if (!response.HasErrors)
                {
-                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-                   if (result)
+                   bool isBuyable = (bool)(response.ScriptData.GetBoolean("IsBuyable"));
+                   if (isBuyable)
                    {
                        rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
 
@@ -90,16 +94,25 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                        rewardId = (int)(response.ScriptData.GetInt("RewardId"));
 
+                       MainManager.instance.uiStore.uiRuneOnSalesList.SetIsSoldOutToId(runeOnSalesId);
                        StartCoroutine(Co_GetItems(rewardCurrency));
                    }
                    else
                    {
-                       string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
-                       PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
-
+                       bool isSoldOut = (bool)(response.ScriptData.GetBoolean("IsSoldOut"));
                        MainManager.instance.uiStore.HideBeginPurchase();
-                       MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
-                       UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                       if (isSoldOut)
+                       {
+                           Debug.Log("Error is sold out!!!");
+                       }
+                       else
+                       {
+                           string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
+                           PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
+
+                           MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
+                           UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                       }
                    }
                }
                else
@@ -258,13 +271,15 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            {
                if (!response.HasErrors)
                {
-                   List<GSData> runeOnSalesScriptDataList = response.ScriptData.GetGSDataList("RuneOnSalesData");
+                   //List<GSData> runeOnSalesScriptDataList = response.ScriptData.GetGSDataList("RuneOnSalesData");
+                   GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
+                   JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
 
                    runeOnSalesList = new List<Tuple<int, bool>>();
 
-                   foreach(var runeOnSalesScriptData in runeOnSalesScriptDataList)
+                   foreach(var runeOnSalesListPair in runeOnSalesListJsonObject)
                    {
-                       JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptData.JSON);
+                       JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesListPair.Value.ToString());
 
                        int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
                        int id = 0;

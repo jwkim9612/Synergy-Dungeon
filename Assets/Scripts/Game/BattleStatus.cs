@@ -48,10 +48,17 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-
-
                 Pawn target = RandomAttackAndGetTarget(pawn);
-                yield return new WaitForSeconds(1.0f);
+                
+                if(pawn.animator != null)
+                {
+                    Debug.Log("길이 : " + pawn.animator.GetCurrentAnimatorStateInfo(0).length);
+                    yield return new WaitForSeconds(4.0f);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(1.0f);
+                }
                 if (target.isDead)
                 {
                     yield return new WaitForSeconds(1.0f);

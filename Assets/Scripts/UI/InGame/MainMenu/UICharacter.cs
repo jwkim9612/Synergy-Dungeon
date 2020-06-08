@@ -32,6 +32,7 @@ public class UICharacter : MonoBehaviour
         character.Initialize();
         character.SetImage(characterData.Image);
         character.SetName(characterData.Name);
+        character.SetRunTimeAnimatorController(characterData.RuntimeAnimatorController);
         character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), characterData.Origin);
         character.OnIsDead += OnHide;
         character.OnAttack += PlayAttackCoroutine;
@@ -92,7 +93,7 @@ public class UICharacter : MonoBehaviour
 
     public void OnHide()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void PlayAttackCoroutine()

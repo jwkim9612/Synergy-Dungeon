@@ -3213,6 +3213,8 @@ MonoBehaviour:
   inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
   runeDataSheet: {fileID: 11400000, guid: b5fd6ea962aaf0b40b4b4e99e73c6e24, type: 2}
   goodsDataSheet: {fileID: 11400000, guid: e00092dc774f97548a1929e8f9bea0d7, type: 2}
+  runePurchaseableLevelDataSheet: {fileID: 11400000, guid: fed57a6e62705e04999f7168075add3a,
+    type: 2}
 --- !u!1 &1881094288
 GameObject:
   m_ObjectHideFlags: 0

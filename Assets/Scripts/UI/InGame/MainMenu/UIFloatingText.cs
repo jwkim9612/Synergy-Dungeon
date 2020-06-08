@@ -11,16 +11,25 @@ public class UIFloatingText : MonoBehaviour
     [SerializeField] private Text text = null;
     private Vector3 originPosition;
     private Coroutine updateCoroutine;
+    bool isCoroutineRunning;
 
     public void Initialize()
     {
         canvas = GameObject.Find("Canvas").GetComponent<Transform>();
         originPosition = transform.localPosition;
+        isCoroutineRunning = false;
     }
 
     public void Play()
     {
         this.gameObject.SetActive(true);
+
+        if(isCoroutineRunning)
+        {
+            StopCoroutine(updateCoroutine);
+            transform.localPosition = originPosition;
+        }
+
         updateCoroutine = StartCoroutine(UpdateText());
     }
 
@@ -42,6 +51,8 @@ public class UIFloatingText : MonoBehaviour
 
     private IEnumerator UpdateText()
     {
+        isCoroutineRunning = true;
+
         var originParent = this.transform.parent;
 
         this.transform.SetParent(canvas.transform);
@@ -50,14 +61,15 @@ public class UIFloatingText : MonoBehaviour
         while (true)
         {
             yield return new WaitForEndOfFrame();
-            this.transform.Translate(new Vector3(0.0f, moveSpeed * Time.deltaTime, 0.0f));
+            transform.Translate(new Vector3(0.0f, moveSpeed * Time.deltaTime, 0.0f));
             runningTime += Time.deltaTime;
 
             if (runningTime >= duration)
             {
-                this.gameObject.SetActive(false);
-                this.transform.SetParent(originParent);
-                this.transform.localPosition = originPosition;
+                gameObject.SetActive(false);
+                transform.SetParent(originParent);
+                transform.localPosition = originPosition;
+                isCoroutineRunning = false;
                 StopCoroutine(updateCoroutine);
             }
         }

@@ -19,200 +19,200 @@ MonoBehaviour:
     Origin: 2
     Tier: 1
     ImagePath: Images/Old Character/Character_22
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 1
     Name: "\uB55C\uC7A5\uC774"
     Tribe: 7
     Origin: 4
     Tier: 3
     ImagePath: Images/Old Character/Character_21
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 2
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Tribe: 7
     Origin: 1
     Tier: 4
     ImagePath: Images/Old Character/Character_23
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 3
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 1
     Tier: 2
     ImagePath: Images/Old Character/Character_16
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 4
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 5
     Tier: 2
     ImagePath: Images/Old Character/Character_28
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 5
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 2
     Tier: 1
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uAD81\uC218"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 6
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 4
     Tier: 1
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 7
     Name: "\uB460"
     Tribe: 2
     Origin: 4
     Tier: 3
     ImagePath: "Images/Character/Devil/\uC545\uB9C8 \uC804\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 8
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Tribe: 2
     Origin: 2
     Tier: 2
     ImagePath: Images/Old Character/Character_DevilKnight
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 9
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Tribe: 2
     Origin: 5
     Tier: 4
     ImagePath: Images/Old Character/Character_ BlackWizard
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 10
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Tribe: 1
     Origin: 3
     Tier: 3
     ImagePath: Images/Old Character/Character_26
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 11
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Tribe: 1
     Origin: 2
     Tier: 1
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uC131\uAE30\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 12
     Name: "\uD4E8\uB9AC\uC628"
     Tribe: 1
     Origin: 5
     Tier: 2
     ImagePath: Images/Old Character/Character_27
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 13
     Name: "\uB9AC\uCE58"
     Tribe: 8
     Origin: 5
     Tier: 1
     ImagePath: "Images/Character/Elf/\uC5D8\uD504 \uC804\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 14
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Tribe: 8
     Origin: 4
     Tier: 4
     ImagePath: Images/Old Character/Character_13
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 15
     Name: "\uD761\uD608\uADC0"
     Tribe: 8
     Origin: 3
     Tier: 3
     ImagePath: Images/Old Character/Character_15
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 16
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Tribe: 5
     Origin: 4
     Tier: 2
     ImagePath: "Images/Character/Elf/\uC5D8\uD504 \uC804\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 17
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Tribe: 5
     Origin: 1
     Tier: 4
     ImagePath: Images/Old Character/Character_WoodElf
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 18
     Name: "\uC6CC\uB85D"
     Tribe: 5
     Origin: 5
     Tier: 1
     ImagePath: Images/Old Character/Character_Warlock
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 19
     Name: "\uC77C\uC77C\uC774"
     Tribe: 5
     Origin: 3
     Tier: 2
     ImagePath: Images/Old Character/Character_Dobi
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 20
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 4
     Tier: 3
     ImagePath: Images/Old Character/Character_17
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 21
     Name: "\uBB3C\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 1
     Tier: 3
     ImagePath: Images/Old Character/Character_18
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 22
     Name: "\uBD88\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 2
     Tier: 1
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uC804\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 23
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 5
     Tier: 2
     ImagePath: Images/Old Character/Character_20
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 24
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Tribe: 6
     Origin: 4
     Tier: 3
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uC804\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 25
     Name: "\uC2EC\uD310\uAD00"
     Tribe: 6
     Origin: 5
     Tier: 4
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 26
     Name: "\uC880\uB3C4\uB451"
     Tribe: 6
     Origin: 3
     Tier: 1
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uB3C4\uC801"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 27
     Name: "\uD638\uD06C\uC544\uC774"
     Tribe: 6
     Origin: 1
     Tier: 3
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uAD81\uC218"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 28
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Tribe: 6
     Origin: 2
     Tier: 4
     ImagePath: "Images/Character/Human/\uC778\uAC04 \uC131\uAE30\uC0AC"
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 

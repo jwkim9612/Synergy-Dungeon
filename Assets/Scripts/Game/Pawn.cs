@@ -30,8 +30,9 @@ public class Pawn : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        //animator.runtimeAnimatorController = 
+        
         floatingTextIndex = 0;
+        OnAttack += PlayAttackAnimation;
     }
 
     public void SetSize(float size)
@@ -42,6 +43,11 @@ public class Pawn : MonoBehaviour
     public void SetImage(Sprite sprite)
     {
         spriteRenderer.sprite = sprite;
+    }
+
+    public void SetRunTimeAnimatorController(RuntimeAnimatorController runTimeAnimatorController)
+    {
+        animator.runtimeAnimatorController = runTimeAnimatorController;
     }
 
     public void Attack(Pawn target)
@@ -182,6 +188,24 @@ public class Pawn : MonoBehaviour
 
         if (floatingTextIndex >= uiFloatingTextList.Count)
             floatingTextIndex = 0;
+    }
+
+    private void PlayAttackAnimation()
+    {
+        StartCoroutine(Co_PlayAttackAnimation());
+    }
+
+    private IEnumerator Co_PlayAttackAnimation()
+    {
+        if(animator != null)
+        {
+            Debug.Log("tre");
+            animator.SetBool("Attack", true);
+            yield return new WaitForSeconds(4.0f);
+            animator.SetBool("Attack", false);
+            Debug.Log("false");
+
+        }
     }
 
     public void DestoryPawn()

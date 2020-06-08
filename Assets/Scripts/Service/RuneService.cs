@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class RuneService
@@ -121,6 +122,47 @@ public class RuneService
         return gradeStr;
     }
 
+    public static bool IsPlusGrade(RuneGrade runeGrade)
+    {
+        if (runeGrade == RuneGrade.S_1  || runeGrade == RuneGrade.SS_1 || runeGrade == RuneGrade.SS_2 
+            || runeGrade == RuneGrade.SSS_1 || runeGrade == RuneGrade.SSS_2 || runeGrade == RuneGrade.SSS_3)
+            return true;
+        else
+            return false;
+    }
+
+    public static int GetPriceOfPlusGrade(RuneGrade runeGrade)
+    {
+        int price = 0;
+
+        switch (runeGrade)
+        {
+            case RuneGrade.S_1:
+                price = 100;
+                break;
+            case RuneGrade.SS_1:
+                price = 200;
+                break;
+            case RuneGrade.SS_2:
+                price = 300;
+                break;
+            case RuneGrade.SSS_1:
+                price = 400;
+                break;
+            case RuneGrade.SSS_2:
+                price = 500;
+                break;
+            case RuneGrade.SSS_3:
+                price = 600;
+                break;
+            default:
+                price = -1;
+                break;
+        }
+
+        return price;
+    }
+    
     public const int NUMBER_OF_RUNE_SOCKETS = 5;
 
     public const int INDEX_OF_ARCHER_SOCKET = 0;

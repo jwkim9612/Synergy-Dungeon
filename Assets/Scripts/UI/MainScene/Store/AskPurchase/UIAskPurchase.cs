@@ -7,7 +7,7 @@ public class UIAskPurchase : UIControl
 {
     [SerializeField] private Text askPurchaseText = null;
     [SerializeField] private Image goodsImage = null;
-    [SerializeField] private Text goodsPrice = null;
+    [SerializeField] protected Text goodsPrice = null;
     [SerializeField] private Image purchaseCurrencyImage = null;
     [SerializeField] private Button cancelButton = null;
     [SerializeField] protected Button purchaseButton = null;
