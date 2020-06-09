@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class TimeManager : MonoSingleton<TimeManager>
 {
+    public float remainingTimeOfAttendance;
     //public DateTime serverTime;
 
     public void Initialize()
@@ -16,6 +17,7 @@ public class TimeManager : MonoSingleton<TimeManager>
         //GetServerTime();
         AttendanceCheck();
         SaveLastConnectTime();
+        GetRemainingTimeOfAttendance();
         //        GetLastConnectTime();
         //SaveLastConnectTime();
     }
@@ -104,7 +106,7 @@ public class TimeManager : MonoSingleton<TimeManager>
         });
     }
 
-    public void AttendanceCheck()
+    public void AttendanceCheck(bool isInMainMenu = false)
     {
         new LogEventRequest()
             .SetEventKey("AttendanceCheck")
@@ -113,23 +115,55 @@ public class TimeManager : MonoSingleton<TimeManager>
                 if (!response.HasErrors)
                 {
                     bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-                    //long remainingTime = (long)response.ScriptData.GetLong("RemainingTime");
-                    //long noLoginTime = (long)response.ScriptData.GetLong("NoLoginTime");
-                    //Debug.Log("남은 시간 : " + remainingTime + "    로그인 안한 시간 : " + noLoginTime);
+                    long remainingTime = (long)response.ScriptData.GetLong("RemainingTime");
+                    long noLoginTime = (long)response.ScriptData.GetLong("NoLoginTime");
+                    Debug.Log("남은 시간 : " + remainingTime + "로그인 안한 시간 : " + noLoginTime);
 
 
                     if (result)
                     {
+                        GetRemainingTimeOfAttendance();
+                        SaveLastConnectTime();
+                        if (isInMainMenu)
+                        {
+                            GoodsManager.Instance.ResetRuneOnSales(true);
+                        }
+                        else
+                        {
+                            GoodsManager.Instance.ResetRuneOnSales(false);
+                        }
                         Debug.Log("출석하기 실행");
                     }
                     else
                     {
+                        GoodsManager.Instance.LoadRuneOnSalesData();
                         Debug.Log("출석되어있음");
                     }
                 }
                 else
                 {
                     Debug.Log("Error AttendanceCheck");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
+
+    public void GetRemainingTimeOfAttendance()
+    {
+        new LogEventRequest()
+            .SetEventKey("GetRemainingTimeOfAttendance")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    remainingTimeOfAttendance = (float)response.ScriptData.GetFloat("RemainingTimeOfAttendance");
+                    Debug.Log("남은 시간 : " + (int)remainingTimeOfAttendance / 60/60 + "시간  " + (int)remainingTimeOfAttendance / 60%60 + "분");
+
+
+                }
+                else
+                {
+                    Debug.Log("Error GetRemainingTimeOfAttendence");
                     Debug.Log(response.Errors.JSON);
                 }
             });

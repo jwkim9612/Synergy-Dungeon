@@ -7,7 +7,8 @@ public class MainManager : MonoBehaviour
     public static MainManager instance = null;
 
     public UIAskGoToStore uiAskGoToStore = null;
-    public UIStore uiStore;
+    public UIStore uiStore = null;
+    [SerializeField] private GameObject connecting = null;
 
     void Awake()
     {
@@ -22,5 +23,18 @@ public class MainManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+    }
 
+    public void ShowConnecting()
+    {
+        connecting.SetActive(true);
+    }
+
+    public void HideConnecting()
+    {
+        connecting.SetActive(false);
+
+    }
 }

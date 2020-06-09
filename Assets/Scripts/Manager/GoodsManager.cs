@@ -19,7 +19,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     public void Initialize()
     {
-        ResetRuneOnSales();
+        LoadRuneOnSalesData();
+        //ResetRuneOnSales();
     }
 
 
@@ -236,7 +237,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         }
     }
 
-    private void InitializeRuneOnSalesData(List<int> runeIdList)
+    private void InitializeRuneOnSalesData(List<int> runeIdList, bool isResetOnMainMenu = false)
     {
         //List<int> amount = new List<int>();
         //for(int i = 0; i < aa.Count; ++i)
@@ -252,8 +253,14 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            {
                if (!response.HasErrors)
                {
-                   Debug.Log("Success InitializeRuneOnSales");
-                   LoadRuneOnSalesData();
+                   if(isResetOnMainMenu)
+                   {
+                       LoadRuneOnSalesDataAndInitializeUIRuneOnSalesList();
+                   }
+                   else
+                   {
+                       LoadRuneOnSalesData();
+                   }
                }
                else
                {
@@ -263,7 +270,56 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-    private void LoadRuneOnSalesData()
+    public void LoadRuneOnSalesData()
+    {
+        new LogEventRequest()
+           .SetEventKey("LoadRuneOnSalesData")
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if(result)
+                   {
+                       //List<GSData> runeOnSalesScriptDataList = response.ScriptData.GetGSDataList("RuneOnSalesData");
+                       GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
+                       JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
+
+                       runeOnSalesList = new List<Tuple<int, bool>>();
+
+                       foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
+                       {
+                           JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesListPair.Value.ToString());
+
+                           int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
+                           int id = 0;
+                           bool isSoldOut = false;
+                           foreach (var runeOnSalesPair in runeOnSalesJsonObject)
+                           {
+                               if (index == idIndex)
+                                   id = int.Parse(runeOnSalesPair.Value.ToString());
+                               else if (index == isSoldOutIndex)
+                                   isSoldOut = (bool)(runeOnSalesPair.Value);
+
+                               ++index;
+                           }
+                           runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
+                       }
+                   }
+                   else
+                   {
+                       ResetRuneOnSales();
+                   }
+               }
+               else
+               {
+                   Debug.Log("Error BuyTest");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
+
+    public void LoadRuneOnSalesDataAndInitializeUIRuneOnSalesList()
     {
         new LogEventRequest()
            .SetEventKey("LoadRuneOnSalesData")
@@ -277,18 +333,18 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                    runeOnSalesList = new List<Tuple<int, bool>>();
 
-                   foreach(var runeOnSalesListPair in runeOnSalesListJsonObject)
+                   foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
                    {
                        JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesListPair.Value.ToString());
 
                        int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
                        int id = 0;
                        bool isSoldOut = false;
-                       foreach(var runeOnSalesPair in runeOnSalesJsonObject)
+                       foreach (var runeOnSalesPair in runeOnSalesJsonObject)
                        {
                            if (index == idIndex)
                                id = int.Parse(runeOnSalesPair.Value.ToString());
-                           else if(index == isSoldOutIndex)
+                           else if (index == isSoldOutIndex)
                                isSoldOut = (bool)(runeOnSalesPair.Value);
 
                            ++index;
@@ -296,6 +352,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
                    }
 
+                   MainManager.instance.uiStore.uiRuneOnSalesList.Initialize();
                    Debug.Log("runeslaes 초기화 완료");
                }
                else
@@ -306,8 +363,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-
-    private void ResetRuneOnSales()
+    public void ResetRuneOnSales(bool isResetOnMainMenu = false)
     {
         new LogEventRequest()
            .SetEventKey("GetRuneOnSalesGradeList")
@@ -318,7 +374,15 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    List<string> runeOnSalesGradeListStr = response.ScriptData.GetStringList("RuneOnSalesGradeList");
                    List<RuneGrade> runeOnSalesGradeList = RuneService.stringGradeListToRuneGradeList(runeOnSalesGradeListStr);
                    List<int> runeIdList = RuneService.GetRandomIdListByRuneGradeList(runeOnSalesGradeList);
-                   InitializeRuneOnSalesData(runeIdList);
+                   
+                   if(isResetOnMainMenu)
+                   {
+                       InitializeRuneOnSalesData(runeIdList, true);
+                   }
+                   else
+                   {
+                       InitializeRuneOnSalesData(runeIdList, false);
+                   }
                }
                else
                {
