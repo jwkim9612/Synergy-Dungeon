@@ -5,32 +5,14 @@ using UnityEngine.UI;
 
 public class UIRunePage : MonoBehaviour
 {
-    [SerializeField] private UIOwnedRunes uiOwnedRunes = null;
-    [SerializeField] private UIEquippedRunes uiEquippedRunes = null;
-    [SerializeField] private Button button1 = null;
-    [SerializeField] private Button button2 = null;
+    public UIEquippedRunes uiEquippedRunes = null;
+    public PotentialDraggableScrollView scrollView = null;
+    public UIOwnedRunes uiOwnedRunes = null;
+    public ToggleGroup toggleGroup = null;
 
-
-    private void Start()
+    public void Initialize()
     {
         uiOwnedRunes.Initialize();
         uiEquippedRunes.Initialize();
-
-        button1.onClick.AddListener(() =>
-        {
-            RuneManager.Instance.AddRune(1000);
-            //uiOwnedRunes.AddUIRune(2001);
-        });
-
-        button2.onClick.AddListener(() =>
-        {
-            RuneManager.Instance.AddRune(2001);
-            //uiOwnedRunes.AddUIRune(1000);
-        });
-    }
-
-    public void test()
-    {
-        Debug.Log("test");
     }
 }

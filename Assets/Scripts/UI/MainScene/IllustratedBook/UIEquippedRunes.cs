@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class UIEquippedRunes : MonoBehaviour
 {
-    public UIOwnedRunes uiOwnedRunes;
+    //public UIOwnedRunes uiOwnedRunes;
     public List<UIEquipRune> uiEquippedRunes;
 
     public void Initialize()
@@ -21,6 +21,8 @@ public class UIEquippedRunes : MonoBehaviour
     // 로컬에서 장착된 룬 리스트를 가져온 후 소유한 룬에서 하나씩 장착.
     private void InitializeEquippedRunes()
     {
+        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
+
         List<int> equippedRuneIds = SaveManager.Instance.equippedRuneIdsSaveData;
         for (int i = 0; i < equippedRuneIds.Count; ++i)
         {
@@ -76,7 +78,8 @@ public class UIEquippedRunes : MonoBehaviour
         SaveManager.Instance.SaveEquippedRuneIds();
 
         RuneManager.Instance.SetEquippedRune(uiOwnedRuneToEquip.rune);
-        //RuneManager.Instance.uiEquippedRunes = uiEquippedRunes;
+
+        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
         uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
         uiOwnedRunes.Sort();
 
@@ -89,6 +92,8 @@ public class UIEquippedRunes : MonoBehaviour
 
         uiEquippedRunes[socketPositionOfRuneDataToEquip].GetComponent<Toggle>().interactable = true;
         uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(uiOwnedRuneToEquip.rune.runeData);
+
+        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
         uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
     }
 }

@@ -52,6 +52,8 @@ public class PotentialDraggableScrollView : ScrollRect
     /// </summary>
     public override void OnBeginDrag(UnityEngine.EventSystems.PointerEventData eventData)
     {
+        MainManager.instance.uiIllustratedBook.uiRunePage.toggleGroup.SetAllTogglesOff(true);
+
         if (!horizontal && Math.Abs(eventData.delta.x) > Math.Abs(eventData.delta.y))
             routeToParent = true;
         else if (!vertical && Math.Abs(eventData.delta.x) < Math.Abs(eventData.delta.y))
@@ -91,7 +93,7 @@ public class PotentialDraggableScrollView : ScrollRect
         }
     }
 
-    public void GoToTargetByIndex(int targetIndex, int totalIndex)
+    public void MoveToTargetByIndex(int targetIndex, int totalIndex, Transform transform, Transform target)
     {
         float destinationPosition = 1.0f;
 
@@ -110,16 +112,26 @@ public class PotentialDraggableScrollView : ScrollRect
             }
         }
 
-        Debug.Log(destinationPosition);
-        StartCoroutine(Co_GoToTargetByIndex(destinationPosition));
+        StartCoroutine(Co_MoveToTargetByIndex(destinationPosition, transform, target));
     }
 
-    IEnumerator Co_GoToTargetByIndex(float destinationPosition)
+    IEnumerator Co_MoveToTargetByIndex(float destinationPosition, Transform transform, Transform target)
     {
         while (!Input.GetMouseButton(0))
         {
+            Debug.Log("전" + transform.position.y);
+            float chai = transform.position.y;
             this.verticalNormalizedPosition = Mathf.Lerp(this.verticalNormalizedPosition, destinationPosition, 0.1f);
             yield return new WaitForEndOfFrame();
+            chai -= transform.position.y;
+
+            Debug.Log("차이 = " + chai);
+            if (chai == 0)
+                break;
+
+            target.Translate(new Vector3(0.0f, -chai, 0.0f));
+            Debug.Log("후" + transform.position.y);
+
         }
     }
 }

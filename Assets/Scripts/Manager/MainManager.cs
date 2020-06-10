@@ -7,6 +7,7 @@ public class MainManager : MonoBehaviour
     public static MainManager instance = null;
 
     public UIAskGoToStore uiAskGoToStore = null;
+    public UIIllustratedBook uiIllustratedBook = null;
     public UIStore uiStore = null;
     [SerializeField] private GameObject connecting = null;
 
@@ -25,6 +26,7 @@ public class MainManager : MonoBehaviour
 
     private void Start()
     {
+        uiIllustratedBook.Initialize();
     }
 
     public void ShowConnecting()

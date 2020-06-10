@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class UIRuneOnSalesList : MonoBehaviour
 {
-    [SerializeField] private Text remainingTimeOfResetText;
+    [SerializeField] private Text remainingTimeOfResetText = null;
     private Dictionary<int, UIRuneGoods> uiRuneOnSalesList;
     //private List<UIRuneGoods> uiRuneOnSalesList;
     /// <summary>

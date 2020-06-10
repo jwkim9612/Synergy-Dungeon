@@ -5,58 +5,83 @@ using UnityEngine.UI;
 
 public class UIOwnedRune : UIRune
 {
-    [SerializeField] private UIEquippedRunes uiEquippedRunes = null;
     [SerializeField] private Button equipButton = null;
     [SerializeField] private GameObject clickedUIRune = null;
-    [SerializeField] private Transform canvas = null;
-    [SerializeField] private PotentialDraggableScrollView scrollView = null;
+    [SerializeField] private Toggle toggle = null;
     public int lineIndex;
+    private Vector3 originPosition;
 
     private void Start()
     {
-        canvas = GameObject.Find("Canvas").GetComponent<Transform>();
-        scrollView = GetComponentInParent<PotentialDraggableScrollView>();
-        var toggle = GetComponent<Toggle>();
-        var originParent = this.transform;
-        var originPosition = clickedUIRune.transform.localPosition;
+        SetToggleOnClicked();
+        SetEquipButton();
+    }
 
-        toggle.onValueChanged.AddListener((bool bOn) => 
+    private void SetToggleOnClicked()
+    {
+        toggle.onValueChanged.AddListener((bool bOn) =>
         {
-            if(bOn)
+            if (bOn)
             {
-                clickedUIRune.transform.localPosition = originPosition;
-                clickedUIRune.SetActive(true);
-                clickedUIRune.transform.parent = canvas;
-
-                scrollView.GoToTargetByIndex(lineIndex, 4);
+                ActivateClickedRune();
+                MoveToScrollPositionOfClickedRune();
             }
             else
             {
-                clickedUIRune.transform.parent = originParent;
-                //clickedUIRune.transform.position = originPosition;
-                clickedUIRune.SetActive(false);
+                DisableClickedRune();
             }
         });
+    }
 
-        ///////////////////////////////////////////////////////////////////////////
+    private void MoveToScrollPositionOfClickedRune()
+    {
+        var scrollView = MainManager.instance.uiIllustratedBook.uiRunePage.scrollView;
+        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
+        scrollView.MoveToTargetByIndex(lineIndex, uiOwnedRunes.numberOfLine, uiOwnedRunes.transform, clickedUIRune.transform);
+    }
+
+    private void ActivateClickedRune()
+    {
+        originPosition = clickedUIRune.transform.localPosition;
+
+        clickedUIRune.transform.localPosition = originPosition;
+        clickedUIRune.SetActive(true);
+        clickedUIRune.transform.SetParent(MainManager.instance.uiIllustratedBook.transform);
+    }
+
+    private void DisableClickedRune()
+    {
+        var originParent = this.transform;
+
+        clickedUIRune.transform.SetParent(originParent);
+        //clickedUIRune.transform.position = originPosition;
+        clickedUIRune.SetActive(false);
+    }
+
+    private void SetEquipButton()
+    {
         equipButton.onClick.AddListener(() =>
         {
-            clickedUIRune.transform.parent = originParent;
+            toggle.isOn = false;
+            EquipRuneAndSubsequentProcessing();
 
-            GetComponent<Toggle>().isOn = false;
-
-            var equipResult = uiEquippedRunes.EquipRuneAndGetReplaceResult(this);
-            if(equipResult.Item1)
-            {
-                SetUIRune(equipResult.Item2.runeData);
-                uiEquippedRunes.uiOwnedRunes.AddUIRune(equipResult.Item2.runeData);
-                uiEquippedRunes.uiOwnedRunes.Sort();
-            }
-            else
-            {
-                Debug.Log("교체된게 없음");
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         });
+    }
+
+    private void EquipRuneAndSubsequentProcessing()
+    {
+        var runePage = MainManager.instance.uiIllustratedBook.uiRunePage;
+        var equipResult = runePage.uiEquippedRunes.EquipRuneAndGetReplaceResult(this);
+        if (equipResult.Item1)    // 장착한 곳에 룬이 있었는지 없었는지.
+        {
+            SetUIRune(equipResult.Item2.runeData);
+            runePage.uiOwnedRunes.AddUIRune(equipResult.Item2.runeData);
+            runePage.uiOwnedRunes.Sort();
+        }
+        else
+        {
+            Debug.Log("교체된게 없음");
+        }
     }
 }

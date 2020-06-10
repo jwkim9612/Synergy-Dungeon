@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UILock : MonoBehaviour
 {
-    [SerializeField] private Text needLevelText;
+    [SerializeField] private Text needLevelText = null;
 
     public void SetLock(int needLevel)
     {

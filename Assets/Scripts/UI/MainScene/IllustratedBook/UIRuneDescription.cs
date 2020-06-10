@@ -8,7 +8,7 @@ public class UIRuneDescription : MonoBehaviour
     [SerializeField] private Text description = null;
     [SerializeField] private ToggleGroup toggleGroup = null;
 
-    private void Start()
+    public void Initialize()
     {
         SetDescription(null);
     }

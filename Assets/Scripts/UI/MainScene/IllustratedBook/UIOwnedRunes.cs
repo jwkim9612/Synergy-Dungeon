@@ -89,7 +89,7 @@ public class UIOwnedRunes : MonoBehaviour
             uiRunes[i].lineIndex = runeIndex;
         }
 
-        numberOfLine = uiRunes.Count / RuneService.TOTAL_NUMBER_PER_LINE;
+        numberOfLine = uiRunes.Count / RuneService.TOTAL_NUMBER_PER_LINE + 1;
     }
 
     public void UpdateOwnedRunes()
@@ -119,26 +119,5 @@ public class UIOwnedRunes : MonoBehaviour
         uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
     }
 
-    //public void UpdateOwnedRunes()
-    //{
-
-    //    Debug.Log("transform child count : " + transform.childCount);
-
-    //    for (int i = 0; i < transform.childCount; ++i)
-    //    {
-    //        if (i == uiRunes.Count)
-    //        {
-    //            uiRunes.Add(null);
-    //        }
-
-    //        var uiRune = gameObject.GetComponentsInChildren<UIOwnedRune>()[i];
-
-    //        if (uiRune != uiRunes[i])
-    //        {
-    //            uiRunes[i] = uiRune;
-    //        }
-    //    }
-
-    //    uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
-    //}
+    
 }
