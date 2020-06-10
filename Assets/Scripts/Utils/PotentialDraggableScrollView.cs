@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
+using Org.BouncyCastle.Asn1.X509;
 
 public class PotentialDraggableScrollView : ScrollRect
 {
@@ -86,6 +87,38 @@ public class PotentialDraggableScrollView : ScrollRect
         while (!Input.GetMouseButton(0))
         {
             verticalNormalizedPosition = Mathf.Lerp(verticalNormalizedPosition, 1 + (target.localPosition.y / content.rect.height), 0.1f);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    public void GoToTargetByIndex(int targetIndex, int totalIndex)
+    {
+        float destinationPosition = 1.0f;
+
+        if (targetIndex == 0)
+            destinationPosition = 1.0f;
+        else if (targetIndex == totalIndex - 1 || targetIndex == totalIndex -2)
+            destinationPosition = 0.0f;
+        else
+        {
+            float addValue = 1.0f / ((float)totalIndex - 2);
+            for(int i = 1; i < totalIndex; ++i)
+            {
+                destinationPosition -= addValue;
+                if (i == targetIndex)
+                    break;
+            }
+        }
+
+        Debug.Log(destinationPosition);
+        StartCoroutine(Co_GoToTargetByIndex(destinationPosition));
+    }
+
+    IEnumerator Co_GoToTargetByIndex(float destinationPosition)
+    {
+        while (!Input.GetMouseButton(0))
+        {
+            this.verticalNormalizedPosition = Mathf.Lerp(this.verticalNormalizedPosition, destinationPosition, 0.1f);
             yield return new WaitForEndOfFrame();
         }
     }

@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class UIOwnedRunes : MonoBehaviour
 {
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
-    [SerializeField] private UIRune uiRune = null;
-    public List<UIRune> uiRunes;
+    [SerializeField] private UIOwnedRune uiOwnedRune = null;
+    public List<UIOwnedRune> uiRunes { get; set; }
+    public int numberOfLine;
 
     public void Initialize()
     {
@@ -19,7 +20,7 @@ public class UIOwnedRunes : MonoBehaviour
 
     private void CreateOwnedRuneList()
     {
-        uiRunes = new List<UIRune>();
+        uiRunes = new List<UIOwnedRune>();
 
         var ownedRuneIds = RuneManager.Instance.ownedRunes;
         if (ownedRuneIds == null)
@@ -29,7 +30,7 @@ public class UIOwnedRunes : MonoBehaviour
         {
             for(int i = 0; i < ownedRuneId.Value; ++i)
             {
-                var rune = Instantiate(uiRune, girdLayoutGroup.transform);
+                var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
                 rune.SetUIRune(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[ownedRuneId.Key]);
                 uiRunes.Add(rune);
             }
@@ -42,18 +43,34 @@ public class UIOwnedRunes : MonoBehaviour
     {
         RuneData runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
 
-        var rune = Instantiate(uiRune, girdLayoutGroup.transform);
+        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
         rune.SetUIRune(runeData);
+        uiRunes.Add(rune);
 
         Sort();
+    }
+
+    public void AddUIRune(RuneData runeData)
+    {
+        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
+        rune.SetUIRune(runeData);
+        uiRunes.Add(rune);
+
+        Sort();
+    }
+
+    public void RemoveRune(UIOwnedRune uiOwnedRune)
+    {
+        uiRunes.Remove(uiOwnedRune);
     }
 
     public void AddUIRuneByEquipRelease(int runeId)
     {
         RuneData runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
 
-        var rune = Instantiate(uiRune, girdLayoutGroup.transform);
+        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
         rune.SetUIRune(runeData);
+        uiRunes.Add(rune);
 
         Sort();
     }
@@ -62,16 +79,28 @@ public class UIOwnedRunes : MonoBehaviour
     {
         UpdateOwnedRunes();
 
+        int runeIndex;
         uiRunes = uiRunes.OrderBy(x => x.rune.runeData.Id).ToList();
 
         for(int i = 0; i < uiRunes.Count; ++i)
         {
+            runeIndex = i / RuneService.TOTAL_NUMBER_PER_LINE;
             uiRunes[i].transform.SetSiblingIndex(i);
+            uiRunes[i].lineIndex = runeIndex;
         }
+
+        numberOfLine = uiRunes.Count / RuneService.TOTAL_NUMBER_PER_LINE;
     }
 
     public void UpdateOwnedRunes()
     {
+        StartCoroutine(Co_UpdateOwnedRunes());
+    }
+
+    private IEnumerator Co_UpdateOwnedRunes()
+    {
+        yield return new WaitForEndOfFrame();
+
         for (int i = 0; i < transform.childCount; ++i)
         {
             if (i == uiRunes.Count)
@@ -89,4 +118,27 @@ public class UIOwnedRunes : MonoBehaviour
 
         uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
     }
+
+    //public void UpdateOwnedRunes()
+    //{
+
+    //    Debug.Log("transform child count : " + transform.childCount);
+
+    //    for (int i = 0; i < transform.childCount; ++i)
+    //    {
+    //        if (i == uiRunes.Count)
+    //        {
+    //            uiRunes.Add(null);
+    //        }
+
+    //        var uiRune = gameObject.GetComponentsInChildren<UIOwnedRune>()[i];
+
+    //        if (uiRune != uiRunes[i])
+    //        {
+    //            uiRunes[i] = uiRune;
+    //        }
+    //    }
+
+    //    uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
+    //}
 }

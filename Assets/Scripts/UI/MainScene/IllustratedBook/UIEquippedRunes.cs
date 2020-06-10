@@ -33,7 +33,7 @@ public class UIEquippedRunes : MonoBehaviour
             var runeToBeEquipped = uiOwnedRunes.uiRunes.Find(x => x.rune.runeData.Id == equippedRuneIds[i]);
             if (runeToBeEquipped != null)
             {
-                EquipRune(runeToBeEquipped.rune);
+                EquipRune(runeToBeEquipped);
                 //EquipRuneAndGetReplaceResult(runeToBeEquipped.rune);
                 Destroy(runeToBeEquipped.gameObject);
             }
@@ -41,6 +41,7 @@ public class UIEquippedRunes : MonoBehaviour
                 Debug.Log("장착되었던 룬을 찾을 수 없습니다.");
         }
 
+        uiOwnedRunes.Sort();
         //RuneManager.Instance.uiEquippedRunes = uiEquippedRunes;
     }
 
@@ -49,12 +50,12 @@ public class UIEquippedRunes : MonoBehaviour
     /// </summary>
     /// <param name="runeDataToEquip"> 장착할 룬의 데이터</param>
     /// <returns>교체 되었는지의 Bool값과 교체되었다면 교체된 RuneData, 교체가 안되었다면 null값을 가진 Tuple을 리턴</returns>
-    public Tuple<bool, Rune> EquipRuneAndGetReplaceResult(Rune runeToEquip)
+    public Tuple<bool, Rune> EquipRuneAndGetReplaceResult(UIOwnedRune uiOwnedRuneToEquip)
     {
         bool isReplaced;
         Rune equippedRune;
 
-        int socketPositionOfRuneDataToEquip = runeToEquip.runeData.SocketPosition;
+        int socketPositionOfRuneDataToEquip = uiOwnedRuneToEquip.rune.runeData.SocketPosition;
         UIEquipRune uiEquipRuneToBeEquip = uiEquippedRunes[socketPositionOfRuneDataToEquip];
 
         // 장착할 위치에 룬이 없는경우
@@ -70,21 +71,24 @@ public class UIEquippedRunes : MonoBehaviour
             equippedRune = uiEquipRuneToBeEquip.rune;
         }
 
-        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(runeToEquip.runeData);
-        SaveManager.Instance.SetEquippedRuneIdsSaveData(socketPositionOfRuneDataToEquip, runeToEquip.runeData.Id);
+        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(uiOwnedRuneToEquip.rune.runeData);
+        SaveManager.Instance.SetEquippedRuneIdsSaveData(socketPositionOfRuneDataToEquip, uiOwnedRuneToEquip.rune.runeData.Id);
         SaveManager.Instance.SaveEquippedRuneIds();
 
-        RuneManager.Instance.SetEquippedRune(runeToEquip);
+        RuneManager.Instance.SetEquippedRune(uiOwnedRuneToEquip.rune);
         //RuneManager.Instance.uiEquippedRunes = uiEquippedRunes;
+        uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
+        uiOwnedRunes.Sort();
 
         return new Tuple<bool, Rune>(isReplaced, equippedRune);
     }
 
-    public void EquipRune(Rune runeToEquip)
+    public void EquipRune(UIOwnedRune uiOwnedRuneToEquip)
     {
-        int socketPositionOfRuneDataToEquip = runeToEquip.runeData.SocketPosition;
+        int socketPositionOfRuneDataToEquip = uiOwnedRuneToEquip.rune.runeData.SocketPosition;
 
         uiEquippedRunes[socketPositionOfRuneDataToEquip].GetComponent<Toggle>().interactable = true;
-        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(runeToEquip.runeData);
+        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(uiOwnedRuneToEquip.rune.runeData);
+        uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
     }
 }

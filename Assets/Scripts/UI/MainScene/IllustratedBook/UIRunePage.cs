@@ -29,5 +29,8 @@ public class UIRunePage : MonoBehaviour
         });
     }
 
-
+    public void test()
+    {
+        Debug.Log("test");
+    }
 }

@@ -171,4 +171,5 @@ public class RuneService
     public const int INDEX_OF_WARRIOR_SOCKET = 3;
     public const int INDEX_OF_WIZARD_SOCKET = 4;
 
+    public const int TOTAL_NUMBER_PER_LINE = 7;
 }
