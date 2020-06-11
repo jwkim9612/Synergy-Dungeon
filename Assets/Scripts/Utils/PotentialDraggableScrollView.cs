@@ -95,15 +95,19 @@ public class PotentialDraggableScrollView : ScrollRect
 
     public void MoveToTargetByIndex(int targetIndex, int totalIndex, Transform transform, Transform target)
     {
+        Debug.Log("타겟 : " + targetIndex + "   토탈 : " + totalIndex);
+
         float destinationPosition = 1.0f;
 
         if (targetIndex == 0)
             destinationPosition = 1.0f;
-        else if (targetIndex == totalIndex - 1 || targetIndex == totalIndex -2)
+        //else if (targetIndex == totalIndex - 1 || targetIndex == totalIndex -2)
+        else if (targetIndex == totalIndex - 1)
             destinationPosition = 0.0f;
         else
         {
-            float addValue = 1.0f / ((float)totalIndex - 2);
+            //float addValue = 1.0f / ((float)totalIndex - 2);
+            float addValue = 1.0f / ((float)totalIndex - 1);
             for(int i = 1; i < totalIndex; ++i)
             {
                 destinationPosition -= addValue;
@@ -119,18 +123,18 @@ public class PotentialDraggableScrollView : ScrollRect
     {
         while (!Input.GetMouseButton(0))
         {
-            Debug.Log("전" + transform.position.y);
+            //Debug.Log("전" + transform.position.y);
             float chai = transform.position.y;
             this.verticalNormalizedPosition = Mathf.Lerp(this.verticalNormalizedPosition, destinationPosition, 0.1f);
             yield return new WaitForEndOfFrame();
             chai -= transform.position.y;
 
-            Debug.Log("차이 = " + chai);
+            //Debug.Log("차이 = " + chai);
             if (chai == 0)
                 break;
 
             target.Translate(new Vector3(0.0f, -chai, 0.0f));
-            Debug.Log("후" + transform.position.y);
+            //Debug.Log("후" + transform.position.y);
 
         }
     }

@@ -90,6 +90,10 @@ public class UIOwnedRunes : MonoBehaviour
         }
 
         numberOfLine = uiRunes.Count / RuneService.TOTAL_NUMBER_PER_LINE + 1;
+        if (uiRunes.Count % 7 == 0)
+            numberOfLine -= 1;
+
+        Debug.Log("numberOfLine = " + numberOfLine + "      uiRunesCOunt = " + uiRunes.Count);
     }
 
     public void UpdateOwnedRunes()
