@@ -28,6 +28,101 @@ public class BattleStatus : MonoBehaviour
         StartCoroutine(Battle());
     }
 
+    //private IEnumerator Battle()
+    //{
+    //    Debug.Log("Battle");
+
+    //    if (characters.Count == 0)
+    //        isCharacterAnnihilation = true;
+
+    //    yield return new WaitForSeconds(1.0f);
+
+    //    while (!isCharacterAnnihilation && !isEnemyAnnihilation)
+    //    {
+    //        List<Pawn> removePawnList = new List<Pawn>();
+
+    //        foreach (var pawn in pawnsAttackSequenceList)
+    //        {
+    //            if (pawn.isDead)
+    //            {
+    //                continue;
+    //            }
+
+    //            Pawn target = RandomAttackAndGetTarget(pawn);
+
+    //            if(pawn.animator != null)
+    //            {
+    //                float time = 0;
+
+    //                RuntimeAnimatorController ac = pawn.animator.runtimeAnimatorController;
+    //                for(int i = 0; i < ac.animationClips.Length; i++)
+    //                {
+    //                    if (ac.animationClips[i].name == "Attack")
+    //                    {
+    //                        Debug.Log("시간 : " + ac.animationClips[i].length);
+    //                        time = ac.animationClips[i].length;
+    //                    }
+    //                }
+
+    //                yield return new WaitForSeconds(time + 1.0f);
+    //            }
+    //            else
+    //            {
+    //                yield return new WaitForSeconds(1.0f);
+    //            }
+    //            if (target.isDead)
+    //            {
+    //                yield return new WaitForSeconds(1.0f);
+    //                RemoveFromAttackList(target);
+    //                removePawnList.Add(target);
+
+    //                if (characters.Count == 0)
+    //                {
+    //                    isCharacterAnnihilation = true;
+    //                    break;
+    //                }
+    //                else if (enemies.Count == 0)
+    //                {
+    //                    isEnemyAnnihilation = true;
+    //                    break;
+    //                }
+    //            }
+    //        }
+
+    //        pawnsAttackSequenceList.RemoveAll(removePawnList.Contains);
+    //    }
+
+    //    // 배틀 종료 
+    //    if (isCharacterAnnihilation)
+    //    {
+    //        SaveManager.Instance.RemoveInGameData();
+    //        InGameManager.instance.gameState.isPlayerLose = true;
+    //        Debug.Log("Battle End");
+    //        yield break;
+    //    }
+    //    else if (isEnemyAnnihilation)
+    //    {
+    //        Debug.Log(StageManager.Instance.currentWave);
+
+    //        if(StageManager.Instance.IsFinalWave())
+    //        {
+    //            SaveManager.Instance.RemoveInGameData();
+    //            Debug.Log("데이터 삭제!");
+    //        }
+    //        else
+    //        {
+    //            SaveManager.Instance.SetInGameData();
+    //            SaveManager.Instance.SaveInGameData();
+    //        }
+    //        OnWinTheBattle();
+    //        yield break;
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Error Battle End");
+    //    }
+    //}
+
     private IEnumerator Battle()
     {
         Debug.Log("Battle");
@@ -48,17 +143,21 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-                Pawn target = RandomAttackAndGetTarget(pawn);
-                
-                if(pawn.animator != null)
+
+                if(IsCharacter(pawn))
                 {
-                    Debug.Log("길이 : " + pawn.animator.GetCurrentAnimatorStateInfo(0).length);
-                    yield return new WaitForSeconds(4.0f);
+                    pawn.PlayAttackAnimation();
                 }
                 else
                 {
-                    yield return new WaitForSeconds(1.0f);
+                    pawn.RandomAttack();
                 }
+
+                float attackAnimationLength = pawn.GetAttackAnimationLength();
+                yield return new WaitForSeconds(attackAnimationLength + 0.5f);
+
+                Pawn target = pawn.GetTarget();
+
                 if (target.isDead)
                 {
                     yield return new WaitForSeconds(1.0f);
@@ -93,7 +192,7 @@ public class BattleStatus : MonoBehaviour
         {
             Debug.Log(StageManager.Instance.currentWave);
 
-            if(StageManager.Instance.IsFinalWave())
+            if (StageManager.Instance.IsFinalWave())
             {
                 SaveManager.Instance.RemoveInGameData();
                 Debug.Log("데이터 삭제!");
@@ -182,13 +281,37 @@ public class BattleStatus : MonoBehaviour
         return pawn.pawnType == PawnType.Character;
     }
 
+    public Enemy GetRandomEnemy()
+    {
+        int enemiesRandomIndex = GetRandomEnemyIndex();
+        return enemies[enemiesRandomIndex];
+    }
+
+    public Character GetRandomCharacter()
+    {
+        int charactersRandomIndex = GetRandomCharacterIndex();
+        return characters[charactersRandomIndex];
+    }
+
     private int GetRandomEnemyIndex()
     {
-         return RandomService.RandRange(0, enemies.Count);
+        if (enemies.Count <= 0)
+        {
+            Debug.LogError("Error GetRandomEnemyIndex");
+            return -1;
+        }
+
+        return RandomService.RandRange(0, enemies.Count);
     }
 
     private int GetRandomCharacterIndex()
     {
+        if (characters.Count <= 0)
+        {
+            Debug.LogError("Error GetRandomCharacterIndex");
+            return -1;
+        }
+
         return RandomService.RandRange(0, characters.Count);
     }
 }

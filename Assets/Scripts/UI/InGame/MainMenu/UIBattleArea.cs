@@ -6,7 +6,7 @@ public class UIBattleArea : MonoBehaviour
 {
     [SerializeField] private UICharacterArea uiCharacterArea = null;
     [SerializeField] private UIEnemyArea uiEnemyArea = null;
-    [SerializeField] private BattleStatus battleStatus = null;
+    public BattleStatus battleStatus = null;
 
     private void Start()
     {

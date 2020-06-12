@@ -15,6 +15,7 @@ public class InGameManager : MonoBehaviour
     public PlayerState playerState;
     public GameState gameState;
     public DraggableCentral draggableCentral;
+    public UIBattleArea uiBattleArea;
 
     void Awake()
     {

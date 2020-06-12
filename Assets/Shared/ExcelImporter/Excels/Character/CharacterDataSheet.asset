@@ -130,8 +130,8 @@ MonoBehaviour:
     Tribe: 5
     Origin: 4
     Tier: 2
-    ImagePath: "Images/Character/Elf/\uC5D8\uD504 \uC804\uC0AC"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Elf/Elf Warrior/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Elf/Elf Warrior
   - Id: 17
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Tribe: 5
@@ -207,8 +207,8 @@ MonoBehaviour:
     Tribe: 6
     Origin: 1
     Tier: 3
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uAD81\uC218"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Human/Archer/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Human/Archer
   - Id: 28
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Tribe: 6

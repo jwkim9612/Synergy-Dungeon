@@ -29,31 +29,11 @@ public class Character : Pawn
         currentHP = ability.Health;
     }
 
-    //public override void Attack(Pawn target)
-    //{
-    //    float finalDamage = target.TakeDamage(ability.Attack);
-    //    OnAttack();
-
-    //    //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
-    //}
-
-    //public override long TakeDamage(long damage)
-    //{
-    //    long finalDamage = Mathf.Clamp((int)(damage) - (int)(ability.Defence), 1, (int)(damage));
-    //    currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)(currentHP));
-
-    //    OnHit();
-
-    //    PlayHitText(finalDamage);
-
-    //    if (currentHP <= 0)
-    //    {
-    //        isDead = true;
-    //        OnIsDead();
-    //    }
-
-    //    return finalDamage;
-    //}
+    public override void RandomAttack()
+    {
+        target = InGameManager.instance.uiBattleArea.battleStatus.GetRandomEnemy();
+        Attack(target);
+    }
 
     public override void ResetStat()
     {

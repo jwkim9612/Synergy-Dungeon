@@ -32,10 +32,9 @@ public class UICharacter : MonoBehaviour
         character.Initialize();
         character.SetImage(characterData.Image);
         character.SetName(characterData.Name);
-        character.SetRunTimeAnimatorController(characterData.RuntimeAnimatorController);
         character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), characterData.Origin);
         character.OnIsDead += OnHide;
-        character.OnAttack += PlayAttackCoroutine;
+        //character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
         character.OnHit += PlayShowHPBarForMoment;
         character.SetUIFloatingTextList(uiFloatingTextList);
@@ -44,6 +43,23 @@ public class UICharacter : MonoBehaviour
         StartCoroutine(Co_PrepareFollowCharacter());
         uiHPBar.Initialize();
     }
+
+    ///////////////////////////////////////////
+    public void SetDefaultImage()
+    {
+        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+
+        character.RemoveRunTimeAnimatorController();
+        character.SetImage(characterData.Image);
+    }
+
+    public void SetAnimationImage()
+    {
+        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+
+        character.SetRunTimeAnimatorController(characterData.RuntimeAnimatorController);
+    }
+    ///////////////////////////////////////////
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
     {
@@ -96,23 +112,23 @@ public class UICharacter : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void PlayAttackCoroutine()
-    {
-        StartCoroutine(Co_AttackAnimation());
-    }
+    //public void PlayAttackCoroutine()
+    //{
+    //    StartCoroutine(Co_AttackAnimation());
+    //}
 
     public void PlayShowHPBarForMoment()
     {
         StartCoroutine(Co_ShowHPBarForMoment());
     }
 
-    private IEnumerator Co_AttackAnimation()
-    {
-        gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
-        yield return new WaitForSeconds(0.5f);
-        gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
-        yield break;
-    }
+    //private IEnumerator Co_AttackAnimation()
+    //{
+    //    gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
+    //    yield return new WaitForSeconds(0.5f);
+    //    gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
+    //    yield break;
+    //}
 
     private IEnumerator Co_ShowHPBarForMoment()
     {

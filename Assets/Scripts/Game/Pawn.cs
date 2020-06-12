@@ -23,6 +23,8 @@ public class Pawn : MonoBehaviour
     public Ability ability;
     protected long currentHP;
 
+    protected Pawn target;
+
     public List<UIFloatingText> uiFloatingTextList { get; set; } = null;
     private int floatingTextIndex;
 
@@ -32,7 +34,7 @@ public class Pawn : MonoBehaviour
         animator = GetComponent<Animator>();
         
         floatingTextIndex = 0;
-        OnAttack += PlayAttackAnimation;
+        //OnAttack += PlayAttackAnimation;
     }
 
     public void SetSize(float size)
@@ -49,6 +51,35 @@ public class Pawn : MonoBehaviour
     {
         animator.runtimeAnimatorController = runTimeAnimatorController;
     }
+
+    public void RemoveRunTimeAnimatorController()
+    {
+        animator.runtimeAnimatorController = null;
+    }
+
+    //public void Attack(Pawn target)
+    //{
+    //    if (target == null)
+    //    {
+    //        Debug.Log("target is null");
+    //        return;
+    //    }
+
+    //    if (GetAttackSuccessful(target))
+    //    {
+    //        if (IsCriticalAttack())
+    //            target.TakeDamage(ability.Attack, true);
+    //        else
+    //            target.TakeDamage(ability.Attack, false);
+    //    }
+    //    else
+    //        target.PlayMissText();
+
+
+    //    OnAttack();
+
+    //    //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
+    //}
 
     public void Attack(Pawn target)
     {
@@ -69,9 +100,13 @@ public class Pawn : MonoBehaviour
             target.PlayMissText();
 
 
-        OnAttack();
+        //OnAttack();
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
+    }
+
+    public virtual void RandomAttack()
+    {
     }
 
     /// <summary>
@@ -190,26 +225,49 @@ public class Pawn : MonoBehaviour
             floatingTextIndex = 0;
     }
 
-    private void PlayAttackAnimation()
-    {
-        StartCoroutine(Co_PlayAttackAnimation());
-    }
-
-    private IEnumerator Co_PlayAttackAnimation()
-    {
-        if(animator != null)
-        {
-            Debug.Log("tre");
-            animator.SetBool("Attack", true);
-            yield return new WaitForSeconds(4.0f);
-            animator.SetBool("Attack", false);
-            Debug.Log("false");
-
-        }
-    }
-
     public void DestoryPawn()
     {
         Destroy(this.gameObject);
+    }
+
+    public void PlayAttackAnimation()
+    {
+        if(animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("Attack", true);
+        }
+    }
+
+    // Attack 애니메이션에서 사용함.
+    private void AttackEnd()
+    {
+        animator.SetBool("Attack", false);
+    }
+    
+    public float GetAttackAnimationLength()
+    {
+        if (animator != null)
+        {
+            RuntimeAnimatorController ac = animator.runtimeAnimatorController;
+            for (int i = 0; i < ac.animationClips.Length; i++)
+            {
+                if (ac.animationClips[i].name == "Attack")
+                {
+                   return ac.animationClips[i].length;
+                }
+            }
+        }
+        else
+        {
+            return 1.0f;
+        }
+
+        Debug.LogError("Error GetAttackAnimationLength");
+        return -1;
+    }
+
+    public Pawn GetTarget()
+    {
+        return target;
     }
 }

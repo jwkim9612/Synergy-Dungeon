@@ -26,7 +26,7 @@ public class UIEnemy : MonoBehaviour
         enemy.SetAbility(newEnmeyData);
         enemy.SetName(newEnmeyData.Name);
         enemy.OnIsDead += PlayDeadCoroutine;
-        enemy.OnAttack += PlayAttackCoroutine;
+        //enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayShowHPBarForMoment;
         enemy.SetUIFloatingTextList(uiFloatingTextList);
@@ -37,10 +37,10 @@ public class UIEnemy : MonoBehaviour
         uiHPBar.UpdateHPBar();
     }
 
-    public void PlayAttackCoroutine()
-    {
-        StartCoroutine(AttackCoroutine());
-    }
+    //public void PlayAttackCoroutine()
+    //{
+    //    StartCoroutine(AttackCoroutine());
+    //}
 
     public void PlayDeadCoroutine()
     {
@@ -52,13 +52,13 @@ public class UIEnemy : MonoBehaviour
         StartCoroutine(Co_ShowHPBarForMoment());
     }
 
-    private IEnumerator AttackCoroutine()
-    {
-        gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
-        yield return new WaitForSeconds(0.5f);
-        gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
-        yield break;
-    }
+    //private IEnumerator AttackCoroutine()
+    //{
+    //    gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
+    //    yield return new WaitForSeconds(0.5f);
+    //    gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
+    //    yield break;
+    //}
 
     private IEnumerator DeadCoroutine()
     {

@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -76,6 +77,7 @@ public class DraggableCentral : MonoBehaviour
     {
         parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
+        uiCharacter.SetDefaultImage();
         originalSize = uiCharacter.character.GetSize();
         sellArea.UpdatePrice(uiCharacter.characterInfo);
         sellArea.gameObject.SetActive(true);
@@ -95,25 +97,31 @@ public class DraggableCentral : MonoBehaviour
             {
                 if (!isSwapped)
                 {
-                    // 옆으로 옮기면
+                    // 첫 번째로 다른 자리로 드래그했으면
                     if (targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
+                        SetCharacterImage(targetCharacter);
                         swappedCharacter = targetCharacter;
                         isSwapped = true;
                     }
                 }
                 else
                 {
+                    // 드래그하다가 원래 자리로
                     if(targetCharacter == swappedCharacter)
                     {
                         SwapCharacters(invisibleCharacter, targetCharacter);
+                        SetCharacterImage(targetCharacter);
                         isSwapped = false;
                     }
+                    // 다른 자리로 드래그 후 또 다른 자리로 갔을 경우
                     else if(targetCharacter != invisibleCharacter)
                     {
                         SwapCharacters(invisibleCharacter, swappedCharacter);
+                        SetCharacterImage(swappedCharacter);
                         SwapCharacters(invisibleCharacter, targetCharacter);
+                        SetCharacterImage(targetCharacter);
                         swappedCharacter = targetCharacter;
                     }
                 }
@@ -131,10 +139,12 @@ public class DraggableCentral : MonoBehaviour
         }
         else
         {
+            // 드래그 중에 CharacterArea 또는 PrepareArea 이외의 공간에 있는 경우
             if (isSwapped)
             {
                 uiCharacter.character.SetSize(originalSize);
                 SwapCharacters(swappedCharacter, invisibleCharacter);
+                SetCharacterImage(swappedCharacter);
                 isSwapped = false;
             }
         }
@@ -179,10 +189,15 @@ public class DraggableCentral : MonoBehaviour
         UpdateSynergyService(uiCharacter);
         UpdateCurrentPlacedCharacters();
         SwapCharacters(invisibleCharacter, uiCharacter);
+        SetCharacterImage(uiCharacter);
 
         isSwapped = false;
     }
 
+    /// <summary>
+    /// 캐릭터의 성을 업그레이드 하면서 배치된 캐릭터의 수를 업데이트
+    /// </summary>
+    /// <param name="characterInfo"></param>
     public void CombinationCharacter(CharacterInfo characterInfo)
     {
 
@@ -210,6 +225,10 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 현재 배치된 캐릭터들의 시너지 적용
+    /// </summary>
+    /// <param name="uiCharacter"></param>
     public void UpdateSynergyService(UICharacter uiCharacter)
     {
         if (IsMoveToSell())
@@ -243,6 +262,9 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 필드에 배치된 캐릭터 수 업데이트.
+    /// </summary>
     public void UpdateCurrentPlacedCharacters()
     {
         if (IsMoveToSell())
@@ -313,5 +335,23 @@ public class DraggableCentral : MonoBehaviour
         int numOfCanBePlacedInBattleArea = InGameManager.instance.playerState.numOfCanBePlacedInBattleArea;
 
         return numOfCurrentPlacedCharacters >= numOfCanBePlacedInBattleArea ? true : false;
+    }
+
+    // 배치된 공간에 따라서 이미지를 바꿔줌
+    private void SetCharacterImage(UICharacter uiCharacter)
+    {
+        if (uiCharacter.character == null)
+            return;
+
+        if(uiCharacter.GetArea<UICharacterArea>() != null)
+        {
+            uiCharacter.SetAnimationImage();
+            // 일반 이미지로 변경;
+        }
+        else if(uiCharacter.GetArea<UIPrepareArea>() != null)
+        {
+            uiCharacter.SetDefaultImage();
+            // 애니메이션 이미지로 변경;
+        }
     }
 }
