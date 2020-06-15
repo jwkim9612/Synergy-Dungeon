@@ -16,6 +16,7 @@ public class UIEquipRune : UIRune
             {
                 SaveManager.Instance.SetEquippedRuneIdsSaveDataByRelease(rune.runeData.SocketPosition);
                 SaveManager.Instance.SaveEquippedRuneIds();
+                RuneManager.Instance.RemoveEquippedRune(rune.runeData.SocketPosition);
                 uiOwnedRunes.AddUIRuneByEquipRelease(rune.runeData.Id);
                 Disable();
             }

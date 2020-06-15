@@ -57,30 +57,6 @@ public class Pawn : MonoBehaviour
         animator.runtimeAnimatorController = null;
     }
 
-    //public void Attack(Pawn target)
-    //{
-    //    if (target == null)
-    //    {
-    //        Debug.Log("target is null");
-    //        return;
-    //    }
-
-    //    if (GetAttackSuccessful(target))
-    //    {
-    //        if (IsCriticalAttack())
-    //            target.TakeDamage(ability.Attack, true);
-    //        else
-    //            target.TakeDamage(ability.Attack, false);
-    //    }
-    //    else
-    //        target.PlayMissText();
-
-
-    //    OnAttack();
-
-    //    //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
-    //}
-
     public void Attack(Pawn target)
     {
         if (target == null)
@@ -99,8 +75,6 @@ public class Pawn : MonoBehaviour
         else
             target.PlayMissText();
 
-
-        //OnAttack();
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
@@ -230,12 +204,26 @@ public class Pawn : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void PlayWinAnimation()
+    {
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("Win", true);
+        }
+    }
+
     public void PlayAttackAnimation()
     {
         if(animator.runtimeAnimatorController != null)
         {
             animator.SetBool("Attack", true);
         }
+    }
+
+    // Win 애니메이션에서 사용함.
+    private void WinEnd()
+    {
+        animator.SetBool("Win", false);
     }
 
     // Attack 애니메이션에서 사용함.

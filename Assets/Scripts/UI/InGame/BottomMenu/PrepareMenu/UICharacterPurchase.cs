@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UICharacterPurchase : MonoBehaviour
 {
     [SerializeField] private UICharacterCard[] cards = null;
     public StockService stockService { get; set; } = null;
     public ProbabilityService probabilityService { get; set; } = null;
+    [SerializeField] private Button cheatPurchaseCharacter = null;
 
     void Start()
     {
@@ -40,5 +42,37 @@ public class UICharacterPurchase : MonoBehaviour
             card.OnShow();
             card.isBoughtCard = false;
         }
+    }
+
+    public void CheatPurchaseCharacter(int id)
+    {
+        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(id);
+
+        if (InGameManager.instance.combinationService.IsUpgradable(characterInfo))
+        {
+            BuyCharacter(id);
+        }
+        else
+        {
+            var emptyUICharacter = InGameManager.instance.draggableCentral.uiPrepareArea.GetEmptyUICharacter();
+            if (emptyUICharacter == null)
+            {
+                Debug.Log("uiCharacter is full");
+            }
+            else
+            {
+                emptyUICharacter.SetCharacter(characterInfo);
+                BuyCharacter(id);
+            }
+        }
+    }
+
+    private void BuyCharacter(int id)
+    {
+        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(id);
+        CharacterData characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[id];
+
+        InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.Tier));
     }
 }

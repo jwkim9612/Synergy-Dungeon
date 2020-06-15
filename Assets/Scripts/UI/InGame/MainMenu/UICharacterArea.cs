@@ -63,6 +63,7 @@ public class UICharacterArea : MonoBehaviour
         foreach(var uiCharacter in uiCharacterListWithCharacter)
         {
             uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
+            uiCharacter.SetAnimationImage();
         }
 
     }

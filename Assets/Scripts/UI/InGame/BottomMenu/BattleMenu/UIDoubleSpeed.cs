@@ -7,26 +7,23 @@ public class UIDoubleSpeed : MonoBehaviour
 {
     [SerializeField] private Text speedText = null;
     private float currentSpeed;
-    private float defaultSpeed;
 
     private void Start()
     {
-        defaultSpeed = 1.0f;
-        currentSpeed = defaultSpeed;
-        ChangeText();
+        ChangeToDefaultSpeed();
 
         InGameManager.instance.gameState.OnPrepare += ChangeToDefaultSpeed;
     }
 
     public void ChangeSpeed()
     {
-        if(currentSpeed == 1.0f)
+        if(currentSpeed == InGameService.DEFAULT_SPEED)
         {
-            currentSpeed = 2.0f;
+            currentSpeed = InGameService.DOUBLE_SPEED;
         }
         else
         {
-            currentSpeed = 1.0f;
+            currentSpeed = InGameService.DEFAULT_SPEED;
         }
 
         ChangeText();
@@ -35,7 +32,7 @@ public class UIDoubleSpeed : MonoBehaviour
 
     public void ChangeText()
     {
-        if (currentSpeed == 1.0f)
+        if (currentSpeed == InGameService.DEFAULT_SPEED)
         {
             speedText.text = "X1";
         }
@@ -47,7 +44,7 @@ public class UIDoubleSpeed : MonoBehaviour
     
     public void ChangeToDefaultSpeed()
     {
-        currentSpeed = defaultSpeed;
+        currentSpeed = InGameService.DEFAULT_SPEED;
         ChangeText();
         ChangeTimeScale();
     }

@@ -42,6 +42,14 @@ public class RuneManager : MonoSingleton<RuneManager>
         }
     }
 
+    public void RemoveEquippedRune(int socketIndex)
+    {
+        if (socketIndex >= RuneService.NUMBER_OF_RUNE_SOCKETS)
+            return;
+
+        equippedRunes[socketIndex] = null;
+    }
+
     public void SaveOwnedRunes()
     {
         new LogEventRequest()

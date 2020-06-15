@@ -186,15 +186,15 @@ MonoBehaviour:
     Tribe: 6
     Origin: 4
     Tier: 3
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uC804\uC0AC"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Human/Warrior/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Human/Warrior
   - Id: 25
     Name: "\uC2EC\uD310\uAD00"
     Tribe: 6
     Origin: 5
     Tier: 4
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Human/Wizard/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Human/Wizard
   - Id: 26
     Name: "\uC880\uB3C4\uB451"
     Tribe: 6

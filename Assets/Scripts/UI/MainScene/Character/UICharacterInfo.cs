@@ -32,6 +32,7 @@ public class UICharacterInfo : UIControl
 
         SetCharacterAbilityText(GameManager.instance.dataSheet.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
         SetPlusValue();
+        Debug.Log("SetCharacterData");
     }
 
     public void SetName(string name)

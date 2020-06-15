@@ -28,101 +28,6 @@ public class BattleStatus : MonoBehaviour
         StartCoroutine(Battle());
     }
 
-    //private IEnumerator Battle()
-    //{
-    //    Debug.Log("Battle");
-
-    //    if (characters.Count == 0)
-    //        isCharacterAnnihilation = true;
-
-    //    yield return new WaitForSeconds(1.0f);
-
-    //    while (!isCharacterAnnihilation && !isEnemyAnnihilation)
-    //    {
-    //        List<Pawn> removePawnList = new List<Pawn>();
-
-    //        foreach (var pawn in pawnsAttackSequenceList)
-    //        {
-    //            if (pawn.isDead)
-    //            {
-    //                continue;
-    //            }
-
-    //            Pawn target = RandomAttackAndGetTarget(pawn);
-
-    //            if(pawn.animator != null)
-    //            {
-    //                float time = 0;
-
-    //                RuntimeAnimatorController ac = pawn.animator.runtimeAnimatorController;
-    //                for(int i = 0; i < ac.animationClips.Length; i++)
-    //                {
-    //                    if (ac.animationClips[i].name == "Attack")
-    //                    {
-    //                        Debug.Log("시간 : " + ac.animationClips[i].length);
-    //                        time = ac.animationClips[i].length;
-    //                    }
-    //                }
-
-    //                yield return new WaitForSeconds(time + 1.0f);
-    //            }
-    //            else
-    //            {
-    //                yield return new WaitForSeconds(1.0f);
-    //            }
-    //            if (target.isDead)
-    //            {
-    //                yield return new WaitForSeconds(1.0f);
-    //                RemoveFromAttackList(target);
-    //                removePawnList.Add(target);
-
-    //                if (characters.Count == 0)
-    //                {
-    //                    isCharacterAnnihilation = true;
-    //                    break;
-    //                }
-    //                else if (enemies.Count == 0)
-    //                {
-    //                    isEnemyAnnihilation = true;
-    //                    break;
-    //                }
-    //            }
-    //        }
-
-    //        pawnsAttackSequenceList.RemoveAll(removePawnList.Contains);
-    //    }
-
-    //    // 배틀 종료 
-    //    if (isCharacterAnnihilation)
-    //    {
-    //        SaveManager.Instance.RemoveInGameData();
-    //        InGameManager.instance.gameState.isPlayerLose = true;
-    //        Debug.Log("Battle End");
-    //        yield break;
-    //    }
-    //    else if (isEnemyAnnihilation)
-    //    {
-    //        Debug.Log(StageManager.Instance.currentWave);
-
-    //        if(StageManager.Instance.IsFinalWave())
-    //        {
-    //            SaveManager.Instance.RemoveInGameData();
-    //            Debug.Log("데이터 삭제!");
-    //        }
-    //        else
-    //        {
-    //            SaveManager.Instance.SetInGameData();
-    //            SaveManager.Instance.SaveInGameData();
-    //        }
-    //        OnWinTheBattle();
-    //        yield break;
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Error Battle End");
-    //    }
-    //}
-
     private IEnumerator Battle()
     {
         Debug.Log("Battle");
@@ -143,7 +48,7 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-
+                // 에너미의 애니메이션이 생기면 if문 지우고 PlayAttackAnimation만 실행되게 할것.
                 if(IsCharacter(pawn))
                 {
                     pawn.PlayAttackAnimation();
@@ -190,7 +95,7 @@ public class BattleStatus : MonoBehaviour
         }
         else if (isEnemyAnnihilation)
         {
-            Debug.Log(StageManager.Instance.currentWave);
+            AllCharactersPlayWinAnimation();
 
             if (StageManager.Instance.IsFinalWave())
             {
@@ -202,6 +107,9 @@ public class BattleStatus : MonoBehaviour
                 SaveManager.Instance.SetInGameData();
                 SaveManager.Instance.SaveInGameData();
             }
+
+            yield return new WaitForSeconds(3.0f);
+
             OnWinTheBattle();
             yield break;
         }
@@ -313,5 +221,13 @@ public class BattleStatus : MonoBehaviour
         }
 
         return RandomService.RandRange(0, characters.Count);
+    }
+
+    private void AllCharactersPlayWinAnimation()
+    {
+        for (int i = 0; i < characters.Count; ++i)
+        {
+            characters[i].PlayWinAnimation();
+        }
     }
 }
