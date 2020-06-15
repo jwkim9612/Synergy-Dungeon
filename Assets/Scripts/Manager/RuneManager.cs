@@ -16,7 +16,7 @@ public class RuneManager : MonoSingleton<RuneManager>
 
     public void Initialize()
     {
-        RuneService.Initialize();
+        //RuneService.Initialize();
         InitializeEquippedRunes();
         LoadOwnedRuneData();
     }

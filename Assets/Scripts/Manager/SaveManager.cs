@@ -1,17 +1,12 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Bson;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoSingleton<SaveManager>
 {
@@ -28,7 +23,7 @@ public class SaveManager : MonoSingleton<SaveManager>
     {
         _inGameSaveData = new InGameSaveData();
 
-        equippedRuneIdsSaveDataPath = Path.Combine(Application.dataPath, "EquippedRuneIds.json");
+        equippedRuneIdsSaveDataPath = Path.Combine(Application.persistentDataPath, "EquippedRuneIds.json");
         IntializeEquippedRuneIdsSaveData();
 
         //if (!File.Exists(playDataPath))
@@ -57,7 +52,7 @@ public class SaveManager : MonoSingleton<SaveManager>
 
     public void SaveEquippedRuneIds()
     {
-        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "EquippedRuneIds", JsonDataManager.Instance.ObjectToJson(equippedRuneIdsSaveData));
+        JsonDataManager.Instance.CreateJsonFile(Application.persistentDataPath, "EquippedRuneIds", JsonDataManager.Instance.ObjectToJson(equippedRuneIdsSaveData));
         Debug.Log("EquippedRuneIds Save Done !");
     }
 

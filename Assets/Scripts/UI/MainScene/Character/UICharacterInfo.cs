@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using geniikw.DataSheetLab;
-using UnityScript.Scripting.Pipeline;
 
 public class UICharacterInfo : UIControl
 { 

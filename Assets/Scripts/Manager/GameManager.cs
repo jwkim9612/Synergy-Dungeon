@@ -36,17 +36,6 @@ public class GameManager : MonoBehaviour
         dataSheet.Initialize();
     }
 
-    private void LoadManagers()
-    {
-        GoodsManager.Instance.Initialize();
-        TimeManager.Instance.Initialize();
-        UIManager.Instance.Initialize();
-        SoundManager.Instance.Initialize();
-        PlayerDataManager.Instance.Initialize();
-        StageManager.Instance.Initialize();
-        RuneManager.Instance.Initialize();
-    }
-
     public void LoadGameAndLoadMainScene()
     {
         StartCoroutine(Co_LoadGameAndLoadMainScene());
@@ -54,9 +43,18 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Co_LoadGameAndLoadMainScene()
     {
-        LoadManagers();
-
-        yield return new WaitForSeconds(2.0f);
+        UIManager.Instance.Initialize();
+        SoundManager.Instance.Initialize();
+        ServiceManager.Instance.Initialize();
+        PlayerDataManager.Instance.Initialize();
+        TimeManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        GoodsManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        StageManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        RuneManager.Instance.Initialize();
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MainScene");
     }
 
@@ -67,9 +65,18 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Co_LoadGameAndLoadInGameScene()
     {
-        LoadManagers();
-
-        yield return new WaitForSeconds(2.0f);
+        UIManager.Instance.Initialize();
+        SoundManager.Instance.Initialize();
+        ServiceManager.Instance.Initialize();
+        PlayerDataManager.Instance.Initialize();
+        TimeManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        GoodsManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        StageManager.Instance.Initialize();
+        yield return new WaitForSeconds(0.5f);
+        RuneManager.Instance.Initialize();
+        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("InGameScene");
     }
 

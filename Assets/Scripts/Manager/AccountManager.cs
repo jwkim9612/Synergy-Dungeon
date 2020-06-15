@@ -16,7 +16,7 @@ public class AccountManager : MonoSingleton<AccountManager>
     public void Initialize()
     {
         accountData = new AccountData();
-        AccountData loadedAccoutnData = JsonDataManager.Instance.LoadJsonFile<AccountData>(Application.dataPath, "AccountData");
+        AccountData loadedAccoutnData = JsonDataManager.Instance.LoadJsonFile<AccountData>(Application.persistentDataPath, "AccountData");
         if (loadedAccoutnData == null)
         {
             UIManager.Instance.ShowNew(signMain);
@@ -35,7 +35,7 @@ public class AccountManager : MonoSingleton<AccountManager>
     public void SaveAccountData()
     {
         Debug.Log("계정 정보 저장 완료!");
-        JsonDataManager.Instance.CreateJsonFile(Application.dataPath, "AccountData", JsonDataManager.Instance.ObjectToJson(accountData));
+        JsonDataManager.Instance.CreateJsonFile(Application.persistentDataPath, "AccountData", JsonDataManager.Instance.ObjectToJson(accountData));
     }
 
     public void SetAccountData(string id, string pw)
