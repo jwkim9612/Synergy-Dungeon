@@ -6,13 +6,13 @@ public class OriginData
 {
     public OriginData(OriginExcelData originExcelData)
     {
-        Name = originExcelData.Name;
+        Origin = originExcelData.Name;
         Description = originExcelData.Description;
 
         Image = Resources.Load<Sprite>(originExcelData.ImagePath);
     }
 
-    public Origin Name;
+    public Origin Origin;
     public string Description;
     public Sprite Image;
 }

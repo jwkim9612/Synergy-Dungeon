@@ -71,8 +71,8 @@ public class UICharacter : MonoBehaviour
         CharacterInfo deletedCharacterInfo = characterInfo;
 
         InGameManager.instance.playerState.IncreaseCoin(CharacterService.GetSalePrice(characterInfo));
-        InGameManager.instance.stockService.AddStockId(characterInfo);
-        InGameManager.instance.combinationService.SubCharacter(characterInfo);
+        InGameManager.instance.stockSystem.AddStockId(characterInfo);
+        InGameManager.instance.combinationSystem.SubCharacter(characterInfo);
         DeleteCharacter();
 
         return deletedCharacterInfo;
@@ -92,7 +92,7 @@ public class UICharacter : MonoBehaviour
     public void UpgradeStar()
     {
         ++characterInfo.star;
-        InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
         Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
         // 파티클 재생 함수
     }

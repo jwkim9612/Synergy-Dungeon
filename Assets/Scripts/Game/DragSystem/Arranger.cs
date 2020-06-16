@@ -74,8 +74,8 @@ public class Arranger : MonoBehaviour
                 continue;
             }
 
-            InGameManager.instance.stockService.RemoveStockId(characterInfoList[i]);
-            InGameManager.instance.combinationService.AddCharacter(characterInfoList[i]);
+            InGameManager.instance.stockSystem.RemoveStockId(characterInfoList[i]);
+            InGameManager.instance.combinationSystem.AddCharacter(characterInfoList[i]);
             uiCharacters[i].SetCharacter(characterInfoList[i]);
         }
     }

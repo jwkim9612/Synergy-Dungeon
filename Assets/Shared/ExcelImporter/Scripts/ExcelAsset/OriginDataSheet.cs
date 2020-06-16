@@ -21,7 +21,7 @@ public class OriginDataSheet : ScriptableObject
 		foreach (var originExcelData in OriginExcelDatas)
 		{
 			OriginData originData = new OriginData(originExcelData);
-			OriginDatas.Add(originData.Name, originData);
+			OriginDatas.Add(originData.Origin, originData);
 		}
 	}
 }

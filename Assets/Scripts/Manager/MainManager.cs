@@ -26,6 +26,8 @@ public class MainManager : MonoBehaviour
 
     private void Start()
     {
+        UIManager.Instance.SetCanEscape(true);
+
         uiIllustratedBook.Initialize();
     }
 

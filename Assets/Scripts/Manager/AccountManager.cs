@@ -10,7 +10,7 @@ public class AccountManager : MonoSingleton<AccountManager>
 {
     private AccountData accountData;
 
-    [SerializeField] private UIControl signMain = null;
+    [SerializeField] private GameObject signMain = null;
     [SerializeField] private UIControl uiEnterDisplayName = null;
 
     public void Initialize()
@@ -19,7 +19,8 @@ public class AccountManager : MonoSingleton<AccountManager>
         AccountData loadedAccoutnData = JsonDataManager.Instance.LoadJsonFile<AccountData>(Application.persistentDataPath, "AccountData");
         if (loadedAccoutnData == null)
         {
-            UIManager.Instance.ShowNew(signMain);
+            signMain.SetActive(true);
+            UIManager.Instance.SetCanEscape(true);
             // 로그인 창, 회원가입 창 띄우기
 
         }

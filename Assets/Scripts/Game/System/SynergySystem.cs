@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SynergyService
+public class SynergySystem
 {
     public delegate void OnTribeChangedDelegate();
     public OnTribeChangedDelegate OnTribeChanged { get; set; }
@@ -159,6 +159,6 @@ public class SynergyService
             return;
 
         if (uiCharacter.GetArea<UIBattleArea>() != null)
-            InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+            InGameManager.instance.synergySystem.SubCharacter(uiCharacter.characterInfo);
     }
 }

@@ -17,6 +17,9 @@ public class UIStore : MonoBehaviour
     public PotentialDraggableScrollView scrollView;
 
 
+    [SerializeField] private Button cheatGoldButton = null;
+    [SerializeField] private Button cheatDiamondButton = null;
+
     private void Start()
     {
         uiRuneOnSalesList.Initialize();
@@ -24,6 +27,18 @@ public class UIStore : MonoBehaviour
         uiRandomRuneSalesList.Initialize();
         uiObtainedRunesScreen.Initialize();
         purchaseCompletedFloatingText.Initialize();
+
+        cheatGoldButton.onClick.AddListener(() =>
+        {
+            PlayerDataManager.Instance.playerData.Gold += 1000;
+            PlayerDataManager.Instance.SavePlayerDataForCheat();
+        });
+
+        cheatDiamondButton.onClick.AddListener(() =>
+        {
+            PlayerDataManager.Instance.playerData.Diamond += 1000;
+            PlayerDataManager.Instance.SavePlayerDataForCheat();
+        });
     }
 
     public void ShowBeingPurchase()

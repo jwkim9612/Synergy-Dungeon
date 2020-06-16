@@ -4,13 +4,13 @@ using UnityEngine;
 using geniikw.DataSheetLab;
 using Shared.Service;
 
-public class ProbabilityService
+public class ProbabilitySystem
 {
     //public Dictionary<Tier, float> Probabilities { get; set; }
     public Dictionary<Tier, long> Probabilities { get; set; }
     public List<Tier> tiers { get; set; }
 
-    public ProbabilityService()
+    public ProbabilitySystem()
     {
         Probabilities = new Dictionary<Tier, long>();
         tiers = new List<Tier>();

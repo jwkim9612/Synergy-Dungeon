@@ -6,7 +6,7 @@ public class UIBattleSynergyList : MonoBehaviour
 {
     private List<UITribe> uiTribes;
     private List<UIOrigin> uiOrigins;
-    private SynergyService synergyService;
+    private SynergySystem synergySystem;
 
     private void Start()
     {
@@ -27,9 +27,9 @@ public class UIBattleSynergyList : MonoBehaviour
             origin.gameObject.SetActive(false);
         }
 
-        synergyService = InGameManager.instance.synergyService;
-        synergyService.OnTribeChanged += UpdateTribes;
-        synergyService.OnOriginChanged += UpdateOrigins; ;
+        synergySystem = InGameManager.instance.synergySystem;
+        synergySystem.OnTribeChanged += UpdateTribes;
+        synergySystem.OnOriginChanged += UpdateOrigins; ;
 
 
         if (SaveManager.Instance.IsLoadedData)
@@ -42,7 +42,7 @@ public class UIBattleSynergyList : MonoBehaviour
     {
         int tribeIndex = 0;
 
-        var tribes = synergyService.appliedTribes;
+        var tribes = synergySystem.appliedTribes;
         foreach(var tribe in tribes)
         {
             uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[tribe.Key].Image);
@@ -61,7 +61,7 @@ public class UIBattleSynergyList : MonoBehaviour
     {
         int originIndex = 0;
 
-        var origins = synergyService.appliedOrigins;
+        var origins = synergySystem.appliedOrigins;
         foreach (var origin in origins)
         {
             uiOrigins[originIndex].SetImage(GameManager.instance.dataSheet.originDataSheet.OriginDatas[origin.Key].Image);
@@ -84,7 +84,7 @@ public class UIBattleSynergyList : MonoBehaviour
                 continue;
             }
 
-            synergyService.AddCharacter(characterInfo);
+            synergySystem.AddCharacter(characterInfo);
         }
     }
 }

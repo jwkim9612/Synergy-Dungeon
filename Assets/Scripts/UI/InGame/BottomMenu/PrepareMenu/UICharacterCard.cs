@@ -27,7 +27,7 @@ public class UICharacterCard : MonoBehaviour
         {
             CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
 
-            if (InGameManager.instance.combinationService.IsUpgradable(characterInfo))
+            if (InGameManager.instance.combinationSystem.IsUpgradable(characterInfo))
             {
                 BuyCharacter();
             }
@@ -51,7 +51,7 @@ public class UICharacterCard : MonoBehaviour
     {
         CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
 
-        InGameManager.instance.combinationService.AddCharacter(characterInfo);
+        InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
         InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.Tier));
         isBoughtCard = true;
         OnHide();
@@ -64,9 +64,10 @@ public class UICharacterCard : MonoBehaviour
         SetCharacterImage(characterData.Image);
         SetPriceText(CardService.GetPriceByTier(characterData.Tier).ToString());
         SetTribeImage(characterData.TribeData.Image);
-        SetTribeText(characterData.TribeData.Name.ToString());
+        SetTribeText(SynergyService.GetNameByTribe(characterData.TribeData.Tribe));
         SetOriginImage(characterData.OriginData.Image);
-        SetOriginText(characterData.OriginData.Name.ToString());
+        //SetOriginText(characterData.OriginData.Name.ToString());
+        SetOriginText(SynergyService.GetNameByOrigin(characterData.OriginData.Origin));
         SetCharacterNameText(characterData.Name);
         SetTierBorderImage(CardService.GetColorByTier(characterData.Tier));
     }

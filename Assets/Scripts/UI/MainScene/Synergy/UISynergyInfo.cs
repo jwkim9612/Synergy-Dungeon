@@ -107,7 +107,7 @@ public class UISynergyInfo : UIControl
         {
             foreach (var characterSlotToShow in characterSlotsToShow)
             {
-                if(tribeData.Name == characterSlotToShow.characterData.Tribe)
+                if(tribeData.Tribe == characterSlotToShow.characterData.Tribe)
                 {
                     characterSlotToShow.gameObject.SetActive(true);
                 }
@@ -121,7 +121,7 @@ public class UISynergyInfo : UIControl
         {
             foreach (var characterSlotToShow in characterSlotsToShow)
             {
-                if (originData.Name == characterSlotToShow.characterData.Origin)
+                if (originData.Origin == characterSlotToShow.characterData.Origin)
                 {
                     characterSlotToShow.gameObject.SetActive(true);
                 }

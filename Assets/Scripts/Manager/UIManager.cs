@@ -8,25 +8,33 @@ public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private UIControl exitUIControl = null;
 
-    private bool isInitialized = false;
-    
+    private bool isInitialized;
+    private bool canEscapeKey;
+
     //UI 기록
     private Stack<UIControl> uiHistory = new Stack<UIControl>();
 
     public void Initialize()
     {
         isInitialized = true;
+        canEscapeKey = false;
     }
 
-    void Start()
-    {
-        if(isInitialized)
-        {
-            return;
-        }
+    //void Start()
+    //{
+    //    if(isInitialized)
+    //    {
+    //        return;
+    //    }
 
-        isInitialized = true;
-        Initialize();
+    //    Debug.Log("Start uimainager");
+    //    isInitialized = true;
+    //    Initialize();
+    //}
+
+    public void SetCanEscape(bool escapable)
+    {
+        canEscapeKey = escapable;
     }
 
     public void ShowMessage(string _message)
@@ -36,10 +44,13 @@ public class UIManager : MonoSingleton<UIManager>
 
     void Update()
     {
-        //Back키 입력 시 뒤로 가기
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(canEscapeKey)
         {
-            HideAndShowPreview();
+            //Back키 입력 시 뒤로 가기
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                HideAndShowPreview();
+            }
         }
     }
 

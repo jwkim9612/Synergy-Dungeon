@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using geniikw.DataSheetLab;
 
-public class StockService
+public class StockSystem
 {
     //public Dictionary<Tier, Stock> Stocks { get; set; } = new Dictionary<Tier, Stock>();
     public Dictionary<Tier, Stock> Stocks { get; set; }

@@ -15,25 +15,25 @@ MonoBehaviour:
   TribeExcelDatas:
   - Name: 7
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_MACHINE
   - Name: 3
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_BEAST
   - Name: 2
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Name: 1
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_BEAST
   - Name: 8
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_UNDEAD
   - Name: 5
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_ELF
   - Name: 4
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Tribe/Logo_ELEMENTAL
   - Name: 6
     Description: "\uBC29\uC5B4\uB825\uC774 10 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_HUMAN

@@ -19,7 +19,7 @@ public class UISynergySlot : MonoBehaviour
         tribeData = newTribeData;
 
         Setimage(tribeData.Image);
-        SetName(tribeData.Name.ToString());
+        SetName(tribeData.Tribe.ToString());
     }
 
     public void SetSynergyData(OriginData newOriginData)
@@ -28,7 +28,7 @@ public class UISynergySlot : MonoBehaviour
         originData = newOriginData;
 
         Setimage(originData.Image);
-        SetName(originData.Name.ToString());
+        SetName(originData.Origin.ToString());
     }
 
     public void Setimage(Sprite sprite)

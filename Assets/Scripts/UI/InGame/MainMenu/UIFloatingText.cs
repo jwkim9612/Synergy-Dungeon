@@ -16,8 +16,7 @@ public class UIFloatingText : MonoBehaviour
 
     public void Initialize()
     {
-        canvas = transform.root.parent;
-            //GameObject.Find("Canvas").GetComponent<Transform>();
+        canvas = transform.root;
         originPosition = transform.localPosition;
         isCoroutineRunning = false;
     }
@@ -56,9 +55,9 @@ public class UIFloatingText : MonoBehaviour
         isCoroutineRunning = true;
 
         var originParent = this.transform.parent;
-        //this.transform.SetParent(canvas.transform);
-        this.transform.SetParent(null);
-        this.transform.SetAsLastSibling();
+        this.transform.SetParent(canvas.transform);
+        //this.transform.SetParent(null);
+        //this.transform.SetAsLastSibling();
         float runningTime = 0.0f;
 
         while (true)

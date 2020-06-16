@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        UIManager.Instance.Initialize();
+        SoundManager.Instance.Initialize();
         AccountManager.Instance.Initialize();
         JsonDataManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
@@ -47,8 +49,6 @@ public class GameManager : MonoBehaviour
     private IEnumerator Co_LoadGameAndLoadMainScene()
     {
         OnLoading();
-        UIManager.Instance.Initialize();
-        SoundManager.Instance.Initialize();
         ServiceManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         TimeManager.Instance.Initialize();

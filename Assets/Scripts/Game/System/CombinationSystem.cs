@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombinationService
+public class CombinationSystem
 {
     private Dictionary<CharacterInfo, int> ownedCharacter;
 

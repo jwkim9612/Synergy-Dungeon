@@ -21,7 +21,7 @@ public class TribeDataSheet : ScriptableObject
 		foreach (var tribeExcelData in TribeExcelDatas)
 		{
 			TribeData tribeData = new TribeData(tribeExcelData);
-			TribeDatas.Add(tribeData.Name, tribeData);
+			TribeDatas.Add(tribeData.Tribe, tribeData);
 		}
 	}
 }

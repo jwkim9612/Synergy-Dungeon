@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIStartScreen : MonoBehaviour
 {
-    [SerializeField] private Text connetingText;
+    [SerializeField] private Text connetingText = null;
 
     private void Start()
     {

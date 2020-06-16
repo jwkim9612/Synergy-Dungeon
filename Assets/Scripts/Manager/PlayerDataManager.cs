@@ -103,6 +103,28 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
             });
     }
 
+    public void SavePlayerDataForCheat()
+    {
+        new LogEventRequest()
+            .SetEventKey("SavePlayerData")
+            .SetEventAttribute("Level", playerData.Level)
+            .SetEventAttribute("Diamond", playerData.Diamond)
+            .SetEventAttribute("Gold", playerData.Gold)
+            .SetEventAttribute("PlayableStage", playerData.PlayableStage)
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success Player Data Save !");
+                    LoadPlayerData();
+                }
+                else
+                {
+                    Debug.Log("Error Data Save !");
+                }
+            });
+    }
+
     public void InitializePlayerData()
     {
         new LogEventRequest()

@@ -208,7 +208,7 @@ public class DraggableCentral : MonoBehaviour
 
             if (uiCharacter.characterInfo.Equals(characterInfo))
             {
-                InGameManager.instance.synergyService.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
+                InGameManager.instance.synergySystem.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
                 uiCharacterArea.SubCurrentPlacedCharacterFromCombinations(uiCharacter, isFirstCharacter);
 
                 if (isFirstCharacter)
@@ -230,9 +230,11 @@ public class DraggableCentral : MonoBehaviour
     /// <param name="uiCharacter"></param>
     public void UpdateSynergyService(UICharacter uiCharacter)
     {
+        var synergySystem = InGameManager.instance.synergySystem;
+
         if (IsMoveToSell())
         {
-            InGameManager.instance.synergyService.SubCharacter(selledCharacterInfo);
+            synergySystem.SubCharacter(selledCharacterInfo);
             return;
         }
 
@@ -242,21 +244,21 @@ public class DraggableCentral : MonoBehaviour
         if (IsMoveFromBattleAreaToPrepareArea())
         {
             if (IsReplaceWithEmptySpace())
-                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
+                synergySystem.SubCharacter(uiCharacter.characterInfo);
             else
             {
-                InGameManager.instance.synergyService.SubCharacter(uiCharacter.characterInfo);
-                InGameManager.instance.synergyService.AddCharacter(swappedCharacter.characterInfo);
+                synergySystem.SubCharacter(uiCharacter.characterInfo);
+                synergySystem.AddCharacter(swappedCharacter.characterInfo);
             }
         }
         else if (IsMoveFromPrepareAreaToBattleArea())
         {
             if (IsReplaceWithEmptySpace())
-                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
+                synergySystem.AddCharacter(uiCharacter.characterInfo);
             else
             {
-                InGameManager.instance.synergyService.AddCharacter(uiCharacter.characterInfo);
-                InGameManager.instance.synergyService.SubCharacter(swappedCharacter.characterInfo);
+                synergySystem.AddCharacter(uiCharacter.characterInfo);
+                synergySystem.SubCharacter(swappedCharacter.characterInfo);
             }
         }
     }

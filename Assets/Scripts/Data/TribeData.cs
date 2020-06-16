@@ -6,13 +6,13 @@ public class TribeData
 {
     public TribeData(TribeExcelData tribeExcelData)
     {
-        Name = tribeExcelData.Name;
+        Tribe = tribeExcelData.Name;
         Description = tribeExcelData.Description;
 
         Image = Resources.Load<Sprite>(tribeExcelData.ImagePath);
     }
 
-    public Tribe Name;
+    public Tribe Tribe;
     public string Description;
     public Sprite Image;
 }
