@@ -53,14 +53,14 @@ MonoBehaviour:
     Tribe: 3
     Origin: 2
     Tier: 1
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uAD81\uC218"
+    ImagePath: Images/Old Character/Character_FairyDragon
     RuntimeAnimatorControllerPath: 
   - Id: 6
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 4
     Tier: 1
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uB9C8\uBC95\uC0AC"
+    ImagePath: Images/Old Character/Character_24
     RuntimeAnimatorControllerPath: 
   - Id: 7
     Name: "\uB460"
@@ -95,7 +95,7 @@ MonoBehaviour:
     Tribe: 1
     Origin: 2
     Tier: 1
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uC131\uAE30\uC0AC"
+    ImagePath: Images/Old Character/Character_25
     RuntimeAnimatorControllerPath: 
   - Id: 12
     Name: "\uD4E8\uB9AC\uC628"
@@ -109,7 +109,7 @@ MonoBehaviour:
     Tribe: 8
     Origin: 5
     Tier: 1
-    ImagePath: "Images/Character/Elf/\uC5D8\uD504 \uC804\uC0AC"
+    ImagePath: Images/Old Character/Character_14
     RuntimeAnimatorControllerPath: 
   - Id: 14
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
@@ -172,7 +172,7 @@ MonoBehaviour:
     Tribe: 4
     Origin: 2
     Tier: 1
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uC804\uC0AC"
+    ImagePath: Images/Old Character/Character_19
     RuntimeAnimatorControllerPath: 
   - Id: 23
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
