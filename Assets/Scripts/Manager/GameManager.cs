@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public delegate void OnLoadingDelegate();
+    public OnLoadingDelegate OnLoading { get; set; }
+
     //매니저들
     public static GameManager instance = null;
     public DataSheet dataSheet = null;
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Co_LoadGameAndLoadMainScene()
     {
+        OnLoading();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
         ServiceManager.Instance.Initialize();
@@ -65,6 +69,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Co_LoadGameAndLoadInGameScene()
     {
+        OnLoading();
         UIManager.Instance.Initialize();
         SoundManager.Instance.Initialize();
         ServiceManager.Instance.Initialize();

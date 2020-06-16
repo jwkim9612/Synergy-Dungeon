@@ -1,17 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIEnterDisplayName : UIControl
 {
     [SerializeField] private InputField displayNameInputField = null;
-    [SerializeField] private Button cancelButton = null;
+    [SerializeField] private Button okButton = null;
 
     private void Start()
     {
-        cancelButton.onClick.AddListener(() =>
+        okButton.onClick.AddListener(() =>
         {
             string displayName;
 
@@ -20,7 +17,8 @@ public class UIEnterDisplayName : UIControl
             else
                 displayName = displayNameInputField.text;
 
-            AccountManager.Instance.ChangeDisplayName(displayName, true);
+            UIManager.Instance.HideAndShowPreview();
+            AccountManager.Instance.ChangeDisplayNameAndLoadMainScene(displayName, true);
         });
     }
 }

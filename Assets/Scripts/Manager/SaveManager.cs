@@ -158,7 +158,7 @@ public class SaveManager : MonoSingleton<SaveManager>
             });
     }
 
-    public void LoadInGameData()
+    public void LoadInGameDataAndLoadInGameScene()
     {
         new LogEventRequest()
             .SetEventKey("LoadInGameData")

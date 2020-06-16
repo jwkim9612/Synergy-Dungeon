@@ -72,7 +72,7 @@ public class AccountManager : MonoSingleton<AccountManager>
                     Debug.Log($"ID : {accountData.id}, PW : {accountData.pw}");
                     if(isFromSignUp)
                     {
-                        ShowEnterDisplayName();
+                        UIManager.Instance.ShowNew(uiEnterDisplayName);
                         // 닉네임 설정 창 오픈.
                     }
                     else
@@ -116,7 +116,7 @@ public class AccountManager : MonoSingleton<AccountManager>
         );
     }
 
-    public void ChangeDisplayName(string displayName, bool isFromSignUp)
+    public void ChangeDisplayNameAndLoadMainScene(string displayName, bool isFromSignUp)
     {
         new GameSparks.Api.Requests.ChangeUserDetailsRequest()
             .SetDisplayName(displayName)
@@ -136,8 +136,6 @@ public class AccountManager : MonoSingleton<AccountManager>
             });
     }
 
-    
-
     public string GetRandomID()
     {
         Guid new_guid = Guid.NewGuid();
@@ -146,10 +144,5 @@ public class AccountManager : MonoSingleton<AccountManager>
         id = id.Replace('-', 'M');
 
         return id;
-    }
-
-    public void ShowEnterDisplayName()
-    {
-        uiEnterDisplayName.gameObject.SetActive(true);
     }
 }

@@ -18,7 +18,7 @@ public class JsonDataManager : MonoSingleton<JsonDataManager>
         byte[] data = Encoding.UTF8.GetBytes(jsonData);
         fileStream.Write(data, 0, data.Length);
         fileStream.Close();
-        Debug.Log(Application.dataPath.ToString());
+        Debug.Log(Application.persistentDataPath.ToString());
     }
 
     public string ObjectToJson(object obj)

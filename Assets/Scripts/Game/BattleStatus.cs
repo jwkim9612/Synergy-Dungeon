@@ -35,7 +35,7 @@ public class BattleStatus : MonoBehaviour
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {
@@ -49,7 +49,7 @@ public class BattleStatus : MonoBehaviour
                 }
 
                 // 에너미의 애니메이션이 생기면 if문 지우고 PlayAttackAnimation만 실행되게 할것.
-                if(IsCharacter(pawn))
+                if(pawn.HasAnimation())
                 {
                     pawn.PlayAttackAnimation();
                 }

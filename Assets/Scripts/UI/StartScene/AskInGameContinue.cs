@@ -13,13 +13,19 @@ public class AskInGameContinue : MonoBehaviour
     {
         yesButton.onClick.AddListener(() =>
         {
-            SaveManager.Instance.LoadInGameData();
+            SaveManager.Instance.LoadInGameDataAndLoadInGameScene();
         });
 
         noButton.onClick.AddListener(() =>
         {
             SaveManager.Instance.RemoveInGameData();
             GameManager.instance.LoadGameAndLoadMainScene();
+            OnHide();
         });
+    }
+
+    private void OnHide()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -13,7 +13,6 @@ public class Character : Pawn
     public void SetAbility(CharacterAbilityData characterAbilityData, Origin origin)
     {
         ability.SetAbility(characterAbilityData);
-        Debug.Log(origin);
 
         ///////////////////////////////////// 룬 능력치 + ///////////////////////////////////////////////
         Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(origin);

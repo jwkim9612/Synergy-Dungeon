@@ -69,6 +69,8 @@ public class UICharacterPurchase : MonoBehaviour
 
     private void BuyCharacter(int id)
     {
+
+
         CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(id);
         CharacterData characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[id];
 

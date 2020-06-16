@@ -65,6 +65,8 @@ public class Pawn : MonoBehaviour
             return;
         }
 
+        this.target = target;
+
         if (GetAttackSuccessful(target))
         {
             if (IsCriticalAttack())
@@ -234,7 +236,12 @@ public class Pawn : MonoBehaviour
     
     public float GetAttackAnimationLength()
     {
-        if (animator != null)
+        if (animator == null)
+        {
+            return 1.0f;
+        }
+
+        if (animator.runtimeAnimatorController != null)
         {
             RuntimeAnimatorController ac = animator.runtimeAnimatorController;
             for (int i = 0; i < ac.animationClips.Length; i++)
@@ -257,5 +264,18 @@ public class Pawn : MonoBehaviour
     public Pawn GetTarget()
     {
         return target;
+    }
+
+    public bool HasAnimation()
+    {
+        if (animator != null)
+        {
+            if (animator.runtimeAnimatorController != null)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
