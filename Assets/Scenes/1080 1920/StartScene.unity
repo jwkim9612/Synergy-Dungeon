@@ -2588,7 +2588,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d2e96183855643419cced679af1b072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSheet: {fileID: 1870278362}
   particleService: {fileID: 52332910}
 --- !u!4 &1418237318
 Transform:
@@ -2601,7 +2600,7 @@ Transform:
   m_LocalPosition: {x: 0.7349585, y: 1.0377632, z: 58.464844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1870278361}
+  - {fileID: 1720778336}
   - {fileID: 52332909}
   - {fileID: 2057947886}
   m_Father: {fileID: 0}
@@ -2943,6 +2942,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691672203}
   m_CullTransparentMesh: 0
+--- !u!1 &1720778334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720778336}
+  - component: {fileID: 1720778335}
+  m_Layer: 0
+  m_Name: DataBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1720778335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720778334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243aa9da00e4b3a4da3565f7f96c3a65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDataSheet: {fileID: 11400000, guid: f8822b0d81ae8dc47a74d1373cfc47e4, type: 2}
+  tribeDataSheet: {fileID: 11400000, guid: a353c7a70a05ad449aaf83cc4a99f601, type: 2}
+  originDataSheet: {fileID: 11400000, guid: e06ecf36b8d014a4e9d93d66e928d2cd, type: 2}
+  chapterInfoDataSheet: {fileID: 11400000, guid: 54207a9c57f527b4e9f74c5c7341bd20,
+    type: 2}
+  chapterDataSheet: {fileID: 11400000, guid: fee3d0ae9bffb414c82e77164638f592, type: 2}
+  characterAbilityDataSheet: {fileID: 11400000, guid: e28b78dd3f5398b4c996445f84bd2873,
+    type: 2}
+  enemyDataSheet: {fileID: 11400000, guid: fe5d18d92b280eb40857258baecc7677, type: 2}
+  probabilityDataSheet: {fileID: 11400000, guid: 29315747a085c9c44aa10b46f2854d4b,
+    type: 2}
+  inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
+  runeDataSheet: {fileID: 11400000, guid: b5fd6ea962aaf0b40b4b4e99e73c6e24, type: 2}
+  goodsDataSheet: {fileID: 11400000, guid: e00092dc774f97548a1929e8f9bea0d7, type: 2}
+  runePurchaseableLevelDataSheet: {fileID: 11400000, guid: fed57a6e62705e04999f7168075add3a,
+    type: 2}
+  inGameEvent_ScenarioDataSheet: {fileID: 11400000, guid: 755480a0b8a64664aa96661bf12f33cb,
+    type: 2}
+--- !u!4 &1720778336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720778334}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6899425, y: -0.9581853, z: -24.466797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1418237318}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1731098839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,65 +3343,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828847998}
   m_CullTransparentMesh: 0
---- !u!1 &1870278360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1870278361}
-  - component: {fileID: 1870278362}
-  m_Layer: 0
-  m_Name: DataSheet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1870278361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870278360}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.872229, y: -0.974056, z: -22.694336}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1418237318}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870278362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870278360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243aa9da00e4b3a4da3565f7f96c3a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterDataSheet: {fileID: 11400000, guid: f8822b0d81ae8dc47a74d1373cfc47e4, type: 2}
-  tribeDataSheet: {fileID: 11400000, guid: a353c7a70a05ad449aaf83cc4a99f601, type: 2}
-  originDataSheet: {fileID: 11400000, guid: e06ecf36b8d014a4e9d93d66e928d2cd, type: 2}
-  chapterDataSheet: {fileID: 11400000, guid: fee3d0ae9bffb414c82e77164638f592, type: 2}
-  chapterInfoDataSheet: {fileID: 11400000, guid: 54207a9c57f527b4e9f74c5c7341bd20,
-    type: 2}
-  characterAbilityDataSheet: {fileID: 11400000, guid: e28b78dd3f5398b4c996445f84bd2873,
-    type: 2}
-  enemyDataSheet: {fileID: 11400000, guid: fe5d18d92b280eb40857258baecc7677, type: 2}
-  probabilityDataSheet: {fileID: 11400000, guid: 29315747a085c9c44aa10b46f2854d4b,
-    type: 2}
-  inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
-  runeDataSheet: {fileID: 11400000, guid: b5fd6ea962aaf0b40b4b4e99e73c6e24, type: 2}
-  goodsDataSheet: {fileID: 11400000, guid: e00092dc774f97548a1929e8f9bea0d7, type: 2}
-  runePurchaseableLevelDataSheet: {fileID: 11400000, guid: fed57a6e62705e04999f7168075add3a,
-    type: 2}
 --- !u!1 &1881094288
 GameObject:
   m_ObjectHideFlags: 0

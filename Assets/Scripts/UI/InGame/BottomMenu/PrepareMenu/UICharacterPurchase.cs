@@ -37,16 +37,27 @@ public class UICharacterPurchase : MonoBehaviour
 
             Tier randomTier = probabilitySystem.GetRandomTier();
             int randomId = stockSystem.GetRandomId(randomTier);
-            card.SetCard(GameManager.instance.dataSheet.characterDataSheet.characterDatas[randomId]);
-            card.UpdateBuyable();
-            card.OnShow();
-            card.isBoughtCard = false;
+
+            var characterDataSheet = DataBase.Instance.characterDataSheet;
+            if (characterDataSheet == null)
+            {
+                Debug.LogError("Error characterDataSheet is null");
+                return;
+            }
+
+            if (characterDataSheet.TryGetCharacterData(randomId, out var characterData))
+            {
+                card.SetCard(characterData);
+                card.UpdateBuyable();
+                card.OnShow();
+                card.isBoughtCard = false;
+            }
         }
     }
 
     public void CheatPurchaseCharacter(int id)
     {
-        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(id);
+        CharacterInfo characterInfo = new CharacterInfo(id);
 
         if (InGameManager.instance.combinationSystem.IsUpgradable(characterInfo))
         {
@@ -69,12 +80,21 @@ public class UICharacterPurchase : MonoBehaviour
 
     private void BuyCharacter(int id)
     {
+        InGameManager.instance.combinationSystem.AddCharacter(new CharacterInfo(id));
 
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(id);
-        CharacterData characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[id];
+        int price = 0;
+        if (characterDataSheet.TryGetCharacterTier(id, out var tier))
+        {
+            price = CardService.GetPriceByTier(tier);
+        }
 
-        InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
-        InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.Tier));
+        InGameManager.instance.playerState.UseCoin(price);
     }
 }

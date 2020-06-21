@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ProbabilityData
+﻿public class ProbabilityData
 {
     public ProbabilityData(ProbabilityExcelData probabilityExcelData)
     {
@@ -11,6 +7,15 @@ public class ProbabilityData
         TwoTier = probabilityExcelData.TwoTier;
         ThreeTier = probabilityExcelData.ThreeTier;
         FourTier = probabilityExcelData.FourTier;
+    }
+
+    public ProbabilityData(ProbabilityData probabilityData)
+    {
+        Level = probabilityData.Level;
+        OneTier = probabilityData.OneTier;
+        TwoTier = probabilityData.TwoTier;
+        ThreeTier = probabilityData.ThreeTier;
+        FourTier = probabilityData.FourTier;
     }
 
     public int Level;

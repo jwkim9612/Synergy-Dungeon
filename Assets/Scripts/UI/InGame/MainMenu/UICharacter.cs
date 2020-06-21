@@ -13,12 +13,20 @@ public class UICharacter : MonoBehaviour
     public CharacterInfo characterInfo;
     public Image clickableImage = null;
 
+    private CharacterDataSheet characterDataSheet;
+
     public void Initialize()
     {
         isFightingOnBattlefield = false;
 
         uiFloatingTextList = new List<UIFloatingText>();
         uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
+
+        characterDataSheet = DataBase.Instance.characterDataSheet;
+        if(characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+        }
     }
 
     public void SetCharacter(CharacterInfo newCharacterInfo)
@@ -26,13 +34,28 @@ public class UICharacter : MonoBehaviour
         OnCanClick();
         SetCharacterInfo(newCharacterInfo);
 
-        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
         character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
         character.Initialize();
-        character.SetImage(characterData.Image);
-        character.SetName(characterData.Name);
-        character.SetAbility(GameManager.instance.dataSheet.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), characterData.Origin);
+
+        if(characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
+        {
+            character.SetImage(sprite);
+        }
+        if (characterDataSheet.TryGetCharacterName(characterInfo.id, out var name))
+        {
+            character.SetName(name);
+        }
+        if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
+        {
+            character.SetAbility(DataBase.Instance.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), origin);
+        }
+
         character.OnIsDead += OnHide;
         //character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
@@ -47,17 +70,31 @@ public class UICharacter : MonoBehaviour
     ///////////////////////////////////////////
     public void SetDefaultImage()
     {
-        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-        character.RemoveRunTimeAnimatorController();
-        character.SetImage(characterData.Image);
+        if (characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
+        {
+            character.RemoveRunTimeAnimatorController();
+            character.SetImage(sprite);
+        }
     }
 
     public void SetAnimationImage()
     {
-        var characterData = GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id];
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-        character.SetRunTimeAnimatorController(characterData.RuntimeAnimatorController);
+        if (characterDataSheet.TryGetCharacterRunTimeAnimatorController(characterInfo.id, out var runTimeAnimatorController))
+        {
+            character.SetRunTimeAnimatorController(runTimeAnimatorController);
+        }
     }
     ///////////////////////////////////////////
 
@@ -82,16 +119,16 @@ public class UICharacter : MonoBehaviour
     {
         character.DestoryPawn();
         character = null;
-
-        characterInfo.id = -1;
-        characterInfo.star = 0;
+        characterInfo = null;
+        //characterInfo.id = -1;
+        //characterInfo.star = 0;
 
         OnCanNotClick();
     }
 
     public void UpgradeStar()
     {
-        ++characterInfo.star;
+        characterInfo.IncreaseStar();
         InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
         Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
         // 파티클 재생 함수

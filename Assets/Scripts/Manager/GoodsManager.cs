@@ -4,7 +4,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GoodsManager : MonoSingleton<GoodsManager>
@@ -242,7 +241,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         //List<int> amount = new List<int>();
         //for(int i = 0; i < aa.Count; ++i)
         //{
-        //    amount.Add(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[aa[i]].Id);
+        //    amount.Add(DataBase.Instance.runeDataSheet.RuneDatas[aa[i]].Id);
         //}
 
         new LogEventRequest()

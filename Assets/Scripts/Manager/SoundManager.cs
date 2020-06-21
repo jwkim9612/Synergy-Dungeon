@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundManager : MonoSingleton<SoundManager>
 {
@@ -9,7 +7,7 @@ public class SoundManager : MonoSingleton<SoundManager>
         if(IsFirstTime())
         {
             PlayerPrefs.SetInt("BGMSound", 100);
-            PlayerPrefs.SetInt("EffectSound", 100);
+            PlayerPrefs.SetInt("SFXSound", 100);
         }
 
         // Sound On 함수
@@ -20,14 +18,14 @@ public class SoundManager : MonoSingleton<SoundManager>
         // bgm 소리 크기 변경
     }
 
-    public void UpdateEffectSound()
+    public void UpdateSfxSound()
     {
         // effect 소리 크기 변경
     }
 
     public bool IsFirstTime()
     {
-        if(!PlayerPrefs.HasKey("BGMSound") || !PlayerPrefs.HasKey("EffectSound"))
+        if(!PlayerPrefs.HasKey("BGMSound") || !PlayerPrefs.HasKey("SFXSound"))
         {
             return true;
         }

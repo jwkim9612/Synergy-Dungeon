@@ -45,7 +45,7 @@ public class UIPrepareArea : Arranger
     {
         foreach(var uiCharacter in uiCharacters)
         {
-            if (uiCharacter.characterInfo.star != 0)
+            if (uiCharacter.characterInfo != null)
                 continue;
 
             return uiCharacter;

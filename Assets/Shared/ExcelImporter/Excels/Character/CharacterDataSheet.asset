@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4c0dee2b40834943acfce86b4181ab9, type: 3}
   m_Name: CharacterDataSheet
   m_EditorClassIdentifier: 
-  characterExcelDatas:
+  CharacterExcelDatas:
   - Id: 0
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Tribe: 7

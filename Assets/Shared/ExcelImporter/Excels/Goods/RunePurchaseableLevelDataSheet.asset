@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: RunePurchaseableLevelDataSheet
   m_EditorClassIdentifier: 
   RunePurchaseableLevelExcelDatas:
-  - SalesIndex: 1
+  - SalesId: 1
     PurchaseableLevel: 1
-  - SalesIndex: 2
+  - SalesId: 2
     PurchaseableLevel: 2
-  - SalesIndex: 3
+  - SalesId: 3
     PurchaseableLevel: 3
-  - SalesIndex: 4
+  - SalesId: 4
     PurchaseableLevel: 4
-  - SalesIndex: 5
+  - SalesId: 5
     PurchaseableLevel: 5
-  - SalesIndex: 6
+  - SalesId: 6
     PurchaseableLevel: 6
-  - SalesIndex: 7
+  - SalesId: 7
     PurchaseableLevel: 7
-  - SalesIndex: 8
+  - SalesId: 8
     PurchaseableLevel: 8

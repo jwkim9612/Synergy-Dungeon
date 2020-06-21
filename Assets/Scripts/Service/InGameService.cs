@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class InGameService : MonoBehaviour
 {
@@ -19,6 +17,13 @@ public class InGameService : MonoBehaviour
 
     public const float DEFAULT_SPEED = 1.0f;
     public const float DOUBLE_SPEED = 2.0f;
+
+
+    /////////////////
+    /// 시나리오
+    public const int INDEX_OF_SCENARIO_TITLE = 0;
+    public const int NUMBER_OF_SCENARIO_STARTING_WAVE = 4;
+    /////////////////
 
     public static Character defaultCharacter;
     public static Enemy defaultEnemy;

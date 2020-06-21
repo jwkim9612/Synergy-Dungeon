@@ -27,7 +27,7 @@ public class UICharacterInfo : UIControl
         SetName(characterData.Name);
         SetImage(characterData.Image);
 
-        SetCharacterAbilityText(GameManager.instance.dataSheet.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
+        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
         SetPlusValue();
         Debug.Log("SetCharacterData");
     }
@@ -58,17 +58,17 @@ public class UICharacterInfo : UIControl
 
     public void OnOneStarClick()
     {
-        SetCharacterAbilityText(GameManager.instance.dataSheet.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
+        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
     }
 
     public void OnTwoStarClick()
     {
-        SetCharacterAbilityText(GameManager.instance.dataSheet.characterAbilityDataSheet.TwoStarDatas[characterData.Id]);
+        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.TwoStarDatas[characterData.Id]);
     }
 
     public void OnThreeStarClick()
     {
-        SetCharacterAbilityText(GameManager.instance.dataSheet.characterAbilityDataSheet.ThreeStarDatas[characterData.Id]);
+        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.ThreeStarDatas[characterData.Id]);
     }
 
     private void SetCharacterAbilityText(CharacterAbilityData characterAbilityData)

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TribeData
 {
@@ -10,6 +8,13 @@ public class TribeData
         Description = tribeExcelData.Description;
 
         Image = Resources.Load<Sprite>(tribeExcelData.ImagePath);
+    }
+
+    public TribeData(TribeData tribeData)
+    {
+        Tribe = tribeData.Tribe;
+        Description = tribeData.Description;
+        Image = tribeData.Image;
     }
 
     public Tribe Tribe;

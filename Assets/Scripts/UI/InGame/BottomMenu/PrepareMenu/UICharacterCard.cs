@@ -25,7 +25,7 @@ public class UICharacterCard : MonoBehaviour
 
         buyButton.onClick.AddListener(() =>
         {
-            CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
+            CharacterInfo characterInfo = new CharacterInfo(characterData.Id);
 
             if (InGameManager.instance.combinationSystem.IsUpgradable(characterInfo))
             {
@@ -49,7 +49,7 @@ public class UICharacterCard : MonoBehaviour
 
     private void BuyCharacter()
     {
-        CharacterInfo characterInfo = CharacterService.CreateCharacterInfo(characterData.Id);
+        CharacterInfo characterInfo = new CharacterInfo(characterData.Id);
 
         InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
         InGameManager.instance.playerState.UseCoin(CardService.GetPriceByTier(characterData.Tier));

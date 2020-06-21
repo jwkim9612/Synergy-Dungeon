@@ -12,32 +12,42 @@ public class UIRuneGoods : UIGoods
 
     public void SetUIGoods(GoodsData goodsData, int goodsId, int runeId, int salesId, bool isSoldOut)
     {
-        var runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
-        runeOnSalesId = salesId;
-        SetLocked();
-
-        if(!isLocked)
+        var runeDataSheet = DataBase.Instance.runeDataSheet;
+        if(runeDataSheet == null)
         {
-            SetGoodsName(runeData.Name);
-            SetGoodsImage(runeData.Image);
-            SetGoodsGrade(runeData.Grade);
-            SetGoodsPrice(goodsData.PurchasePrice, runeData.Grade);
-            SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
+            Debug.Log("Error runeDataSheet is null");
+            return;
+        }
 
-            if (isSoldOut)
+        if(runeDataSheet.TryGetRuneData(runeId, out var runeData))
+        {
+            runeOnSalesId = salesId;
+            SetLocked();
+
+            if (!isLocked)
             {
-                SetIsSoldOut();
-            }
-            else
-            {
-                SoldOut.SetActive(false);
-                showAskPurchaseButton.onClick.AddListener(() =>
+                SetGoodsName(runeData.Name);
+                SetGoodsImage(runeData.Image);
+                SetGoodsGrade(runeData.Grade);
+                SetGoodsPrice(goodsData.PurchasePrice, runeData.Grade);
+                SetPurchaseCurrencyImage(goodsData.PurchaseCurrency);
+
+                if (isSoldOut)
                 {
-                    uiAskPurchase.SetUIAskPurchase(goodsData, goodsId, runeData, runeOnSalesId);
-                    UIManager.Instance.ShowNew(uiAskPurchase);
-                });
+                    SetIsSoldOut();
+                }
+                else
+                {
+                    SoldOut.SetActive(false);
+                    showAskPurchaseButton.onClick.AddListener(() =>
+                    {
+                        uiAskPurchase.SetUIAskPurchase(goodsData, goodsId, runeData, runeOnSalesId);
+                        UIManager.Instance.ShowNew(uiAskPurchase);
+                    });
+                }
             }
         }
+
     }
 
     public void SetIsSoldOut()
@@ -67,21 +77,30 @@ public class UIRuneGoods : UIGoods
 
     private void SetLocked()
     {
-        int purchaseableLevel = GameManager.instance.dataSheet.runePurchaseableLevelDataSheet.RunePurchaseableLevelDatas[runeOnSalesId].PurchaseableLevel;
-        int playerLevel = PlayerDataManager.Instance.playerData.Level;
-
-        if (purchaseableLevel <= playerLevel)
+        var runePurchaseableLevelDataSheet = DataBase.Instance.runePurchaseableLevelDataSheet;
+        if(runePurchaseableLevelDataSheet == null)
         {
-            isLocked = false;
-            uiLock.OnHide();
-            ActivateAskPurchaseButton();
+            Debug.LogError("Error runePurchaseableLevelDataSheet is null");
+            return;
         }
-        else
+
+        if(runePurchaseableLevelDataSheet.TryGetRunePurchaseableLevel(runeOnSalesId, out var purchaseableLevel))
         {
-            isLocked = true;
-            uiLock.SetLock(purchaseableLevel);
-            uiLock.OnShow();
-            DisableAskPurchaseButton();
+            int playerLevel = PlayerDataManager.Instance.playerData.Level;
+
+            if (purchaseableLevel <= playerLevel)
+            {
+                isLocked = false;
+                uiLock.OnHide();
+                ActivateAskPurchaseButton();
+            }
+            else
+            {
+                isLocked = true;
+                uiLock.SetLock(purchaseableLevel);
+                uiLock.OnShow();
+                DisableAskPurchaseButton();
+            }
         }
     }
 }

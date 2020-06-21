@@ -1,7 +1,4 @@
 
- 
-using UnityEngine;
- 
 #if !UNITY_EDITOR
 public static class Debug
 {

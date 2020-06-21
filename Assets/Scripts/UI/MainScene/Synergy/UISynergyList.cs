@@ -25,21 +25,39 @@ public class UISynergyList : MonoBehaviour
 
     private void CreateTribeList()
     {
-        var tribeDatas = GameManager.instance.dataSheet.tribeDataSheet.TribeDatas;
-        foreach (var tribeData in tribeDatas)
+        var tribeDataSheet = DataBase.Instance.tribeDataSheet;
+        if (tribeDataSheet == null)
         {
-            var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
-            slot.SetSynergyData(tribeData.Value);
+            Debug.LogError("Error tribeDataSheet is null");
+            return;
+        }
+
+        if(tribeDataSheet.TryGetTribeDatas(out var tribeDatas))
+        {
+            foreach (var tribeData in tribeDatas)
+            {
+                var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
+                slot.SetSynergyData(tribeData.Value);
+            }
         }
     }
 
     private void CreateOriginList()
     {
-        var originDatas = GameManager.instance.dataSheet.originDataSheet.OriginDatas;
-        foreach (var originData in originDatas)
+        var originDataSheet = DataBase.Instance.originDataSheet;
+        if(originDataSheet == null)
         {
-            var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
-            slot.SetSynergyData(originData.Value);
+            Debug.LogError("Error originDataSheet is null");
+            return;
+        }
+
+        if (originDataSheet.TryGetOriginDatas(out var originDatas))
+        {
+            foreach (var originData in originDatas)
+            {
+                var slot = Instantiate(synergySlot, girdLayoutGroup.transform);
+                slot.SetSynergyData(originData.Value);
+            }
         }
     }
 }

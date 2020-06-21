@@ -1,7 +1,6 @@
-﻿using UnityEngine;
-using System.Text.RegularExpressions;
-using System;
+﻿using System;
 using System.Text;
+using System.Text.RegularExpressions;
 
 public class StringUtil
 {

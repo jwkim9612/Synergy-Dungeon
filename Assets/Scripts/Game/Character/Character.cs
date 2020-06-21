@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using geniikw.DataSheetLab;
+﻿using UnityEngine;
 
 public class Character : Pawn
 {

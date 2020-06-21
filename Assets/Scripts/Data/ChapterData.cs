@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class ChapterData
@@ -12,12 +11,12 @@ public class ChapterData
 
         Image = Resources.Load<Sprite>(chapterExcelData.ImagePath);
 
-        chapterInfoDataList = GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas;
+        DataBase.Instance.chapterInfoDataSheet.TryGetChapterInfoDatas(Id, out chapterInfoDatas);
     }
 
     public int Id;
     public string Name;
     public int TotalWave;
-    public List<ChapterInfoData> chapterInfoDataList;
+    public Dictionary<int, ChapterInfoData> chapterInfoDatas;
     public Sprite Image;
 }

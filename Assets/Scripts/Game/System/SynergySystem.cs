@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SynergySystem
@@ -25,65 +24,92 @@ public class SynergySystem
 
     public void AddCharacter(CharacterInfo characterInfo)
     {
-        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tribe, characterInfo.id);
-        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Origin, characterInfo.id);
-
-        if (deployedTribes.ContainsKey(tribeInfo))
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if(characterDataSheet == null)
         {
-            ++deployedTribes[tribeInfo];
-        }
-        else
-        {
-            deployedTribes.Add(tribeInfo, 1);
-            AddAppliedTribe(tribeInfo.tribe);
+            Debug.LogError("Error characterDataSheet is null");
+            return;
         }
 
-        if (deployedOrigins.ContainsKey(originInfo))
+        if(characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
         {
-            ++deployedOrigins[originInfo];
+            TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);
+
+            if (deployedTribes.ContainsKey(tribeInfo))
+            {
+                ++deployedTribes[tribeInfo];
+            }
+            else
+            {
+                deployedTribes.Add(tribeInfo, 1);
+                AddAppliedTribe(tribeInfo.tribe);
+            }
         }
-        else
+
+        if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
-            deployedOrigins.Add(originInfo, 1);
-            AddAppliedOrigin(originInfo.origin);
+            OriginInfo originInfo = new OriginInfo(origin, characterInfo.id);
+
+            if (deployedOrigins.ContainsKey(originInfo))
+            {
+                ++deployedOrigins[originInfo];
+            }
+            else
+            {
+                deployedOrigins.Add(originInfo, 1);
+                AddAppliedOrigin(originInfo.origin);
+            }
         }
     }
 
     public void SubCharacter(CharacterInfo characterInfo)
     {
-        TribeInfo tribeInfo = new TribeInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tribe, characterInfo.id);
-        OriginInfo originInfo = new OriginInfo(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Origin, characterInfo.id);
-
-        if (deployedTribes.ContainsKey(tribeInfo))
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
         {
-            --deployedTribes[tribeInfo];
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-            if(deployedTribes[tribeInfo] == 0)
+        if (characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
+        {
+            TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);
+
+            if (deployedTribes.ContainsKey(tribeInfo))
             {
-                deployedTribes.Remove(tribeInfo);
-                SubAppliedTribe(tribeInfo.tribe);
+                --deployedTribes[tribeInfo];
+
+                if (deployedTribes[tribeInfo] == 0)
+                {
+                    deployedTribes.Remove(tribeInfo);
+                    SubAppliedTribe(tribeInfo.tribe);
+                }
+            }
+            else
+            {
+                Debug.Log("Error No Tribes");
             }
         }
-        else
-        {
-            Debug.Log("Error No Tribes");
-        }
 
-        if (deployedOrigins.ContainsKey(originInfo))
+        if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
-            --deployedOrigins[originInfo];
+            OriginInfo originInfo = new OriginInfo(origin, characterInfo.id);
 
-            if (deployedOrigins[originInfo] == 0)
+            if (deployedOrigins.ContainsKey(originInfo))
             {
-                deployedOrigins.Remove(originInfo);
-                SubAppliedOrigin(originInfo.origin);
+                --deployedOrigins[originInfo];
+
+                if (deployedOrigins[originInfo] == 0)
+                {
+                    deployedOrigins.Remove(originInfo);
+                    SubAppliedOrigin(originInfo.origin);
+                }
+            }
+            else
+            {
+                Debug.Log("Error No Origins");
             }
         }
-        else
-        {
-            Debug.Log("Error No Origins");
-        }
-
     }
 
     public void AddAppliedTribe(Tribe tribe)

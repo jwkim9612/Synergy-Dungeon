@@ -19,20 +19,45 @@ public class UIEnemyArea : MonoBehaviour
 
     public void CreateEnemies()
     {
-        var currentWaveData = StageManager.Instance.currentChapterData.chapterInfoDataList[StageManager.Instance.currentWave - 1];
+        var currentWaveData = StageManager.Instance.currentChapterData.chapterInfoDatas[StageManager.Instance.currentWave];
+        var frontIdList = currentWaveData.FrontIdList;
+        var backIdList = currentWaveData.BackIdList;
+
+        var enemyDataSheet = DataBase.Instance.enemyDataSheet;
+        if (enemyDataSheet == null)
+        {
+            Debug.LogError("Error enemyDataSheet is null");
+            return;
+        }
 
         int currentEnemyIndex = 0;
 
-        for (int frontIndex = 0; frontIndex < currentWaveData.FrontIdList.Count; ++frontIndex)
+        if (frontIdList != null)
         {
-            frontArea.uiEnemies[currentWaveData.FrontIdList[frontIndex]].SetEnemy(GameManager.instance.dataSheet.enemyDataSheet.EnemyDatas[currentWaveData.EnemyIdList[currentEnemyIndex]]);
-            ++currentEnemyIndex;
+            for (int frontIndex = 0; frontIndex < frontIdList.Count; ++frontIndex)
+            {
+                int enemyId = currentWaveData.EnemyIdList[currentEnemyIndex];
+                if (enemyDataSheet.TryGetEnemyData(enemyId, out var enemyData))
+                {
+                    frontArea.uiEnemies[currentWaveData.FrontIdList[frontIndex]].SetEnemy(enemyData);
+                }
+
+                ++currentEnemyIndex;
+            }
         }
 
-        for (int backIndex = 0; backIndex < currentWaveData.BackIdList.Count; ++backIndex)
+        if (backIdList != null)
         {
-            backArea.uiEnemies[currentWaveData.BackIdList[backIndex]].SetEnemy(GameManager.instance.dataSheet.enemyDataSheet.EnemyDatas[currentWaveData.EnemyIdList[currentEnemyIndex]]);
-            ++currentEnemyIndex;
+            for (int backIndex = 0; backIndex < backIdList.Count; ++backIndex)
+            {
+                int enemyId = currentWaveData.EnemyIdList[currentEnemyIndex];
+                if (enemyDataSheet.TryGetEnemyData(enemyId, out var enemyData))
+                {
+                    backArea.uiEnemies[currentWaveData.BackIdList[backIndex]].SetEnemy(enemyData);
+                }
+
+                ++currentEnemyIndex;
+            }
         }
     }
 

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Arranger : MonoBehaviour
@@ -69,7 +68,7 @@ public class Arranger : MonoBehaviour
     {
         for (int i = 0; i < uiCharacters.Count; ++i)
         {
-            if (characterInfoList[i].star == 0)
+            if (characterInfoList[i] == null)
             {
                 continue;
             }

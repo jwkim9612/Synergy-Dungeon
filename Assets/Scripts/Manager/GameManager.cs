@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     //매니저들
     public static GameManager instance = null;
-    public DataSheet dataSheet = null;
     public ParticleService particleService = null;
 
 
@@ -38,7 +36,7 @@ public class GameManager : MonoBehaviour
         AccountManager.Instance.Initialize();
         JsonDataManager.Instance.Initialize();
         SaveManager.Instance.Initialize();
-        dataSheet.Initialize();
+        DataBase.Instance.Initialize();
     }
 
     public void LoadGameAndLoadMainScene()

@@ -1,8 +1,4 @@
-﻿using JetBrains.Annotations;
-using Org.BouncyCastle.Asn1.X509;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -205,20 +201,24 @@ public class DraggableCentral : MonoBehaviour
         foreach (var arranger in arrangers)
         {
             foreach(var uiCharacter in arranger.uiCharacters)
-
-            if (uiCharacter.characterInfo.Equals(characterInfo))
             {
-                InGameManager.instance.synergySystem.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
-                uiCharacterArea.SubCurrentPlacedCharacterFromCombinations(uiCharacter, isFirstCharacter);
+                if (uiCharacter.characterInfo == null)
+                    continue;
 
-                if (isFirstCharacter)
+                if (uiCharacter.characterInfo.Equals(characterInfo))
                 {
-                    isFirstCharacter = false;
-                    uiCharacter.UpgradeStar();
-                }
-                else
-                {
-                    uiCharacter.DeleteCharacter();
+                    InGameManager.instance.synergySystem.SubCharacterFromCombinations(uiCharacter, isFirstCharacter);
+                    uiCharacterArea.SubCurrentPlacedCharacterFromCombinations(uiCharacter, isFirstCharacter);
+
+                    if (isFirstCharacter)
+                    {
+                        isFirstCharacter = false;
+                        uiCharacter.UpgradeStar();
+                    }
+                    else
+                    {
+                        uiCharacter.DeleteCharacter();
+                    }
                 }
             }
         }

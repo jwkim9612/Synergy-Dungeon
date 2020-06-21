@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OriginData
 {
@@ -10,6 +8,13 @@ public class OriginData
         Description = originExcelData.Description;
 
         Image = Resources.Load<Sprite>(originExcelData.ImagePath);
+    }
+
+    public OriginData(OriginData originData)
+    {
+        Origin = originData.Origin;
+        Description = originData.Description;
+        Image = originData.Image;
     }
 
     public Origin Origin;

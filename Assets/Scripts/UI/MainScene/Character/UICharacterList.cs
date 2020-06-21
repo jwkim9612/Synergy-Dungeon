@@ -25,12 +25,20 @@ public class UICharacterList : MonoBehaviour
     {
         characterSlots = new List<UICharacterSlot>();
 
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        foreach (var characterData in characterDatas)
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
         {
-            var slot = Instantiate(characterSlot, girdLayoutGroup.transform);
-            slot.SetCharacterData(characterData.Value);
-            characterSlots.Add(slot);
+            Debug.LogError("Error characterDataSheet is null");
+        }
+
+        if (characterDataSheet.TryGetCharacterDatas(out var characterDatas))
+        {
+            foreach (var characterData in characterDatas)
+            {
+                var slot = Instantiate(characterSlot, girdLayoutGroup.transform);
+                slot.SetCharacterData(characterData.Value);
+                characterSlots.Add(slot);
+            }
         }
     }
 

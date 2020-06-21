@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GoodsData
 {
@@ -13,6 +11,16 @@ public class GoodsData
         RewardAmount = goodsExcelData.RewardAmount;
 
         Image = Resources.Load<Sprite>(goodsExcelData.ImagePath);
+    }
+
+    public GoodsData(GoodsData goodsData)
+    {
+        Name = goodsData.Name;
+        PurchaseCurrency = goodsData.PurchaseCurrency;
+        PurchasePrice = goodsData.PurchasePrice;
+        RewardCurrency = goodsData.RewardCurrency;
+        RewardAmount = goodsData.RewardAmount;
+        Image = goodsData.Image;
     }
 
     public string Name;

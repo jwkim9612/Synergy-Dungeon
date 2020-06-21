@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 
-//[System.Serializable]
-
 public class AccountData
 { 
     public string id;
@@ -101,41 +99,41 @@ public struct Ability
 }
 
 
-public struct CharacterInfo
-{
-    public CharacterInfo(int id, int star)
-    {
-        this.id = id;
-        this.star = star;
-    }
+//public struct CharacterInfo
+//{
+//    public CharacterInfo(int id, int star)
+//    {
+//        this.id = id;
+//        this.star = star;
+//    }
 
-    public int id;
-    public int star;
-}
+//    public int id;
+//    public int star;
+//}
 
-public struct TribeInfo
-{
-    public TribeInfo(Tribe tribe, int id)
-    {
-        this.tribe = tribe;
-        this.id = id;
-    }
+//public struct TribeInfo
+//{
+//    public TribeInfo(Tribe tribe, int id)
+//    {
+//        this.tribe = tribe;
+//        this.id = id;
+//    }
 
-    public Tribe tribe;
-    public int id;
-}
+//    public Tribe tribe;
+//    public int id;
+//}
 
-public struct OriginInfo
-{
-    public OriginInfo(Origin origin, int id)
-    {
-        this.origin = origin;
-        this.id = id;
-    }
+//public struct OriginInfo
+//{
+//    public OriginInfo(Origin origin, int id)
+//    {
+//        this.origin = origin;
+//        this.id = id;
+//    }
 
-    public Origin origin;
-    public int id;
-}
+//    public Origin origin;
+//    public int id;
+//}
 
 public enum Tier
 { 
@@ -201,6 +199,13 @@ public enum RewardCurrency
     RandomRune,
     Relic,
     Artifact
+}
+
+public enum InGameCurrency
+{
+    None,
+    Coin,
+    Status
 }
 
 public enum RuneGrade

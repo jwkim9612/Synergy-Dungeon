@@ -1,8 +1,4 @@
-﻿using Org.BouncyCastle.Asn1.Mozilla;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
@@ -27,7 +23,7 @@ public class PlayerState : MonoBehaviour
         {
             coin = SaveManager.Instance.inGameSaveData.Coin;
             level = SaveManager.Instance.inGameSaveData.Level;
-            SatisfyExp = GameManager.instance.dataSheet.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
+            SatisfyExp = DataBase.Instance.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
             exp = SaveManager.Instance.inGameSaveData.Exp;
             numOfCanBePlacedInBattleArea = level;
         }
@@ -53,7 +49,20 @@ public class PlayerState : MonoBehaviour
 
     public void IncreaseCoinByPrepare()
     {
-        IncreaseCoin(GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas[StageManager.Instance.currentWave - 1].GoldAmount);
+        var chapterInfoDataSheet = DataBase.Instance.chapterInfoDataSheet;
+        if (chapterInfoDataSheet == null)
+        {
+            Debug.LogError("Error chapterInfoDataSheet is null");
+            return;
+        }
+
+        int currentChapter = StageManager.Instance.currentChapter;
+        int currentWave = StageManager.Instance.currentWave;
+
+        if(chapterInfoDataSheet.TryGetChapterInfoGoldAmount(currentChapter, currentWave, out var goldAmount))
+        {
+            IncreaseCoin(goldAmount);
+        }
     }
 
     public void UseCoin(int usedValue)
@@ -73,7 +82,7 @@ public class PlayerState : MonoBehaviour
         {
             level += 1;
             exp -= SatisfyExp;
-            SatisfyExp = GameManager.instance.dataSheet.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
+            SatisfyExp = DataBase.Instance.inGameExpDataSheet.InGameExpDatas[level - 1].SatisfyExp;
             IncreaseNumOfCanBePlacedInBattleArea(1);
             OnLevelUp();
         }
@@ -89,7 +98,20 @@ public class PlayerState : MonoBehaviour
 
     public void IncreaseExpByBattleWin()
     {
-        IncreaseExp(GameManager.instance.dataSheet.chapterInfoDataSheet.ChapterInfoDatas[StageManager.Instance.currentWave - 1].ExpAmount);
+        var chapterInfoDateSheet = DataBase.Instance.chapterInfoDataSheet;
+        if(chapterInfoDateSheet == null)
+        {
+            Debug.LogError("Error chapterInfoDataSheet is null");
+            return;
+        }
+
+        int currentChapter = StageManager.Instance.currentChapter;
+        int currentWave = StageManager.Instance.currentWave;
+
+        if(chapterInfoDateSheet.TryGetChapterInfoExpAmount(currentChapter, currentWave, out var expAmount))
+        {
+            IncreaseExp(expAmount);
+        }
     }
 
     public void IncreaseNumOfCanBePlacedInBattleArea(int increaseValue)

@@ -17,7 +17,10 @@ public class UIEquipRune : UIRune
                 SaveManager.Instance.SetEquippedRuneIdsSaveDataByRelease(rune.runeData.SocketPosition);
                 SaveManager.Instance.SaveEquippedRuneIds();
                 RuneManager.Instance.RemoveEquippedRune(rune.runeData.SocketPosition);
-                uiOwnedRunes.AddUIRuneByEquipRelease(rune.runeData.Id);
+                
+                // 원래 아래함수였는데 AddUIRune으로 바꿈 오류있으면 다시 바꿀것.
+                //uiOwnedRunes.AddUIRuneByEquipRelease(rune.runeData.Id);
+                uiOwnedRunes.AddUIRune(rune.runeData.Id);
                 Disable();
             }
             else

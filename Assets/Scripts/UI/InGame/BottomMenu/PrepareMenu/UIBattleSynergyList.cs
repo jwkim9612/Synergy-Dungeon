@@ -45,8 +45,17 @@ public class UIBattleSynergyList : MonoBehaviour
         var tribes = synergySystem.appliedTribes;
         foreach(var tribe in tribes)
         {
-            uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[tribe.Key].Image);
-            uiTribes[tribeIndex].SetImage(GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[tribe.Key].Image);
+            var tribeDataSheet = DataBase.Instance.tribeDataSheet;
+            if (tribeDataSheet == null)
+            {
+                Debug.LogError("Error tribeDataSheet is null");
+                return;
+            }
+
+            if (tribeDataSheet.TryGetTribeImage(tribe.Key, out var sprite))
+            {
+                uiTribes[tribeIndex].SetImage(sprite);
+            }
             uiTribes[tribeIndex].gameObject.SetActive(true);
             ++tribeIndex;
         }
@@ -64,7 +73,17 @@ public class UIBattleSynergyList : MonoBehaviour
         var origins = synergySystem.appliedOrigins;
         foreach (var origin in origins)
         {
-            uiOrigins[originIndex].SetImage(GameManager.instance.dataSheet.originDataSheet.OriginDatas[origin.Key].Image);
+            var originDataSheet = DataBase.Instance.originDataSheet;
+            if(originDataSheet == null)
+            {
+                Debug.LogError("Error originDataSheet is null");
+                return;
+            }
+
+            if(originDataSheet.TryGetOriginImage(origin.Key, out var sprite))
+            {
+                uiOrigins[originIndex].SetImage(sprite);
+            }
             uiOrigins[originIndex].gameObject.SetActive(true);
             ++originIndex;
         }
@@ -79,7 +98,7 @@ public class UIBattleSynergyList : MonoBehaviour
     {
         foreach(var characterInfo in characterInfoList)
         {
-            if (characterInfo.star == 0)
+            if (characterInfo == null)
             {
                 continue;
             }

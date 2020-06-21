@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RuneData
 {
@@ -16,6 +14,18 @@ public class RuneData
         Ability.SetAbility(runeExcelData);
 
         Image = Resources.Load<Sprite>(runeExcelData.ImagePath);
+    }
+
+    public RuneData(RuneData runeData)
+    {
+        Id = runeData.Id;
+        Name = runeData.Name;
+        SocketPosition = runeData.SocketPosition;
+        Grade = runeData.Grade;
+        Prob = runeData.Prob;
+        Description = runeData.Description;
+        Ability = runeData.Ability;
+        Image = runeData.Image;
     }
 
     public int Id;

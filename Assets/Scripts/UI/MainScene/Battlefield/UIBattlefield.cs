@@ -37,14 +37,38 @@ public class UIBattlefield : MonoBehaviour
 
     public void UpdateChapterTitle()
     {
-        var ChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter];
+        var chapterDataSheet = DataBase.Instance.chapterDataSheet;
+        if (chapterDataSheet == null)
+        {
+            Debug.LogError("Error chapterDataSheet is null");
+            return;
+        }
 
-        chapterTitle.text = ChapterData.Id + ". " + ChapterData.Name;
+        if (!chapterDataSheet.TryGetChapterId(selectedChapter, out var id))
+        {
+            return;
+        }
+        if(!chapterDataSheet.TryGetChapterName(selectedChapter, out var title))
+        {
+            return;
+        }
+
+        chapterTitle.text = id + ". " + title;
     }
 
     public void UpdateChapterImage()
     {
-        chapterImage.sprite = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter].Image;
+        var chapterDataSheet = DataBase.Instance.chapterDataSheet;
+        if (chapterDataSheet == null)
+        {
+            Debug.LogError("Error chapterDataSheet is null");
+            return;
+        }
+
+        if(chapterDataSheet.TryGetChapterImage(selectedChapter, out var sprite))
+        {
+            chapterImage.sprite = sprite;
+        }
     }
 
     public void UpdateBestStage()
@@ -52,7 +76,19 @@ public class UIBattlefield : MonoBehaviour
         if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableStage)
             bestStage.text = "챕터 클리어";
         else
-            bestStage.text = "최고 스테이지 : " + 1 + "/" + GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[selectedChapter].TotalWave;
+        {
+            var chapterDataSheet = DataBase.Instance.chapterDataSheet;
+            if(chapterDataSheet == null) 
+            { 
+                Debug.LogError("Error chapterDataSheet is null");
+                return;
+            }
+
+            if (chapterDataSheet.TryGetChapterTotalWave(selectedChapter, out var totalWave))
+            {
+                bestStage.text = $"최고 스테이지 : 1/{totalWave}";
+            }
+        }
     }
 
     public void UseHeart()

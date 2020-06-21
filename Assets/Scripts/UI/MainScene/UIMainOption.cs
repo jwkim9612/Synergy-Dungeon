@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class UIMainOption : UIControl
 {
     [SerializeField] private Slider bgmSoundSlider = null;
-    [SerializeField] private Slider effectSoundSlider = null;
+    [SerializeField] private Slider sfxSoundSlider = null;
 
     void Start()
     {
         bgmSoundSlider.value = PlayerPrefs.GetInt("BGMSound");
-        effectSoundSlider.value = PlayerPrefs.GetInt("EffectSound");
+        sfxSoundSlider.value = PlayerPrefs.GetInt("SFXSound");
     }
 
     public void OnBGMSoundValueChanged()
@@ -22,7 +22,7 @@ public class UIMainOption : UIControl
 
     public void OnEffectSoundValueChanged()
     {
-        PlayerPrefs.SetInt("EffectSound", (int)effectSoundSlider.value);
-        SoundManager.Instance.UpdateEffectSound();
+        PlayerPrefs.SetInt("SFXSound", (int)sfxSoundSlider.value);
+        SoundManager.Instance.UpdateSfxSound();
     }
 }

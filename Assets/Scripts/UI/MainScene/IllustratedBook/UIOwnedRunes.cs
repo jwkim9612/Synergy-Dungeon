@@ -30,9 +30,19 @@ public class UIOwnedRunes : MonoBehaviour
         {
             for(int i = 0; i < ownedRuneId.Value; ++i)
             {
-                var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
-                rune.SetUIRune(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[ownedRuneId.Key]);
-                uiRunes.Add(rune);
+                var runeDataSheet = DataBase.Instance.runeDataSheet;
+                if (runeDataSheet == null)
+                {
+                    Debug.LogError("Error runeDataSheet is null");
+                    return;
+                }
+
+                if(runeDataSheet.TryGetRuneData(ownedRuneId.Key, out var runeData))
+                {
+                    var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
+                    rune.SetUIRune(runeData);
+                    uiRunes.Add(rune);
+                }
             }
         }
 
@@ -41,13 +51,21 @@ public class UIOwnedRunes : MonoBehaviour
 
     public void AddUIRune(int runeId)
     {
-        RuneData runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
+        var runeDataSheet = DataBase.Instance.runeDataSheet;
+        if (runeDataSheet == null)
+        {
+            Debug.LogError("Error runeDataSheet is null");
+            return;
+        }
 
-        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
-        rune.SetUIRune(runeData);
-        uiRunes.Add(rune);
+        if (runeDataSheet.TryGetRuneData(runeId, out var runeData))
+        {
+            var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
+            rune.SetUIRune(runeData);
+            uiRunes.Add(rune);
 
-        Sort();
+            Sort();
+        }
     }
 
     public void AddUIRune(RuneData runeData)
@@ -64,16 +82,24 @@ public class UIOwnedRunes : MonoBehaviour
         uiRunes.Remove(uiOwnedRune);
     }
 
-    public void AddUIRuneByEquipRelease(int runeId)
-    {
-        RuneData runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
+    //public void AddUIRuneByEquipRelease(int runeId)
+    //{
+    //    var runeDataSheet = DataBase.Instance.runeDataSheet;
+    //    if (runeDataSheet == null)
+    //    {
+    //        Debug.LogError("Error runeDataSheet is null");
+    //        return;
+    //    }
 
-        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
-        rune.SetUIRune(runeData);
-        uiRunes.Add(rune);
+    //    if (runeDataSheet.TryGetRuneData(runeId, out var runeData))
+    //    {
+    //        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
+    //        rune.SetUIRune(runeData);
+    //        uiRunes.Add(rune);
 
-        Sort();
-    }
+    //        Sort();
+    //    }
+    //}
 
     public void Sort()
     {

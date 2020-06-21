@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786577294c2efa340881baffe50135e4, type: 3}
   m_Name: ChapterInfoDataSheet
   m_EditorClassIdentifier: 
-  ChapterInfoDatas:
+  ChapterInfoExcelDatas:
   - ChapterId: 1
     WaveId: 1
     StageId: 1
@@ -21,42 +21,30 @@ MonoBehaviour:
     EnemyIds: 0
     FrontIds: 1
     BackIds: 
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 2
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 2,3,4,5
+    EnemyIds: 2
     FrontIds: 1
-    BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
+    BackIds: 
   - ChapterId: 1
     WaveId: 3
     StageId: 1
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,2,3
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
+    BackIds: 
   - ChapterId: 1
     WaveId: 4
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
+    BackIds: 
   - ChapterId: 1
     WaveId: 5
     StageId: 2
@@ -65,9 +53,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 6
     StageId: 2
@@ -76,9 +61,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 7
     StageId: 2
@@ -87,9 +69,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 8
     StageId: 2
@@ -98,9 +77,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 9
     StageId: 3
@@ -109,9 +85,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 10
     StageId: 3
@@ -120,9 +93,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 11
     StageId: 3
@@ -131,9 +101,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 12
     StageId: 3
@@ -142,9 +109,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 13
     StageId: 3
@@ -153,9 +117,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 14
     StageId: 4
@@ -164,9 +125,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 15
     StageId: 4
@@ -175,9 +133,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 16
     StageId: 4
@@ -186,9 +141,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 17
     StageId: 4
@@ -197,9 +149,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 18
     StageId: 4
@@ -208,9 +157,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 19
     StageId: 5
@@ -219,9 +165,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 20
     StageId: 5
@@ -230,9 +173,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 21
     StageId: 5
@@ -241,9 +181,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 22
     StageId: 5
@@ -252,9 +189,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 23
     StageId: 5
@@ -263,9 +197,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 24
     StageId: 5
@@ -274,9 +205,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 25
     StageId: 5
@@ -285,9 +213,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 26
     StageId: 5
@@ -296,9 +221,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 27
     StageId: 5
@@ -307,9 +229,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 28
     StageId: 5
@@ -318,9 +237,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 29
     StageId: 5
@@ -329,9 +245,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 30
     StageId: 5
@@ -340,9 +253,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 31
     StageId: 5
@@ -351,9 +261,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 32
     StageId: 5
@@ -362,9 +269,6 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 
   - ChapterId: 1
     WaveId: 33
     StageId: 5
@@ -373,6 +277,3 @@ MonoBehaviour:
     EnemyIds: 1,1,1,1
     FrontIds: 1
     BackIds: 1,2,3
-    EnemyIdList: 
-    FrontIdList: 
-    BackIdList: 

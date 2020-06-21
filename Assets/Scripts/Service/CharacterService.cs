@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using geniikw.DataSheetLab;
+﻿using UnityEngine;
 
 public class CharacterService
 {
@@ -13,42 +10,49 @@ public class CharacterService
     public const float SIZE_IN_PREPARE_AREA = 1.0f;
     public const float SIZE_IN_BATTLE_AREA = 1.5f;
 
-    public static CharacterInfo CreateCharacterInfo(int id)
-    {
-        CharacterInfo characterInfo;
-        characterInfo.id = id;
-        characterInfo.star = NUM_OF_DEFAULT_STAR;
-
-        return characterInfo;
-    }
-
-    public static CharacterInfo CreateCharacterInfo(int id, int numOfStar)
-    {
-        CharacterInfo characterInfo;
-        characterInfo.id = id;
-        characterInfo.star = numOfStar;
-
-        return characterInfo;
-    }
+    public const int DEFAULT_CHARACTER_STAR = 1;
 
     public static int GetSalePrice(CharacterInfo characterInfo)
     {
-        int price = 0;
+        int price = -1;
+
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if(characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return -1;
+        }
+
+        Tier tier;
 
         switch (characterInfo.star)
         {
             case 1:
-                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier);
+                if(characterDataSheet.TryGetCharacterTier(characterInfo.id, out tier))
+                {
+                    price = (int)tier;
+                }
                 break;
             case 2:
-                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier) + 2;
+                if (characterDataSheet.TryGetCharacterTier(characterInfo.id, out tier))
+                {
+                    price = (int)tier + 2;
+                }
                 break;
             case 3:
-                price = (int)(GameManager.instance.dataSheet.characterDataSheet.characterDatas[characterInfo.id].Tier) + 4;
+                if (characterDataSheet.TryGetCharacterTier(characterInfo.id, out tier))
+                {
+                    price = (int)tier + 4;
+                }
                 break;
             default:
                 Debug.Log("Error GetSalePrice");
                 break;
+        }
+
+        if(price <= 0)
+        {
+            Debug.LogError("Error price is less than 0");
         }
 
         return price;

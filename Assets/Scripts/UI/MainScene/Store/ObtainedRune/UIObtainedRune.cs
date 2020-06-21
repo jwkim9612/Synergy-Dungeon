@@ -11,11 +11,19 @@ public class UIObtainedRune : MonoBehaviour
 
     public void SetUIObtainedRune(int runeId)
     {
-        var runeData = GameManager.instance.dataSheet.runeDataSheet.RuneDatas[runeId];
-        
-        SetRuneImage(runeData.Image);
-        SetRuneName(runeData.Name);
-        SetRuneGrade(runeData.Grade);
+        var runeDataSheet = DataBase.Instance.runeDataSheet;
+        if (runeDataSheet == null)
+        {
+            Debug.LogError("Error runeDataSheet is null");
+            return;
+        }
+
+        if(runeDataSheet.TryGetRuneData(runeId, out var runeData))
+        {
+            SetRuneImage(runeData.Image);
+            SetRuneName(runeData.Name);
+            SetRuneGrade(runeData.Grade);
+        }
     }
 
     private void SetRuneImage(Sprite sprite)

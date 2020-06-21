@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Rune
+﻿public class Rune
 {
     public RuneData runeData;
     //private Ability ability;

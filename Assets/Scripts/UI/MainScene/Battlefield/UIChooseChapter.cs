@@ -29,7 +29,8 @@ public class UIChooseChapter : UIControl
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
-            var chapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[simpleScrollSnap.TargetPanel + 1];
+            //var chapterData = DataBase.Instance.chapterDataSheet.ChapterDatas[simpleScrollSnap.TargetPanel + 1];
+            DataBase.Instance.chapterDataSheet.TryGetChapterData(simpleScrollSnap.TargetPanel + 1, out var chapterData);
             chapterTitle.text = chapterData.Id + ". " + chapterData.Name;
             
             if(IsPlayableChapter(simpleScrollSnap.TargetPanel + 1))
@@ -47,25 +48,28 @@ public class UIChooseChapter : UIControl
     {
         int dataIndex = 0;
 
-        var chapterDatas = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas;
-        foreach (var chapterData in chapterDatas)
+        if(DataBase.Instance.chapterDataSheet.TryGetChapterDatas(out var chapterDatas))
         {
-            if (dataIndex == 0)
+            foreach (var chapterData in chapterDatas)
             {
-                uiChapter.SetChapterData(chapterData.Value);
-            }
-            else
-            {
-                var chapter = Instantiate(uiChapter, content.transform);
-                chapter.SetChapterData(chapterData.Value);
-                if (!IsPlayableChapter(dataIndex + 1))
+                if (dataIndex == 0)
                 {
-                    chapter.ToBlurry();
+                    uiChapter.SetChapterData(chapterData.Value);
                 }
-            }
+                else
+                {
+                    var chapter = Instantiate(uiChapter, content.transform);
+                    chapter.SetChapterData(chapterData.Value);
+                    if (!IsPlayableChapter(dataIndex + 1))
+                    {
+                        chapter.ToBlurry();
+                    }
+                }
 
-            ++dataIndex;
+                ++dataIndex;
+            }
         }
+        
     }
 
     private bool IsPlayableChapter(int chapter)

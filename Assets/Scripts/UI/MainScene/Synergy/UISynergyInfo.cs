@@ -91,12 +91,20 @@ public class UISynergyInfo : UIControl
     {
         characterSlotsToShow = new List<UICharacterSlotToShow>();
 
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        foreach (var characterData in characterDatas)
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
         {
-            var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
-            slot.SetCharacterData(characterData.Value);
-            characterSlotsToShow.Add(slot);
+            Debug.LogError("Error characterDataSheet is null");
+        }
+
+        if(characterDataSheet.TryGetCharacterDatas(out var characterDatas))
+        {
+            foreach (var characterData in characterDatas)
+            {
+                var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
+                slot.SetCharacterData(characterData.Value);
+                characterSlotsToShow.Add(slot);
+            }
         }
     }
 

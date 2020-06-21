@@ -1,10 +1,6 @@
-﻿using System.Collections;
+﻿using Shared.Service;
 using System.Collections.Generic;
 using UnityEngine;
-using geniikw.DataSheetLab;
-using Newtonsoft.Json;
-using Shared.Service;
-using System.Linq;
 
 public class Pawn : MonoBehaviour
 {

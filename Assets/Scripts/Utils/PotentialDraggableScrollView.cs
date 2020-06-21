@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
-using System;
 using UnityEngine.EventSystems;
-using Org.BouncyCastle.Asn1.X509;
+using UnityEngine.UI;
 
 public class PotentialDraggableScrollView : ScrollRect
 {

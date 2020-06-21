@@ -1,8 +1,6 @@
-﻿using System.Collections;
+﻿using Shared.Service;
 using System.Collections.Generic;
 using UnityEngine;
-using geniikw.DataSheetLab;
-using Shared.Service;
 
 public class ProbabilitySystem
 {
@@ -28,9 +26,18 @@ public class ProbabilitySystem
 
     public void UpdateProbability()
     {
-        var probabilityData = GameManager.instance.dataSheet.probabilityDataSheet.ProbabilityDatas[InGameManager.instance.playerState.level];
-       
-        SetProbabilities(probabilityData);
+        var probabilityDataSheet = DataBase.Instance.probabilityDataSheet;
+        if (probabilityDataSheet == null)
+        {
+            Debug.LogError("Error probabilityDataSheet is null");
+            return;
+        }
+
+        int playerLevel = InGameManager.instance.playerState.level;
+        if (probabilityDataSheet.TryGetProbabilityData(playerLevel, out var probabilityData))
+        {
+            SetProbabilities(probabilityData);
+        }
     }
 
     public void InitializeProbabilities()

@@ -1,15 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class RunePurchaseableLevelData
+﻿public class RunePurchaseableLevelData
 {
     public RunePurchaseableLevelData(RunePurchaseableLevelExcelData runePurchaseableLevelExcelData)
     {
-        SalesIndex = runePurchaseableLevelExcelData.SalesIndex;
+        SalesId = runePurchaseableLevelExcelData.SalesId;
         PurchaseableLevel = runePurchaseableLevelExcelData.PurchaseableLevel;
     }
 
-    public int SalesIndex;
+    public RunePurchaseableLevelData(RunePurchaseableLevelData runePurchaseableLevelData)
+    {
+        SalesId = runePurchaseableLevelData.SalesId;
+        PurchaseableLevel = runePurchaseableLevelData.PurchaseableLevel;
+    }
+
+    public int SalesId;
     public int PurchaseableLevel;
 }

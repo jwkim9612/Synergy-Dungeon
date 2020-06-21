@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SynergyService
+﻿public class SynergyService
 {
     public static string GetNameByOrigin(Origin origin)
     {

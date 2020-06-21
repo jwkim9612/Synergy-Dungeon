@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterData
 {
@@ -14,8 +12,43 @@ public class CharacterData
 
         Image = Resources.Load<Sprite>(characterExcelData.ImagePath);
         RuntimeAnimatorController = Resources.Load<RuntimeAnimatorController>(characterExcelData.RuntimeAnimatorControllerPath);
-        OriginData = GameManager.instance.dataSheet.originDataSheet.OriginDatas[Origin];
-        TribeData = GameManager.instance.dataSheet.tribeDataSheet.TribeDatas[Tribe];
+
+        var originDataSheet = DataBase.Instance.originDataSheet;
+        var tribeDataSheet = DataBase.Instance.tribeDataSheet;
+
+        if (originDataSheet == null)
+        {
+            Debug.LogError("Error originDataSheet is null");
+            return;
+        }
+        if (tribeDataSheet == null)
+        {
+            Debug.LogError("Error tribeDataSheet is null");
+            return;
+        }
+
+        if (originDataSheet.TryGetOriginData(Origin, out var originData))
+        {
+            OriginData = originData;
+        }
+
+        if (tribeDataSheet.TryGetTribeData(Tribe, out var tribeData))
+        {
+            TribeData = tribeData;
+        }
+    }
+
+    public CharacterData(CharacterData characterData)
+    {
+        Id = characterData.Id;
+        Name = characterData.Name;
+        Tribe = characterData.Tribe;
+        Origin = characterData.Origin;
+        Tier = characterData.Tier;
+        Image = characterData.Image;
+        RuntimeAnimatorController = characterData.RuntimeAnimatorController;
+        OriginData = characterData.OriginData;
+        TribeData = characterData.TribeData;
     }
 
     public int Id;

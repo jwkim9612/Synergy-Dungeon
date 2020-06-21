@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using geniikw.DataSheetLab;
+﻿using UnityEngine;
 
 public class InGameManager : MonoBehaviour
 {
@@ -16,6 +12,7 @@ public class InGameManager : MonoBehaviour
     public GameState gameState;
     public DraggableCentral draggableCentral;
     public UIBattleArea uiBattleArea;
+    public UIScenarioEvent uiScenarioEvent;
 
     void Awake()
     {
@@ -44,6 +41,7 @@ public class InGameManager : MonoBehaviour
         probabilitySystem.Initialize();
         combinationSystem.Initialize();
         synergySystem.Initialize();
+        uiScenarioEvent.Initialize();
         InGameService.Initialize();
     }
 }

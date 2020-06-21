@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using geniikw.DataSheetLab;
+﻿using UnityEngine;
 
 public class StageManager : MonoSingleton<StageManager>
 {
@@ -17,7 +14,7 @@ public class StageManager : MonoSingleton<StageManager>
     public void SetChapterData(int chapter)
     {
         currentChapter = chapter;
-        currentChapterData = GameManager.instance.dataSheet.chapterDataSheet.ChapterDatas[currentChapter];
+        DataBase.Instance.chapterDataSheet.TryGetChapterData(currentChapter, out currentChapterData);
     }
 
     public float GetRelativePercentageByStage()

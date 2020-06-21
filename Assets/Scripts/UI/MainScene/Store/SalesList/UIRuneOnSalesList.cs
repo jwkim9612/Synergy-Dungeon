@@ -28,18 +28,36 @@ public class UIRuneOnSalesList : MonoBehaviour
         runeOnSalesList = GoodsManager.Instance.runeOnSalesList;
         var uiRuneGoods = GetComponentsInChildren<UIRuneGoods>().ToList();
 
-        var runePurchaseableLevelDatas = GameManager.instance.dataSheet.runePurchaseableLevelDataSheet.RunePurchaseableLevelDatas;
-        int listIndex = 0;
 
-        for (int id = GoodsService.FIRST_RUNE_SALES_ID; id <= runePurchaseableLevelDatas.Count; ++id)
+        var runePurchaseableLevelDataSheet = DataBase.Instance.runePurchaseableLevelDataSheet;
+        var goodsDataSheet = DataBase.Instance.goodsDataSheet;
+
+        if (runePurchaseableLevelDataSheet == null)
         {
-            uiRuneOnSalesList.Add(id, uiRuneGoods[listIndex]);
+            Debug.LogError("Error runePurchaseableLevelDataSheet is null");
+            return;
+        }
+        if (goodsDataSheet == null)
+        {
+            Debug.LogError("Error goodsDataSheet is null");
+            return;
+        }
 
-            int goodsId = id;
-            var goodsData = GameManager.instance.dataSheet.goodsDataSheet.GoodsDatas[goodsId];
+        int listIndex = 0;
+        
+        if(runePurchaseableLevelDataSheet.TryGetRunePurchaseableLevelDatas(out var runePurchaseableLevelDatas))
+        {
+            for (int id = GoodsService.FIRST_RUNE_SALES_ID; id <= runePurchaseableLevelDatas.Count; ++id)
+            {
+                uiRuneOnSalesList.Add(id, uiRuneGoods[listIndex]);
 
-            uiRuneOnSalesList[id].SetUIGoods(goodsData, goodsId, runeOnSalesList[listIndex].Item1, goodsId, runeOnSalesList[listIndex].Item2);
-            ++listIndex;
+                int goodsId = id;
+                if (goodsDataSheet.TryGetGoodsData(goodsId, out var goodsData))
+                {
+                    uiRuneOnSalesList[id].SetUIGoods(goodsData, goodsId, runeOnSalesList[listIndex].Item1, goodsId, runeOnSalesList[listIndex].Item2);
+                    ++listIndex;
+                }
+            }
         }
     }
 

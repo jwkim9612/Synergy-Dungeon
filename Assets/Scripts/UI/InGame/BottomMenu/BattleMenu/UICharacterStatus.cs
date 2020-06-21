@@ -27,10 +27,20 @@ public class UICharacterStatus : MonoBehaviour
 
         ShowAll();
 
-        
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
+
+        if (characterDataSheet.TryGetCharacterName(uiCharacter.characterInfo.id, out var name))
+        {
+            SetCharacterName(name);
+        }
+
         SetCharacterIcon(uiCharacter.character.spriteRenderer.sprite);
-        SetCharacterName(GameManager.instance.dataSheet.characterDataSheet.characterDatas[uiCharacter.characterInfo.id].Name);
-        //SetCharacterIcon(GameManager.instance.dataSheet.characterDatas[uiCharacter.characterInfo.id].statusImage);
+        //SetCharacterIcon(DataBase.Instance.characterDatas[uiCharacter.characterInfo.id].statusImage);
         SetStarGrade(uiCharacter.characterInfo.star);
         ControllingPawn = uiCharacter.character;
         uiStatusHPbar.SetControllingPawn(ControllingPawn);

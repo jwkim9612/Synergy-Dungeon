@@ -1,9 +1,7 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Net.Sockets;
 using UnityEngine;
 
 public class RuneManager : MonoSingleton<RuneManager>
@@ -31,9 +29,19 @@ public class RuneManager : MonoSingleton<RuneManager>
             int equippedRuneId = equippedRuneIdsSaveData[i];
             if (equippedRuneId != -1)
             {
-                Rune rune = new Rune();
-                rune.SetRune(GameManager.instance.dataSheet.runeDataSheet.RuneDatas[equippedRuneId]);
-                equippedRunes.Add(rune);
+                var runeDataSheet = DataBase.Instance.runeDataSheet;
+                if(runeDataSheet == null)
+                {
+                    Debug.LogError("Error runeDataSheet is null");
+                    return;
+                }
+
+                if(runeDataSheet.TryGetRuneData(equippedRuneId, out var runeData))
+                {
+                    Rune rune = new Rune();
+                    rune.SetRune(runeData);
+                    equippedRunes.Add(rune);
+                }
             }
             else
             {

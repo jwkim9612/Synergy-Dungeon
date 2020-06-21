@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using geniikw.DataSheetLab;
 
 public class StockSystem
 {
     //public Dictionary<Tier, Stock> Stocks { get; set; } = new Dictionary<Tier, Stock>();
     public Dictionary<Tier, Stock> Stocks { get; set; }
+    private CharacterDataSheet characterDataSheet;
 
     public void Initialize()
     {
@@ -18,32 +17,40 @@ public class StockSystem
         Stock fourTierStock = new Stock();
         Stock fiveTierStock = new Stock();
 
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-
-        foreach(var characterData in characterDatas)
+        characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
         {
-            for (int i = 0; i < CardService.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
+
+        if(characterDataSheet.TryGetCharacterDatas(out var characterDatas))
+        {
+            foreach (var characterData in characterDatas)
             {
-                switch (characterData.Value.Tier)
+                for (int i = 0; i < CardService.MAX_NUM_OF_CARDS_PER_CHARACTER; ++i)
                 {
-                    case Tier.One:
-                        oneTierStock.stockIds.Add(characterData.Key);
-                        break;
-                    case Tier.Two:
-                        twoTierStock.stockIds.Add(characterData.Key);
-                        break;
-                    case Tier.Three:
-                        threeTierStock.stockIds.Add(characterData.Key);
-                        break;
-                    case Tier.Four:
-                        fourTierStock.stockIds.Add(characterData.Key);
-                        break;
-                    case Tier.Five:
-                        fiveTierStock.stockIds.Add(characterData.Key);
-                        break;
-                    default:
-                        Debug.Log("Error InitializeStock");
-                        break;
+                    switch (characterData.Value.Tier)
+                    {
+                        case Tier.One:
+                            oneTierStock.stockIds.Add(characterData.Key);
+                            break;
+                        case Tier.Two:
+                            twoTierStock.stockIds.Add(characterData.Key);
+                            break;
+                        case Tier.Three:
+                            threeTierStock.stockIds.Add(characterData.Key);
+                            break;
+                        case Tier.Four:
+                            fourTierStock.stockIds.Add(characterData.Key);
+                            break;
+                        case Tier.Five:
+                            fiveTierStock.stockIds.Add(characterData.Key);
+                            break;
+                        default:
+                            Debug.Log("Error InitializeStock");
+                            break;
+                    }
                 }
             }
         }
@@ -82,51 +89,77 @@ public class StockSystem
 
     public void RemoveStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        Stock stock = null;
+        if(characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-        stock = Stocks[characterDatas[stockId].Tier];
-
-        stock.stockIds.Remove(stockId);
+        if (characterDataSheet.TryGetCharacterTier(stockId, out var tier))
+        {
+            Stock stock = null;
+            stock = Stocks[tier];
+            stock.stockIds.Remove(stockId);
+        }
     }
 
     public void RemoveStockId(CharacterInfo characterInfo)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        Stock stock = null;
-
-        stock = Stocks[characterDatas[characterInfo.id].Tier];
-
-        int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
-
-        for (int i = 0; i < numOfAdditions; ++i)
+        if (characterDataSheet == null)
         {
-            stock.stockIds.Remove(characterInfo.id);
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
+
+        if (characterDataSheet.TryGetCharacterTier(characterInfo.id, out var tier))
+        {
+            Stock stock = null;
+            stock = Stocks[tier];
+
+            int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
+
+            for (int i = 0; i < numOfAdditions; ++i)
+            {
+                stock.stockIds.Remove(characterInfo.id);
+            }
         }
     }
 
     public void AddStockId(int stockId)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        Stock stock = null;
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
 
-        stock = Stocks[characterDatas[stockId].Tier];
-
-        stock.stockIds.Add(stockId);
+        if (characterDataSheet.TryGetCharacterTier(stockId, out var tier))
+        {
+            Stock stock = null;
+            stock = Stocks[tier];
+            stock.stockIds.Add(stockId);
+        }
     }
 
     public void AddStockId(CharacterInfo characterInfo)
     {
-        var characterDatas = GameManager.instance.dataSheet.characterDataSheet.characterDatas;
-        Stock stock = null;
-
-        stock = Stocks[characterDatas[characterInfo.id].Tier];
-
-        int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
-
-        for(int i = 0; i < numOfAdditions; ++i)
+        if (characterDataSheet == null)
         {
-            stock.stockIds.Add(characterInfo.id);
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
+
+        if (characterDataSheet.TryGetCharacterTier(characterInfo.id, out var tier))
+        {
+            Stock stock = null;
+            stock = Stocks[tier];
+
+            int numOfAdditions = GetNumOfCharactersPerStar(characterInfo.star);
+
+            for (int i = 0; i < numOfAdditions; ++i)
+            {
+                stock.stockIds.Add(characterInfo.id);
+            }
         }
     }
 

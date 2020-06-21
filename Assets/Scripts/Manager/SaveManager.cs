@@ -1,8 +1,6 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
 using Newtonsoft.Json;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;

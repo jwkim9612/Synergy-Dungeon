@@ -1,8 +1,6 @@
 ﻿using Shared.Service;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class RuneService
@@ -27,10 +25,19 @@ public class RuneService
         }
 
         // 룬 데이터를 돌면서 각 등급에 맞게 id값 넣어주기.
-        var runeDatas = GameManager.instance.dataSheet.runeDataSheet.RuneDatas;
-        foreach (var runeData in runeDatas)
+        var runeDataSheet = DataBase.Instance.runeDataSheet;
+        if(runeDataSheet == null)
         {
-            ListOfRuneIdsByGrade[runeData.Value.Grade].Add(runeData.Key);
+            Debug.LogError("Error runeDataSheet is null");
+            return;
+        }
+
+        if(runeDataSheet.TryGetRuneDatas(out var runeDatas))
+        {
+            foreach (var runeData in runeDatas)
+            {
+                ListOfRuneIdsByGrade[runeData.Value.Grade].Add(runeData.Key);
+            }
         }
     }
 
