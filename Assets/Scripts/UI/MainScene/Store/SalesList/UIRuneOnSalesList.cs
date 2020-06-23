@@ -13,7 +13,8 @@ public class UIRuneOnSalesList : MonoBehaviour
     /// <summary>
     /// item1은 룬 id, item2는 팔렸는지에 대한 여부
     /// </summary>
-    public List<Tuple<int, bool>> runeOnSalesList;
+    //public List<Tuple<int, bool>> runeOnSalesList;
+    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList;
 
     public void Initialize()
     {

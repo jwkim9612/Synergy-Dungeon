@@ -14,7 +14,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     /// <summary>
     /// item1은 룬 id, item2는 팔렸는지에 대한 여부
     /// </summary>
-    public List<Tuple<int, bool>> runeOnSalesList { get; set; }  
+    //public List<Tuple<int, bool>> runeOnSalesList { get; set; }  
+    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }  
 
     public void Initialize()
     {
@@ -275,16 +276,17 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            .SetEventKey("LoadRuneOnSalesData")
            .Send((response) =>
            {
-               if (!response.HasErrors)
+           if (!response.HasErrors)
+           {
+               bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+               if (result)
                {
-                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-                   if(result)
-                   {
-                       //List<GSData> runeOnSalesScriptDataList = response.ScriptData.GetGSDataList("RuneOnSalesData");
-                       GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
-                       JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
+                   //List<GSData> runeOnSalesScriptDataList = response.ScriptData.GetGSDataList("RuneOnSalesData");
+                   GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
+                   JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
 
-                       runeOnSalesList = new List<Tuple<int, bool>>();
+                       //runeOnSalesList = new List<Tuple<int, bool>>();
+                       runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
 
                        foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
                        {
@@ -302,7 +304,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                                ++index;
                            }
-                           runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
+                           //runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
+                           runeOnSalesList.Add((id, isSoldOut));
                        }
                    }
                    else
@@ -330,7 +333,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
                    JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
 
-                   runeOnSalesList = new List<Tuple<int, bool>>();
+                   //runeOnSalesList = new List<Tuple<int, bool>>();
+                   runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
 
                    foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
                    {
@@ -348,7 +352,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                            ++index;
                        }
-                       runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
+                       //runeOnSalesList.Add(new Tuple<int, bool>(id, isSoldOut));
+                       runeOnSalesList.Add((id, isSoldOut));
                    }
 
                    MainManager.instance.uiStore.uiRuneOnSalesList.Initialize();

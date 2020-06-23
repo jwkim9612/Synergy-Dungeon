@@ -52,7 +52,7 @@ public class UIEquippedRunes : MonoBehaviour
     /// </summary>
     /// <param name="runeDataToEquip"> 장착할 룬의 데이터</param>
     /// <returns>교체 되었는지의 Bool값과 교체되었다면 교체된 RuneData, 교체가 안되었다면 null값을 가진 Tuple을 리턴</returns>
-    public Tuple<bool, Rune> EquipRuneAndGetReplaceResult(UIOwnedRune uiOwnedRuneToEquip)
+    public (bool IsReplaced, Rune EquippedRune) EquipRuneAndGetReplaceResult(UIOwnedRune uiOwnedRuneToEquip)
     {
         bool isReplaced;
         Rune equippedRune;
@@ -83,7 +83,7 @@ public class UIEquippedRunes : MonoBehaviour
         uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
         uiOwnedRunes.Sort();
 
-        return new Tuple<bool, Rune>(isReplaced, equippedRune);
+        return (isReplaced, equippedRune);
     }
 
     public void EquipRune(UIOwnedRune uiOwnedRuneToEquip)

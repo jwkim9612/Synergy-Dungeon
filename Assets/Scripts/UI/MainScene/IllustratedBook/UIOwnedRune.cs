@@ -73,10 +73,10 @@ public class UIOwnedRune : UIRune
     {
         var runePage = MainManager.instance.uiIllustratedBook.uiRunePage;
         var equipResult = runePage.uiEquippedRunes.EquipRuneAndGetReplaceResult(this);
-        if (equipResult.Item1)    // 장착한 곳에 룬이 있었는지 없었는지.
+        if (equipResult.IsReplaced)    // 장착한 곳에 룬이 있었는지 없었는지.
         {
-            SetUIRune(equipResult.Item2.runeData);
-            runePage.uiOwnedRunes.AddUIRune(equipResult.Item2.runeData);
+            SetUIRune(equipResult.EquippedRune.runeData);
+            runePage.uiOwnedRunes.AddUIRune(equipResult.EquippedRune.runeData);
             runePage.uiOwnedRunes.Sort();
         }
         else
