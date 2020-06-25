@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class UIStore : MonoBehaviour
     [SerializeField] private UIFloatingText soldOutFloatingText = null;
     [SerializeField] private UIGoldSalesList uiGoldSalesList = null;
     [SerializeField] private UIRandomRuneSalesList uiRandomRuneSalesList = null;
+    [SerializeField] private UIRandomPotionSalesList uiRandomPotionSalesList = null;
     public UIRuneOnSalesList uiRuneOnSalesList = null;
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
@@ -25,6 +27,7 @@ public class UIStore : MonoBehaviour
         uiRuneOnSalesList.Initialize();
         uiGoldSalesList.Initialize();
         uiRandomRuneSalesList.Initialize();
+        uiRandomPotionSalesList.Initialize();
         uiObtainedRunesScreen.Initialize();
         purchaseCompletedFloatingText.Initialize();
 
@@ -39,6 +42,10 @@ public class UIStore : MonoBehaviour
             PlayerDataManager.Instance.playerData.Diamond += 1000;
             PlayerDataManager.Instance.SavePlayerDataForCheat();
         });
+
+        var aa = GetComponentsInChildren<UIGoods>().ToList();
+
+        Debug.Log($"aa = count = {aa.Count}");
     }
 
     public void ShowBeingPurchase()

@@ -24,13 +24,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     }
 
 
-    public void PurchaseGoods(int id)
+    public void PurchaseGoods(int goodsId)
     {
         MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseGoods")
-           .SetEventAttribute("GoodsId", id)
+           .SetEventAttribute("GoodsId", goodsId)
            .Send((response) =>
            {
                if (!response.HasErrors)
@@ -72,13 +72,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-    public void PurchaseRune(int id, int runeOnSalesId, RuneGrade runeGrade)
+    public void PurchaseRune(int goodsId, int runeOnSalesId, RuneGrade runeGrade)
     {
         MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseRune")
-           .SetEventAttribute("GoodsId", id)
+           .SetEventAttribute("GoodsId", goodsId)
            .SetEventAttribute("RuneOnSalesId", runeOnSalesId)
            .SetEventAttribute("RuneOnSalesGrade", runeGrade.ToString())
            .Send((response) =>
@@ -126,13 +126,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
-    public void PurchaseRandomRune(int id, RuneRating runeRating)
+    public void PurchaseRandomRune(int goodsId, RuneRating runeRating)
     {
         MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
 
         new LogEventRequest()
            .SetEventKey("PurchaseRandomRune")
-           .SetEventAttribute("GoodsId", id)
+           .SetEventAttribute("GoodsId", goodsId)
            .SetEventAttribute("RatingOfRandomRune", runeRating.ToString())
            .Send((response) =>
            {
@@ -154,6 +154,46 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        }
 
                        SetRandomlyPickedRuneGradeList(strGradeList);
+                       StartCoroutine(Co_GetItems(rewardCurrency));
+                   }
+                   else
+                   {
+                       string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
+                       PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
+
+                       MainManager.instance.uiStore.HideBeginPurchase();
+                       MainManager.instance.uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                   }
+               }
+               else
+               {
+                   MainManager.instance.uiStore.HideBeginPurchase();
+                   // 서버 문제로 구매 실패 팝업 띄우기.
+                   Debug.Log("Error BuyTest");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
+
+    public void PurchaseRandomPotion(int goodsId)
+    {
+        MainManager.instance.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
+
+        new LogEventRequest()
+           .SetEventKey("PurchaseRandomPotion")
+           .SetEventAttribute("GoodsId", goodsId)
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
+
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
+                       RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
                        StartCoroutine(Co_GetItems(rewardCurrency));
                    }
@@ -197,6 +237,9 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 break;
             case RewardCurrency.RandomRune:
                 AddRunesAndShowObtainedRunes();
+                break;
+            case RewardCurrency.RandomPotion:
+                Debug.Log("랜덤 포션 구입 완료!!");
                 break;
         }
     }

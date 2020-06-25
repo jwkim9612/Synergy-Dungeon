@@ -14,8 +14,8 @@ public class UIRuneOnSalesList : MonoBehaviour
     /// item1은 룬 id, item2는 팔렸는지에 대한 여부
     /// </summary>
     //public List<Tuple<int, bool>> runeOnSalesList;
-    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList;
-
+    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }
+     
     public void Initialize()
     {
         InitializeRuneOnSalesList();
@@ -55,7 +55,7 @@ public class UIRuneOnSalesList : MonoBehaviour
                 int goodsId = id;
                 if (goodsDataSheet.TryGetGoodsData(goodsId, out var goodsData))
                 {
-                    uiRuneOnSalesList[id].SetUIGoods(goodsData, goodsId, runeOnSalesList[listIndex].Item1, goodsId, runeOnSalesList[listIndex].Item2);
+                    uiRuneOnSalesList[id].SetUIGoods(goodsData, goodsId, runeOnSalesList[listIndex].RuneId, goodsId, runeOnSalesList[listIndex].IsSoldOut);
                     ++listIndex;
                 }
             }

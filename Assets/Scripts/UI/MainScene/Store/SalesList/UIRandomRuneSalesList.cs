@@ -5,25 +5,29 @@ using UnityEngine;
 
 public class UIRandomRuneSalesList : MonoBehaviour
 {
-    private List<UIRandomRuneGoods> uiRadomRuneGoodsList;
+    private List<UIRandomRuneGoods> uiRandomRuneGoodsList;
 
     public void Initialize()
     {
-        uiRadomRuneGoodsList = GetComponentsInChildren<UIRandomRuneGoods>().ToList();
+        uiRandomRuneGoodsList = GetComponentsInChildren<UIRandomRuneGoods>().ToList();
+        SetUIRandomRuneGoodsLIst();
+    }
 
+    private void SetUIRandomRuneGoodsLIst()
+    {
         var randomRuneIdAndRatingList = GoodsService.RANDOM_RUNE_SALES_ID_AND_RATING_LIST;
         var goodsDataSheet = DataBase.Instance.goodsDataSheet;
-        if(goodsDataSheet == null)
+        if (goodsDataSheet == null)
         {
             Debug.LogError("Error goodsDataSheet is null");
             return;
         }
-        
+
         for (int i = 0; i < randomRuneIdAndRatingList.Count; ++i)
         {
-            if(goodsDataSheet.TryGetGoodsData(randomRuneIdAndRatingList[i].Item1, out var goodsData))
+            if (goodsDataSheet.TryGetGoodsData(randomRuneIdAndRatingList[i].runeId, out var goodsData))
             {
-                uiRadomRuneGoodsList[i].SetUIGoods(goodsData, randomRuneIdAndRatingList[i].Item1, randomRuneIdAndRatingList[i].Item2);
+                uiRandomRuneGoodsList[i].SetUIGoods(goodsData, randomRuneIdAndRatingList[i].runeId, randomRuneIdAndRatingList[i].rating);
             }
         }
     }

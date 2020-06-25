@@ -16,11 +16,11 @@ MonoBehaviour:
   - Id: 1
     Name: "\uD478\uB978\uCD08\uC6D0"
     TotalWave: 20
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Chapter/Chapter1
   - Id: 2
     Name: "\uC5BC\uC74C\uB098\uB77C"
     TotalWave: 30
-    ImagePath: Images/Tribe/Logo_HUMAN
+    ImagePath: Images/Chapter/Chapter2
   - Id: 3
     Name: "\uC0AC\uB9C9"
     TotalWave: 50
