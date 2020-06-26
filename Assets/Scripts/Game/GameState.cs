@@ -56,7 +56,8 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 if(stageManager.IsFinalWave())
                 {
-                    ++PlayerDataManager.Instance.playerData.PlayableStage;
+                    PlayerDataManager.Instance.playerData.IncreasePlayableStage();
+                    PlayerDataManager.Instance.playerData.InitializeTopWave();
                     PlayerDataManager.Instance.SavePlayerData();
                     ShowStageClear();
                 }
@@ -69,6 +70,9 @@ public class GameState : MonoBehaviour
                 break;
 
             case InGameState.Lose:
+                PlayerDataManager.Instance.playerData.TopWave = StageManager.Instance.currentWave - 1;
+                // 보상 주기.
+                PlayerDataManager.Instance.SavePlayerData();
                 ShowGameOver();
                 break;
         }

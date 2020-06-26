@@ -1,5 +1,7 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDataManager : MonoSingleton<PlayerDataManager>
@@ -40,17 +42,23 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                     {
                         GSData scriptData = response.ScriptData.GetGSData("PlayerData");
 
+                        ///////////////// stagestatus 불러오기
+                        //Dictionary<int, (int maxClearStage, bool isClear)> stageStatus;
+                        //stageStatus = GetStageStatusByGSData(response.ScriptData.GetGSData("PlayerStageStatus"));
+                        ////////////////
+
                         var data = new PlayerData
                         {
                             Level = (int)scriptData.GetInt("PlayerLevel"),
                             Diamond = (int)scriptData.GetInt("PlayerDiamond"),
                             Gold = (int)scriptData.GetInt("PlayerGold"),
                             PlayableStage = (int)scriptData.GetInt("PlayerPlayableStage"),
+                            TopWave = (int)scriptData.GetInt("PlayerTopWave")
                         };
 
                         playerData = data;
                         Debug.Log("Player Data Load Successfully !");
-                        Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}");
+                        Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}, PlayerTopWave : {playerData.TopWave}");
                    
                         if(OnGoldChanged != null)
                         {
@@ -87,6 +95,7 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
             .SetEventAttribute("Diamond", playerData.Diamond)
             .SetEventAttribute("Gold", playerData.Gold)
             .SetEventAttribute("PlayableStage", playerData.PlayableStage)
+            .SetEventAttribute("TopWave", playerData.TopWave)
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -108,6 +117,7 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
             .SetEventAttribute("Diamond", playerData.Diamond)
             .SetEventAttribute("Gold", playerData.Gold)
             .SetEventAttribute("PlayableStage", playerData.PlayableStage)
+            .SetEventAttribute("PlayableStage", playerData.TopWave)
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -139,4 +149,21 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                 }
             });
     }
+
+    //public Dictionary<int, (int maxClearStage, bool isClear)> GetStageStatusByGSData(GSData gsData)
+    //{
+    //    Dictionary<int, (int maxClearStage, bool isClear)> stageStatus;
+
+    //    JObject stageStatusJsonObject = JsonDataManager.Instance.LoadJson<JObject>(gsData.JSON);
+
+    //    stageStatus = new Dictionary<int, (int maxClearStage, bool isClear)>();
+
+    //    int stage = 1;
+    //    foreach (var stageStatusPair in stageStatusJsonObject)
+    //    {
+    //        stageStatus.Add(stage, (int.Parse(stageStatusPair.Key), bool.Parse(stageStatusPair.Key)));
+    //    }
+
+    //    return stageStatus;
+    //}
 }

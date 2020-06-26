@@ -14,8 +14,7 @@ public class AccountManager : MonoSingleton<AccountManager>
         AccountData loadedAccoutnData = JsonDataManager.Instance.LoadJsonFile<AccountData>(Application.persistentDataPath, "AccountData");
         if (loadedAccoutnData == null)
         {
-            signMain.SetActive(true);
-            UIManager.Instance.SetCanEscape(true);
+            ShowSignMain();
             // 로그인 창, 회원가입 창 띄우기
 
         }
@@ -79,7 +78,8 @@ public class AccountManager : MonoSingleton<AccountManager>
                 }
                 else
                 {
-                    Debug.Log("로그인 실패..." + response.Errors.JSON.ToString());
+                    Debug.Log("로그인 실패..." + response.Errors.JSON.ToString()); 
+                    ShowSignMain();
                 }
             });
     }
@@ -140,5 +140,11 @@ public class AccountManager : MonoSingleton<AccountManager>
         id = id.Replace('-', 'M');
 
         return id;
+    }
+
+    private void ShowSignMain()
+    {
+        signMain.SetActive(true);
+        UIManager.Instance.SetCanEscape(true);
     }
 }

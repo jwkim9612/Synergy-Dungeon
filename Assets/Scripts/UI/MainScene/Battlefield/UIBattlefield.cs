@@ -32,7 +32,7 @@ public class UIBattlefield : MonoBehaviour
     {
         UpdateChapterTitle();
         UpdateChapterImage();
-        UpdateBestStage();
+        UpdateBestWave();
     }
 
     public void UpdateChapterTitle()
@@ -71,7 +71,7 @@ public class UIBattlefield : MonoBehaviour
         }
     }
 
-    public void UpdateBestStage()
+    public void UpdateBestWave()
     {
         if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableStage)
             bestStage.text = "챕터 클리어";
@@ -86,7 +86,8 @@ public class UIBattlefield : MonoBehaviour
 
             if (chapterDataSheet.TryGetChapterTotalWave(selectedChapter, out var totalWave))
             {
-                bestStage.text = $"최고 스테이지 : 1/{totalWave}";
+                var playerData = PlayerDataManager.Instance.playerData;
+                bestStage.text = $"최고 웨이브 : {playerData.TopWave}/{totalWave}";
             }
         }
     }
