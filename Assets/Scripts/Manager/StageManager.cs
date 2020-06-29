@@ -8,7 +8,7 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void Initialize()
     {
-        //currentWave = 1;
+        currentWave = 1;
     }
 
     public void SetChapterData(int chapter)

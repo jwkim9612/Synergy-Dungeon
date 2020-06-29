@@ -57,7 +57,6 @@ public class UICharacter : MonoBehaviour
         }
 
         character.OnIsDead += OnHide;
-        //character.OnAttack += PlayAttackCoroutine;
         character.OnHit += PlayHitParticle;
         character.OnHit += PlayShowHPBarForMoment;
         character.SetUIFloatingTextList(uiFloatingTextList);
@@ -67,7 +66,6 @@ public class UICharacter : MonoBehaviour
         uiHPBar.Initialize();
     }
 
-    ///////////////////////////////////////////
     public void SetDefaultImage()
     {
         if (characterDataSheet == null)
@@ -96,7 +94,6 @@ public class UICharacter : MonoBehaviour
             character.SetRunTimeAnimatorController(runTimeAnimatorController);
         }
     }
-    ///////////////////////////////////////////
 
     public void SetCharacterInfo(CharacterInfo newCharacterInfo)
     {
@@ -120,8 +117,6 @@ public class UICharacter : MonoBehaviour
         character.DestoryPawn();
         character = null;
         characterInfo = null;
-        //characterInfo.id = -1;
-        //characterInfo.star = 0;
 
         OnCanNotClick();
     }
@@ -149,23 +144,10 @@ public class UICharacter : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    //public void PlayAttackCoroutine()
-    //{
-    //    StartCoroutine(Co_AttackAnimation());
-    //}
-
     public void PlayShowHPBarForMoment()
     {
         StartCoroutine(Co_ShowHPBarForMoment());
     }
-
-    //private IEnumerator Co_AttackAnimation()
-    //{
-    //    gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
-    //    yield return new WaitForSeconds(0.5f);
-    //    gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
-    //    yield break;
-    //}
 
     private IEnumerator Co_ShowHPBarForMoment()
     {

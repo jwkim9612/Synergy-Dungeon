@@ -9,6 +9,8 @@ public class BattleStatus : MonoBehaviour
     public delegate void OnWinTheBattleDelegate();
     public OnWinTheBattleDelegate OnWinTheBattle { get; set; }
 
+    [SerializeField] private GameObject BattleStartScreen;
+
     public List<Character> characters { get; set; }
     public List<Enemy> enemies { get; set; }
     public List<Pawn> pawnsAttackSequenceList { get; set; }
@@ -32,7 +34,9 @@ public class BattleStatus : MonoBehaviour
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
-        yield return new WaitForSeconds(0.5f);
+        BattleStartScreen.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        BattleStartScreen.SetActive(false);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {
@@ -45,10 +49,19 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-                // 에너미의 애니메이션이 생기면 if문 지우고 PlayAttackAnimation만 실행되게 할것.
-                if(pawn.HasAnimation())
+                if(pawn is Character)
                 {
-                    pawn.PlayAttackAnimation();
+                    // 애니메이션 다 생기면 없앰.
+                    Character character = pawn as Character;
+                    if (character.HasAnimation())
+                    {
+                        character.PlayAttackAnimation();
+                    }
+                    else
+                    {
+                        character.RandomAttack();
+                    }
+                    // Character의 애니메이션 안에 RandomAttack이 있음
                 }
                 else
                 {

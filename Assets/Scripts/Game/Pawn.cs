@@ -1,4 +1,5 @@
 ﻿using Shared.Service;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,46 +12,33 @@ public class Pawn : MonoBehaviour
     public OnHitDelegate OnHit { get; set; }
     public OnIsDeadDelegate OnIsDead { get; set; }
 
-    public SpriteRenderer spriteRenderer;
-    public Animator animator;
     public string pawnName { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
     public Ability ability;
     protected long currentHP;
+    public SpriteRenderer spriteRenderer;
+    public Material defaultMaterial;
 
     protected Pawn target;
 
     public List<UIFloatingText> uiFloatingTextList { get; set; } = null;
-    private int floatingTextIndex;
+    protected int floatingTextIndex;
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
-        
-        floatingTextIndex = 0;
         //OnAttack += PlayAttackAnimation;
+        OnHit += Test;
+        OnHit += PlayTakeHit;
+
+        defaultMaterial = spriteRenderer.material;
     }
 
-    public void SetSize(float size)
+    public void Test()
     {
-        spriteRenderer.transform.localScale = new Vector3(size, size, size);
-    }
-
-    public void SetImage(Sprite sprite)
-    {
-        spriteRenderer.sprite = sprite;
-    }
-
-    public void SetRunTimeAnimatorController(RuntimeAnimatorController runTimeAnimatorController)
-    {
-        animator.runtimeAnimatorController = runTimeAnimatorController;
-    }
-
-    public void RemoveRunTimeAnimatorController()
-    {
-        animator.runtimeAnimatorController = null;
+        var particle = Instantiate(GameManager.instance.particleService.hitParticle, transform);
+        Debug.Log("Particle = " + particle.name);
     }
 
     public void Attack(Pawn target)
@@ -61,17 +49,18 @@ public class Pawn : MonoBehaviour
             return;
         }
 
-        this.target = target;
+        StartCoroutine(Co_Attack());
+        //this.target = target;
 
-        if (GetAttackSuccessful(target))
-        {
-            if (IsCriticalAttack())
-                target.TakeDamage(ability.Attack, true);
-            else
-                target.TakeDamage(ability.Attack, false);
-        }
-        else
-            target.PlayMissText();
+        //if (GetAttackSuccessful(target))
+        //{
+        //    if (IsCriticalAttack())
+        //        target.TakeDamage(ability.Attack, true);
+        //    else
+        //        target.TakeDamage(ability.Attack, false);
+        //}
+        //else
+        //    target.PlayMissText();
 
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
@@ -107,7 +96,6 @@ public class Pawn : MonoBehaviour
         if (currentHP <= 0)
         {
             isDead = true;
-            OnIsDead();
         }
 
         return finalDamage;
@@ -123,7 +111,7 @@ public class Pawn : MonoBehaviour
         return currentHP / (float)ability.Health;
     }
 
-    private bool GetAttackSuccessful(Pawn target)
+    protected bool GetAttackSuccessful(Pawn target)
     {
         long currentAccuracy = ability.Accuracy - target.ability.Evasion;
         long randomAccuracyNum = RandomService.GetRandomLong();
@@ -134,7 +122,7 @@ public class Pawn : MonoBehaviour
             return true;
     }
 
-    private bool IsCriticalAttack()
+    protected bool IsCriticalAttack()
     {
         long currentCritical = ability.Critical;
         long randomCriticalNum = RandomService.GetRandomLong();
@@ -143,6 +131,16 @@ public class Pawn : MonoBehaviour
             return false;
         else
             return true;
+    }
+
+    public void SetSize(float size)
+    {
+        spriteRenderer.transform.localScale = new Vector3(size, size, size);
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
     }
 
     public void SetName(string name)
@@ -166,6 +164,15 @@ public class Pawn : MonoBehaviour
         }
     }
 
+    public virtual float GetAttackAnimationLength()
+    {
+        return 0.0f;
+    }
+
+    public virtual void PlayAttackAnimation()
+    {
+    }
+
     private void PlayHitText(float damage)
     {
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
@@ -181,7 +188,7 @@ public class Pawn : MonoBehaviour
         PlayFloatingText();
     }
 
-    private void PlayMissText()
+    public void PlayMissText()
     {
         uiFloatingTextList[floatingTextIndex].SetText("Miss", Color.gray);
         uiFloatingTextList[floatingTextIndex].SetTextSize(InGameService.MISS_FONT_SIZE);
@@ -197,81 +204,28 @@ public class Pawn : MonoBehaviour
             floatingTextIndex = 0;
     }
 
+    protected virtual void PlayTakeHit()
+    {
+        StartCoroutine(Co_TakeHitAnimation());
+    }
+
+    protected virtual IEnumerator Co_Attack()
+    {
+        yield return new WaitForEndOfFrame();
+    }
+
+    protected virtual IEnumerator Co_TakeHitAnimation()
+    {
+        yield return new WaitForEndOfFrame();
+    }
+
     public void DestoryPawn()
     {
         Destroy(this.gameObject);
     }
 
-    public void PlayWinAnimation()
-    {
-        if (animator.runtimeAnimatorController != null)
-        {
-            animator.SetBool("Win", true);
-        }
-    }
-
-    public void PlayAttackAnimation()
-    {
-        if(animator.runtimeAnimatorController != null)
-        {
-            animator.SetBool("Attack", true);
-        }
-    }
-
-    // Win 애니메이션에서 사용함.
-    private void WinEnd()
-    {
-        animator.SetBool("Win", false);
-    }
-
-    // Attack 애니메이션에서 사용함.
-    private void AttackEnd()
-    {
-        animator.SetBool("Attack", false);
-    }
-    
-    public float GetAttackAnimationLength()
-    {
-        if (animator == null)
-        {
-            return 1.0f;
-        }
-
-        if (animator.runtimeAnimatorController != null)
-        {
-            RuntimeAnimatorController ac = animator.runtimeAnimatorController;
-            for (int i = 0; i < ac.animationClips.Length; i++)
-            {
-                if (ac.animationClips[i].name == "Attack")
-                {
-                   return ac.animationClips[i].length;
-                }
-            }
-        }
-        else
-        {
-            return 1.0f;
-        }
-
-        Debug.LogError("Error GetAttackAnimationLength");
-        return -1;
-    }
-
     public Pawn GetTarget()
     {
         return target;
-    }
-
-    public bool HasAnimation()
-    {
-        if (animator != null)
-        {
-            if (animator.runtimeAnimatorController != null)
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

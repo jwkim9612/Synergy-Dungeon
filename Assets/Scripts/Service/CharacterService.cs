@@ -8,7 +8,7 @@ public class CharacterService
     public const int ID_OF_FIRST_CHARACTER = 0;
 
     public const float SIZE_IN_PREPARE_AREA = 1.0f;
-    public const float SIZE_IN_BATTLE_AREA = 1.5f;
+    public const float SIZE_IN_BATTLE_AREA = 1.2f;
 
     public const int DEFAULT_CHARACTER_STAR = 1;
 

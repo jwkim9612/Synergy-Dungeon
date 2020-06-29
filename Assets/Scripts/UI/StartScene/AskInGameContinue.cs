@@ -14,6 +14,7 @@ public class AskInGameContinue : MonoBehaviour
         yesButton.onClick.AddListener(() =>
         {
             SaveManager.Instance.LoadInGameDataAndLoadInGameScene();
+            OnHide();
         });
 
         noButton.onClick.AddListener(() =>

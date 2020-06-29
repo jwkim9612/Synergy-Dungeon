@@ -67,8 +67,8 @@ MonoBehaviour:
     Tribe: 2
     Origin: 4
     Tier: 3
-    ImagePath: "Images/Character/Devil/\uC545\uB9C8 \uC804\uC0AC"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Devil/Warrior/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Devil/Warrior
   - Id: 8
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Tribe: 2
@@ -200,8 +200,8 @@ MonoBehaviour:
     Tribe: 6
     Origin: 3
     Tier: 1
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uB3C4\uC801"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Human/Thief/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Human/Thief
   - Id: 27
     Name: "\uD638\uD06C\uC544\uC774"
     Tribe: 6
@@ -214,5 +214,5 @@ MonoBehaviour:
     Tribe: 6
     Origin: 2
     Tier: 4
-    ImagePath: "Images/Character/Human/\uC778\uAC04 \uC131\uAE30\uC0AC"
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Human/Paladin/DefaultImage
+    RuntimeAnimatorControllerPath: Controllers/Human/Paladin

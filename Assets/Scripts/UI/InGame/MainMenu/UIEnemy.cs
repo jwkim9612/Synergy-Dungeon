@@ -21,12 +21,11 @@ public class UIEnemy : MonoBehaviour
     public void SetEnemy(EnemyData newEnmeyData)
     {
         enemy = Instantiate(InGameService.defaultEnemy, transform.root.parent);
+        enemy.Initialize();
         enemy.SetSize(0.8f);
         enemy.SetImage(newEnmeyData.Image);
         enemy.SetAbility(newEnmeyData);
         enemy.SetName(newEnmeyData.Name);
-        enemy.OnIsDead += PlayDeadCoroutine;
-        //enemy.OnAttack += PlayAttackCoroutine;
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayShowHPBarForMoment;
         enemy.SetUIFloatingTextList(uiFloatingTextList);
@@ -37,43 +36,9 @@ public class UIEnemy : MonoBehaviour
         uiHPBar.UpdateHPBar();
     }
 
-    //public void PlayAttackCoroutine()
-    //{
-    //    StartCoroutine(AttackCoroutine());
-    //}
-
-    public void PlayDeadCoroutine()
-    {
-        StartCoroutine(DeadCoroutine());
-    }
-
     public void PlayShowHPBarForMoment()
     {
         StartCoroutine(Co_ShowHPBarForMoment());
-    }
-
-    //private IEnumerator AttackCoroutine()
-    //{
-    //    gameObject.transform.Translate(new Vector3(-0.5f, 0.0f, 0.0f));
-    //    yield return new WaitForSeconds(0.5f);
-    //    gameObject.transform.Translate(new Vector3(0.5f, 0.0f, 0.0f));
-    //    yield break;
-    //}
-
-    private IEnumerator DeadCoroutine()
-    {
-        //image.enabled = false;
-        yield return new WaitForSeconds(0.3f);
-        //image.enabled = true;
-        yield return new WaitForSeconds(0.3f);
-        //image.enabled = false;
-        yield return new WaitForSeconds(0.3f);
-        //image.enabled = true;
-        yield return new WaitForSeconds(0.3f);
-        //image.enabled = false;
-        enemy.DestoryPawn();
-        uiHPBar.gameObject.SetActive(false);
-        yield break;
     }
 
     private IEnumerator Co_ShowHPBarForMoment()
