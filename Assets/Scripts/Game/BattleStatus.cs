@@ -9,7 +9,7 @@ public class BattleStatus : MonoBehaviour
     public delegate void OnWinTheBattleDelegate();
     public OnWinTheBattleDelegate OnWinTheBattle { get; set; }
 
-    [SerializeField] private GameObject BattleStartScreen;
+    [SerializeField] private UIBattleStart uiBattleStart;
 
     public List<Character> characters { get; set; }
     public List<Enemy> enemies { get; set; }
@@ -34,9 +34,9 @@ public class BattleStatus : MonoBehaviour
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
-        BattleStartScreen.SetActive(true);
+        uiBattleStart.gameObject.SetActive(true);
         yield return new WaitForSeconds(2.0f);
-        BattleStartScreen.SetActive(false);
+        uiBattleStart.gameObject.SetActive(false);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {

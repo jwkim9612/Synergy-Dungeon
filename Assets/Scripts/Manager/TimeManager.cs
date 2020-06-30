@@ -5,39 +5,13 @@ using UnityEngine;
 public class TimeManager : MonoSingleton<TimeManager>
 {
     public float remainingTimeOfAttendance;
-    //public DateTime serverTime;
 
     public void Initialize()
     {
-        //GetServerTime();
         AttendanceCheck();
         SaveLastConnectTime();
         GetRemainingTimeOfAttendance();
-        //        GetLastConnectTime();
-        //SaveLastConnectTime();
     }
-
-    //public void GetServerTime()
-    //{
-    //    new LogEventRequest()
-    //        .SetEventKey("G_ServerTime")
-    //        .Send((response) => {
-    //        if (!response.HasErrors)
-    //        {
-    //            long test2 = (long)(response.ScriptData.GetLong("ServerTime"));
-                    
-    //            Debug.Log(test2);
-    //            Debug.Log(UnixTimeStampToDateTime(test2));
-    //            serverTime = UnixTimeStampToDateTime(test2);
-
-    //            }
-    //            else
-    //        {
-    //            Debug.Log("Error Time Load !");
-    //            Debug.Log(response.Errors.JSON);
-    //        }
-    //    });
-    //}
 
     private static DateTime UnixTimeStampToDateTime(long unixTimeStamp)
     {
@@ -69,10 +43,7 @@ public class TimeManager : MonoSingleton<TimeManager>
             {
                 if (!response.HasErrors)
                 {
-                    //var scriptData = response.ScriptData.GetGSData("LastConnectTime");
                     var scriptData = (long)response.ScriptData.GetLong("LastConnectTime");
-
-                    //Debug.Log("time  = " + scriptData);
 
                 }
                 else

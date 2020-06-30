@@ -11,6 +11,7 @@ public class CharacterData
         Tier = characterExcelData.Tier;
 
         Image = Resources.Load<Sprite>(characterExcelData.ImagePath);
+        HeadImage = Resources.Load<Sprite>(characterExcelData.HeadImagePath);
         RuntimeAnimatorController = Resources.Load<RuntimeAnimatorController>(characterExcelData.RuntimeAnimatorControllerPath);
 
         var originDataSheet = DataBase.Instance.originDataSheet;
@@ -46,6 +47,7 @@ public class CharacterData
         Origin = characterData.Origin;
         Tier = characterData.Tier;
         Image = characterData.Image;
+        HeadImage = characterData.HeadImage;
         RuntimeAnimatorController = characterData.RuntimeAnimatorController;
         OriginData = characterData.OriginData;
         TribeData = characterData.TribeData;
@@ -57,6 +59,7 @@ public class CharacterData
     public Origin Origin;
     public Tier Tier;
     public Sprite Image;
+    public Sprite HeadImage;
     public RuntimeAnimatorController RuntimeAnimatorController;
     public OriginData OriginData;
     public TribeData TribeData;

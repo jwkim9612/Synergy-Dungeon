@@ -22,7 +22,6 @@ public class AccountManager : MonoSingleton<AccountManager>
         {
             accountData = loadedAccoutnData;
             Sign(accountData.id, accountData.pw, false);
-            PlayerDataManager.Instance.LoadPlayerData();
             // 로그인 완료.
         }
     }
@@ -75,11 +74,13 @@ public class AccountManager : MonoSingleton<AccountManager>
                         Debug.Log("Check Start");
                         SaveManager.Instance.CheckHasInGameData();
                     }
+
+                    PlayerDataManager.Instance.LoadPlayerData();
                 }
                 else
                 {
-                    Debug.Log("로그인 실패..." + response.Errors.JSON.ToString()); 
                     ShowSignMain();
+                    Debug.Log("로그인 실패..." + response.Errors.JSON.ToString()); 
                 }
             });
     }

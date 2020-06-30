@@ -17,7 +17,7 @@ public class Enemy : Pawn
 
     public override float GetAttackAnimationLength()
     {
-        return 2.0f;
+        return EnemyService.ATTACK_ANIMATION_LENGTH;
     }
 
     public void SetAbility(EnemyData enemyData)
@@ -27,20 +27,7 @@ public class Enemy : Pawn
         currentHP = ability.Health;
     }
 
-    //public override void Attack(Pawn target)
-    //{
-    //    if (target == null)
-    //    {
-    //        Debug.Log("target is null");
-    //        return;
-    //    }
-
-    //    this.target = target;
-
-    //    StartCoroutine(Co_Attack());
-    //}
-
-    protected override IEnumerator Co_Attack()
+    protected override IEnumerator Co_AttackAndAnimation()
     {
         for (int i = 0; i < 5; i++)
         {
@@ -48,17 +35,7 @@ public class Enemy : Pawn
             yield return new WaitForEndOfFrame();
         }
 
-        // 공격
-        if (GetAttackSuccessful(target))
-        {
-            if (IsCriticalAttack())
-                target.TakeDamage(ability.Attack, true);
-            else
-                target.TakeDamage(ability.Attack, false);
-        }
-        else
-            target.PlayMissText();
-        //
+        AttackProcessing();
 
         yield return new WaitForSeconds(0.5f);
 
@@ -97,46 +74,20 @@ public class Enemy : Pawn
 
     private IEnumerator Co_TakeHit()
     {
-        float temp = 0.0f;
-        float defaultX = this.gameObject.transform.position.x;
-        float defaultY = this.gameObject.transform.position.y;
-        float defaultZ = this.gameObject.transform.position.z;
+        Vector3 defaultPosition = this.transform.position;
+        Vector3 knockBackPosition = defaultPosition + new Vector3(EnemyService.KNOCKBACK_DISTANCE, 0, 0);
 
-
-        while (temp <= 0.29f)
+        while (this.transform.position.x < knockBackPosition.x)
         {
-            //Vector3.SmoothDamp()
-
-            //temp = Vector3.Slerp(new Vector3(defaultX, defaultY, defaultZ), 0.3f, 0.05f);
-            this.transform.position = new Vector3(defaultX + temp, defaultY, defaultZ);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, knockBackPosition, EnemyService.KNOCKBACK_SPEED);
             yield return new WaitForEndOfFrame();
-
-            //this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
         }
 
-
-        while (temp > 0.0f)
+        while (this.transform.position.x > defaultPosition.x)
         {
-            //temp = Mathf.Slerp(temp, -0.01f, 0.05f);
-            this.transform.position = new Vector3(defaultX + temp, defaultY, defaultZ);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, defaultPosition, EnemyService.KNOCKBACK_SPEED);
             yield return new WaitForEndOfFrame();
-
-            //this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
         }
-
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
-        //    yield return new WaitForSeconds(0.05f);
-        //}
-
-        yield return new WaitForSeconds(0.1f);
-
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    this.gameObject.transform.Translate(new Vector3(-0.1f, 0.0f, 0.0f));
-        //    yield return new WaitForSeconds(0.05f);
-        //}
 
         yield return new WaitForSeconds(0.5f);
 

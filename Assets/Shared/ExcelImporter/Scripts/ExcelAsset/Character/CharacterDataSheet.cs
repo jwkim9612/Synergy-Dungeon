@@ -49,7 +49,21 @@ public class CharacterDataSheet : ScriptableObject
 		return false;
 	}
 
-	public bool TryGetCharacterName(int characterId, out string name)
+    public bool TryGetCharacterHeadImage(int characterId, out Sprite sprite)
+    {
+        sprite = null;
+
+        if (TryGetCharacterData(characterId, out var characterData))
+        {
+            sprite = characterData.HeadImage;
+            return true;
+        }
+
+        Debug.LogError($"Error TryGetCharacterHeadImage characterId:{characterId}");
+        return false;
+    }
+
+    public bool TryGetCharacterName(int characterId, out string name)
 	{
 		name = "";
 

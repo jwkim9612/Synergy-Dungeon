@@ -4,6 +4,7 @@ using UnityEngine;
 public class Character : Pawn
 {
     public Animator animator;
+    public Origin origin;
 
     public Character()
     {
@@ -18,9 +19,10 @@ public class Character : Pawn
         floatingTextIndex = 0;
     }
 
-    public void SetAbility(CharacterAbilityData characterAbilityData, Origin origin)
+    public void SetAbility(CharacterAbilityData characterAbilityData, Origin newOrigin)
     {
         ability.SetAbility(characterAbilityData);
+        origin = newOrigin;
 
         ///////////////////////////////////// 룬 능력치 + ///////////////////////////////////////////////
         Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(origin);
@@ -36,45 +38,29 @@ public class Character : Pawn
         currentHP = ability.Health;
     }
 
-    //public override void Attack(Pawn target)
-    //{
-    //    if (target == null)
-    //    {
-    //        Debug.Log("target is null");
-    //        return;
-    //    }
-
-    //    this.target = target;
-
-    //    StartCoroutine(Co_Attack());
-    //}
-
-    protected override IEnumerator Co_Attack()
+    protected override IEnumerator Co_AttackAndAnimation()
     {
-        for (int i = 0; i < 5; i++)
+        if(IsMeleeUnit())
         {
-            this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
-            yield return new WaitForEndOfFrame();
-        }
+            for (int i = 0; i < 5; i++)
+            {
+                this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
+                yield return new WaitForEndOfFrame();
+            }
 
-        // 공격
-        if (GetAttackSuccessful(target))
-        {
-            if (IsCriticalAttack())
-                target.TakeDamage(ability.Attack, true);
-            else
-                target.TakeDamage(ability.Attack, false);
+            AttackProcessing();
+
+            yield return new WaitForSeconds(0.5f);
+
+            for (int i = 0; i < 5; i++)
+            {
+                this.gameObject.transform.Translate(new Vector3(-0.1f, 0.0f, 0.0f));
+                yield return new WaitForEndOfFrame();
+            }
         }
         else
-            target.PlayMissText();
-        //
-
-        yield return new WaitForSeconds(0.5f);
-
-        for (int i = 0; i < 5; i++)
         {
-            this.gameObject.transform.Translate(new Vector3(-0.1f, 0.0f, 0.0f));
-            yield return new WaitForEndOfFrame();
+            AttackProcessing();
         }
     }
 
@@ -198,5 +184,13 @@ public class Character : Pawn
         {
             OnIsDead();
         }
+    }
+
+    private bool IsMeleeUnit()
+    {
+        if (origin == Origin.Archer || origin == Origin.Wizard)
+            return false;
+
+        return true;
     }
 }

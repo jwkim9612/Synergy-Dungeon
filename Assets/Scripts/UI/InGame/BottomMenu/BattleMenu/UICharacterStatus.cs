@@ -39,7 +39,16 @@ public class UICharacterStatus : MonoBehaviour
             SetCharacterName(name);
         }
 
-        SetCharacterIcon(uiCharacter.character.spriteRenderer.sprite);
+        if(characterDataSheet.TryGetCharacterHeadImage(uiCharacter.characterInfo.id, out var headImage))
+        {
+            SetCharacterIcon(headImage);
+        }
+        else
+        {
+            Debug.Log("Errorrrororor");
+        }
+
+        //SetCharacterIcon(uiCharacter.character.spriteRenderer.sprite);
         //SetCharacterIcon(DataBase.Instance.characterDatas[uiCharacter.characterInfo.id].statusImage);
         SetStarGrade(uiCharacter.characterInfo.star);
         ControllingPawn = uiCharacter.character;

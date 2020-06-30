@@ -42,11 +42,6 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                     {
                         GSData scriptData = response.ScriptData.GetGSData("PlayerData");
 
-                        ///////////////// stagestatus 불러오기
-                        //Dictionary<int, (int maxClearStage, bool isClear)> stageStatus;
-                        //stageStatus = GetStageStatusByGSData(response.ScriptData.GetGSData("PlayerStageStatus"));
-                        ////////////////
-
                         var data = new PlayerData
                         {
                             Level = (int)scriptData.GetInt("PlayerLevel"),
@@ -117,7 +112,7 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
             .SetEventAttribute("Diamond", playerData.Diamond)
             .SetEventAttribute("Gold", playerData.Gold)
             .SetEventAttribute("PlayableStage", playerData.PlayableStage)
-            .SetEventAttribute("PlayableStage", playerData.TopWave)
+            .SetEventAttribute("TopWave", playerData.TopWave)
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -141,7 +136,7 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                 if (!response.HasErrors)
                 {
                     Debug.Log("Success Initialize PlayerData !");
-                    LoadPlayerData();
+                    //LoadPlayerData();
                 }
                 else
                 {
@@ -149,21 +144,4 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                 }
             });
     }
-
-    //public Dictionary<int, (int maxClearStage, bool isClear)> GetStageStatusByGSData(GSData gsData)
-    //{
-    //    Dictionary<int, (int maxClearStage, bool isClear)> stageStatus;
-
-    //    JObject stageStatusJsonObject = JsonDataManager.Instance.LoadJson<JObject>(gsData.JSON);
-
-    //    stageStatus = new Dictionary<int, (int maxClearStage, bool isClear)>();
-
-    //    int stage = 1;
-    //    foreach (var stageStatusPair in stageStatusJsonObject)
-    //    {
-    //        stageStatus.Add(stage, (int.Parse(stageStatusPair.Key), bool.Parse(stageStatusPair.Key)));
-    //    }
-
-    //    return stageStatus;
-    //}
 }

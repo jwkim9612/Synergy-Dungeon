@@ -49,19 +49,7 @@ public class Pawn : MonoBehaviour
             return;
         }
 
-        StartCoroutine(Co_Attack());
-        //this.target = target;
-
-        //if (GetAttackSuccessful(target))
-        //{
-        //    if (IsCriticalAttack())
-        //        target.TakeDamage(ability.Attack, true);
-        //    else
-        //        target.TakeDamage(ability.Attack, false);
-        //}
-        //else
-        //    target.PlayMissText();
-
+        StartCoroutine(Co_AttackAndAnimation());
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
@@ -173,6 +161,19 @@ public class Pawn : MonoBehaviour
     {
     }
 
+    public void AttackProcessing()
+    {
+        if (GetAttackSuccessful(target))
+        {
+            if (IsCriticalAttack())
+                target.TakeDamage(ability.Attack, true);
+            else
+                target.TakeDamage(ability.Attack, false);
+        }
+        else
+            target.PlayMissText();
+    }
+
     private void PlayHitText(float damage)
     {
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
@@ -209,7 +210,7 @@ public class Pawn : MonoBehaviour
         StartCoroutine(Co_TakeHitAnimation());
     }
 
-    protected virtual IEnumerator Co_Attack()
+    protected virtual IEnumerator Co_AttackAndAnimation()
     {
         yield return new WaitForEndOfFrame();
     }

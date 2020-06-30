@@ -20,10 +20,12 @@ public class UIDoubleSpeed : MonoBehaviour
         if(currentSpeed == InGameService.DEFAULT_SPEED)
         {
             currentSpeed = InGameService.DOUBLE_SPEED;
+            EnemyService.SetDoubleSpeed();
         }
         else
         {
             currentSpeed = InGameService.DEFAULT_SPEED;
+            EnemyService.SetDefaultSpeed();
         }
 
         ChangeText();
