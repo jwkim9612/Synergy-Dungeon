@@ -183,9 +183,11 @@ public class UICharacter : MonoBehaviour
             while(true)
             {
                 yield return new WaitForEndOfFrame();
-                character.transform.position = Vector2.Lerp(character.transform.position, this.transform.position, 0.05f);
 
-                if(Mathf.Abs((character.transform.position - this.transform.position).y) < 0.01 )
+                var positionToMove = Vector2.Lerp(character.transform.position, this.transform.position, 0.05f);
+                character.transform.position = new Vector3(positionToMove.x, positionToMove.y, InGameService.Z_VALUE_OF_PAWN);
+
+                if (Mathf.Abs((character.transform.position - this.transform.position).y) < 0.01 )
                 {
                     break;
                 }
@@ -197,7 +199,8 @@ public class UICharacter : MonoBehaviour
     {
         if (character != null)
         {
-            character.transform.position = this.transform.position;
+            //character.transform.position = this.transform.position;
+            character.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, InGameService.Z_VALUE_OF_PAWN);
         }
     }
 }

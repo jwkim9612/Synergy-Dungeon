@@ -70,7 +70,9 @@ public class UIEnemy : MonoBehaviour
             while (true)
             {
                 yield return new WaitForEndOfFrame();
-                enemy.transform.position = Vector2.Lerp(enemy.transform.position, this.transform.position, 0.05f);
+
+                var positionToMove = Vector2.Lerp(enemy.transform.position, this.transform.position, 0.05f);
+                enemy.transform.position = new Vector3(positionToMove.x, positionToMove.y, InGameService.Z_VALUE_OF_PAWN);
 
                 if (Mathf.Abs((enemy.transform.position - this.transform.position).y) < 0.01)
                 {
