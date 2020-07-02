@@ -34,9 +34,8 @@ public class BattleStatus : MonoBehaviour
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
-        uiBattleStart.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        uiBattleStart.gameObject.SetActive(false);
+        uiBattleStart.PlayAnimation();
+        yield return new WaitForSeconds(uiBattleStart.playTime + 0.5f);
 
         while (!isCharacterAnnihilation && !isEnemyAnnihilation)
         {
@@ -105,6 +104,7 @@ public class BattleStatus : MonoBehaviour
         }
         else if (isEnemyAnnihilation)
         {
+            yield return new WaitForSeconds(1.0f);
             AllCharactersPlayWinAnimation();
 
             if (StageManager.Instance.IsFinalWave())

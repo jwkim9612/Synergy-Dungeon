@@ -147,6 +147,7 @@ public class SaveManager : MonoSingleton<SaveManager>
                 if (!response.HasErrors)
                 {
                     Debug.Log("Success InGame Data Remove !");
+                    IsLoadedData = false;
                 }
                 else
                 {
@@ -184,9 +185,9 @@ public class SaveManager : MonoSingleton<SaveManager>
 
                     IsLoadedData = true;
 
-                    GameManager.instance.LoadGameAndLoadInGameScene();
                     StageManager.Instance.SetChapterData(data.Chapter);
-                    StageManager.Instance.currentWave = _inGameSaveData.Wave;
+                    StageManager.Instance.SetCurrentWave(_inGameSaveData.Wave);
+                    GameManager.instance.LoadGameAndLoadInGameScene();
                 }
                 else
                 {

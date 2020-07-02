@@ -67,7 +67,19 @@ public class Enemy : Pawn
         yield return new WaitForSeconds(0.3f);
         spriteRenderer.enabled = true;
         yield return new WaitForSeconds(0.3f);
+
+        float time = 0.0f;
+        float fadeTime = 1.0f;
+
+        while(time < fadeTime)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 1.0f - time / fadeTime);
+            time += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
         spriteRenderer.enabled = false;
+
         DestoryPawn();
         yield break;
     }

@@ -8,13 +8,25 @@ public class StageManager : MonoSingleton<StageManager>
 
     public void Initialize()
     {
-        currentWave = 1;
+        if (SaveManager.Instance.IsLoadedData)
+        {
+
+        }
+        else
+        {
+            currentWave = 1;
+        }
     }
 
     public void SetChapterData(int chapter)
     {
         currentChapter = chapter;
         DataBase.Instance.chapterDataSheet.TryGetChapterData(currentChapter, out currentChapterData);
+    }
+
+    public void SetCurrentWave(int wave)
+    {
+        currentWave = wave;
     }
 
     public float GetRelativePercentageByStage()

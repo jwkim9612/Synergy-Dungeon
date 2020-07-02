@@ -30,6 +30,7 @@ public class UIStore : MonoBehaviour
         uiRandomPotionSalesList.Initialize();
         uiObtainedRunesScreen.Initialize();
         purchaseCompletedFloatingText.Initialize();
+        soldOutFloatingText.Initialize();
 
         cheatGoldButton.onClick.AddListener(() =>
         {

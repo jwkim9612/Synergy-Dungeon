@@ -7,13 +7,8 @@ public class UIBattleStart : MonoBehaviour
 {
     [SerializeField] private Text textBattleStart;
 
-    private float defaultSize;
-    void Start()
-    {
-        defaultSize = 60.0f;
-    }
+    public float playTime;
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -21,19 +16,42 @@ public class UIBattleStart : MonoBehaviour
 
     public void PlayAnimation()
     {
+        OnShow();
         StartCoroutine(Co_PlayAnimation());
     }
 
     private IEnumerator Co_PlayAnimation()
     {
-        float time = 2.0f;
-        textBattleStart.transform.localScale = Vector3.one * (defaultSize - time);
-        if(time > 1f)
+        float defaultSize = textBattleStart.transform.localScale.x;
+        float time = 0.0001f;
+        float timePerSection = playTime / 3;
+
+        while(time <= timePerSection)
         {
-            time = 0;
-            
+            textBattleStart.transform.localScale = Vector3.one * (defaultSize / (defaultSize / timePerSection * time));
+            time += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
         }
 
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(timePerSection);
+        
+        while (time >= 0)
+        {
+            textBattleStart.transform.localScale = Vector3.one * (defaultSize / (defaultSize / timePerSection * time));
+            time -= Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        OnHide();
+    }
+
+    private void OnShow()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void OnHide()
+    {
+        gameObject.SetActive(false);
     }
 }
