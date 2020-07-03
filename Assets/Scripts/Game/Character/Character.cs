@@ -170,7 +170,7 @@ public class Character : Pawn
         return false;
     }
 
-    protected override IEnumerator Co_TakeHitAnimation()
+    protected override IEnumerator Co_TakeHitEffect()
     {
         spriteRenderer.color = Color.red;
 

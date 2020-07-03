@@ -27197,6 +27197,7 @@ MonoBehaviour:
   draggableCentral: {fileID: 557020185}
   uiBattleArea: {fileID: 1090360169}
   uiScenarioEvent: {fileID: 1310743448}
+  frontCanvas: {fileID: 1314355035}
 --- !u!4 &1056662528
 Transform:
   m_ObjectHideFlags: 0
@@ -32613,7 +32614,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -212874085
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -10,10 +10,17 @@ public class UIScenarioEvent : MonoBehaviour
 
     private int currentWave;
     private int currentChapter;
+    private int currentStage;
+    private int currentProbability;
     private InGameEvent_ScenarioDataSheet scenarioDataSheet;
 
     public void Initialize()
     {
+        if (SaveManager.Instance.IsLoadedData)
+        {
+            currentStage = StageManager.Instance.currentStage;
+        }
+
         scenarioDataSheet = DataBase.Instance.inGameEvent_ScenarioDataSheet;
         if (scenarioDataSheet == null)
         {
@@ -26,12 +33,15 @@ public class UIScenarioEvent : MonoBehaviour
 
     private void CheckScenarioDataAndSetScenarioEvent()
     {
-        UpdateCurrentWaveAndChapter();
+        UpdateStageData();
 
         if (IsCurrentWaveLessThanScenarioStartingWave())
             return;
 
         if (!IsWaveHasScenarioEvent())
+            return;
+
+        if (!IsProbabilitySufficient())
             return;
 
         SetTitleText();
@@ -41,9 +51,9 @@ public class UIScenarioEvent : MonoBehaviour
 
     public void SetSelectButtonList()
     {
-        for (int i = 0; i < selectButtonList.Count; i++)
+        for (int i = 1; i <= selectButtonList.Count; i++)
         {
-            if (scenarioDataSheet.TryGetScenarioDescripion(currentChapter, currentWave, i + 1, out var description))
+            if (scenarioDataSheet.TryGetScenarioDescripion(currentChapter, currentWave, i, out var description))
             {
                 selectButtonList[i].SetText(description);
                 selectButtonList[i].SetButton(OnHide);
@@ -77,11 +87,18 @@ public class UIScenarioEvent : MonoBehaviour
         Debug.LogError($"Error SetTitleText currentChapter:{currentChapter} currentWave:{currentWave} INDEX_OF_SCENARIO_TITLE:{InGameService.INDEX_OF_SCENARIO_TITLE}");
     }
 
-    private void UpdateCurrentWaveAndChapter()
+    private void UpdateStageData()
     {
         var stageManager = StageManager.Instance;
+
+        if (currentStage != stageManager.currentStage)
+        {
+            currentProbability = 0;
+        }
+
         currentWave = stageManager.currentWave;
         currentChapter = stageManager.currentChapter;
+        currentStage = stageManager.currentStage;
     }
 
     private bool IsCurrentWaveLessThanScenarioStartingWave()
@@ -109,6 +126,23 @@ public class UIScenarioEvent : MonoBehaviour
         }
 
         Debug.LogError("Error IsWaveHasScenarioEvent");
+        return false;
+    }
+
+    private bool IsProbabilitySufficient()
+    {
+        if (scenarioDataSheet.TryGetScenarioProbability(currentChapter, currentWave, InGameService.INDEX_OF_SCENARIO_TITLE, out var probability))
+        {
+            if (probability > currentProbability)
+            {
+                Debug.Log("확률이 부족합니다.");
+                return false;
+            }
+
+            return true;
+        }
+
+        Debug.LogError("Error IsProbabilitySufficient");
         return false;
     }
 }

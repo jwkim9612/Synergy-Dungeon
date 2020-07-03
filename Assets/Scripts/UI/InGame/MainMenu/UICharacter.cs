@@ -159,7 +159,11 @@ public class UICharacter : MonoBehaviour
 
     private void PlayHitParticle()
     {
-        Instantiate(GameManager.instance.particleService.hitParticle, transform);
+        var hitParticle = GameManager.instance.particleService.hitParticle;
+        var frontCanvas = InGameManager.instance.frontCanvas;
+        var particlePosition = new Vector3(transform.position.x, transform.position.y, InGameService.Z_VALUE_OF_PARTICLE);
+
+        Instantiate(hitParticle, particlePosition, transform.rotation, frontCanvas.transform);
     }
 
     public T GetArea<T>()

@@ -53,8 +53,8 @@ public class Enemy : Pawn
 
     protected override void PlayTakeHit()
     {
+        StartCoroutine(Co_TakeHitEffect());
         StartCoroutine(Co_TakeHitAnimation());
-        StartCoroutine(Co_TakeHit());
     }
 
     private IEnumerator Co_DeadAnimation()
@@ -84,7 +84,7 @@ public class Enemy : Pawn
         yield break;
     }
 
-    private IEnumerator Co_TakeHit()
+    private IEnumerator Co_TakeHitAnimation()
     {
         Vector3 defaultPosition = this.transform.position;
         Vector3 knockBackPosition = defaultPosition + new Vector3(EnemyService.KNOCKBACK_DISTANCE, 0, 0);
@@ -101,6 +101,7 @@ public class Enemy : Pawn
             yield return new WaitForEndOfFrame();
         }
 
+        Debug.Log("end");
         yield return new WaitForSeconds(0.5f);
 
         if (isDead)
@@ -109,7 +110,7 @@ public class Enemy : Pawn
         }
     }
 
-    protected override IEnumerator Co_TakeHitAnimation()
+    protected override IEnumerator Co_TakeHitEffect()
     {
         spriteRenderer.material = MaterialService.whiteMaterial;
         yield return new WaitForSeconds(0.05f);

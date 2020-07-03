@@ -13,6 +13,7 @@ public class InGameService : MonoBehaviour
     public const int CAN_BUY_EXP = 1;
 
     public const float Z_VALUE_OF_PAWN = 5.0f;
+    public const float Z_VALUE_OF_PARTICLE = 1.0f;
 
     public const int CRITICAL_DAMAGE_FONT_SIZE = 60;
     public const int DEFAULT_DAMAGE_FONT_SIZE = 40;

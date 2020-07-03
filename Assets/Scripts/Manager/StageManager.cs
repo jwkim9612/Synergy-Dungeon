@@ -4,6 +4,7 @@ public class StageManager : MonoSingleton<StageManager>
 {
     public int currentChapter = 1;
     public int currentWave = 1;
+    public int currentStage = 1;
     public ChapterData currentChapterData = null;
 
     public void Initialize()
@@ -24,9 +25,22 @@ public class StageManager : MonoSingleton<StageManager>
         DataBase.Instance.chapterDataSheet.TryGetChapterData(currentChapter, out currentChapterData);
     }
 
-    public void SetCurrentWave(int wave)
+    public void SetCurrentWaveAndSetCurrentStage(int wave)
     {
         currentWave = wave;
+        SetCurrentStageByCurrentWave(currentWave);
+    }
+
+    public void SetCurrentStageByCurrentWave(int wave)
+    {
+        if (wave <= 3)
+        {
+            currentStage = 1;
+        }
+        else
+        {
+            currentStage = (wave + 1) / 5;
+        }
     }
 
     public float GetRelativePercentageByStage()
@@ -36,9 +50,10 @@ public class StageManager : MonoSingleton<StageManager>
         return currentWave / totalWave;
     }
 
-    public void IncreaseWave(int increaseValue)
+    public void IncreaseWaveAndSetCurrentStage(int increaseValue)
     {
         currentWave = Mathf.Clamp(currentWave + increaseValue, 1, (currentChapterData.TotalWave));
+        SetCurrentStageByCurrentWave(currentWave);
     }
 
     public bool IsFinalWave()

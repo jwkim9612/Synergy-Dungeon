@@ -13,6 +13,7 @@ public class InGameManager : MonoBehaviour
     public DraggableCentral draggableCentral;
     public UIBattleArea uiBattleArea;
     public UIScenarioEvent uiScenarioEvent;
+    public Canvas frontCanvas;
 
     void Awake()
     {

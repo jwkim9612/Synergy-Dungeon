@@ -186,7 +186,7 @@ public class SaveManager : MonoSingleton<SaveManager>
                     IsLoadedData = true;
 
                     StageManager.Instance.SetChapterData(data.Chapter);
-                    StageManager.Instance.SetCurrentWave(_inGameSaveData.Wave);
+                    StageManager.Instance.SetCurrentWaveAndSetCurrentStage(_inGameSaveData.Wave);
                     GameManager.instance.LoadGameAndLoadInGameScene();
                 }
                 else

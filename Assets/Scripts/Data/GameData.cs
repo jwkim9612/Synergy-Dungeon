@@ -162,14 +162,11 @@ public enum RewardCurrency
     RandomRune,
     RandomPotion,
     Relic,
-    Artifact
-}
-
-public enum InGameCurrency
-{
-    None,
+    Artifact,
     Coin,
-    Status
+    Status,
+    RandomArtifactPiece,
+    Nothing
 }
 
 public enum RuneGrade

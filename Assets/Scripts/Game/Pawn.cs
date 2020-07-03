@@ -29,16 +29,9 @@ public class Pawn : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         //OnAttack += PlayAttackAnimation;
-        OnHit += Test;
         OnHit += PlayTakeHit;
 
         defaultMaterial = spriteRenderer.material;
-    }
-
-    public void Test()
-    {
-        var particle = Instantiate(GameManager.instance.particleService.hitParticle, transform);
-        Debug.Log("Particle = " + particle.name);
     }
 
     public void Attack(Pawn target)
@@ -207,7 +200,7 @@ public class Pawn : MonoBehaviour
 
     protected virtual void PlayTakeHit()
     {
-        StartCoroutine(Co_TakeHitAnimation());
+        StartCoroutine(Co_TakeHitEffect());
     }
 
     protected virtual IEnumerator Co_AttackAndAnimation()
@@ -215,7 +208,7 @@ public class Pawn : MonoBehaviour
         yield return new WaitForEndOfFrame();
     }
 
-    protected virtual IEnumerator Co_TakeHitAnimation()
+    protected virtual IEnumerator Co_TakeHitEffect()
     {
         yield return new WaitForEndOfFrame();
     }

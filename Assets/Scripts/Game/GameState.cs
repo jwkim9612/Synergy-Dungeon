@@ -63,7 +63,7 @@ public class GameState : MonoBehaviour
                 }
                 else
                 {
-                    stageManager.IncreaseWave(1);
+                    stageManager.IncreaseWaveAndSetCurrentStage(1);
                     SetInGameState(InGameState.Prepare);
                 }
                 OnComplete();
