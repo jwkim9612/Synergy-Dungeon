@@ -10,7 +10,7 @@ public class ScenarioExcelData
     public string ScenarioType;
     public int ScenarioProbability;
     public string Description;
-    public InGameCurrency CurrencyType;
+    public RewardCurrency CurrencyType;
     public int Amount;
     public string RewardDescription;
 }

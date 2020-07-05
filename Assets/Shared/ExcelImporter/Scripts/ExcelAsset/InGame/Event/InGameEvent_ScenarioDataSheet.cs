@@ -108,4 +108,18 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
         Debug.LogError($"Error TryGetScenarioDescripion chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
         return false;
     }
+
+    public bool TryGetScenarioProbability(int chapterId, int waveId, int scenarioId, out int probability)
+    {
+        probability = 0;
+
+        if(TryGetScenarioData(chapterId, waveId, scenarioId, out var data))
+        {
+            probability = data.ScenarioProbability;
+            return true;
+        }
+
+        Debug.LogError($"Error TryGetScenarioProbability chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
+        return false;
+    }
 }

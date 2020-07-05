@@ -26,7 +26,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_16
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 1
     Name: "\uB9C8\uBC29\uC2AC\uB77C\uC784"
     Attack: 40
@@ -40,7 +40,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 77
     ImagePath: Images/Old Character/Character_28
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 2
     Name: "\uADFC\uC811\uC2AC\uB77C\uC784"
     Attack: 50
@@ -54,7 +54,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_FairyDragon
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 3
     Name: "\uAD81\uC218\uC2AC\uB77C\uC784"
     Attack: 50
@@ -68,7 +68,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 81
     ImagePath: Images/Old Character/Character_Doom
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 4
     Name: "\uBC95\uC0AC\uC2AC\uB77C\uC784"
     Attack: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 5
     Name: "\uBC29\uC5B4\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
@@ -96,7 +96,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 6
     Name: "\uB9C8\uBC29\uD0B9\uC2AC\uB77C\uC784"
     Attack: 50
@@ -110,7 +110,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 7
     Name: "\uADFC\uC811\uD0B9\uC2AC\uB77C\uC784"
     Attack: 60
@@ -124,7 +124,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 8
     Name: "\uAD81\uC218\uD0B9\uC2AC\uB77C\uC784"
     Attack: 60
@@ -138,7 +138,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 82
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 9
     Name: "\uBC95\uC0AC\uD0B9\uC2AC\uB77C\uC784"
     Attack: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 78
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
   - Id: 10
     Name: "\uBB3C\uACE071"
     Attack: 71
@@ -166,4 +166,4 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 71
     ImagePath: Images/Tribe/Logo_HUMAN
-    AnimatorPath: 
+    RuntimeAnimatorControllerPath: 
