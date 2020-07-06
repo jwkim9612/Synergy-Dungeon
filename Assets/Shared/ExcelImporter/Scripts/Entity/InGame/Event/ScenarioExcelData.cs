@@ -13,4 +13,6 @@ public class ScenarioExcelData
     public RewardCurrency CurrencyType;
     public int Amount;
     public string RewardDescription;
+    public Ability ApplyAbility;
+    public int ApplyPercentage;
 }

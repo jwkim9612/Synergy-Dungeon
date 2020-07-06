@@ -15,7 +15,7 @@ public class Pawn : MonoBehaviour
     public string pawnName { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
-    public Ability ability;
+    public AbilityData ability;
     protected long currentHP;
     public SpriteRenderer spriteRenderer;
     public Material defaultMaterial;

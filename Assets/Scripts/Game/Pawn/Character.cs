@@ -21,14 +21,15 @@ public class Character : Pawn
 
     public void SetAbility(CharacterAbilityData characterAbilityData, Origin newOrigin)
     {
-        ability.SetAbility(characterAbilityData);
+        ability = new AbilityData();
+        ability.SetAbilityData(characterAbilityData);
         origin = newOrigin;
 
         ///////////////////////////////////// 룬 능력치 + ///////////////////////////////////////////////
         Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(origin);
         if(rune != null)
         {
-            ability += rune.runeData.Ability;
+            ability += rune.runeData.AbilityData;
             Debug.Log("어빌맅  더하기");
         }
         ///////////////////////////////////// ///////////// ///////////////////////////////////////////////
@@ -66,7 +67,7 @@ public class Character : Pawn
 
     public override void RandomAttack()
     {
-        target = InGameManager.instance.uiBattleArea.battleStatus.GetRandomEnemy();
+        target = InGameManager.instance.backCanvas.uiBattleArea.battleStatus.GetRandomEnemy();
         Attack(target);
     }
 

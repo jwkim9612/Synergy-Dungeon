@@ -50,10 +50,10 @@ public class TribeDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeTribeDatas();
+		GenerateData();
 	}
 
-	private void InitializeTribeDatas()
+	private void GenerateData()
 	{
 		TribeDatas = new Dictionary<Tribe, TribeData>();
 

@@ -88,10 +88,10 @@ public class ChapterDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeChapterDatas();
+		GenerateData();
 	}
 
-	private void InitializeChapterDatas()
+	private void GenerateData()
 	{
 		ChapterDatas = new Dictionary<int, ChapterData>();
 

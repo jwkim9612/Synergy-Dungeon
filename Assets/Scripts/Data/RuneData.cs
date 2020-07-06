@@ -11,7 +11,8 @@ public class RuneData
         Prob = runeExcelData.Prob;
         Description = runeExcelData.Description;
 
-        Ability.SetAbility(runeExcelData);
+        AbilityData = new AbilityData();
+        AbilityData.SetAbilityData(runeExcelData);
 
         Image = Resources.Load<Sprite>(runeExcelData.ImagePath);
     }
@@ -24,7 +25,7 @@ public class RuneData
         Grade = runeData.Grade;
         Prob = runeData.Prob;
         Description = runeData.Description;
-        Ability = runeData.Ability;
+        AbilityData = runeData.AbilityData;
         Image = runeData.Image;
     }
 
@@ -34,6 +35,6 @@ public class RuneData
     public RuneGrade Grade;
     public int Prob;
     public string Description;
-    public Ability Ability;
+    public AbilityData AbilityData;
     public Sprite Image;
 }

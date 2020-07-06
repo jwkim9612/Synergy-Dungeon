@@ -22,7 +22,8 @@ public class Enemy : Pawn
 
     public void SetAbility(EnemyData enemyData)
     {
-        ability.SetAbility(enemyData);
+        ability = new AbilityData();
+        ability.SetAbilityData(enemyData);
 
         currentHP = ability.Health;
     }
@@ -127,7 +128,7 @@ public class Enemy : Pawn
 
     public override void RandomAttack()
     {
-        target = InGameManager.instance.uiBattleArea.battleStatus.GetRandomCharacter();
+        target = InGameManager.instance.backCanvas.uiBattleArea.battleStatus.GetRandomCharacter();
         Attack(target);
     }
 }

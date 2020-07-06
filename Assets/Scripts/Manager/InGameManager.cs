@@ -11,9 +11,8 @@ public class InGameManager : MonoBehaviour
     public PlayerState playerState;
     public GameState gameState;
     public DraggableCentral draggableCentral;
-    public UIBattleArea uiBattleArea;
-    public UIScenarioEvent uiScenarioEvent;
-    public Canvas frontCanvas;
+    public BackCanvas backCanvas;
+    public FrontCanvas frontCanvas;
 
     void Awake()
     {
@@ -42,7 +41,7 @@ public class InGameManager : MonoBehaviour
         probabilitySystem.Initialize();
         combinationSystem.Initialize();
         synergySystem.Initialize();
-        uiScenarioEvent.Initialize();
+        frontCanvas.Initialize();
         InGameService.Initialize();
     }
 }

@@ -50,10 +50,10 @@ public class OriginDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeOriginDatas();
+		GenerateData();
 	}
 
-	private void InitializeOriginDatas()
+	private void GenerateData()
 	{
 		OriginDatas = new Dictionary<Origin, OriginData>();
 

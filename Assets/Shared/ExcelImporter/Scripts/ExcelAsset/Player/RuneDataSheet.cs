@@ -37,10 +37,10 @@ public class RuneDataSheet : ScriptableObject
 
     public void Initialize()
     {
-        InitializeRuneDatas();
+        GenerateData();
     }
 
-    private void InitializeRuneDatas()
+    private void GenerateData()
     {
         RuneDatas = new Dictionary<int, RuneData>();
 

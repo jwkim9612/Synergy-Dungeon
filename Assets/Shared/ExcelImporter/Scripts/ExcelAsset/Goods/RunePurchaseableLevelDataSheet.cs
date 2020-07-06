@@ -51,10 +51,10 @@ public class RunePurchaseableLevelDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeRunePurchaseableLevelDatas();
+		GenerateData();
 	}
 
-	private void InitializeRunePurchaseableLevelDatas()
+	private void GenerateData()
 	{
 		RunePurchaseableLevelDatas = new Dictionary<int, RunePurchaseableLevelData>();
 

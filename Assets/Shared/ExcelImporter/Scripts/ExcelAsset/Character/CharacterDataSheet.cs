@@ -135,10 +135,10 @@ public class CharacterDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeCharacterDatas();
+		GenerateData();
 	}
 
-	private void InitializeCharacterDatas()
+	private void GenerateData()
 	{
 		CharacterDatas = new Dictionary<int, CharacterData>();
 

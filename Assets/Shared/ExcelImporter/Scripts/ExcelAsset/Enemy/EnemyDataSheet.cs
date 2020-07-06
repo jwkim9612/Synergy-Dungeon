@@ -25,10 +25,10 @@ public class EnemyDataSheet : ScriptableObject
 
 	public void Initialize()
 	{
-		InitializeEnemyDatas();
+		GenerateData();
 	}
 
-	private void InitializeEnemyDatas()
+	private void GenerateData()
 	{
 		EnemyDatas = new Dictionary<int, EnemyData>();
 

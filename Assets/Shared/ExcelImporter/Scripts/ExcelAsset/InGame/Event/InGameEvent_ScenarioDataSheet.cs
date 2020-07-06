@@ -13,17 +13,17 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
 
     public void Initialize()
     {
-        InitializeScenarioDatas();
+        GenerateData();
     }
 
-    private void InitializeScenarioDatas()
+    private void GenerateData()
     {
         AllScenarioDatas = new Dictionary<int, Dictionary<int, List<ScenarioData>>>();
 
-        InitializeChapterOneScenarioDatas();
+        GenerateChapterOneScenarioDatas();
     }
 
-    private void InitializeChapterOneScenarioDatas()
+    private void GenerateChapterOneScenarioDatas()
     {
         int NumOfChapter = 1;
         ScenarioDatas = new Dictionary<int, List<ScenarioData>>();

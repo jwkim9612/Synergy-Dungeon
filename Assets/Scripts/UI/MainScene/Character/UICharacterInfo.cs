@@ -90,7 +90,7 @@ public class UICharacterInfo : UIControl
         Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(characterData.Origin);
         if (rune != null)
         {
-            var abilityList = rune.runeData.Ability.GetAbilityList();
+            var abilityList = rune.runeData.AbilityData.GetAbilityDataList();
 
             for (int i = 0; i < abilityList.Count; ++i)
             {

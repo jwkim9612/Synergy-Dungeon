@@ -15,7 +15,7 @@ MonoBehaviour:
   ScenarioExcelDatas:
   - ChapterId: 1
     StageId: 2
-    WaveId: 1
+    WaveId: 4
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -25,9 +25,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 1
+    WaveId: 4
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 1000
@@ -35,9 +37,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 1
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 1
+    WaveId: 4
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -45,9 +49,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 2
+    WaveId: 5
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -57,9 +63,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 2
+    WaveId: 5
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 1000
@@ -67,9 +75,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 1
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 2
+    WaveId: 5
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -77,9 +87,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 3
+    WaveId: 6
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -89,9 +101,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 3
+    WaveId: 6
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -100,9 +114,11 @@ MonoBehaviour:
     Amount: 2
     RewardDescription: "2\uC6E8\uC774\uBE0C \uC544\uAD70 \uC804\uCCB4 \uCD5C\uB300\uCCB4\uB825
       10% \uB2E4\uC6B4"
+    ApplyAbility: 3
+    ApplyPercentage: 90
   - ChapterId: 1
     StageId: 2
-    WaveId: 3
+    WaveId: 6
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 2000
@@ -110,9 +126,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 4
+    WaveId: 7
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -122,9 +140,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 4
+    WaveId: 7
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 1000
@@ -133,9 +153,11 @@ MonoBehaviour:
     Amount: 2
     RewardDescription: "2\uC6E8\uC774\uBE0C \uC544\uAD70 \uC804\uCCB4 \uCD5C\uB300\uCCB4\uB825
       10% \uC0C1\uC2B9"
+    ApplyAbility: 3
+    ApplyPercentage: 110
   - ChapterId: 1
     StageId: 2
-    WaveId: 4
+    WaveId: 7
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -143,9 +165,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 5
+    WaveId: 8
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 5000
@@ -155,9 +179,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 5
+    WaveId: 8
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -166,9 +192,11 @@ MonoBehaviour:
     Amount: 1
     RewardDescription: "\uC544\uD2F0\uD329\uD2B8 \uC870\uAC01 \uD68D\uB4DD, \uC5C5\uC801
       \uB2EC\uC131! (\uBB34\uC9C0\uAC1C \uC2AC\uB77C\uC784\uC758 \uC874\uC7AC)"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 2
-    WaveId: 5
+    WaveId: 8
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -176,9 +204,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 6
+    WaveId: 9
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 10000
@@ -188,9 +218,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 6
+    WaveId: 9
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
@@ -198,9 +230,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: "\uBB50\uAC00 \uBB38\uC81C\uC57C, say something."
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 6
+    WaveId: 9
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
@@ -209,9 +243,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: "\uC65C \uADF8\uB798?"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 6
+    WaveId: 9
     ScenarioId: 3
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -219,9 +255,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 7
+    WaveId: 10
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 10000
@@ -230,9 +268,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 7
+    WaveId: 10
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
@@ -240,9 +280,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -1
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 7
+    WaveId: 10
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -250,9 +292,11 @@ MonoBehaviour:
     CurrencyType: 10
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 8
+    WaveId: 11
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 10000
@@ -261,9 +305,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 8
+    WaveId: 11
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
@@ -271,9 +317,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -1
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 8
+    WaveId: 11
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -281,9 +329,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 9
+    WaveId: 12
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 10000
@@ -292,9 +342,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 9
+    WaveId: 12
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
@@ -302,9 +354,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -1
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 9
+    WaveId: 12
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -312,9 +366,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 10
+    WaveId: 13
     ScenarioId: 0
     ScenarioType: SumAndResult
     ScenarioProbability: 10000
@@ -324,9 +380,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 10
+    WaveId: 13
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -334,9 +392,11 @@ MonoBehaviour:
     CurrencyType: 9
     Amount: 3
     RewardDescription: "\uC544\uD2F0\uD329\uD2B8 \uC870\uAC01 3\uAC1C \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 3
-    WaveId: 10
+    WaveId: 13
     ScenarioId: 2
     ScenarioType: SumAndResult
     ScenarioProbability: 0
@@ -344,9 +404,11 @@ MonoBehaviour:
     CurrencyType: 8
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 11
+    WaveId: 14
     ScenarioId: 0
     ScenarioType: FixResult
     ScenarioProbability: 10000
@@ -355,9 +417,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 11
+    WaveId: 14
     ScenarioId: 1
     ScenarioType: FixResult
     ScenarioProbability: 10000
@@ -365,9 +429,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -1
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 11
+    WaveId: 14
     ScenarioId: 2
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -375,9 +441,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: "\uAF5D"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 12
+    WaveId: 15
     ScenarioId: 0
     ScenarioType: FixResult
     ScenarioProbability: 10000
@@ -386,9 +454,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 12
+    WaveId: 15
     ScenarioId: 1
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -396,9 +466,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 2
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 12
+    WaveId: 15
     ScenarioId: 2
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -406,9 +478,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 2
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 12
+    WaveId: 15
     ScenarioId: 3
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -416,9 +490,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -1
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 12
+    WaveId: 15
     ScenarioId: 4
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -426,9 +502,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 1
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 13
+    WaveId: 16
     ScenarioId: 0
     ScenarioType: FixResult
     ScenarioProbability: 10000
@@ -437,9 +515,11 @@ MonoBehaviour:
     CurrencyType: 0
     Amount: 0
     RewardDescription: 
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 13
+    WaveId: 16
     ScenarioId: 1
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -447,9 +527,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 3
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 13
+    WaveId: 16
     ScenarioId: 2
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -457,9 +539,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: -2
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 13
+    WaveId: 16
     ScenarioId: 3
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -467,9 +551,11 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 3
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0
   - ChapterId: 1
     StageId: 4
-    WaveId: 13
+    WaveId: 16
     ScenarioId: 4
     ScenarioType: FixResult
     ScenarioProbability: 0
@@ -477,3 +563,5 @@ MonoBehaviour:
     CurrencyType: 1
     Amount: 2
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
+    ApplyAbility: 0
+    ApplyPercentage: 0

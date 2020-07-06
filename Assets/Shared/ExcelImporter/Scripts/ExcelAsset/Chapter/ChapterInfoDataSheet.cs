@@ -70,13 +70,13 @@ public class ChapterInfoDataSheet : ScriptableObject
 	{
 		AllChapterInfoDatas = new Dictionary<int, Dictionary<int, ChapterInfoData>>();
 
-		InitializeChapterOneInfoDatas();
+		GenerateData();
 		//InitializeEnemyIds();
 		//InitializeFrontIds();
 		//InitializeBackIds();
 	}
 
-	private void InitializeChapterOneInfoDatas()
+	private void GenerateData()
 	{
 		ChapterInfoDatas = new Dictionary<int, ChapterInfoData>();
 

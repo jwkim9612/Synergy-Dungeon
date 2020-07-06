@@ -27,6 +27,7 @@ public class InGameService : MonoBehaviour
     /// 시나리오
     public const int INDEX_OF_SCENARIO_TITLE = 0;
     public const int NUMBER_OF_SCENARIO_STARTING_WAVE = 4;
+    public const float TITLE_READ_SPEED = 0.05f;
     /////////////////
 
     public static Character defaultCharacter;

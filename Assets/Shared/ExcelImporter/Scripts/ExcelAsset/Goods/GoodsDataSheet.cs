@@ -25,10 +25,10 @@ public class GoodsDataSheet : ScriptableObject
 
     public void Initialize()
     {
-        InitializeGoodsDatas();
+        GenerateData();
     }
 
-    private void InitializeGoodsDatas()
+    private void GenerateData()
     {
         GoodsDatas = new Dictionary<int, GoodsData>();
 

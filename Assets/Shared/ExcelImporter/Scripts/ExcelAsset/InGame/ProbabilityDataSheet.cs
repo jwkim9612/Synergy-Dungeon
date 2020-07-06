@@ -25,10 +25,10 @@ public class ProbabilityDataSheet : ScriptableObject
 
     public void Initialize()
     {
-        InitializeProbabilityDatasDatas();
+        GenerateData();
     }
 
-    private void InitializeProbabilityDatasDatas()
+    private void GenerateData()
     {
         ProbabilityDatas = new Dictionary<int, ProbabilityData>();
 
