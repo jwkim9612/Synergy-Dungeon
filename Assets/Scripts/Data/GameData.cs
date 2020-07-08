@@ -90,6 +90,7 @@ public enum RewardCurrency
     Coin,
     Status,
     RandomArtifactPiece,
+    Heart,
     Nothing
 }
 

@@ -10,13 +10,22 @@ public class UIScenarioEventButton : MonoBehaviour
     [SerializeField] private Text descriptionText;
     [SerializeField] private UIReward uiReward = null;
     private ScenarioData scenarioData;
+    public ScenarioEvent scenarioEvent;
 
     private void Start()
     {
         button.onClick.AddListener(() =>
         {
+            scenarioEvent.IncreaseProbability(scenarioData);
 
-            SetRewardAndShowReward();
+            if(EventProcessing())
+            {
+                SetRewardAndShowReward();
+            }
+            else
+            {
+                GetComponentInParent<UIScenarioEvent>().gameObject.SetActive(false);
+            }
         });
     }
 
@@ -62,7 +71,11 @@ public class UIScenarioEventButton : MonoBehaviour
         uiReward.OnShow();
     }
 
-    private void Test()
+    /// <summary>
+    /// 이벤트 처리
+    /// </summary>
+    /// <returns>이벤트 보상이 있는가</returns>
+    private bool EventProcessing()
     {
         switch (scenarioData.CurrencyType)
         {
@@ -88,9 +101,13 @@ public class UIScenarioEventButton : MonoBehaviour
             case RewardCurrency.RandomArtifactPiece:
                 break;
             case RewardCurrency.Nothing:
-                break;
+                return false;
             default:
                 break;
         }
+
+        return true;
     }
+
+
 }

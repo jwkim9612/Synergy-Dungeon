@@ -182,33 +182,33 @@ MonoBehaviour:
     RewardAmount: 0
     ImagePath: 
   - Id: 25
-    Name: "\uACE8\uB4DC 100"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uACE8\uB4DC \uC8FC\uBA38\uB2C8"
+    PurchaseCurrency: 2
+    PurchasePrice: 10
+    RewardCurrency: 1
+    RewardAmount: 100
+    ImagePath: Images/Goods/Gold1
   - Id: 26
-    Name: "\uACE8\uB4DC 500"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uACE8\uB4DC \uBC14\uAD6C\uB2C8"
+    PurchaseCurrency: 2
+    PurchasePrice: 50
+    RewardCurrency: 1
+    RewardAmount: 500
+    ImagePath: Images/Goods/Gold2
   - Id: 27
-    Name: "\uACE8\uB4DC 1000"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uACE8\uB4DC \uC218\uB808"
+    PurchaseCurrency: 2
+    PurchasePrice: 100
+    RewardCurrency: 1
+    RewardAmount: 1000
+    ImagePath: Images/Goods/Gold3
   - Id: 28
-    Name: "\uACE8\uB4DC 10000"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uACE8\uB4DC \uB354\uBBF8"
+    PurchaseCurrency: 2
+    PurchasePrice: 1000
+    RewardCurrency: 1
+    RewardAmount: 10000
+    ImagePath: Images/Goods/Gold4
   - Id: 29
     Name: "\uBCF4\uC11D 10"
     PurchaseCurrency: 0
@@ -238,30 +238,30 @@ MonoBehaviour:
     RewardAmount: 0
     ImagePath: 
   - Id: 33
-    Name: "\uD558\uD2B8 1"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uD558\uD2B8 "
+    PurchaseCurrency: 2
+    PurchasePrice: 10
+    RewardCurrency: 10
+    RewardAmount: 1
+    ImagePath: Images/Goods/Heart1
   - Id: 34
-    Name: "\uD558\uD2B8 2"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uD558\uD2B8 \uC8FC\uBA38\uB2C8"
+    PurchaseCurrency: 2
+    PurchasePrice: 50
+    RewardCurrency: 10
+    RewardAmount: 5
+    ImagePath: Images/Goods/Heart2
   - Id: 35
-    Name: "\uD558\uD2B8 3"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uD558\uD2B8 \uBC14\uAD6C\uB2C8"
+    PurchaseCurrency: 2
+    PurchasePrice: 100
+    RewardCurrency: 10
+    RewardAmount: 10
+    ImagePath: Images/Goods/Heart3
   - Id: 36
-    Name: "\uD558\uD2B8 4"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uD558\uD2B8 \uC218\uB808"
+    PurchaseCurrency: 2
+    PurchasePrice: 1000
+    RewardCurrency: 10
+    RewardAmount: 100
+    ImagePath: Images/Goods/Heart4

@@ -16,11 +16,19 @@ public class UIScenarioEvent : MonoBehaviour
         scenarioEvent = new ScenarioEvent();
         scenarioEvent.Initialize();
 
+        foreach (var selectButton in selectButtonList)
+        {
+            selectButton.scenarioEvent = this.scenarioEvent;
+        }
+
         InGameManager.instance.gameState.OnPrepare += CheckScenarioDataAndSetScenarioEvent;
     }
 
     private void CheckScenarioDataAndSetScenarioEvent()
     {
+        OnShow();
+        main.SetActive(false);
+
         scenarioEvent.UpdateStageData();
         if (scenarioEvent.HasScenarioData())
         {
@@ -35,7 +43,7 @@ public class UIScenarioEvent : MonoBehaviour
         yield return new WaitForSeconds(animationTime);
         
         var activatedSelectButtonList = SetSelectButtonListAndGetSelectButtonList();
-        main.SetActive(true);
+        OnShowMainAndScenario();
 
         ////////////////////////
         titleText.text = "";
@@ -82,9 +90,9 @@ public class UIScenarioEvent : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void OnHideWithMain()
+    public void OnShowMainAndScenario()
     {
-        gameObject.SetActive(false);
-        main.SetActive(false);
+        main.SetActive(true);
+        scenario.SetActive(true);
     }
 }

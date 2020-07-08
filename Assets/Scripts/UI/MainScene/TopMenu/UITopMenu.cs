@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UITopMenu : MonoBehaviour
 {
-    [SerializeField] private UIHeart uiHeart = null;
+    public UIHeart uiHeart = null;
     [SerializeField] private UIGold uiGold = null;
     [SerializeField] private UIDiamond uiDiamond = null;
 

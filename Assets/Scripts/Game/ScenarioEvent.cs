@@ -34,9 +34,16 @@ public class ScenarioEvent
             currentProbability = 0;
         }
 
+        Debug.Log(currentProbability + "= probability");
+
         currentWave = stageManager.currentWave;
         currentChapter = stageManager.currentChapter;
         currentStage = stageManager.currentStage;
+    }
+
+    public void IncreaseProbability(ScenarioData scenarioData)
+    {
+        currentProbability += scenarioData.ScenarioProbability;
     }
 
     public string GetTitleText()

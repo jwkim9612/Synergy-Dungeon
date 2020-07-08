@@ -19,10 +19,10 @@ public class UIBattlefield : MonoBehaviour
         playButton.onClick.AddListener(() => {
             // 테스트를 위해 하트 소모 안하게 바꿈.
             // 나중에 밑에 3줄을 지우고 UseHeart 주석을 지워주면 됨.
-            StageManager.Instance.SetChapterData(selectedChapter);
-            StageManager.Instance.Initialize();
-            SceneManager.LoadScene("InGameScene");
-            //UseHeart();
+            //StageManager.Instance.SetChapterData(selectedChapter);
+            //StageManager.Instance.Initialize();
+            //SceneManager.LoadScene("InGameScene");
+            UseHeart();
         });
 
         UpdateChapterInfo();

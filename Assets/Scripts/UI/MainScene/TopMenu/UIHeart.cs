@@ -25,9 +25,10 @@ public class UIHeart : MonoBehaviour
                 if (!response.HasErrors)
                 {
                     long heart = (long)(response.ScriptData.GetLong("Heart"));
+                    long ExtraHearts = (long)(response.ScriptData.GetLong("ExtraHearts"));
                     long remainingTime = (long)(response.ScriptData.GetLong("RemainingTime"));
 
-                    SetHeart(heart);
+                    SetHeart(heart, ExtraHearts);
                     this.remainingTime = remainingTime;
 
                     if (heart < 5)
@@ -43,22 +44,31 @@ public class UIHeart : MonoBehaviour
             });
     }
 
-    private void SetHeart(long heart)
+    private void SetHeart(long heart, long extraHearts)
     {
-        if(heart == 0)
+        //if(heart == 0)
+        //{
+        //   //image.color = Color.black;
+        //    heartText.text = "";
+        //}
+        //else if(heart == 1)
+        //{
+        //    //image.color = Color.red;
+        //    heartText.text = "";
+        //}
+        //else
+        //{
+        //    //image.color = Color.red;
+        //    heartText.text = "" + heart;
+        //}
+
+        if(extraHearts > 0)
         {
-            image.color = Color.black;
-            heartText.text = "";
-        }
-        else if(heart == 1)
-        {
-            image.color = Color.red;
-            heartText.text = "";
+            heartText.text = $"{heart}+{extraHearts}";
         }
         else
         {
-            image.color = Color.red;
-            heartText.text = "" + heart;
+            heartText.text = $"{heart}";
         }
     }
 

@@ -11,8 +11,26 @@ public class UIGoldSalesList : MonoBehaviour
     {
         uiGoldGoodsList = GetComponentsInChildren<UIAmountRequiredGoods>().ToList();
 
-        //uiGoldGoodsList[0].SetUIGoods(DataBase.Instance.goodsDataSheet.GoodsDatas[GoodsService.FIRST_GOLD_SALES_ID], GoodsService.FIRST_GOLD_SALES_ID);
-        //uiGoldGoodsList[1].SetUIGoods(DataBase.Instance.goodsDataSheet.GoodsDatas[GoodsService.SECOND_GOLD_SALES_ID], GoodsService.SECOND_GOLD_SALES_ID);
-        //uiGoldGoodsList[2].SetUIGoods(DataBase.Instance.goodsDataSheet.GoodsDatas[GoodsService.THIRD_GOLD_SALES_ID], GoodsService.THIRD_GOLD_SALES_ID);
+        SetUIGoldGoodsList();
+    }
+
+    public void SetUIGoldGoodsList()
+    {
+        var goldSalesIdList = GoodsService.GOLD_SALES_ID_LIST;
+
+        var goodsDataSheet = DataBase.Instance.goodsDataSheet;
+        if (goodsDataSheet == null)
+        {
+            Debug.LogError("Error goodsDataSheet is null");
+            return;
+        }
+
+        for (int i = 0; i < goldSalesIdList.Count; ++i)
+        {
+            if (goodsDataSheet.TryGetGoodsData(goldSalesIdList[i], out var goodsData))
+            {
+                uiGoldGoodsList[i].SetUIGoods(goodsData, goldSalesIdList[i]);
+            }
+        }
     }
 }

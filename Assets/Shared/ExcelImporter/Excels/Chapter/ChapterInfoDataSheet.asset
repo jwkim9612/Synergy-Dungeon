@@ -50,49 +50,49 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 6
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 7
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 8
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 9
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 10
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 1,1,1,1
+    EnemyIds: 1
     FrontIds: 1
-    BackIds: 1,2,3
+    BackIds: 
   - ChapterId: 1
     WaveId: 11
     StageId: 3

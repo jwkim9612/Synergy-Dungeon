@@ -7,6 +7,7 @@ public class MainManager : MonoBehaviour
     public UIAskGoToStore uiAskGoToStore = null;
     public UIIllustratedBook uiIllustratedBook = null;
     public UIStore uiStore = null;
+    public UITopMenu uiTopMenu = null;
     [SerializeField] private GameObject connecting = null;
 
     void Awake()
