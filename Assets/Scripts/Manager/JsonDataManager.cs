@@ -1,8 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using LitJson;
+using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
 
+[Serializable]
 public class JsonDataManager : MonoSingleton<JsonDataManager>
 {
     public void Initialize()
@@ -21,7 +23,7 @@ public class JsonDataManager : MonoSingleton<JsonDataManager>
 
     public string ObjectToJson(object obj)
     {
-        return JsonConvert.SerializeObject(obj);
+        return JsonMapper.ToJson(obj);
     }
 
     public T LoadJsonFile<T>(string loadPath, string fileName)
@@ -38,11 +40,11 @@ public class JsonDataManager : MonoSingleton<JsonDataManager>
         fileStream.Close();
 
         string jsonData = Encoding.UTF8.GetString(data);
-        return JsonConvert.DeserializeObject<T>(jsonData);
+        return JsonMapper.ToObject<T>(jsonData);
     }
 
     public T LoadJson<T>(string String)
     {
-        return JsonConvert.DeserializeObject<T>(String);
+        return JsonMapper.ToObject<T>(String);
     }
 }

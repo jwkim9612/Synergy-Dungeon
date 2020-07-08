@@ -1,6 +1,6 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
-using Newtonsoft.Json.Linq;
+using LitJson;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
     private int rewardAmount;
     private int rewardId;
     private List<RuneGrade> randomlyPickedRuneGradeList;
-    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }  
+    public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }
 
     public void Initialize()
     {
@@ -144,7 +144,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
                        var strGradeList = response.ScriptData.GetStringList("RuneGradeList");
 
-                       foreach(var a in strGradeList)
+                       foreach (var a in strGradeList)
                        {
                            Debug.Log(a);
                        }
@@ -281,21 +281,14 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 
     private void InitializeRuneOnSalesData(List<int> runeIdList, bool isResetOnMainMenu = false)
     {
-        //List<int> amount = new List<int>();
-        //for(int i = 0; i < aa.Count; ++i)
-        //{
-        //    amount.Add(DataBase.Instance.runeDataSheet.RuneDatas[aa[i]].Id);
-        //}
-
         new LogEventRequest()
            .SetEventKey("InitializeRuneOnSalesData")
            .SetEventAttribute("RuneOnSalesIds", runeIdList)
-           //.SetEventAttribute("RuneOnSalesAmounts", amount)
            .Send((response) =>
            {
                if (!response.HasErrors)
                {
-                   if(isResetOnMainMenu)
+                   if (isResetOnMainMenu)
                    {
                        LoadRuneOnSalesDataAndInitializeUIRuneOnSalesList();
                    }
@@ -318,32 +311,32 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            .SetEventKey("LoadRuneOnSalesData")
            .Send((response) =>
            {
-           if (!response.HasErrors)
-           {
-               bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-               if (result)
+               if (!response.HasErrors)
                {
-                   GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
-                   JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       Debug.Log("1");
+                       GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
+                       Debug.Log("2");
+                       //JsonData runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
+                       JsonData runeOnSalesListJsonObject = new JsonData("");
+                       Debug.Log("3");
+                       ////////////////////////////// 이 사이에서 에러.
 
+                       runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
+                       Debug.Log("4");
+                       /////////////////////////////
                        runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
-
-                       foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
+                       Debug.Log("5");
+                       for (int i = 0; i < runeOnSalesListJsonObject.Count; i++)
                        {
-                           JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesListPair.Value.ToString());
-
-                           int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
                            int id = 0;
                            bool isSoldOut = false;
-                           foreach (var runeOnSalesPair in runeOnSalesJsonObject)
-                           {
-                               if (index == idIndex)
-                                   id = int.Parse(runeOnSalesPair.Value.ToString());
-                               else if (index == isSoldOutIndex)
-                                   isSoldOut = (bool)(runeOnSalesPair.Value);
 
-                               ++index;
-                           }
+                           id = int.Parse(runeOnSalesListJsonObject[i]["id"].ToString());
+                           isSoldOut = (bool)(runeOnSalesListJsonObject[i]["isSoldOut"]);
+
                            runeOnSalesList.Add((id, isSoldOut));
                        }
                    }
@@ -368,29 +361,27 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            {
                if (!response.HasErrors)
                {
+                   Debug.Log("1");
                    GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
-                   JObject runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesScriptDataList.JSON);
+                   JsonData runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
 
                    runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
 
-                   foreach (var runeOnSalesListPair in runeOnSalesListJsonObject)
+                   Debug.Log("2");
+                   for (int i = 0; i < runeOnSalesListJsonObject.Count; i++)
                    {
-                       JObject runeOnSalesJsonObject = JsonDataManager.Instance.LoadJson<JObject>(runeOnSalesListPair.Value.ToString());
-
-                       int index = 0; int idIndex = 0; int isSoldOutIndex = 1;
+                       Debug.Log("3");
                        int id = 0;
                        bool isSoldOut = false;
-                       foreach (var runeOnSalesPair in runeOnSalesJsonObject)
-                       {
-                           if (index == idIndex)
-                               id = int.Parse(runeOnSalesPair.Value.ToString());
-                           else if (index == isSoldOutIndex)
-                               isSoldOut = (bool)(runeOnSalesPair.Value);
 
-                           ++index;
-                       }
+                       id = int.Parse(runeOnSalesListJsonObject[i]["id"].ToString());
+                       isSoldOut = (bool)(runeOnSalesListJsonObject[i]["isSoldOut"]);
+
                        runeOnSalesList.Add((id, isSoldOut));
+                       Debug.Log("4");
                    }
+                   Debug.Log("5");
+
 
                    MainManager.instance.uiStore.uiRuneOnSalesList.Initialize();
                    Debug.Log("runeslaes 초기화 완료");
@@ -414,8 +405,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    List<string> runeOnSalesGradeListStr = response.ScriptData.GetStringList("RuneOnSalesGradeList");
                    List<RuneGrade> runeOnSalesGradeList = RuneService.stringGradeListToRuneGradeList(runeOnSalesGradeListStr);
                    List<int> runeIdList = RuneService.GetRandomIdListByRuneGradeList(runeOnSalesGradeList);
-                   
-                   if(isResetOnMainMenu)
+
+                   if (isResetOnMainMenu)
                    {
                        InitializeRuneOnSalesData(runeIdList, true);
                    }

@@ -1,7 +1,5 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDataManager : MonoSingleton<PlayerDataManager>

@@ -1,6 +1,7 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
-using Newtonsoft.Json;
+using LitJson;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -14,6 +15,8 @@ public class SaveManager : MonoSingleton<SaveManager>
     private InGameSaveData _inGameSaveData;
     public InGameSaveData inGameSaveData { get { return _inGameSaveData; } }
     public bool IsLoadedData { get; set; }
+    
+    [SerializeField]
     public List<int> equippedRuneIdsSaveData;
     string equippedRuneIdsSaveDataPath;
 
@@ -90,7 +93,7 @@ public class SaveManager : MonoSingleton<SaveManager>
         fileStream.Close();
 
         string jsonData = Encoding.UTF8.GetString(data);
-        equippedRuneIdsSaveData = JsonConvert.DeserializeObject<List<int>>(jsonData);
+        equippedRuneIdsSaveData = JsonMapper.ToObject<List<int>>(jsonData);
         return true;
     }
 
@@ -175,8 +178,8 @@ public class SaveManager : MonoSingleton<SaveManager>
                         Coin = (int)scriptData.GetInt("InGameCoin"),
                         Level = (int)scriptData.GetInt("InGameLevel"),
                         Exp = (int)scriptData.GetInt("InGameExp"),
-                        CharacterAreaInfoList = JsonConvert.DeserializeObject<List<CharacterInfo>>(scriptData.GetString("InGameCharacterAreaInfoList")),
-                        PrepareAreaInfoList = JsonConvert.DeserializeObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList"))
+                        CharacterAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGameCharacterAreaInfoList")),
+                        PrepareAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList"))
                     };
 
                     _inGameSaveData = data;

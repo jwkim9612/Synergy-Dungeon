@@ -47,8 +47,6 @@ public class UIStore : MonoBehaviour
         });
 
         var aa = GetComponentsInChildren<UIGoods>().ToList();
-
-        Debug.Log($"aa = count = {aa.Count}");
     }
 
     public void ShowBeingPurchase()

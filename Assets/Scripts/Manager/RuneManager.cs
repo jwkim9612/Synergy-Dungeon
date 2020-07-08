@@ -1,6 +1,6 @@
 ﻿using GameSparks.Api.Requests;
 using GameSparks.Core;
-using Newtonsoft.Json.Linq;
+using SimpleJson2;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -110,7 +110,8 @@ public class RuneManager : MonoSingleton<RuneManager>
                     if(result)
                     {
                         GSData ownedRuneScriptData = response.ScriptData.GetGSData("OwnedRuneData");
-                        JObject ownedRuneJsonObject = JsonDataManager.Instance.LoadJson<JObject>(ownedRuneScriptData.JSON);
+                        //JObject ownedRuneJsonObject = JsonDataManager.Instance.LoadJson<JObject>(ownedRuneScriptData.JSON);
+                        JsonObject ownedRuneJsonObject = JsonDataManager.Instance.LoadJson<JsonObject>(ownedRuneScriptData.JSON);
 
                         ownedRunes = new Dictionary<int, int>();
                         foreach (var ownedRunePair in ownedRuneJsonObject)
