@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GameSparks.Api.Requests;
+using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MainManager : MonoBehaviour
     public UIIllustratedBook uiIllustratedBook = null;
     public UIStore uiStore = null;
     public UITopMenu uiTopMenu = null;
+    public AskInGameContinue askInGameContinue = null;
     [SerializeField] private GameObject connecting = null;
 
     void Awake()
@@ -28,6 +30,7 @@ public class MainManager : MonoBehaviour
         UIManager.Instance.SetCanEscape(true);
 
         uiIllustratedBook.Initialize();
+        SaveManager.Instance.CheckHasInGameData();
     }
 
     public void ShowConnecting()
@@ -38,6 +41,10 @@ public class MainManager : MonoBehaviour
     public void HideConnecting()
     {
         connecting.SetActive(false);
+    }
 
+    public void ShowAskInGameContinue()
+    {
+        askInGameContinue.gameObject.SetActive(true);
     }
 }

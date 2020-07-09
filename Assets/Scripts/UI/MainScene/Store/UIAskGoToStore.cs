@@ -14,6 +14,7 @@ public class UIAskGoToStore : UIControl
     [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
     [SerializeField] private RectTransform goldGoods = null;
     [SerializeField] private RectTransform diamondGoods = null;
+    [SerializeField] private RectTransform HeartGoods = null;
     private RectTransform target;
 
     private void Start()
@@ -44,6 +45,11 @@ public class UIAskGoToStore : UIControl
                 titleText.text = "보석 부족!";
                 contentText.text = "보석이 부족합니다. 상점에서 더 구매하세요!";
                 target = diamondGoods;
+                break;
+            case PurchaseCurrency.Heart:
+                titleText.text = "하트 부족!";
+                contentText.text = "하트가 부족합니다. 상점에서 더 구매하세요!";
+                target = HeartGoods;
                 break;
             default:
                 Debug.LogError("Error UIAskGoToStore SetText");

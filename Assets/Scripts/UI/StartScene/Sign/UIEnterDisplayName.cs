@@ -18,7 +18,7 @@ public class UIEnterDisplayName : UIControl
                 displayName = displayNameInputField.text;
 
             UIManager.Instance.HideAndShowPreview();
-            AccountManager.Instance.ChangeDisplayNameAndLoadMainScene(displayName, true);
+            GuestManager.Instance.ChangeDisplayNameAndLoadMainScene(displayName, true);
         });
     }
 }

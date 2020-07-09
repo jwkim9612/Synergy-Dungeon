@@ -4,9 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public delegate void OnLoadingDelegate();
-    public OnLoadingDelegate OnLoading { get; set; }
-
     //매니저들
     public static GameManager instance = null;
     public ParticleService particleService = null;
@@ -41,23 +38,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadGameAndLoadMainScene()
     {
-        StartCoroutine(Co_LoadGameAndLoadMainScene());
-    }
-
-    private IEnumerator Co_LoadGameAndLoadMainScene()
-    {
-        OnLoading();
         ServiceManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         TimeManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
         GoodsManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
         StageManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
         RuneManager.Instance.Initialize();
-        yield return new WaitForSeconds(1.0f);
-        SceneManager.LoadScene("MainScene");
+
+        LoadSceneManager.Instance.LoadMainScene();
     }
 
     public void LoadGameAndLoadInGameScene()
@@ -67,18 +55,6 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Co_LoadGameAndLoadInGameScene()
     {
-        OnLoading();
-        UIManager.Instance.Initialize();
-        SoundManager.Instance.Initialize();
-        ServiceManager.Instance.Initialize();
-        PlayerDataManager.Instance.Initialize();
-        TimeManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
-        GoodsManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
-        StageManager.Instance.Initialize();
-        yield return new WaitForSeconds(0.5f);
-        RuneManager.Instance.Initialize();
         yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("InGameScene");
     }
@@ -94,4 +70,6 @@ public class GameManager : MonoBehaviour
         #endif
 
     }
+
+
 }

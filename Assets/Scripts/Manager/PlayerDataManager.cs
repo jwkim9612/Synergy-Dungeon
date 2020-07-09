@@ -134,7 +134,27 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                 if (!response.HasErrors)
                 {
                     Debug.Log("Success Initialize PlayerData !");
-                    //LoadPlayerData();
+                    LoadPlayerData();
+                }
+                else
+                {
+                    Debug.Log("Error Initialize PlayerData !");
+                }
+            });
+    }
+
+    public void InitializePlayerDataAndLoadMainScene()
+    {
+        new LogEventRequest()
+            .SetEventKey("InitializePlayerData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success Initialize InitializePlayerDataAndCheckHasInGameData !");
+                    LoadPlayerData();
+                    //SaveManager.Instance.CheckHasInGameData();
+                    GameManager.instance.LoadGameAndLoadMainScene();
                 }
                 else
                 {

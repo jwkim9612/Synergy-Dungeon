@@ -316,19 +316,11 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                    bool result = (bool)(response.ScriptData.GetBoolean("Result"));
                    if (result)
                    {
-                       Debug.Log("1");
                        GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
-                       Debug.Log("2");
-                       //JsonData runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
-                       JsonData runeOnSalesListJsonObject = new JsonData("");
-                       Debug.Log("3");
-                       ////////////////////////////// 이 사이에서 에러.
+                       JsonData runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
 
-                       runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
-                       Debug.Log("4");
-                       /////////////////////////////
                        runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
-                       Debug.Log("5");
+
                        for (int i = 0; i < runeOnSalesListJsonObject.Count; i++)
                        {
                            int id = 0;
@@ -361,16 +353,13 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            {
                if (!response.HasErrors)
                {
-                   Debug.Log("1");
                    GSData runeOnSalesScriptDataList = response.ScriptData.GetGSData("RuneOnSalesData");
                    JsonData runeOnSalesListJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(runeOnSalesScriptDataList.JSON);
 
                    runeOnSalesList = new List<(int RuneId, bool IsSoldOut)>();
 
-                   Debug.Log("2");
                    for (int i = 0; i < runeOnSalesListJsonObject.Count; i++)
                    {
-                       Debug.Log("3");
                        int id = 0;
                        bool isSoldOut = false;
 
@@ -378,10 +367,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        isSoldOut = (bool)(runeOnSalesListJsonObject[i]["isSoldOut"]);
 
                        runeOnSalesList.Add((id, isSoldOut));
-                       Debug.Log("4");
                    }
-                   Debug.Log("5");
-
 
                    MainManager.instance.uiStore.uiRuneOnSalesList.Initialize();
                    Debug.Log("runeslaes 초기화 완료");

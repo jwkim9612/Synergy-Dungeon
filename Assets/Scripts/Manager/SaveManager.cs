@@ -9,13 +9,11 @@ using UnityEngine;
 
 public class SaveManager : MonoSingleton<SaveManager>
 {
-    [SerializeField] private AskInGameContinue askInGameContinue = null;
-
-   // private string playDataPath;
     private InGameSaveData _inGameSaveData;
     public InGameSaveData inGameSaveData { get { return _inGameSaveData; } }
     public bool IsLoadedData { get; set; }
-    
+
+
     [SerializeField]
     public List<int> equippedRuneIdsSaveData;
     string equippedRuneIdsSaveDataPath;
@@ -26,15 +24,6 @@ public class SaveManager : MonoSingleton<SaveManager>
 
         equippedRuneIdsSaveDataPath = Path.Combine(Application.persistentDataPath, "EquippedRuneIds.json");
         IntializeEquippedRuneIdsSaveData();
-
-        //if (!File.Exists(playDataPath))
-        //{
-        //    //SaveSPSData();
-        //}
-        //else
-        //{
-        //    //LoadSPSData();
-        //}
     }
 
     private void IntializeEquippedRuneIdsSaveData()
@@ -97,22 +86,50 @@ public class SaveManager : MonoSingleton<SaveManager>
         return true;
     }
 
-    
+    public void CheckHasInGameData()
+    {
+        new LogEventRequest()
+           .SetEventKey("HasInGameData")
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       MainManager.instance.ShowAskInGameContinue();
+                   }
+                   else
+                   {
+                       IsLoadedData = false;
+                   }
+               }
+               else
+               {
+                   Debug.Log("Error CheckHasInGameData");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
 
-    /// <summary>
-    /// 인게임 데이터 삭제
-    /// </summary>
-    /// <returns> 성공 여부 </returns>
-    //public bool DeleteInGameData()
-    //{
-    //    if (HasInGameData())
-    //    {
-    //        File.Delete(playDataPath);
-    //        return true;
-    //    }
-
-    //    return false;
-    //}
+    public void RemoveInGameData()
+    {
+        new LogEventRequest()
+            .SetEventKey("RemoveInGameData")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Success InGame Data Remove !");
+                    IsLoadedData = false;
+                }
+                else
+                {
+                    Debug.Log("Error Data Remove !");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
 
     // 최초 게임 진입 시에 초기 값으로 해서 저장
     // 이후에는 관련된 프로퍼티 변경할 때마다 저장
@@ -136,25 +153,6 @@ public class SaveManager : MonoSingleton<SaveManager>
                 else
                 {
                     Debug.Log("Error Data Save !");
-                    Debug.Log(response.Errors.JSON);
-                }
-            });
-    }
-
-    public void RemoveInGameData()
-    {
-        new LogEventRequest()
-            .SetEventKey("RemoveInGameData")
-            .Send((response) =>
-            {
-                if (!response.HasErrors)
-                {
-                    Debug.Log("Success InGame Data Remove !");
-                    IsLoadedData = false;
-                }
-                else
-                {
-                    Debug.Log("Error Data Remove !");
                     Debug.Log(response.Errors.JSON);
                 }
             });
@@ -198,32 +196,5 @@ public class SaveManager : MonoSingleton<SaveManager>
                     Debug.Log(response.Errors.JSON);
                 }
             });
-    }
-
-    public void CheckHasInGameData()
-    {
-        new LogEventRequest()
-           .SetEventKey("HasInGameData")
-           .Send((response) =>
-           {
-               if (!response.HasErrors)
-               {
-                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
-                   if (result)
-                   {
-                       askInGameContinue.gameObject.SetActive(true);
-                   }
-                   else
-                   {
-                       IsLoadedData = false;
-                       GameManager.instance.LoadGameAndLoadMainScene();
-                   }
-               }
-               else
-               {
-                   Debug.Log("Error CheckHasInGameData");
-                   Debug.Log(response.Errors.JSON);
-               }
-           });
     }
 }

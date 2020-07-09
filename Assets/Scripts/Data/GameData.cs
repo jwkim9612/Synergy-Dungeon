@@ -74,7 +74,8 @@ public enum PurchaseCurrency
 { 
     None,
     Gold,
-    Diamond
+    Diamond,
+    Heart
 }
 
 

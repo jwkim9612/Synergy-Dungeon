@@ -4,35 +4,11 @@ using GameSparks.Api.Requests;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AuthenticateManager : MonoSingleton<AuthenticateManager>
+public class GoogleManager : MonoSingleton<GoogleManager>
 {
     public InputField displayNameInput, userNameInput, passwordInput;
 
-    [SerializeField]
-    private Text currUserDisplayName;
-    [SerializeField]
-    private Text authState;
-
-    //// 계정이름과 비밀번호로 로그인
-    //public void AuthorizePlayerBttn()
-    //{
-    //    new GameSparks.Api.Requests.AuthenticationRequest()
-    //        .SetUserName(userNameInput.text)
-    //        .SetPassword(passwordInput.text)
-    //        .Send((response) =>
-    //        {
-    //            if (!response.HasErrors)
-    //            {
-    //                Debug.Log("로그인 성공...");
-    //            }
-    //            else
-    //            {
-    //                Debug.Log("로그인 실패..." + response.Errors.JSON.ToString());
-    //            }
-    //        });
-    //}
-
-    public void GoogleLoginBtnOnClick()
+    public void GoogleLogin()
     {
         PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
             // 서버 인증 코드가 생성되도록 요청하여
@@ -87,18 +63,45 @@ public class AuthenticateManager : MonoSingleton<AuthenticateManager>
                 // 로그인 성공
                 if(!googlePlayAuthResponse.HasErrors)
                 {
-                    authState.text = "구글, 게임스파크 계정 연동 완료";
-                    currUserDisplayName.text = googlePlayAuthResponse.DisplayName;
-
-                    //SaveManager.Instance.CheckHasInGameData();
-                    //PlayerDataManager.Instance.LoadPlayerData();
+                    Debug.Log("Success GameSparkGoogleLogin!!");
+                    AccountManager.Instance.SetAccountData("", "", true);
+                    AccountManager.Instance.SaveAccountData();
+                    CheckIsInitializedAnd();
                 }
 
                 // 로그인 실패
                 else
                 {
-                    authState.text = googlePlayAuthResponse.Errors.JSON.ToString();
-                    currUserDisplayName.text = "실패";
+                    Debug.Log(googlePlayAuthResponse.Errors.JSON.ToString());
+                }
+            });
+    }
+
+    public void CheckIsInitializedAnd()
+    {
+        new LogEventRequest()
+            .SetEventKey("IsInitialized")
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    bool isInitialized = (bool)response.ScriptData.GetBoolean("IsInitialized");
+                    if(isInitialized)
+                    {
+                        Debug.Log("Success isInitialized!!");
+                        PlayerDataManager.Instance.LoadPlayerData();
+                        GameManager.instance.LoadGameAndLoadMainScene();
+                    }
+                    else
+                    {
+                        Debug.Log("Success !isInitialized!!");
+                        PlayerDataManager.Instance.InitializePlayerDataAndLoadMainScene();
+                    }
+                }
+                else
+                {
+                    Debug.Log("Error IsInitialized");
+                    Debug.Log(response.Errors.JSON);
                 }
             });
     }

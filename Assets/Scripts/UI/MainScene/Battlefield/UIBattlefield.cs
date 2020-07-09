@@ -110,6 +110,8 @@ public class UIBattlefield : MonoBehaviour
                     }
                     else
                     {
+                        MainManager.instance.uiAskGoToStore.SetText(PurchaseCurrency.Heart);
+                        UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore);
                         Debug.Log("No heart Man");
                     }
                 }
