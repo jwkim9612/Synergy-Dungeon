@@ -7203,6 +7203,7 @@ MonoBehaviour:
   uiTopMenu: {fileID: 887927349}
   askInGameContinue: {fileID: 1366507215}
   connecting: {fileID: 135229658}
+  EnteringDungeon: {fileID: 1919033201}
 --- !u!4 &158275497
 Transform:
   m_ObjectHideFlags: 0

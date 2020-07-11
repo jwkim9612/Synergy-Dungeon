@@ -13,6 +13,7 @@ public class AskInGameContinue : MonoBehaviour
     {
         yesButton.onClick.AddListener(() =>
         {
+            MainManager.instance.ShowEnteringDungeon();
             SaveManager.Instance.LoadInGameDataAndLoadInGameScene();
             OnHide();
         });

@@ -148,31 +148,31 @@ MonoBehaviour:
     Tier: 2
     ImagePath: Images/Character/Elf/Warrior/DefaultImage
     HeadImagePath: Images/Character/Elf/Warrior/Head
-    RuntimeAnimatorControllerPath: Controllers/Elf/Elf Warrior
+    RuntimeAnimatorControllerPath: Controllers/Elf/Warrior
   - Id: 17
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Tribe: 5
     Origin: 1
     Tier: 4
-    ImagePath: Images/Old Character/Character_WoodElf
-    HeadImagePath: 
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Elf/Archer/DefaultImage
+    HeadImagePath: Images/Character/Elf/Archer/Head
+    RuntimeAnimatorControllerPath: Controllers/Elf/Archer
   - Id: 18
     Name: "\uC6CC\uB85D"
     Tribe: 5
     Origin: 5
     Tier: 1
-    ImagePath: Images/Old Character/Character_Warlock
-    HeadImagePath: 
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Elf/Wizard/DefaultImage
+    HeadImagePath: Images/Character/Elf/Wizard/Head
+    RuntimeAnimatorControllerPath: Controllers/Elf/Wizard
   - Id: 19
     Name: "\uC77C\uC77C\uC774"
     Tribe: 5
     Origin: 3
     Tier: 2
-    ImagePath: Images/Old Character/Character_Dobi
-    HeadImagePath: 
-    RuntimeAnimatorControllerPath: 
+    ImagePath: Images/Character/Elf/Thief/DefaultImage
+    HeadImagePath: Images/Character/Elf/Thief/Head
+    RuntimeAnimatorControllerPath: Controllers/Elf/Thief
   - Id: 20
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Tribe: 4

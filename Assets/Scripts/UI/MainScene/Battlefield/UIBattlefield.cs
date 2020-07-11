@@ -22,7 +22,16 @@ public class UIBattlefield : MonoBehaviour
             //StageManager.Instance.SetChapterData(selectedChapter);
             //StageManager.Instance.Initialize();
             //SceneManager.LoadScene("InGameScene");
-            UseHeart();
+            var uiHeart = MainManager.instance.uiTopMenu.uiHeart;
+            if (uiHeart.HasHeart())
+            {
+                UseHeart();
+            }
+            else
+            {
+                MainManager.instance.uiAskGoToStore.SetText(PurchaseCurrency.Heart);
+                UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore);
+            }
         });
 
         UpdateChapterInfo();
@@ -94,6 +103,8 @@ public class UIBattlefield : MonoBehaviour
 
     public void UseHeart()
     {
+        MainManager.instance.ShowEnteringDungeon();
+
         new LogEventRequest()
             .SetEventKey("UseHeart")
             .Send((response) =>
@@ -110,9 +121,8 @@ public class UIBattlefield : MonoBehaviour
                     }
                     else
                     {
-                        MainManager.instance.uiAskGoToStore.SetText(PurchaseCurrency.Heart);
-                        UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore);
-                        Debug.Log("No heart Man");
+                        MainManager.instance.HideEnteringDungeon();
+                        Debug.Log("Error Use Heart!!");
                     }
                 }
                 else

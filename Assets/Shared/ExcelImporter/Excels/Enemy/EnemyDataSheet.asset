@@ -25,7 +25,7 @@ MonoBehaviour:
     Evasion: 5
     Critical: 5
     AttackSpeed: 77
-    ImagePath: Images/Old Character/Character_16
+    ImagePath: Images/Enemy/1
     RuntimeAnimatorControllerPath: 
   - Id: 1
     Name: "\uB9C8\uBC29\uC2AC\uB77C\uC784"
@@ -39,7 +39,7 @@ MonoBehaviour:
     Evasion: 50
     Critical: 5
     AttackSpeed: 77
-    ImagePath: Images/Old Character/Character_28
+    ImagePath: Images/Enemy/2
     RuntimeAnimatorControllerPath: 
   - Id: 2
     Name: "\uADFC\uC811\uC2AC\uB77C\uC784"
@@ -53,7 +53,7 @@ MonoBehaviour:
     Evasion: 7
     Critical: 5
     AttackSpeed: 81
-    ImagePath: Images/Old Character/Character_FairyDragon
+    ImagePath: Images/Enemy/3
     RuntimeAnimatorControllerPath: 
   - Id: 3
     Name: "\uAD81\uC218\uC2AC\uB77C\uC784"
@@ -67,7 +67,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 81
-    ImagePath: Images/Old Character/Character_Doom
+    ImagePath: Images/Enemy/1
     RuntimeAnimatorControllerPath: 
   - Id: 4
     Name: "\uBC95\uC0AC\uC2AC\uB77C\uC784"

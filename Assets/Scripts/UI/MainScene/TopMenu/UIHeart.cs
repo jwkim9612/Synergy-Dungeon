@@ -10,6 +10,7 @@ public class UIHeart : MonoBehaviour
     [SerializeField] private Text heartText = null;
     [SerializeField] private Text timeText = null;
     private long remainingTime;
+    private long currentHeart;
 
     public void Initialize()
     {
@@ -46,21 +47,7 @@ public class UIHeart : MonoBehaviour
 
     private void SetHeart(long heart, long extraHearts)
     {
-        //if(heart == 0)
-        //{
-        //   //image.color = Color.black;
-        //    heartText.text = "";
-        //}
-        //else if(heart == 1)
-        //{
-        //    //image.color = Color.red;
-        //    heartText.text = "";
-        //}
-        //else
-        //{
-        //    //image.color = Color.red;
-        //    heartText.text = "" + heart;
-        //}
+        currentHeart = heart + extraHearts;
 
         if(extraHearts > 0)
         {
@@ -82,5 +69,13 @@ public class UIHeart : MonoBehaviour
         }
 
         HeartUpdate();
+    }
+
+    public bool HasHeart()
+    {
+        if(currentHeart > 0)
+            return true;
+
+        return false;
     }
 }
