@@ -65,6 +65,7 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.Wave = StageManager.Instance.currentWave + 1;
         _inGameSaveData.CharacterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
         _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
+        _inGameSaveData.EventProbability = InGameManager.instance.frontCanvas.uiScenarioEvent.scenarioEvent.currentProbability;
     }
 
     public bool LoadEquippedRuneIdsSaveData()
@@ -144,6 +145,7 @@ public class SaveManager : MonoSingleton<SaveManager>
             .SetEventAttribute("Exp", _inGameSaveData.Exp)
             .SetEventAttribute("CharacterAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.CharacterAreaInfoList))
             .SetEventAttribute("PrepareAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.PrepareAreaInfoList))
+            .SetEventAttribute("EventProbability", _inGameSaveData.EventProbability)
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -177,7 +179,8 @@ public class SaveManager : MonoSingleton<SaveManager>
                         Level = (int)scriptData.GetInt("InGameLevel"),
                         Exp = (int)scriptData.GetInt("InGameExp"),
                         CharacterAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGameCharacterAreaInfoList")),
-                        PrepareAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList"))
+                        PrepareAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList")),
+                        EventProbability = (int)scriptData.GetInt("InGameEventProbability")
                     };
 
                     _inGameSaveData = data;

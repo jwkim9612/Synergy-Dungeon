@@ -29,7 +29,7 @@ public class PlayerState : MonoBehaviour
         }
         else
         {
-            coin = 100;
+            coin = 0;
             level = 1;
             SatisfyExp = 2;
             exp = 0;

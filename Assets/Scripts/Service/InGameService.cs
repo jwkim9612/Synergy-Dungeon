@@ -22,6 +22,11 @@ public class InGameService : MonoBehaviour
     public const float DEFAULT_SPEED = 1.0f;
     public const float DOUBLE_SPEED = 2.0f;
 
+    /////////////////
+    /// 시너지 리스트
+    public const float LEFT_PADDING_OF_SYNERGY_LIST_AT_ANCHOR = 0.03f;
+    public const float LENGTH_OF_SYNERGY_ICON_AT_ANCHOR = 0.073f;
+    /////////////////
 
     /////////////////
     /// 시나리오

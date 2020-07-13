@@ -9,7 +9,7 @@ public class UIScenarioEvent : MonoBehaviour
     [SerializeField] private GameObject scenario = null;
     [SerializeField] private Text titleText = null;
     [SerializeField] private List<UIScenarioEventButton> selectButtonList = null;
-    private ScenarioEvent scenarioEvent;
+    public ScenarioEvent scenarioEvent;
 
     public void Initialize()
     {

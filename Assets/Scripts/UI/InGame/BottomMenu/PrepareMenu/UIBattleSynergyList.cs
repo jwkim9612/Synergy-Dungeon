@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class UIBattleSynergyList : MonoBehaviour
 {
     [SerializeField] private UIInGameSynergyInfo uiInGameSynergyInfo = null;
-    [SerializeField] private ToggleGroup toggleGroup = null;
     private List<UITribe> uiTribes;
     private List<UIOrigin> uiOrigins;
     private SynergySystem synergySystem;
@@ -137,26 +136,32 @@ public class UIBattleSynergyList : MonoBehaviour
 
     private void UpdateSynergyListSize()
     {
+        int activateSynergyCount = GetActivateSynergyCount();
+
+        RectTransform rect = transform as RectTransform;
+
+        float xOfanchorMax = InGameService.LEFT_PADDING_OF_SYNERGY_LIST_AT_ANCHOR + (InGameService.LENGTH_OF_SYNERGY_ICON_AT_ANCHOR * activateSynergyCount);
+        rect.anchorMax = new Vector2(xOfanchorMax, 1.0f);
+
+        ///////////// anchor x 포지션 0으로 만들어주기.
+        var position = rect.anchoredPosition;
+        position.x = 0.0f;
+        rect.anchoredPosition = position;
+    }
+
+    private int GetActivateSynergyCount()
+    {
         int count = 0;
 
         foreach (Transform child in transform)
         {
-            if(child.gameObject.activeSelf)
+            if (child.gameObject.activeSelf)
             {
                 ++count;
             }
         }
 
-        RectTransform rect = transform as RectTransform;
-
-        float sum = 0.03f + (0.073f * count);
-
-        rect.anchorMax = new Vector2(sum, 1.0f);
-
-        var position = rect.anchoredPosition;
-        position.x = 0.0f;
-
-        rect.anchoredPosition = position;
+        return count;
     }
 
     private void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)

@@ -7,7 +7,7 @@ public class ScenarioEvent
     private int currentWave;
     private int currentChapter;
     private int currentStage;
-    private int currentProbability;
+    public int currentProbability;
     private InGameEvent_ScenarioDataSheet scenarioDataSheet;
 
     public void Initialize()
@@ -15,6 +15,7 @@ public class ScenarioEvent
         if (SaveManager.Instance.IsLoadedData)
         {
             currentStage = StageManager.Instance.currentStage;
+            currentProbability = SaveManager.Instance.inGameSaveData.EventProbability;
         }
 
         scenarioDataSheet = DataBase.Instance.inGameEvent_ScenarioDataSheet;

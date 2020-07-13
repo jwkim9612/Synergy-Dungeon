@@ -11,6 +11,7 @@ public class InGameSaveData
     public int Exp { get; set; }
     public List<CharacterInfo> CharacterAreaInfoList { get; set; }
     public List<CharacterInfo> PrepareAreaInfoList { get; set; }
+    public int EventProbability { get; set; }
 
     //public void SetInGameData(List<Character> characters, List<Enemy> enemies)
     //{
