@@ -1,40 +1,76 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIBattleSynergyList : MonoBehaviour
 {
+    [SerializeField] private UIInGameSynergyInfo uiInGameSynergyInfo = null;
+    [SerializeField] private ToggleGroup toggleGroup = null;
     private List<UITribe> uiTribes;
     private List<UIOrigin> uiOrigins;
     private SynergySystem synergySystem;
 
+    private Camera cam;
+
+
     private void Start()
     {
+        InitializeTribeList();
+        InitializeOriginList();
+
+        synergySystem = InGameManager.instance.synergySystem;
+        synergySystem.OnTribeChanged += UpdateTribes;
+        synergySystem.OnOriginChanged += UpdateOrigins;
+        synergySystem.OnTribeChanged += UpdateSynergyListSize;
+        synergySystem.OnOriginChanged += UpdateSynergyListSize;
+
+        if (SaveManager.Instance.IsLoadedData)
+        {
+            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.CharacterAreaInfoList);
+        }
+
+        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!TransformService.ContainPos(transform as RectTransform, Input.mousePosition, cam))
+            {
+                if(uiInGameSynergyInfo.gameObject.activeSelf)
+                {
+                    uiInGameSynergyInfo.OnHide();
+                }
+            }
+        }
+    }
+
+    private void InitializeTribeList()
+    {
         uiTribes = new List<UITribe>();
-        uiOrigins = new List<UIOrigin>();
 
         var tribes = this.GetComponentsInChildren<UITribe>();
-        foreach(var tribe in tribes)
+        foreach (var tribe in tribes)
         {
             uiTribes.Add(tribe);
+            tribe.uiInGameSynergyInfo = this.uiInGameSynergyInfo;
             tribe.gameObject.SetActive(false);
         }
+    }
+
+    private void InitializeOriginList()
+    {
+        uiOrigins = new List<UIOrigin>();
 
         var origins = this.GetComponentsInChildren<UIOrigin>();
         foreach (var origin in origins)
         {
             uiOrigins.Add(origin);
+            origin.uiInGameSynergyInfo = this.uiInGameSynergyInfo;
             origin.gameObject.SetActive(false);
-        }
-
-        synergySystem = InGameManager.instance.synergySystem;
-        synergySystem.OnTribeChanged += UpdateTribes;
-        synergySystem.OnOriginChanged += UpdateOrigins; ;
-
-
-        if (SaveManager.Instance.IsLoadedData)
-        {
-            InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.CharacterAreaInfoList);
         }
     }
 
@@ -52,10 +88,12 @@ public class UIBattleSynergyList : MonoBehaviour
                 return;
             }
 
-            if (tribeDataSheet.TryGetTribeImage(tribe.Key, out var sprite))
+            if (tribeDataSheet.TryGetTribeData(tribe.Key, out var tribeData))
             {
-                uiTribes[tribeIndex].SetImage(sprite);
+                uiTribes[tribeIndex].SetImage(tribeData.Image);
+                uiTribes[tribeIndex].SetTribe(tribeData.Tribe);
             }
+
             uiTribes[tribeIndex].gameObject.SetActive(true);
             ++tribeIndex;
         }
@@ -80,10 +118,13 @@ public class UIBattleSynergyList : MonoBehaviour
                 return;
             }
 
-            if(originDataSheet.TryGetOriginImage(origin.Key, out var sprite))
+            if(originDataSheet.TryGetOriginData(origin.Key, out var originData))
             {
-                uiOrigins[originIndex].SetImage(sprite);
+
+                uiOrigins[originIndex].SetImage(originData.Image);
+                uiOrigins[originIndex].SetOrigin(originData.Origin);
             }
+
             uiOrigins[originIndex].gameObject.SetActive(true);
             ++originIndex;
         }
@@ -92,6 +133,30 @@ public class UIBattleSynergyList : MonoBehaviour
         {
             uiOrigins[i].gameObject.SetActive(false);
         }
+    }
+
+    private void UpdateSynergyListSize()
+    {
+        int count = 0;
+
+        foreach (Transform child in transform)
+        {
+            if(child.gameObject.activeSelf)
+            {
+                ++count;
+            }
+        }
+
+        RectTransform rect = transform as RectTransform;
+
+        float sum = 0.03f + (0.073f * count);
+
+        rect.anchorMax = new Vector2(sum, 1.0f);
+
+        var position = rect.anchoredPosition;
+        position.x = 0.0f;
+
+        rect.anchoredPosition = position;
     }
 
     private void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)

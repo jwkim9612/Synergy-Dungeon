@@ -7,6 +7,11 @@ public class TransformService
         return RectTransformUtility.RectangleContainsScreenPoint(rt, pos);
     }
 
+    public static bool ContainPos(RectTransform rt, Vector2 pos, Camera camera)
+    {
+        return RectTransformUtility.RectangleContainsScreenPoint(rt, pos, camera);
+    }
+
     public static void SetFullSize(RectTransform rt)
     {
         rt.offsetMax = new Vector2(0.0f, 0.0f);
