@@ -9,7 +9,7 @@ public class UIInGameCheat : MonoBehaviour
     public Button purchaseCharacterButton;
     public InputField purchaseCharacterInputField;
 
-    public PlayerState playerState;
+    public InGamePlayerState inGamePlayerState;
     public Button addCoinButton;
 
     private void Start()
@@ -34,7 +34,7 @@ public class UIInGameCheat : MonoBehaviour
 
         addCoinButton.onClick.AddListener(() =>
         {
-            playerState.IncreaseCoin(100);
+            inGamePlayerState.IncreaseCoin(100);
         });
     }
 

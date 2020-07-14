@@ -19,7 +19,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0
-    FrontIds: 1
+    FrontIds: 0
     BackIds: 
   - ChapterId: 1
     WaveId: 2
@@ -27,7 +27,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0
-    FrontIds: 1,2
+    FrontIds: 0,1
     BackIds: 
   - ChapterId: 1
     WaveId: 3
@@ -35,7 +35,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0
-    FrontIds: 1,2,3
+    FrontIds: 0,1,2
     BackIds: 
   - ChapterId: 1
     WaveId: 4
@@ -43,7 +43,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,0
-    FrontIds: 1,2,3,4
+    FrontIds: 0,1,2,3
     BackIds: 
   - ChapterId: 1
     WaveId: 5
@@ -51,7 +51,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,0,0
-    FrontIds: 1,2,3,4,5
+    FrontIds: 
     BackIds: 
   - ChapterId: 1
     WaveId: 6
@@ -59,7 +59,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,0,0,0
-    FrontIds: 1,2,3,4,5,6
+    FrontIds: 0,1,2,3,4,5
     BackIds: 
   - ChapterId: 1
     WaveId: 7
@@ -67,32 +67,32 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,1,1
-    FrontIds: 2,3,4
-    BackIds: 3,4
+    FrontIds: 1,2,3
+    BackIds: 2,3
   - ChapterId: 1
     WaveId: 8
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,1,1,1
-    FrontIds: 1,2,3
-    BackIds: 1,2,3
+    FrontIds: 0,1,2
+    BackIds: 0,1,2
   - ChapterId: 1
     WaveId: 9
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 0,0,1,1,1,1
-    FrontIds: 3,4
-    BackIds: 1,2,6,7
+    FrontIds: 2,3
+    BackIds: 0,1,5,6
   - ChapterId: 1
     WaveId: 10
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 1,1,1,1,1,1
-    FrontIds: 1,2,3
-    BackIds: 1,2,3
+    FrontIds: 0,1,2
+    BackIds: 0,1,2
   - ChapterId: 1
     WaveId: 11
     StageId: 3
@@ -100,14 +100,14 @@ MonoBehaviour:
     ExpAmount: 1
     EnemyIds: 1,1,1,1,1,1,1
     FrontIds: 
-    BackIds: 1,2,3,4,5,6,7
+    BackIds: 0,1,2,3,4,5,6
   - ChapterId: 1
     WaveId: 12
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 2,2,2,2,2,2
-    FrontIds: 1,2,3,4,5,6
+    FrontIds: 0,1,2,3,4,5
     BackIds: 
   - ChapterId: 1
     WaveId: 13
@@ -115,31 +115,31 @@ MonoBehaviour:
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 1,1,1,1,1,2,2
-    FrontIds: 1,2,3,4,5
-    BackIds: 2,5
+    FrontIds: 0,1,2,3,4
+    BackIds: 1,4
   - ChapterId: 1
     WaveId: 14
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 1,1,1,1,2,2,2
-    FrontIds: 2,3,4,5
-    BackIds: 3,4,5
+    FrontIds: 1,2,3,4
+    BackIds: 2,3,4
   - ChapterId: 1
     WaveId: 15
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 1,1,2,2,2,2
-    FrontIds: 3,4
-    BackIds: 1,2,6,7
+    FrontIds: 2,3
+    BackIds: 0,1,5,6
   - ChapterId: 1
     WaveId: 16
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 2,2,2,2,2,2
-    FrontIds: 1,2,3,4,5,6
+    FrontIds: 0,1,2,3,4,5
     BackIds: 
   - ChapterId: 1
     WaveId: 17
@@ -148,55 +148,55 @@ MonoBehaviour:
     ExpAmount: 1
     EnemyIds: 2,2,2,2,2,2,2
     FrontIds: 
-    BackIds: 1,2,3,4,5,6,7
+    BackIds: 0,1,2,3,4,5,6
   - ChapterId: 1
     WaveId: 18
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
     EnemyIds: 2,2,2,2,3,3
-    FrontIds: 2,3,4,5
-    BackIds: 3,5
+    FrontIds: 1,2,3,4
+    BackIds: 2,4
   - ChapterId: 1
     WaveId: 19
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,0,0,3,3,3
-    FrontIds: 2,3,4,5
-    BackIds: 3,4,5
+    FrontIds: 1,2,3,4
+    BackIds: 2,3,4
   - ChapterId: 1
     WaveId: 20
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,0,3,3,3,3
-    FrontIds: 1,2,3
-    BackIds: 1,2,3,4
+    FrontIds: 0,1,2
+    BackIds: 0,1,2,3
   - ChapterId: 1
     WaveId: 21
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,3,3,3,3,3
-    FrontIds: 1,6
-    BackIds: 2,3,4,5,6
+    FrontIds: 0,5
+    BackIds: 1,2,3,4,5
   - ChapterId: 1
     WaveId: 22
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 1,1,1,3,3,3,3
-    FrontIds: 1,2,3
-    BackIds: 4,5,6,7
+    FrontIds: 0,1,2
+    BackIds: 3,4,5,6
   - ChapterId: 1
     WaveId: 23
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 2,2,2,3,3,3,3
-    FrontIds: 4,5,6
-    BackIds: 1,2,3,4
+    FrontIds: 3,4,5
+    BackIds: 0,1,2,3
   - ChapterId: 1
     WaveId: 24
     StageId: 5
@@ -211,69 +211,69 @@ MonoBehaviour:
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,0,1,1,1,2,2,4
-    FrontIds: 1,2,3,4,5,6
-    BackIds: 1,7,4
+    FrontIds: 0,1,2,3,4,5
+    BackIds: 0,6,3
   - ChapterId: 1
     WaveId: 26
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 1,1,1,1,2,2,2,2,2
-    FrontIds: 1,2,3,4
-    BackIds: 1,2,3,4,5
+    FrontIds: 0,1,2,3
+    BackIds: 0,1,2,3,4
   - ChapterId: 1
     WaveId: 27
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 4,4,4,4,4
-    FrontIds: 3,4
-    BackIds: 3,4,5
+    FrontIds: 2,3
+    BackIds: 2,3,4
   - ChapterId: 1
     WaveId: 28
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 2,2,4,4,4,4,4
-    FrontIds: 1,6
-    BackIds: 2,3,4,5,6
+    FrontIds: 0,5
+    BackIds: 1,2,3,4,5
   - ChapterId: 1
     WaveId: 29
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,0,0,0,0,0,0,0,0,0,0,0
-    FrontIds: 1,2,3,4,5,6
-    BackIds: 1,2,3,4,5,6,7
+    FrontIds: 0,1,2,3,4,5
+    BackIds: 0,1,2,3,4,5,6
   - ChapterId: 1
     WaveId: 30
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 2,2,2,2,2,2,3,3,3,3
-    FrontIds: 1,2,3,4,5,6
-    BackIds: 1,2,6,7
+    FrontIds: 0,1,2,3,4,5
+    BackIds: 0,1,5,6
   - ChapterId: 1
     WaveId: 31
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 1,1,1,1,1,1,1,1,1,1,1,1,1
-    FrontIds: 1,2,3,4,5,6
-    BackIds: 1,2,3,4,5,6,7
+    FrontIds: 0,1,2,3,4,5
+    BackIds: 0,1,2,3,4,5,6
   - ChapterId: 1
     WaveId: 32
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 4,4,4,4,4,4,4,4
-    FrontIds: 1,6
-    BackIds: 1,2,3,5,6,7
+    FrontIds: 0,5
+    BackIds: 0,1,2,4,5,6
   - ChapterId: 1
     WaveId: 33
     StageId: 5
     GoldAmount: 5
     ExpAmount: 1
     EnemyIds: 0,0,1,2,3,4,5
-    FrontIds: 1,6,2,3,4,5
-    BackIds: 4
+    FrontIds: 0,5,1,2,3,4
+    BackIds: 3

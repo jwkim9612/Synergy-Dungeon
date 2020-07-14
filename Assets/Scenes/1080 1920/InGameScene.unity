@@ -33773,7 +33773,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -212874085
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -44628,7 +44628,7 @@ MonoBehaviour:
   uiCharacterPurchase: {fileID: 2064935121}
   purchaseCharacterButton: {fileID: 1884070441}
   purchaseCharacterInputField: {fileID: 805865337}
-  playerState: {fileID: 975819011}
+  inGamePlayerState: {fileID: 975819011}
   addCoinButton: {fileID: 1005733816}
 --- !u!1 &1614876837
 GameObject:

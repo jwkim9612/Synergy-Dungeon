@@ -120,3 +120,21 @@ public enum RuneRating
     Normal,
     Unique
 }
+
+public enum WayOfCalculate
+{ 
+    None,
+    Value,
+    Percentage
+}
+
+public enum PotionGrade
+{ 
+    F,
+    D,
+    C,
+    B,
+    A
+}
+
+

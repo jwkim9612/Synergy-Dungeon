@@ -6,6 +6,10 @@ public class UICharacterInfo : UIControl
 { 
     [SerializeField] private Text textName = null;
     [SerializeField] private Image image = null;
+    [SerializeField] private Image tribeImage = null;
+    [SerializeField] private Text tribeText = null;
+    [SerializeField] private Image originImage = null;
+    [SerializeField] private Text originText = null;
     [SerializeField] private Text textAttack = null;
     [SerializeField] private Text textMagicalAttack = null;
     [SerializeField] private Text textHealth = null;
@@ -29,7 +33,7 @@ public class UICharacterInfo : UIControl
 
         SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
         SetPlusValue();
-        Debug.Log("SetCharacterData");
+        SetSynergyData();
     }
 
     public void SetName(string name)
@@ -106,6 +110,35 @@ public class UICharacterInfo : UIControl
             {
                 textPlusValueList[i].text = "";
             }
+        }
+    }
+
+    private void SetSynergyData()
+    {
+        var tribeDataSheet = DataBase.Instance.tribeDataSheet;
+        if(tribeDataSheet == null)
+        {
+            Debug.Log("tribeDataSheet is null!");
+            return;
+        }
+
+        var originDataSheet = DataBase.Instance.originDataSheet;
+        if (originDataSheet == null)
+        {
+            Debug.Log("originDataSheet is null!");
+            return;
+        }
+
+        if(tribeDataSheet.TryGetTribeData(characterData.Tribe, out var tribeData))
+        {
+            tribeImage.sprite = tribeData.Image;
+            tribeText.text = SynergyService.GetNameByTribe(tribeData.Tribe);
+        }
+
+        if (originDataSheet.TryGetOriginData(characterData.Origin, out var originData))
+        {
+            originImage.sprite = originData.Image;
+            originText.text = SynergyService.GetNameByOrigin(originData.Origin);
         }
     }
 }

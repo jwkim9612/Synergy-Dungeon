@@ -10,6 +10,7 @@
 	public ProbabilityDataSheet probabilityDataSheet;
 	public InGameExpDataSheet inGameExpDataSheet;
 	public RuneDataSheet runeDataSheet;
+	public PotionDataSheet potionDataSheet;
 	public GoodsDataSheet goodsDataSheet;
 	public RunePurchaseableLevelDataSheet runePurchaseableLevelDataSheet;
 	public InGameEvent_ScenarioDataSheet inGameEvent_ScenarioDataSheet;
@@ -24,6 +25,7 @@
 		enemyDataSheet.Initialize();
 		probabilityDataSheet.Initialize();
 		runeDataSheet.Initialize();
+		potionDataSheet.Initialize();
 		goodsDataSheet.Initialize();
 		runePurchaseableLevelDataSheet.Initialize();
 		inGameEvent_ScenarioDataSheet.Initialize();

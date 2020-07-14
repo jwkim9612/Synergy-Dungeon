@@ -38,12 +38,22 @@ public class GameManager : MonoBehaviour
 
     public void LoadGameAndLoadMainScene()
     {
+        StartCoroutine(Co_LoadGameAndLoadMainScene());
+    }
+
+    private IEnumerator Co_LoadGameAndLoadMainScene()
+    {
         ServiceManager.Instance.Initialize();
         PlayerDataManager.Instance.Initialize();
         TimeManager.Instance.Initialize();
         GoodsManager.Instance.Initialize();
         StageManager.Instance.Initialize();
+
+        /////////// 게임스파크에서 초당 10개 이상의 요청을 받을 시 오류가 발생하기 때문에 1초 텀을 두었음.
+        yield return new WaitForSeconds(1.0f);
         RuneManager.Instance.Initialize();
+        yield return new WaitForSeconds(1.0f);
+        PotionManager.Instance.Initialize();
 
         LoadSceneManager.Instance.LoadMainScene();
     }

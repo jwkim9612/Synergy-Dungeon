@@ -13,6 +13,7 @@ public class UIBattlefield : MonoBehaviour
     [SerializeField] private Text chapterTitle = null;
     [SerializeField] private Text bestStage = null;
     [SerializeField] private Image chapterImage = null;
+    [SerializeField] private Image potionImage = null;
 
     void Start()
     {
@@ -35,6 +36,30 @@ public class UIBattlefield : MonoBehaviour
         });
 
         UpdateChapterInfo();
+        UpdatePotionImage();
+    }
+
+    public void UpdatePotionImage()
+    {
+        if(PotionManager.Instance.HasPotionInUse())
+        {
+            var potionDataSheet = DataBase.Instance.potionDataSheet;
+            if(potionDataSheet == null)
+            {
+                Debug.Log("potionDataSheet is null!");
+                return;
+            }
+
+            var potionId = PotionManager.Instance.potionIdInUse;
+            if(potionDataSheet.TryGetPotionImage(potionId, out var image))
+            {
+                potionImage.sprite = image;
+            }
+        }
+        else
+        {
+            potionImage.sprite = null;
+        }
     }
 
     public void UpdateChapterInfo()

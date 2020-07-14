@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class InGamePlayerState : MonoBehaviour
 {
     public delegate void OnCoinChangedDelegate();
     public delegate void OnExpChangedDelegate();

@@ -8,7 +8,7 @@ public class InGameManager : MonoBehaviour
     public ProbabilitySystem probabilitySystem;
     public CombinationSystem combinationSystem;
     public SynergySystem synergySystem;
-    public PlayerState playerState;
+    public InGamePlayerState playerState;
     public GameState gameState;
     public DraggableCentral draggableCentral;
     public BackCanvas backCanvas;
