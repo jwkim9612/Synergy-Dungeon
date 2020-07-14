@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class PotionManager : MonoSingleton<PotionManager>
 {
+    public delegate void OnPotionChangedDelegate();
+    public OnPotionChangedDelegate OnPotionChanged { get; set; }
+
     public int potionIdInUse;
 
     public void Initialize()
@@ -56,6 +59,25 @@ public class PotionManager : MonoSingleton<PotionManager>
                     Debug.Log("Error Initialize PotionData !");
                 }
             });
+    }
+
+    public void SetPotion(int potionId)
+    {
+        new LogEventRequest()
+            .SetEventKey("SetPotionData")
+            .SetEventAttribute("PotionId", potionId)
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    potionIdInUse = potionId;
+                    OnPotionChanged();
+                }
+                else
+                {
+                    Debug.Log("Error SetPotion PotionData !");
+                }
+    });
     }
 
     public bool HasPotionInUse()

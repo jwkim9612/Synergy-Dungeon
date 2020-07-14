@@ -51,7 +51,7 @@ MonoBehaviour:
     GoldAmount: 3
     ExpAmount: 1
     EnemyIds: 0,0,0,0,0
-    FrontIds: 
+    FrontIds: 0,1,2,3,4
     BackIds: 
   - ChapterId: 1
     WaveId: 6

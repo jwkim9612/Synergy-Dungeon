@@ -130,6 +130,7 @@ public enum WayOfCalculate
 
 public enum PotionGrade
 { 
+    None,
     F,
     D,
     C,

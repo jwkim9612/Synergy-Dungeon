@@ -14,6 +14,10 @@ public class UIBattlefield : MonoBehaviour
     [SerializeField] private Text bestStage = null;
     [SerializeField] private Image chapterImage = null;
     [SerializeField] private Image potionImage = null;
+    [SerializeField] private Button potionButton = null;
+    [SerializeField] private UIPotionInfo uiPotionInfo = null;
+
+    [SerializeField ]private Camera cam;
 
     void Start()
     {
@@ -35,11 +39,32 @@ public class UIBattlefield : MonoBehaviour
             }
         });
 
+        potionButton.onClick.AddListener(() =>
+        {
+            uiPotionInfo.OnShow();
+        });
+
         UpdateChapterInfo();
-        UpdatePotionImage();
+        UpdatePotionImageAndPotionInfo();
+
+        PotionManager.Instance.OnPotionChanged += UpdatePotionImageAndPotionInfo;
     }
 
-    public void UpdatePotionImage()
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && PotionManager.Instance.HasPotionInUse())
+        {
+            if (!TransformService.ContainPos(potionImage.transform as RectTransform, Input.mousePosition, cam))
+            {
+                if (uiPotionInfo.gameObject.activeSelf)
+                {
+                    uiPotionInfo.OnHide();
+                }
+            }
+        }
+    }
+
+    public void UpdatePotionImageAndPotionInfo()
     {
         if(PotionManager.Instance.HasPotionInUse())
         {
@@ -51,9 +76,10 @@ public class UIBattlefield : MonoBehaviour
             }
 
             var potionId = PotionManager.Instance.potionIdInUse;
-            if(potionDataSheet.TryGetPotionImage(potionId, out var image))
+            if(potionDataSheet.TryGetPotionData(potionId, out var potionData))
             {
-                potionImage.sprite = image;
+                potionImage.sprite = potionData.Image;
+                uiPotionInfo.SetDescriptionText(potionData);
             }
         }
         else

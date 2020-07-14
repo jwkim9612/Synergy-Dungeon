@@ -13,5 +13,6 @@ public class PotionExcelData
     public WayOfCalculate WayOfIncrease;
     public int IncreasePercentage;
     public int IncreaseValue;
+    public string Description;
     public string ImagePath;
 }

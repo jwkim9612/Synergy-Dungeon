@@ -16,7 +16,7 @@ public class UIObtainedRunesScreen : UIControl
     {
         for(int i = 0; i < uiObtainedRuneList.Count; i++)
         {
-            uiObtainedRuneList[i].SetUIObtainedRune(runeIdList[i]);
+            uiObtainedRuneList[i].SetUIObtainedGoods(runeIdList[i]);
         }
     }
 }

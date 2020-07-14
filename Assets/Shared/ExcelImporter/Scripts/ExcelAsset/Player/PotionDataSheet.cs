@@ -52,4 +52,16 @@ public class PotionDataSheet : ScriptableObject
         Debug.LogError($"Error TryGetPotionData potionId:{potionId}");
         return false;
     }
+
+    public bool TryGetPotionDatas(out Dictionary<int, PotionData> potionDatas)
+    {
+        potionDatas = new Dictionary<int, PotionData>(PotionDatas);
+        if (potionDatas != null)
+        {
+            return true;
+        }
+
+        Debug.LogError("Error TryGetPotionDatas");
+        return false;
+    }
 }

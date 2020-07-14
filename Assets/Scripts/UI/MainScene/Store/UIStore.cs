@@ -17,6 +17,7 @@ public class UIStore : MonoBehaviour
     public UIRuneOnSalesList uiRuneOnSalesList = null;
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
+    public UIObtainedPotionScreen uiObtainedPotionScreen;
     public PotentialDraggableScrollView scrollView;
 
 

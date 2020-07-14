@@ -10,6 +10,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
 {
     private int rewardAmount;
     private int rewardId;
+    private PotionGrade randomPotionGrade;
     private List<RuneGrade> randomlyPickedRuneGradeList;
     public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }
 
@@ -191,6 +192,9 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
                        RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
 
+                       string strRandomPotionGrade = (response.ScriptData.GetString("RandomGrade"));
+                       randomPotionGrade = (PotionGrade)Enum.Parse(typeof(PotionGrade), strRandomPotionGrade);
+
                        StartCoroutine(Co_GetItems(rewardCurrency));
                    }
                    else
@@ -235,7 +239,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 AddRunesAndShowObtainedRunes();
                 break;
             case RewardCurrency.RandomPotion:
-                Debug.Log("랜덤 포션 구입 완료!!");
+                SetPotionAndShowObtainedPotion();
                 break;
             case RewardCurrency.Heart:
                 MainManager.instance.uiTopMenu.uiHeart.HeartUpdate();
@@ -269,7 +273,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         // 뽑은 갯수에 따라 획득한 룬 화면 띄우기
         if (randomlyPickedRuneGradeList.Count == GoodsService.MIN_NUMBER_OF_RANDOM_RUNES)
         {
-            MainManager.instance.uiStore.uiObtainedRuneScreen.SetUIObtainedRune(obtainedRandomIds[0]);
+            MainManager.instance.uiStore.uiObtainedRuneScreen.SetUIObtainedScreen(obtainedRandomIds[0]);
             UIManager.Instance.ShowNew(MainManager.instance.uiStore.uiObtainedRuneScreen);
         }
         else
@@ -277,6 +281,15 @@ public class GoodsManager : MonoSingleton<GoodsManager>
             MainManager.instance.uiStore.uiObtainedRunesScreen.SetUIObtainedRuneList(obtainedRandomIds);
             UIManager.Instance.ShowNew(MainManager.instance.uiStore.uiObtainedRunesScreen);
         }
+    }
+
+    private void SetPotionAndShowObtainedPotion()
+    {
+        int randomId = PotionService.GetRandomIdByGrade(randomPotionGrade);
+        PotionManager.Instance.SetPotion(randomId);
+
+        MainManager.instance.uiStore.uiObtainedPotionScreen.SetUIObtainedScreen(randomId);
+        UIManager.Instance.ShowNew(MainManager.instance.uiStore.uiObtainedPotionScreen);
     }
 
     private void InitializeRuneOnSalesData(List<int> runeIdList, bool isResetOnMainMenu = false)

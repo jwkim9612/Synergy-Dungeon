@@ -33773,7 +33773,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -212874085
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -38943,6 +38943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiInGameSynergyInfo: {fileID: 233808749}
+  cam: {fileID: 1460009789}
 --- !u!114 &1407743095
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class PotionData
         WayOfIncrease = potionExcelData.WayOfIncrease;
         IncreasePercentage = potionExcelData.IncreasePercentage;
         IncreaseValue = potionExcelData.IncreaseValue;
+        Description = potionExcelData.Description;
 
         Image = Resources.Load<Sprite>(potionExcelData.ImagePath);
     }
@@ -26,6 +27,7 @@ public class PotionData
         WayOfIncrease = potionData.WayOfIncrease;
         IncreasePercentage = potionData.IncreasePercentage;
         IncreaseValue = potionData.IncreaseValue;
+        Description = potionData.Description;
         Image = potionData.Image;
     }
 
@@ -36,5 +38,6 @@ public class PotionData
     public WayOfCalculate WayOfIncrease;
     public int IncreasePercentage;
     public int IncreaseValue;
+    public string Description;
     public Sprite Image;
 }

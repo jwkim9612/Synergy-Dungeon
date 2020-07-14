@@ -3,5 +3,6 @@
     public void  Initialize()
     {
         RuneService.Initialize();
+        PotionService.Initialize();
     }
 }

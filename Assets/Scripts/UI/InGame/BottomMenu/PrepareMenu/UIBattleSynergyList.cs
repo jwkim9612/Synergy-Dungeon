@@ -11,7 +11,7 @@ public class UIBattleSynergyList : MonoBehaviour
     private List<UIOrigin> uiOrigins;
     private SynergySystem synergySystem;
 
-    private Camera cam;
+    [SerializeField] private Camera cam;
 
 
     private void Start()
@@ -29,8 +29,6 @@ public class UIBattleSynergyList : MonoBehaviour
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.CharacterAreaInfoList);
         }
-
-        cam = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     private void Update()
