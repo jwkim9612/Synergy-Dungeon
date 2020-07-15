@@ -17,4 +17,9 @@ public class UIDiamond : MonoBehaviour
     {
         diamondText.text = string.Format("{0}", PlayerDataManager.Instance.playerData.Diamond.ToString("#,##0"));
     }
+
+    private void OnDestroy()
+    {
+        PlayerDataManager.Instance.OnDiamondChanged -= UpdateDiamondText;
+    }
 }

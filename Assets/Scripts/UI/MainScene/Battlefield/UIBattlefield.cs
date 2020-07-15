@@ -52,7 +52,7 @@ public class UIBattlefield : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && PotionManager.Instance.HasPotionInUse())
+        if (Input.GetMouseButtonDown(0))
         {
             if (!TransformService.ContainPos(potionImage.transform as RectTransform, Input.mousePosition, cam))
             {
@@ -84,7 +84,8 @@ public class UIBattlefield : MonoBehaviour
         }
         else
         {
-            potionImage.sprite = null;
+            potionImage.sprite = PotionService.DEFAULT_IMAGE;
+            uiPotionInfo.SetDescriptionText(PotionService.DEFAULT_POTION_DESCRIPTION);
         }
     }
 
@@ -182,5 +183,10 @@ public class UIBattlefield : MonoBehaviour
                     Debug.Log(response.Errors.JSON);
                 }
             });
+    }
+
+    private void OnDestroy()
+    {
+        PotionManager.Instance.OnPotionChanged -= UpdatePotionImageAndPotionInfo;
     }
 }

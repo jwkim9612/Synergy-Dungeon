@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class PotionService
 {
+    public const string DEFAULT_IMAGE_PATH = "Images/Main/Potion";
+    public static Sprite DEFAULT_IMAGE = Resources.Load<Sprite>(DEFAULT_IMAGE_PATH);
+
+    public const string DEFAULT_POTION_DESCRIPTION = "다음 게임에 적용되는 포션이 있는 공간입니다.";
+
+
     public static Dictionary<PotionGrade, List<int>> ListOfPotionIdsByGrade;
 
     public static void Initialize()

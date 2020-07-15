@@ -12,6 +12,11 @@ public class UIPotionInfo : MonoBehaviour
         descriptionText.text = $"{potionData.Name} : {potionData.Description}";
     }
 
+    public void SetDescriptionText(string text)
+    {
+        descriptionText.text = text;
+    }
+
     public void OnShow()
     {
         gameObject.SetActive(true);

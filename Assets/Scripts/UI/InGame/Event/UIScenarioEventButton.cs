@@ -97,6 +97,7 @@ public class UIScenarioEventButton : MonoBehaviour
                 InGameManager.instance.playerState.IncreaseCoin(scenarioData.Amount);
                 break;
             case RewardCurrency.Status:
+                InGameManager.instance.backCanvas.uiAbilityEffectList.AddAbilityEffect(scenarioData);
                 break;
             case RewardCurrency.RandomArtifactPiece:
                 break;

@@ -6,7 +6,7 @@ using DanielLochner.Assets.SimpleScrollSnap;
 
 public class UIChooseChapter : UIControl
 {
-    [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
+    [SerializeField] private SimpleScrollSnap simpleScrollSnap;
     [SerializeField] private GameObject content = null;
     [SerializeField] private UIChapter uiChapter = null;
     [SerializeField] private Text chapterTitle = null;

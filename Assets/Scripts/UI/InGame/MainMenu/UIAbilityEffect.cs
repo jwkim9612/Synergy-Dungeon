@@ -10,9 +10,15 @@ public class UIAbilityEffect : MonoBehaviour
 
     public AbilityEffect abilityEffect;
 
-    public void UpdateabilityEffect()
+    public void UpdateAbilityEffect()
     {
-        abilityEffect.UpdateRemainingTurn();
+        UpdateRemainingTurnText();
+    }
+
+    public void UpdateAbilityEffectByWaveComplete()
+    {
+        abilityEffect.DecreaseRemainingTurn();
+        UpdateRemainingTurnText();
     }
 
     public void SetabilityEffect(PotionData potionData)
@@ -69,10 +75,5 @@ public class UIAbilityEffect : MonoBehaviour
     public void OnShow()
     {
         gameObject.SetActive(true);
-    }
-
-    public void Destroy()
-    {
-        Destroy();
     }
 }

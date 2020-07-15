@@ -107,16 +107,16 @@ public class BattleStatus : MonoBehaviour
             yield return new WaitForSeconds(1.0f);
             AllCharactersPlayWinAnimation();
 
-            if (StageManager.Instance.IsFinalWave())
-            {
-                SaveManager.Instance.RemoveInGameData();
-                Debug.Log("데이터 삭제!");
-            }
-            else
-            {
-                SaveManager.Instance.SetInGameData();
-                SaveManager.Instance.SaveInGameData();
-            }
+            //if (StageManager.Instance.IsFinalWave())
+            //{
+            //    SaveManager.Instance.RemoveInGameData();
+            //    Debug.Log("데이터 삭제!");
+            //}
+            //else
+            //{
+            //    SaveManager.Instance.SetInGameData();
+            //    SaveManager.Instance.SaveInGameData();
+            //}
 
             yield return new WaitForSeconds(3.0f);
 
@@ -139,7 +139,7 @@ public class BattleStatus : MonoBehaviour
         pawns.AddRange(characters);
         pawns.AddRange(enemies);
 
-        pawnsAttackSequenceList = pawns.OrderBy(x => x.ability.AttackSpeed).ToList();
+        pawnsAttackSequenceList = pawns.OrderByDescending(x => x.ability.AttackSpeed).ToList();
     }
 
     private void InitializeAnnihilation()

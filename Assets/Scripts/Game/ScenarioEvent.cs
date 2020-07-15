@@ -21,7 +21,7 @@ public class ScenarioEvent
         scenarioDataSheet = DataBase.Instance.inGameEvent_ScenarioDataSheet;
         if (scenarioDataSheet == null)
         {
-            Debug.LogError("Error scenarioDataSheet is null");
+            Debug.LogWarning("Error scenarioDataSheet is null");
             return;
         }
     }
@@ -54,7 +54,7 @@ public class ScenarioEvent
             return description;
         }
 
-        Debug.LogError($"Error GetTitleText currentChapter:{currentChapter} currentWave:{currentWave} INDEX_OF_SCENARIO_TITLE:{InGameService.INDEX_OF_SCENARIO_TITLE}");
+        Debug.LogWarning($"Error GetTitleText currentChapter:{currentChapter} currentWave:{currentWave} INDEX_OF_SCENARIO_TITLE:{InGameService.INDEX_OF_SCENARIO_TITLE}");
         return "";
     }
 
@@ -65,7 +65,7 @@ public class ScenarioEvent
             return scenarioData;
         }
 
-        Debug.LogError($"Error GetScenarioDataByScenarioId currentChapter:{currentChapter} currentWave:{currentWave} scenarioId:{scenarioId}");
+        Debug.LogWarning($"Error GetScenarioDataByScenarioId currentChapter:{currentChapter} currentWave:{currentWave} scenarioId:{scenarioId}");
         return null;
     }
 
@@ -76,7 +76,7 @@ public class ScenarioEvent
             return description;
         }
 
-        Debug.LogError($"Error GetDescriptionByScenarioId currentChapter:{currentChapter} currentWave:{currentWave} scenarioId:{scenarioId}");
+        Debug.LogWarning($"Error GetDescriptionByScenarioId currentChapter:{currentChapter} currentWave:{currentWave} scenarioId:{scenarioId}");
         return "";
     }
 
@@ -118,7 +118,7 @@ public class ScenarioEvent
             return true;
         }
 
-        Debug.LogError("Error IsWaveHasScenarioEvent");
+        Debug.LogWarning("Error IsWaveHasScenarioEvent");
         return false;
     }
 
@@ -135,7 +135,7 @@ public class ScenarioEvent
             return true;
         }
 
-        Debug.LogError("Error IsProbabilitySufficient");
+        Debug.LogWarning("Error IsProbabilitySufficient");
         return false;
     }
 }

@@ -17,4 +17,9 @@ public class UIGold : MonoBehaviour
     {
         goldText.text = string.Format("{0}", PlayerDataManager.Instance.playerData.Gold.ToString("#,##0"));
     }
+
+    private void OnDestroy()
+    {
+        PlayerDataManager.Instance.OnGoldChanged -= UpdateGoldText;
+    }
 }

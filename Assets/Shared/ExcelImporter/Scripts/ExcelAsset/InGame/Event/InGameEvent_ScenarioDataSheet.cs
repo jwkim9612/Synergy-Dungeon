@@ -54,7 +54,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
             return true;
         }
 
-        Debug.LogError($"Error TryGetScenarioDatas chapterId:{chapterId}");
+        Debug.LogWarning($"Error TryGetScenarioDatas chapterId:{chapterId}");
         return false;
     }
 
@@ -71,7 +71,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
             }
         }
 
-        Debug.LogError($"Error TryGetScenarioDataList chapterId:{chapterId} waveId:{waveId}");
+        Debug.LogWarning($"Error TryGetScenarioDataList chapterId:{chapterId} waveId:{waveId}");
         return false;
     }
 
@@ -91,7 +91,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
             }
         }
 
-        Debug.LogError($"Error TryGetScenarioData chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
+        Debug.LogWarning($"Error TryGetScenarioData chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
         return false;
     }
 
@@ -105,7 +105,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
             return true;
         }
 
-        Debug.LogError($"Error TryGetScenarioDescripion chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
+        Debug.LogWarning($"Error TryGetScenarioDescripion chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
         return false;
     }
 
@@ -119,7 +119,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
             return true;
         }
 
-        Debug.LogError($"Error TryGetScenarioProbability chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
+        Debug.LogWarning($"Error TryGetScenarioProbability chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
         return false;
     }
 }

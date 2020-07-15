@@ -62,7 +62,7 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.Level = InGameManager.instance.playerState.level ;
         _inGameSaveData.Exp = InGameManager.instance.playerState.exp;
         _inGameSaveData.Chapter = StageManager.Instance.currentChapter;
-        _inGameSaveData.Wave = StageManager.Instance.currentWave + 1;
+        _inGameSaveData.Wave = StageManager.Instance.currentWave;
         _inGameSaveData.CharacterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
         _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
         _inGameSaveData.AbilityEffectSaveDataList = InGameManager.instance.backCanvas.uiAbilityEffectList.GetSaveData();

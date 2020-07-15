@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilityEffect : MonoBehaviour
+public class AbilityEffect
 {
     public Ability ability;
     public int remainingTurn;
@@ -38,7 +38,7 @@ public class AbilityEffect : MonoBehaviour
         dataIdList.Add(scenarioData.ScenarioId);
     }
 
-    public void UpdateRemainingTurn()
+    public void DecreaseRemainingTurn()
     {
         if(remainingTurn != -1)
         {

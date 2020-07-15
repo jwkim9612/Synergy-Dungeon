@@ -27,6 +27,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 4
@@ -40,6 +41,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 4
@@ -53,6 +55,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -68,6 +71,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -81,6 +85,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -94,6 +99,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -109,6 +115,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -123,6 +130,7 @@ MonoBehaviour:
     ApplyAbility: 3
     ApplyPercentage: 90
     ApplyTurn: 2
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -136,6 +144,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -151,6 +160,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -165,6 +175,7 @@ MonoBehaviour:
     ApplyAbility: 3
     ApplyPercentage: 110
     ApplyTurn: 2
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -178,6 +189,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -193,6 +205,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -207,6 +220,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -220,6 +234,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -235,6 +250,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -248,6 +264,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -262,6 +279,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -275,6 +293,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -289,6 +308,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -302,6 +322,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -315,6 +336,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -329,6 +351,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -342,6 +365,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -355,6 +379,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -369,6 +394,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -382,6 +408,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -395,6 +422,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -410,6 +438,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -423,6 +452,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -436,6 +466,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -450,6 +481,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -463,6 +495,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -476,6 +509,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -490,6 +524,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -503,6 +538,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -516,6 +552,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -529,6 +566,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -542,6 +580,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -556,6 +595,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -569,6 +609,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -582,6 +623,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -595,6 +637,7 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -608,3 +651,4 @@ MonoBehaviour:
     ApplyAbility: 0
     ApplyPercentage: 0
     ApplyTurn: 0
+    ImagePath: 

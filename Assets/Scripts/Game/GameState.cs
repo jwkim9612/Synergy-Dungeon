@@ -54,7 +54,9 @@ public class GameState : MonoBehaviour
                 break;
 
             case InGameState.Complete:
-                if(stageManager.IsFinalWave())
+                OnComplete();
+
+                if (stageManager.IsFinalWave())
                 {
                     PlayerDataManager.Instance.playerData.IncreasePlayableStage();
                     PlayerDataManager.Instance.playerData.InitializeTopWave();
@@ -64,9 +66,20 @@ public class GameState : MonoBehaviour
                 else
                 {
                     stageManager.IncreaseWaveAndSetCurrentStage(1);
+
+                    if (StageManager.Instance.IsFinalWave())
+                    {
+                        SaveManager.Instance.RemoveInGameData();
+                        Debug.Log("데이터 삭제!");
+                    }
+                    else
+                    {
+                        SaveManager.Instance.SetInGameData();
+                        SaveManager.Instance.SaveInGameData();
+                    }
+
                     SetInGameState(InGameState.Prepare);
                 }
-                OnComplete();
                 break;
 
             case InGameState.Lose:

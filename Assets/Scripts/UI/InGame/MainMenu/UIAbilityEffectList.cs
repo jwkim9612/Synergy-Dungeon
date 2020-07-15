@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using GameSparks.Api.Requests;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class UIAbilityEffectList : MonoBehaviour
 
     private void Start()
     {
-        InGameManager.instance.gameState.OnComplete += UpdateabilityEffectList;
+        InGameManager.instance.gameState.OnComplete += UpdateAbilityEffectListByWaveComplete;
 
         uiAbilityEffectList = new List<UIAbilityEffect>();
 
@@ -23,7 +24,7 @@ public class UIAbilityEffectList : MonoBehaviour
             {
                 if(DataBase.Instance.potionDataSheet.TryGetPotionData(PotionManager.Instance.potionIdInUse, out var potionData))
                 {
-                    AddabilityEffect(potionData);
+                    AddAbilityEffect(potionData);
                     PotionManager.Instance.RemovePotionData();
                 }
             }
@@ -43,7 +44,7 @@ public class UIAbilityEffectList : MonoBehaviour
                     
                     if(DataBase.Instance.potionDataSheet.TryGetPotionData(abilityEffectSaveData.DataIdList[0], out var potionData))
                     {
-                        AddabilityEffect(potionData);
+                        AddAbilityEffect(potionData);
                     }
                     break;
 
@@ -55,7 +56,7 @@ public class UIAbilityEffectList : MonoBehaviour
                     
                     if (DataBase.Instance.inGameEvent_ScenarioDataSheet.TryGetScenarioData(chapterId, waveId, scenarioId, out var scenarioData))
                     {
-                        var abilityEffect = AddabilityEffect(scenarioData);
+                        var abilityEffect = AddAbilityEffect(scenarioData);
                         abilityEffect.remainingTurn = abilityEffectSaveData.remainingTurn;
                     }
 
@@ -64,10 +65,14 @@ public class UIAbilityEffectList : MonoBehaviour
                     break;
             }
         }
+
+        UpdateAbilityEffectList();
     }
 
     public List<AbilityEffectSaveData> GetSaveData()
     {
+        Debug.Log("GetSaveData");
+
         List<AbilityEffectSaveData> abilityEffectSaveDataList = new List<AbilityEffectSaveData>();
 
         foreach (var uiabilityEffect in uiAbilityEffectList)
@@ -83,7 +88,7 @@ public class UIAbilityEffectList : MonoBehaviour
         return abilityEffectSaveDataList;
     }
 
-    public void AddabilityEffect(PotionData potionData)
+    public void AddAbilityEffect(PotionData potionData)
     {
         var uiabilityEffect = Instantiate(this.uiAbilityEffect, transform);
         uiabilityEffect.SetabilityEffect(potionData);
@@ -92,7 +97,7 @@ public class UIAbilityEffectList : MonoBehaviour
         uiAbilityEffectList.Add(uiabilityEffect);
     }
 
-    public AbilityEffect AddabilityEffect(ScenarioData scenarioData)
+    public AbilityEffect AddAbilityEffect(ScenarioData scenarioData)
     {
         var uiabilityEffect = Instantiate(this.uiAbilityEffect, transform);
         var abilityEffect = uiabilityEffect.SetabilityEffect(scenarioData);
@@ -103,15 +108,53 @@ public class UIAbilityEffectList : MonoBehaviour
         return abilityEffect;
     }
 
-    private void UpdateabilityEffectList()
+    private void UpdateAbilityEffectListByWaveComplete()
     {
-        foreach (var uiabilityEffect in uiAbilityEffectList)
+        //foreach (var uiAbilityEffect in uiAbilityEffectList)
+        //{
+        //    uiAbilityEffect.UpdateAbilityEffectByWaveComplete();
+        //    if(uiAbilityEffect.IsOver())
+        //    {
+        //        Destroy(uiAbilityEffect.gameObject);
+        //    }
+        //}
+
+        for (int i = 0; i < uiAbilityEffectList.Count; i++)
         {
-            uiabilityEffect.UpdateabilityEffect();
-            if(uiabilityEffect.IsOver())
+            uiAbilityEffectList[i].UpdateAbilityEffectByWaveComplete();
+            if(uiAbilityEffectList[i].IsOver())
             {
-                uiabilityEffect.Destroy();
+                RemoveAbilityEffectSaveData(i);
+                Destroy(uiAbilityEffectList[i].gameObject);
             }
         }
+    }
+
+    private void UpdateAbilityEffectList()
+    {
+        foreach (var uiAbilityEffect in uiAbilityEffectList)
+        {
+            uiAbilityEffect.UpdateAbilityEffect();
+        }
+    }
+
+    private void RemoveAbilityEffectSaveData(int index)
+    {
+        new LogEventRequest()
+            .SetEventKey("RemoveAbilityEffectSaveData")
+            .SetEventAttribute("Index", index)
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    Debug.Log("Index = " + index);
+                    Debug.Log("Success RemoveAbilityEffectSaveData!");
+                }
+                else
+                {
+                    Debug.Log("Error RemoveAbilityEffectSaveData!");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
     }
 }
