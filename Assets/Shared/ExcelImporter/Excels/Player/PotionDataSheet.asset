@@ -64,8 +64,8 @@ MonoBehaviour:
     Grade: 2
     Ability: 3
     WayOfIncrease: 2
-    IncreasePercentage: 10
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 10
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uCCB4\uB825\uC774 10% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 7
@@ -73,8 +73,8 @@ MonoBehaviour:
     Grade: 2
     Ability: 4
     WayOfIncrease: 2
-    IncreasePercentage: 10
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 10
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 10% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 8
@@ -82,8 +82,8 @@ MonoBehaviour:
     Grade: 2
     Ability: 1
     WayOfIncrease: 2
-    IncreasePercentage: 10
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 10
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uB825\uC774 10%  \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 9
@@ -91,8 +91,8 @@ MonoBehaviour:
     Grade: 2
     Ability: 6
     WayOfIncrease: 2
-    IncreasePercentage: 10
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 10
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uC274\uB4DC\uAC00 10% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 10
@@ -100,8 +100,8 @@ MonoBehaviour:
     Grade: 2
     Ability: 10
     WayOfIncrease: 2
-    IncreasePercentage: 10
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 10
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uC18D\uB3C4\uAC00
       10% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
@@ -110,8 +110,8 @@ MonoBehaviour:
     Grade: 3
     Ability: 3
     WayOfIncrease: 2
-    IncreasePercentage: 20
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 20
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uCCB4\uB825\uC774 20% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 12
@@ -119,8 +119,8 @@ MonoBehaviour:
     Grade: 3
     Ability: 4
     WayOfIncrease: 2
-    IncreasePercentage: 20
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 20
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 20% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 13
@@ -128,8 +128,8 @@ MonoBehaviour:
     Grade: 3
     Ability: 1
     WayOfIncrease: 2
-    IncreasePercentage: 20
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 20
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uB825\uC774 20%  \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 14
@@ -137,8 +137,8 @@ MonoBehaviour:
     Grade: 3
     Ability: 6
     WayOfIncrease: 2
-    IncreasePercentage: 20
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 20
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uC274\uB4DC\uAC00 20% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 15
@@ -146,8 +146,8 @@ MonoBehaviour:
     Grade: 3
     Ability: 10
     WayOfIncrease: 2
-    IncreasePercentage: 20
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 20
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uC18D\uB3C4\uAC00
       20% \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
@@ -156,8 +156,8 @@ MonoBehaviour:
     Grade: 4
     Ability: 3
     WayOfIncrease: 2
-    IncreasePercentage: 30
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 30
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uCCB4\uB825\uC774 30 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 17
@@ -165,8 +165,8 @@ MonoBehaviour:
     Grade: 4
     Ability: 4
     WayOfIncrease: 2
-    IncreasePercentage: 30
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 30
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 30 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Elf
   - Id: 18
@@ -174,8 +174,8 @@ MonoBehaviour:
     Grade: 4
     Ability: 1
     WayOfIncrease: 2
-    IncreasePercentage: 30
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 30
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uB825\uC774 30 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 19
@@ -183,8 +183,8 @@ MonoBehaviour:
     Grade: 4
     Ability: 6
     WayOfIncrease: 2
-    IncreasePercentage: 30
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 30
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uC274\uB4DC\uAC00 30 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 20
@@ -192,8 +192,8 @@ MonoBehaviour:
     Grade: 4
     Ability: 10
     WayOfIncrease: 2
-    IncreasePercentage: 30
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 30
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uC18D\uB3C4\uAC00
       30 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
@@ -202,8 +202,8 @@ MonoBehaviour:
     Grade: 5
     Ability: 3
     WayOfIncrease: 2
-    IncreasePercentage: 50
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 50
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uCCB4\uB825\uC774 50 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 22
@@ -211,8 +211,8 @@ MonoBehaviour:
     Grade: 5
     Ability: 4
     WayOfIncrease: 2
-    IncreasePercentage: 50
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 50
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uBC29\uC5B4\uB825\uC774 50 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 23
@@ -220,8 +220,8 @@ MonoBehaviour:
     Grade: 5
     Ability: 1
     WayOfIncrease: 2
-    IncreasePercentage: 50
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 50
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uB825\uC774 50 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 24
@@ -229,8 +229,8 @@ MonoBehaviour:
     Grade: 5
     Ability: 6
     WayOfIncrease: 2
-    IncreasePercentage: 50
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 50
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uC274\uB4DC\uAC00 50 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 25
@@ -238,8 +238,8 @@ MonoBehaviour:
     Grade: 5
     Ability: 10
     WayOfIncrease: 2
-    IncreasePercentage: 50
-    IncreaseValue: 0
+    IncreasePercentage: 0
+    IncreaseValue: 50
     Description: "\uBAA8\uB4E0 \uC720\uB2DB\uC758 \uACF5\uACA9\uC18D\uB3C4\uAC00
       50 \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead

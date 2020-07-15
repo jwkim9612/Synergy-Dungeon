@@ -26,6 +26,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 4
@@ -38,6 +39,7 @@ MonoBehaviour:
     RewardDescription: "1\uACE8\uB4DC \uD68D\uB4DD!"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 4
@@ -50,6 +52,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -64,6 +67,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -76,6 +80,7 @@ MonoBehaviour:
     RewardDescription: "1\uACE8\uB4DC \uD68D\uB4DD!"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 5
@@ -88,6 +93,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -102,6 +108,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -115,6 +122,7 @@ MonoBehaviour:
       \uCD5C\uB300\uCCB4\uB825 10% \uB2E4\uC6B4"
     ApplyAbility: 3
     ApplyPercentage: 90
+    ApplyTurn: 2
   - ChapterId: 1
     StageId: 2
     WaveId: 6
@@ -127,6 +135,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -141,6 +150,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -154,6 +164,7 @@ MonoBehaviour:
       \uCD5C\uB300\uCCB4\uB825 10% \uC0C1\uC2B9"
     ApplyAbility: 3
     ApplyPercentage: 110
+    ApplyTurn: 2
   - ChapterId: 1
     StageId: 2
     WaveId: 7
@@ -166,6 +177,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -180,6 +192,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -193,6 +206,7 @@ MonoBehaviour:
       \uB2EC\uC131! (\uBB34\uC9C0\uAC1C \uC2AC\uB77C\uC784\uC758 \uC874\uC7AC)"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 2
     WaveId: 8
@@ -205,6 +219,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -219,6 +234,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -231,6 +247,7 @@ MonoBehaviour:
     RewardDescription: "\uBB50\uAC00 \uBB38\uC81C\uC57C, say something."
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -244,6 +261,7 @@ MonoBehaviour:
     RewardDescription: "\uC65C \uADF8\uB798?"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 9
@@ -256,6 +274,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -269,6 +288,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -281,6 +301,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 10
@@ -293,6 +314,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -306,6 +328,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -318,6 +341,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 11
@@ -330,6 +354,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -343,6 +368,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -355,6 +381,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 12
@@ -367,6 +394,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -381,6 +409,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -393,6 +422,7 @@ MonoBehaviour:
     RewardDescription: "\uC544\uD2F0\uD329\uD2B8 \uC870\uAC01 3\uAC1C \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 3
     WaveId: 13
@@ -405,6 +435,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -418,6 +449,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -430,6 +462,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 14
@@ -442,6 +475,7 @@ MonoBehaviour:
     RewardDescription: "\uAF5D"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -455,6 +489,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -467,6 +502,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -479,6 +515,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -491,6 +528,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 15
@@ -503,6 +541,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -516,6 +555,7 @@ MonoBehaviour:
     RewardDescription: 
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -528,6 +568,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -540,6 +581,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -552,6 +594,7 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0
   - ChapterId: 1
     StageId: 4
     WaveId: 16
@@ -564,3 +607,4 @@ MonoBehaviour:
     RewardDescription: "\uACE8\uB4DC \uD68D\uB4DD"
     ApplyAbility: 0
     ApplyPercentage: 0
+    ApplyTurn: 0

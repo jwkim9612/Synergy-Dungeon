@@ -1,4 +1,7 @@
-﻿public class ScenarioData
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public class ScenarioData
 {
     public ScenarioData(ScenarioExcelData scenarioExcelData)
     {
@@ -12,6 +15,11 @@
         CurrencyType = scenarioExcelData.CurrencyType;
         Amount = scenarioExcelData.Amount;
         RewardDescription = scenarioExcelData.RewardDescription;
+        ApplyAbility = scenarioExcelData.ApplyAbility;
+        ApplyPercentage = scenarioExcelData.ApplyPercentage;
+        ApplyTurn = scenarioExcelData.ApplyTurn;
+
+        Image = Resources.Load<Sprite>(scenarioExcelData.ImagePath);
     }
 
     public int ChapterId;
@@ -24,4 +32,8 @@
     public RewardCurrency CurrencyType;
     public int Amount;
     public string RewardDescription;
+    public Ability ApplyAbility;
+    public int ApplyPercentage;
+    public int ApplyTurn;
+    public Sprite Image;
 }

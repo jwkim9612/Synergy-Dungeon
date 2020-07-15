@@ -6,5 +6,4 @@ using UnityEngine.EventSystems;
 public class UIMainMenu : MonoBehaviour
 {
 
-
 }

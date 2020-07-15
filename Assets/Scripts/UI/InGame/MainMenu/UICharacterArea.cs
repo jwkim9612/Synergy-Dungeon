@@ -25,6 +25,8 @@ public class UICharacterArea : MonoBehaviour
         {
             numOfCurrentPlacedCharacters = 0;
         }
+
+        InGameManager.instance.gameState.OnComplete += ShowAllUICharacters;
     }
 
     public bool IsEmpty()

@@ -8,7 +8,9 @@ public class MainManager : MonoBehaviour
     public UIAskGoToStore uiAskGoToStore = null;
     public UIIllustratedBook uiIllustratedBook = null;
     public UIStore uiStore = null;
+    public UIBattlefield uiBattlefield = null;
     public UITopMenu uiTopMenu = null;
+    public UIMainMenu uiMainMenu = null;
     public AskInGameContinue askInGameContinue = null;
     [SerializeField] private GameObject connecting = null;
     [SerializeField] private GameObject EnteringDungeon = null;

@@ -15,4 +15,6 @@ public class ScenarioExcelData
     public string RewardDescription;
     public Ability ApplyAbility;
     public int ApplyPercentage;
+    public int ApplyTurn;
+    public string ImagePath;
 }

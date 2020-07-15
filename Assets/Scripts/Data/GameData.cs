@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 public class AccountData
 { 
@@ -138,4 +139,35 @@ public enum PotionGrade
     A
 }
 
+public enum AbilityEffectData
+{ 
+    None,
+    Potion,
+    Scenario
+}
 
+[Serializable]
+public class AbilityEffectSaveData
+{
+    public List<int> DataIdList { get; set; }
+    public AbilityEffectData abilityEffectData { get; set; }
+    public int remainingTurn { get; set; }
+
+    public AbilityEffectSaveData() { }
+
+    public AbilityEffectSaveData(int id, AbilityEffectData data, int remainingTurn)
+    {
+        DataIdList = new List<int>();
+        DataIdList.Add(id);
+
+        abilityEffectData = data;
+        this.remainingTurn = remainingTurn;
+    }
+
+    public AbilityEffectSaveData(List<int> idList, AbilityEffectData data, int remainingTurn)
+    {
+        DataIdList = idList;
+        abilityEffectData = data;
+        this.remainingTurn = remainingTurn;
+    }
+}

@@ -87,6 +87,11 @@ public class GameState : MonoBehaviour
         isWaveClear = true;
     }
 
+    public void SetIsPlayerLose()
+    {
+        isPlayerLose = true;
+    }
+
     public bool IsInBattle()
     {
         return inGameState == InGameState.Battle;

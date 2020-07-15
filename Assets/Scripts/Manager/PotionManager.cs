@@ -16,6 +16,11 @@ public class PotionManager : MonoSingleton<PotionManager>
         LoadPotionData();
     }
 
+    public void RemovePotionData()
+    {
+        InitializePotionData();
+    }
+
     public void LoadPotionData()
     {
         new LogEventRequest()
@@ -77,7 +82,12 @@ public class PotionManager : MonoSingleton<PotionManager>
                 {
                     Debug.Log("Error SetPotion PotionData !");
                 }
-    });
+        });
+    }
+
+    public void UsePotion()
+    {
+
     }
 
     public bool HasPotionInUse()

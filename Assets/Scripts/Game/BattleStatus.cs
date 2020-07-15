@@ -9,7 +9,7 @@ public class BattleStatus : MonoBehaviour
     public delegate void OnWinTheBattleDelegate();
     public OnWinTheBattleDelegate OnWinTheBattle { get; set; }
 
-    [SerializeField] private UIBattleStart uiBattleStart;
+    [SerializeField] private UIBattleStart uiBattleStart = null;
 
     public List<Character> characters { get; set; }
     public List<Enemy> enemies { get; set; }
@@ -98,7 +98,7 @@ public class BattleStatus : MonoBehaviour
         if (isCharacterAnnihilation)
         {
             SaveManager.Instance.RemoveInGameData();
-            InGameManager.instance.gameState.isPlayerLose = true;
+            InGameManager.instance.gameState.SetIsPlayerLose();
             Debug.Log("Battle End");
             yield break;
         }
@@ -120,7 +120,8 @@ public class BattleStatus : MonoBehaviour
 
             yield return new WaitForSeconds(3.0f);
 
-            OnWinTheBattle();
+            InGameManager.instance.gameState.SetIsWaveClear();
+            //OnWinTheBattle();
             yield break;
         }
         else

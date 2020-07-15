@@ -6,7 +6,6 @@ using DanielLochner.Assets.SimpleScrollSnap;
 
 public class UIChooseChapter : UIControl
 {
-    [SerializeField] private UIBattlefield uiBattlefield = null;
     [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
     [SerializeField] private GameObject content = null;
     [SerializeField] private UIChapter uiChapter = null;
@@ -17,6 +16,8 @@ public class UIChooseChapter : UIControl
     void Start()
     {
         CreateChapterList();
+
+        var uiBattlefield = MainManager.instance.uiBattlefield;
 
         entranceButton.onClick.AddListener(() => {
             uiBattlefield.selectedChapter = simpleScrollSnap.CurrentPanel + 1;

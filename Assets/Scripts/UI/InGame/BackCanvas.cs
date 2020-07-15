@@ -2,6 +2,7 @@
 
 public class BackCanvas : MonoBehaviour
 {
+    public UIAbilityEffectList uiAbilityEffectList;
     public UIBattleArea uiBattleArea;
 
 }

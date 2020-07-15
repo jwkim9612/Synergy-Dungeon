@@ -102,7 +102,6 @@ public class Enemy : Pawn
             yield return new WaitForEndOfFrame();
         }
 
-        Debug.Log("end");
         yield return new WaitForSeconds(0.5f);
 
         if (isDead)

@@ -11,7 +11,6 @@ public class PotionData
         Grade = potionExcelData.Grade;
         Ability = potionExcelData.Ability;
         WayOfIncrease = potionExcelData.WayOfIncrease;
-        IncreasePercentage = potionExcelData.IncreasePercentage;
         IncreaseValue = potionExcelData.IncreaseValue;
         Description = potionExcelData.Description;
 
@@ -25,7 +24,6 @@ public class PotionData
         Grade = potionData.Grade;
         Ability = potionData.Ability;
         WayOfIncrease = potionData.WayOfIncrease;
-        IncreasePercentage = potionData.IncreasePercentage;
         IncreaseValue = potionData.IncreaseValue;
         Description = potionData.Description;
         Image = potionData.Image;
@@ -36,7 +34,6 @@ public class PotionData
     public PotionGrade Grade;
     public Ability Ability;
     public WayOfCalculate WayOfIncrease;
-    public int IncreasePercentage;
     public int IncreaseValue;
     public string Description;
     public Sprite Image;

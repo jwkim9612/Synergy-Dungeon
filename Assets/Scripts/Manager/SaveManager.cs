@@ -65,6 +65,7 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.Wave = StageManager.Instance.currentWave + 1;
         _inGameSaveData.CharacterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
         _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
+        _inGameSaveData.AbilityEffectSaveDataList = InGameManager.instance.backCanvas.uiAbilityEffectList.GetSaveData();
         _inGameSaveData.EventProbability = InGameManager.instance.frontCanvas.uiScenarioEvent.scenarioEvent.currentProbability;
     }
 
@@ -145,6 +146,7 @@ public class SaveManager : MonoSingleton<SaveManager>
             .SetEventAttribute("Exp", _inGameSaveData.Exp)
             .SetEventAttribute("CharacterAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.CharacterAreaInfoList))
             .SetEventAttribute("PrepareAreaInfoList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.PrepareAreaInfoList))
+            .SetEventAttribute("AbilityEffectSaveDataList", JsonDataManager.Instance.ObjectToJson(_inGameSaveData.AbilityEffectSaveDataList))
             .SetEventAttribute("EventProbability", _inGameSaveData.EventProbability)
             .Send((response) =>
             {
@@ -180,6 +182,7 @@ public class SaveManager : MonoSingleton<SaveManager>
                         Exp = (int)scriptData.GetInt("InGameExp"),
                         CharacterAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGameCharacterAreaInfoList")),
                         PrepareAreaInfoList = JsonMapper.ToObject<List<CharacterInfo>>(scriptData.GetString("InGamePrepareAreaInfoList")),
+                        AbilityEffectSaveDataList = JsonMapper.ToObject<List<AbilityEffectSaveData>>(scriptData.GetString("InGameAbilityEffectSaveDataList")),
                         EventProbability = (int)scriptData.GetInt("InGameEventProbability")
                     };
 
