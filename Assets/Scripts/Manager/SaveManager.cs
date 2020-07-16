@@ -69,6 +69,28 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.EventProbability = InGameManager.instance.frontCanvas.uiScenarioEvent.scenarioEvent.currentProbability;
     }
 
+    public void InitializeInGameData()
+    {
+        _inGameSaveData.Coin = InGameService.DEFAULT_COIN;
+        _inGameSaveData.Level = InGameService.DEFAULT_LEVEL;
+        _inGameSaveData.Exp = InGameService.DEFAULT_EXP;
+        _inGameSaveData.Chapter = StageManager.Instance.currentChapter;
+        _inGameSaveData.Wave = StageManager.Instance.currentWave;
+        _inGameSaveData.CharacterAreaInfoList = new List<CharacterInfo>();
+        _inGameSaveData.PrepareAreaInfoList = new List<CharacterInfo>();
+
+        if(PotionManager.Instance.HasPotionInUse())
+        {
+            _inGameSaveData.AbilityEffectSaveDataList = new List<AbilityEffectSaveData>() { PotionManager.Instance.GetAbilityEffectSaveData() };
+        }
+        else
+        {
+            _inGameSaveData.AbilityEffectSaveDataList = new List<AbilityEffectSaveData>();
+        }
+
+        _inGameSaveData.EventProbability = InGameService.DEFAULT_EVENT_PROBABILITY;
+    }
+
     public bool LoadEquippedRuneIdsSaveData()
     {
         //파일이 없으면

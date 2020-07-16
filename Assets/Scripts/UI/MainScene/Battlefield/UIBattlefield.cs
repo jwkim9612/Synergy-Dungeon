@@ -157,7 +157,7 @@ public class UIBattlefield : MonoBehaviour
     {
         MainManager.instance.ShowEnteringDungeon();
 
-        new LogEventRequest()
+        new LogEventRequest() 
             .SetEventKey("UseHeart")
             .Send((response) =>
             {
@@ -169,6 +169,8 @@ public class UIBattlefield : MonoBehaviour
                     {
                         StageManager.Instance.SetChapterData(selectedChapter);
                         StageManager.Instance.Initialize();
+                        SaveManager.Instance.InitializeInGameData();
+                        SaveManager.Instance.SaveInGameData();
                         SceneManager.LoadScene("InGameScene");
                     }
                     else

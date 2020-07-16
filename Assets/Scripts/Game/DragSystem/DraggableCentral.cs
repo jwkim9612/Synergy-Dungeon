@@ -20,6 +20,7 @@ public class DraggableCentral : MonoBehaviour
     private bool isDragged;
 
     [SerializeField] private Camera cam;
+    [SerializeField] private UIInGameCharacterInfo uiInGameCharacterInfo = null;
 
     private void Start()
     {
@@ -34,28 +35,28 @@ public class DraggableCentral : MonoBehaviour
     // 캐릭터 클릭 시 캐릭터의 정보가 나오게하는 Update문
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0) && !isDragged)
+        if (Input.GetMouseButtonDown(0))
         {
-            var characterArealist = uiCharacterArea.GetUICharacterListWithCharacters();
-            var prepareArealist = uiPrepareArea.GetUICharacterListWithCharacters();
+            var characterAreaListWithCharacters = uiCharacterArea.GetUICharacterListWithCharacters();
+            var prepareAreaListWithCharacters = uiPrepareArea.GetUICharacterListWithCharacters();
 
             List<UICharacter> characterListWithCharacters = new List<UICharacter>();
-            characterListWithCharacters.AddRange(characterArealist);
-            characterListWithCharacters.AddRange(prepareArealist);
+            characterListWithCharacters.AddRange(characterAreaListWithCharacters);
+            characterListWithCharacters.AddRange(prepareAreaListWithCharacters);
 
             var uiCharacter = characterListWithCharacters.Find(t => TransformService.ContainPos(t.transform as RectTransform, Input.mousePosition, cam));
             if (uiCharacter != null)
             {
-                Debug.Log("Good!");
+                uiInGameCharacterInfo.SetInGameCharacterInfo(uiCharacter);
+                uiInGameCharacterInfo.OnShow();
             }
-
-            //if (!TransformService.ContainPos(transform as RectTransform, Input.mousePosition, cam))
-            //{
-            //    if (uiAbilityEffectInfo.gameObject.activeSelf)
-            //    {
-            //        uiAbilityEffectInfo.OnHide();
-            //    }
-            //}
+            else
+            {
+                if(uiInGameCharacterInfo.gameObject.activeSelf)
+                {
+                    uiInGameCharacterInfo.OnHide();
+                }
+            }
         }
     }
 
@@ -192,6 +193,8 @@ public class DraggableCentral : MonoBehaviour
 
     void EndDrag(UICharacter uiCharacter)
     {
+        uiInGameCharacterInfo.OnHide();
+
         sellArea.gameObject.SetActive(false);
 
         if (isSelling)

@@ -66,6 +66,9 @@ public class Arranger : MonoBehaviour
 
     public void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
     {
+        if (characterInfoList.Count == 0)
+            return;
+
         for (int i = 0; i < uiCharacters.Count; ++i)
         {
             if (characterInfoList[i] == null)

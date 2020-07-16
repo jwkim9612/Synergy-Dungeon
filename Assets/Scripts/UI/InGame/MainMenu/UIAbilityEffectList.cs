@@ -87,8 +87,6 @@ public class UIAbilityEffectList : MonoBehaviour
 
     public List<AbilityEffectSaveData> GetSaveData()
     {
-        Debug.Log("GetSaveData");
-
         List<AbilityEffectSaveData> abilityEffectSaveDataList = new List<AbilityEffectSaveData>();
 
         foreach (var uiabilityEffect in uiAbilityEffectList)

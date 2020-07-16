@@ -85,9 +85,14 @@ public class PotionManager : MonoSingleton<PotionManager>
         });
     }
 
-    public void UsePotion()
+    public AbilityEffectSaveData GetAbilityEffectSaveData()
     {
+        AbilityEffectSaveData abilityEffectSaveData = new AbilityEffectSaveData();
+        abilityEffectSaveData.DataIdList = new List<int>() { potionIdInUse };
+        abilityEffectSaveData.abilityEffectData = AbilityEffectData.Potion;
+        abilityEffectSaveData.remainingTurn = AbilityEffectService.NUM_OF_INFINITY;
 
+        return abilityEffectSaveData;
     }
 
     public bool HasPotionInUse()

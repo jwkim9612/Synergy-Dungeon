@@ -53,6 +53,9 @@ public class UICharacterArea : MonoBehaviour
 
     protected void InitializeByInGameSaveData(List<CharacterInfo> characterInfoList)
     {
+        if (characterInfoList.Count == 0)
+            return;
+
         List<CharacterInfo> backAreaInfos = characterInfoList.GetRange(0, InGameService.NUMBER_OF_BACKAREA);
         List<CharacterInfo> frontAreaInfos = characterInfoList.GetRange(InGameService.NUMBER_OF_BACKAREA, InGameService.NUMBER_OF_FRONTAREA);
 
