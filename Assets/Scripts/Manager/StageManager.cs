@@ -15,7 +15,7 @@ public class StageManager : MonoSingleton<StageManager>
         }
         else
         {
-            currentWave = 1;
+            currentWave = 5;
         }
     }
 

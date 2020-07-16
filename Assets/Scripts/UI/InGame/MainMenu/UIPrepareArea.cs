@@ -54,6 +54,19 @@ public class UIPrepareArea : Arranger
         return null;
     }
 
+    public List<UICharacter> GetUICharacterListWithCharacters()
+    {
+        List<UICharacter> characterList = new List<UICharacter>();
+
+        foreach (var uiCharacter in uiCharacters)
+        {
+            if (uiCharacter.characterInfo != null)
+                characterList.Add(uiCharacter);
+        }
+
+        return characterList;
+    }
+
     public void HideAllCharacters()
     {
         foreach (var uiCharacter in uiCharacters)

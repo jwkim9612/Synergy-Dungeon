@@ -14,21 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginExcelDatas:
   - Name: 1
-    Description: "\uBAA8\uB4E0 \uAD81\uC218 \uC885\uC871\uC758 \uBA85\uC911\uB960\uC774
-      [10/20] (2/4) \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    Description: "\uAD81\uC218/\uC544\uAD70\uC758 \uD06C\uB9AC\uD2F0\uCEEC \uD655\uB960\uC774
+      [\uAD81\uC2187/\uAD81\uC21815/\uC544\uAD7015] (1/3/5) \uB9CC\uD07C \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Origin/Archer
   - Name: 3
-    Description: "\uD3C9\uD0C0 1\uBC88/2\uBC88"
+    Description: "\uB3C4\uC801\uC758 \uAE30\uBCF8\uACF5\uACA9\uC774 [40%/85%] (2/4)
+      \uB9CC\uD07C 1\uBC88 \uB354 \uB54C\uB9BD\uB2C8\uB2E4."
     ImagePath: Images/Origin/Thief
   - Name: 5
-    Description: "\uBAA8\uB4E0 \uC544\uAD70 \uC720\uB2DB\uC758 \uC9C0\uB825\uC774
-      [10/20] (2/4) \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    Description: "\uC544\uAD70\uC758 \uB9C8\uBC95\uACF5\uACA9\uB825\uC774 [20/45/80]
+      (2/4/6) \uB9CC\uD07C \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Origin/Wizard
   - Name: 2
-    Description: "\uBAA8\uB4E0 \uC544\uAD70 \uC720\uB2DB\uC758 \uB9C8\uBC95\uBC29\uC5B4\uB825\uC774
-      [10/20] (2/4) \uC99D\uAC00\uD569\uB2C8\uB2E4."
+    Description: "\uC544\uAD70\uC758 \uB9C8\uBC95\uC800\uD56D\uB825\uC774 [10/20]
+      (2/4) \uB9CC\uD07C \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Origin/Paladin
   - Name: 4
-    Description: "\uBAA8\uB4E0 \uC804\uC0AC \uC885\uC871\uC758 \uBC29\uC5B4\uB825\uC774
-      [10/20/30] (2/4/6) \uC99D\uAC00\uD569\uB2C8\uB2E4. "
+    Description: "\uC544\uAD70\uC758 \uBC29\uC5B4\uB825\uC774 [10/20] (2/4) \uB9CC\uD07C
+      \uC99D\uAC00\uD569\uB2C8\uB2E4."
     ImagePath: Images/Origin/Warrior

@@ -14,10 +14,10 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
     public void LoadMainScene()
     {
         OnLoading();
-        StartCoroutine(LoadScene());
+        StartCoroutine(Co_LoadMainScene());
     }
 
-    private IEnumerator LoadScene()
+    private IEnumerator Co_LoadMainScene()
     {
         yield return null;
         AsyncOperation operation = SceneManager.LoadSceneAsync("MainScene");

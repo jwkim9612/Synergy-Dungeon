@@ -7,8 +7,23 @@ public class UIAbilityEffect : MonoBehaviour
 {
     [SerializeField] private Image effectImage = null;
     [SerializeField] private Text remainingTurnText = null;
+    [SerializeField] protected Toggle toggle = null;
+    [SerializeField] private UIAbilityEffectInfo uiAbilityEffectInfo = null;
 
     public AbilityEffect abilityEffect;
+
+    private void Start()
+    {
+        toggle = GetComponent<Toggle>();
+        toggle.onValueChanged.AddListener((bool bOn) =>
+        {
+            if (bOn)
+            {
+                uiAbilityEffectInfo.SetAbilityEffectInfo(abilityEffect);
+                uiAbilityEffectInfo.OnShow();
+            }
+        });
+    }
 
     public void UpdateAbilityEffect()
     {

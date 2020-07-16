@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Microsoft.Win32.SafeHandles;
+using UnityEngine;
 
 public class InGamePlayerState : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class InGamePlayerState : MonoBehaviour
 
     public void IncreaseCoin(int increaseValue)
     {
-        coin += increaseValue;
+        coin = Mathf.Clamp(coin + increaseValue, InGameService.MIN_NUMBER_OF_COIN, InGameService.MAX_NUMBER_OF_COIN);
         OnCoinChanged();
     }
 
@@ -67,7 +68,7 @@ public class InGamePlayerState : MonoBehaviour
 
     public void UseCoin(int usedValue)
     {
-        coin = Mathf.Clamp(coin - usedValue, 0, coin);
+        coin = Mathf.Clamp(coin - usedValue, InGameService.MIN_NUMBER_OF_COIN, coin);
         OnCoinChanged();
     }
 

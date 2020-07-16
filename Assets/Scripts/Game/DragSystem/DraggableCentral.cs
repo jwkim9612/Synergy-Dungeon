@@ -17,6 +17,9 @@ public class DraggableCentral : MonoBehaviour
     private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
+    private bool isDragged;
+
+    [SerializeField] private Camera cam;
 
     private void Start()
     {
@@ -26,6 +29,34 @@ public class DraggableCentral : MonoBehaviour
         isSwapped = false;
         swappedCharacter = null;
         originalSize = 0.0f;
+    }
+
+    // 캐릭터 클릭 시 캐릭터의 정보가 나오게하는 Update문
+    private void Update()
+    {
+        if (Input.GetMouseButtonUp(0) && !isDragged)
+        {
+            var characterArealist = uiCharacterArea.GetUICharacterListWithCharacters();
+            var prepareArealist = uiPrepareArea.GetUICharacterListWithCharacters();
+
+            List<UICharacter> characterListWithCharacters = new List<UICharacter>();
+            characterListWithCharacters.AddRange(characterArealist);
+            characterListWithCharacters.AddRange(prepareArealist);
+
+            var uiCharacter = characterListWithCharacters.Find(t => TransformService.ContainPos(t.transform as RectTransform, Input.mousePosition, cam));
+            if (uiCharacter != null)
+            {
+                Debug.Log("Good!");
+            }
+
+            //if (!TransformService.ContainPos(transform as RectTransform, Input.mousePosition, cam))
+            //{
+            //    if (uiAbilityEffectInfo.gameObject.activeSelf)
+            //    {
+            //        uiAbilityEffectInfo.OnHide();
+            //    }
+            //}
+        }
     }
 
     private void InitializeArrangers()
@@ -70,6 +101,8 @@ public class DraggableCentral : MonoBehaviour
 
     void BeginDrag(UICharacter uiCharacter)
     {
+        isDragged = true;
+
         parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
         uiCharacter.SetDefaultImage();
@@ -187,6 +220,9 @@ public class DraggableCentral : MonoBehaviour
         SetCharacterImage(uiCharacter);
 
         isSwapped = false;
+
+        Debug.Log("draggble is false");
+        isDragged = false;
     }
 
     /// <summary>

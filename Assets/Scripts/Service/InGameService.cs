@@ -12,6 +12,9 @@ public class InGameService : MonoBehaviour
     public const int MIN_NUMBER_OF_CAN_PLACED = 0;
     public const int CAN_BUY_EXP = 1;
 
+    public const int MIN_NUMBER_OF_COIN = 0;
+    public const int MAX_NUMBER_OF_COIN = 10000;
+
     public const float Z_VALUE_OF_PAWN = 5.0f;
     public const float Z_VALUE_OF_PARTICLE = 1.0f;
 

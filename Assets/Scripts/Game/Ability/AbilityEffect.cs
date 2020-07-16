@@ -8,6 +8,7 @@ public class AbilityEffect
     public int remainingTurn;
     private WayOfCalculate wayOfCalculate;
     public int effectValue;
+    public string description;
 
     public AbilityEffectData abilityEffectData;
     public List<int> dataIdList;
@@ -19,6 +20,7 @@ public class AbilityEffect
         wayOfCalculate = potionData.WayOfIncrease;
         effectValue = potionData.IncreaseValue;
         abilityEffectData = AbilityEffectData.Potion;
+        description = potionData.Description;
 
         dataIdList = new List<int>(); 
         dataIdList.Add(potionData.Id);
@@ -31,6 +33,7 @@ public class AbilityEffect
         wayOfCalculate = WayOfCalculate.Percentage;
         effectValue = scenarioData.ApplyPercentage;
         abilityEffectData = AbilityEffectData.Scenario;
+        description = scenarioData.RewardDescription;
 
         dataIdList = new List<int>();
         dataIdList.Add(scenarioData.ChapterId);

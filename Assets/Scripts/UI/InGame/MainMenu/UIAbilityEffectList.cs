@@ -6,7 +6,10 @@ using UnityEngine;
 public class UIAbilityEffectList : MonoBehaviour
 {
     [SerializeField] private UIAbilityEffect uiAbilityEffect = null;
+    [SerializeField] private UIAbilityEffectInfo uiAbilityEffectInfo = null;
     public List<UIAbilityEffect> uiAbilityEffectList;
+
+    [SerializeField] private Camera cam;
 
     private void Start()
     {
@@ -29,7 +32,20 @@ public class UIAbilityEffectList : MonoBehaviour
                 }
             }
         }
+    }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!TransformService.ContainPos(transform as RectTransform, Input.mousePosition, cam))
+            {
+                if (uiAbilityEffectInfo.gameObject.activeSelf)
+                {
+                    uiAbilityEffectInfo.OnHide();
+                }
+            }
+        }
     }
 
     public void InitializeByInGameSaveData(List<AbilityEffectSaveData> abilityEffectSaveDataList)
@@ -110,14 +126,7 @@ public class UIAbilityEffectList : MonoBehaviour
 
     private void UpdateAbilityEffectListByWaveComplete()
     {
-        //foreach (var uiAbilityEffect in uiAbilityEffectList)
-        //{
-        //    uiAbilityEffect.UpdateAbilityEffectByWaveComplete();
-        //    if(uiAbilityEffect.IsOver())
-        //    {
-        //        Destroy(uiAbilityEffect.gameObject);
-        //    }
-        //}
+        List<int> removeIndexList = new List<int>();
 
         for (int i = 0; i < uiAbilityEffectList.Count; i++)
         {
@@ -125,8 +134,18 @@ public class UIAbilityEffectList : MonoBehaviour
             if(uiAbilityEffectList[i].IsOver())
             {
                 RemoveAbilityEffectSaveData(i);
-                Destroy(uiAbilityEffectList[i].gameObject);
+                removeIndexList.Add(i);
             }
+        }
+
+        // list의 앞에서부터 삭제하면 앞으로 땡겨지기때문에 문제가 발생한다.
+        // 따라서 Reverse 함수로 역순으로 바꿔준 후 삭제.
+        removeIndexList.Reverse();
+
+        for (int i = 0; i < removeIndexList.Count; i++)
+        {
+            Destroy(uiAbilityEffectList[removeIndexList[i]].gameObject);
+            uiAbilityEffectList.RemoveAt(removeIndexList[i]);
         }
     }
 
