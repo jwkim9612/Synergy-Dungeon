@@ -11,6 +11,7 @@ public class UIHeart : MonoBehaviour
     [SerializeField] private Text timeText = null;
     private long remainingTime;
     private long currentHeart;
+    private bool heartTimerIsRunning;
 
     public void Initialize()
     {
@@ -33,7 +34,10 @@ public class UIHeart : MonoBehaviour
                     this.remainingTime = remainingTime;
 
                     if (heart < 5)
-                        StartCoroutine(Co_HeartTimer());
+                    {
+                        if(!heartTimerIsRunning)
+                            StartCoroutine(Co_HeartTimer());
+                    }
                     else
                         timeText.text = "0:00";
                 }
@@ -61,6 +65,8 @@ public class UIHeart : MonoBehaviour
 
     private IEnumerator Co_HeartTimer()
     {
+        heartTimerIsRunning = true;
+
         while (remainingTime > 0)
         {
             timeText.text = remainingTime / 60 + ":" + remainingTime % 60;
@@ -68,6 +74,7 @@ public class UIHeart : MonoBehaviour
             --remainingTime;
         }
 
+        heartTimerIsRunning = false;
         HeartUpdate();
     }
 

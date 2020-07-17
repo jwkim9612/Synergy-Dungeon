@@ -9,6 +9,25 @@ public class UIInGameSynergyInfo : MonoBehaviour
     [SerializeField] private Text synergyNameText;
     [SerializeField] private Text synergyInfoText;
 
+    [SerializeField] private GameObject inBattleParent = null;
+    [SerializeField] private GameObject inPrepareParent = null;
+
+    public void Initialize()
+    {
+        InGameManager.instance.gameState.OnBattle += MoveForBattle;
+        InGameManager.instance.gameState.OnPrepare += MoveForPrepare;
+    }
+
+    private void MoveForBattle()
+    {
+        TransformService.SetParentAndMoveRelativeToParent(this.transform, inBattleParent);
+    }
+
+    private void MoveForPrepare()
+    {
+        TransformService.SetParentAndMoveRelativeToParent(this.transform, inPrepareParent);
+    }
+
     public void SetSynergyInfo(Tribe tribe)
     {
         var tribeDataSheet = DataBase.Instance.tribeDataSheet;

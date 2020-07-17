@@ -17,4 +17,14 @@ public class TransformService
         rt.offsetMax = new Vector2(0.0f, 0.0f);
         rt.offsetMin = new Vector2(0.0f, 0.0f);
     }
+
+    // 부모를 설정하고 그 부모를 기준으로 배치
+    public static void SetParentAndMoveRelativeToParent(Transform originTransform, GameObject parent)
+    {
+        originTransform.SetParent(parent.transform);
+
+        RectTransform rect = originTransform as RectTransform;
+        rect.offsetMax = new Vector2(rect.offsetMax.x, 0.0f);
+        rect.offsetMin = new Vector2(rect.offsetMin.x, 0.0f);
+    }
 }

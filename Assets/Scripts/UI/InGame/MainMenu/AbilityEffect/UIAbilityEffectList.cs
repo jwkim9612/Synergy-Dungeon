@@ -13,7 +13,11 @@ public class UIAbilityEffectList : MonoBehaviour
 
     private void Start()
     {
+        uiAbilityEffectInfo.Initialize();
+
         InGameManager.instance.gameState.OnComplete += UpdateAbilityEffectListByWaveComplete;
+        InGameManager.instance.gameState.OnBattle += MoveForBattle;
+        InGameManager.instance.gameState.OnPrepare += MoveForPrepare;
 
         uiAbilityEffectList = new List<UIAbilityEffect>();
 
@@ -46,6 +50,18 @@ public class UIAbilityEffectList : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void MoveForBattle()
+    {
+        RectTransform rect = transform as RectTransform;
+        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_BATTLE, 0.0f));
+    }
+
+    private void MoveForPrepare()
+    {
+        RectTransform rect = transform as RectTransform;
+        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_PREPARE, 0.0f));
     }
 
     public void InitializeByInGameSaveData(List<AbilityEffectSaveData> abilityEffectSaveDataList)
@@ -164,7 +180,6 @@ public class UIAbilityEffectList : MonoBehaviour
             {
                 if (!response.HasErrors)
                 {
-                    Debug.Log("Index = " + index);
                     Debug.Log("Success RemoveAbilityEffectSaveData!");
                 }
                 else

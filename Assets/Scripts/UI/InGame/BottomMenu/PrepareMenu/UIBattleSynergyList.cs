@@ -12,12 +12,19 @@ public class UIBattleSynergyList : MonoBehaviour
     private SynergySystem synergySystem;
 
     [SerializeField] private Camera cam;
+    [SerializeField] private GameObject inBattleParent = null;
+    [SerializeField] private GameObject inPrepareParent = null;
 
 
     private void Start()
     {
+        uiInGameSynergyInfo.Initialize();
+
         InitializeTribeList();
         InitializeOriginList();
+
+        InGameManager.instance.gameState.OnBattle += MoveForBattle;
+        InGameManager.instance.gameState.OnPrepare += MoveForPrepare;
 
         synergySystem = InGameManager.instance.synergySystem;
         synergySystem.OnTribeChanged += UpdateTribes;
@@ -43,6 +50,16 @@ public class UIBattleSynergyList : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void MoveForBattle()
+    {
+        TransformService.SetParentAndMoveRelativeToParent(this.transform, inBattleParent);
+    }
+
+    private void MoveForPrepare()
+    {
+        TransformService.SetParentAndMoveRelativeToParent(this.transform, inPrepareParent);
     }
 
     private void InitializeTribeList()
@@ -139,7 +156,8 @@ public class UIBattleSynergyList : MonoBehaviour
         RectTransform rect = transform as RectTransform;
 
         float xOfanchorMax = InGameService.LEFT_PADDING_OF_SYNERGY_LIST_AT_ANCHOR + (InGameService.LENGTH_OF_SYNERGY_ICON_AT_ANCHOR * activateSynergyCount);
-        rect.anchorMax = new Vector2(xOfanchorMax, 1.0f);
+        //rect.anchorMax = new Vector2(xOfanchorMax, 1.0f);
+        rect.anchorMax = new Vector2(xOfanchorMax, 0.97f);
 
         ///////////// anchor x 포지션 0으로 만들어주기.
         var position = rect.anchoredPosition;

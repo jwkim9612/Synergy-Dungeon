@@ -15,7 +15,7 @@ MonoBehaviour:
   ChapterExcelDatas:
   - Id: 1
     Name: "\uD478\uB978\uCD08\uC6D0"
-    TotalWave: 20
+    TotalWave: 16
     ImagePath: Images/Chapter/Chapter1
   - Id: 2
     Name: "\uC5BC\uC74C\uB098\uB77C"

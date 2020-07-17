@@ -21,7 +21,7 @@ public class ChapterInfoDataSheet : ScriptableObject
 			return true;
 		}
 
-		Debug.LogError($"Error TryGetChapterInfoExpAmount chapterId:{chapterId} waveId:{waveId}");
+		Debug.LogWarning($"Error TryGetChapterInfoExpAmount chapterId:{chapterId} waveId:{waveId}");
 		return false;
 	}
 
@@ -35,7 +35,7 @@ public class ChapterInfoDataSheet : ScriptableObject
 			return true;
 		}
 
-		Debug.LogError($"Error TryGetChapterInfoGoldAmount chapterId:{chapterId} waveId:{waveId}");
+		Debug.LogWarning($"Error TryGetChapterInfoGoldAmount chapterId:{chapterId} waveId:{waveId}");
 		return false;
 	}
 
@@ -51,7 +51,7 @@ public class ChapterInfoDataSheet : ScriptableObject
 			}
 		}
 
-		Debug.LogError($"Error TryGetChapterInfoData chapterId:{chapterId} waveId:{waveId}");
+		Debug.LogWarning($"Error TryGetChapterInfoData chapterId:{chapterId} waveId:{waveId}");
 		return false;
 	}
 
@@ -62,7 +62,7 @@ public class ChapterInfoDataSheet : ScriptableObject
 			return true;
 		}
 
-		Debug.LogError($"Error TryGetChapterInfoDatas chapterId:{chapterId}");
+		Debug.LogWarning($"Error TryGetChapterInfoDatas chapterId:{chapterId}");
 		return false;
 	}
 

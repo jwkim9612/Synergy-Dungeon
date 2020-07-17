@@ -147,5 +147,11 @@ public class UIOwnedRunes : MonoBehaviour
         uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
     }
 
-    
+    private void OnDestroy()
+    {
+        if (RuneManager.IsAlive)
+        {
+            RuneManager.Instance.OnAddRune -= AddUIRune;
+        }
+    }
 }

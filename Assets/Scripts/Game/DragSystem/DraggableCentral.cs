@@ -32,7 +32,7 @@ public class DraggableCentral : MonoBehaviour
         originalSize = 0.0f;
     }
 
-    // 캐릭터 클릭 시 캐릭터의 정보가 나오게하는 Update문
+    // 캐릭터 이외의 곳을 클릭했을 때 캐릭터 정보를 꺼주는 Update문
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -45,14 +45,9 @@ public class DraggableCentral : MonoBehaviour
             characterListWithCharacters.AddRange(prepareAreaListWithCharacters);
 
             var uiCharacter = characterListWithCharacters.Find(t => TransformService.ContainPos(t.transform as RectTransform, Input.mousePosition, cam));
-            if (uiCharacter != null)
+            if (uiCharacter == null)
             {
-                uiInGameCharacterInfo.SetInGameCharacterInfo(uiCharacter);
-                uiInGameCharacterInfo.OnShow();
-            }
-            else
-            {
-                if(uiInGameCharacterInfo.gameObject.activeSelf)
+                if (uiInGameCharacterInfo.gameObject.activeSelf)
                 {
                     uiInGameCharacterInfo.OnHide();
                 }
@@ -100,7 +95,13 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
-    void BeginDrag(UICharacter uiCharacter)
+    private void PointerDown(UICharacter uiCharacter)
+    {
+        uiInGameCharacterInfo.SetInGameCharacterInfo(uiCharacter);
+        uiInGameCharacterInfo.OnShow();
+    }
+
+    private void BeginDrag(UICharacter uiCharacter)
     {
         isDragged = true;
 
@@ -112,7 +113,7 @@ public class DraggableCentral : MonoBehaviour
         sellArea.gameObject.SetActive(true);
     }
 
-    void Drag(UICharacter uiCharacter)
+    private void Drag(UICharacter uiCharacter)
     {
         Arranger whichArrangersCharacter;
 
@@ -191,7 +192,7 @@ public class DraggableCentral : MonoBehaviour
         }
     }
 
-    void EndDrag(UICharacter uiCharacter)
+    private void EndDrag(UICharacter uiCharacter)
     {
         uiInGameCharacterInfo.OnHide();
 

@@ -60,14 +60,14 @@ public class Enemy : Pawn
 
     private IEnumerator Co_DeadAnimation()
     {
-        spriteRenderer.enabled = false;
-        yield return new WaitForSeconds(0.3f);
-        spriteRenderer.enabled = true;
-        yield return new WaitForSeconds(0.3f);
-        spriteRenderer.enabled = false;
-        yield return new WaitForSeconds(0.3f);
-        spriteRenderer.enabled = true;
-        yield return new WaitForSeconds(0.3f);
+        //spriteRenderer.enabled = false;
+        //yield return new WaitForSeconds(0.3f);
+        //spriteRenderer.enabled = true;
+        //yield return new WaitForSeconds(0.3f);
+        //spriteRenderer.enabled = false;
+        //yield return new WaitForSeconds(0.3f);
+        //spriteRenderer.enabled = true;
+        //yield return new WaitForSeconds(0.3f);
 
         float time = 0.0f;
         float fadeTime = 1.0f;
