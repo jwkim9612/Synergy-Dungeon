@@ -315,9 +315,9 @@ MonoBehaviour:
     ScenarioId: 1
     ScenarioType: SumAndResult
     ScenarioProbability: 2500
-    Description: "\uC900\uB2E4."
+    Description: "\uC900\uB2E4. \n- 5\uCF54\uC778 \uC18C\uBAA8"
     CurrencyType: 7
-    Amount: -1
+    Amount: -5
     RewardDescription: "\uACE8\uB4DC \uAC10\uC18C"
     ApplyAbility: 0
     ApplyPercentage: 0

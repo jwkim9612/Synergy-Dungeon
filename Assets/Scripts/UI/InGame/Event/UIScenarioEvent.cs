@@ -74,6 +74,7 @@ public class UIScenarioEvent : MonoBehaviour
                 selectButtonList[scenarioId - 1].SetButton(scenarioData);
                 selectButtonList[scenarioId - 1].OnInvisible();
                 selectButtonList[scenarioId - 1].OnShow();
+                selectButtonList[scenarioId - 1].SetInteractable();
                 activatedSelectButtonList.Add(selectButtonList[scenarioId - 1]);
             }
             else

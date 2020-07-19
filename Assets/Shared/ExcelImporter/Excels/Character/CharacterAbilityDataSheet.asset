@@ -303,7 +303,7 @@ MonoBehaviour:
     AttackSpeed: 88
   - Id: 24
     Name: "\uB3C4\uB07C \uC804\uC0AC"
-    Attack: 999
+    Attack: 138
     MagicalAttack: 0
     Health: 700
     Defence: 15
@@ -315,7 +315,7 @@ MonoBehaviour:
     AttackSpeed: 104
   - Id: 25
     Name: "\uC2EC\uD310\uAD00"
-    Attack: 999
+    Attack: 65
     MagicalAttack: 0
     Health: 780
     Defence: 28
@@ -327,7 +327,7 @@ MonoBehaviour:
     AttackSpeed: 94
   - Id: 26
     Name: "\uC880\uB3C4\uB451"
-    Attack: 999
+    Attack: 65
     MagicalAttack: 0
     Health: 500
     Defence: 5
@@ -339,7 +339,7 @@ MonoBehaviour:
     AttackSpeed: 101
   - Id: 27
     Name: "\uD638\uD06C\uC544\uC774"
-    Attack: 999
+    Attack: 0
     MagicalAttack: 80
     Health: 520
     Defence: 10

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GooglePlayGames.BasicApi.Multiplayer;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,6 +44,22 @@ public class UIScenarioEventButton : MonoBehaviour
     public void SetScenarioData(ScenarioData data)
     {
         scenarioData = data;
+    }
+
+    public void SetInteractable()
+    {
+        if(scenarioData.CurrencyType == RewardCurrency.Coin)
+        {
+            var playerCoin = InGameManager.instance.playerState.coin;
+
+            if(playerCoin + scenarioData.Amount < 0)
+            {
+                button.interactable = false;
+                return;
+            }
+        }
+
+        button.interactable = true;
     }
 
     public void OnInvisible()
