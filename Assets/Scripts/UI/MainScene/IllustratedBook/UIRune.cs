@@ -5,11 +5,19 @@ using UnityEngine.UI;
 
 public class UIRune : MonoBehaviour
 {
-    [SerializeField] private Image unclickedImage = null;
-    [SerializeField] private Image clickedImage = null;
+    [SerializeField] private Image image = null;
+    [SerializeField] private Button showRuneInfoButton;
+
+    public bool isEquippedRune;
+
     public Rune rune { get; set; }
 
-    public void SetUIRune(RuneData newRuneData)
+    private void Start()
+    {
+        SetShowRuneInfoButton();
+    }
+
+    public virtual void SetUIRune(RuneData newRuneData)
     {
         rune = new Rune();
         rune.SetRune(newRuneData);
@@ -19,9 +27,28 @@ public class UIRune : MonoBehaviour
 
     public void SetImage(Sprite sprite)
     {
-        unclickedImage.sprite = sprite;
-        clickedImage.sprite = sprite;
+        image.sprite = sprite;
     }
 
-    
+    private void SetShowRuneInfoButton()
+    {
+        showRuneInfoButton.onClick.AddListener(() =>
+        {
+            var uiRuneInfo = MainManager.instance.uiIllustratedBook.uiRunePage.uiRuneInfo;
+            uiRuneInfo.SetUIRuneInfo(rune.runeData, isEquippedRune, this);
+            UIManager.Instance.ShowNew(uiRuneInfo);
+        });
+    }
+
+    protected void SetShowRuneInfoButtonInteractable(bool isInteractable)
+    {
+        if(isInteractable)
+        {
+            showRuneInfoButton.interactable = true;
+        }
+        else
+        {
+            showRuneInfoButton.interactable = false;
+        }
+    }
 }

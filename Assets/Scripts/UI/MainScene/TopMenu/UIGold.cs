@@ -20,6 +20,9 @@ public class UIGold : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerDataManager.Instance.OnGoldChanged -= UpdateGoldText;
+        if(PlayerDataManager.IsAlive)
+        {
+            PlayerDataManager.Instance.OnGoldChanged -= UpdateGoldText;
+        }
     }
 }

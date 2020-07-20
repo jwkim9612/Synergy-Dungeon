@@ -50,8 +50,6 @@ public class PotentialDraggableScrollView : ScrollRect
     /// </summary>
     public override void OnBeginDrag(UnityEngine.EventSystems.PointerEventData eventData)
     {
-        MainManager.instance.uiIllustratedBook.uiRunePage.toggleGroup.SetAllTogglesOff(true);
-
         if (!horizontal && Math.Abs(eventData.delta.x) > Math.Abs(eventData.delta.y))
             routeToParent = true;
         else if (!vertical && Math.Abs(eventData.delta.x) < Math.Abs(eventData.delta.y))
@@ -93,8 +91,6 @@ public class PotentialDraggableScrollView : ScrollRect
 
     public void MoveToTargetByIndex(int targetIndex, int totalIndex, Transform transform, Transform target)
     {
-        Debug.Log("타겟 : " + targetIndex + "   토탈 : " + totalIndex);
-
         float destinationPosition = 1.0f;
 
         if (targetIndex == 0)
@@ -121,19 +117,15 @@ public class PotentialDraggableScrollView : ScrollRect
     {
         while (!Input.GetMouseButton(0))
         {
-            //Debug.Log("전" + transform.position.y);
-            float chai = transform.position.y;
+            float distanceToMove = transform.position.y;
             this.verticalNormalizedPosition = Mathf.Lerp(this.verticalNormalizedPosition, destinationPosition, 0.1f);
             yield return new WaitForEndOfFrame();
-            chai -= transform.position.y;
+            distanceToMove -= transform.position.y;
 
-            //Debug.Log("차이 = " + chai);
-            if (chai == 0)
+            if (distanceToMove == 0)
                 break;
 
-            target.Translate(new Vector3(0.0f, -chai, 0.0f));
-            //Debug.Log("후" + transform.position.y);
-
+            target.Translate(new Vector3(0.0f, -distanceToMove, 0.0f));
         }
     }
 }

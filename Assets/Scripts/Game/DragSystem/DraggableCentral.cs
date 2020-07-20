@@ -17,7 +17,6 @@ public class DraggableCentral : MonoBehaviour
     private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
-    private bool isDragged;
 
     [SerializeField] private Camera cam;
     [SerializeField] private UIInGameCharacterInfo uiInGameCharacterInfo = null;
@@ -103,8 +102,6 @@ public class DraggableCentral : MonoBehaviour
 
     private void BeginDrag(UICharacter uiCharacter)
     {
-        isDragged = true;
-
         parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
         uiCharacter.SetDefaultImage();
@@ -224,9 +221,6 @@ public class DraggableCentral : MonoBehaviour
         SetCharacterImage(uiCharacter);
 
         isSwapped = false;
-
-        Debug.Log("draggble is false");
-        isDragged = false;
     }
 
     /// <summary>

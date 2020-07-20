@@ -146,6 +146,13 @@ public enum AbilityEffectData
     Scenario
 }
 
+public enum SortBy
+{ 
+    None,
+    Grade,
+    Socket
+}
+
 [Serializable]
 public class AbilityEffectSaveData
 {

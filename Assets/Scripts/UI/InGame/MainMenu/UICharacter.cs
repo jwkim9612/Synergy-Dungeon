@@ -123,10 +123,20 @@ public class UICharacter : MonoBehaviour
 
     public void UpgradeStar()
     {
-        characterInfo.IncreaseStar();
-        InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
-        Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
-        // 파티클 재생 함수
+        if (characterDataSheet == null)
+        {
+            Debug.LogError("Error characterDataSheet is null");
+            return;
+        }
+
+        if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
+        {
+            characterInfo.IncreaseStar();
+            character.SetAbility(DataBase.Instance.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), origin);
+            InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
+            Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
+            // 파티클 재생 함수
+        }
     }
 
     public void OnCanClick()

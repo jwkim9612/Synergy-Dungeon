@@ -36,7 +36,6 @@ public class UIEquippedRunes : MonoBehaviour
             if (runeToBeEquipped != null)
             {
                 EquipRune(runeToBeEquipped);
-                //EquipRuneAndGetReplaceResult(runeToBeEquipped.rune);
                 Destroy(runeToBeEquipped.gameObject);
             }
             else
@@ -44,7 +43,7 @@ public class UIEquippedRunes : MonoBehaviour
         }
 
         uiOwnedRunes.Sort();
-        //RuneManager.Instance.uiEquippedRunes = uiEquippedRunes;
+        Debug.Log("last");
     }
 
     /// <summary>
@@ -81,7 +80,7 @@ public class UIEquippedRunes : MonoBehaviour
 
         var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
         uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
-        uiOwnedRunes.Sort();
+        //uiOwnedRunes.Sort();
 
         return (isReplaced, equippedRune);
     }

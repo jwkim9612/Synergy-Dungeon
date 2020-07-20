@@ -20,6 +20,9 @@ public class UIDiamond : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerDataManager.Instance.OnDiamondChanged -= UpdateDiamondText;
+        if(PlayerDataManager.IsAlive)
+        {
+            PlayerDataManager.Instance.OnDiamondChanged -= UpdateDiamondText;
+        }
     }
 }

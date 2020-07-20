@@ -9,12 +9,13 @@ public class UIOwnedRunes : MonoBehaviour
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
     [SerializeField] private UIOwnedRune uiOwnedRune = null;
     public List<UIOwnedRune> uiRunes { get; set; }
-    public int numberOfLine;
+    public SortBy currentSortBy;
 
     public void Initialize()
     {
-        RuneManager.Instance.OnAddRune += AddUIRune;
+        currentSortBy = RuneService.DEFAULT_SORT_BY;
 
+        RuneManager.Instance.OnAddRune += AddUIRune;
         CreateOwnedRuneList();
     }
 
@@ -47,6 +48,8 @@ public class UIOwnedRunes : MonoBehaviour
         }
 
         Sort();
+        Debug.Log("Not last");
+
     }
 
     public void AddUIRune(int runeId)
@@ -82,42 +85,45 @@ public class UIOwnedRunes : MonoBehaviour
         uiRunes.Remove(uiOwnedRune);
     }
 
-    //public void AddUIRuneByEquipRelease(int runeId)
-    //{
-    //    var runeDataSheet = DataBase.Instance.runeDataSheet;
-    //    if (runeDataSheet == null)
-    //    {
-    //        Debug.LogError("Error runeDataSheet is null");
-    //        return;
-    //    }
-
-    //    if (runeDataSheet.TryGetRuneData(runeId, out var runeData))
-    //    {
-    //        var rune = Instantiate(uiOwnedRune, girdLayoutGroup.transform);
-    //        rune.SetUIRune(runeData);
-    //        uiRunes.Add(rune);
-
-    //        Sort();
-    //    }
-    //}
-
     public void Sort()
     {
         UpdateOwnedRunes();
 
-        int runeIndex;
-        uiRunes = uiRunes.OrderBy(x => x.rune.runeData.Id).ToList();
+        //switch (currentSortBy)
+        //{
+        //    case SortBy.None:
+        //        break;
+        //    case SortBy.Grade:
+        //        Debug.Log("Grade");
+        //        uiRunes = uiRunes.OrderBy(x => x.rune.runeData.Grade).ToList();
+        //        break;
+        //    case SortBy.Socket:
+        //        Debug.Log("socket");
+        //        uiRunes = uiRunes.OrderBy(x => x.rune.runeData.SocketPosition).ToList();
+        //        break;
+        //    default:
+        //        Debug.Log("Error Sort");
+        //        return;
+        //}
 
-        for(int i = 0; i < uiRunes.Count; ++i)
+        //for (int i = 0; i < uiRunes.Count; ++i)
+        //{
+        //    uiRunes[i].transform.SetSiblingIndex(i);
+        //}
+    }
+
+    public void ChangeSortBy()
+    {
+        if(currentSortBy == SortBy.Socket)
         {
-            runeIndex = i / RuneService.TOTAL_NUMBER_PER_LINE;
-            uiRunes[i].transform.SetSiblingIndex(i);
-            uiRunes[i].lineIndex = runeIndex;
+            currentSortBy = SortBy.Grade;
+        }
+        else if(currentSortBy == SortBy.Grade)
+        {
+            currentSortBy = SortBy.Socket;
         }
 
-        numberOfLine = uiRunes.Count / RuneService.TOTAL_NUMBER_PER_LINE + 1;
-        if (uiRunes.Count % 7 == 0)
-            numberOfLine -= 1;
+        Sort();
     }
 
     public void UpdateOwnedRunes()
@@ -144,8 +150,57 @@ public class UIOwnedRunes : MonoBehaviour
             }
         }
 
+        Debug.Log($"transform.childCount = {transform.childCount}     uiRunes.count = {uiRunes.Count}");
+
         uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
+        Debug.Log(uiRunes.Count);
+
+        switch (currentSortBy)
+        {
+            case SortBy.None:
+                break;
+            case SortBy.Grade:
+                Debug.Log("Grade");
+                uiRunes = uiRunes.OrderBy(x => x.rune.runeData.Grade).ToList();
+                break;
+            case SortBy.Socket:
+                Debug.Log("socket");
+                uiRunes = uiRunes.OrderBy(x => x.rune.runeData.SocketPosition).ToList();
+                break;
+            default:
+                Debug.Log("Error Sort");
+                break;
+        }
+
+        for (int i = 0; i < uiRunes.Count; ++i)
+        {
+            uiRunes[i].transform.SetSiblingIndex(i);
+            Debug.Log("oh " + i);
+        }
     }
+
+    //public void UpdateOwnedRunes()
+    //{
+    //    for (int i = 0; i < transform.childCount; ++i)
+    //    {
+    //        if (i == uiRunes.Count)
+    //        {
+    //            uiRunes.Add(null);
+    //        }
+
+    //        var uiRune = gameObject.GetComponentsInChildren<UIOwnedRune>()[i];
+
+    //        if (uiRune != uiRunes[i])
+    //        {
+    //            uiRunes[i] = uiRune;
+    //        }
+    //    }
+
+    //    Debug.Log($"transform.childCount = {transform.childCount}     uiRunes.count = {uiRunes.Count}");
+
+    //    uiRunes.RemoveRange(transform.childCount, uiRunes.Count - transform.childCount);
+    //    Debug.Log(uiRunes.Count);
+    //}
 
     private void OnDestroy()
     {

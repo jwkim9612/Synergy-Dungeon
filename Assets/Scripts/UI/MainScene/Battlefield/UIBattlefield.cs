@@ -21,7 +21,19 @@ public class UIBattlefield : MonoBehaviour
 
     void Start()
     {
-        playButton.onClick.AddListener(() => {
+        SetPlayButton();
+        SetPotionButton();
+
+        UpdateChapterInfo();
+        UpdatePotionImageAndPotionInfo();
+
+        PotionManager.Instance.OnPotionChanged += UpdatePotionImageAndPotionInfo;
+    }
+
+    private void SetPlayButton()
+    {
+        playButton.onClick.AddListener(() =>
+        {
             // 테스트를 위해 하트 소모 안하게 바꿈.
             // 나중에 밑에 3줄을 지우고 UseHeart 주석을 지워주면 됨.
             //StageManager.Instance.SetChapterData(selectedChapter);
@@ -38,16 +50,14 @@ public class UIBattlefield : MonoBehaviour
                 UIManager.Instance.ShowNew(MainManager.instance.uiAskGoToStore);
             }
         });
+    }
 
+    private void SetPotionButton()
+    {
         potionButton.onClick.AddListener(() =>
         {
             uiPotionInfo.OnShow();
         });
-
-        UpdateChapterInfo();
-        UpdatePotionImageAndPotionInfo();
-
-        PotionManager.Instance.OnPotionChanged += UpdatePotionImageAndPotionInfo;
     }
 
     private void Update()
@@ -189,6 +199,9 @@ public class UIBattlefield : MonoBehaviour
 
     private void OnDestroy()
     {
-        PotionManager.Instance.OnPotionChanged -= UpdatePotionImageAndPotionInfo;
+        if(PotionManager.IsAlive)
+        {
+            PotionManager.Instance.OnPotionChanged -= UpdatePotionImageAndPotionInfo;
+        }
     }
 }
