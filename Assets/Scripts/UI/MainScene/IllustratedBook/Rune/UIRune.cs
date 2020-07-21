@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class UIRune : MonoBehaviour
 {
-    [SerializeField] private Image image = null;
+    [SerializeField] protected Image runeImage = null;
+    [SerializeField] protected Image originImage = null;
     [SerializeField] private Button showRuneInfoButton;
 
     public bool isEquippedRune;
@@ -22,12 +23,23 @@ public class UIRune : MonoBehaviour
         rune = new Rune();
         rune.SetRune(newRuneData);
 
-        SetImage(newRuneData.Image);
+        SetRuneImage(newRuneData.Image);
+
+        var origin = SynergyService.GetOriginByRuneSocketPosition(newRuneData.SocketPosition);
+        if(DataBase.Instance.originDataSheet.TryGetOriginImage(origin, out var originImage))
+        {
+            SetOriginImage(originImage);
+        }
     }
 
-    public void SetImage(Sprite sprite)
+    public void SetRuneImage(Sprite sprite)
     {
-        image.sprite = sprite;
+        runeImage.sprite = sprite;
+    }
+
+    public void SetOriginImage(Sprite sprite)
+    {
+        originImage.sprite = sprite;
     }
 
     private void SetShowRuneInfoButton()

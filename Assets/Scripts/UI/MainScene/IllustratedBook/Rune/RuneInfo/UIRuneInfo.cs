@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,19 @@ public class UIRuneInfo : UIControl
     [SerializeField] private Button equipAndReleaseButton;
     [SerializeField] private Text equipAndReleaseText;
 
+    private List<UIAttributeInfo> attributeInfoList;
+
     private UIRune uiRune;
+
+    public void Initialize()
+    {
+        SetAttributeInfoList();
+    }
+
+    private void SetAttributeInfoList()
+    {
+        attributeInfoList = GetComponentsInChildren<UIAttributeInfo>().ToList();
+    }
 
     public void SetUIRuneInfo(RuneData runeData, bool isEquipRune, UIRune uiRune)
     {
@@ -22,6 +35,7 @@ public class UIRuneInfo : UIControl
         SetImage(runeData.Image);
         SetDescription(runeData.Description);
         SetEquipAndReleaseButtonAndText(isEquipRune);
+        SetAttribute(runeData.AbilityData);
 
         this.uiRune = uiRune;
     }
@@ -106,5 +120,28 @@ public class UIRuneInfo : UIControl
         }
 
         runePage.uiOwnedRunes.Sort();
+    }
+
+    private void SetAttribute(AbilityData abilityData)
+    {
+        int attributeInfoIndex = 0;
+
+        var abilityDataList = abilityData.GetAbilityDataList();
+
+        for (int abilityIndex = 0; abilityIndex < abilityDataList.Count; abilityIndex++)
+        {
+            if (abilityDataList[abilityIndex] == 0)
+                continue;
+
+            var abilityName = AbilityService.GetAbilityNameByIndex(abilityIndex);
+            attributeInfoList[attributeInfoIndex].SetAttributeText($"{abilityName} + {abilityDataList[abilityIndex]}");
+            attributeInfoList[attributeInfoIndex].OnShow();
+            ++attributeInfoIndex;
+        }
+
+        for (int i = attributeInfoIndex; i < attributeInfoList.Count; i++)
+        {
+            attributeInfoList[i].OnHide();
+        }
     }
 }

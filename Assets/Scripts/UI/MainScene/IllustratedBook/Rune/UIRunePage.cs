@@ -6,19 +6,31 @@ using UnityEngine.UI;
 public class UIRunePage : MonoBehaviour
 {
     public UIEquippedRunes uiEquippedRunes = null;
-    //public PotentialDraggableScrollView scrollView = null;
     public UIOwnedRunes uiOwnedRunes = null;
-    public UIRuneInfo uiRuneInfo;
+    public UIRuneInfo uiRuneInfo = null;
+    public UIRuneCombination uiRuneCombination = null;
 
     [SerializeField] private Button changeSortByButton;
     [SerializeField] private Text changeSortByText;
+    [SerializeField] private Button showRuneCombinationButton;
 
     public void Initialize()
     {
         uiOwnedRunes.Initialize();
         uiEquippedRunes.Initialize();
+        uiRuneCombination.Initialize();
+        uiRuneInfo.Initialize();
 
         SetChangeSortByButton();
+        SetShowRuneCombinationButton();
+    }
+
+    private void SetShowRuneCombinationButton()
+    {
+        showRuneCombinationButton.onClick.AddListener(() =>
+        {
+            UIManager.Instance.ShowNew(uiRuneCombination);
+        });
     }
 
     private void SetChangeSortByButton()

@@ -80,6 +80,4 @@ public class GameManager : MonoBehaviour
         #endif
 
     }
-
-
 }

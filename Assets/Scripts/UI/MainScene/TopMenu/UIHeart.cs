@@ -69,7 +69,10 @@ public class UIHeart : MonoBehaviour
 
         while (remainingTime > 0)
         {
-            timeText.text = remainingTime / 60 + ":" + remainingTime % 60;
+            var minute = remainingTime / 60;
+            var second = remainingTime % 60;
+
+            timeText.text = $"{minute}:{second.ToString("D2")}";
             yield return new WaitForSeconds(1.0f);
             --remainingTime;
         }

@@ -72,4 +72,32 @@
 
         return name;
     }
+
+    public static Origin GetOriginByRuneSocketPosition(int socketPosition)
+    {
+        Origin origin = Origin.None;
+
+        switch (socketPosition)
+        {
+            case 0:
+                origin = Origin.Archer;
+                break;
+            case 1:
+                origin = Origin.Paladin;
+                break;
+            case 2:
+                origin = Origin.Thief;
+                break;
+            case 3:
+                origin = Origin.Warrior;
+                break;
+            case 4:
+                origin = Origin.Wizard;
+                break;
+            default:
+                break;
+        }
+
+        return origin;
+    }
 }

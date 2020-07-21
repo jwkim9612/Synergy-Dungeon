@@ -45,7 +45,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
@@ -62,8 +62,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: Images/Tribe/Logo_DEVIL
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1003
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -79,8 +79,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: Images/Tribe/Logo_DEVIL
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
@@ -113,7 +114,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
@@ -130,7 +131,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
@@ -147,7 +149,7 @@ MonoBehaviour:
     Evasion: 1
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
@@ -164,7 +166,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1009
     Name: "\uBD84\uB178\uC758 \uB8EC"
@@ -181,7 +184,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
@@ -198,7 +201,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1011
     Name: "\uD65C\uB825\uC758 \uB8EC"
@@ -215,7 +218,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
     ImagePath: Images/Tribe/Logo_Undead
   - Id: 1012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"

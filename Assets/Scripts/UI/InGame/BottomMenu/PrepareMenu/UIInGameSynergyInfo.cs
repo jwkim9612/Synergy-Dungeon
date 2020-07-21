@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UIInGameSynergyInfo : MonoBehaviour
 {
-    [SerializeField] private Image synergyImage;
-    [SerializeField] private Text synergyNameText;
-    [SerializeField] private Text synergyInfoText;
+    [SerializeField] private Image synergyImage = null;
+    [SerializeField] private Text synergyNameText = null;
+    [SerializeField] private Text synergyInfoText = null;
 
     [SerializeField] private GameObject inBattleParent = null;
     [SerializeField] private GameObject inPrepareParent = null;

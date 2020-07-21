@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class TimeManager : MonoSingleton<TimeManager>
 {
-    public float remainingTimeOfAttendance;
+    public float remainingTimeOfAttendance { get; set; }
 
     public void Initialize()
     {
         AttendanceCheck();
-        SaveLastConnectTime();
-        GetRemainingTimeOfAttendance();
     }
 
     private static DateTime UnixTimeStampToDateTime(long unixTimeStamp)
@@ -92,8 +90,6 @@ public class TimeManager : MonoSingleton<TimeManager>
                             Debug.Log("남은 시간 : " + remainingTime + "로그인 안한 시간 : " + noLoginTime);
                         }
 
-                        GetRemainingTimeOfAttendance();
-                        SaveLastConnectTime();
                         if (isInMainMenu)
                         {
                             GoodsManager.Instance.ResetRuneOnSales(true);
@@ -109,6 +105,9 @@ public class TimeManager : MonoSingleton<TimeManager>
                         GoodsManager.Instance.LoadRuneOnSalesData();
                         Debug.Log("출석되어있음");
                     }
+
+                    GetRemainingTimeOfAttendance();
+                    SaveLastConnectTime();
                 }
                 else
                 {
@@ -128,8 +127,6 @@ public class TimeManager : MonoSingleton<TimeManager>
                 {
                     remainingTimeOfAttendance = (float)response.ScriptData.GetFloat("RemainingTimeOfAttendance");
                     Debug.Log("남은 시간 : " + (int)remainingTimeOfAttendance / 60/60 + "시간  " + (int)remainingTimeOfAttendance / 60%60 + "분");
-
-
                 }
                 else
                 {

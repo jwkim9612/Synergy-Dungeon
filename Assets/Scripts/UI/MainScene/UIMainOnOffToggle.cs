@@ -21,7 +21,6 @@ public class UIMainOnOffToggle : MonoBehaviour
             clickedImage.SetActive(false);
             unclickedImage.SetActive(true);
         }
-
     }
 
     void Start()

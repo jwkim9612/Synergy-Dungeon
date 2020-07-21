@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class UIEquippedRunes : MonoBehaviour
 {
-    //public UIOwnedRunes uiOwnedRunes;
     public List<UIEquipRune> uiEquippedRunes;
 
     public void Initialize()
@@ -39,11 +38,13 @@ public class UIEquippedRunes : MonoBehaviour
                 Destroy(runeToBeEquipped.gameObject);
             }
             else
+            {
+                uiEquippedRunes[i].Disable();
                 Debug.Log("장착되었던 룬을 찾을 수 없습니다.");
+            }
         }
 
         uiOwnedRunes.Sort();
-        Debug.Log("last");
     }
 
     /// <summary>
@@ -80,7 +81,6 @@ public class UIEquippedRunes : MonoBehaviour
 
         var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
         uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
-        //uiOwnedRunes.Sort();
 
         return (isReplaced, equippedRune);
     }
