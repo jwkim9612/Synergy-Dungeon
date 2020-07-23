@@ -7,16 +7,10 @@ public class UIRune : MonoBehaviour
 {
     [SerializeField] protected Image runeImage = null;
     [SerializeField] protected Image originImage = null;
-    [SerializeField] private Button showRuneInfoButton;
 
-    public bool isEquippedRune;
+    public bool isEquippedRune { get; set; } = false;
 
-    public Rune rune { get; set; }
-
-    private void Start()
-    {
-        SetShowRuneInfoButton();
-    }
+    public Rune rune { get; set; } = null;
 
     public virtual void SetUIRune(RuneData newRuneData)
     {
@@ -40,27 +34,5 @@ public class UIRune : MonoBehaviour
     public void SetOriginImage(Sprite sprite)
     {
         originImage.sprite = sprite;
-    }
-
-    private void SetShowRuneInfoButton()
-    {
-        showRuneInfoButton.onClick.AddListener(() =>
-        {
-            var uiRuneInfo = MainManager.instance.uiIllustratedBook.uiRunePage.uiRuneInfo;
-            uiRuneInfo.SetUIRuneInfo(rune.runeData, isEquippedRune, this);
-            UIManager.Instance.ShowNew(uiRuneInfo);
-        });
-    }
-
-    protected void SetShowRuneInfoButtonInteractable(bool isInteractable)
-    {
-        if(isInteractable)
-        {
-            showRuneInfoButton.interactable = true;
-        }
-        else
-        {
-            showRuneInfoButton.interactable = false;
-        }
     }
 }

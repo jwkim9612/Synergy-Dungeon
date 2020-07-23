@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UICharacterPlacementArea : Arranger
 {
-    public void Initialize()
+    public override void Initialize()
     {
         base.Initialize();
 

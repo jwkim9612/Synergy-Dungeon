@@ -5,7 +5,7 @@ public class Arranger : MonoBehaviour
 {
     public List<UICharacter> uiCharacters { get; set; }
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         uiCharacters = new List<UICharacter>();
 

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIIllustratedBook : MonoBehaviour
 {
     public UIRunePage uiRunePage = null;
+    public UIObtainedRuneScreen uiObtainedRuneByCombinationScreen = null;
 
     /// <summary>
     /// 치트

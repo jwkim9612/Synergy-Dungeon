@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class UIInGameCharacterInfo : MonoBehaviour
 {
-    [SerializeField] private Image characterImage;
-    [SerializeField] private Text nameText;
-    [SerializeField] private Image tribeImage;
-    [SerializeField] private Image originImage;
+    [SerializeField] private Image characterImage = null;
+    [SerializeField] private Text nameText = null;
+    [SerializeField] private Image tribeImage = null;
+    [SerializeField] private Image originImage = null;
 
     [SerializeField] private Text textAttack = null;
     [SerializeField] private Text textMagicalAttack = null;

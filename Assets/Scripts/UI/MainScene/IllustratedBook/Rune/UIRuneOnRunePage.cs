@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIOwnedRune : UIRune
+public class UIRuneOnRunePage : UIRuneForRunePage
 {
     public override void SetUIRune(RuneData newRuneData)
     {

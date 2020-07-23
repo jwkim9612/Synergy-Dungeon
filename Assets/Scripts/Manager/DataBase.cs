@@ -14,6 +14,7 @@
 	public GoodsDataSheet goodsDataSheet;
 	public RunePurchaseableLevelDataSheet runePurchaseableLevelDataSheet;
 	public InGameEvent_ScenarioDataSheet inGameEvent_ScenarioDataSheet;
+	public RuneCombinableNumDataSheet runeCombinableNumDataSheet;
 
     public void Initialize()
     {
@@ -29,5 +30,6 @@
 		goodsDataSheet.Initialize();
 		runePurchaseableLevelDataSheet.Initialize();
 		inGameEvent_ScenarioDataSheet.Initialize();
+		runeCombinableNumDataSheet.Initialize();
 	}
 }

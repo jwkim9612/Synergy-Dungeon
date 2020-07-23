@@ -183,4 +183,6 @@ public class RuneService
     public const SortBy DEFAULT_SORT_BY = SortBy.Grade;
     public const string TEXT_OF_SORT_BY_GRADE = "등급 순으로 정렬";
     public const string TEXT_OF_SORT_BY_SOCKET = "슬롯 순으로 정렬";
+
+    public const int NUMBER_OF_CAN_COMBINATION = 5;
 }

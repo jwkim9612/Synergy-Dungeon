@@ -8,11 +8,11 @@ using UnityEngine.UI;
 
 public class UIEquippedRunes : MonoBehaviour
 {
-    public List<UIEquipRune> uiEquippedRunes;
+    public List<UIEquipRune> uiEquippedRuneList;
 
     public void Initialize()
     {
-        uiEquippedRunes = GetComponentsInChildren<UIEquipRune>().ToList();
+        uiEquippedRuneList = GetComponentsInChildren<UIEquipRune>().ToList();
 
         InitializeEquippedRunes();
     }
@@ -20,31 +20,31 @@ public class UIEquippedRunes : MonoBehaviour
     // 로컬에서 장착된 룬 리스트를 가져온 후 소유한 룬에서 하나씩 장착.
     private void InitializeEquippedRunes()
     {
-        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
+        var uiRunesOnRunePage = MainManager.instance.uiIllustratedBook.uiRunePage.uiRunesOnRunePage;
 
         List<int> equippedRuneIds = SaveManager.Instance.equippedRuneIdsSaveData;
         for (int i = 0; i < equippedRuneIds.Count; ++i)
         {
             if (equippedRuneIds[i] == -1)
             {
-                uiEquippedRunes[i].Disable();
+                uiEquippedRuneList[i].Disable();
                 continue;
             }
 
-            var runeToBeEquipped = uiOwnedRunes.uiRunes.Find(x => x.rune.runeData.Id == equippedRuneIds[i]);
+            var runeToBeEquipped = uiRunesOnRunePage.uiRuneListOnRunePage.Find(x => x.rune.runeData.Id == equippedRuneIds[i]);
             if (runeToBeEquipped != null)
             {
-                EquipRune(runeToBeEquipped);
+                EquipRune(runeToBeEquipped, true);
                 Destroy(runeToBeEquipped.gameObject);
             }
             else
             {
-                uiEquippedRunes[i].Disable();
+                uiEquippedRuneList[i].Disable();
                 Debug.Log("장착되었던 룬을 찾을 수 없습니다.");
             }
         }
 
-        uiOwnedRunes.Sort();
+        uiRunesOnRunePage.Sort();
     }
 
     /// <summary>
@@ -52,20 +52,19 @@ public class UIEquippedRunes : MonoBehaviour
     /// </summary>
     /// <param name="runeDataToEquip"> 장착할 룬의 데이터</param>
     /// <returns>교체 되었는지의 Bool값과 교체되었다면 교체된 RuneData, 교체가 안되었다면 null값을 가진 Tuple을 리턴</returns>
-    public (bool IsReplaced, Rune EquippedRune) EquipRuneAndGetReplaceResult(UIOwnedRune uiOwnedRuneToEquip)
+    public (bool IsReplaced, Rune EquippedRune) EquipRuneAndGetReplaceResult(UIRuneOnRunePage uiRuneToEquip)
     {
         bool isReplaced;
         Rune equippedRune;
 
-        int socketPositionOfRuneDataToEquip = uiOwnedRuneToEquip.rune.runeData.SocketPosition;
-        UIEquipRune uiEquipRuneToBeEquip = uiEquippedRunes[socketPositionOfRuneDataToEquip];
+        int socketPositionOfRuneDataToEquip = uiRuneToEquip.rune.runeData.SocketPosition;
+        UIEquipRune uiEquipRuneToBeEquip = uiEquippedRuneList[socketPositionOfRuneDataToEquip];
 
         // 장착할 위치에 룬이 없는경우
         if (uiEquipRuneToBeEquip.rune == null)
         {
             isReplaced = false;
             equippedRune = null;
-            uiEquippedRunes[socketPositionOfRuneDataToEquip].GetComponent<Toggle>().interactable = true;
         }
         else
         {
@@ -73,26 +72,55 @@ public class UIEquippedRunes : MonoBehaviour
             equippedRune = uiEquipRuneToBeEquip.rune;
         }
 
-        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(uiOwnedRuneToEquip.rune.runeData);
-        SaveManager.Instance.SetEquippedRuneIdsSaveData(socketPositionOfRuneDataToEquip, uiOwnedRuneToEquip.rune.runeData.Id);
-        SaveManager.Instance.SaveEquippedRuneIds();
-
-        RuneManager.Instance.SetEquippedRune(uiOwnedRuneToEquip.rune);
-
-        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
-        uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
+        EquipRune(uiRuneToEquip);
 
         return (isReplaced, equippedRune);
     }
 
-    public void EquipRune(UIOwnedRune uiOwnedRuneToEquip)
+    public void EquipRune(UIRuneOnRunePage uiRuneToEquip, bool isInitialize = false)
     {
-        int socketPositionOfRuneDataToEquip = uiOwnedRuneToEquip.rune.runeData.SocketPosition;
+        var runeData = uiRuneToEquip.rune.runeData;
+        int runeId = runeData.Id;
+        int socketPositionOfRuneDataToEquip = runeData.SocketPosition;
 
-        uiEquippedRunes[socketPositionOfRuneDataToEquip].GetComponent<Toggle>().interactable = true;
-        uiEquippedRunes[socketPositionOfRuneDataToEquip].SetUIRune(uiOwnedRuneToEquip.rune.runeData);
+        uiEquippedRuneList[socketPositionOfRuneDataToEquip].SetUIRune(runeData);
+        RuneManager.Instance.SetEquippedRune(uiRuneToEquip.rune);
 
-        var uiOwnedRunes = MainManager.instance.uiIllustratedBook.uiRunePage.uiOwnedRunes;
-        uiOwnedRunes.RemoveRune(uiOwnedRuneToEquip);
+        MainManager.instance.uiIllustratedBook.uiRunePage.uiRuneCombination.uiRunesForCombination.SetEquipped(runeId);
+
+        var uiRuneListOnRunePage = MainManager.instance.uiIllustratedBook.uiRunePage.uiRunesOnRunePage;
+        uiRuneListOnRunePage.RemoveRune(uiRuneToEquip);
+
+        if(!isInitialize)
+        {
+            SaveManager.Instance.SetEquippedRuneIdsSaveData(socketPositionOfRuneDataToEquip, uiRuneToEquip.rune.runeData.Id);
+            SaveManager.Instance.SaveEquippedRuneIds();
+        }
+    }
+
+    public void RemoveRune(int runeId)
+    {
+        UIEquipRune uiEquipRune = null;
+
+        foreach (var uiEquippedRune in uiEquippedRuneList)
+        {
+            if(uiEquippedRune.rune != null)
+            {
+                if(uiEquippedRune.rune.runeData.Id == runeId)
+                {
+                    uiEquipRune = uiEquippedRune;
+                    break;
+                }
+            }
+        }
+
+        if(uiEquipRune != null)
+        {
+            SaveManager.Instance.SetEquippedRuneIdsSaveDataByRelease(uiEquipRune.rune.runeData.SocketPosition);
+            SaveManager.Instance.SaveEquippedRuneIds();
+            uiEquipRune.Disable();
+
+            MainManager.instance.uiIllustratedBook.uiRunePage.CheckNotify();
+        }
     }
 }

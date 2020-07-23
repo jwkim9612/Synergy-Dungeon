@@ -3063,6 +3063,8 @@ MonoBehaviour:
     type: 2}
   inGameEvent_ScenarioDataSheet: {fileID: 11400000, guid: 755480a0b8a64664aa96661bf12f33cb,
     type: 2}
+  runeCombinableNumDataSheet: {fileID: 11400000, guid: 517f0de685071d64a802adc89cc51fae,
+    type: 2}
 --- !u!4 &1720778336
 Transform:
   m_ObjectHideFlags: 0

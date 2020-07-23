@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIEquipRune : UIRune
+public class UIEquipRune : UIRuneForRunePage
 {
     [SerializeField] private Image backgroundImage;
 
@@ -19,6 +19,8 @@ public class UIEquipRune : UIRune
 
     public void Disable()
     {
+        isEquippedRune = false;
+
         HideImages();
         rune = null;
         SetShowRuneInfoButtonInteractable(false);

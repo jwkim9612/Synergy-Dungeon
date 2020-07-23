@@ -9,7 +9,8 @@ public class RuneManager : MonoSingleton<RuneManager>
 
     public delegate void OnAddRuneDelegate(int runeId);
     public OnAddRuneDelegate OnAddRune { get; set; }
-    public Dictionary<int, int> ownedRunes { get; set; }
+    public Dictionary<int, int> ownedRuneListById { get; set; }
+    public Dictionary<RuneGrade, int> ownedRuneListByGrade { get; set; }
     public List<Rune> equippedRunes { get; set; }
 
     public void Initialize()
@@ -45,7 +46,7 @@ public class RuneManager : MonoSingleton<RuneManager>
             else
             {
                 equippedRunes.Add(null);
-            }
+            }  
         }
     }
 
@@ -61,7 +62,7 @@ public class RuneManager : MonoSingleton<RuneManager>
     {
         new LogEventRequest()
             .SetEventKey("SaveOwnedRunes")
-            .SetEventAttribute("Runes", JsonDataManager.Instance.ObjectToJson(ownedRunes))
+            .SetEventAttribute("Runes", JsonDataManager.Instance.ObjectToJson(ownedRuneListById))
             .Send((response) =>
             {
                 if (!response.HasErrors)
@@ -97,6 +98,40 @@ public class RuneManager : MonoSingleton<RuneManager>
             });
     }
 
+    public void RemoveRune(int runeId, bool isEquippedRune)
+    {
+        new LogEventRequest()
+            .SetEventKey("RemoveRune")
+            .SetEventAttribute("RuneId", runeId)
+            .Send((response) =>
+            {
+                if (!response.HasErrors)
+                {
+                    RemoveRuneToRuneList(runeId);
+
+                    var uiRunePage = MainManager.instance.uiIllustratedBook.uiRunePage;
+
+                    if (isEquippedRune)
+                    {
+                        uiRunePage.uiEquippedRunes.RemoveRune(runeId);
+                    }
+                    else
+                    {
+                        uiRunePage.uiRunesOnRunePage.RemoveRune(runeId);
+                    }
+
+                    var uiRunesForCombination = uiRunePage.uiRuneCombination.uiRunesForCombination;
+                    uiRunesForCombination.RemoveRune(runeId, isEquippedRune);
+                    Debug.Log("Success RemoveRune!");
+                }
+                else
+                {
+                    Debug.Log("Error RemoveRune!");
+                    Debug.Log(response.Errors.JSON);
+                }
+            });
+    }
+
     public void LoadOwnedRuneData()
     {
         new LogEventRequest()
@@ -111,13 +146,17 @@ public class RuneManager : MonoSingleton<RuneManager>
                         GSData ownedRuneScriptData = response.ScriptData.GetGSData("OwnedRuneData");
                         JsonData ownedRuneJsonObject = JsonDataManager.Instance.LoadJson<JsonData>(ownedRuneScriptData.JSON);
 
-                        ownedRunes = new Dictionary<int, int>();
+                        ownedRuneListById = new Dictionary<int, int>();
+                        ownedRuneListByGrade = new Dictionary<RuneGrade, int>();
 
-                        foreach (var runeIdStr in ownedRuneJsonObject.Keys)
+                        foreach (var runeIdStrWithR in ownedRuneJsonObject.Keys)
                         {
+                            string runeIdStr = runeIdStrWithR.Substring(1, 4);
+
                             int runeId = int.Parse(runeIdStr);
-                            int NumOfRune = int.Parse(ownedRuneJsonObject[runeIdStr].ToString());
-                            ownedRunes.Add(runeId, NumOfRune);
+                            int NumOfRune = int.Parse(ownedRuneJsonObject[runeIdStrWithR].ToString());
+                            ownedRuneListById.Add(runeId, NumOfRune);
+                            AddRuneToRuneListByGrade(runeId, NumOfRune);
                         }
                     }
                     else
@@ -133,33 +172,72 @@ public class RuneManager : MonoSingleton<RuneManager>
             });
     }
 
-    public void AddRuneToRuneList(int runeId)
+    private void AddRuneToRuneListByGrade(int runeId, int num = 1)
     {
-        if (ownedRunes.ContainsKey(runeId))
+        RuneGrade grade = RuneGrade.None;
+
+        if(DataBase.Instance.runeDataSheet.TryGetRuneData(runeId, out var runeData))
         {
-            ++ownedRunes[runeId];
+            grade = runeData.Grade;
+        }
+
+        if (ownedRuneListByGrade.ContainsKey(grade))
+        {
+            ownedRuneListByGrade[grade] += num;
         }
         else
         {
-            ownedRunes.Add(runeId, 1);
+            ownedRuneListByGrade.Add(grade, num);
         }
-
-        Debug.Log("AddRuneToRuneList");
-        OnAddRune(runeId);
-        //SaveOwnedRunes();
     }
 
-    public void SubRune(int runeId)
+    private void RemoveRuneToRuneListByGrade(int runeId, int num = 1)
     {
-        if(ownedRunes.ContainsKey(runeId))
+        RuneGrade grade = RuneGrade.None;
+
+        if (DataBase.Instance.runeDataSheet.TryGetRuneData(runeId, out var runeData))
         {
-            if(ownedRunes[runeId] == 1)
+            grade = runeData.Grade;
+        }
+
+        if (ownedRuneListByGrade.ContainsKey(grade))
+        {
+            ownedRuneListByGrade[grade] -= num;
+        }
+
+        if(ownedRuneListByGrade[grade] <= 0)
+        {
+            ownedRuneListByGrade.Remove(grade);
+        }
+    }
+
+    public void AddRuneToRuneList(int runeId)
+    {
+        if (ownedRuneListById.ContainsKey(runeId))
+        {
+            ++ownedRuneListById[runeId];
+        }
+        else
+        {
+            ownedRuneListById.Add(runeId, 1);
+        }
+
+        AddRuneToRuneListByGrade(runeId);
+
+        OnAddRune(runeId);
+    }
+
+    public void RemoveRuneToRuneList(int runeId)
+    {
+        if(ownedRuneListById.ContainsKey(runeId))
+        {
+            if(ownedRuneListById[runeId] == 1)
             {
-                ownedRunes.Remove(runeId);
+                ownedRuneListById.Remove(runeId);
             }
             else
             {
-                --ownedRunes[runeId];
+                --ownedRuneListById[runeId];
             }
         }
         else
@@ -167,7 +245,7 @@ public class RuneManager : MonoSingleton<RuneManager>
             Debug.Log("Error SubRune");
         }
 
-        //SaveOwnedRunes();
+        RemoveRuneToRuneListByGrade(runeId);
     }
 
     public Rune GetEquippedRuneOfOrigin(Origin origin)
@@ -223,5 +301,18 @@ public class RuneManager : MonoSingleton<RuneManager>
             equippedRunes[rune.runeData.SocketPosition] = rune;
         else
             Debug.LogError("Error SetEquippedRune");
+    }
+
+    public bool CanCombination()
+    {
+        foreach (var ownedRuneByGrade in ownedRuneListByGrade)
+        {
+            int numOfRune = ownedRuneByGrade.Value;
+
+            if (numOfRune >= RuneService.NUMBER_OF_CAN_COMBINATION)
+                return true;
+        }
+
+        return false;
     }
 }

@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class UIRunePage : MonoBehaviour
 {
     public UIEquippedRunes uiEquippedRunes = null;
-    public UIOwnedRunes uiOwnedRunes = null;
+    public UIRunesOnRunePage uiRunesOnRunePage = null;
     public UIRuneInfo uiRuneInfo = null;
     public UIRuneCombination uiRuneCombination = null;
+
+    [SerializeField] private Image noticeImage = null;
+
 
     [SerializeField] private Button changeSortByButton;
     [SerializeField] private Text changeSortByText;
@@ -16,9 +19,9 @@ public class UIRunePage : MonoBehaviour
 
     public void Initialize()
     {
-        uiOwnedRunes.Initialize();
-        uiEquippedRunes.Initialize();
+        uiRunesOnRunePage.Initialize();
         uiRuneCombination.Initialize();
+        uiEquippedRunes.Initialize();
         uiRuneInfo.Initialize();
 
         SetChangeSortByButton();
@@ -29,6 +32,7 @@ public class UIRunePage : MonoBehaviour
     {
         showRuneCombinationButton.onClick.AddListener(() =>
         {
+            uiRuneCombination.Reset();
             UIManager.Instance.ShowNew(uiRuneCombination);
         });
     }
@@ -37,8 +41,8 @@ public class UIRunePage : MonoBehaviour
     {
         changeSortByButton.onClick.AddListener(() =>
         {
-            uiOwnedRunes.ChangeSortBy();
-            SetChangeSortByText(uiOwnedRunes.currentSortBy);
+            uiRunesOnRunePage.ChangeSortBy();
+            SetChangeSortByText(uiRunesOnRunePage.currentSortBy);
         });
     }
 
@@ -56,6 +60,30 @@ public class UIRunePage : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    public void ShowNotice()
+    {
+        noticeImage.gameObject.SetActive(true);
+    }
+
+    public void HideNotice()
+    {
+        noticeImage.gameObject.SetActive(false);
+    }
+
+    public void CheckNotify()
+    {
+        var uiRunePage = MainManager.instance.uiIllustratedBook.uiRunePage;
+
+        if (RuneManager.Instance.CanCombination())
+        {
+            uiRunePage.ShowNotice();
+        }
+        else
+        {
+            uiRunePage.HideNotice();
         }
     }
 }
