@@ -28,12 +28,12 @@ public class Pawn : MonoBehaviour
     public virtual void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        //OnAttack += PlayAttackAnimation;
-        OnHit += PlayTakeHit;
-
         defaultMaterial = spriteRenderer.material;
+
+        OnHit += PlayTakeHit;
     }
 
+    // 공격
     public void Attack(Pawn target)
     {
         if (target == null)
@@ -47,6 +47,7 @@ public class Pawn : MonoBehaviour
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
     }
 
+    // 랜덤 공격
     public virtual void RandomAttack()
     {
     }
@@ -82,16 +83,19 @@ public class Pawn : MonoBehaviour
         return finalDamage;
     }
 
+    // 스텟 리셋
     public virtual void ResetStat()
     {
         isDead = false;
     }
 
+    // HP퍼센트를 반환
     public float GetHPRatio()
     {
         return currentHP / (float)ability.Health;
     }
 
+    // 공격이 성공했는지를 반환 (회피율 계산)
     protected bool GetAttackSuccessful(Pawn target)
     {
         long currentAccuracy = ability.Accuracy - target.ability.Evasion;
@@ -103,6 +107,7 @@ public class Pawn : MonoBehaviour
             return true;
     }
 
+    // 크리티컬이 발동 됐는지를 반환
     protected bool IsCriticalAttack()
     {
         long currentCritical = ability.Critical;
@@ -114,26 +119,31 @@ public class Pawn : MonoBehaviour
             return true;
     }
 
+    // 사이즈 셋팅
     public void SetSize(float size)
     {
         spriteRenderer.transform.localScale = new Vector3(size, size, size);
     }
 
+    // 이미지 셋팅
     public void SetImage(Sprite sprite)
     {
         spriteRenderer.sprite = sprite;
     }
 
+    // 이름 셋팅
     public void SetName(string name)
     {
         pawnName = name;
     }
-
+    
+    // 플로팅 텍스트 셋팅
     public void SetUIFloatingTextList(List<UIFloatingText> uiFloatingTextList)
     {
         this.uiFloatingTextList = uiFloatingTextList;
     }
 
+    // 플로팅 텍스트 초기화
     public void InitializeUIFloatingTextList()
     {
         if (uiFloatingTextList != null)
@@ -145,15 +155,18 @@ public class Pawn : MonoBehaviour
         }
     }
 
+    // 공격 애니메이션 시간을 반환
     public virtual float GetAttackAnimationLength()
     {
         return 0.0f;
     }
 
+    // 공격 애니메이션 실행
     public virtual void PlayAttackAnimation()
     {
     }
 
+    // 공격이 성공했는지 확인후 타겟에 데미지를 주는 공격 처리
     public void AttackProcessing()
     {
         if (GetAttackSuccessful(target))
@@ -167,6 +180,7 @@ public class Pawn : MonoBehaviour
             target.PlayMissText();
     }
 
+    // 기본 데미지 플로팅 텍스트 실행
     private void PlayHitText(float damage)
     {
         uiFloatingTextList[floatingTextIndex].SetText(damage.ToString(), Color.red);
@@ -174,6 +188,7 @@ public class Pawn : MonoBehaviour
         PlayFloatingText();
     }
 
+    // 크리티컬 플로팅 텍스트 실행
     private void PlayCriticalHitText(float damage)
     {
         Color orange = new Color(1.0f, 0.64f, 0.0f);
@@ -182,6 +197,7 @@ public class Pawn : MonoBehaviour
         PlayFloatingText();
     }
 
+    // Miss 플로팅 텍스트 실행
     public void PlayMissText()
     {
         uiFloatingTextList[floatingTextIndex].SetText("Miss", Color.gray);
@@ -189,6 +205,7 @@ public class Pawn : MonoBehaviour
         PlayFloatingText();
     }
 
+    // 플로팅 텍스트 실행
     private void PlayFloatingText()
     {
         uiFloatingTextList[floatingTextIndex].Play();
@@ -198,26 +215,25 @@ public class Pawn : MonoBehaviour
             floatingTextIndex = 0;
     }
 
+    // 데미지를 받았을 때 효과
     protected virtual void PlayTakeHit()
     {
         StartCoroutine(Co_TakeHitEffect());
     }
 
+    // 공격과 애니메이션 실행
     protected virtual IEnumerator Co_AttackAndAnimation()
     {
         yield return new WaitForEndOfFrame();
     }
 
+    // 데미지를 받았을 때 효과
     protected virtual IEnumerator Co_TakeHitEffect()
     {
         yield return new WaitForEndOfFrame();
     }
 
-    public void DestoryPawn()
-    {
-        Destroy(this.gameObject);
-    }
-
+    // 공격 대상을 리턴
     public Pawn GetTarget()
     {
         return target;

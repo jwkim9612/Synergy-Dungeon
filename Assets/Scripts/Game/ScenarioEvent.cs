@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScenarioEvent
 {
@@ -8,6 +6,7 @@ public class ScenarioEvent
     private int currentChapter;
     private int currentStage;
     public int currentProbability;
+
     private InGameEvent_ScenarioDataSheet scenarioDataSheet;
 
     public void Initialize()

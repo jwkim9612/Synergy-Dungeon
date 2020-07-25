@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24f79e6a290c0a468296f5157a0d10e, type: 3}
   m_Name: InGameExpDataSheet
   m_EditorClassIdentifier: 
-  InGameExpDatas:
+  InGameExpExcelDatas:
   - Level: 1
     SatisfyExp: 2
     CumulativeExp: 2

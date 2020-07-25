@@ -367,9 +367,9 @@ public class DraggableCentral : MonoBehaviour
     private bool IsPlaceableSpaceFull()
     {
         int numOfCurrentPlacedCharacters = uiCharacterArea.numOfCurrentPlacedCharacters;
-        int numOfCanBePlacedInBattleArea = InGameManager.instance.playerState.numOfCanBePlacedInBattleArea;
+        int numOfCanPlacedInBattleArea = InGameManager.instance.playerState.numOfCanPlacedInBattleArea;
 
-        return numOfCurrentPlacedCharacters >= numOfCanBePlacedInBattleArea ? true : false;
+        return numOfCurrentPlacedCharacters >= numOfCanPlacedInBattleArea ? true : false;
     }
 
     // 배치된 공간에 따라서 이미지를 바꿔줌

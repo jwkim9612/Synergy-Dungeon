@@ -81,7 +81,7 @@ public class Enemy : Pawn
 
         spriteRenderer.enabled = false;
 
-        DestoryPawn();
+        Destroy(this.gameObject);
         yield break;
     }
 

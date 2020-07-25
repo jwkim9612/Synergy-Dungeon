@@ -4,12 +4,14 @@ public class InGameManager : MonoBehaviour
 {
     public static InGameManager instance = null;
 
-    public StockSystem stockSystem;
+    public CharacterStockSystem characterStockSystem;
     public ProbabilitySystem probabilitySystem;
     public CombinationSystem combinationSystem;
     public SynergySystem synergySystem;
+
     public InGamePlayerState playerState;
     public GameState gameState;
+
     public DraggableCentral draggableCentral;
     public BackCanvas backCanvas;
     public FrontCanvas frontCanvas;
@@ -31,17 +33,23 @@ public class InGameManager : MonoBehaviour
     {
         UIManager.Instance.SetCanEscape(true);
 
-        stockSystem = new StockSystem();
+        playerState.Initialize();
+        gameState.Initialize();
+        InitializeSystems();
+        frontCanvas.Initialize();
+        InGameService.Initialize();
+    }
+
+    private void InitializeSystems()
+    {
+        characterStockSystem = new CharacterStockSystem();
         probabilitySystem = new ProbabilitySystem();
         combinationSystem = new CombinationSystem();
         synergySystem = new SynergySystem();
 
-        playerState.Initialize();
-        stockSystem.Initialize();
+        characterStockSystem.Initialize();
         probabilitySystem.Initialize();
         combinationSystem.Initialize();
         synergySystem.Initialize();
-        frontCanvas.Initialize();
-        InGameService.Initialize();
     }
 }

@@ -12,10 +12,13 @@ public class InGameService : MonoBehaviour
     public const int MIN_NUMBER_OF_CAN_PLACED = 0;
     public const int CAN_BUY_EXP = 1;
 
+    public const int MAX_NUMBER_OF_CHARACTER_STATUS = 6;
+
     public const int DEFAULT_COIN = 0;
     public const int DEFAULT_LEVEL = 1;
     public const int DEFAULT_EXP = 0;
     public const int DEFAULT_EVENT_PROBABILITY = 0;
+    public const int DEFAULT_NUM_OF_CAN_PLACED_IN_BATTLEAREA = 1;
 
     public const int MIN_NUMBER_OF_COIN = 0;
     public const int MAX_NUMBER_OF_COIN = 10000;

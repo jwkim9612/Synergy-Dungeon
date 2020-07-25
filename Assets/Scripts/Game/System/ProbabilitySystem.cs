@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// 인게임에서 랜덤으로 나오는 카드의 확률 시스템
 public class ProbabilitySystem
 {
-    //public Dictionary<Tier, float> Probabilities { get; set; }
     public Dictionary<Tier, long> Probabilities { get; set; }
     public List<Tier> tiers { get; set; }
 
@@ -24,16 +24,12 @@ public class ProbabilitySystem
         InGameManager.instance.playerState.OnLevelUp += UpdateProbability;
     }
 
+    // 플레이어 레벨에 맞는 확률로 업데이트
     public void UpdateProbability()
     {
-        var probabilityDataSheet = DataBase.Instance.probabilityDataSheet;
-        if (probabilityDataSheet == null)
-        {
-            Debug.LogError("Error probabilityDataSheet is null");
-            return;
-        }
-
         int playerLevel = InGameManager.instance.playerState.level;
+
+        var probabilityDataSheet = DataBase.Instance.probabilityDataSheet;
         if (probabilityDataSheet.TryGetProbabilityData(playerLevel, out var probabilityData))
         {
             SetProbabilities(probabilityData);
@@ -42,7 +38,7 @@ public class ProbabilitySystem
 
     public void InitializeProbabilities()
     {
-        Probabilities.Clear();
+        //Probabilities.Clear();
 
         Probabilities.Add(Tier.One, 0);
         Probabilities.Add(Tier.Two, 0);
@@ -52,7 +48,7 @@ public class ProbabilitySystem
 
     public void InitializeTierList()
     {
-        tiers.Clear();
+        //tiers.Clear();
 
         tiers.Add(Tier.One);
         tiers.Add(Tier.Two);
@@ -60,6 +56,7 @@ public class ProbabilitySystem
         tiers.Add(Tier.Four);
     }
 
+    // 각 티어의 확률을 설정
     public void SetProbabilities(ProbabilityData probabilityData)
     {
         Probabilities[Tier.One] = probabilityData.OneTier;
@@ -68,6 +65,7 @@ public class ProbabilitySystem
         Probabilities[Tier.Four] = probabilityData.FourTier;
     }
 
+    // 확률에 맞는 티어를 반환
     public Tier GetRandomTier()
     {
         long randomProbability = RandomService.GetRandomLong();

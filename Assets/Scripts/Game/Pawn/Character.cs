@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Character : Pawn
 {
     public Animator animator;
     public Origin origin;
+    public CharacterInfo characterInfo;
 
     public Character()
     {
@@ -99,6 +99,11 @@ public class Character : Pawn
     public void SetRunTimeAnimatorController(RuntimeAnimatorController runTimeAnimatorController)
     {
         animator.runtimeAnimatorController = runTimeAnimatorController;
+    }
+
+    public void SetCharacterInfo(CharacterInfo newCharacterInfo)
+    {
+        characterInfo = newCharacterInfo;
     }
 
     public void RemoveRunTimeAnimatorController()

@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class BattleStatus : MonoBehaviour
 {
-    public delegate void OnWinTheBattleDelegate();
-    public OnWinTheBattleDelegate OnWinTheBattle { get; set; }
-
     [SerializeField] private UIBattleStart uiBattleStart = null;
 
     public List<Character> characters { get; set; }
@@ -27,10 +24,9 @@ public class BattleStatus : MonoBehaviour
         StartCoroutine(Battle());
     }
 
+    // 전투
     private IEnumerator Battle()
     {
-        Debug.Log("Battle");
-
         if (characters.Count == 0)
             isCharacterAnnihilation = true;
 
@@ -106,22 +102,9 @@ public class BattleStatus : MonoBehaviour
         {
             yield return new WaitForSeconds(1.0f);
             AllCharactersPlayWinAnimation();
-
-            //if (StageManager.Instance.IsFinalWave())
-            //{
-            //    SaveManager.Instance.RemoveInGameData();
-            //    Debug.Log("데이터 삭제!");
-            //}
-            //else
-            //{
-            //    SaveManager.Instance.SetInGameData();
-            //    SaveManager.Instance.SaveInGameData();
-            //}
-
             yield return new WaitForSeconds(3.0f);
 
             InGameManager.instance.gameState.SetIsWaveClear();
-            //OnWinTheBattle();
             yield break;
         }
         else
@@ -142,12 +125,14 @@ public class BattleStatus : MonoBehaviour
         pawnsAttackSequenceList = pawns.OrderByDescending(x => x.ability.AttackSpeed).ToList();
     }
 
+    // 전멸 현황 초기화
     private void InitializeAnnihilation()
     {
         isCharacterAnnihilation = false;
         isEnemyAnnihilation = false;
     }
 
+    // 현재 배틀 공간에 있는 폰들 초기화
     private void InitializePawns()
     {
         foreach (var pawn in pawnsAttackSequenceList)
@@ -200,18 +185,21 @@ public class BattleStatus : MonoBehaviour
         return pawn.pawnType == PawnType.Character;
     }
 
+    // 배틀 공간에 있는 적들중 하나를 반환
     public Enemy GetRandomEnemy()
     {
         int enemiesRandomIndex = GetRandomEnemyIndex();
         return enemies[enemiesRandomIndex];
     }
 
+    // 배틀 공간에 있는 캐릭터중 하나를 반환
     public Character GetRandomCharacter()
     {
         int charactersRandomIndex = GetRandomCharacterIndex();
         return characters[charactersRandomIndex];
     }
 
+    // 배틀공간에 있는 살아있는 적들중 랜덤으로 하나의 인덱스를 반환 
     private int GetRandomEnemyIndex()
     {
         if (enemies.Count <= 0)
@@ -223,6 +211,7 @@ public class BattleStatus : MonoBehaviour
         return RandomService.RandRange(0, enemies.Count);
     }
 
+    // 배틀공간에 있는 살아있는 캐릭터중 랜덤으로 하나의 인덱스를 반환 
     private int GetRandomCharacterIndex()
     {
         if (characters.Count <= 0)
@@ -234,11 +223,12 @@ public class BattleStatus : MonoBehaviour
         return RandomService.RandRange(0, characters.Count);
     }
 
+    // 모든 캐릭터의 승리 애니메이션 실행
     private void AllCharactersPlayWinAnimation()
     {
-        for (int i = 0; i < characters.Count; ++i)
+        foreach (var character in characters)
         {
-            characters[i].PlayWinAnimation();
+            character.PlayWinAnimation();
         }
     }
 }

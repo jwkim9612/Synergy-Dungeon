@@ -10,22 +10,21 @@ public class GameState : MonoBehaviour
     public OnCompleteDelegate OnComplete { get; set; }
 
     public InGameState inGameState { get; set; } = InGameState.None;
-    public StageManager stageManager { get; set; }
 
     public bool isWaveClear { get; set; } = false;
     public bool isPlayerLose { get; set; } = false;
 
-    [SerializeField] private UIStageClear uiStageClear = null;
-    [SerializeField] private UIGameOver uiGameOver = null;
-
     void Start()
     {
-        stageManager = StageManager.Instance;
-
         SetInGameState(InGameState.Prepare);
     }
-    
-    void Update()
+
+    public void Initialize()
+    {
+        //SetInGameState(InGameState.Prepare);
+    }
+
+    private void Update()
     {
         if (inGameState == InGameState.Battle && isWaveClear)
         {
@@ -56,16 +55,17 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 OnComplete();
 
-                if (stageManager.IsFinalWave())
+                if (StageManager.Instance.IsFinalWave())
                 {
                     PlayerDataManager.Instance.playerData.IncreasePlayableStage();
                     PlayerDataManager.Instance.playerData.InitializeTopWave();
                     PlayerDataManager.Instance.SavePlayerData();
-                    ShowStageClear();
+
+                    InGameManager.instance.frontCanvas.ShowStageClear();
                 }
                 else
                 {
-                    stageManager.IncreaseWaveAndSetCurrentStage(1);
+                    StageManager.Instance.IncreaseWaveAndSetCurrentStage(1);
 
                     if (StageManager.Instance.IsFinalWave())
                     {
@@ -86,7 +86,8 @@ public class GameState : MonoBehaviour
                 PlayerDataManager.Instance.playerData.TopWave = StageManager.Instance.currentWave - 1;
                 // 보상 주기.
                 PlayerDataManager.Instance.SavePlayerData();
-                ShowGameOver();
+
+                InGameManager.instance.frontCanvas.ShowGameOver();
                 break;
         }
 
@@ -108,15 +109,5 @@ public class GameState : MonoBehaviour
     public bool IsInBattle()
     {
         return inGameState == InGameState.Battle;
-    }
-
-    private void ShowGameOver()
-    {
-        uiGameOver.gameObject.SetActive(true);
-    }
-
-    private void ShowStageClear()
-    {
-        uiStageClear.gameObject.SetActive(true);
     }
 }

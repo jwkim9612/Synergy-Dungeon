@@ -16,7 +16,7 @@
 	public InGameEvent_ScenarioDataSheet inGameEvent_ScenarioDataSheet;
 	public RuneCombinableNumDataSheet runeCombinableNumDataSheet;
 
-    public void Initialize()
+	public void Initialize()
     {
 		tribeDataSheet.Initialize();
 		originDataSheet.Initialize();
@@ -31,5 +31,6 @@
 		runePurchaseableLevelDataSheet.Initialize();
 		inGameEvent_ScenarioDataSheet.Initialize();
 		runeCombinableNumDataSheet.Initialize();
+		inGameExpDataSheet.Initialize();
 	}
 }

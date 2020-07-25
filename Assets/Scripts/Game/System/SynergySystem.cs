@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+// 완성되면 설명 적기.
 public class SynergySystem
 {
     public delegate void OnTribeChangedDelegate();
@@ -14,7 +15,9 @@ public class SynergySystem
     public Dictionary<Tribe, int> appliedTribes;
     public Dictionary<Origin, int> appliedOrigins;
 
-    public void Initialize()
+    private CharacterDataSheet characterDataSheet;
+
+    public SynergySystem()
     {
         deployedTribes = new Dictionary<TribeInfo, int>();
         deployedOrigins = new Dictionary<OriginInfo, int>();
@@ -22,15 +25,18 @@ public class SynergySystem
         appliedOrigins = new Dictionary<Origin, int>();
     }
 
-    public void AddCharacter(CharacterInfo characterInfo)
+    public void Initialize()
     {
-        var characterDataSheet = DataBase.Instance.characterDataSheet;
-        if(characterDataSheet == null)
+        characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet == null)
         {
             Debug.LogError("Error characterDataSheet is null");
             return;
         }
+    }
 
+    public void AddCharacter(CharacterInfo characterInfo)
+    {
         if(characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
         {
             TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);
@@ -64,13 +70,6 @@ public class SynergySystem
 
     public void SubCharacter(CharacterInfo characterInfo)
     {
-        var characterDataSheet = DataBase.Instance.characterDataSheet;
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
-
         if (characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
         {
             TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-public class AccountData
+﻿public class AccountData
 { 
     public string id;
     public string pw;
@@ -151,30 +148,4 @@ public enum SortBy
     None,
     Grade,
     Socket
-}
-
-[Serializable]
-public class AbilityEffectSaveData
-{
-    public List<int> DataIdList { get; set; }
-    public AbilityEffectData abilityEffectData { get; set; }
-    public int remainingTurn { get; set; }
-
-    public AbilityEffectSaveData() { }
-
-    public AbilityEffectSaveData(int id, AbilityEffectData data, int remainingTurn)
-    {
-        DataIdList = new List<int>();
-        DataIdList.Add(id);
-
-        abilityEffectData = data;
-        this.remainingTurn = remainingTurn;
-    }
-
-    public AbilityEffectSaveData(List<int> idList, AbilityEffectData data, int remainingTurn)
-    {
-        DataIdList = idList;
-        abilityEffectData = data;
-        this.remainingTurn = remainingTurn;
-    }
 }

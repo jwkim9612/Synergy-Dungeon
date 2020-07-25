@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 public class AbilityEffect
 {
@@ -41,14 +39,14 @@ public class AbilityEffect
         dataIdList.Add(scenarioData.ScenarioId);
     }
 
+    // 능력치 효과의 남은 턴을 하나 감소
     public void DecreaseRemainingTurn()
     {
-        if(remainingTurn != -1)
-        {
+        if (remainingTurn != AbilityEffectService.NUM_OF_INFINITY)
             --remainingTurn;
-        }
     }
 
+    // 능력치 효과의 남은 턴이 없으면 true 있으면 false를 반환
     public bool IsOver()
     {
         if (remainingTurn == 0)
@@ -56,16 +54,4 @@ public class AbilityEffect
 
         return false;
     }
-
-    //public void SetabilityEffect(PotionData potionData)
-    //{
-    //    ability = potionData.Ability;
-    //    remainingTurn = -1;
-    //}
-
-    //public void SetabilityEffect(ScenarioData scenarioData)
-    //{
-    //    ability = scenarioData.ApplyAbility;
-    //    remainingTurn = scenarioData.ApplyTurn;
-    //}
 }
