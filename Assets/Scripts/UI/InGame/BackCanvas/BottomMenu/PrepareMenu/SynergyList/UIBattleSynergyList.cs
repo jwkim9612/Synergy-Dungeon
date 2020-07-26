@@ -8,7 +8,7 @@ public class UIBattleSynergyList : MonoBehaviour
     private List<UIOrigin> uiOrigins;
     private SynergySystem synergySystem;
 
-    [SerializeField] private Camera cam;
+    [SerializeField] private Camera cam = null;
     [SerializeField] private GameObject inBattleParent = null;
     [SerializeField] private GameObject inPrepareParent = null;
 

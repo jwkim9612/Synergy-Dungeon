@@ -65,7 +65,7 @@ public class SaveManager : MonoSingleton<SaveManager>
         _inGameSaveData.Wave = StageManager.Instance.currentWave;
         _inGameSaveData.CharacterAreaInfoList = InGameManager.instance.draggableCentral.uiCharacterArea.GetAllCharacterInfo();
         _inGameSaveData.PrepareAreaInfoList = InGameManager.instance.draggableCentral.uiPrepareArea.GetAllCharacterInfo();
-        _inGameSaveData.AbilityEffectSaveDataList = InGameManager.instance.backCanvas.uiAbilityEffectList.GetSaveData();
+        _inGameSaveData.AbilityEffectSaveDataList = InGameManager.instance.backCanvas.uiMainMenu.uiAbilityEffectList.GetSaveData();
         _inGameSaveData.EventProbability = InGameManager.instance.frontCanvas.uiScenarioEvent.scenarioEvent.currentProbability;
     }
 

@@ -2,7 +2,12 @@
 
 public class BackCanvas : MonoBehaviour
 {
-    public UIAbilityEffectList uiAbilityEffectList;
-    public UIBattleArea uiBattleArea;
+    public UIInGameMainMenu uiMainMenu;
     public UIBottomMenu uiBottomMenu;
+
+    public void Initialize()
+    {
+        uiMainMenu.Initialize();
+        uiBottomMenu.Initialize();
+    }
 }

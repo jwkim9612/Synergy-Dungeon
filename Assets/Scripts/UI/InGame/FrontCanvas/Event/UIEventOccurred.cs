@@ -1,14 +1,13 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIEventOccurred : MonoBehaviour
 {
     [SerializeField] private Text eventOccurredText = null;
-    [SerializeField] private float fadeTime;
-    [SerializeField] private float stopTime;
-    [SerializeField] private int numOfFlash;
+    [SerializeField] private float fadeTime = 0.0f;
+    [SerializeField] private float stopTime = 0.0f;
+    [SerializeField] private int numOfFlash = 0;
 
     /// <summary>
     /// 애니메이션 시작

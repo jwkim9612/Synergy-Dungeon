@@ -8,8 +8,8 @@ public class LoadSceneManager : MonoSingleton<LoadSceneManager>
     public delegate void OnLoadingDelegate();
     public OnLoadingDelegate OnLoading { get; set; }
 
-    [SerializeField] private Slider progressbar;
-    [SerializeField] private Text loadText;
+    [SerializeField] private Slider progressbar = null;
+    [SerializeField] private Text loadText = null;
 
     public void LoadMainScene()
     {

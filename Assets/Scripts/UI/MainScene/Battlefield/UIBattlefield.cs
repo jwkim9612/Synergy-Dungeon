@@ -17,7 +17,7 @@ public class UIBattlefield : MonoBehaviour
     [SerializeField] private Button potionButton = null;
     [SerializeField] private UIPotionInfo uiPotionInfo = null;
 
-    [SerializeField ]private Camera cam;
+    [SerializeField]private Camera cam = null;
 
     void Start()
     {

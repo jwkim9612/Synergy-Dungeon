@@ -17,6 +17,7 @@ public class UIFloatingTextForInGame : UIFloatingText
 
         var originParent = this.transform.parent;
         this.transform.SetParent(canvas.transform);
+        transform.SetAsFirstSibling();
 
         Vector3 localPosition = this.transform.localPosition;
         this.transform.localPosition = new Vector3(localPosition.x, localPosition.y, 0.0f);

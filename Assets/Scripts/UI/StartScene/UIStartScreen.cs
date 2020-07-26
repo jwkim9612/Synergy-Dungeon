@@ -7,7 +7,7 @@ public class UIStartScreen : MonoBehaviour
 {
     [SerializeField] private GameObject loading = null;
     [SerializeField] private Image fadeImage = null;
-    [SerializeField] private float FadeTime;
+    [SerializeField] private float FadeTime = 0.0f;
 
     private void Start()
     {

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class UIScenarioEventButton : MonoBehaviour
 {
-    [SerializeField] private Button button;
-    [SerializeField] private Text descriptionText;
+    [SerializeField] private Button button = null;
+    [SerializeField] private Text descriptionText = null;
     [SerializeField] private UIReward uiReward = null;
     private ScenarioData scenarioData;
     public ScenarioEvent scenarioEvent;
@@ -114,7 +114,7 @@ public class UIScenarioEventButton : MonoBehaviour
                 InGameManager.instance.playerState.IncreaseCoin(scenarioData.Amount);
                 break;
             case RewardCurrency.Status:
-                InGameManager.instance.backCanvas.uiAbilityEffectList.AddAbilityEffect(scenarioData);
+                InGameManager.instance.backCanvas.uiMainMenu.uiAbilityEffectList.AddAbilityEffect(scenarioData);
                 break;
             case RewardCurrency.RandomArtifactPiece:
                 break;

@@ -1,5 +1,4 @@
 ﻿using GameSparks.Api.Requests;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ public class UIAbilityEffectList : MonoBehaviour
 
     [SerializeField] private Camera cam;
 
-    private void Start()
+    public void Initialize()
     {
         uiAbilityEffectInfo.Initialize();
 
@@ -21,19 +20,30 @@ public class UIAbilityEffectList : MonoBehaviour
 
         uiAbilityEffectList = new List<UIAbilityEffect>();
 
+        SetData();
+    }
+
+    private void SetData()
+    {
         if (SaveManager.Instance.IsLoadedData)
         {
             InitializeByInGameSaveData(SaveManager.Instance.inGameSaveData.AbilityEffectSaveDataList);
         }
         else
         {
-            if(PotionManager.Instance.HasPotionInUse())
+            SetPotion();
+        }
+    }
+
+    // 사용한 포션이 있으면 적용시켜주는 함수 
+    private void SetPotion()
+    {
+        if (PotionManager.Instance.HasPotionInUse())
+        {
+            if (DataBase.Instance.potionDataSheet.TryGetPotionData(PotionManager.Instance.potionIdInUse, out var potionData))
             {
-                if(DataBase.Instance.potionDataSheet.TryGetPotionData(PotionManager.Instance.potionIdInUse, out var potionData))
-                {
-                    AddAbilityEffect(potionData);
-                    PotionManager.Instance.RemovePotionData();
-                }
+                AddAbilityEffect(potionData);
+                PotionManager.Instance.RemovePotionData();
             }
         }
     }
@@ -70,10 +80,7 @@ public class UIAbilityEffectList : MonoBehaviour
         {
             switch (abilityEffectSaveData.abilityEffectData)
             {
-                case AbilityEffectData.None:
-                    break;
                 case AbilityEffectData.Potion:
-                    
                     if(DataBase.Instance.potionDataSheet.TryGetPotionData(abilityEffectSaveData.DataIdList[0], out var potionData))
                     {
                         AddAbilityEffect(potionData);
@@ -81,7 +88,6 @@ public class UIAbilityEffectList : MonoBehaviour
                     break;
 
                 case AbilityEffectData.Scenario:
-
                     int chapterId = abilityEffectSaveData.DataIdList[0];
                     int waveId = abilityEffectSaveData.DataIdList[1];
                     int scenarioId = abilityEffectSaveData.DataIdList[2];
@@ -91,9 +97,10 @@ public class UIAbilityEffectList : MonoBehaviour
                         var abilityEffect = AddAbilityEffect(scenarioData);
                         abilityEffect.remainingTurn = abilityEffectSaveData.remainingTurn;
                     }
-
                     break;
+
                 default:
+                    Debug.Log("Error InitializeByInGameSaveData");
                     break;
             }
         }
@@ -101,6 +108,10 @@ public class UIAbilityEffectList : MonoBehaviour
         UpdateAbilityEffectList();
     }
 
+    /// <summary>
+    /// 인게임 세이브 데이터에 필요한 AbilityEffect 저장 데이터를 반환
+    /// </summary>
+    /// <returns>AbilityEffect 인게임 저장 데이터</returns>
     public List<AbilityEffectSaveData> GetSaveData()
     {
         List<AbilityEffectSaveData> abilityEffectSaveDataList = new List<AbilityEffectSaveData>();
@@ -138,6 +149,7 @@ public class UIAbilityEffectList : MonoBehaviour
         return abilityEffect;
     }
 
+    // 효과들의 남은 턴을 하나씩 줄이고 남은 턴이 없는 효과들은 삭제
     private void UpdateAbilityEffectListByWaveComplete()
     {
         List<int> removeIndexList = new List<int>();
@@ -163,6 +175,7 @@ public class UIAbilityEffectList : MonoBehaviour
         }
     }
 
+    // 리스트에 있는 모든 효과들을 업데이트(남은 턴)
     private void UpdateAbilityEffectList()
     {
         foreach (var uiAbilityEffect in uiAbilityEffectList)
@@ -171,6 +184,7 @@ public class UIAbilityEffectList : MonoBehaviour
         }
     }
 
+    // 해당 인덱스에 있는 효과를 삭제(인게임 세이브 데이터)
     private void RemoveAbilityEffectSaveData(int index)
     {
         new LogEventRequest()

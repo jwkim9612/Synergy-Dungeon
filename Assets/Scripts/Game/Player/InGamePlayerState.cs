@@ -30,8 +30,6 @@ public class InGamePlayerState : MonoBehaviour
             InitializeByDefault();
         }
 
-        Debug.Log("PlayerState 초기화");
-
         InGameManager.instance.gameState.OnPrepare += IncreaseCoinByPrepare;
         InGameManager.instance.gameState.OnComplete += IncreaseExpByBattleWin;
     }

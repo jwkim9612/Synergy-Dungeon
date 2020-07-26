@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class UIBattleMenu : MonoBehaviour
 {
-    [SerializeField] private UICharacterStatusList uiFirstCharacterStatusList;
-    [SerializeField] private UICharacterStatusList uiSecondCharacterStatusList;
-    [SerializeField] private UISpeedController uiSpeedController;
+    [SerializeField] private UICharacterStatusList uiFirstCharacterStatusList = null;
+    [SerializeField] private UICharacterStatusList uiSecondCharacterStatusList = null;
+    [SerializeField] private UISpeedController uiSpeedController = null;
 
     public List<UICharacterStatus> characterStatusList = null;
 

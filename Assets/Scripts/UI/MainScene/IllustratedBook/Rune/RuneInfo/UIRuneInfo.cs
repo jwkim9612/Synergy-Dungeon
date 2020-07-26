@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class UIRuneInfo : UIControl
 {
-    [SerializeField] private Text nameText;
-    [SerializeField] private Text gradeText;
-    [SerializeField] private Image runeImage;
-    [SerializeField] private Text descriptionText;
-    [SerializeField] private Button sellButton;
-    [SerializeField] private Button equipAndReleaseButton;
-    [SerializeField] private Text equipAndReleaseText;
+    [SerializeField] private Text nameText = null;
+    [SerializeField] private Text gradeText = null;
+    [SerializeField] private Image runeImage = null;
+    [SerializeField] private Text descriptionText = null;
+    [SerializeField] private Button sellButton = null;
+    [SerializeField] private Button equipAndReleaseButton = null;
+    [SerializeField] private Text equipAndReleaseText = null;
 
     private List<UIAttributeInfo> attributeInfoList;
 

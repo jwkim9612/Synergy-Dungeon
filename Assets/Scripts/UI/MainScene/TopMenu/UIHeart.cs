@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class UIHeart : MonoBehaviour
 {
-    [SerializeField] private Image image = null;
     [SerializeField] private Text heartText = null;
     [SerializeField] private Text timeText = null;
     private long remainingTime;

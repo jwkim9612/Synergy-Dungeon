@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIAbilityEffect : MonoBehaviour
@@ -12,7 +10,12 @@ public class UIAbilityEffect : MonoBehaviour
 
     public AbilityEffect abilityEffect;
 
-    private void Start()
+    public void Initialize()
+    {
+        SetToggle();
+    }
+
+    private void SetToggle()
     {
         toggle = GetComponent<Toggle>();
         toggle.onValueChanged.AddListener((bool bOn) =>
@@ -30,6 +33,9 @@ public class UIAbilityEffect : MonoBehaviour
         UpdateRemainingTurnText();
     }
 
+    /// <summary>
+    /// 효과의 남은 턴을 하나 줄이고 업데이트
+    /// </summary>
     public void UpdateAbilityEffectByWaveComplete()
     {
         abilityEffect.DecreaseRemainingTurn();

@@ -8,7 +8,7 @@ public class UIEnemyArea : MonoBehaviour
     public UIEnemyPlacementArea frontArea;
     public UIEnemyPlacementArea backArea;
 
-    void Start()
+    public void Initialize()
     {
         InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;

@@ -6,7 +6,7 @@ using DanielLochner.Assets.SimpleScrollSnap;
 
 public class UIChooseChapter : UIControl
 {
-    [SerializeField] private SimpleScrollSnap simpleScrollSnap;
+    [SerializeField] private SimpleScrollSnap simpleScrollSnap = null;
     [SerializeField] private GameObject content = null;
     [SerializeField] private UIChapter uiChapter = null;
     [SerializeField] private Text chapterTitle = null;
@@ -30,7 +30,6 @@ public class UIChooseChapter : UIControl
 
         simpleScrollSnap.onPanelChanged.AddListener(() =>
         {
-            //var chapterData = DataBase.Instance.chapterDataSheet.ChapterDatas[simpleScrollSnap.TargetPanel + 1];
             DataBase.Instance.chapterDataSheet.TryGetChapterData(simpleScrollSnap.TargetPanel + 1, out var chapterData);
             chapterTitle.text = chapterData.Id + ". " + chapterData.Name;
             

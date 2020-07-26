@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class UICharacterArea : MonoBehaviour
@@ -16,19 +15,24 @@ public class UICharacterArea : MonoBehaviour
         frontArea.Initialize();
         backArea.Initialize();
 
+        SetData();
+
+        InGameManager.instance.gameState.OnComplete += ShowAllUICharacters;
+    }
+
+    private void SetData()
+    {
         if (SaveManager.Instance.IsLoadedData)
         {
             var characterAreaInfoList = SaveManager.Instance.inGameSaveData.CharacterAreaInfoList;
 
             SetUICharacterList(characterAreaInfoList);
-            OnPlacementChanged();
+            OnPlacementChanged?.Invoke();
         }
         else
         {
             numOfCurrentPlacedCharacters = 0;
         }
-
-        InGameManager.instance.gameState.OnComplete += ShowAllUICharacters;
     }
 
     public bool IsEmpty()
@@ -105,6 +109,10 @@ public class UICharacterArea : MonoBehaviour
         return characters;
     }
 
+    /// <summary>
+    /// 캐릭터가 있는 UICharacter들을 반환
+    /// </summary>
+    /// <returns></returns>
     public List<UICharacter> GetUICharacterListWithCharacters()
     {
         List<UICharacter> uiCharacters = new List<UICharacter>();
@@ -115,18 +123,9 @@ public class UICharacterArea : MonoBehaviour
         return uiCharacters;
     }
 
-    //public void SpaceExpansion()
-    //{
-    //    backArea.SpaceExpansion();
-    //    frontArea.SpaceExpansion();
-    //}
-
-    //public void SpaceReduction()
-    //{
-    //    backArea.SpaceReduction();
-    //    frontArea.SpaceReduction();
-    //}
-
+    /// <summary>
+    /// 배틀 공간에 배치한 캐릭터 수 1증가
+    /// </summary>
     public void AddCurrentPlacedCharacter()
     {
         if (numOfCurrentPlacedCharacters == InGameService.MAX_NUMBER_OF_CAN_PLACED)
@@ -134,9 +133,11 @@ public class UICharacterArea : MonoBehaviour
 
         ++numOfCurrentPlacedCharacters;
         OnPlacementChanged();
-
     }
 
+    /// <summary>
+    /// 배틀 공간에 배치한 캐릭터 수 1감소
+    /// </summary>
     public void SubCurrentPlacedCharacter()
     {
         if (numOfCurrentPlacedCharacters == InGameService.MIN_NUMBER_OF_CAN_PLACED)
@@ -146,6 +147,11 @@ public class UICharacterArea : MonoBehaviour
         OnPlacementChanged();
     }
 
+    /// <summary>
+    /// 조합으로 인한 배틀 공간에 배치한 캐릭터 수 1감소
+    /// </summary>
+    /// <param name="uiCharacter"></param>
+    /// <param name="isFirstCharacter"></param>
     public void SubCurrentPlacedCharacterFromCombinations(UICharacter uiCharacter, bool isFirstCharacter)
     {
         if (isFirstCharacter)
@@ -153,8 +159,7 @@ public class UICharacterArea : MonoBehaviour
 
         if (uiCharacter.GetArea<UIBattleArea>() != null)
         {
-            --numOfCurrentPlacedCharacters;
-            OnPlacementChanged();
+            SubCurrentPlacedCharacter();
         }
     }
 }

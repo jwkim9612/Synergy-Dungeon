@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class UICanNotStart : MonoBehaviour
 {
-    [SerializeField] private Text canNotStartText = null;
-    
     private Coroutine showCanNotStartCoroutine;
 
     public void PlayShowCanNotStart()
@@ -15,6 +13,7 @@ public class UICanNotStart : MonoBehaviour
             StopCoroutine(showCanNotStartCoroutine);
         }
 
+        ShowCanNotStartText();
         showCanNotStartCoroutine = StartCoroutine(Co_PlayShowCanNotStart());
     }
 
@@ -29,7 +28,6 @@ public class UICanNotStart : MonoBehaviour
 
     private IEnumerator Co_PlayShowCanNotStart()
     {
-        ShowCanNotStartText();
         yield return new WaitForSeconds(2.0f);
         HideCanNotStartText();
         yield break;
@@ -42,11 +40,11 @@ public class UICanNotStart : MonoBehaviour
 
     private void ShowCanNotStartText()
     {
-        canNotStartText.gameObject.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     private void HideCanNotStartText()
     {
-        canNotStartText.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

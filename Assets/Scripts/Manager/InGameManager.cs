@@ -33,11 +33,13 @@ public class InGameManager : MonoBehaviour
     {
         UIManager.Instance.SetCanEscape(true);
 
-        playerState.Initialize();
-        gameState.Initialize();
-        InitializeSystems();
-        frontCanvas.Initialize();
         InGameService.Initialize();
+        playerState.Initialize();
+        InitializeSystems();
+        draggableCentral.Initialize();
+        frontCanvas.Initialize();
+        backCanvas.Initialize();
+        gameState.Initialize();
     }
 
     private void InitializeSystems()

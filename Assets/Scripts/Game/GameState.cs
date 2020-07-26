@@ -16,12 +16,12 @@ public class GameState : MonoBehaviour
 
     void Start()
     {
-        SetInGameState(InGameState.Prepare);
+        //SetInGameState(InGameState.Prepare);
     }
 
     public void Initialize()
     {
-        //SetInGameState(InGameState.Prepare);
+        SetInGameState(InGameState.Prepare);
     }
 
     private void Update()

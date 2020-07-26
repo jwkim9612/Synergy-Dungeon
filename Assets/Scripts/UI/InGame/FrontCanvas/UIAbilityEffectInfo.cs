@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UIAbilityEffectInfo : MonoBehaviour
 {
-    [SerializeField] private Text remainingTurnText;
-    [SerializeField] private Text InfoText;
+    [SerializeField] private Text remainingTurnText = null;
+    [SerializeField] private Text InfoText = null;
 
     public void Initialize()
     {

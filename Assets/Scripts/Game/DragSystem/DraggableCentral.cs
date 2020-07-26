@@ -21,7 +21,7 @@ public class DraggableCentral : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private UIInGameCharacterInfo uiInGameCharacterInfo = null;
 
-    private void Start()
+    public void Initialize()
     {
         InitializeArrangers();
 

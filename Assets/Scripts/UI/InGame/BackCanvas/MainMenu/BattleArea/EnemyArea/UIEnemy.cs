@@ -33,6 +33,8 @@ public class UIEnemy : MonoBehaviour
 
         StartCoroutine(Co_PrepareFollowEnemy());
         uiHPBar.Initialize();
+        uiHPBar.controllingPawn = enemy;
+        uiHPBar.SetUpdateHPBarAndAfterImage();
         uiHPBar.UpdateHPBar();
     }
 

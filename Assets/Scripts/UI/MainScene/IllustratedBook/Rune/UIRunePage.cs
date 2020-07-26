@@ -11,11 +11,9 @@ public class UIRunePage : MonoBehaviour
     public UIRuneCombination uiRuneCombination = null;
 
     [SerializeField] private Image noticeImage = null;
-
-
-    [SerializeField] private Button changeSortByButton;
-    [SerializeField] private Text changeSortByText;
-    [SerializeField] private Button showRuneCombinationButton;
+    [SerializeField] private Button changeSortByButton = null;
+    [SerializeField] private Text changeSortByText = null;
+    [SerializeField] private Button showRuneCombinationButton = null;
 
     public void Initialize()
     {

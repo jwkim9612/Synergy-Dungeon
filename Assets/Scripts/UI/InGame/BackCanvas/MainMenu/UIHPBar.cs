@@ -6,34 +6,18 @@ public class UIHPBar : MonoBehaviour
 {
     [SerializeField] private Slider slider = null;
     [SerializeField] private Slider afterImageSlider = null;
-    private Pawn controllingPawn = null;
+    public Pawn controllingPawn;
     private Coroutine afterImageCoroutine;
 
-    private void Start()
+    public void Initialize()
     {
         InGameManager.instance.gameState.OnBattle += UpdateHPBar;
         InGameManager.instance.gameState.OnBattle += InitializeAfterImageSlider;
     }
 
-    public void Initialize()
+    public void SetUpdateHPBarAndAfterImage()
     {
-        var uiEnemy = GetComponentInParent<UIEnemy>();
-        if(uiEnemy != null)
-        {
-            controllingPawn = uiEnemy.enemy;
-            controllingPawn.OnHit += UpdateHPBarAndAfterImage;
-            return;
-        }
-
-        var uiCharacter = GetComponentInParent<UICharacter>();
-        if(uiCharacter != null)
-        {
-            controllingPawn = uiCharacter.character;
-            controllingPawn.OnHit += UpdateHPBarAndAfterImage;
-            return;
-        }
-
-        Debug.Log("Error UIHPBar Initialize");
+        controllingPawn.OnHit += UpdateHPBarAndAfterImage;
     }
 
     private void InitializeAfterImageSlider()

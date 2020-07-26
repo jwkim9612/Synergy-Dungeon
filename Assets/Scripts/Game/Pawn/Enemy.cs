@@ -127,7 +127,9 @@ public class Enemy : Pawn
 
     public override void RandomAttack()
     {
-        target = InGameManager.instance.backCanvas.uiBattleArea.battleStatus.GetRandomCharacter();
+        var battleStatus = InGameManager.instance.backCanvas.uiMainMenu.uiBattleArea.battleStatus;
+
+        target = battleStatus.GetRandomCharacter();
         Attack(target);
     }
 }

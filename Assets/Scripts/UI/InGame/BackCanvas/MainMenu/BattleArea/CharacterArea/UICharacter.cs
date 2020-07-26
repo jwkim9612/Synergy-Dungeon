@@ -17,16 +17,22 @@ public class UICharacter : MonoBehaviour
 
     public void Initialize()
     {
-        isFightingOnBattlefield = false;
-
-        uiFloatingTextList = new List<UIFloatingText>();
-        uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
-
         characterDataSheet = DataBase.Instance.characterDataSheet;
-        if(characterDataSheet == null)
+        if (characterDataSheet == null)
         {
             Debug.LogError("Error characterDataSheet is null");
         }
+
+        isFightingOnBattlefield = false;
+
+        InitializeUIFloatingTextList();
+    }
+
+    private void InitializeUIFloatingTextList()
+    {
+
+        uiFloatingTextList = new List<UIFloatingText>();
+        uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
     }
 
     public void SetCharacter(CharacterInfo newCharacterInfo)
@@ -65,6 +71,8 @@ public class UICharacter : MonoBehaviour
 
         StartCoroutine(Co_PrepareFollowCharacter());
         uiHPBar.Initialize();
+        uiHPBar.controllingPawn = character;
+        uiHPBar.SetUpdateHPBarAndAfterImage();
     }
 
     public void SetDefaultImage()
@@ -214,7 +222,6 @@ public class UICharacter : MonoBehaviour
     {
         if (character != null)
         {
-            //character.transform.position = this.transform.position;
             character.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, InGameService.Z_VALUE_OF_PAWN);
         }
     }

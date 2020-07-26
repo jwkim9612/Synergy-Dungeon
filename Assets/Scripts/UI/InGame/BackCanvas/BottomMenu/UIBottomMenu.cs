@@ -7,7 +7,7 @@ public class UIBottomMenu : MonoBehaviour
     public UIBattleMenu uiBattleMenu = null;
     public UIPrepareMenu uiPrepareMenu = null;
 
-    private void Start()
+    public void Initialize()
     {
         InGameManager.instance.gameState.OnBattle += ShowBattleMenu;
         InGameManager.instance.gameState.OnPrepare += ShowPrepareMenu;

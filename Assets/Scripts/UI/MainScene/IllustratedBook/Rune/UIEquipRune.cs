@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIEquipRune : UIRuneForRunePage
 {
-    [SerializeField] private Image backgroundImage;
+    [SerializeField] private Image backgroundImage = null;
 
     public override void SetUIRune(RuneData newRuneData)
     {
