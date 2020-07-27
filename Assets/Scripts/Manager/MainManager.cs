@@ -5,15 +5,8 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager instance = null;
 
-    public UIAskGoToStore uiAskGoToStore = null;
-    public UIIllustratedBook uiIllustratedBook = null;
-    public UIStore uiStore = null;
-    public UIBattlefield uiBattlefield = null;
-    public UITopMenu uiTopMenu = null;
-    public UIMainMenu uiMainMenu = null;
-    public AskInGameContinue askInGameContinue = null;
-    [SerializeField] private GameObject connecting = null;
-    [SerializeField] private GameObject EnteringDungeon = null;
+    public BackCanvas backCanvas;
+    public FrontCanvas frontCanvas;
 
     void Awake()
     {
@@ -32,32 +25,9 @@ public class MainManager : MonoBehaviour
     {
         UIManager.Instance.SetCanEscape(true);
 
-        uiIllustratedBook.Initialize();
+        backCanvas.Initialize();
+        frontCanvas.Initialize();
+
         SaveManager.Instance.CheckHasInGameData();
-    }
-
-    public void ShowConnecting()
-    {
-        connecting.SetActive(true);
-    }
-
-    public void HideConnecting()
-    {
-        connecting.SetActive(false);
-    }
-
-    public void ShowAskInGameContinue()
-    {
-        askInGameContinue.gameObject.SetActive(true);
-    }
-
-    public void ShowEnteringDungeon()
-    {
-        EnteringDungeon.SetActive(true);
-    }
-
-    public void HideEnteringDungeon()
-    {
-        EnteringDungeon.SetActive(false);
     }
 }

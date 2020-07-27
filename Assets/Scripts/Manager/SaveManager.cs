@@ -121,7 +121,7 @@ public class SaveManager : MonoSingleton<SaveManager>
                    bool result = (bool)(response.ScriptData.GetBoolean("Result"));
                    if (result)
                    {
-                       MainManager.instance.ShowAskInGameContinue();
+                       MainManager.instance.frontCanvas.ShowAskInGameContinue();
                    }
                    else
                    {

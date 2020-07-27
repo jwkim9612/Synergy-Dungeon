@@ -109,7 +109,7 @@ public class RuneManager : MonoSingleton<RuneManager>
                 {
                     RemoveRuneToRuneList(runeId);
 
-                    var uiRunePage = MainManager.instance.uiIllustratedBook.uiRunePage;
+                    var uiRunePage = MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage;
 
                     if (isEquippedRune)
                     {

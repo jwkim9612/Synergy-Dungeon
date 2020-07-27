@@ -13,8 +13,8 @@ public class InGameManager : MonoBehaviour
     public GameState gameState;
 
     public DraggableCentral draggableCentral;
-    public BackCanvas backCanvas;
-    public FrontCanvas frontCanvas;
+    public InGameBackCanvas backCanvas;
+    public InGameFrontCanvas frontCanvas;
 
     void Awake()
     {
