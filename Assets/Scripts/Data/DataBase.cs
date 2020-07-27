@@ -15,6 +15,8 @@
 	public RunePurchaseableLevelDataSheet runePurchaseableLevelDataSheet;
 	public InGameEvent_ScenarioDataSheet inGameEvent_ScenarioDataSheet;
 	public RuneCombinableNumDataSheet runeCombinableNumDataSheet;
+	public ArtifactCombinationDataSheet artifactCombinationDataSheet;
+	public ArtifactPieceDataSheet artifactPieceDataSheet;
 
 	public void Initialize()
     {
@@ -32,5 +34,7 @@
 		inGameEvent_ScenarioDataSheet.Initialize();
 		runeCombinableNumDataSheet.Initialize();
 		inGameExpDataSheet.Initialize();
+		artifactCombinationDataSheet.Initialize();
+		artifactPieceDataSheet.Initialize();
 	}
 }

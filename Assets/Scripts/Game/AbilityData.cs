@@ -89,4 +89,18 @@ public class AbilityData
         Critical = runeExcelData.Critical;
         AttackSpeed = runeExcelData.AttackSpeed;
     }
+
+       public void SetAbilityData(ArtifactCombinationExcelData artifactCombinationExcelData)
+    {
+        Attack = artifactCombinationExcelData.Attack;
+        MagicalAttack = artifactCombinationExcelData.MagicalAttack;
+        Health = artifactCombinationExcelData.Health;
+        Defence = artifactCombinationExcelData.Defence;
+        MagicDefence = artifactCombinationExcelData.MagicDefence;
+        Shield = artifactCombinationExcelData.Shield;
+        Accuracy = artifactCombinationExcelData.Accuracy;
+        Evasion = artifactCombinationExcelData.Evasion;
+        Critical = artifactCombinationExcelData.Critical;
+        AttackSpeed = artifactCombinationExcelData.AttackSpeed;
+    }
 }

@@ -46393,7 +46393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectImage: {fileID: 564039299}
   remainingTurnText: {fileID: 1381731597}
-  toggle: {fileID: 0}
+  toggle: {fileID: 1589829398}
   uiAbilityEffectInfo: {fileID: 1995178996}
 --- !u!114 &1589829398
 MonoBehaviour:

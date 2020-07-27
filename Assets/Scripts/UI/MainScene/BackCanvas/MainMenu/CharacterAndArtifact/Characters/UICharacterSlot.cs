@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using geniikw.DataSheetLab;
 
 public class UICharacterSlot : MonoBehaviour
 {

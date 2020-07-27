@@ -4,5 +4,6 @@
     {
         RuneService.Initialize();
         PotionService.Initialize();
+        ArtifactService.Initialize();
     }
 }

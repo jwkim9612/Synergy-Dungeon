@@ -132,6 +132,7 @@ public class UIAbilityEffectList : MonoBehaviour
     public void AddAbilityEffect(PotionData potionData)
     {
         var uiabilityEffect = Instantiate(this.uiAbilityEffect, transform);
+        uiabilityEffect.Initialize();
         uiabilityEffect.SetabilityEffect(potionData);
         uiabilityEffect.OnShow();
 
