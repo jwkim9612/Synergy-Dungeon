@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class RuneManager : MonoSingleton<RuneManager>
 {
-
     public delegate void OnAddRuneDelegate(int runeId);
     public OnAddRuneDelegate OnAddRune { get; set; }
     public Dictionary<int, int> ownedRuneListById { get; set; }

@@ -37,17 +37,45 @@ public class ArtifactPieceDataSheet : ScriptableObject
         return false;
     }
 
-    public bool TryGetArtifactPieceImage(int artifactPieceId, out Sprite sprite)
+    public bool TryGetArtifactPieceOnImage(int artifactPieceId, out Sprite sprite)
     {
         sprite = null;
 
         if (TryGetArtifactPieceData(artifactPieceId, out var artifactPieceData))
         {
-            sprite = artifactPieceData.Image;
+            sprite = artifactPieceData.OnImage;
             return true;
         }
 
-        Debug.LogWarning($"Error TryGetArtifactPieceImage artifactPieceId:{artifactPieceId}");
+        Debug.LogWarning($"Error TryGetArtifactPieceOnImage artifactPieceId:{artifactPieceId}");
+        return false;
+    }
+
+    public bool TryGetArtifactPieceOffImage(int artifactPieceId, out Sprite sprite)
+    {
+        sprite = null;
+
+        if (TryGetArtifactPieceData(artifactPieceId, out var artifactPieceData))
+        {
+            sprite = artifactPieceData.OffImage;
+            return true;
+        }
+
+        Debug.LogWarning($"Error TryGetArtifactPieceOffImage artifactPieceId:{artifactPieceId}");
+        return false;
+    }
+
+    public bool TryGetCombinableArtifactsIdList(int artifactPieceId, out List<int> artifactsIdList)
+    {
+        artifactsIdList = null;
+
+        if (TryGetArtifactPieceData(artifactPieceId, out var artifactPieceData))
+        {
+            artifactsIdList = artifactPieceData.CombinableArtifactsList;
+            return true;
+        }
+
+        Debug.LogWarning($"Error TryGetCombinableArtifactsIdList artifactPieceId:{artifactPieceId}");
         return false;
     }
 
@@ -63,6 +91,31 @@ public class ArtifactPieceDataSheet : ScriptableObject
         }
 
         Debug.LogWarning($"Error TryGetArtifactPieceData artifactPieceId:{artifactPieceId}");
+        return false;
+    }
+
+    public bool TryGetArtifactPieceDatas(out Dictionary<int, ArtifactPieceData> artifactPieceDatas)
+    {
+        artifactPieceDatas = new Dictionary<int, ArtifactPieceData>(ArtifactPieceDatas);
+        if (artifactPieceDatas != null)
+        {
+            return true;
+        }
+
+        Debug.LogError("Error TryGetArtifactPieceDatas");
+        return false;
+    }
+
+    public bool TryGetArtifactPieceTotalNumber(out int totalNumber)
+    {
+        totalNumber = 0;
+        
+        if (TryGetArtifactPieceDatas(out var artifactPieceDatas))
+        {
+            totalNumber = artifactPieceDatas.Count;
+            return true;
+        }
+
         return false;
     }
 }

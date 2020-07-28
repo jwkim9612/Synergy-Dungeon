@@ -55,7 +55,7 @@ public class UICharacterSlot : MonoBehaviour
         }
         else
         {
-            Debug.Log("No tribe Image");
+            Debug.Log($"{characterData.Name} No tribe Image");
         }
     }
 

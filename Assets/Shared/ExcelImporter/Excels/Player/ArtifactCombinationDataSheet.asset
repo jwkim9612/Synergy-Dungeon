@@ -26,7 +26,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_MACHINE
   - Id: 2
     Name: "\uC5D8\uD504\uC758 \uD314\uCC0C"
     ArtifactPieceIds: 2,7,12
@@ -40,7 +40,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_BEAST
   - Id: 3
     Name: "\uBE5B\uB098\uB294 \uB3CC"
     ArtifactPieceIds: 3,13,13
@@ -54,7 +54,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4
     Name: "\uB4DC\uB798\uACE4\uC758 \uBAA9\uAC78\uC774"
     ArtifactPieceIds: 4,9,14
@@ -68,7 +68,7 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_BEAST
   - Id: 5
     Name: "\uBCF4\uC11D \uADC0\uAC78\uC774"
     ArtifactPieceIds: 5,10,15
@@ -82,10 +82,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_UNDEAD
   - Id: 6
     Name: "\uC5EC\uC655\uC758 \uAC00\uD638"
-    ArtifactPieceIds: 6,7,9,10
+    ArtifactPieceIds: 6,7,9
     Attack: 8
     MagicalAttack: 8
     Health: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_ELF
   - Id: 7
-    Name: 
-    ArtifactPieceIds: 6,7,11,12
+    Name: "\uD30C\uB780 \uBB3C\uD1B5"
+    ArtifactPieceIds: 6,7,11
     Attack: 0
     MagicalAttack: 0
     Health: 0
@@ -110,10 +110,10 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_ELEMENTAL
   - Id: 8
-    Name: 
-    ArtifactPieceIds: 9,10,14,15
+    Name: "\uBE68\uAC04 \uB9C8\uC6B0\uC2A4"
+    ArtifactPieceIds: 9,10,14
     Attack: 0
     MagicalAttack: 0
     Health: 0
@@ -124,4 +124,4 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    ImagePath: 
+    ImagePath: Images/Tribe/Logo_HUMAN

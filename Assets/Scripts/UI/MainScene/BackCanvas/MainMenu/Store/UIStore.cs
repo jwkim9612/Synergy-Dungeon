@@ -12,6 +12,7 @@ public class UIStore : MonoBehaviour
     public UIRandomPotionSalesList uiRandomPotionSalesList;
     public UIHeartSalesList uiHeartSalesList;
     public UIRuneOnSalesList uiRuneOnSalesList;
+    public UIRandomArtifactPieceSalesList uiRandomArtifactPieceSalesList;
 
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
@@ -21,6 +22,7 @@ public class UIStore : MonoBehaviour
     public UIAskPurchaseForRandomPotionGoods uiAskPurchaseForRandomPotionGoods;
     public UIAskPurchaseForRandomRuneGoods uiAskPurchaseForRandomRuneGoods;
     public UIAskPurchaseForRuneGoods uiAskPurchaseForRuneGoods;
+    public UIAskPurchaseForRandomArtifactPieceGoods uiAskPurchaseForRandomArtifactPieceGoods;
 
     public PotentialDraggableScrollView scrollView;
 
@@ -34,6 +36,8 @@ public class UIStore : MonoBehaviour
         uiRandomRuneSalesList.Initialize();
         uiRandomPotionSalesList.Initialize();
         uiHeartSalesList.Initialize();
+        uiRandomArtifactPieceSalesList.Initialize();
+
         uiObtainedRunesScreen.Initialize();
         purchaseCompletedFloatingText.Initialize();
         soldOutFloatingText.Initialize();
@@ -42,6 +46,7 @@ public class UIStore : MonoBehaviour
         uiAskPurchaseForRandomPotionGoods.Initialize();
         uiAskPurchaseForRandomRuneGoods.Initialize();
         uiAskPurchaseForRuneGoods.Initialize();
+        uiAskPurchaseForRandomArtifactPieceGoods.Initialize();
 
         SetCheatOnGoldButton();
         SetCheatOnDiamondButton();

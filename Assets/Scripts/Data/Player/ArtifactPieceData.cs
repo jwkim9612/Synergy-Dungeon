@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ArtifactPieceData
 {
@@ -8,7 +9,10 @@ public class ArtifactPieceData
         Name = artifactPieceExcelData.Name;
         DropProbability = artifactPieceExcelData.DropProbability;
 
-        Image = Resources.Load<Sprite>(artifactPieceExcelData.ImagePath);
+        OnImage = Resources.Load<Sprite>(artifactPieceExcelData.OnImagePath);
+        OffImage = Resources.Load<Sprite>(artifactPieceExcelData.OffImagePath);
+
+        InitializeCombinableArtifactsList();
     }
 
     public ArtifactPieceData(ArtifactPieceData artifactPieceData)
@@ -16,11 +20,32 @@ public class ArtifactPieceData
         Id = artifactPieceData.Id;
         Name = artifactPieceData.Name;
         DropProbability = artifactPieceData.DropProbability;
-        Image = artifactPieceData.Image;
+        OnImage = artifactPieceData.OnImage;
+        OffImage = artifactPieceData.OffImage;
+        CombinableArtifactsList = artifactPieceData.CombinableArtifactsList;
+    }
+
+    private void InitializeCombinableArtifactsList()
+    {
+        CombinableArtifactsList = new List<int>();
+
+        var artifactCombinationDataSheet = DataBase.Instance.artifactCombinationDataSheet;
+        if (artifactCombinationDataSheet.TryGetArtifactCombinationDatas(out var artifactCombinationDatas))
+        {
+            foreach (var artifactCombinationData in artifactCombinationDatas)
+            {
+                if(artifactCombinationData.Value.ArtifactPieceIdList.Contains(this.Id))
+                {
+                    CombinableArtifactsList.Add(artifactCombinationData.Value.Id);
+                }
+            }
+        }
     }
 
     public int Id;
     public string Name;
     public int DropProbability;
-    public Sprite Image;
+    public Sprite OffImage;
+    public Sprite OnImage;
+    public List<int> CombinableArtifactsList;
 }

@@ -216,6 +216,50 @@ public class GoodsManager : MonoSingleton<GoodsManager>
            });
     }
 
+    public void PurchaseRandomArtifactPiece(int goodsId, int artifactPieceTotalNumber)
+    {
+        MainManager.instance.backCanvas.uiMainMenu.uiStore.ShowBeingPurchase(); // 구매중 팝업 띄우기.
+
+        new LogEventRequest()
+           .SetEventKey("PurchaseRandomArtifactPiece")
+           .SetEventAttribute("GoodsId", goodsId)
+           .SetEventAttribute("TotalNumber", artifactPieceTotalNumber)
+           .Send((response) =>
+           {
+               if (!response.HasErrors)
+               {
+                   bool result = (bool)(response.ScriptData.GetBoolean("Result"));
+                   if (result)
+                   {
+                       rewardAmount = (int)(response.ScriptData.GetInt("RewardAmount"));
+
+                       string strRewardCurrency = (response.ScriptData.GetString("RewardCurrency"));
+                       RewardCurrency rewardCurrency = (RewardCurrency)Enum.Parse(typeof(RewardCurrency), strRewardCurrency);
+
+                       rewardId = (int)(response.ScriptData.GetInt("RewardId"));
+
+                       StartCoroutine(Co_GetItems(rewardCurrency));
+                   }
+                   else
+                   {
+                       string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
+                       PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
+
+                       MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
+                       MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                       UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
+                   }
+               }
+               else
+               {
+                   MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
+                   // 서버 문제로 구매 실패 팝업 띄우기.
+                   Debug.Log("Error BuyTest");
+                   Debug.Log(response.Errors.JSON);
+               }
+           });
+    }
+
     // 구매한 아이템을 플레이어 인벤토리에 넣어주는 함수
     private IEnumerator Co_GetItems(RewardCurrency rewardCurrency)
     {
@@ -225,11 +269,11 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase(); // 구매중 팝업 없애기.
         MainManager.instance.backCanvas.uiMainMenu.uiStore.PlayPurchaseCompletedFloatingText(); // 구매 완료! 띄우기
 
-
         switch (rewardCurrency)
         {
+            case RewardCurrency.None:
+                break;
             case RewardCurrency.Gold:
-                //PlayerDataManager.Instance.LoadPlayerData();
                 break;
             case RewardCurrency.Rune:
                 RuneManager.Instance.AddRuneToRuneList(rewardId);
@@ -240,8 +284,24 @@ public class GoodsManager : MonoSingleton<GoodsManager>
             case RewardCurrency.RandomPotion:
                 SetPotionAndShowObtainedPotion();
                 break;
+            case RewardCurrency.Relic:
+                break;
+            case RewardCurrency.Artifact:
+                break;
+            case RewardCurrency.Coin:
+                break;
+            case RewardCurrency.Status:
+                break;
+            case RewardCurrency.RandomArtifactPiece:
+                ArtifactManager.Instance.AddArtifactPiece(rewardId);
+                Debug.Log($"Reward Id = {rewardId}");
+                break;
             case RewardCurrency.Heart:
                 MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
+                break;
+            case RewardCurrency.Nothing:
+                break;
+            default:
                 break;
         }
     }

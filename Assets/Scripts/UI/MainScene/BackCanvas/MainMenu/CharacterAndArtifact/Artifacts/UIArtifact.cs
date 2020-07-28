@@ -6,16 +6,28 @@ public class UIArtifact : MonoBehaviour
     [SerializeField] private Button showInfoButton;
     [SerializeField] private Image artifactImage;
 
-    public void SetArtifact(int id)
+    public void SetArtifact(int id, bool isOwned)
     {
         var artifactPieceDataSheet = DataBase.Instance.artifactPieceDataSheet;
-        if (artifactPieceDataSheet.TryGetArtifactPieceImage(id, out var image))
+
+        if(isOwned)
         {
-            artifactImage.sprite = image;
+            if (artifactPieceDataSheet.TryGetArtifactPieceOnImage(id, out var image))
+            {
+                artifactImage.sprite = image;
+            }
         }
-
-
+        else
+        {
+            if (artifactPieceDataSheet.TryGetArtifactPieceOffImage(id, out var image))
+            {
+                artifactImage.sprite = image;
+            }
+        }
     }
 
-
+    public void OnHide()
+    {
+        gameObject.SetActive(false);
+    }
 }

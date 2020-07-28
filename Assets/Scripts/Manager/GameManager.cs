@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         /////////// 게임스파크에서 초당 10개 이상의 요청을 받을 시 오류가 발생하기 때문에 1초 텀을 두었음.
         yield return new WaitForSeconds(1.0f);
+        ArtifactManager.Instance.Initialize();
+        yield return new WaitForSeconds(1.0f);
         RuneManager.Instance.Initialize();
         yield return new WaitForSeconds(1.0f);
         PotionManager.Instance.Initialize();

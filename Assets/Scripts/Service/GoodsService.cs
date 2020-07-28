@@ -19,6 +19,7 @@ public class GoodsService : MonoBehaviour
     //public const int SECOND_GOLD_SALES_ID = 2;
     //public const int THIRD_GOLD_SALES_ID = 3;
     public const int RANDOM_POTION_SALES_ID = 9;
+    public const int RANDOM_ARTIFACTPIECE_SALES_ID = 16;
 
     public static readonly List<int> GOLD_SALES_ID_LIST =
         new List<int>

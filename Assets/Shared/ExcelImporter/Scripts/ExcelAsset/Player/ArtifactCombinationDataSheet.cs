@@ -22,4 +22,16 @@ public class ArtifactCombinationDataSheet : ScriptableObject
             ArtifactCombinationDatas.Add(artifactCombinationData.Id, artifactCombinationData);
         }
     }
+
+    public bool TryGetArtifactCombinationDatas(out Dictionary<int, ArtifactCombinationData> artifactCombinationDatas)
+    {
+        artifactCombinationDatas = new Dictionary<int, ArtifactCombinationData>(ArtifactCombinationDatas);
+        if (artifactCombinationDatas != null)
+        {
+            return true;
+        }
+
+        Debug.LogError("Error TryGetArtifactCombinationDatas");
+        return false;
+    }
 }

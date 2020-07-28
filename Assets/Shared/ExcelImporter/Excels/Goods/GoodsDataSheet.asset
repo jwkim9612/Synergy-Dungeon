@@ -119,12 +119,12 @@ MonoBehaviour:
     RewardAmount: 0
     ImagePath: 
   - Id: 16
-    Name: "\uC544\uD2F0\uD329\uD2B8 \uBF51\uAE30 1\uD68C"
-    PurchaseCurrency: 0
-    PurchasePrice: 0
-    RewardCurrency: 0
-    RewardAmount: 0
-    ImagePath: 
+    Name: "\uC544\uD2F0\uD329\uD2B8 \uC870\uAC01 \uBF51\uAE30 1\uD68C"
+    PurchaseCurrency: 2
+    PurchasePrice: 500
+    RewardCurrency: 9
+    RewardAmount: 1
+    ImagePath: Images/Goods/RandomPotion
   - Id: 17
     Name: "\uD328\uD0A4\uC9C0 \uD558\uAE09"
     PurchaseCurrency: 0

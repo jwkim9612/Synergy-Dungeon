@@ -16,60 +16,75 @@ MonoBehaviour:
   - Id: 1
     Name: "\uC81C\uB828\uB41C \uCCA0"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Archer_On
+    OffImagePath: Images/Origin/Archer_Off
   - Id: 2
     Name: "\uC5EA\uD504\uC232\uC758 \uB098\uBB47\uAC00\uC9C0"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Thief_On
+    OffImagePath: Images/Origin/Thief_Off
   - Id: 3
     Name: "\uBE5B\uB098\uB294 \uAC00\uB8E8"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Wizard_On
+    OffImagePath: Images/Origin/Wizard_Off
   - Id: 4
     Name: "\uB4DC\uB798\uACE4\uC758 \uBE44\uB298"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Paladin_On
+    OffImagePath: Images/Origin/Paladin_Off
   - Id: 5
     Name: "\uB9C8\uB825\uC774 \uAE43\uB4E0 \uBCF4\uC11D"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Warrior_On
+    OffImagePath: Images/Origin/Warrior_Off
   - Id: 6
     Name: "\uAE30\uAC00\uB9C9\uD78C \uC300\uAD6D\uC218"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Archer_On
+    OffImagePath: Images/Origin/Archer_Off
   - Id: 7
     Name: "\uB728\uAC70\uC6B4 \uC0C8\uC6B0"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Thief_On
+    OffImagePath: Images/Origin/Thief_Off
   - Id: 8
     Name: "\uBB34\uC801\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Wizard_On
+    OffImagePath: Images/Origin/Wizard_Off
   - Id: 9
     Name: "\uC0E4\uD504\uC288\uD130\uC758 \uD65C"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Paladin_On
+    OffImagePath: Images/Origin/Paladin_Off
   - Id: 10
     Name: "\uB9C8\uB140\uC758 \uC190\uD1B1"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Warrior_On
+    OffImagePath: Images/Origin/Warrior_Off
   - Id: 11
     Name: "\uACF5\uACA9\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Archer_On
+    OffImagePath: Images/Origin/Archer_Off
   - Id: 12
     Name: "\uB9C8\uBC95\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Thief_On
+    OffImagePath: Images/Origin/Thief_Off
   - Id: 13
     Name: "\uC0DD\uBA85\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Wizard_On
+    OffImagePath: Images/Origin/Wizard_Off
   - Id: 14
     Name: "\uBC29\uC5B4\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Paladin_On
+    OffImagePath: Images/Origin/Paladin_Off
   - Id: 15
     Name: "\uC800\uD56D\uC758 \uB3CC"
     DropProbability: 10000
-    ImagePath: 
+    OnImagePath: Images/Origin/Warrior_On
+    OffImagePath: Images/Origin/Warrior_Off
