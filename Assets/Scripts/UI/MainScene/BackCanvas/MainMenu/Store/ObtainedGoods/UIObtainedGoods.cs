@@ -5,7 +5,6 @@ public class UIObtainedGoods : MonoBehaviour
 {
     [SerializeField] private Image goodsImage = null;
     [SerializeField] private Text goodsName = null;
-    [SerializeField] protected Text goodsGrade = null;
 
     public virtual void SetUIObtainedGoods(int Id)
     {

@@ -1,5 +1,10 @@
-﻿public class UIObtainedRune : UIObtainedGoods
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public class UIObtainedRune : UIObtainedGoods
 {
+    [SerializeField] protected Text goodsGrade = null;
+
     public override void SetUIObtainedGoods(int runeId)
     {
         var runeDataSheet = DataBase.Instance.runeDataSheet;

@@ -17,6 +17,7 @@ public class UIStore : MonoBehaviour
     public UIObtainedRunesScreen uiObtainedRunesScreen;
     public UIObtainedRuneScreen uiObtainedRuneScreen;
     public UIObtainedPotionScreen uiObtainedPotionScreen;
+    public UIObtainedRandomArtifactPieceScreen uiObtainedRandomArtifactPieceScreen;
 
     public UIAskPurchaseForAmountRequiredGoods uiAskPurchaseForAmountRequiredGoods;
     public UIAskPurchaseForRandomPotionGoods uiAskPurchaseForRandomPotionGoods;

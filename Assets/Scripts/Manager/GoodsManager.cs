@@ -279,7 +279,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 RuneManager.Instance.AddRuneToRuneList(rewardId);
                 break;
             case RewardCurrency.RandomRune:
-                AddRunesAndShowObtainedRunes();
+                AddRunesAndShowObtainScreen();
                 break;
             case RewardCurrency.RandomPotion:
                 SetPotionAndShowObtainedPotion();
@@ -293,8 +293,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
             case RewardCurrency.Status:
                 break;
             case RewardCurrency.RandomArtifactPiece:
-                ArtifactManager.Instance.AddArtifactPiece(rewardId);
-                Debug.Log($"Reward Id = {rewardId}");
+                AddArtifactPieceAndShowObtainScreen();
                 break;
             case RewardCurrency.Heart:
                 MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
@@ -318,7 +317,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
         randomlyPickedRuneGradeList = runeGrades;
     }
 
-    private void AddRunesAndShowObtainedRunes()
+    private void AddRunesAndShowObtainScreen()
     {
         List<int> obtainedRandomIds = new List<int>();
 
@@ -340,6 +339,14 @@ public class GoodsManager : MonoSingleton<GoodsManager>
             MainManager.instance.backCanvas.uiMainMenu.uiStore.uiObtainedRunesScreen.SetUIObtainedRuneList(obtainedRandomIds);
             UIManager.Instance.ShowNew(MainManager.instance.backCanvas.uiMainMenu.uiStore.uiObtainedRunesScreen);
         }
+    }
+
+    private void AddArtifactPieceAndShowObtainScreen()
+    {
+        ArtifactManager.Instance.AddArtifactPiece(rewardId);
+
+        MainManager.instance.backCanvas.uiMainMenu.uiStore.uiObtainedRandomArtifactPieceScreen.SetUIObtainedScreen(rewardId);
+        UIManager.Instance.ShowNew(MainManager.instance.backCanvas.uiMainMenu.uiStore.uiObtainedRandomArtifactPieceScreen);
     }
 
     private void SetPotionAndShowObtainedPotion()

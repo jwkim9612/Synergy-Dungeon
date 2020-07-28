@@ -7,7 +7,9 @@ public class UICharacterSlot : MonoBehaviour
     [SerializeField] private Text characterName = null;
     [SerializeField] private Image characterImage = null;
     [SerializeField] private Image tribeImage = null;
+    [SerializeField] private Text tribeText = null;
     [SerializeField] private Image originImage = null;
+    [SerializeField] private Text originText = null;
     [SerializeField] private Image costBorder = null;
     
     public CharacterData characterData { get; set; }
@@ -19,7 +21,9 @@ public class UICharacterSlot : MonoBehaviour
         SetName(characterData.Name);
         SetCharacterImage(characterData.Image);
         SetTribeImage(characterData.TribeData.Image);
+        SetTribeText(characterData.Tribe);
         SetOriginImage(characterData.OriginData.Image);
+        SetOriginText(characterData.Origin);
         SetTierBorder(CardService.GetColorByTier(characterData.Tier));
     }
 
@@ -59,6 +63,12 @@ public class UICharacterSlot : MonoBehaviour
         }
     }
 
+    public void SetTribeText(Tribe tribe)
+    {
+        var tribeStr = SynergyService.GetNameByTribe(tribe);
+        tribeText.text = tribeStr;
+    }
+
     public void SetOriginImage(Sprite sprite)
     {
         if (sprite != null)
@@ -69,6 +79,12 @@ public class UICharacterSlot : MonoBehaviour
         {
             Debug.Log("No origin Image");
         }
+    }
+
+    public void SetOriginText(Origin origin)
+    {
+        var originStr = SynergyService.GetNameByOrigin(origin);
+        originText.text = originStr;
     }
 
     public void SetTierBorder(Color color)

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UIArtifactInfo : UIControl
+public class UIArtifactPieceInfo : UIControl
 {
     [SerializeField] private Image artifactImage = null;
     [SerializeField] private Text artifactName = null;

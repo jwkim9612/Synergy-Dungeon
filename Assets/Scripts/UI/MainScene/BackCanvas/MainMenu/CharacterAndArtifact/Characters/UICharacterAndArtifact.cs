@@ -4,15 +4,15 @@ public class UICharacterAndArtifact : MonoBehaviour
 {
     public UIDetailedSettings uiDetailedSettings;
     public UICharacterList uiCharacterList;
-    public UIArtifactStatus uiArtifactStatus;
-    public UIArtifactList uiArtifactList;
-    public UIArtifactInfo uiArtifactInfo;
+    public UIArtifactPieceStatus uiArtifactPieceStatus;
+    public UIArtifactPieceList uiArtifactPieceList;
+    public UIArtifactPieceInfo uiArtifactPieceInfo;
 
     public void Initialize()
     {
         uiDetailedSettings.Initialize();
         uiCharacterList.Initialize();
-        uiArtifactStatus.Initialize();
-        uiArtifactList.Initialize();
+        uiArtifactPieceStatus.Initialize();
+        uiArtifactPieceList.Initialize();
     }
 }

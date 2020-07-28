@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UIArtifact : MonoBehaviour
+public class UIArtifactPiece : MonoBehaviour
 {
     [SerializeField] private Button showInfoButton;
     [SerializeField] private Image artifactImage;
+    public int id;
 
-    public void SetArtifact(int id, bool isOwned)
+    public void SetArtifactPiece(int id, bool isOwned)
     {
+        this.id = id;
+
         var artifactPieceDataSheet = DataBase.Instance.artifactPieceDataSheet;
 
         if(isOwned)
@@ -23,6 +26,15 @@ public class UIArtifact : MonoBehaviour
             {
                 artifactImage.sprite = image;
             }
+        }
+    }
+
+    public void SetOn()
+    {
+        var artifactPieceDataSheet = DataBase.Instance.artifactPieceDataSheet;
+        if (artifactPieceDataSheet.TryGetArtifactPieceOnImage(id, out var image))
+        {
+            artifactImage.sprite = image;
         }
     }
 

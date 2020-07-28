@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ArtifactManager : MonoSingleton<ArtifactManager>
 {
+    public delegate void OnAddArtifactPieceDelegate(int artifactPieceId);
+    public OnAddArtifactPieceDelegate OnAddArtifactPiece { get; set; }
     public List<int> ownedPieceIdList { get; set; }
     public int pieceTotalNumber { get; set; }
 
@@ -51,6 +53,10 @@ public class ArtifactManager : MonoSingleton<ArtifactManager>
         }
 
         ownedPieceIdList.Add(id);
+        OnAddArtifactPiece(id);
+
+        var uiArtifactPieceStatus = MainManager.instance.backCanvas.uiMainMenu.uiCharacterAndArtifact.uiArtifactPieceStatus;
+        uiArtifactPieceStatus.UpdateUnlockedArtifactPieceNumText();
     }
 
     public void LoadOwnedArtifactPieceData()
