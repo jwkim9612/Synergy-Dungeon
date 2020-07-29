@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77b902c9901f49048a6544081af19b25, type: 3}
-  m_Name: ArtifactCombinationDataSheet
+  m_Name: ArtifactDataSheet
   m_EditorClassIdentifier: 
-  ArtifactCombinationExcelDatas:
+  ArtifactExcelDatas:
   - Id: 1
     Name: "\uC740\uBE5B \uBC18\uC9C0"
     ArtifactPieceIds: 1,6,11
@@ -43,7 +43,7 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_BEAST
   - Id: 3
     Name: "\uBE5B\uB098\uB294 \uB3CC"
-    ArtifactPieceIds: 3,13,13
+    ArtifactPieceIds: 3,8,13
     Attack: 0
     MagicalAttack: 0
     Health: 15

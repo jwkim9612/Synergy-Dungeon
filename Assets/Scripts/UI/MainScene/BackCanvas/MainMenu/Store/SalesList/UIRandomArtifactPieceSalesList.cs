@@ -7,6 +7,9 @@ public class UIRandomArtifactPieceSalesList : MonoBehaviour
     public void Initialize()
     {
         SetUIRandomArtifactPieceGoods();
+        UpdateGoods();
+
+        ArtifactManager.Instance.OnArtifactPieceChanged += UpdateGoods;
     }
 
     private void SetUIRandomArtifactPieceGoods()
@@ -19,6 +22,25 @@ public class UIRandomArtifactPieceSalesList : MonoBehaviour
         if (goodsDataSheet.TryGetGoodsData(randomArtifactPieceSalesId, out var goodsData))
         {
             uiRandomArtifactPieceGoods.SetUIGoods(goodsData, randomArtifactPieceSalesId);
+        }
+    }
+
+    public void UpdateGoods()
+    {
+        var pieceTotalNumber = ArtifactManager.Instance.pieceTotalNumber;
+        var unlockedArtifactPieceNum = ArtifactManager.Instance.ownedPieceIdList.Count;
+
+        if (pieceTotalNumber == unlockedArtifactPieceNum)
+        {
+            uiRandomArtifactPieceGoods.Lock();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(ArtifactManager.IsAlive)
+        {
+            ArtifactManager.Instance.OnArtifactPieceChanged -= UpdateGoods;
         }
     }
 }

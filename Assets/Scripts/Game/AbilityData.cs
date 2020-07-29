@@ -2,16 +2,16 @@
 
 public class AbilityData
 {
-    public long Attack;
-    public long MagicalAttack;
-    public long Health;
-    public long Defence;
-    public long MagicDefence;
-    public long Shield;
-    public long Accuracy;
-    public long Evasion;
-    public long Critical;
-    public long AttackSpeed;
+    public int Attack;
+    public int MagicalAttack;
+    public int Health;
+    public int Defence;
+    public int MagicDefence;
+    public int Shield;
+    public int Accuracy;
+    public int Evasion;
+    public int Critical;
+    public int AttackSpeed;
 
     public static AbilityData operator +(AbilityData ability1, AbilityData ability2)
     {
@@ -90,17 +90,17 @@ public class AbilityData
         AttackSpeed = runeExcelData.AttackSpeed;
     }
 
-       public void SetAbilityData(ArtifactCombinationExcelData artifactCombinationExcelData)
+       public void SetAbilityData(ArtifactExcelData artifactExcelData)
     {
-        Attack = artifactCombinationExcelData.Attack;
-        MagicalAttack = artifactCombinationExcelData.MagicalAttack;
-        Health = artifactCombinationExcelData.Health;
-        Defence = artifactCombinationExcelData.Defence;
-        MagicDefence = artifactCombinationExcelData.MagicDefence;
-        Shield = artifactCombinationExcelData.Shield;
-        Accuracy = artifactCombinationExcelData.Accuracy;
-        Evasion = artifactCombinationExcelData.Evasion;
-        Critical = artifactCombinationExcelData.Critical;
-        AttackSpeed = artifactCombinationExcelData.AttackSpeed;
+        Attack = artifactExcelData.Attack;
+        MagicalAttack = artifactExcelData.MagicalAttack;
+        Health = artifactExcelData.Health;
+        Defence = artifactExcelData.Defence;
+        MagicDefence = artifactExcelData.MagicDefence;
+        Shield = artifactExcelData.Shield;
+        Accuracy = artifactExcelData.Accuracy;
+        Evasion = artifactExcelData.Evasion;
+        Critical = artifactExcelData.Critical;
+        AttackSpeed = artifactExcelData.AttackSpeed;
     }
 }

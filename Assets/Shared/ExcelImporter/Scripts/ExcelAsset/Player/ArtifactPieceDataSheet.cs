@@ -65,13 +65,13 @@ public class ArtifactPieceDataSheet : ScriptableObject
         return false;
     }
 
-    public bool TryGetCombinableArtifactsIdList(int artifactPieceId, out List<int> artifactsIdList)
+    public bool TryGetCombinableArtifactIdList(int artifactPieceId, out List<int> artifactIdList)
     {
-        artifactsIdList = null;
+        artifactIdList = null;
 
         if (TryGetArtifactPieceData(artifactPieceId, out var artifactPieceData))
         {
-            artifactsIdList = artifactPieceData.CombinableArtifactsList;
+            artifactIdList = artifactPieceData.CombinableArtifactList;
             return true;
         }
 

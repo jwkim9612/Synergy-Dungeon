@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ArtifactManager : MonoSingleton<ArtifactManager>
 {
+    public delegate void OnArtifactPieceChangedDelegate();
     public delegate void OnAddArtifactPieceDelegate(int artifactPieceId);
+    public OnArtifactPieceChangedDelegate OnArtifactPieceChanged { get; set; }
     public OnAddArtifactPieceDelegate OnAddArtifactPiece { get; set; }
     public List<int> ownedPieceIdList { get; set; }
     public int pieceTotalNumber { get; set; }
@@ -55,8 +57,7 @@ public class ArtifactManager : MonoSingleton<ArtifactManager>
         ownedPieceIdList.Add(id);
         OnAddArtifactPiece(id);
 
-        var uiArtifactPieceStatus = MainManager.instance.backCanvas.uiMainMenu.uiCharacterAndArtifact.uiArtifactPieceStatus;
-        uiArtifactPieceStatus.UpdateUnlockedArtifactPieceNumText();
+        OnArtifactPieceChanged?.Invoke();
     }
 
     public void LoadOwnedArtifactPieceData()
@@ -77,6 +78,8 @@ public class ArtifactManager : MonoSingleton<ArtifactManager>
                         {
                             ownedPieceIdList.Add(ownedArtifactId);
                         }
+
+                        OnArtifactPieceChanged?.Invoke();
                     }
                     else
                     {
@@ -108,5 +111,17 @@ public class ArtifactManager : MonoSingleton<ArtifactManager>
                     Debug.Log(response.Errors.JSON);
                 }
             });
+    }
+
+    public bool IsOwnedArtifact(int artifactId)
+    {
+        if(ownedPieceIdList.Contains(artifactId))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

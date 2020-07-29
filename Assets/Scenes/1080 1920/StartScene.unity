@@ -3060,8 +3060,7 @@ MonoBehaviour:
     type: 2}
   runeCombinableNumDataSheet: {fileID: 11400000, guid: 517f0de685071d64a802adc89cc51fae,
     type: 2}
-  artifactCombinationDataSheet: {fileID: 11400000, guid: 6e5aa73e3981dde429afc4cef5b11bdc,
-    type: 2}
+  artifactDataSheet: {fileID: 11400000, guid: c2d653ca0d8c31e44b5d2126f6360123, type: 2}
   artifactPieceDataSheet: {fileID: 11400000, guid: 22887b496a03e564a8ec77a8a94ab86d,
     type: 2}
 --- !u!4 &1720778336

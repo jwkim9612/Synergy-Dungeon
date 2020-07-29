@@ -1,10 +1,11 @@
 ﻿using System;
 
 [Serializable]
-public class CharacterAbilityData
+public class ArtifactExcelData
 {
     public int Id;
     public string Name;
+    public string ArtifactPieceIds;
     public int Attack;
     public int MagicalAttack;
     public int Health;
@@ -15,4 +16,5 @@ public class CharacterAbilityData
     public int Evasion;
     public int Critical;
     public int AttackSpeed;
+    public string ImagePath;
 }

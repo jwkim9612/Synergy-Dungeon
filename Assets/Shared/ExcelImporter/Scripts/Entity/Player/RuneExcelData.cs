@@ -8,16 +8,16 @@ public class RuneExcelData
     public int SocketPosition;
     public RuneGrade Grade;
     public int Prob;
-    public long Attack;
-    public long MagicalAttack;
-    public long Health;
-    public long Defence;
-    public long MagicDefence;
-    public long Shield;
-    public long Accuracy;
-    public long Evasion;
-    public long Critical;
-    public long AttackSpeed;
+    public int Attack;
+    public int MagicalAttack;
+    public int Health;
+    public int Defence;
+    public int MagicDefence;
+    public int Shield;
+    public int Accuracy;
+    public int Evasion;
+    public int Critical;
+    public int AttackSpeed;
     public string Description;
     public string ImagePath;
 }

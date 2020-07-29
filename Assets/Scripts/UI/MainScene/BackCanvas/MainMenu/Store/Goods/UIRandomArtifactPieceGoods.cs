@@ -1,5 +1,10 @@
-﻿public class UIRandomArtifactPieceGoods : UIGoods
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public class UIRandomArtifactPieceGoods : UIGoods
 {
+    [SerializeField] private Image lockImage = null;
+
     public void SetUIGoods(GoodsData goodsData, int goodsId)
     {
         SetGoodsName(goodsData.Name);
@@ -13,5 +18,11 @@
             uiAskPurchaseForRandomArtifactPieceGoods.SetUIAskPurchase(goodsData, goodsId);
             UIManager.Instance.ShowNew(uiAskPurchaseForRandomArtifactPieceGoods);
         });
+    }
+
+    public void Lock()
+    {
+        showAskPurchaseButton.interactable = false;
+        lockImage.gameObject.SetActive(true);
     }
 }

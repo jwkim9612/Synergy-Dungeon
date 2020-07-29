@@ -10,6 +10,8 @@ public class UIArtifactPieceStatus : MonoBehaviour
     {
         SetArtifactsNumText();
         UpdateUnlockedArtifactPieceNumText();
+
+        ArtifactManager.Instance.OnArtifactPieceChanged += UpdateUnlockedArtifactPieceNumText;
     }
 
     private void SetArtifactsNumText()
@@ -21,5 +23,13 @@ public class UIArtifactPieceStatus : MonoBehaviour
     {
         var unlockedArtifactPieceNum = ArtifactManager.Instance.ownedPieceIdList.Count;
         unlockedArtifactPieceNumText.text = $"해금된 아티팩트 조각 갯수 : {unlockedArtifactPieceNum}";
+    }
+
+    private void OnDestroy()
+    {
+        if (ArtifactManager.IsAlive)
+        {
+            ArtifactManager.Instance.OnArtifactPieceChanged -= UpdateUnlockedArtifactPieceNumText;
+        }
     }
 }

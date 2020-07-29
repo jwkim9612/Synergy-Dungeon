@@ -1,19 +1,19 @@
-﻿using Boo.Lang;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class ArtifactCombinationData
+public class ArtifactData
 {
-    public ArtifactCombinationData(ArtifactCombinationExcelData artifactCombinationExcelData)
+    public ArtifactData(ArtifactExcelData artifactExcelData)
     {
-        Id = artifactCombinationExcelData.Id;
-        Name = artifactCombinationExcelData.Name;
-        ArtifactPieceIds = artifactCombinationExcelData.ArtifactPieceIds;
+        Id = artifactExcelData.Id;
+        Name = artifactExcelData.Name;
+        ArtifactPieceIds = artifactExcelData.ArtifactPieceIds;
         InitializeEnemyIds();
 
         AbilityData = new AbilityData();
-        AbilityData.SetAbilityData(artifactCombinationExcelData);
+        AbilityData.SetAbilityData(artifactExcelData);
 
-        Image = Resources.Load<Sprite>(artifactCombinationExcelData.ImagePath);
+        Image = Resources.Load<Sprite>(artifactExcelData.ImagePath);
     }
 
     private void InitializeEnemyIds()
@@ -23,7 +23,7 @@ public class ArtifactCombinationData
         string[] ArtifactPieceIdsStr = ArtifactPieceIds.Split(',');
         foreach (var ArtifactPieceId in ArtifactPieceIdsStr)
         {
-            ArtifactPieceIdList.Add(ArtifactPieceId[0] - '0');
+            ArtifactPieceIdList.Add(int.Parse(ArtifactPieceId));
         }
     }
 

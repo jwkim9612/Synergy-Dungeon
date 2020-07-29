@@ -1,4 +1,5 @@
-﻿using Boo.Lang;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +39,7 @@ public class UIArtifactPieceList : MonoBehaviour
         }
 
         uiArtifactPiece.OnHide();
+        Sort();
     }
 
     public void UpdateArtifactPiece(int id)
@@ -45,11 +47,22 @@ public class UIArtifactPieceList : MonoBehaviour
         var ownedArtifactPieceIdList = ArtifactManager.Instance.ownedPieceIdList;
         if (ownedArtifactPieceIdList.Contains(id))
         {
-            uiArtifactPieceList.Find(x => x.id == id, out var uiArtifactPiece);
+            var uiArtifactPiece = uiArtifactPieceList.Find(x => x.id == id);
             if(uiArtifactPiece != null)
             {
                 uiArtifactPiece.SetOn();
+                Sort();
             }
+        }
+    }
+
+    private void Sort()
+    {
+        uiArtifactPieceList = uiArtifactPieceList.OrderByDescending(x => x.isOwned).ThenBy(x => x.id).ToList();
+
+        for (int i = 0; i < uiArtifactPieceList.Count; i++)
+        {
+            uiArtifactPieceList[i].gameObject.transform.SetSiblingIndex(i);
         }
     }
 }

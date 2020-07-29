@@ -22,21 +22,21 @@ public class ArtifactPieceData
         DropProbability = artifactPieceData.DropProbability;
         OnImage = artifactPieceData.OnImage;
         OffImage = artifactPieceData.OffImage;
-        CombinableArtifactsList = artifactPieceData.CombinableArtifactsList;
+        CombinableArtifactList = artifactPieceData.CombinableArtifactList;
     }
 
     private void InitializeCombinableArtifactsList()
     {
-        CombinableArtifactsList = new List<int>();
+        CombinableArtifactList = new List<int>();
 
-        var artifactCombinationDataSheet = DataBase.Instance.artifactCombinationDataSheet;
-        if (artifactCombinationDataSheet.TryGetArtifactCombinationDatas(out var artifactCombinationDatas))
+        var artifactDataSheet = DataBase.Instance.artifactDataSheet;
+        if (artifactDataSheet.TryGetArtifactDatas(out var artifactDatas))
         {
-            foreach (var artifactCombinationData in artifactCombinationDatas)
+            foreach (var artifactData in artifactDatas)
             {
-                if(artifactCombinationData.Value.ArtifactPieceIdList.Contains(this.Id))
+                if (artifactData.Value.ArtifactPieceIdList.Contains(this.Id))
                 {
-                    CombinableArtifactsList.Add(artifactCombinationData.Value.Id);
+                    CombinableArtifactList.Add(artifactData.Value.Id);
                 }
             }
         }
@@ -47,5 +47,5 @@ public class ArtifactPieceData
     public int DropProbability;
     public Sprite OffImage;
     public Sprite OnImage;
-    public List<int> CombinableArtifactsList;
+    public List<int> CombinableArtifactList;
 }
