@@ -26,7 +26,16 @@ public class UIInGameCharacterInfo : MonoBehaviour
         var characterDataSheet = DataBase.Instance.characterDataSheet;
         if(characterDataSheet.TryGetCharacterData(uiCharacter.characterInfo.id, out var characterData))
         {
-            SetCharacterImage(characterData.HeadImage);
+            // 후에 변경 필요
+            if(characterData.HeadImage == null)
+            {
+                SetCharacterImage(characterData.Image);
+            }
+            else
+            {
+                SetCharacterImage(characterData.HeadImage);
+            }
+
             SetNameText(characterData.Name);
             SetTribeImage(characterData.TribeData.Image);
             SetOriginImage(characterData.OriginData.Image);

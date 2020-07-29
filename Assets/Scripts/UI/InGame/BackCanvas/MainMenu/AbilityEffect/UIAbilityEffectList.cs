@@ -7,12 +7,15 @@ public class UIAbilityEffectList : MonoBehaviour
     [SerializeField] private UIAbilityEffect uiAbilityEffect = null;
     [SerializeField] private UIAbilityEffectInfo uiAbilityEffectInfo = null;
     public List<UIAbilityEffect> uiAbilityEffectList;
+    private bool isInBattle;
 
     [SerializeField] private Camera cam;
 
     public void Initialize()
     {
         uiAbilityEffectInfo.Initialize();
+
+        isInBattle = false;
 
         InGameManager.instance.gameState.OnComplete += UpdateAbilityEffectListByWaveComplete;
         InGameManager.instance.gameState.OnBattle += MoveForBattle;
@@ -64,14 +67,22 @@ public class UIAbilityEffectList : MonoBehaviour
 
     private void MoveForBattle()
     {
-        RectTransform rect = transform as RectTransform;
-        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_BATTLE, 0.0f));
+        if(!isInBattle)
+        {
+            RectTransform rect = transform as RectTransform;
+            rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_BATTLE, 0.0f));
+            isInBattle = true;
+        }
     }
 
     private void MoveForPrepare()
     {
-        RectTransform rect = transform as RectTransform;
-        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_PREPARE, 0.0f));
+        if(isInBattle)
+        {
+            RectTransform rect = transform as RectTransform;
+            rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_PREPARE, 0.0f));
+            isInBattle = false;
+        }
     }
 
     public void InitializeByInGameSaveData(List<AbilityEffectSaveData> abilityEffectSaveDataList)

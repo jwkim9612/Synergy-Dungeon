@@ -7,23 +7,34 @@ public class UIAbilityEffectInfo : MonoBehaviour
 {
     [SerializeField] private Text remainingTurnText = null;
     [SerializeField] private Text InfoText = null;
+    private bool isInBattle;
 
     public void Initialize()
     {
+        isInBattle = false;
+
         InGameManager.instance.gameState.OnBattle += MoveForBattle;
         InGameManager.instance.gameState.OnPrepare += MoveForPrepare;
     }
 
     private void MoveForBattle()
     {
-        RectTransform rect = transform as RectTransform;
-        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_BATTLE, 0.0f));
+        if(!isInBattle)
+        {
+            RectTransform rect = transform as RectTransform;
+            rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_BATTLE, 0.0f));
+            isInBattle = true;
+        }
     }
 
     private void MoveForPrepare()
     {
-        RectTransform rect = transform as RectTransform;
-        rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_PREPARE, 0.0f));
+        if(isInBattle)
+        {
+            RectTransform rect = transform as RectTransform;
+            rect.Translate(new Vector3(0.0f, AbilityEffectService.Y_INCREASE_VALUE_FOR_PREPARE, 0.0f));
+            isInBattle = false;
+        }
     }
 
     public void SetAbilityEffectInfo(AbilityEffect abilityEffect)

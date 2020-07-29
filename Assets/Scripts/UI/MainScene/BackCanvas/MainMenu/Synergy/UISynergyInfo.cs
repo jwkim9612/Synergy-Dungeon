@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using geniikw.DataSheetLab;
+using System.Linq;
 
 public class UISynergyInfo : UIControl
 {
@@ -12,8 +13,7 @@ public class UISynergyInfo : UIControl
     [SerializeField] private GridLayoutGroup girdLayoutGroup = null;
     [SerializeField] private UICharacterSlotToShow characterSlotToShow = null;
 
-    //private List<UICharacterSlotToShow> characterSlotsToShow = new List<UICharacterSlotToShow>();
-    private List<UICharacterSlotToShow> characterSlotsToShow { get; set; }
+    private List<UICharacterSlotToShow> characterSlotListToShow { get; set; }
 
     private TribeData tribeData = null;
     private OriginData originData = null;
@@ -89,7 +89,7 @@ public class UISynergyInfo : UIControl
 
     public void CreateCharacterList()
     {
-        characterSlotsToShow = new List<UICharacterSlotToShow>();
+        characterSlotListToShow = new List<UICharacterSlotToShow>();
 
         var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet == null)
@@ -103,8 +103,14 @@ public class UISynergyInfo : UIControl
             {
                 var slot = Instantiate(characterSlotToShow, girdLayoutGroup.transform);
                 slot.SetCharacterData(characterData.Value);
-                characterSlotsToShow.Add(slot);
+                characterSlotListToShow.Add(slot);
             }
+        }
+
+        characterSlotListToShow = characterSlotListToShow.OrderBy(x => x.characterData.Tier).ToList();
+        for (int i = 0; i < characterSlotListToShow.Count; ++i)
+        {
+            characterSlotListToShow[i].gameObject.transform.SetSiblingIndex(i);
         }
     }
 
@@ -113,7 +119,7 @@ public class UISynergyInfo : UIControl
     {
         if (isTribe)
         {
-            foreach (var characterSlotToShow in characterSlotsToShow)
+            foreach (var characterSlotToShow in characterSlotListToShow)
             {
                 if(tribeData.Tribe == characterSlotToShow.characterData.Tribe)
                 {
@@ -127,7 +133,7 @@ public class UISynergyInfo : UIControl
         }
         else if (isOrigin)
         {
-            foreach (var characterSlotToShow in characterSlotsToShow)
+            foreach (var characterSlotToShow in characterSlotListToShow)
             {
                 if (originData.Origin == characterSlotToShow.characterData.Origin)
                 {

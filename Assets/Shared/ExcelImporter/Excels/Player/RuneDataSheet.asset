@@ -410,8 +410,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -427,8 +427,8 @@ MonoBehaviour:
     Evasion: 3
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -444,8 +444,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 3
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1025
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -461,8 +461,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -478,8 +479,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1027
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -495,8 +496,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -512,8 +513,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -529,8 +531,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -546,8 +548,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -563,8 +566,8 @@ MonoBehaviour:
     Evasion: 4
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -580,8 +583,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 4
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1033
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -597,8 +600,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -614,8 +618,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1035
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -631,8 +635,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -648,8 +653,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -665,8 +670,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -682,8 +687,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -699,8 +705,8 @@ MonoBehaviour:
     Evasion: 5
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -716,8 +722,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 5
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1041
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -733,8 +740,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -750,8 +757,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1043
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -767,8 +774,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -784,8 +792,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -801,8 +809,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -818,8 +826,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -835,8 +843,9 @@ MonoBehaviour:
     Evasion: 6
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -852,8 +861,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 6
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1049
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -869,8 +878,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -886,8 +895,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1051
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -903,8 +913,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -920,8 +930,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -937,8 +948,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -954,8 +965,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -971,8 +982,9 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -988,8 +1000,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1057
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1005,8 +1017,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1022,8 +1035,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1059
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1039,8 +1052,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1056,8 +1069,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1073,8 +1087,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1090,8 +1104,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1107,8 +1122,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1124,8 +1139,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1065
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1141,8 +1156,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1158,8 +1174,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1067
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1175,8 +1191,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1192,8 +1208,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1209,8 +1225,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1226,8 +1243,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1243,8 +1260,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1260,8 +1277,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1073
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1277,8 +1295,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1294,8 +1312,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1075
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1311,8 +1330,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1328,8 +1347,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1345,8 +1364,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1362,8 +1382,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1379,8 +1399,9 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1396,8 +1417,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1081
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1413,8 +1434,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1430,8 +1451,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1083
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1447,8 +1469,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1464,8 +1486,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1481,8 +1504,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1498,8 +1521,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1515,8 +1538,9 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1532,8 +1556,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1089
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1549,8 +1573,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1566,8 +1590,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1091
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1583,8 +1607,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1600,8 +1625,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1617,8 +1642,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1634,8 +1659,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1651,8 +1677,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1668,8 +1694,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1097
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1685,8 +1712,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1702,8 +1729,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1099
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1719,8 +1746,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1736,8 +1764,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1753,8 +1781,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1770,8 +1799,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1787,8 +1816,8 @@ MonoBehaviour:
     Evasion: 10
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1804,8 +1833,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 10
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 1105
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 0
@@ -1821,8 +1851,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 0
@@ -1838,8 +1868,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1107
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 0
@@ -1855,8 +1886,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 0
@@ -1872,8 +1903,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1889,8 +1920,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 1110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 0
@@ -1906,8 +1938,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 1111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 0
@@ -1923,8 +1955,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 1112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 0
@@ -1940,8 +1972,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 11
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2000
     Name: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC"
     SocketPosition: 1
@@ -1957,8 +1989,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: Images/Tribe/Logo_Undead
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2001
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -1974,8 +2007,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: Images/Tribe/Logo_Undead
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -1991,8 +2024,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: Images/Tribe/Logo_Undead
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2003
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2008,8 +2041,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2025,8 +2059,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2042,8 +2076,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2059,8 +2094,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2076,8 +2111,8 @@ MonoBehaviour:
     Evasion: 1
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2093,8 +2128,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2009
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2110,8 +2146,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2127,8 +2163,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2011
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2144,8 +2181,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2161,8 +2198,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2178,8 +2215,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2195,8 +2233,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2212,8 +2250,9 @@ MonoBehaviour:
     Evasion: 2
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2229,8 +2268,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 2
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2017
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2246,8 +2285,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2263,8 +2302,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2019
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2280,8 +2320,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 2020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2297,8 +2337,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2314,8 +2354,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2331,8 +2371,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2348,8 +2389,8 @@ MonoBehaviour:
     Evasion: 3
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2365,8 +2406,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 3
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2025
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2382,8 +2423,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2399,8 +2441,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2027
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2416,8 +2458,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2433,8 +2476,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2450,8 +2493,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2467,8 +2510,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2484,8 +2528,8 @@ MonoBehaviour:
     Evasion: 4
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2501,8 +2545,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 4
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2033
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2518,8 +2563,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2535,8 +2580,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2035
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2552,8 +2597,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2569,8 +2615,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2586,8 +2632,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2603,8 +2650,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2620,8 +2667,8 @@ MonoBehaviour:
     Evasion: 5
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2637,8 +2684,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 5
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2041
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2654,8 +2702,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 2042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2671,8 +2719,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2043
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2688,8 +2736,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2705,8 +2753,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2722,8 +2771,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2739,8 +2788,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2756,8 +2805,9 @@ MonoBehaviour:
     Evasion: 6
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2773,8 +2823,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 6
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2049
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2790,8 +2840,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2807,8 +2858,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2051
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2824,8 +2875,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2841,8 +2892,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2858,8 +2910,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2875,8 +2927,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -2892,8 +2945,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -2909,8 +2962,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2057
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -2926,8 +2979,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -2943,8 +2997,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2059
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -2960,8 +3014,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -2977,8 +3032,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -2994,8 +3049,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3011,8 +3066,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3028,8 +3084,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 2064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3045,8 +3101,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2065
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3062,8 +3118,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3079,8 +3135,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2067
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3096,8 +3153,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3113,8 +3170,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3130,8 +3187,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3147,8 +3205,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3164,8 +3222,9 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3181,8 +3240,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2073
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3198,8 +3257,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3215,8 +3274,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2075
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3232,8 +3292,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3249,8 +3309,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3266,8 +3327,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3283,8 +3344,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3300,8 +3361,9 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3317,8 +3379,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2081
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3334,8 +3396,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3351,8 +3414,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2083
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3368,8 +3431,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3385,8 +3448,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3402,8 +3466,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 2086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3419,8 +3483,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3436,8 +3500,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3453,8 +3517,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2089
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3470,8 +3535,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3487,8 +3552,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2091
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3504,8 +3569,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3521,8 +3587,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3538,8 +3604,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3555,8 +3622,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3572,8 +3639,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3589,8 +3656,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2097
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3606,8 +3674,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3623,8 +3691,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2099
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3640,8 +3709,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3657,8 +3726,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3674,8 +3743,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3691,8 +3761,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3708,8 +3778,9 @@ MonoBehaviour:
     Evasion: 10
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3725,8 +3796,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 10
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2105
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 1
@@ -3742,8 +3813,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 1
@@ -3759,8 +3830,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2107
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 1
@@ -3776,8 +3848,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 2108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 1
@@ -3793,8 +3865,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3810,8 +3882,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 2110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 1
@@ -3827,8 +3899,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 2111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 1
@@ -3844,8 +3917,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 2112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 1
@@ -3861,8 +3934,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 11
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3000
     Name: "\uAE30\uBCF8 \uB3C4\uC801 \uB8EC"
     SocketPosition: 2
@@ -3878,8 +3951,9 @@ MonoBehaviour:
     Evasion: 1
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3001
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -3895,8 +3969,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -3912,8 +3986,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3003
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -3929,8 +4004,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -3946,8 +4021,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -3963,8 +4038,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -3980,8 +4056,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -3997,8 +4073,9 @@ MonoBehaviour:
     Evasion: 1
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4014,8 +4091,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3009
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4031,8 +4108,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4048,8 +4125,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3011
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4065,8 +4143,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4082,8 +4160,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4099,8 +4178,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4116,8 +4195,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4133,8 +4212,9 @@ MonoBehaviour:
     Evasion: 2
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4150,8 +4230,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 2
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 3017
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4167,8 +4247,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4184,8 +4264,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3019
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4201,8 +4281,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4218,8 +4299,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4235,8 +4316,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4252,8 +4333,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4269,8 +4351,8 @@ MonoBehaviour:
     Evasion: 3
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4286,8 +4368,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 3
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3025
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4303,8 +4386,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4320,8 +4403,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3027
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4337,8 +4420,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4354,8 +4438,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4371,8 +4455,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4388,8 +4473,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4405,8 +4490,8 @@ MonoBehaviour:
     Evasion: 4
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4422,8 +4507,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 4
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3033
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4439,8 +4525,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4456,8 +4542,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3035
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4473,8 +4560,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4490,8 +4577,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4507,8 +4594,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4524,8 +4612,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 3039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4541,8 +4629,8 @@ MonoBehaviour:
     Evasion: 5
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4558,8 +4646,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 5
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3041
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4575,8 +4663,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4592,8 +4681,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3043
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4609,8 +4698,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4626,8 +4715,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4643,8 +4733,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4660,8 +4750,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4677,8 +4768,8 @@ MonoBehaviour:
     Evasion: 6
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4694,8 +4785,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 6
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3049
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4711,8 +4802,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4728,8 +4820,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3051
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4745,8 +4837,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4762,8 +4855,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4779,8 +4872,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4796,8 +4889,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4813,8 +4907,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4830,8 +4924,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3057
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4847,8 +4942,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -4864,8 +4959,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3059
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -4881,8 +4976,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -4898,8 +4994,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 3061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4915,8 +5011,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -4932,8 +5028,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -4949,8 +5045,9 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -4966,8 +5063,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3065
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -4983,8 +5080,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5000,8 +5097,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3067
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5017,8 +5115,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5034,8 +5132,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5051,8 +5150,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5068,8 +5167,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5085,8 +5184,9 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5102,8 +5202,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3073
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -5119,8 +5219,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5136,8 +5237,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3075
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5153,8 +5254,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5170,8 +5271,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5187,8 +5289,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5204,8 +5306,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5221,8 +5324,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5238,8 +5341,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3081
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -5255,8 +5358,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5272,8 +5376,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 3083
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5289,8 +5393,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5306,8 +5410,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5323,8 +5427,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5340,8 +5445,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5357,8 +5462,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5374,8 +5479,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3089
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -5391,8 +5497,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5408,8 +5514,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3091
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5425,8 +5532,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5442,8 +5549,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5459,8 +5566,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5476,8 +5584,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5493,8 +5601,9 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5510,8 +5619,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3097
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -5527,8 +5636,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5544,8 +5653,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3099
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5561,8 +5671,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5578,8 +5688,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5595,8 +5706,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5612,8 +5723,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5629,8 +5740,9 @@ MonoBehaviour:
     Evasion: 10
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5646,8 +5758,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 10
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 3105
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 2
@@ -5663,8 +5775,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 2
@@ -5680,8 +5792,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 3107
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 2
@@ -5697,8 +5809,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 3108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 2
@@ -5714,8 +5827,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5731,8 +5844,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 2
@@ -5748,8 +5861,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 2
@@ -5765,8 +5879,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 3112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 2
@@ -5782,8 +5896,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 11
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4000
     Name: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC"
     SocketPosition: 3
@@ -5799,8 +5914,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4001
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -5816,8 +5931,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -5833,8 +5948,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4003
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -5850,8 +5966,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -5867,8 +5983,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -5884,8 +6001,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -5901,8 +6018,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -5918,8 +6035,9 @@ MonoBehaviour:
     Evasion: 1
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -5935,8 +6053,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4009
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -5952,8 +6070,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -5969,8 +6088,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4011
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -5986,8 +6105,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6003,8 +6122,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6020,8 +6140,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 4014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6037,8 +6157,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6054,8 +6174,8 @@ MonoBehaviour:
     Evasion: 2
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6071,8 +6191,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 2
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4017
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6088,8 +6209,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6105,8 +6226,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4019
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6122,8 +6243,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6139,8 +6261,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6156,8 +6278,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6173,8 +6296,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6190,8 +6313,8 @@ MonoBehaviour:
     Evasion: 3
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6207,8 +6330,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 3
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4025
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6224,8 +6348,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6241,8 +6365,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4027
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6258,8 +6383,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6275,8 +6400,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6292,8 +6417,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6309,8 +6435,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6326,8 +6452,9 @@ MonoBehaviour:
     Evasion: 4
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6343,8 +6470,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 4
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4033
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6360,8 +6487,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6377,8 +6504,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4035
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6394,8 +6522,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 4036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6411,8 +6539,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6428,8 +6556,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6445,8 +6573,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6462,8 +6591,8 @@ MonoBehaviour:
     Evasion: 5
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6479,8 +6608,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 5
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4041
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6496,8 +6625,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6513,8 +6643,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4043
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6530,8 +6660,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6547,8 +6678,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6564,8 +6695,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6581,8 +6712,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6598,8 +6730,8 @@ MonoBehaviour:
     Evasion: 6
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6615,8 +6747,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 6
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4049
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6632,8 +6765,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6649,8 +6782,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4051
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6666,8 +6799,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6683,8 +6817,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6700,8 +6834,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6717,8 +6852,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6734,8 +6869,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6751,8 +6886,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4057
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6768,8 +6904,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 4058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6785,8 +6921,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4059
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6802,8 +6938,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6819,8 +6955,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6836,8 +6973,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6853,8 +6990,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -6870,8 +7007,9 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -6887,8 +7025,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4065
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -6904,8 +7042,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -6921,8 +7060,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4067
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -6938,8 +7077,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -6955,8 +7094,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6972,8 +7112,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -6989,8 +7129,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7006,8 +7147,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7023,8 +7164,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4073
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -7040,8 +7181,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -7057,8 +7199,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4075
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -7074,8 +7216,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -7091,8 +7234,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7108,8 +7251,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7125,8 +7268,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7142,8 +7286,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 4080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7159,8 +7303,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4081
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -7176,8 +7320,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -7193,8 +7337,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4083
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -7210,8 +7355,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -7227,8 +7372,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7244,8 +7389,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7261,8 +7407,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7278,8 +7424,9 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7295,8 +7442,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4089
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -7312,8 +7459,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -7329,8 +7476,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4091
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -7346,8 +7494,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -7363,8 +7511,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7380,8 +7529,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7397,8 +7546,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7414,8 +7563,9 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7431,8 +7581,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4097
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -7448,8 +7598,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -7465,8 +7616,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4099
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -7482,8 +7633,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -7499,8 +7650,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7516,8 +7668,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 4102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7533,8 +7685,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7550,8 +7702,8 @@ MonoBehaviour:
     Evasion: 10
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 4104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7567,8 +7719,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 10
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 4105
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 3
@@ -7584,8 +7737,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 3
@@ -7601,8 +7754,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4107
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 3
@@ -7618,8 +7771,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 3
@@ -7635,8 +7789,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7652,8 +7806,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 3
@@ -7669,8 +7824,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 3
@@ -7686,8 +7841,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 4112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 3
@@ -7703,8 +7858,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 11
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5000
     Name: "\uAE30\uBCF8 \uB9C8\uBC95\uC0AC \uB8EC"
     SocketPosition: 4
@@ -7720,8 +7876,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5001
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -7737,8 +7893,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5002
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -7754,8 +7911,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5003
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -7771,8 +7928,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5004
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -7788,8 +7945,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5005
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -7805,8 +7963,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5006
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -7822,8 +7980,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5007
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -7839,8 +7998,8 @@ MonoBehaviour:
     Evasion: 1
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5008
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -7856,8 +8015,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 1
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5009
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -7873,8 +8032,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5010
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -7890,8 +8050,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 5011
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -7907,8 +8067,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5012
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -7924,8 +8084,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5013
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -7941,8 +8101,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5014
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -7958,8 +8119,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5015
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -7975,8 +8136,8 @@ MonoBehaviour:
     Evasion: 2
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5016
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -7992,8 +8153,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 2
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5017
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8009,8 +8171,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5018
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8026,8 +8188,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5019
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8043,8 +8206,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5020
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8060,8 +8223,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5021
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8077,8 +8240,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5022
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8094,8 +8258,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5023
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8111,8 +8275,9 @@ MonoBehaviour:
     Evasion: 3
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5024
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8128,8 +8293,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 3
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5025
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8145,8 +8310,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5026
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8162,8 +8327,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5027
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8179,8 +8345,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5028
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8196,8 +8362,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5029
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8213,8 +8380,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5030
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8230,8 +8397,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5031
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8247,8 +8414,9 @@ MonoBehaviour:
     Evasion: 4
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5032
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8264,8 +8432,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 4
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 5033
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8281,8 +8449,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5034
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8298,8 +8466,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5035
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8315,8 +8483,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5036
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8332,8 +8501,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5037
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8349,8 +8518,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5038
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8366,8 +8535,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5039
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8383,8 +8553,8 @@ MonoBehaviour:
     Evasion: 5
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5040
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8400,8 +8570,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 5
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5041
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8417,8 +8588,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5042
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8434,8 +8605,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5043
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8451,8 +8622,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5044
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8468,8 +8640,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5045
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8485,8 +8657,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5046
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8502,8 +8675,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5047
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8519,8 +8692,8 @@ MonoBehaviour:
     Evasion: 6
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5048
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8536,8 +8709,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 6
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5049
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8553,8 +8727,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5050
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8570,8 +8744,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5051
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8587,8 +8762,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5052
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8604,8 +8779,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5053
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8621,8 +8796,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5054
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8638,8 +8814,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uAD81\uC218 \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 5055
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8655,8 +8831,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5056
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8672,8 +8848,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5057
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8689,8 +8865,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5058
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8706,8 +8883,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5059
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8723,8 +8900,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5060
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8740,8 +8917,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5061
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8757,8 +8935,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5062
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8774,8 +8952,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5063
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8791,8 +8970,8 @@ MonoBehaviour:
     Evasion: 7
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5064
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8808,8 +8987,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 7
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5065
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8825,8 +9004,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5066
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8842,8 +9022,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5067
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8859,8 +9039,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5068
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -8876,8 +9057,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5069
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8893,8 +9074,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5070
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -8910,8 +9091,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5071
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -8927,8 +9109,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5072
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -8944,8 +9126,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5073
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -8961,8 +9144,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5074
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -8978,8 +9161,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5075
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -8995,8 +9178,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5076
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -9012,8 +9196,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 5077
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9029,8 +9213,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5078
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9046,8 +9230,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5079
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -9063,8 +9248,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5080
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -9080,8 +9265,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5081
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -9097,8 +9283,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5082
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -9114,8 +9300,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5083
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -9131,8 +9317,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5084
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -9148,8 +9335,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5085
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9165,8 +9352,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5086
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9182,8 +9369,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5087
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -9199,8 +9387,8 @@ MonoBehaviour:
     Evasion: 8
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5088
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -9216,8 +9404,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 8
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5089
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -9233,8 +9422,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5090
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -9250,8 +9439,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5091
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -9267,8 +9456,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5092
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -9284,8 +9474,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5093
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9301,8 +9491,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5094
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9318,8 +9508,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5095
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -9335,8 +9526,8 @@ MonoBehaviour:
     Evasion: 9
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5096
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -9352,8 +9543,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 9
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5097
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -9369,8 +9561,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5098
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -9386,8 +9578,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_HUMAN
   - Id: 5099
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -9403,8 +9595,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5100
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -9420,8 +9613,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5101
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9437,8 +9630,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Elf
   - Id: 5102
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9454,8 +9647,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5103
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -9471,8 +9665,8 @@ MonoBehaviour:
     Evasion: 10
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5104
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -9488,8 +9682,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 10
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5105
     Name: "\uBD84\uB178\uC758 \uB8EC"
     SocketPosition: 4
@@ -9505,8 +9700,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5106
     Name: "\uD30C\uAD34\uC758 \uB8EC"
     SocketPosition: 4
@@ -9522,8 +9717,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5107
     Name: "\uD65C\uB825\uC758 \uB8EC"
     SocketPosition: 4
@@ -9539,8 +9734,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5108
     Name: "\uCCA0\uBCBD\uC758 \uB8EC"
     SocketPosition: 4
@@ -9556,8 +9752,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uCCB4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_DEVIL
   - Id: 5109
     Name: "\uC815\uC2E0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9573,8 +9769,8 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uBC29\uC5B4\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5110
     Name: "\uC758\uC9C0\uC758 \uB8EC"
     SocketPosition: 4
@@ -9590,8 +9786,9 @@ MonoBehaviour:
     Evasion: 0
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uAE30\uBCF8 \uB9C8\uBC95\uC800\uD56D\uB825\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5111
     Name: "\uBBFC\uCCA9\uC758 \uB8EC"
     SocketPosition: 4
@@ -9607,8 +9804,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 0
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uACF5\uACA9\uB825\uD615 \uC131\uAE30\uC0AC \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead
   - Id: 5112
     Name: "\uD30C\uBA78\uC758 \uB8EC"
     SocketPosition: 4
@@ -9624,5 +9821,6 @@ MonoBehaviour:
     Evasion: 0
     Critical: 11
     AttackSpeed: 0
-    Description: 
-    ImagePath: 
+    Description: "\uD76C\uADC0 \uB9C8\uBC95\uACF5\uACA9\uD615 \uC131\uAE30\uC0AC
+      \uB8EC\uC785\uB2C8\uB2E4."
+    ImagePath: Images/Tribe/Logo_Undead

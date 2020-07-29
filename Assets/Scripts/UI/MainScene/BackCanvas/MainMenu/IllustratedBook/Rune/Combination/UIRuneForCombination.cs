@@ -14,6 +14,7 @@ public class UIRuneForCombination : UIRune
     public void Initialize()
     {
         SetButtonForUnselected();
+        OnShow();
 
         isSelected = false;
     }
@@ -108,5 +109,10 @@ public class UIRuneForCombination : UIRune
             uiCombinationSpace.isActive = false;
             uiCombinationSpace.OnHide();
         }
+    }
+
+    public void OnShow()
+    {
+        gameObject.SetActive(true);
     }
 }

@@ -35,24 +35,18 @@ public class UICharacterStatus : MonoBehaviour
         ShowAll();
 
         var characterDataSheet = DataBase.Instance.characterDataSheet;
-        if (characterDataSheet == null)
+        if(characterDataSheet.TryGetCharacterData(character.characterInfo.id, out var data))
         {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
+            SetCharacterName(data.Name);
 
-        if (characterDataSheet.TryGetCharacterName(character.characterInfo.id, out var name))
-        {
-            SetCharacterName(name);
-        }
-
-        if(characterDataSheet.TryGetCharacterHeadImage(character.characterInfo.id, out var headImage))
-        {
-            SetCharacterIcon(headImage);
-        }
-        else
-        {
-            Debug.Log("Error!");
+            if(data.HeadImage == null)
+            {
+                SetCharacterIcon(data.Image);
+            }
+            else
+            {
+                SetCharacterIcon(data.HeadImage);
+            }
         }
 
         SetStarGrade(character.characterInfo.star);

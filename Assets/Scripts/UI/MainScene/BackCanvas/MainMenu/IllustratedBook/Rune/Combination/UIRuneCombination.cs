@@ -48,6 +48,8 @@ public class UIRuneCombination : UIControl
             
             uiObtainedRuneByCombinationScreen.SetUIObtainedScreen(randomId);
             UIManager.Instance.ShowNew(uiObtainedRuneByCombinationScreen);
+
+            HideCombinationButton();
         });
     }
 

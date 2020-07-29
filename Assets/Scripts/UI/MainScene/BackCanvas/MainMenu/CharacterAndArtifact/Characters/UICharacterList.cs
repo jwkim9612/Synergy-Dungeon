@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +39,12 @@ public class UICharacterList : MonoBehaviour
                 slot.SetCharacterData(characterData.Value);
                 characterSlots.Add(slot);
             }
+        }
+
+        characterSlots = characterSlots.OrderBy(x => x.characterData.Tier).ToList();
+        for(int i = 0; i < characterSlots.Count; ++i)
+        {
+            characterSlots[i].gameObject.transform.SetSiblingIndex(i);
         }
     }
 
