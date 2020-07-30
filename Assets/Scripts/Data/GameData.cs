@@ -1,4 +1,6 @@
-﻿public class AccountData
+﻿using System.Runtime.CompilerServices;
+
+public class AccountData
 { 
     public string id;
     public string pw;

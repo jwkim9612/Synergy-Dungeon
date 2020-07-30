@@ -42,7 +42,7 @@ public class Character : Pawn
 
     protected override IEnumerator Co_AttackAndAnimation()
     {
-        //if(IsMeleeUnit())
+        //if (IsMeleeUnit())
         //{
         //    for (int i = 0; i < 5; i++)
         //    {
@@ -60,7 +60,25 @@ public class Character : Pawn
         //        yield return new WaitForEndOfFrame();
         //    }
         //}
-        //else
+        if (animator.runtimeAnimatorController == null)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                this.gameObject.transform.Translate(new Vector3(0.1f, 0.0f, 0.0f));
+                yield return new WaitForEndOfFrame();
+            }
+
+            AttackProcessing();
+
+            yield return new WaitForSeconds(0.5f);
+
+            for (int i = 0; i < 5; i++)
+            {
+                this.gameObject.transform.Translate(new Vector3(-0.1f, 0.0f, 0.0f));
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else
         {
             AttackProcessing();
         }

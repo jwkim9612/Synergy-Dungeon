@@ -4,13 +4,24 @@ using UnityEngine.UI;
 public class UISpeedController : MonoBehaviour
 {
     [SerializeField] private Text speedText = null;
-    private float currentSpeed;
+    [SerializeField] private Button changeSpeedButton = null;
+    public float currentSpeed;
 
     public void Initialize()
     {
         ChangeToDefaultSpeed();
 
+        SetChangeSpeedButton();
+
         InGameManager.instance.gameState.OnPrepare += ChangeToDefaultSpeed;
+    }
+
+    private void SetChangeSpeedButton()
+    {
+        changeSpeedButton.onClick.AddListener(() =>
+        {
+            ChangeSpeed();
+        });
     }
 
     public void ChangeSpeed()

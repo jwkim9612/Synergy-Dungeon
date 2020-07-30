@@ -5,6 +5,7 @@ public class UIManager : MonoSingleton<UIManager>
 {
     [SerializeField] private UIControl exitUIControl = null;
 
+    public bool isPause;
     private bool isInitialized;
     private bool canEscapeKey;
 
@@ -13,6 +14,7 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void Initialize()
     {
+        isPause = false;
         isInitialized = true;
         canEscapeKey = false;
     }
@@ -84,8 +86,19 @@ public class UIManager : MonoSingleton<UIManager>
     {
         if (uiHistory.Count != 0)
         {
-            uiHistory.Pop().OnHide();
+            //
+            if (isInGame())
+            {
+                if (exitUIControl.gameObject.activeSelf)
+                {
+                    var currentSpeed = InGameManager.instance.backCanvas.uiBottomMenu.uiBattleMenu.uiSpeedController.currentSpeed;
+                    Time.timeScale = currentSpeed;
+                }
+            }
+            //
 
+            uiHistory.Pop().OnHide();
+            
             if (uiHistory.Count != 0)
             {
                 uiHistory.Peek().OnShow();
@@ -96,10 +109,23 @@ public class UIManager : MonoSingleton<UIManager>
             //아무 UI도 표시 안되있을 경우 종료 UI 표시
             ShowNew(exitUIControl);
 
-            if(InGameManager.instance != null)
+            if(isInGame())
             {
-                Time.timeScale = 0;
+                isPause = true;
+                Time.timeScale = InGameService.PAUSE_SPEED;
             }
+        }
+    }
+
+    public bool isInGame()
+    {
+        if (InGameManager.instance != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

@@ -20,7 +20,9 @@ public class UIPause : UIControl
         continueButton.onClick.AddListener(() =>
         {
             UIManager.Instance.HideAndShowPreview();
-            Time.timeScale = 1;
+
+            var currentSpeed = InGameManager.instance.backCanvas.uiBottomMenu.uiBattleMenu.uiSpeedController.currentSpeed;
+            Time.timeScale = currentSpeed;
         });
     }
 

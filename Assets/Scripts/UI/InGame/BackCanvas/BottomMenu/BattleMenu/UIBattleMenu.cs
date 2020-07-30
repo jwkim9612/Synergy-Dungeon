@@ -7,7 +7,7 @@ public class UIBattleMenu : MonoBehaviour
 {
     [SerializeField] private UICharacterStatusList uiFirstCharacterStatusList = null;
     [SerializeField] private UICharacterStatusList uiSecondCharacterStatusList = null;
-    [SerializeField] private UISpeedController uiSpeedController = null;
+    public UISpeedController uiSpeedController;
 
     public List<UICharacterStatus> characterStatusList = null;
 

@@ -30,6 +30,7 @@ public class InGameService : MonoBehaviour
     public const int DEFAULT_DAMAGE_FONT_SIZE = 40;
     public const int MISS_FONT_SIZE = 40;
 
+    public const float PAUSE_SPEED = 0.0f;
     public const float DEFAULT_SPEED = 1.0f;
     public const float DOUBLE_SPEED = 2.0f;
 

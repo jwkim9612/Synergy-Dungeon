@@ -4594,6 +4594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitUIControl: {fileID: 284151780}
+  isPause: 0
 --- !u!4 &150300382
 Transform:
   m_ObjectHideFlags: 0
@@ -7806,7 +7807,7 @@ RectTransform:
   - {fileID: 1812933754}
   - {fileID: 1495820444}
   m_Father: {fileID: 1314355036}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -24030,18 +24031,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858295166}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 858295169}
-        m_MethodName: ChangeSpeed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &858295168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24063,6 +24053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedText: {fileID: 1207955610}
+  changeSpeedButton: {fileID: 858295167}
+  currentSpeed: 0
 --- !u!1 &868949776
 GameObject:
   m_ObjectHideFlags: 0
@@ -35118,7 +35110,7 @@ RectTransform:
   m_Children:
   - {fileID: 392644839}
   m_Father: {fileID: 1314355036}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -37138,10 +37130,10 @@ RectTransform:
   - {fileID: 1080168088}
   - {fileID: 58093821}
   - {fileID: 1310743445}
-  - {fileID: 284151779}
-  - {fileID: 1264254132}
   - {fileID: 1345369883}
   - {fileID: 1421547834}
+  - {fileID: 284151779}
+  - {fileID: 1264254132}
   - {fileID: 958927991}
   - {fileID: 546494347}
   m_Father: {fileID: 0}
@@ -38462,7 +38454,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1314355036}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -41092,7 +41084,7 @@ RectTransform:
   m_Children:
   - {fileID: 979286265}
   m_Father: {fileID: 1314355036}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
