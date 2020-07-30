@@ -296,7 +296,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 AddArtifactPieceAndShowObtainScreen();
                 break;
             case RewardCurrency.Heart:
-                MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
+                MainManager.instance.frontCanvas.uiHeartRefill.uiHeartTimer.HeartUpdate();
+                //MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
                 break;
             case RewardCurrency.Nothing:
                 break;
