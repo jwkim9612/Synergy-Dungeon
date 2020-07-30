@@ -27,6 +27,9 @@ public class UICharacterArea : MonoBehaviour
             var characterAreaInfoList = SaveManager.Instance.inGameSaveData.CharacterAreaInfoList;
 
             SetUICharacterList(characterAreaInfoList);
+            //
+            InitializePrepareCharacterPositions();
+            //
             OnPlacementChanged?.Invoke();
         }
         else
@@ -161,5 +164,11 @@ public class UICharacterArea : MonoBehaviour
         {
             SubCurrentPlacedCharacter();
         }
+    }
+
+    public void InitializePrepareCharacterPositions()
+    {
+        frontArea.InitializePrepareCharacterPositions();
+        backArea.InitializePrepareCharacterPositions();
     }
 }

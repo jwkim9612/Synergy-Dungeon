@@ -277,6 +277,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 break;
             case RewardCurrency.Rune:
                 RuneManager.Instance.AddRuneToRuneList(rewardId);
+                LoadRuneOnSalesData();
                 break;
             case RewardCurrency.RandomRune:
                 AddRunesAndShowObtainScreen();
@@ -296,8 +297,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                 AddArtifactPieceAndShowObtainScreen();
                 break;
             case RewardCurrency.Heart:
-                MainManager.instance.frontCanvas.uiHeartRefill.uiHeartTimer.HeartUpdate();
-                //MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
+                MainManager.instance.backCanvas.uiTopMenu.uiHeart.HeartUpdate();
                 break;
             case RewardCurrency.Nothing:
                 break;
@@ -449,7 +449,8 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        runeOnSalesList.Add((id, isSoldOut));
                    }
 
-                   MainManager.instance.backCanvas.uiMainMenu.uiStore.uiRuneOnSalesList.Initialize();
+                   //MainManager.instance.backCanvas.uiMainMenu.uiStore.uiRuneOnSalesList.Initialize();
+                   MainManager.instance.backCanvas.uiMainMenu.uiStore.uiRuneOnSalesList.InitializeRuneOnSalesList();
                    Debug.Log("runeslaes 초기화 완료");
                }
                else

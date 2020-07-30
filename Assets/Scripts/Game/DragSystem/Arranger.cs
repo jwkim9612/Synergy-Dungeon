@@ -102,4 +102,15 @@ public class Arranger : MonoBehaviour
     //    RectTransform rect = transform as RectTransform;
     //    //rect.sizeDelta = new Vector2(rect.sizeDelta.x, rect.sizeDelta.y - InGameService.SIZE_TO_EXPAND_THE_BATTLE_AREA);
     //}
+
+    public void InitializePrepareCharacterPositions()
+    {
+        foreach (var uiCharacter in uiCharacters)
+        {
+            if (uiCharacter.character == null)
+                continue;
+
+            StartCoroutine(uiCharacter.Co_PrepareFollowCharacter());
+        }
+    }
 }

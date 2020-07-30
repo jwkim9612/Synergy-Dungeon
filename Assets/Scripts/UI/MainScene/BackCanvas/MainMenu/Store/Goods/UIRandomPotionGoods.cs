@@ -9,8 +9,10 @@
 
         showAskPurchaseButton.onClick.AddListener(() =>
         {
+            bool hasPotionInUse = PotionManager.Instance.HasPotionInUse();
+
             var uiAskPurchaseForRandomPotionGoods = MainManager.instance.backCanvas.uiMainMenu.uiStore.uiAskPurchaseForRandomPotionGoods;
-            uiAskPurchaseForRandomPotionGoods.SetUIAskPurchase(goodsData, goodsId, false);
+            uiAskPurchaseForRandomPotionGoods.SetUIAskPurchase(goodsData, goodsId, hasPotionInUse);
             UIManager.Instance.ShowNew(uiAskPurchaseForRandomPotionGoods);
         });
     }

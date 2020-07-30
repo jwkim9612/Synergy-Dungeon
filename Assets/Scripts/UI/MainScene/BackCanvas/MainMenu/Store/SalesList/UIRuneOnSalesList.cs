@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIRuneOnSalesList : MonoBehaviour
 {
     [SerializeField] private Text remainingTimeOfResetText = null;
+    [SerializeField] private Button renewalButton = null;
     private Dictionary<int, UIRuneGoods> uiRuneOnSalesList;
     public List<(int RuneId, bool IsSoldOut)> runeOnSalesList { get; set; }
      
@@ -14,6 +15,16 @@ public class UIRuneOnSalesList : MonoBehaviour
     {
         InitializeRuneOnSalesList();
         InitializeRemainingTimeOfReset();
+
+        SetRenewalButton();
+    }
+
+    private void SetRenewalButton()
+    {
+        renewalButton.onClick.AddListener(() =>
+        {
+            GoodsManager.Instance.ResetRuneOnSales(true);
+        });
     }
 
     public void InitializeRuneOnSalesList()

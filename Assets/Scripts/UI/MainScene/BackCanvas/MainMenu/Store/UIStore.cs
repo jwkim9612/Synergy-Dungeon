@@ -7,10 +7,8 @@ public class UIStore : MonoBehaviour
     [SerializeField] private UIFloatingText purchaseCompletedFloatingText = null;
     [SerializeField] private UIFloatingText soldOutFloatingText = null;
 
-    public UIGoldSalesList uiGoldSalesList;
     public UIRandomRuneSalesList uiRandomRuneSalesList;
     public UIRandomPotionSalesList uiRandomPotionSalesList;
-    public UIHeartSalesList uiHeartSalesList;
     public UIRuneOnSalesList uiRuneOnSalesList;
     public UIRandomArtifactPieceSalesList uiRandomArtifactPieceSalesList;
 
@@ -33,10 +31,8 @@ public class UIStore : MonoBehaviour
     public void Initialize()
     {
         uiRuneOnSalesList.Initialize();
-        uiGoldSalesList.Initialize();
         uiRandomRuneSalesList.Initialize();
         uiRandomPotionSalesList.Initialize();
-        uiHeartSalesList.Initialize();
         uiRandomArtifactPieceSalesList.Initialize();
 
         uiObtainedRunesScreen.Initialize();

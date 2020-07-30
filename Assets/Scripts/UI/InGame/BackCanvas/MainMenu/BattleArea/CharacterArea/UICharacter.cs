@@ -196,6 +196,8 @@ public class UICharacter : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             character.transform.position = this.transform.position;
+
+            Debug.Log("FollowCharacter");
         }
     }
 

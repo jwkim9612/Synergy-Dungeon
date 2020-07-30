@@ -6,61 +6,42 @@ using UnityEngine.UI;
 public class UIHeartTimer : MonoBehaviour
 {
     [SerializeField] private Text timeText = null;
+    [SerializeField] private Text titleText = null;
 
     private long remainingTime;
-    private bool heartTimerIsRunning;
 
     public void Initialize()
     {
-        HeartUpdate();
+        //HeartUpdate();
     }
 
-    public void HeartUpdate()
+    public void TimeUpdate()
     {
-        new LogEventRequest()
-            .SetEventKey("HeartUpdate")
-            .Send((response) =>
-            {
-                if (!response.HasErrors)
-                {
-                    long heart = (long)(response.ScriptData.GetLong("Heart"));
-                    long ExtraHearts = (long)(response.ScriptData.GetLong("ExtraHearts"));
-                    long remainingTime = (long)(response.ScriptData.GetLong("RemainingTime"));
-
-                    MainManager.instance.backCanvas.uiTopMenu.uiHeart.SetHeart(heart, ExtraHearts);
-                    this.remainingTime = remainingTime;
-
-                    if (heart < 5)
-                    {
-                        if (!heartTimerIsRunning)
-                            StartCoroutine(Co_HeartTimer());
-                    }
-                    else
-                        timeText.text = "0:00";
-                }
-                else
-                {
-                    Debug.Log("Error Time Load !");
-                    Debug.Log(response.Errors.JSON);
-                }
-            });
+        remainingTime = MainManager.instance.backCanvas.uiTopMenu.uiHeart.remainingTime;
+        if(remainingTime > 0)
+        {
+            titleText.text = "다음 하트까지 남은시간";
+            StartCoroutine(Co_TextHeartTimer());
+        }
+        else
+        {
+            titleText.text = "하트가 최대갯수입니다";
+            timeText.text = "0 : 00";
+        }
     }
 
-    private IEnumerator Co_HeartTimer()
+    private IEnumerator Co_TextHeartTimer()
     {
-        heartTimerIsRunning = true;
-
         while (remainingTime > 0)
         {
             var minute = remainingTime / 60;
             var second = remainingTime % 60;
 
-            timeText.text = $"{minute}:{second.ToString("D2")}";
+            timeText.text = $"{minute} : {second.ToString("D2")}";
             yield return new WaitForSeconds(1.0f);
             --remainingTime;
         }
 
-        heartTimerIsRunning = false;
-        HeartUpdate();
+        TimeUpdate();
     }
 }

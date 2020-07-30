@@ -5,6 +5,7 @@ public class FrontCanvas : MonoBehaviour
     public UIAskGoToStore uiAskGoToStore;
     public AskInGameContinue askInGameContinue;
     public UIHeartRefill uiHeartRefill;
+    public UIPurchaseGold uiPurchaseGold;
     
     [SerializeField] private GameObject connecting = null;
     [SerializeField] private GameObject EnteringDungeon = null;
@@ -14,6 +15,7 @@ public class FrontCanvas : MonoBehaviour
         uiAskGoToStore.Initialize();
         askInGameContinue.Initialize();
         uiHeartRefill.Initialize();
+        uiPurchaseGold.Initialize();
     }
 
     public void ShowAskInGameContinue()

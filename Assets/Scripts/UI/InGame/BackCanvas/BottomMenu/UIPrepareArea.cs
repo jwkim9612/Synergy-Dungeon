@@ -13,6 +13,7 @@ public class UIPrepareArea : Arranger
             var prepareAreaInfoList = SaveManager.Instance.inGameSaveData.PrepareAreaInfoList;
 
             SetUICharacterList(prepareAreaInfoList);
+            InitializePrepareCharacterPositions();
         }
 
         InGameManager.instance.gameState.OnBattle += HideAllCharacters;

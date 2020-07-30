@@ -66,6 +66,7 @@ public class UIEnemy : MonoBehaviour
         {
             yield return new WaitForEndOfFrame();
             enemy.transform.position = this.transform.position;
+            Debug.Log("FollowEnemy!!");
         }
     }
 

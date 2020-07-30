@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIEnemyArea : MonoBehaviour
 {
@@ -11,6 +9,7 @@ public class UIEnemyArea : MonoBehaviour
     public void Initialize()
     {
         InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
+        //InGameManager.instance.gameState.OnPrepare += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;
 
         frontArea.Initialize();

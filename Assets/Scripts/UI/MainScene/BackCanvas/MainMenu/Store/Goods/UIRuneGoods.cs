@@ -32,6 +32,7 @@ public class UIRuneGoods : UIGoods
                 else
                 {
                     SoldOut.SetActive(false);
+                    showAskPurchaseButton.onClick.RemoveAllListeners();
                     showAskPurchaseButton.onClick.AddListener(() =>
                     {
                         var uiAskPurchaseForRuneGoods = MainManager.instance.backCanvas.uiMainMenu.uiStore.uiAskPurchaseForRuneGoods;

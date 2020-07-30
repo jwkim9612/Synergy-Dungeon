@@ -26,17 +26,15 @@ public class GoodsService : MonoBehaviour
         {
             25,
             26,
-            27,
-            28
+            27
         };
 
     public static readonly List<int> HEART_SALES_ID_LIST =
     new List<int>
     {
-            33,
-            34,
-            35,
-            36
+        31,
+        32,
+        33
     };
 
     public const int MIN_NUMBER_OF_RANDOM_RUNES = 1;
