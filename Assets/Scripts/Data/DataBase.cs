@@ -23,6 +23,7 @@
 		tribeDataSheet.Initialize();
 		originDataSheet.Initialize();
 		characterDataSheet.Initialize();
+		characterAbilityDataSheet.Initialize();
 		chapterInfoDataSheet.Initialize();
 		chapterDataSheet.Initialize();
 		enemyDataSheet.Initialize();
@@ -36,5 +37,10 @@
 		inGameExpDataSheet.Initialize();
 		artifactDataSheet.Initialize();
 		artifactPieceDataSheet.Initialize();
+	}
+
+	public void CheckValidate()
+	{
+
 	}
 }

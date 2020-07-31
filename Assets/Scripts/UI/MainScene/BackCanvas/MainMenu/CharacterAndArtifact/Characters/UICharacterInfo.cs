@@ -31,7 +31,15 @@ public class UICharacterInfo : UIControl
         SetName(characterData.Name);
         SetImage(characterData.Image);
 
-        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
+        int id = characterData.Id;
+        int star = 1;
+
+        var characterAbilityData = DataBase.Instance.characterAbilityDataSheet;
+        if (characterAbilityData.TryGetCharacterAbilityData(id, star, out var abilityData))
+        {
+            SetCharacterAbilityText(abilityData);
+        }
+
         SetPlusValue();
         SetSynergyData();
     }
@@ -62,31 +70,52 @@ public class UICharacterInfo : UIControl
 
     public void OnOneStarClick()
     {
-        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.OneStarDatas[characterData.Id]);
+        int id = characterData.Id;
+        int star = 1;
+
+        var characterAbilityData = DataBase.Instance.characterAbilityDataSheet;
+        if (characterAbilityData.TryGetCharacterAbilityData(id, star, out var abilityData))
+        {
+            SetCharacterAbilityText(abilityData);
+        }
     }
 
     public void OnTwoStarClick()
     {
-        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.TwoStarDatas[characterData.Id]);
+        int id = characterData.Id;
+        int star = 2;
+
+        var characterAbilityData = DataBase.Instance.characterAbilityDataSheet;
+        if (characterAbilityData.TryGetCharacterAbilityData(id, star, out var abilityData))
+        {
+            SetCharacterAbilityText(abilityData);
+        }
     }
 
     public void OnThreeStarClick()
     {
-        SetCharacterAbilityText(DataBase.Instance.characterAbilityDataSheet.ThreeStarDatas[characterData.Id]);
+        int id = characterData.Id;
+        int star = 3;
+
+        var characterAbilityData = DataBase.Instance.characterAbilityDataSheet;
+        if (characterAbilityData.TryGetCharacterAbilityData(id, star, out var abilityData))
+        {
+            SetCharacterAbilityText(abilityData);
+        }
     }
 
     private void SetCharacterAbilityText(CharacterAbilityData characterAbilityData)
     {
-        textAttack.text = characterAbilityData.Attack.ToString();
-        textMagicalAttack.text = characterAbilityData.MagicalAttack.ToString();
-        textHealth.text = characterAbilityData.Health.ToString();
-        textDefence.text = characterAbilityData.Defence.ToString();
-        textMagicDefence.text = characterAbilityData.MagicDefence.ToString();
-        textShield.text = characterAbilityData.Shield.ToString();
-        textAccuracy.text = characterAbilityData.Accuracy.ToString();
-        textEvasion.text = characterAbilityData.Evasion.ToString();
-        textCritical.text = characterAbilityData.Critical.ToString();
-        textAttackSpeed.text = characterAbilityData.AttackSpeed.ToString();
+        textAttack.text = characterAbilityData.abilityData.Attack.ToString();
+        textMagicalAttack.text = characterAbilityData.abilityData.MagicalAttack.ToString();
+        textHealth.text = characterAbilityData.abilityData.Health.ToString();
+        textDefence.text = characterAbilityData.abilityData.Defence.ToString();
+        textMagicDefence.text = characterAbilityData.abilityData.MagicDefence.ToString();
+        textShield.text = characterAbilityData.abilityData.Shield.ToString();
+        textAccuracy.text = characterAbilityData.abilityData.Accuracy.ToString();
+        textEvasion.text = characterAbilityData.abilityData.Evasion.ToString();
+        textCritical.text = characterAbilityData.abilityData.Critical.ToString();
+        textAttackSpeed.text = characterAbilityData.abilityData.AttackSpeed.ToString();
     }
 
     private void SetPlusValue()

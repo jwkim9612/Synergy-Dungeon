@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CharacterDataSheet
   m_EditorClassIdentifier: 
   CharacterExcelDatas:
-  - Id: 0
+  - Id: 1
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Tribe: 7
     Origin: 2
@@ -21,7 +21,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_22
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 1
+  - Id: 2
     Name: "\uB55C\uC7A5\uC774"
     Tribe: 7
     Origin: 4
@@ -29,7 +29,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_21
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 2
+  - Id: 3
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Tribe: 7
     Origin: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_23
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 3
+  - Id: 4
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 1
@@ -45,7 +45,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_16
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 4
+  - Id: 5
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 5
@@ -53,7 +53,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_28
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 5
+  - Id: 6
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 2
@@ -61,7 +61,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_FairyDragon
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 6
+  - Id: 7
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Tribe: 3
     Origin: 4
@@ -69,7 +69,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_24
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 7
+  - Id: 8
     Name: "\uB460"
     Tribe: 2
     Origin: 4
@@ -77,7 +77,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Devil/Warrior/DefaultImage
     HeadImagePath: Images/Character/Devil/Warrior/Head
     RuntimeAnimatorControllerPath: Controllers/Devil/Warrior
-  - Id: 8
+  - Id: 9
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Tribe: 2
     Origin: 2
@@ -85,7 +85,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_DevilKnight
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 9
+  - Id: 10
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Tribe: 2
     Origin: 5
@@ -93,7 +93,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_ BlackWizard
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 10
+  - Id: 11
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Tribe: 1
     Origin: 3
@@ -101,7 +101,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_26
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 11
+  - Id: 12
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Tribe: 1
     Origin: 2
@@ -109,7 +109,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_25
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 12
+  - Id: 13
     Name: "\uD4E8\uB9AC\uC628"
     Tribe: 1
     Origin: 5
@@ -117,7 +117,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_27
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 13
+  - Id: 14
     Name: "\uB9AC\uCE58"
     Tribe: 8
     Origin: 5
@@ -125,7 +125,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_14
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 14
+  - Id: 15
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Tribe: 8
     Origin: 4
@@ -133,7 +133,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_13
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 15
+  - Id: 16
     Name: "\uD761\uD608\uADC0"
     Tribe: 8
     Origin: 3
@@ -141,7 +141,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_15
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 16
+  - Id: 17
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Tribe: 5
     Origin: 4
@@ -149,7 +149,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Elf/Warrior/DefaultImage
     HeadImagePath: Images/Character/Elf/Warrior/Head
     RuntimeAnimatorControllerPath: Controllers/Elf/Warrior
-  - Id: 17
+  - Id: 18
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Tribe: 5
     Origin: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Elf/Archer/DefaultImage
     HeadImagePath: Images/Character/Elf/Archer/Head
     RuntimeAnimatorControllerPath: Controllers/Elf/Archer
-  - Id: 18
+  - Id: 19
     Name: "\uC6CC\uB85D"
     Tribe: 5
     Origin: 5
@@ -165,7 +165,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Elf/Wizard/DefaultImage
     HeadImagePath: Images/Character/Elf/Wizard/Head
     RuntimeAnimatorControllerPath: Controllers/Elf/Wizard
-  - Id: 19
+  - Id: 20
     Name: "\uC77C\uC77C\uC774"
     Tribe: 5
     Origin: 3
@@ -173,7 +173,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Elf/Thief/DefaultImage
     HeadImagePath: Images/Character/Elf/Thief/Head
     RuntimeAnimatorControllerPath: Controllers/Elf/Thief
-  - Id: 20
+  - Id: 21
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 4
@@ -181,7 +181,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_17
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 21
+  - Id: 22
     Name: "\uBB3C\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 1
@@ -189,7 +189,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_18
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 22
+  - Id: 23
     Name: "\uBD88\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 2
@@ -197,7 +197,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_19
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 23
+  - Id: 24
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Tribe: 4
     Origin: 5
@@ -205,7 +205,7 @@ MonoBehaviour:
     ImagePath: Images/Old Character/Character_20
     HeadImagePath: 
     RuntimeAnimatorControllerPath: 
-  - Id: 24
+  - Id: 25
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Tribe: 6
     Origin: 4
@@ -213,7 +213,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Human/Warrior/DefaultImage
     HeadImagePath: Images/Character/Human/Warrior/Head
     RuntimeAnimatorControllerPath: Controllers/Human/Warrior
-  - Id: 25
+  - Id: 26
     Name: "\uC2EC\uD310\uAD00"
     Tribe: 6
     Origin: 5
@@ -221,7 +221,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Human/Wizard/DefaultImage
     HeadImagePath: Images/Character/Human/Wizard/Head
     RuntimeAnimatorControllerPath: Controllers/Human/Wizard
-  - Id: 26
+  - Id: 27
     Name: "\uC880\uB3C4\uB451"
     Tribe: 6
     Origin: 3
@@ -229,7 +229,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Human/Thief/DefaultImage
     HeadImagePath: Images/Character/Human/Thief/Head
     RuntimeAnimatorControllerPath: Controllers/Human/Thief
-  - Id: 27
+  - Id: 28
     Name: "\uD638\uD06C\uC544\uC774"
     Tribe: 6
     Origin: 1
@@ -237,7 +237,7 @@ MonoBehaviour:
     ImagePath: Images/Character/Human/Archer/DefaultImage
     HeadImagePath: Images/Character/Human/Archer/Head
     RuntimeAnimatorControllerPath: Controllers/Human/Archer
-  - Id: 28
+  - Id: 29
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Tribe: 6
     Origin: 2

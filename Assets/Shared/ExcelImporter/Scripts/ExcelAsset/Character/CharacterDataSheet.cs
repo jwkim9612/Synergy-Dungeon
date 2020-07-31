@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class CharacterDataSheet : ScriptableObject
+public class CharacterDataSheet : ScriptableObject, IDataSheet
 {
 	public List<CharacterExcelData> CharacterExcelDatas;
 	private Dictionary<int, CharacterData> CharacterDatas;
@@ -146,6 +146,20 @@ public class CharacterDataSheet : ScriptableObject
         {
 			CharacterData characterData = new CharacterData(characterExcelData);
 			CharacterDatas.Add(characterData.Id, characterData);
+        }
+    }
+
+    public void DataValidate()
+    {
+        // 아이디가 고유한 값을 가지는지 확인.
+        List<int> idList = new List<int>();
+
+        foreach (var characterExcelData in CharacterExcelDatas)
+        {
+            if (idList.Contains(characterExcelData.Id))
+            {
+                Debug.Log($"Character 엑셀 데이터 Id : {characterExcelData.Id}값이 겹칩니다.");
+            }
         }
     }
 }

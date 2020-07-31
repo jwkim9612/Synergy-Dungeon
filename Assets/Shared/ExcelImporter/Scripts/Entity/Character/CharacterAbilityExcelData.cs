@@ -1,7 +1,7 @@
 ﻿using System;
 
 [Serializable]
-public class CharacterAbilityData
+public class CharacterAbilityExcelData
 {
     public int Id;
     public string Name;

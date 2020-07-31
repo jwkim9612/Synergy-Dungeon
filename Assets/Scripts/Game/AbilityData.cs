@@ -48,18 +48,32 @@ public class AbilityData
         return abilityDataList;
     }
 
+    public void SetAbilityData(CharacterAbilityExcelData characterAbilityExcelData)
+    {
+        Attack = characterAbilityExcelData.Attack;
+        MagicalAttack = characterAbilityExcelData.MagicalAttack;
+        Health = characterAbilityExcelData.Health;
+        Defence = characterAbilityExcelData.Defence;
+        MagicDefence = characterAbilityExcelData.MagicDefence;
+        Shield = characterAbilityExcelData.Shield;
+        Accuracy = characterAbilityExcelData.Accuracy;
+        Evasion = characterAbilityExcelData.Evasion;
+        Critical = characterAbilityExcelData.Critical;
+        AttackSpeed = characterAbilityExcelData.AttackSpeed;
+    }
+
     public void SetAbilityData(CharacterAbilityData characterAbilityData)
     {
-        Attack = characterAbilityData.Attack;
-        MagicalAttack = characterAbilityData.MagicalAttack;
-        Health = characterAbilityData.Health;
-        Defence = characterAbilityData.Defence;
-        MagicDefence = characterAbilityData.MagicDefence;
-        Shield = characterAbilityData.Shield;
-        Accuracy = characterAbilityData.Accuracy;
-        Evasion = characterAbilityData.Evasion;
-        Critical = characterAbilityData.Critical;
-        AttackSpeed = characterAbilityData.AttackSpeed;
+        Attack = characterAbilityData.abilityData.Attack;
+        MagicalAttack = characterAbilityData.abilityData.MagicalAttack;
+        Health = characterAbilityData.abilityData.Health;
+        Defence = characterAbilityData.abilityData.Defence;
+        MagicDefence = characterAbilityData.abilityData.MagicDefence;
+        Shield = characterAbilityData.abilityData.Shield;
+        Accuracy = characterAbilityData.abilityData.Accuracy;
+        Evasion = characterAbilityData.abilityData.Evasion;
+        Critical = characterAbilityData.abilityData.Critical;
+        AttackSpeed = characterAbilityData.abilityData.AttackSpeed;
     }
 
     public void SetAbilityData(EnemyData enemyData)
@@ -90,7 +104,7 @@ public class AbilityData
         AttackSpeed = runeExcelData.AttackSpeed;
     }
 
-       public void SetAbilityData(ArtifactExcelData artifactExcelData)
+    public void SetAbilityData(ArtifactExcelData artifactExcelData)
     {
         Attack = artifactExcelData.Attack;
         MagicalAttack = artifactExcelData.MagicalAttack;

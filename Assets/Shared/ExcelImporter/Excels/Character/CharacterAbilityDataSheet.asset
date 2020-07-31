@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a71e3e4747ce80744bc85358318fc93a, type: 3}
   m_Name: CharacterAbilityDataSheet
   m_EditorClassIdentifier: 
-  OneStarDatas:
-  - Id: 0
+  OneStarExcelDatas:
+  - Id: 1
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Attack: 91
     MagicalAttack: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
     Evasion: 8
     Critical: 5
     AttackSpeed: 104
-  - Id: 1
+  - Id: 2
     Name: "\uB55C\uC7A5\uC774"
     Attack: 72
     MagicalAttack: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 93
-  - Id: 2
+  - Id: 3
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Attack: 58
     MagicalAttack: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 80
-  - Id: 3
+  - Id: 4
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Attack: 61
     MagicalAttack: 15
@@ -61,7 +61,7 @@ MonoBehaviour:
     Evasion: 8
     Critical: 5
     AttackSpeed: 180
-  - Id: 4
+  - Id: 5
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Attack: 57
     MagicalAttack: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 79
-  - Id: 5
+  - Id: 6
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Attack: 0
     MagicalAttack: 150
@@ -85,7 +85,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 80
-  - Id: 6
+  - Id: 7
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Attack: 50
     MagicalAttack: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 79
-  - Id: 7
+  - Id: 8
     Name: "\uB460"
     Attack: 60
     MagicalAttack: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 91
-  - Id: 8
+  - Id: 9
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Attack: 0
     MagicalAttack: 112
@@ -121,7 +121,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 83
-  - Id: 9
+  - Id: 10
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Attack: 98
     MagicalAttack: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 84
-  - Id: 10
+  - Id: 11
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Attack: 61
     MagicalAttack: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 90
-  - Id: 11
+  - Id: 12
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Attack: 79
     MagicalAttack: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 111
-  - Id: 12
+  - Id: 13
     Name: "\uD4E8\uB9AC\uC628"
     Attack: 0
     MagicalAttack: 90
@@ -169,7 +169,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 86
-  - Id: 13
+  - Id: 14
     Name: "\uB9AC\uCE58"
     Attack: 94
     MagicalAttack: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
     Evasion: 12
     Critical: 100
     AttackSpeed: 118
-  - Id: 14
+  - Id: 15
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Attack: 0
     MagicalAttack: 130
@@ -193,7 +193,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 89
-  - Id: 15
+  - Id: 16
     Name: "\uD761\uD608\uADC0"
     Attack: 64
     MagicalAttack: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 85
-  - Id: 16
+  - Id: 17
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Attack: 68
     MagicalAttack: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
     Evasion: 8
     Critical: 5
     AttackSpeed: 100
-  - Id: 17
+  - Id: 18
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Attack: 112
     MagicalAttack: 11
@@ -229,7 +229,7 @@ MonoBehaviour:
     Evasion: 13
     Critical: 5
     AttackSpeed: 111
-  - Id: 18
+  - Id: 19
     Name: "\uC6CC\uB85D"
     Attack: 0
     MagicalAttack: 90
@@ -241,7 +241,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 82
-  - Id: 19
+  - Id: 20
     Name: "\uC77C\uC77C\uC774"
     Attack: 73
     MagicalAttack: 0
@@ -253,7 +253,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 88
-  - Id: 20
+  - Id: 21
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Attack: 71
     MagicalAttack: 15
@@ -265,7 +265,7 @@ MonoBehaviour:
     Evasion: 8
     Critical: 5
     AttackSpeed: 101
-  - Id: 21
+  - Id: 22
     Name: "\uBB3C\uC758 \uC815\uB839"
     Attack: 80
     MagicalAttack: 20
@@ -277,7 +277,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 98
-  - Id: 22
+  - Id: 23
     Name: "\uBD88\uC758 \uC815\uB839"
     Attack: 0
     MagicalAttack: 64
@@ -289,7 +289,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 86
-  - Id: 23
+  - Id: 24
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Attack: 55
     MagicalAttack: 12
@@ -301,7 +301,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 88
-  - Id: 24
+  - Id: 25
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Attack: 138
     MagicalAttack: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
     Evasion: 8
     Critical: 5
     AttackSpeed: 104
-  - Id: 25
+  - Id: 26
     Name: "\uC2EC\uD310\uAD00"
     Attack: 65
     MagicalAttack: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 94
-  - Id: 26
+  - Id: 27
     Name: "\uC880\uB3C4\uB451"
     Attack: 65
     MagicalAttack: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
     Evasion: 10
     Critical: 5
     AttackSpeed: 101
-  - Id: 27
+  - Id: 28
     Name: "\uD638\uD06C\uC544\uC774"
     Attack: 0
     MagicalAttack: 80
@@ -349,7 +349,7 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 85
-  - Id: 28
+  - Id: 29
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Attack: 999
     MagicalAttack: 0
@@ -361,8 +361,8 @@ MonoBehaviour:
     Evasion: 6
     Critical: 5
     AttackSpeed: 87
-  TwoStarDatas:
-  - Id: 0
+  TwoStarExcelDatas:
+  - Id: 1
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Attack: 163
     MagicalAttack: 0
@@ -374,7 +374,7 @@ MonoBehaviour:
     Evasion: 14
     Critical: 5
     AttackSpeed: 104
-  - Id: 1
+  - Id: 2
     Name: "\uB55C\uC7A5\uC774"
     Attack: 129
     MagicalAttack: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 93
-  - Id: 2
+  - Id: 3
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Attack: 104
     MagicalAttack: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 80
-  - Id: 3
+  - Id: 4
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Attack: 109
     MagicalAttack: 27
@@ -410,7 +410,7 @@ MonoBehaviour:
     Evasion: 14
     Critical: 5
     AttackSpeed: 180
-  - Id: 4
+  - Id: 5
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Attack: 102
     MagicalAttack: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 79
-  - Id: 5
+  - Id: 6
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Attack: 0
     MagicalAttack: 269
@@ -434,7 +434,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 80
-  - Id: 6
+  - Id: 7
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Attack: 90
     MagicalAttack: 0
@@ -446,7 +446,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 79
-  - Id: 7
+  - Id: 8
     Name: "\uB460"
     Attack: 107
     MagicalAttack: 0
@@ -458,7 +458,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 91
-  - Id: 8
+  - Id: 9
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Attack: 0
     MagicalAttack: 200
@@ -470,7 +470,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 83
-  - Id: 9
+  - Id: 10
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Attack: 175
     MagicalAttack: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 84
-  - Id: 10
+  - Id: 11
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Attack: 109
     MagicalAttack: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 90
-  - Id: 11
+  - Id: 12
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Attack: 141
     MagicalAttack: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
     Evasion: 22
     Critical: 5
     AttackSpeed: 111
-  - Id: 12
+  - Id: 13
     Name: "\uD4E8\uB9AC\uC628"
     Attack: 0
     MagicalAttack: 161
@@ -518,7 +518,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 86
-  - Id: 13
+  - Id: 14
     Name: "\uB9AC\uCE58"
     Attack: 168
     MagicalAttack: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 118
-  - Id: 14
+  - Id: 15
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Attack: 0
     MagicalAttack: 233
@@ -542,7 +542,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 89
-  - Id: 15
+  - Id: 16
     Name: "\uD761\uD608\uADC0"
     Attack: 114
     MagicalAttack: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 85
-  - Id: 16
+  - Id: 17
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Attack: 122
     MagicalAttack: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
     Evasion: 14
     Critical: 5
     AttackSpeed: 100
-  - Id: 17
+  - Id: 18
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Attack: 200
     MagicalAttack: 20
@@ -578,7 +578,7 @@ MonoBehaviour:
     Evasion: 26
     Critical: 5
     AttackSpeed: 111
-  - Id: 18
+  - Id: 19
     Name: "\uC6CC\uB85D"
     Attack: 0
     MagicalAttack: 161
@@ -590,7 +590,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 82
-  - Id: 19
+  - Id: 20
     Name: "\uC77C\uC77C\uC774"
     Attack: 131
     MagicalAttack: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 88
-  - Id: 20
+  - Id: 21
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Attack: 127
     MagicalAttack: 27
@@ -614,7 +614,7 @@ MonoBehaviour:
     Evasion: 14
     Critical: 5
     AttackSpeed: 101
-  - Id: 21
+  - Id: 22
     Name: "\uBB3C\uC758 \uC815\uB839"
     Attack: 143
     MagicalAttack: 36
@@ -626,7 +626,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 98
-  - Id: 22
+  - Id: 23
     Name: "\uBD88\uC758 \uC815\uB839"
     Attack: 0
     MagicalAttack: 115
@@ -638,7 +638,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 86
-  - Id: 23
+  - Id: 24
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Attack: 98
     MagicalAttack: 21
@@ -650,7 +650,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 88
-  - Id: 24
+  - Id: 25
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Attack: 247
     MagicalAttack: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
     Evasion: 14
     Critical: 5
     AttackSpeed: 104
-  - Id: 25
+  - Id: 26
     Name: "\uC2EC\uD310\uAD00"
     Attack: 116
     MagicalAttack: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 94
-  - Id: 26
+  - Id: 27
     Name: "\uC880\uB3C4\uB451"
     Attack: 116
     MagicalAttack: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
     Evasion: 20
     Critical: 5
     AttackSpeed: 101
-  - Id: 27
+  - Id: 28
     Name: "\uD638\uD06C\uC544\uC774"
     Attack: 0
     MagicalAttack: 143
@@ -698,7 +698,7 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 85
-  - Id: 28
+  - Id: 29
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Attack: 118
     MagicalAttack: 0
@@ -710,8 +710,8 @@ MonoBehaviour:
     Evasion: 11
     Critical: 5
     AttackSpeed: 87
-  ThreeStarDatas:
-  - Id: 0
+  ThreeStarExcelDatas:
+  - Id: 1
     Name: "\uACE0\uCCA0\uAC70\uC778"
     Attack: 272
     MagicalAttack: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 104
-  - Id: 1
+  - Id: 2
     Name: "\uB55C\uC7A5\uC774"
     Attack: 215
     MagicalAttack: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 93
-  - Id: 2
+  - Id: 3
     Name: "\uC790\uC774\uB85C\uCF65\uD130"
     Attack: 173
     MagicalAttack: 0
@@ -747,7 +747,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 80
-  - Id: 3
+  - Id: 4
     Name: "\uACE0\uC2A4\uD2B8 \uB4DC\uB798\uACE4"
     Attack: 182
     MagicalAttack: 45
@@ -759,7 +759,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 180
-  - Id: 4
+  - Id: 5
     Name: "\uADF8\uB9B0 \uB4DC\uB798\uACE4"
     Attack: 170
     MagicalAttack: 0
@@ -771,7 +771,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 79
-  - Id: 5
+  - Id: 6
     Name: "\uBCF4\uB77C \uB4DC\uB798\uACE4"
     Attack: 0
     MagicalAttack: 449
@@ -783,7 +783,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 80
-  - Id: 6
+  - Id: 7
     Name: "\uC218\uC815 \uB4DC\uB798\uACE4"
     Attack: 150
     MagicalAttack: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 79
-  - Id: 7
+  - Id: 8
     Name: "\uB460"
     Attack: 179
     MagicalAttack: 0
@@ -807,7 +807,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 91
-  - Id: 8
+  - Id: 9
     Name: "\uC545\uB9C8\uC758 \uAE30\uC0AC"
     Attack: 0
     MagicalAttack: 335
@@ -819,7 +819,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 83
-  - Id: 9
+  - Id: 10
     Name: "\uD751\uB9C8\uBC95\uC0AC"
     Attack: 293
     MagicalAttack: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 84
-  - Id: 10
+  - Id: 11
     Name: "\uC2A4\uD0EC\uD53C\uB4DC"
     Attack: 182
     MagicalAttack: 0
@@ -843,7 +843,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 90
-  - Id: 11
+  - Id: 12
     Name: "\uCF04\uD0C0\uC6B0\uB85C\uC2A4"
     Attack: 236
     MagicalAttack: 0
@@ -855,7 +855,7 @@ MonoBehaviour:
     Evasion: 33
     Critical: 5
     AttackSpeed: 111
-  - Id: 12
+  - Id: 13
     Name: "\uD4E8\uB9AC\uC628"
     Attack: 0
     MagicalAttack: 269
@@ -867,7 +867,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 86
-  - Id: 13
+  - Id: 14
     Name: "\uB9AC\uCE58"
     Attack: 281
     MagicalAttack: 0
@@ -879,7 +879,7 @@ MonoBehaviour:
     Evasion: 36
     Critical: 5
     AttackSpeed: 118
-  - Id: 14
+  - Id: 15
     Name: "\uD574\uACE8 \uBCD1\uC0AC"
     Attack: 0
     MagicalAttack: 389
@@ -891,7 +891,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 89
-  - Id: 15
+  - Id: 16
     Name: "\uD761\uD608\uADC0"
     Attack: 191
     MagicalAttack: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 85
-  - Id: 16
+  - Id: 17
     Name: "\uC5D8\uD504 \uAC80\uC0AC"
     Attack: 203
     MagicalAttack: 0
@@ -915,7 +915,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 100
-  - Id: 17
+  - Id: 18
     Name: "\uC6B0\uB4DC \uC5D8\uD504"
     Attack: 335
     MagicalAttack: 33
@@ -927,7 +927,7 @@ MonoBehaviour:
     Evasion: 39
     Critical: 5
     AttackSpeed: 111
-  - Id: 18
+  - Id: 19
     Name: "\uC6CC\uB85D"
     Attack: 0
     MagicalAttack: 269
@@ -939,7 +939,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 82
-  - Id: 19
+  - Id: 20
     Name: "\uC77C\uC77C\uC774"
     Attack: 218
     MagicalAttack: 0
@@ -951,7 +951,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 88
-  - Id: 20
+  - Id: 21
     Name: "\uB300\uC9C0\uC758 \uC815\uB839"
     Attack: 212
     MagicalAttack: 45
@@ -963,7 +963,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 101
-  - Id: 21
+  - Id: 22
     Name: "\uBB3C\uC758 \uC815\uB839"
     Attack: 239
     MagicalAttack: 60
@@ -975,7 +975,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 98
-  - Id: 22
+  - Id: 23
     Name: "\uBD88\uC758 \uC815\uB839"
     Attack: 0
     MagicalAttack: 191
@@ -987,7 +987,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 86
-  - Id: 23
+  - Id: 24
     Name: "\uC815\uC2E0\uC758 \uC815\uB839"
     Attack: 164
     MagicalAttack: 36
@@ -999,7 +999,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 88
-  - Id: 24
+  - Id: 25
     Name: "\uB3C4\uB07C \uC804\uC0AC"
     Attack: 413
     MagicalAttack: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     Evasion: 24
     Critical: 5
     AttackSpeed: 104
-  - Id: 25
+  - Id: 26
     Name: "\uC2EC\uD310\uAD00"
     Attack: 194
     MagicalAttack: 0
@@ -1023,7 +1023,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 94
-  - Id: 26
+  - Id: 27
     Name: "\uC880\uB3C4\uB451"
     Attack: 194
     MagicalAttack: 0
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     Evasion: 30
     Critical: 5
     AttackSpeed: 101
-  - Id: 27
+  - Id: 28
     Name: "\uD638\uD06C\uC544\uC774"
     Attack: 0
     MagicalAttack: 239
@@ -1047,7 +1047,7 @@ MonoBehaviour:
     Evasion: 18
     Critical: 5
     AttackSpeed: 85
-  - Id: 28
+  - Id: 29
     Name: "\uD640\uB9AC \uB098\uC774\uD2B8"
     Attack: 197
     MagicalAttack: 0

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class InGameExpDataSheet : ScriptableObject
+public class InGameExpDataSheet : ScriptableObject, IDataSheet
 {
 	public List<InGameExpExcelData> InGameExpExcelDatas;
     private Dictionary<int, InGameExpData> InGameExpDatas;
@@ -50,6 +50,20 @@ public class InGameExpDataSheet : ScriptableObject
         {
             InGameExpData inGameExpData = new InGameExpData(inGameExpExcelData);
             InGameExpDatas.Add(inGameExpData.Level, inGameExpData);
+        }
+    }
+
+    public void DataValidate()
+    {
+        // 레벨이 고유한 값을 가지는지 확인.
+        List<int> levelList = new List<int>();
+
+        foreach (var inGameExpExcelData in InGameExpExcelDatas)
+        {
+            if (levelList.Contains(inGameExpExcelData.Level))
+            {
+                Debug.Log($"InGameExp 엑셀 데이터 Level : {inGameExpExcelData.Level}값이 겹칩니다.");
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class OriginDataSheet : ScriptableObject
+public class OriginDataSheet : ScriptableObject, IDataSheet
 {
 	public List<OriginExcelData> OriginExcelDatas;
 	private Dictionary<Origin, OriginData> OriginDatas;
@@ -63,4 +63,18 @@ public class OriginDataSheet : ScriptableObject
 			OriginDatas.Add(originData.Origin, originData);
 		}
 	}
+
+    public void DataValidate()
+    {
+        // Origin이 고유한 값을 가지는지 확인.
+        List<Origin> originList = new List<Origin>();
+
+        foreach (var originExcelData in OriginExcelDatas)
+        {
+            if (originList.Contains(originExcelData.Name))
+            {
+                Debug.Log($"Origin 엑셀 데이터 Origin : {originExcelData.Name}값이 겹칩니다.");
+            }
+        }
+    }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 
 [ExcelAsset]
-public class InGameEvent_ScenarioDataSheet : ScriptableObject
+public class InGameEvent_ScenarioDataSheet : ScriptableObject, IDataSheet
 {
     public List<ScenarioExcelData> ScenarioExcelDatas;
 
@@ -113,7 +113,7 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
     {
         probability = 0;
 
-        if(TryGetScenarioData(chapterId, waveId, scenarioId, out var data))
+        if (TryGetScenarioData(chapterId, waveId, scenarioId, out var data))
         {
             probability = data.ScenarioProbability;
             return true;
@@ -121,5 +121,10 @@ public class InGameEvent_ScenarioDataSheet : ScriptableObject
 
         Debug.LogWarning($"Error TryGetScenarioProbability chapterId:{chapterId} waveId:{waveId} scenarioId:{scenarioId}");
         return false;
+    }
+
+    public void DataValidate()
+    {
+        // id와 같은 고유한 값이 없음
     }
 }

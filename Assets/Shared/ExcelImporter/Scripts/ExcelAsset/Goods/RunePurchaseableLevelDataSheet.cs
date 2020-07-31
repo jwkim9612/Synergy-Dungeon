@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class RunePurchaseableLevelDataSheet : ScriptableObject
+public class RunePurchaseableLevelDataSheet : ScriptableObject, IDataSheet
 {
 	public List<RunePurchaseableLevelExcelData> RunePurchaseableLevelExcelDatas;
     private Dictionary<int, RunePurchaseableLevelData> RunePurchaseableLevelDatas;
@@ -64,4 +64,18 @@ public class RunePurchaseableLevelDataSheet : ScriptableObject
 			RunePurchaseableLevelDatas.Add(runePurchaseableLevelData.SalesId, runePurchaseableLevelData);
 		}
 	}
+
+    public void DataValidate()
+    {
+        // 룬 구매가능 레벨이 고유한 값을 가지는지 확인.
+        List<int> levelList = new List<int>();
+
+        foreach (var runePurchaseableLevelExcelData in RunePurchaseableLevelExcelDatas)
+        {
+            if (levelList.Contains(runePurchaseableLevelExcelData.PurchaseableLevel))
+            {
+                Debug.Log($"RunePurchaseableLevel 엑셀 데이터 PurchaseableLevel : {runePurchaseableLevelExcelData.PurchaseableLevel}값이 겹칩니다.");
+            }
+        }
+    }
 }

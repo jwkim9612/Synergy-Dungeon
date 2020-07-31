@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class ProbabilityDataSheet : ScriptableObject
+public class ProbabilityDataSheet : ScriptableObject, IDataSheet
 {
 	public List<ProbabilityExcelData> ProbabilityExcelDatas;
     private Dictionary<int, ProbabilityData> ProbabilityDatas;
@@ -36,6 +36,20 @@ public class ProbabilityDataSheet : ScriptableObject
         {
             ProbabilityData probabilityData = new ProbabilityData(probabilityExcelData);
             ProbabilityDatas.Add(probabilityData.Level, probabilityData);
+        }
+    }
+
+    public void DataValidate()
+    {
+        // 레벨이 고유한 값을 가지는지 확인.
+        List<int> levelList = new List<int>();
+
+        foreach (var probabilityExcelData in ProbabilityExcelDatas)
+        {
+            if (levelList.Contains(probabilityExcelData.Level))
+            {
+                Debug.Log($"Probability 엑셀 데이터 Level : {probabilityExcelData.Level}값이 겹칩니다.");
+            }
         }
     }
 }

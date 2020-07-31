@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class ChapterDataSheet : ScriptableObject
+public class ChapterDataSheet : ScriptableObject, IDataSheet
 {
 	public List<ChapterExcelData> ChapterExcelDatas;
 	private Dictionary<int, ChapterData> ChapterDatas;
@@ -101,4 +101,18 @@ public class ChapterDataSheet : ScriptableObject
 			ChapterDatas.Add(chapterData.Id, chapterData);
 		}
 	}
+
+	public void DataValidate()
+	{
+		// 아이디가 고유한 값을 가지는지 확인
+        List<int> idList = new List<int>();
+
+        foreach (var chapterExcelData in ChapterExcelDatas)
+        {
+            if (idList.Contains(chapterExcelData.Id))
+            {
+                Debug.Log($"Chapter 엑셀 데이터 Id : {chapterExcelData.Id}값이 겹칩니다.");
+            }
+        }
+    }
 }

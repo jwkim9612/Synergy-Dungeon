@@ -59,7 +59,14 @@ public class UICharacter : MonoBehaviour
         }
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
-            character.SetAbility(DataBase.Instance.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), origin);
+            int Id = characterInfo.id;
+            int star = characterInfo.star;
+
+            var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+            if(characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
+            {
+                character.SetAbility(abilityData, origin);
+            }
         }
 
         character.OnIsDead += OnHide;
@@ -141,7 +148,16 @@ public class UICharacter : MonoBehaviour
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
             characterInfo.IncreaseStar();
-            character.SetAbility(DataBase.Instance.characterAbilityDataSheet.GetAbilityDataByStar(characterInfo), origin);
+
+            int id = characterInfo.id;
+            int star = characterInfo.star;
+
+            var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+            if (characterAbilityDataSheet.TryGetCharacterAbilityData(id, star, out var abilityData))
+            {
+                character.SetAbility(abilityData, origin);
+            }
+
             InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
             Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
             // 파티클 재생 함수

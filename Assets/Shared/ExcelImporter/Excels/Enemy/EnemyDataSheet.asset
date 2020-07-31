@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyDataSheet
   m_EditorClassIdentifier: 
   EnemyExcelDatas:
-  - Id: 0
+  - Id: 1
     Name: "\uC2A4\uCEEC (\uB179)"
     Attack: 50
     MagicalAttack: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     AttackSpeed: 77
     ImagePath: Images/Enemy/Skull/Green
     RuntimeAnimatorControllerPath: 
-  - Id: 1
+  - Id: 2
     Name: "\uC2A4\uCEEC (\uD669)"
     Attack: 58
     MagicalAttack: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
     AttackSpeed: 78
     ImagePath: Images/Enemy/Skull/Yellow
     RuntimeAnimatorControllerPath: 
-  - Id: 2
+  - Id: 3
     Name: "\uC2A4\uCEEC (\uCCAD)"
     Attack: 66
     MagicalAttack: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     AttackSpeed: 79
     ImagePath: Images/Enemy/Skull/Blue
     RuntimeAnimatorControllerPath: 
-  - Id: 3
+  - Id: 4
     Name: "\uC2A4\uCEEC (\uC801)"
     Attack: 74
     MagicalAttack: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     AttackSpeed: 80
     ImagePath: Images/Enemy/Skull/Red
     RuntimeAnimatorControllerPath: 
-  - Id: 4
+  - Id: 5
     Name: "\uC2A4\uCEEC (\uC790\uC8FC)"
     Attack: 82
     MagicalAttack: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     AttackSpeed: 81
     ImagePath: Images/Enemy/Skull/Purple
     RuntimeAnimatorControllerPath: 
-  - Id: 5
+  - Id: 6
     Name: "\uC2A4\uCEEC \uC655"
     Attack: 110
     MagicalAttack: 10
@@ -97,7 +97,7 @@ MonoBehaviour:
     AttackSpeed: 88
     ImagePath: Images/Enemy/Skull/King
     RuntimeAnimatorControllerPath: 
-  - Id: 6
+  - Id: 7
     Name: "\uACE0\uACE0\uACE0\uC591\uC774"
     Attack: 60
     MagicalAttack: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     AttackSpeed: 79
     ImagePath: Images/Tribe/Logo_HUMAN
     RuntimeAnimatorControllerPath: 
-  - Id: 7
+  - Id: 8
     Name: "\uB0AD\uB9CC\uACE0\uC591\uC774"
     Attack: 60
     MagicalAttack: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
     AttackSpeed: 79
     ImagePath: Images/Tribe/Logo_HUMAN
     RuntimeAnimatorControllerPath: 
-  - Id: 8
+  - Id: 9
     Name: "\uC0BC\uC0C9\uACE0\uC591\uC774"
     Attack: 60
     MagicalAttack: 0
@@ -139,22 +139,8 @@ MonoBehaviour:
     AttackSpeed: 79
     ImagePath: Images/Tribe/Logo_HUMAN
     RuntimeAnimatorControllerPath: 
-  - Id: 9
-    Name: "\uC9DC\uC7A5\uACE0\uC591\uC774"
-    Attack: 60
-    MagicalAttack: 0
-    Health: 250
-    Defence: 10
-    MagicDefence: 10
-    Shield: 0
-    Accuracy: 100
-    Evasion: 3
-    Critical: 5
-    AttackSpeed: 79
-    ImagePath: Images/Tribe/Logo_HUMAN
-    RuntimeAnimatorControllerPath: 
   - Id: 10
-    Name: "\uB3FC\uC9C0\uACE0\uC591\uC774"
+    Name: "\uC9DC\uC7A5\uACE0\uC591\uC774"
     Attack: 60
     MagicalAttack: 0
     Health: 250
@@ -280,6 +266,20 @@ MonoBehaviour:
     ImagePath: Images/Tribe/Logo_HUMAN
     RuntimeAnimatorControllerPath: 
   - Id: 19
+    Name: "\uB3FC\uC9C0\uACE0\uC591\uC774"
+    Attack: 60
+    MagicalAttack: 0
+    Health: 250
+    Defence: 10
+    MagicDefence: 10
+    Shield: 0
+    Accuracy: 100
+    Evasion: 3
+    Critical: 5
+    AttackSpeed: 79
+    ImagePath: Images/Tribe/Logo_HUMAN
+    RuntimeAnimatorControllerPath: 
+  - Id: 20
     Name: "\uCC9C\uC0AC\uACE0\uC591\uC774"
     Attack: 0
     MagicalAttack: 0

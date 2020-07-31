@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class ArtifactDataSheet : ScriptableObject
+public class ArtifactDataSheet : ScriptableObject, IDataSheet
 {
 	public List<ArtifactExcelData> ArtifactExcelDatas;
     private Dictionary<int, ArtifactData> ArtifactDatas;
@@ -45,5 +45,19 @@ public class ArtifactDataSheet : ScriptableObject
 
         Debug.LogError("Error TryGetArtifactDatas");
         return false;
+    }
+
+    public void DataValidate()
+    {
+        // 아이디가 고유한 값을 가지는지 확인.
+        List<int> idList = new List<int>();
+
+        foreach (var artifactExcelData in ArtifactExcelDatas)
+        {
+            if (idList.Contains(artifactExcelData.Id))
+            {
+                Debug.Log($"Artifact 엑셀 데이터 Id : {artifactExcelData.Id}값이 겹칩니다.");
+            }
+        }
     }
 }

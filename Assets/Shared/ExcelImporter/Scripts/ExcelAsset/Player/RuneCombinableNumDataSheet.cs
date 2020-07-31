@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class RuneCombinableNumDataSheet : ScriptableObject
+public class RuneCombinableNumDataSheet : ScriptableObject, IDataSheet
 {
 	public List<RuneCombinableNumExcelData> RuneCombinableNumExcelDatas;
     private Dictionary<RuneGrade, int> RuneCombinableNumDatas;
@@ -37,5 +37,19 @@ public class RuneCombinableNumDataSheet : ScriptableObject
 
         Debug.LogError($"Error TryGetRuneCombinableNum grade:{grade}");
         return false;
+    }
+
+    public void DataValidate()
+    {
+        // 등급이 고유한 값을 가지는지 확인.
+        List<RuneGrade> gradeList = new List<RuneGrade>();
+
+        foreach (var runeCombinableNumExcelData in RuneCombinableNumExcelDatas)
+        {
+            if (gradeList.Contains(runeCombinableNumExcelData.Grade))
+            {
+                Debug.Log($"RuneCombinableNum 엑셀 데이터 Grade : {runeCombinableNumExcelData.Grade}값이 겹칩니다.");
+            }
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class PotionDataSheet : ScriptableObject
+public class PotionDataSheet : ScriptableObject, IDataSheet
 {
     public List<PotionExcelData> PotionExcelDatas;
     private Dictionary<int, PotionData> PotionDatas;
@@ -63,5 +63,19 @@ public class PotionDataSheet : ScriptableObject
 
         Debug.LogError("Error TryGetPotionDatas");
         return false;
+    }
+
+    public void DataValidate()
+    {
+        // 아이디가 고유한 값을 가지는지 확인.
+        List<int> idList = new List<int>();
+
+        foreach (var potionExcelData in PotionExcelDatas)
+        {
+            if (idList.Contains(potionExcelData.Id))
+            {
+                Debug.Log($"Potion 엑셀 데이터 Id : {potionExcelData.Id}값이 겹칩니다.");
+            }
+        }
     }
 }

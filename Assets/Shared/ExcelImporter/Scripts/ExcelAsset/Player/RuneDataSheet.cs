@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class RuneDataSheet : ScriptableObject
+public class RuneDataSheet : ScriptableObject, IDataSheet
 {
 	public List<RuneExcelData> RuneExcelDatas;
     private Dictionary<int, RuneData> RuneDatas;
@@ -48,6 +48,20 @@ public class RuneDataSheet : ScriptableObject
         {
             RuneData runeData = new RuneData(runeExcelData);
             RuneDatas.Add(runeData.Id, runeData);
+        }
+    }
+
+    public void DataValidate()
+    {
+        // 아이디가 고유한 값을 가지는지 확인.
+        List<int> idList = new List<int>();
+
+        foreach (var runeExcelData in RuneExcelDatas)
+        {
+            if (idList.Contains(runeExcelData.Id))
+            {
+                Debug.Log($"Rune 엑셀 데이터 Grade : {runeExcelData.Id}값이 겹칩니다.");
+            }
         }
     }
 }

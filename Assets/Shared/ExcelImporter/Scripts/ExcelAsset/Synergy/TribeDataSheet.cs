@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
-public class TribeDataSheet : ScriptableObject
+public class TribeDataSheet : ScriptableObject, IDataSheet
 {
 	public List<TribeExcelData> TribeExcelDatas;
 	private Dictionary<Tribe, TribeData> TribeDatas;
@@ -63,4 +63,18 @@ public class TribeDataSheet : ScriptableObject
 			TribeDatas.Add(tribeData.Tribe, tribeData);
 		}
 	}
+
+    public void DataValidate()
+    {
+        // Tribe가 고유한 값을 가지는지 확인.
+        List<Tribe> tribeList = new List<Tribe>();
+
+        foreach (var tribeExcelData in TribeExcelDatas)
+        {
+            if (tribeList.Contains(tribeExcelData.Name))
+            {
+                Debug.Log($"Tribe 엑셀 데이터 Tribe : {tribeExcelData.Name}값이 겹칩니다.");
+            }
+        }
+    }
 }
