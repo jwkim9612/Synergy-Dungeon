@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 public class UIPrepareArea : Arranger
 {
@@ -13,7 +11,6 @@ public class UIPrepareArea : Arranger
             var prepareAreaInfoList = SaveManager.Instance.inGameSaveData.PrepareAreaInfoList;
 
             SetUICharacterList(prepareAreaInfoList);
-            InitializePrepareCharacterPositions();
         }
 
         InGameManager.instance.gameState.OnBattle += HideAllCharacters;

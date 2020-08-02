@@ -9,8 +9,8 @@ public class UIAskGoToStore : UIControl
 
     [SerializeField] private RectTransform goldGoods = null;
     [SerializeField] private RectTransform diamondGoods = null;
-    [SerializeField] private RectTransform HeartGoods = null;
-    private RectTransform target;
+
+    private PurchaseCurrency purchaseCurrency;
 
     public void Initialize()
     {
@@ -21,34 +21,45 @@ public class UIAskGoToStore : UIControl
     {
         goToStoreButton.onClick.AddListener(() =>
         {
-            MainManager.instance.backCanvas.uiMainMenu.simpleScrollSnap.GoToPanel(MainService.INDEX_OF_STORE);
-            MainManager.instance.backCanvas.uiMainMenu.uiStore.scrollView.GoToTarget(target);
             UIManager.Instance.HideAndShowPreview();
+
+            switch (purchaseCurrency)
+            {
+                case PurchaseCurrency.Gold:
+                    UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiPurchaseGold);
+                    break;
+                case PurchaseCurrency.Diamond:
+                    
+                    break;
+                default:
+                    Debug.LogError("Error SetGoToStoreButton");
+                    break;
+            }
         });
     }
 
-    public void SetText(PurchaseCurrency purchaseCurrency)
+    public void SetText()
     {
         switch (purchaseCurrency)
         {
             case PurchaseCurrency.Gold:
                 titleText.text = "골드 부족!";
                 contentText.text = "골드가 부족합니다. 상점에서 더 구매하세요!";
-                target = goldGoods;
                 break;
             case PurchaseCurrency.Diamond:
                 titleText.text = "보석 부족!";
                 contentText.text = "보석이 부족합니다. 상점에서 더 구매하세요!";
-                target = diamondGoods;
-                break;
-            case PurchaseCurrency.Heart:
-                titleText.text = "하트 부족!";
-                contentText.text = "하트가 부족합니다. 상점에서 더 구매하세요!";
-                target = HeartGoods;
                 break;
             default:
                 Debug.LogError("Error UIAskGoToStore SetText");
                 break;
         }
+    }
+
+    public void SetPurchaseCurrency(PurchaseCurrency purchaseCurrency)
+    {
+        this.purchaseCurrency = purchaseCurrency;
+
+        SetText();
     }
 }

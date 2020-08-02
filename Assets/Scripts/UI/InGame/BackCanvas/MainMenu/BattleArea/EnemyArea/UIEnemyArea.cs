@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIEnemyArea : MonoBehaviour
@@ -9,15 +10,24 @@ public class UIEnemyArea : MonoBehaviour
     public void Initialize()
     {
         InGameManager.instance.gameState.OnBattle += InitializeEnemyPositions;
-        //InGameManager.instance.gameState.OnPrepare += InitializeEnemyPositions;
         InGameManager.instance.gameState.OnPrepare += CreateEnemies;
 
         frontArea.Initialize();
         backArea.Initialize();
     }
 
+    // 2~3프레임 쉬지않으면 이상한 위치에 생성되어 코루틴을 사용
     public void CreateEnemies()
     {
+        StartCoroutine(Co_CreateEnemies());
+    }
+
+    IEnumerator Co_CreateEnemies()
+    {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+
         var currentWaveData = StageManager.Instance.currentChapterData.chapterInfoDatas[StageManager.Instance.currentWave];
         var frontIdList = currentWaveData.FrontIdList;
         var backIdList = currentWaveData.BackIdList;
@@ -26,7 +36,7 @@ public class UIEnemyArea : MonoBehaviour
         if (enemyDataSheet == null)
         {
             Debug.LogError("Error enemyDataSheet is null");
-            return;
+            yield break;
         }
 
         int currentEnemyIndex = 0;

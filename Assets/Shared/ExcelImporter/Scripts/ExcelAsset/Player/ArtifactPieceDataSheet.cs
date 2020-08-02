@@ -130,6 +130,10 @@ public class ArtifactPieceDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"ArtifactPiece ø¢ºø µ•¿Ã≈Õ Id : {artifactPieceExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(artifactPieceExcelData.Id);
+            }
         }
     }
 }

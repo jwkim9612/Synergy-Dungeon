@@ -15,6 +15,11 @@ public class UIHPBar : MonoBehaviour
         InGameManager.instance.gameState.OnBattle += InitializeAfterImageSlider;
     }
 
+    public void SetHeight(Sprite sprite)
+    {
+
+    }
+
     public void SetUpdateHPBarAndAfterImage()
     {
         controllingPawn.OnHit += UpdateHPBarAndAfterImage;

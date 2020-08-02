@@ -62,6 +62,10 @@ public class RuneDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Rune ø¢ºø µ•¿Ã≈Õ Grade : {runeExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(runeExcelData.Id);
+            }
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 public class UICharacterPlacementArea : Arranger
 {
@@ -119,17 +117,6 @@ public class UICharacterPlacementArea : Arranger
                 continue;
 
             StartCoroutine(uiCharacter.Co_FollowCharacter());
-        }
-    }
-
-    public void InitializePrepareCharacterPositions()
-    {
-        foreach (var uiCharacter in uiCharacters)
-        {
-            if (uiCharacter.character == null)
-                continue;
-
-            StartCoroutine(uiCharacter.Co_PrepareFollowCharacter());
         }
     }
 }

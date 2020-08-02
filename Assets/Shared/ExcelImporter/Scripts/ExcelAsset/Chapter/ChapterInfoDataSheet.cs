@@ -147,6 +147,10 @@ public class ChapterInfoDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"ChapterInfo ø¢ºø µ•¿Ã≈Õ WaveId : {chapterInfoExcelData.WaveId}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
-        }
+			else
+			{
+				idList.Add(chapterInfoExcelData.WaveId);
+			}
+		}
     }
 }

@@ -50,6 +50,10 @@ public class GoodsDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Goods ø¢ºø µ•¿Ã≈Õ Id : {goodsExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(goodsExcelData.Id);
+            }
         }
     }
 }

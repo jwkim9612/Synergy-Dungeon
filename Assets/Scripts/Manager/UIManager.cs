@@ -86,18 +86,18 @@ public class UIManager : MonoSingleton<UIManager>
     {
         if (uiHistory.Count != 0)
         {
+            uiHistory.Pop().OnHide();
+
             //
-            if (isInGame())
+            if (uiHistory.Count == 0)
             {
-                if (exitUIControl.gameObject.activeSelf)
+                if (isInGame())
                 {
                     var currentSpeed = InGameManager.instance.backCanvas.uiBottomMenu.uiBattleMenu.uiSpeedController.currentSpeed;
                     Time.timeScale = currentSpeed;
                 }
             }
             //
-
-            uiHistory.Pop().OnHide();
             
             if (uiHistory.Count != 0)
             {

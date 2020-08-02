@@ -75,7 +75,11 @@ public class RunePurchaseableLevelDataSheet : ScriptableObject, IDataSheet
             if (levelList.Contains(runePurchaseableLevelExcelData.PurchaseableLevel))
             {
                 Debug.Log($"RunePurchaseableLevel ø¢ºø µ•¿Ã≈Õ PurchaseableLevel : {runePurchaseableLevelExcelData.PurchaseableLevel}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
-            }
-        }
+			}
+			else
+			{
+				levelList.Add(runePurchaseableLevelExcelData.PurchaseableLevel);
+			}
+		}
     }
 }

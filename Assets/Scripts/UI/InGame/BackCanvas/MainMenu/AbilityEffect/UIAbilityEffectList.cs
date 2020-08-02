@@ -154,6 +154,8 @@ public class UIAbilityEffectList : MonoBehaviour
     {
         var uiabilityEffect = Instantiate(this.uiAbilityEffect, transform);
         var abilityEffect = uiabilityEffect.SetabilityEffect(scenarioData);
+
+        uiabilityEffect.Initialize();
         uiabilityEffect.OnShow();
 
         uiAbilityEffectList.Add(uiabilityEffect);

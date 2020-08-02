@@ -50,6 +50,10 @@ public class ProbabilityDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Probability ø¢ºø µ•¿Ã≈Õ Level : {probabilityExcelData.Level}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                levelList.Add(probabilityExcelData.Level);
+            }
         }
     }
 }

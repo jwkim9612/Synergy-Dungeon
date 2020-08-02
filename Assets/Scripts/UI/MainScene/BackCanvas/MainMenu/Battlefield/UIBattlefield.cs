@@ -42,8 +42,10 @@ public class UIBattlefield : MonoBehaviour
             }
             else
             {
-                MainManager.instance.frontCanvas.uiAskGoToStore.SetText(PurchaseCurrency.Heart);
-                UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore);
+                //MainManager.instance.frontCanvas.uiAskGoToStore.SetText(PurchaseCurrency.Heart);
+                //UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore);
+                UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiHeartRefill);
+                MainManager.instance.frontCanvas.uiHeartRefill.uiHeartTimer.TimeUpdate();
             }
         });
     }

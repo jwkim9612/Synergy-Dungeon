@@ -19,6 +19,7 @@ public class InGameFrontCanvas : MonoBehaviour
 
     public void ShowGameOver()
     {
+        uiGameOver.SetCurrentWaveText();
         uiGameOver.OnShow();
     }
 

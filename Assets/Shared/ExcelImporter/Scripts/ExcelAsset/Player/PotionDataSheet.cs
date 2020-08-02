@@ -76,6 +76,10 @@ public class PotionDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Potion ø¢ºø µ•¿Ã≈Õ Id : {potionExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(potionExcelData.Id);
+            }
         }
     }
 }

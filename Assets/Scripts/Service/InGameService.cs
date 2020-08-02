@@ -2,7 +2,8 @@
 
 public class InGameService : MonoBehaviour
 {
-    public const int RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR = 200;
+    //public const int RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR = 200;
+    public const int RATE_AT_WHICH_AFTERIMAGES_DISAPPEAR = 50;
     //public const float SIZE_TO_EXPAND_THE_BATTLE_AREA = 100.0f;
     public const float DISTANCE_TO_MOVE_AT_START_OF_BATTLE = 1.0f;
     public const float SIZE_TO_BLUR = 0.5f;
@@ -33,6 +34,9 @@ public class InGameService : MonoBehaviour
     public const float PAUSE_SPEED = 0.0f;
     public const float DEFAULT_SPEED = 1.0f;
     public const float DOUBLE_SPEED = 2.0f;
+
+    public const float ATTACK_DELAY = 1.0f;
+    public const float DEAD_DELAY = 1.0f;
 
     /////////////////
     /// 시너지 리스트

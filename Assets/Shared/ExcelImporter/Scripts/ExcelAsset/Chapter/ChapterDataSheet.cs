@@ -113,6 +113,10 @@ public class ChapterDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Chapter ø¢ºø µ•¿Ã≈Õ Id : {chapterExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+			else
+			{
+				idList.Add(chapterExcelData.Id);
+			}
         }
     }
 }

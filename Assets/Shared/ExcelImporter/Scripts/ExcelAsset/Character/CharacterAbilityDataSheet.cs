@@ -82,6 +82,10 @@ public class CharacterAbilityDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"CharacterAbility ø¢ºø µ•¿Ã≈Õ OneStarData¿« Id : {oneStarExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(oneStarExcelData.Id);
+            }
         }
 
         idList = new List<int>();
@@ -92,6 +96,10 @@ public class CharacterAbilityDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"CharacterAbility ø¢ºø µ•¿Ã≈Õ TwoStarData Id : {twoStarExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(twoStarExcelData.Id);
+            }
         }
 
         idList = new List<int>();
@@ -101,6 +109,10 @@ public class CharacterAbilityDataSheet : ScriptableObject, IDataSheet
             if (idList.Contains(threeStarExcelData.Id))
             {
                 Debug.Log($"CharacterAbility ø¢ºø µ•¿Ã≈Õ ThreeStarData¿« Id : {threeStarExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
+            }
+            else
+            {
+                idList.Add(threeStarExcelData.Id);
             }
         }
     }

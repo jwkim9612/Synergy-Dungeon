@@ -64,6 +64,10 @@ public class InGameExpDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"InGameExp ø¢ºø µ•¿Ã≈Õ Level : {inGameExpExcelData.Level}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                levelList.Add(inGameExpExcelData.Level);
+            }
         }
     }
 }

@@ -159,7 +159,11 @@ public class CharacterDataSheet : ScriptableObject, IDataSheet
             if (idList.Contains(characterExcelData.Id))
             {
                 Debug.Log($"Character ø¢ºø µ•¿Ã≈Õ Id : {characterExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
-            }
-        }
+			}
+			else
+			{
+				idList.Add(characterExcelData.Id);
+			}
+		}
     }
 }

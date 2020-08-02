@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using geniikw.DataSheetLab;
 using System.Linq;
+using UnityEngine;
 
 public class UIEnemy : MonoBehaviour
 {
@@ -31,7 +28,7 @@ public class UIEnemy : MonoBehaviour
         enemy.SetUIFloatingTextList(uiFloatingTextList);
         enemy.InitializeUIFloatingTextList();
 
-        StartCoroutine(Co_PrepareFollowEnemy());
+        EnemyMoveToUIEnemy();
         uiHPBar.Initialize();
         uiHPBar.controllingPawn = enemy;
         uiHPBar.SetUpdateHPBarAndAfterImage();
@@ -59,14 +56,12 @@ public class UIEnemy : MonoBehaviour
 
         Instantiate(hitParticle, particlePosition, transform.rotation, frontCanvas.transform);
     }
-
-    public IEnumerator Co_PrepareFollowEnemy()
+    
+    public void EnemyMoveToUIEnemy()
     {
         if (enemy != null)
         {
-            yield return new WaitForEndOfFrame();
             enemy.transform.position = this.transform.position;
-            Debug.Log("FollowEnemy!!");
         }
     }
 
@@ -89,13 +84,5 @@ public class UIEnemy : MonoBehaviour
         }
 
         yield break;
-    }
-
-    public void FollowEnemy()
-    {
-        if (enemy != null)
-        {
-            enemy.transform.position = this.transform.position;
-        }
     }
 }

@@ -50,6 +50,10 @@ public class EnemyDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Enemy ø¢ºø µ•¿Ã≈Õ Id : {enemyExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
-        }
+			else
+			{
+				idList.Add(enemyExcelData.Id);
+			}
+		}
     }
 }

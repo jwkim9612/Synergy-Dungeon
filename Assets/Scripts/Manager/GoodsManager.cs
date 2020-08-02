@@ -54,7 +54,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
                        MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
-                       MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                       MainManager.instance.frontCanvas.uiAskGoToStore.SetPurchaseCurrency(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
@@ -107,7 +107,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                            string strPurchaseCurrency = (response.ScriptData.GetString("PurchaseCurrency"));
                            PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
-                           MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                           MainManager.instance.frontCanvas.uiAskGoToStore.SetPurchaseCurrency(purchaseCurrency);
                            UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                        }
                    }
@@ -158,7 +158,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
                        MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
-                       MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                       MainManager.instance.frontCanvas.uiAskGoToStore.SetPurchaseCurrency(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
@@ -202,7 +202,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
                        MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
-                       MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                       MainManager.instance.frontCanvas.uiAskGoToStore.SetPurchaseCurrency(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }
@@ -246,7 +246,7 @@ public class GoodsManager : MonoSingleton<GoodsManager>
                        PurchaseCurrency purchaseCurrency = (PurchaseCurrency)Enum.Parse(typeof(PurchaseCurrency), strPurchaseCurrency);
 
                        MainManager.instance.backCanvas.uiMainMenu.uiStore.HideBeginPurchase();
-                       MainManager.instance.frontCanvas.uiAskGoToStore.SetText(purchaseCurrency);
+                       MainManager.instance.frontCanvas.uiAskGoToStore.SetPurchaseCurrency(purchaseCurrency);
                        UIManager.Instance.ShowNew(MainManager.instance.frontCanvas.uiAskGoToStore); // 다이아, 골드 구매 창으로 이동할지 물어보는 팝업창 띄우기
                    }
                }

@@ -50,6 +50,10 @@ public class RuneCombinableNumDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"RuneCombinableNum ¿¢¼¿ µ¥ÀÌÅÍ Grade : {runeCombinableNumExcelData.Grade}°ªÀÌ °ãÄ¨´Ï´Ù.");
             }
+            else
+            {
+                gradeList.Add(runeCombinableNumExcelData.Grade);
+            }
         }
     }
 }

@@ -30,7 +30,6 @@ public class UICharacter : MonoBehaviour
 
     private void InitializeUIFloatingTextList()
     {
-
         uiFloatingTextList = new List<UIFloatingText>();
         uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
     }
@@ -76,7 +75,7 @@ public class UICharacter : MonoBehaviour
         character.SetCharacterInfo(characterInfo);
         character.InitializeUIFloatingTextList();
 
-        StartCoroutine(Co_PrepareFollowCharacter());
+        CharacterMoveToUICharacter();
         uiHPBar.Initialize();
         uiHPBar.controllingPawn = character;
         uiHPBar.SetUpdateHPBarAndAfterImage();
@@ -206,14 +205,11 @@ public class UICharacter : MonoBehaviour
         return this.GetComponentInParent<UISlot>().GetComponentInParent<T>();
     }
 
-    public IEnumerator Co_PrepareFollowCharacter()
+    public void CharacterMoveToUICharacter()
     {
         if (character != null)
         {
-            yield return new WaitForEndOfFrame();
             character.transform.position = this.transform.position;
-
-            Debug.Log("FollowCharacter");
         }
     }
 

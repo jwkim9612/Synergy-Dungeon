@@ -27,9 +27,6 @@ public class UICharacterArea : MonoBehaviour
             var characterAreaInfoList = SaveManager.Instance.inGameSaveData.CharacterAreaInfoList;
 
             SetUICharacterList(characterAreaInfoList);
-            //
-            InitializePrepareCharacterPositions();
-            //
             OnPlacementChanged?.Invoke();
         }
         else
@@ -74,8 +71,10 @@ public class UICharacterArea : MonoBehaviour
         var uiCharacterListWithCharacter = GetUICharacterListWithCharacters();
         numOfCurrentPlacedCharacters = uiCharacterListWithCharacter.Count;
 
-        foreach(var uiCharacter in uiCharacterListWithCharacter)
+        foreach (var uiCharacter in uiCharacterListWithCharacter)
         {
+            Debug.Log($"name = {uiCharacter.name} ");
+
             uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
             uiCharacter.SetAnimationImage();
         }
@@ -164,11 +163,5 @@ public class UICharacterArea : MonoBehaviour
         {
             SubCurrentPlacedCharacter();
         }
-    }
-
-    public void InitializePrepareCharacterPositions()
-    {
-        frontArea.InitializePrepareCharacterPositions();
-        backArea.InitializePrepareCharacterPositions();
     }
 }

@@ -75,6 +75,10 @@ public class TribeDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Tribe ø¢ºø µ•¿Ã≈Õ Tribe : {tribeExcelData.Name}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
-        }
+			else
+			{
+				tribeList.Add(tribeExcelData.Name);
+			}
+		}
     }
 }

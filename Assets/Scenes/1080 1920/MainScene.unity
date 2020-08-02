@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194.00002, y: 138.4}
+  m_AnchoredPosition: {x: -5, y: 280}
   m_SizeDelta: {x: 160, y: 46.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280338
@@ -33306,7 +33306,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -56838,7 +56838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 60.9}
+  m_AnchoredPosition: {x: -5, y: 202.5}
   m_SizeDelta: {x: 160, y: 108.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194177322
@@ -66924,7 +66924,6 @@ MonoBehaviour:
   goToStoreButton: {fileID: 1035159782}
   goldGoods: {fileID: 0}
   diamondGoods: {fileID: 1118869090}
-  HeartGoods: {fileID: 0}
 --- !u!1 &1428702300
 GameObject:
   m_ObjectHideFlags: 0

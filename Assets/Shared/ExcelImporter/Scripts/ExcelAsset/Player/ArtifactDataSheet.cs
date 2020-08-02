@@ -58,6 +58,10 @@ public class ArtifactDataSheet : ScriptableObject, IDataSheet
             {
                 Debug.Log($"Artifact ø¢ºø µ•¿Ã≈Õ Id : {artifactExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
             }
+            else
+            {
+                idList.Add(artifactExcelData.Id);
+            }
         }
     }
 }

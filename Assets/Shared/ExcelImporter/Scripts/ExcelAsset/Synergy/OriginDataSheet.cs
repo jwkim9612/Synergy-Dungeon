@@ -74,7 +74,11 @@ public class OriginDataSheet : ScriptableObject, IDataSheet
             if (originList.Contains(originExcelData.Name))
             {
                 Debug.Log($"Origin ø¢ºø µ•¿Ã≈Õ Origin : {originExcelData.Name}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
-            }
-        }
+			}
+			else
+			{
+				originList.Add(originExcelData.Name);
+			}
+		}
     }
 }
