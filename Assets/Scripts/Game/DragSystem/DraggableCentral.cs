@@ -23,6 +23,8 @@ public class DraggableCentral : MonoBehaviour
 
     public void Initialize()
     {
+        uiInGameCharacterInfo.Initialize();
+
         InitializeArrangers();
 
         isSelling = false;

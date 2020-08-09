@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,19 @@ public class UIInGameCharacterInfo : MonoBehaviour
     [SerializeField] private Text textCritical = null;
     [SerializeField] private Text textAttackSpeed = null;
 
+    [SerializeField] private HorizontalLayoutGroup stars = null;
+    private List<Image> starList = null;
+
+    public void Initialize()
+    {
+        SetStarList();
+    }
+
+    private void SetStarList()
+    {
+        starList = stars.GetComponentsInChildren<Image>().ToList();
+    }
+
     public void SetInGameCharacterInfo(UICharacter uiCharacter)
     {
         var characterDataSheet = DataBase.Instance.characterDataSheet;
@@ -40,6 +54,7 @@ public class UIInGameCharacterInfo : MonoBehaviour
             SetTribeImage(characterData.TribeData.Image);
             SetOriginImage(characterData.OriginData.Image);
             SetCharacterAbilityText(uiCharacter.character.ability);
+            SetStarGrade(uiCharacter.characterInfo.star);
         }
     }
 
@@ -55,6 +70,21 @@ public class UIInGameCharacterInfo : MonoBehaviour
         textEvasion.text = abilityData.Evasion.ToString();
         textCritical.text = abilityData.Critical.ToString();
         textAttackSpeed.text = abilityData.AttackSpeed.ToString();
+    }
+
+    private void SetStarGrade(int star)
+    {
+        for (int i = 0; i < starList.Count; ++i)
+        {
+            if (i < star)
+            {
+                starList[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                starList[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     private void SetCharacterImage(Sprite sprite)
