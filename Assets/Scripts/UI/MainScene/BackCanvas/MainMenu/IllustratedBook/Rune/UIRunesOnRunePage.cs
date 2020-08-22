@@ -59,31 +59,67 @@ public class UIRunesOnRunePage : MonoBehaviour
 
     public void AddUIRune(RuneData runeData)
     {
-        var rune = Instantiate(uiRuneOnRunePage, girdLayoutGroup.transform);
-        rune.Initialize();
-        rune.SetUIRune(runeData);
-        uiRuneListOnRunePage.Add(rune);
+        UIRuneOnRunePage uiRune = null;
+
+        // 오브젝트풀링
+        foreach(var uiRuneOnRunePage in uiRuneListOnRunePage)
+        {
+            if(uiRuneOnRunePage.gameObject.activeSelf == false)
+            {
+                uiRune = uiRuneOnRunePage;
+                uiRune.SetUIRune(runeData);
+                uiRune.gameObject.SetActive(true);
+                Sort();
+                return;
+            }
+        }
+
+        // inactive상태인 룬이 없다면
+        uiRune = Instantiate(uiRuneOnRunePage, girdLayoutGroup.transform);
+        uiRune.Initialize();
+        uiRune.SetUIRune(runeData);
+        uiRuneListOnRunePage.Add(uiRune);
 
         Sort();
-    }
-
-    public void RemoveRune(UIRuneOnRunePage uiRune)
-    {
-        uiRuneListOnRunePage.Remove(uiRune);
-
-        MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.CheckNotify();
     }
 
     public void RemoveRune(int runeId)
     {
         var uiRune = uiRuneListOnRunePage.Find(x => x.rune.runeData.Id == runeId);
-        Destroy(uiRune.gameObject);
-        RemoveRune(uiRune);
+        uiRune.gameObject.SetActive(false);
+        //Destroy(uiRune.gameObject);
+
+        MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.CheckNotify();
+        //RemoveRune(uiRune);
     }
 
     public void Sort()
     {
-        StartCoroutine(Co_Sort());
+        //StartCoroutine(Co_Sort());
+
+        UpdateRuneList();
+
+        switch (currentSortBy)
+        {
+            case SortBy.None:
+                break;
+            case SortBy.Grade:
+                uiRuneListOnRunePage = uiRuneListOnRunePage.OrderByDescending(x => x.rune.runeData.Grade).ThenBy(x => x.rune.runeData.Id).ToList();
+                break;
+            case SortBy.Socket:
+                uiRuneListOnRunePage = uiRuneListOnRunePage.OrderBy(x => x.rune.runeData.Id).ToList();
+                break;
+            default:
+                Debug.Log("Error Sort");
+                break;
+        }
+
+        for (int i = 0; i < uiRuneListOnRunePage.Count; ++i)
+        {
+            uiRuneListOnRunePage[i].transform.SetSiblingIndex(i);
+        }
+
+        Debug.Log("size = " + uiRuneListOnRunePage.Count);
     }
 
     public void ChangeSortBy()
@@ -109,7 +145,7 @@ public class UIRunesOnRunePage : MonoBehaviour
                 uiRuneListOnRunePage.Add(null);
             }
 
-            var uiRune = gameObject.GetComponentsInChildren<UIRuneOnRunePage>()[i];
+            var uiRune = gameObject.GetComponentsInChildren<UIRuneOnRunePage>(true)[i];
 
             if (uiRune != uiRuneListOnRunePage[i])
             {
@@ -121,32 +157,35 @@ public class UIRunesOnRunePage : MonoBehaviour
     }
 
     // 오브젝트가 파괴되는데 시간이 걸려 제대로 업데이트가 안되어서 코루틴을 이용해 한프레임 대기 후 정렬
-    private IEnumerator Co_Sort()
-    {
-        yield return new WaitForEndOfFrame();
+    //private IEnumerator Co_Sort()
+    //{
+    //    yield return new WaitForEndOfFrame();
 
-        UpdateRuneList();
+    //    UpdateRuneList();
 
-        switch (currentSortBy)
-        {
-            case SortBy.None:
-                break;
-            case SortBy.Grade:
-                uiRuneListOnRunePage = uiRuneListOnRunePage.OrderByDescending(x => x.rune.runeData.Grade).ThenBy(x => x.rune.runeData.Id).ToList();
-                break;
-            case SortBy.Socket:
-                uiRuneListOnRunePage = uiRuneListOnRunePage.OrderBy(x => x.rune.runeData.Id).ToList();
-                break;
-            default:
-                Debug.Log("Error Sort");
-                break;
-        }
+    //    switch (currentSortBy)
+    //    {
+    //        case SortBy.None:
+    //            break;
+    //        case SortBy.Grade:
+    //            uiRuneListOnRunePage = uiRuneListOnRunePage.OrderByDescending(x => x.rune.runeData.Grade).ThenBy(x => x.rune.runeData.Id).ToList();
+    //            break;
+    //        case SortBy.Socket:
+    //            uiRuneListOnRunePage = uiRuneListOnRunePage.OrderBy(x => x.rune.runeData.Id).ToList();
+    //            break;
+    //        default:
+    //            Debug.Log("Error Sort");
+    //            break;
+    //    }
 
-        for (int i = 0; i < uiRuneListOnRunePage.Count; ++i)
-        {
-            uiRuneListOnRunePage[i].transform.SetSiblingIndex(i);
-        }
-    }
+    //    for (int i = 0; i < uiRuneListOnRunePage.Count; ++i)
+    //    {
+    //        uiRuneListOnRunePage[i].transform.SetSiblingIndex(i);
+    //    }
+
+    //    Debug.Log("size = " + uiRuneListOnRunePage.Count);
+
+    //}
 
     private void OnDestroy()
     {

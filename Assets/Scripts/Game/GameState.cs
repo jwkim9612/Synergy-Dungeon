@@ -14,11 +14,6 @@ public class GameState : MonoBehaviour
     public bool isWaveClear { get; set; } = false;
     public bool isPlayerLose { get; set; } = false;
 
-    void Start()
-    {
-        //SetInGameState(InGameState.Prepare);
-    }
-
     public void Initialize()
     {
         SetInGameState(InGameState.Prepare);

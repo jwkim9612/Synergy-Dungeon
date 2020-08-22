@@ -33,7 +33,8 @@ public class UIEquippedRunes : MonoBehaviour
             if (runeToBeEquipped != null)
             {
                 EquipRune(runeToBeEquipped, true);
-                Destroy(runeToBeEquipped.gameObject);
+                runeToBeEquipped.gameObject.SetActive(false);
+                //Destroy(runeToBeEquipped.gameObject);
             }
             else
             {
@@ -84,10 +85,11 @@ public class UIEquippedRunes : MonoBehaviour
         uiEquippedRuneList[socketPositionOfRuneDataToEquip].SetUIRune(runeData);
         RuneManager.Instance.SetEquippedRune(uiRuneToEquip.rune);
 
-        MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.uiRuneCombination.uiRunesForCombination.SetEquipped(runeId);
+        var uiRunesForCombination = MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.uiRuneCombination.uiRunesForCombination;
+        uiRunesForCombination.SetEquipped(runeId);
 
-        var uiRuneListOnRunePage = MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.uiRunesOnRunePage;
-        uiRuneListOnRunePage.RemoveRune(uiRuneToEquip);
+        //var uiRuneListOnRunePage = MainManager.instance.backCanvas.uiMainMenu.uiIllustratedBook.uiRunePage.uiRunesOnRunePage;
+        //uiRuneListOnRunePage.RemoveRune(uiRuneToEquip);
 
         if(!isInitialize)
         {

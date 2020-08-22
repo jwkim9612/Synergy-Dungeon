@@ -44,15 +44,26 @@ public class UIRunesForCombination : MonoBehaviour
     {
         if (runeDataSheet.TryGetRuneData(runeId, out var runeData))
         {
+            // 오브젝트 풀링
+            foreach (var uiRuneForCombination in uiRuneListForCombination)
+            {
+                if(uiRuneForCombination.gameObject.activeSelf == false)
+                {
+                    uiRuneForCombination.SetUIRune(runeData);
+                    uiRuneForCombination.HideEquipped();
+                    uiRuneForCombination.gameObject.SetActive(true);
+                    Sort();
+                    return;
+                }
+            }
+
             var uiRune = Instantiate(uiRuneForCombination, gridLayoutGroup.transform);
             uiRune.Initialize();
             uiRune.SetUIRune(runeData);
-            uiRuneListForCombination.Add(uiRune);
-
             uiRune.HideEquipped();
+            uiRuneListForCombination.Add(uiRune);
+            Sort();
         }
-
-        Sort();
     }
 
     public void RemoveRune(int runeId, bool IsEquipped)
@@ -70,8 +81,9 @@ public class UIRunesForCombination : MonoBehaviour
 
         if (uiRune != null)
         {
-            Destroy(uiRune.gameObject);
-            uiRuneListForCombination.Remove(uiRune);
+            uiRune.gameObject.SetActive(false);
+            //Destroy(uiRune.gameObject);
+            //uiRuneListForCombination.Remove(uiRune);
         }
 
         Sort();
@@ -105,12 +117,6 @@ public class UIRunesForCombination : MonoBehaviour
 
     private void Sort()
     {
-        // 오브젝트가 파괴되는데 시간이 좀 걸려 한 프레임 멈췄다가 실행
-        Invoke("UpdateRuneListAndSort", Time.deltaTime);
-    }
-
-    public void UpdateRuneListAndSort()
-    {
         UpdateRuneList();
 
         uiRuneListForCombination = uiRuneListForCombination.OrderByDescending(x => x.rune.runeData.Grade).ThenBy(x => x.rune.runeData.Id).ToList();
@@ -119,7 +125,22 @@ public class UIRunesForCombination : MonoBehaviour
         {
             uiRuneListForCombination[i].transform.SetSiblingIndex(i);
         }
+
+        //// 오브젝트가 파괴되는데 시간이 좀 걸려 한 프레임 멈췄다가 실행
+        //Invoke("UpdateRuneListAndSort", Time.deltaTime);
     }
+
+    //public void UpdateRuneListAndSort()
+    //{
+    //    UpdateRuneList();
+
+    //    uiRuneListForCombination = uiRuneListForCombination.OrderByDescending(x => x.rune.runeData.Grade).ThenBy(x => x.rune.runeData.Id).ToList();
+
+    //    for (int i = 0; i < uiRuneListForCombination.Count; ++i)
+    //    {
+    //        uiRuneListForCombination[i].transform.SetSiblingIndex(i);
+    //    }
+    //}
 
     public void UpdateRuneList()
     {
@@ -130,7 +151,7 @@ public class UIRunesForCombination : MonoBehaviour
                 uiRuneListForCombination.Add(null);
             }
 
-            var uiRune = gameObject.GetComponentsInChildren<UIRuneForCombination>()[i];
+            var uiRune = gameObject.GetComponentsInChildren<UIRuneForCombination>(true)[i];
 
             if (uiRune != uiRuneListForCombination[i])
             {
