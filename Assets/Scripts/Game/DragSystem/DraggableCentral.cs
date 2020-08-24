@@ -9,13 +9,11 @@ public class DraggableCentral : MonoBehaviour
 
     [SerializeField] private UICharacter invisibleCharacter = null;
     [SerializeField] private UISellArea uiSellArea = null;
-    [SerializeField] private UIPlacementStatus uiPlacementStatus = null;
-
+    
     private List<Arranger> arrangers;
     private UICharacter swappedCharacter;
     private UISlot parentWhenBeginDrag;
     private float originalSize;
-    private InGameCharacterArea originalArea;
     private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
@@ -110,10 +108,8 @@ public class DraggableCentral : MonoBehaviour
         SwapCharacters(invisibleCharacter, uiCharacter);
         uiCharacter.SetDefaultImage();
         originalSize = uiCharacter.character.GetSize();
-        originalArea = InGameService.GetCharacterArea(originalSize);
         uiSellArea.UpdatePrice(uiCharacter.characterInfo);
         uiSellArea.OnShow();
-        uiPlacementStatus.OnShow();
     }
 
     private void Drag(UICharacter uiCharacter)
@@ -163,21 +159,10 @@ public class DraggableCentral : MonoBehaviour
                 if (TransformService.ContainPos(uiCharacterArea.transform as RectTransform, uiCharacter.transform.position))
                 {
                     uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
-
-                    if(IsMoveFromPrepareAreaToEmptyBattleArea())
-                    {
-                        uiCharacterArea.AddCurrentPlacedCharacter();
-                        Debug.Log("Good");
-                    }
                 }
                 else if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
                 {
                     uiCharacter.character.SetSize(CharacterService.SIZE_IN_PREPARE_AREA);
-
-                    if(IsMoveFromBattleAreaToEmptyPrepareArea())
-                    {
-                        uiCharacterArea.SubCurrentPlacedCharacter();
-                    }
                 }
             }
         }
@@ -186,8 +171,6 @@ public class DraggableCentral : MonoBehaviour
             // 드래그 중에 CharacterArea 또는 PrepareArea 이외의 공간에 있는 경우
             if (isSwapped)
             {
-                Debug.Log("Hkekeke");
-
                 uiCharacter.character.SetSize(originalSize);
                 SwapCharacters(swappedCharacter, invisibleCharacter);
                 SetCharacterImage(swappedCharacter);
@@ -211,9 +194,7 @@ public class DraggableCentral : MonoBehaviour
     private void EndDrag(UICharacter uiCharacter)
     {
         uiInGameCharacterInfo.OnHide();
-
         uiSellArea.OnHide();
-        uiPlacementStatus.OnHide();
 
         if (isSelling)
         {
@@ -236,10 +217,9 @@ public class DraggableCentral : MonoBehaviour
         }
 
         UpdateSynergyService(uiCharacter);
-        //UpdateCurrentPlacedCharacters();
+        UpdateCurrentPlacedCharacters();
         SwapCharacters(invisibleCharacter, uiCharacter);
         SetCharacterImage(uiCharacter);
-        UpdateCurrentPlacedCharacters();
 
         isSwapped = false;
     }
@@ -323,25 +303,23 @@ public class DraggableCentral : MonoBehaviour
     /// </summary>
     public void UpdateCurrentPlacedCharacters()
     {
-        uiCharacterArea.test();
+        if (IsMoveToSell())
+        {
+            uiCharacterArea.SubCurrentPlacedCharacter();
+            return;
+        }
 
-        //if (IsMoveToSell())
-        //{
-        //    uiCharacterArea.SubCurrentPlacedCharacter();
-        //    return;
-        //}
+        if (IsNotChanged())
+            return;
 
-        //if (IsNotChanged())
-        //    return;
-
-        //if (IsMoveFromBattleAreaToEmptyPrepareArea())
-        //{
-        //    uiCharacterArea.SubCurrentPlacedCharacter();
-        //}
-        //else if (IsMoveFromPrepareAreaToEmptyBattleArea())
-        //{
-        //    uiCharacterArea.AddCurrentPlacedCharacter();
-        //}
+        if (IsMoveFromBattleAreaToEmptyPrepareArea())
+        {
+            uiCharacterArea.SubCurrentPlacedCharacter();
+        }
+        else if (IsMoveFromPrepareAreaToEmptyBattleArea())
+        {
+            uiCharacterArea.AddCurrentPlacedCharacter();
+        }
     }
 
     private bool IsMoveFromPrepareAreaToEmptyBattleArea()
@@ -392,7 +370,7 @@ public class DraggableCentral : MonoBehaviour
         int numOfCurrentPlacedCharacters = uiCharacterArea.numOfCurrentPlacedCharacters;
         int numOfCanPlacedInBattleArea = InGameManager.instance.playerState.numOfCanPlacedInBattleArea;
 
-        return numOfCurrentPlacedCharacters > numOfCanPlacedInBattleArea ? true : false;
+        return numOfCurrentPlacedCharacters >= numOfCanPlacedInBattleArea ? true : false;
     }
 
     // 배치된 공간에 따라서 이미지를 바꿔줌

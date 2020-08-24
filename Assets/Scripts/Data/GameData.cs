@@ -149,10 +149,3 @@ public enum SortBy
     Grade,
     Socket
 }
-
-public enum InGameCharacterArea
-{
-    None,
-    Battle,
-    Prepare
-}

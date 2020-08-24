@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class UIPlacementStatus : MonoBehaviour
 {
-    [SerializeField] private Text placementStatus = null;
+    [SerializeField] private Text placementStatusText = null;
 
     public void Initialize()
     {
         UpdatePlacementStatus();
+        OnShow();
 
         InGameManager.instance.draggableCentral.uiCharacterArea.OnPlacementChanged += UpdatePlacementStatus;
         InGameManager.instance.playerState.OnLevelUp += UpdatePlacementStatus;
+        InGameManager.instance.gameState.OnPrepare += OnShow;
+        InGameManager.instance.gameState.OnBattle += OnHide;
     }
 
     public void UpdatePlacementStatus()
@@ -20,7 +23,16 @@ public class UIPlacementStatus : MonoBehaviour
         int numOfCurrentPlacedCharacters = InGameManager.instance.draggableCentral.uiCharacterArea.numOfCurrentPlacedCharacters;
         int numOfCanPlacedInBattleArea = InGameManager.instance.playerState.numOfCanPlacedInBattleArea;
 
-        placementStatus.text = numOfCurrentPlacedCharacters + "/" + numOfCanPlacedInBattleArea;
+        placementStatusText.text = numOfCurrentPlacedCharacters + "/" + numOfCanPlacedInBattleArea;
+
+        if(numOfCurrentPlacedCharacters == numOfCanPlacedInBattleArea)
+        {
+            placementStatusText.color = Color.green;
+        }
+        else if(numOfCurrentPlacedCharacters < numOfCanPlacedInBattleArea)
+        {
+            placementStatusText.color = Color.red;
+        }
     }
 
     public void OnShow()

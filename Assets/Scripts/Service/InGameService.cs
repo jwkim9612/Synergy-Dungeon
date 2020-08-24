@@ -60,16 +60,6 @@ public class InGameService : MonoBehaviour
         defaultEnemy = GameObject.Find("DefaultEnemy").GetComponent<Enemy>();
     }
 
-    public static InGameCharacterArea GetCharacterArea(float characterSize)
-    {
-        if (characterSize == CharacterService.SIZE_IN_BATTLE_AREA)
-            return InGameCharacterArea.Battle;
-        else if (characterSize == CharacterService.SIZE_IN_PREPARE_AREA)
-            return InGameCharacterArea.Prepare;
-        else
-            return InGameCharacterArea.None;
-    }
-
     public const string COIN_IMAGE_PATH = "Images/InGame/Coin";
     public static Sprite COIN_IMAGE = Resources.Load<Sprite>(COIN_IMAGE_PATH);
 }
