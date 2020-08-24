@@ -125,6 +125,14 @@ public class UICharacterArea : MonoBehaviour
         return uiCharacters;
     }
 
+    public void test()
+    {
+        var aa = GetUICharacterListWithCharacters();
+
+        numOfCurrentPlacedCharacters = aa.Count;
+        OnPlacementChanged();
+    }
+
     /// <summary>
     /// 배틀 공간에 배치한 캐릭터 수 1증가
     /// </summary>

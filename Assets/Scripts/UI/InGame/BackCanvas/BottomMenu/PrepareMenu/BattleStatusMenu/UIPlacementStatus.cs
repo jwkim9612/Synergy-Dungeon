@@ -22,4 +22,14 @@ public class UIPlacementStatus : MonoBehaviour
 
         placementStatus.text = numOfCurrentPlacedCharacters + "/" + numOfCanPlacedInBattleArea;
     }
+
+    public void OnShow()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void OnHide()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

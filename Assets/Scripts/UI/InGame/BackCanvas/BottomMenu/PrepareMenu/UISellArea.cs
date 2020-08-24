@@ -11,4 +11,14 @@ public class UISellArea : MonoBehaviour
     {
         price.text = "$" + CharacterService.GetSalePrice(characterInfo);
     }
+
+    public void OnShow()
+    {
+        this.gameObject.SetActive(true);
+    }
+
+    public void OnHide()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

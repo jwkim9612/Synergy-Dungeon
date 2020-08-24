@@ -4,6 +4,7 @@ public class UIBattleArea : MonoBehaviour
 {
     [SerializeField] private UICharacterArea uiCharacterArea = null;
     [SerializeField] private UIEnemyArea uiEnemyArea = null;
+    [SerializeField] private UIPlacementStatus uiPlacementStatus = null;
     public BattleStatus battleStatus = null;
 
     private bool isFirstTime;
@@ -12,6 +13,7 @@ public class UIBattleArea : MonoBehaviour
     {
         // uiCharacterArea는 DraggableCentral에서 초기화해줌.
         uiEnemyArea.Initialize();
+        uiPlacementStatus.Initialize();
 
         isFirstTime = true;
 
