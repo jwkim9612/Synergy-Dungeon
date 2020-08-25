@@ -38,6 +38,9 @@ public class InGameService : MonoBehaviour
     public const float ATTACK_DELAY = 1.0f;
     public const float DEAD_DELAY = 1.0f;
 
+    public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_PREPARE = 0.33f;
+    public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_BATTLE = 0.0f;
+
     /////////////////
     /// 시너지 리스트
     public const float LEFT_PADDING_OF_SYNERGY_LIST_AT_ANCHOR = 0.03f;

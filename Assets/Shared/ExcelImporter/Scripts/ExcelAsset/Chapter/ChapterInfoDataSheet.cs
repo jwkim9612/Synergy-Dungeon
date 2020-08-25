@@ -1,14 +1,13 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [ExcelAsset]
 public class ChapterInfoDataSheet : ScriptableObject, IDataSheet
 {
-	public List<ChapterInfoExcelData> ChapterInfoExcelDatas;
+	public List<ChapterInfoExcelData> Chapter1InfoExcelDatas;
+	public List<ChapterInfoExcelData> Chapter2InfoExcelDatas;
 
-	private Dictionary<int, ChapterInfoData> ChapterInfoDatas;
+	//private Dictionary<int, ChapterInfoData> ChapterInfoDatas;
 	private Dictionary<int, Dictionary<int, ChapterInfoData>> AllChapterInfoDatas;
 
 	public bool TryGetChapterInfoExpAmount(int chapterId, int waveId, out int amount)
@@ -71,77 +70,46 @@ public class ChapterInfoDataSheet : ScriptableObject, IDataSheet
 		AllChapterInfoDatas = new Dictionary<int, Dictionary<int, ChapterInfoData>>();
 
 		GenerateData();
-		//InitializeEnemyIds();
-		//InitializeFrontIds();
-		//InitializeBackIds();
 	}
 
 	private void GenerateData()
 	{
-		ChapterInfoDatas = new Dictionary<int, ChapterInfoData>();
-
-		foreach (var chapterInfoExcelData in ChapterInfoExcelDatas)
-		{
-			ChapterInfoData chapterInfoData = new ChapterInfoData(chapterInfoExcelData);
-			ChapterInfoDatas.Add(chapterInfoData.WaveId, chapterInfoData);
-		}
-
-		AllChapterInfoDatas.Add(ChapterInfoExcelDatas[0].ChapterId, ChapterInfoDatas);
+		GenerateChapter1InfoData();
+		GenerateChapter2InfoData();
 	}
-    //private void InitializeEnemyIds()
-    //{
-    //	foreach (var ChapterInfoData in ChapterInfoDatas)
-    //	{
-    //		ChapterInfoData.EnemyIdList.Clear();
 
-    //		string[] enemyIdsStr = ChapterInfoData.EnemyIds.Split(',');
-    //		foreach (var enemyId in enemyIdsStr)
-    //		{
-    //			ChapterInfoData.EnemyIdList.Add(enemyId[0] - '0');
-    //		}
-    //	}
-    //}
+	private void GenerateChapter1InfoData()
+	{
+        Dictionary<int, ChapterInfoData> ChapterInfoDatas = new Dictionary<int, ChapterInfoData>();
 
-    //private void InitializeFrontIds()
-    //{
-    //	foreach (var ChapterInfoData in ChapterInfoDatas)
-    //	{
-    //		ChapterInfoData.FrontIdList.Clear();
+        foreach (var chapterInfoExcelData in Chapter1InfoExcelDatas)
+        {
+            ChapterInfoData chapterInfoData = new ChapterInfoData(chapterInfoExcelData);
+            ChapterInfoDatas.Add(chapterInfoData.WaveId, chapterInfoData);
+        }
 
-    //		if (ChapterInfoData.FrontIds == "")
-    //			continue;
+        AllChapterInfoDatas.Add(Chapter1InfoExcelDatas[0].ChapterId, ChapterInfoDatas);
+    }
 
-    //		string[] frontIdsStr = ChapterInfoData.FrontIds.Split(',');
-    //		foreach (var frontId in frontIdsStr)
-    //		{
-    //			ChapterInfoData.FrontIdList.Add(frontId[0] - '0');
-    //		}
-    //	}
-    //}
+    private void GenerateChapter2InfoData()
+    {
+        Dictionary<int, ChapterInfoData> ChapterInfoDatas = new Dictionary<int, ChapterInfoData>();
 
-    //private void InitializeBackIds()
-    //{
-    //	foreach (var ChapterInfoData in ChapterInfoDatas)
-    //	{
-    //		ChapterInfoData.BackIdList.Clear();
+        foreach (var chapterInfoExcelData in Chapter2InfoExcelDatas)
+        {
+            ChapterInfoData chapterInfoData = new ChapterInfoData(chapterInfoExcelData);
+            ChapterInfoDatas.Add(chapterInfoData.WaveId, chapterInfoData);
+        }
 
-    //		if (ChapterInfoData.BackIds == "")
-    //			continue;
-
-    //		string[] backIdsStr = ChapterInfoData.BackIds.Split(',');
-    //		foreach (var backId in backIdsStr)
-    //		{
-    //			ChapterInfoData.BackIdList.Add(backId[0] - '0');
-    //		}
-    //	}
-    //}
+        AllChapterInfoDatas.Add(Chapter2InfoExcelDatas[0].ChapterId, ChapterInfoDatas);
+    }
 
     public void DataValidate()
     {
 		// 아이디가 고유한 값을 가지는지 확인.
 		List<int> idList = new List<int>();
 
-        foreach (var chapterInfoExcelData in ChapterInfoExcelDatas)
+        foreach (var chapterInfoExcelData in Chapter1InfoExcelDatas)
         {
             if (idList.Contains(chapterInfoExcelData.WaveId))
             {
