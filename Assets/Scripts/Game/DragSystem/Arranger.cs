@@ -78,7 +78,32 @@ public class Arranger : MonoBehaviour
     // 2~3프레임 쉬지않으면 이상한 위치에 생성되어 코루틴을 사용
     public void SetUICharacterList(List<CharacterInfo> characterInfoList)
     {
-        StartCoroutine(Co_SetUICharacterList(characterInfoList));
+        //StartCoroutine(Co_SetUICharacterList(characterInfoList));
+
+        if (characterInfoList.Count == 0)
+            return;
+
+        for (int i = 0; i < uiCharacters.Count; ++i)
+        {
+            if (characterInfoList[i] == null)
+                continue;
+
+            InGameManager.instance.characterStockSystem.RemoveStockId(characterInfoList[i]);
+            InGameManager.instance.combinationSystem.AddCharacter(characterInfoList[i]);
+
+            var uiCharacter = uiCharacters[i];
+            uiCharacter.SetCharacter(characterInfoList[i]);
+
+            if (uiCharacter.GetArea<UICharacterArea>() != null)
+            {
+                uiCharacter.character.SetSize(CharacterService.SIZE_IN_BATTLE_AREA);
+                uiCharacter.SetAnimationImage();
+            }
+            else if (uiCharacter.GetArea<UIPrepareArea>() != null)
+            {
+                uiCharacter.character.SetSize(CharacterService.SIZE_IN_PREPARE_AREA);
+            }
+        }
     }
 
     IEnumerator Co_SetUICharacterList(List<CharacterInfo> characterInfoList)

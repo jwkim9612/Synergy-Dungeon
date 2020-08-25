@@ -13,16 +13,8 @@ public class UICharacter : MonoBehaviour
     public CharacterInfo characterInfo;
     public Image clickableImage = null;
 
-    private CharacterDataSheet characterDataSheet;
-
     public void Initialize()
     {
-        characterDataSheet = DataBase.Instance.characterDataSheet;
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-        }
-
         isFightingOnBattlefield = false;
 
         InitializeUIFloatingTextList();
@@ -39,16 +31,12 @@ public class UICharacter : MonoBehaviour
         OnCanClick();
         SetCharacterInfo(newCharacterInfo);
 
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
 
         character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
         character.Initialize();
 
-        if(characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
+        if (characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
         {
             character.SetImage(sprite);
         }
@@ -83,12 +71,7 @@ public class UICharacter : MonoBehaviour
 
     public void SetDefaultImage()
     {
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
-
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
         {
             character.RemoveRunTimeAnimatorController();
@@ -98,12 +81,7 @@ public class UICharacter : MonoBehaviour
 
     public void SetAnimationImage()
     {
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
-
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterRunTimeAnimatorController(characterInfo.id, out var runTimeAnimatorController))
         {
             character.SetRunTimeAnimatorController(runTimeAnimatorController);
@@ -138,12 +116,7 @@ public class UICharacter : MonoBehaviour
 
     public void UpgradeStar()
     {
-        if (characterDataSheet == null)
-        {
-            Debug.LogError("Error characterDataSheet is null");
-            return;
-        }
-
+        var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
             characterInfo.IncreaseStar();
@@ -217,6 +190,8 @@ public class UICharacter : MonoBehaviour
     {
         if (character != null)
         {
+            Debug.Log("팔로우 캐릭터");
+
             while(true)
             {
                 yield return new WaitForEndOfFrame();

@@ -11,15 +11,15 @@ public class UIBattleArea : MonoBehaviour
 
     public void Initialize()
     {
+        InGameManager.instance.gameState.OnBattle += BattleStart;
+        InGameManager.instance.gameState.OnBattle += SpaceExpansion;
+        InGameManager.instance.gameState.OnPrepare += SpaceReduction;
+
         // uiCharacterArea는 DraggableCentral에서 초기화해줌.
         uiEnemyArea.Initialize();
         uiPlacementStatus.Initialize();
 
         isFirstTime = true;
-
-        InGameManager.instance.gameState.OnBattle += BattleStart;
-        InGameManager.instance.gameState.OnBattle += SpaceExpansion;
-        InGameManager.instance.gameState.OnPrepare += SpaceReduction;
     }
 
     private void SpaceExpansion()

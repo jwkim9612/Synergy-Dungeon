@@ -24,7 +24,8 @@ public class InGameService : MonoBehaviour
     public const int MIN_NUMBER_OF_COIN = 0;
     public const int MAX_NUMBER_OF_COIN = 10000;
 
-    public const float Z_VALUE_OF_PAWN = 5.0f;
+    //public const float Z_VALUE_OF_PAWN = 5.0f;
+    public const float Z_VALUE_OF_PAWN = 10.0f;
     public const float Z_VALUE_OF_PARTICLE = 1.0f;
 
     public const int CRITICAL_DAMAGE_FONT_SIZE = 60;

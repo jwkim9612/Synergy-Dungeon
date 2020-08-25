@@ -17,17 +17,10 @@ public class UIEnemyArea : MonoBehaviour
     }
 
     // 2~3프레임 쉬지않으면 이상한 위치에 생성되어 코루틴을 사용
+    // 이였는데 Vertical 컴포넌트를 삭제한 것으로 해결.
+    // Vertical 컴포넌트를 사용하니 1~2프레임 정도 후에 위치가 살짝 변경됨
     public void CreateEnemies()
     {
-        StartCoroutine(Co_CreateEnemies());
-    }
-
-    IEnumerator Co_CreateEnemies()
-    {
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-        yield return new WaitForEndOfFrame();
-
         var currentWaveData = StageManager.Instance.currentChapterData.chapterInfoDatas[StageManager.Instance.currentWave];
         var frontIdList = currentWaveData.FrontIdList;
         var backIdList = currentWaveData.BackIdList;
@@ -36,7 +29,7 @@ public class UIEnemyArea : MonoBehaviour
         if (enemyDataSheet == null)
         {
             Debug.LogError("Error enemyDataSheet is null");
-            yield break;
+            return;
         }
 
         int currentEnemyIndex = 0;
