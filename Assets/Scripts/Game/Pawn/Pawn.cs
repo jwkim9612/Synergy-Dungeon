@@ -12,13 +12,12 @@ public class Pawn : MonoBehaviour
     public OnHitDelegate OnHit { get; set; }
     public OnIsDeadDelegate OnIsDead { get; set; }
 
-    public string pawnName { get; set; }
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
     public AbilityData ability;
     protected long currentHP;
+    public Animator animator { get; set; }
     public SpriteRenderer spriteRenderer;
-    public Material defaultMaterial;
 
     protected Pawn target;
 
@@ -28,9 +27,8 @@ public class Pawn : MonoBehaviour
     public virtual void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        defaultMaterial = spriteRenderer.material;
 
-        OnHit += PlayTakeHit;
+        OnHit += PlayAnimationByTakeHit;
     }
 
     // 공격
@@ -73,13 +71,13 @@ public class Pawn : MonoBehaviour
         }
 
         currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)currentHP);
-        OnHit();
 
         if (currentHP <= 0)
         {
             isDead = true;
         }
 
+        OnHit();
         return finalDamage;
     }
 
@@ -129,12 +127,6 @@ public class Pawn : MonoBehaviour
     public void SetImage(Sprite sprite)
     {
         spriteRenderer.sprite = sprite;
-    }
-
-    // 이름 셋팅
-    public void SetName(string name)
-    {
-        pawnName = name;
     }
     
     // 플로팅 텍스트 셋팅
@@ -215,22 +207,40 @@ public class Pawn : MonoBehaviour
             floatingTextIndex = 0;
     }
 
-    // 데미지를 받았을 때 효과
-    protected virtual void PlayTakeHit()
-    {
-        StartCoroutine(Co_TakeHitEffect());
-    }
-
     // 공격과 애니메이션 실행
     protected virtual IEnumerator Co_AttackAndAnimation()
     {
         yield return new WaitForEndOfFrame();
     }
 
-    // 데미지를 받았을 때 효과
-    protected virtual IEnumerator Co_TakeHitEffect()
+    private void PlayAnimationByTakeHit()
     {
-        yield return new WaitForEndOfFrame();
+        if(isDead)
+        {
+            PlayDeadAnimation();
+        }
+        else
+        {
+            PlayTakeHitAnimation();
+        }
+    }
+
+    // 데미지를 받았을 때 애니메이션
+    protected void PlayTakeHitAnimation()
+    {
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("TakeHit", true);
+        }
+    }
+    
+    // 죽었을 때 애니메이션
+    protected void PlayDeadAnimation()
+    {
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("Dead", true);
+        }
     }
 
     // 공격 대상을 리턴

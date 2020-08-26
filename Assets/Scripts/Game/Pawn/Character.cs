@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class Character : Pawn
 {
-    public Animator animator;
     public Origin origin;
-    public CharacterInfo characterInfo;
+    public CharacterInfo characterInfo { get; set; }
 
     public Character()
     {
@@ -116,16 +115,6 @@ public class Character : Pawn
 
     }
 
-    public void SetRunTimeAnimatorController(RuntimeAnimatorController runTimeAnimatorController)
-    {
-        animator.runtimeAnimatorController = runTimeAnimatorController;
-    }
-
-    public void SetCharacterInfo(CharacterInfo newCharacterInfo)
-    {
-        characterInfo = newCharacterInfo;
-    }
-
     public void RemoveRunTimeAnimatorController()
     {
         animator.runtimeAnimatorController = null;
@@ -199,7 +188,8 @@ public class Character : Pawn
         return false;
     }
 
-    protected override IEnumerator Co_TakeHitEffect()
+    // 애니메이션이 없는 캐릭터의 데미지를 받을때 애니메이션
+    protected IEnumerator Co_TakeHitEffect()
     {
         spriteRenderer.color = Color.red;
 

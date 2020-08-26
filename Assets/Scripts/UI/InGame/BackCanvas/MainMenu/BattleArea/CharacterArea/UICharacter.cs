@@ -40,10 +40,6 @@ public class UICharacter : MonoBehaviour
         {
             character.SetImage(sprite);
         }
-        if (characterDataSheet.TryGetCharacterName(characterInfo.id, out var name))
-        {
-            character.SetName(name);
-        }
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
             int Id = characterInfo.id;
@@ -60,7 +56,7 @@ public class UICharacter : MonoBehaviour
         character.OnHit += PlayHitParticle;
         character.OnHit += PlayShowHPBarForMoment;
         character.SetUIFloatingTextList(uiFloatingTextList);
-        character.SetCharacterInfo(characterInfo);
+        character.characterInfo = this.characterInfo;
         character.InitializeUIFloatingTextList();
 
         CharacterMoveToUICharacter();
@@ -84,7 +80,7 @@ public class UICharacter : MonoBehaviour
         var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterRunTimeAnimatorController(characterInfo.id, out var runTimeAnimatorController))
         {
-            character.SetRunTimeAnimatorController(runTimeAnimatorController);
+            character.animator.runtimeAnimatorController = runTimeAnimatorController;
         }
     }
 

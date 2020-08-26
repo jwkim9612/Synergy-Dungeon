@@ -22,7 +22,6 @@ public class UIEnemy : MonoBehaviour
         enemy.SetSize(0.8f);
         enemy.SetImage(newEnmeyData.Image);
         enemy.SetAbility(newEnmeyData);
-        enemy.SetName(newEnmeyData.Name);
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayShowHPBarForMoment;
         enemy.SetUIFloatingTextList(uiFloatingTextList);
