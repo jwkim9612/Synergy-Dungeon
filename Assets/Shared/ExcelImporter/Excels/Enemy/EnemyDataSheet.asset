@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyExcelDatas:
   - Id: 1
-    Name: "\uC2A4\uCEEC (\uB179)"
+    Name: "\uC2AC\uB77C\uC784"
     Attack: 50
     MagicalAttack: 0
     Health: 200
@@ -26,7 +26,7 @@ MonoBehaviour:
     Critical: 5
     AttackSpeed: 77
     ImagePath: Images/Enemy/Skull/Green
-    RuntimeAnimatorControllerPath: 
+    RuntimeAnimatorControllerPath: Controllers/Enemy/Slime
   - Id: 2
     Name: "\uC2A4\uCEEC (\uD669)"
     Attack: 58

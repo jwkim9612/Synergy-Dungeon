@@ -27,11 +27,11 @@ public class UIPlacementStatus : MonoBehaviour
 
         if(numOfCurrentPlacedCharacters == numOfCanPlacedInBattleArea)
         {
-            placementStatusText.color = Color.green;
+            placementStatusText.color = Color.red - new Color(0, 0, 0, 0.2f);
         }
         else if(numOfCurrentPlacedCharacters < numOfCanPlacedInBattleArea)
         {
-            placementStatusText.color = Color.red;
+            placementStatusText.color = Color.blue - new Color(0, 0, 0, 0.2f);
         }
     }
 

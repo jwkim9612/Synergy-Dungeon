@@ -23,7 +23,7 @@ public class UIEnemyPlacementArea : MonoBehaviour
 
         foreach (var uiEnemy in uiEnemies)
         {
-            if (uiEnemy.enemy != null)
+            if (uiEnemy.enemy.gameObject.activeSelf)
             {
                 enemies.Add(uiEnemy.enemy);
             }

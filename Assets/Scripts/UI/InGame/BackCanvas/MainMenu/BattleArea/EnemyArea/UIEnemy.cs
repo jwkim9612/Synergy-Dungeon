@@ -13,24 +13,26 @@ public class UIEnemy : MonoBehaviour
     {
         uiFloatingTextList = new List<UIFloatingText>();
         uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
-    }
 
-    public void SetEnemy(EnemyData newEnmeyData)
-    {
-        enemy = Instantiate(InGameService.defaultEnemy, transform.root.parent);
         enemy.Initialize();
-        enemy.SetSize(0.8f);
-        enemy.SetImage(newEnmeyData.Image);
-        enemy.SetAbility(newEnmeyData);
         enemy.OnHit += PlayHitParticle;
         enemy.OnHit += PlayShowHPBarForMoment;
         enemy.SetUIFloatingTextList(uiFloatingTextList);
         enemy.InitializeUIFloatingTextList();
 
-        EnemyMoveToUIEnemy();
         uiHPBar.Initialize();
         uiHPBar.controllingPawn = enemy;
         uiHPBar.SetUpdateHPBarAndAfterImage();
+    }
+
+    public void SetEnemy(EnemyData newEnemyData)
+    {
+        //enemy = cInstantiate(InGameServie.defaultEnemy, transform.root.parent);
+        enemy.animator.runtimeAnimatorController = newEnemyData.RuntimeAnimatorController;
+        enemy.SetAbility(newEnemyData);
+        enemy.OnShow();
+
+        EnemyMoveToUIEnemy();
         uiHPBar.UpdateHPBar();
     }
 

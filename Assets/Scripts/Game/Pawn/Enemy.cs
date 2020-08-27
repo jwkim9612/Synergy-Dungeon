@@ -7,12 +7,6 @@ public class Enemy : Pawn
     {
         pawnType = PawnType.Enemy;
     }
-
-    public override void Initialize()
-    {
-        base.Initialize();
-    }
-
     public override float GetAttackAnimationLength()
     {
         return EnemyService.ATTACK_ANIMATION_LENGTH;
@@ -21,7 +15,7 @@ public class Enemy : Pawn
     public void SetAbility(EnemyData enemyData)
     {
         ability = new AbilityData();
-        ability.SetAbilityData(enemyData);
+        ability = enemyData.abilityData;
 
         currentHP = ability.Health;
     }

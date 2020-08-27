@@ -66,7 +66,7 @@ public class BattleStatus : MonoBehaviour
                 float attackAnimationLength = pawn.GetAttackAnimationLength();
                 yield return new WaitForSeconds(attackAnimationLength + InGameService.ATTACK_DELAY);
 
-                Pawn target = pawn.GetTarget();
+                Pawn target = pawn.target;
 
                 if (target.isDead)
                 {

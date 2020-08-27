@@ -56,12 +56,10 @@ public class InGameService : MonoBehaviour
     /////////////////
 
     public static Character defaultCharacter;
-    public static Enemy defaultEnemy;
 
     public static void Initialize()
     {
         defaultCharacter = GameObject.Find("DefaultCharacter").GetComponent<Character>();
-        defaultEnemy = GameObject.Find("DefaultEnemy").GetComponent<Enemy>();
     }
 
     public const string COIN_IMAGE_PATH = "Images/InGame/Coin";

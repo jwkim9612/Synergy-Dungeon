@@ -19,16 +19,20 @@ public class Pawn : MonoBehaviour
     public Animator animator { get; set; }
     public SpriteRenderer spriteRenderer;
 
-    protected Pawn target;
+    public Pawn target { get; set; }
 
     public List<UIFloatingText> uiFloatingTextList { get; set; } = null;
     protected int floatingTextIndex;
 
-    public virtual void Initialize()
+    public void Initialize()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+
+        floatingTextIndex = 0;
 
         OnHit += PlayAnimationByTakeHit;
+        InGameManager.instance.gameState.OnBattle += SetInBattle;
     }
 
     // 공격
@@ -213,6 +217,14 @@ public class Pawn : MonoBehaviour
         yield return new WaitForEndOfFrame();
     }
 
+    private void SetInBattle()
+    {
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("InBattle", true);
+        }
+    }
+
     private void PlayAnimationByTakeHit()
     {
         if(isDead)
@@ -243,9 +255,38 @@ public class Pawn : MonoBehaviour
         }
     }
 
-    // 공격 대상을 리턴
-    public Pawn GetTarget()
+    // Hit 애니메이션에서 사용함.
+    private void TakeHitEnd()
     {
-        return target;
+        animator.SetBool("TakeHit", false);
+    }
+
+    // Dead 애니메이션에서 사용함.
+    private void DeadEnd()
+    {
+        animator.SetBool("Dead", false);
+
+        OnHide();
+    }
+
+    // BattleIdle 애니메이션에서 사용함.
+    private void UpdateBattleIdle()
+    {
+        bool isChanged = Random.Range(0, 2) > 0;
+        if (isChanged)
+        {
+            animator.SetTrigger("ChangeBattleIdle");
+        }
+    }
+       
+
+    public void OnShow()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void OnHide()
+    {
+        gameObject.SetActive(false);
     }
 }

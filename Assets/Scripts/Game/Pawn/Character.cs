@@ -11,14 +11,6 @@ public class Character : Pawn
         pawnType = PawnType.Character;
     }
 
-    public override void Initialize()
-    {
-        base.Initialize();
-        animator = GetComponent<Animator>();
-
-        floatingTextIndex = 0;
-    }
-
     public void SetAbility(CharacterAbilityData characterAbilityData, Origin newOrigin)
     {
         ability = new AbilityData();

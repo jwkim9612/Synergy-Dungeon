@@ -76,18 +76,18 @@ public class AbilityData
         AttackSpeed = characterAbilityData.abilityData.AttackSpeed;
     }
 
-    public void SetAbilityData(EnemyData enemyData)
+    public void SetAbilityData(EnemyExcelData enemyExcelData)
     {
-        Attack = enemyData.Attack;
-        MagicalAttack = enemyData.MagicalAttack;
-        Health = enemyData.Health;
-        Defence = enemyData.Defence;
-        MagicDefence = enemyData.MagicDefence;
-        Shield = enemyData.Shield;
-        Accuracy = enemyData.Accuracy;
-        Evasion = enemyData.Evasion;
-        Critical = enemyData.Critical;
-        AttackSpeed = enemyData.AttackSpeed;
+        Attack = enemyExcelData.Attack;
+        MagicalAttack = enemyExcelData.MagicalAttack;
+        Health = enemyExcelData.Health;
+        Defence = enemyExcelData.Defence;
+        MagicDefence = enemyExcelData.MagicDefence;
+        Shield = enemyExcelData.Shield;
+        Accuracy = enemyExcelData.Accuracy;
+        Evasion = enemyExcelData.Evasion;
+        Critical = enemyExcelData.Critical;
+        AttackSpeed = enemyExcelData.AttackSpeed;
     }
 
     public void SetAbilityData(RuneExcelData runeExcelData)

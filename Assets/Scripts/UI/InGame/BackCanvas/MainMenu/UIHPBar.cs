@@ -6,7 +6,7 @@ public class UIHPBar : MonoBehaviour
 {
     [SerializeField] private Slider slider = null;
     [SerializeField] private Slider afterImageSlider = null;
-    public Pawn controllingPawn;
+    public Pawn controllingPawn { get; set; }
     private Coroutine afterImageCoroutine;
 
     public void Initialize()
@@ -38,7 +38,7 @@ public class UIHPBar : MonoBehaviour
 
     public void UpdateHPBar()
     {
-        if(controllingPawn != null)
+        if(controllingPawn.gameObject.activeSelf)
         {
             slider.value = controllingPawn.GetHPRatio();
         }

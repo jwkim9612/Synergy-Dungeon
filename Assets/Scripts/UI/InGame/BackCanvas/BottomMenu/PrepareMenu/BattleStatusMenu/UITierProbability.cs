@@ -22,10 +22,10 @@ public class UITierProbability : MonoBehaviour
         var probabilityDataSheet = DataBase.Instance.probabilityDataSheet;
         if(probabilityDataSheet.TryGetProbabilityData(currentLevel, out var probabilityData))
         {
-            oneTierProbability.text = probabilityData.OneTier.ToString();
-            twoTierProbability.text = probabilityData.TwoTier.ToString();
-            threeTierProbability.text = probabilityData.ThreeTier.ToString();
-            fourTierProbability.text = probabilityData.FourTier.ToString();
+            oneTierProbability.text = $"● {probabilityData.OneTier}%";
+            twoTierProbability.text = $"● {probabilityData.TwoTier}%";
+            threeTierProbability.text = $"● {probabilityData.ThreeTier}%";
+            fourTierProbability.text = $"● {probabilityData.FourTier}%";
         }
     }
 
