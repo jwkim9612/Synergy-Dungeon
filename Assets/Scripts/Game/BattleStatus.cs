@@ -44,24 +44,33 @@ public class BattleStatus : MonoBehaviour
                     continue;
                 }
 
-                if(pawn is Character)
+                if(pawn.HasAnimation())
                 {
-                    // 애니메이션 다 생기면 없앰.
-                    Character character = pawn as Character;
-                    if (character.HasAnimation())
-                    {
-                        character.PlayAttackAnimation();
-                    }
-                    else
-                    {
-                        character.RandomAttack();
-                    }
-                    // Character의 애니메이션 안에 RandomAttack이 있음
+                    pawn.PlayAttackAnimationAndGetTarget();
                 }
                 else
                 {
                     pawn.RandomAttack();
                 }
+
+                //if(pawn is Character)
+                //{
+                //    // 애니메이션 다 생기면 없앰.
+                //    Character character = pawn as Character;
+                //    if (character.HasAnimation())
+                //    {
+                //        character.PlayAttackAnimationAndGetTarget();
+                //    }
+                //    else
+                //    {
+                //        character.RandomAttack();
+                //    }
+                //    // Character의 애니메이션 안에 RandomAttack이 있음
+                //}
+                //else
+                //{
+                //    pawn.RandomAttack();
+                //}
 
                 float attackAnimationLength = pawn.GetAttackAnimationLength();
                 yield return new WaitForSeconds(attackAnimationLength + InGameService.ATTACK_DELAY);

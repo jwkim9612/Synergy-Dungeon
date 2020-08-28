@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UIStart : MonoBehaviour
+public class UIStart : UIControl
 {
     [SerializeField] private Button startButton = null;
 
     public void Initialize()
     {
         SetStartButton();
+
+        InGameManager.instance.gameState.OnBattle += OnHide;
+        InGameManager.instance.gameState.OnPrepare += OnShow;
     }
 
     private void SetStartButton()

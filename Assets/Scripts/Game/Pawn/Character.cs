@@ -96,17 +96,6 @@ public class Character : Pawn
         return spriteRenderer.transform.localScale.x;
     }
 
-    public void OnHide()
-    {
-        spriteRenderer.gameObject.SetActive(false);
-    }
-
-    public void OnShow()
-    {
-        spriteRenderer.gameObject.SetActive(true);
-
-    }
-
     public void RemoveRunTimeAnimatorController()
     {
         animator.runtimeAnimatorController = null;
@@ -120,64 +109,22 @@ public class Character : Pawn
         }
     }
 
-    public override void PlayAttackAnimation()
+    public override void PlayAttackAnimationAndGetTarget()
     {
         if (animator.runtimeAnimatorController != null)
         {
             animator.SetBool("Attack", true);
         }
+
+        var battleStatus = InGameManager.instance.backCanvas.uiMainMenu.uiBattleArea.battleStatus;
+        target = battleStatus.GetRandomEnemy();
+        //Attack(target);
     }
 
     // Win 애니메이션에서 사용함.
     private void WinEnd()
     {
         animator.SetBool("Win", false);
-    }
-
-    // Attack 애니메이션에서 사용함.
-    private void AttackEnd()
-    {
-        animator.SetBool("Attack", false);
-    }
-
-    public override float GetAttackAnimationLength()
-    {
-        if (animator == null)
-        {
-            return 1.0f;
-        }
-
-        if (animator.runtimeAnimatorController != null)
-        {
-            RuntimeAnimatorController ac = animator.runtimeAnimatorController;
-            for (int i = 0; i < ac.animationClips.Length; i++)
-            {
-                if (ac.animationClips[i].name == "Attack")
-                {
-                    return ac.animationClips[i].length;
-                }
-            }
-        }
-        else
-        {
-            return 1.0f;
-        }
-
-        Debug.LogError("Error GetAttackAnimationLength");
-        return -1;
-    }
-
-    public bool HasAnimation()
-    {
-        if (animator != null)
-        {
-            if (animator.runtimeAnimatorController != null)
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 
     // 애니메이션이 없는 캐릭터의 데미지를 받을때 애니메이션

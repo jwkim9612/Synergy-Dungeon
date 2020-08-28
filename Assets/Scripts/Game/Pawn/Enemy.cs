@@ -7,10 +7,6 @@ public class Enemy : Pawn
     {
         pawnType = PawnType.Enemy;
     }
-    public override float GetAttackAnimationLength()
-    {
-        return EnemyService.ATTACK_ANIMATION_LENGTH;
-    }
 
     public void SetAbility(EnemyData enemyData)
     {
@@ -45,5 +41,16 @@ public class Enemy : Pawn
 
         target = battleStatus.GetRandomCharacter();
         Attack(target);
+    }
+
+    public override void PlayAttackAnimationAndGetTarget()
+    {
+        if (animator.runtimeAnimatorController != null)
+        {
+            animator.SetBool("Attack", true);
+        }
+
+        var battleStatus = InGameManager.instance.backCanvas.uiMainMenu.uiBattleArea.battleStatus;
+        target = battleStatus.GetRandomCharacter();
     }
 }

@@ -21,6 +21,11 @@ public class InGameService : MonoBehaviour
     public const int DEFAULT_EVENT_PROBABILITY = 0;
     public const int DEFAULT_NUM_OF_CAN_PLACED_IN_BATTLEAREA = 1;
 
+    // 보너스 계산할 때 사용할 값
+    public const float CALCULATE_BONUS_VALUE = 0.1f;
+    public const int MAX_NUMBER_OF_BONUS = 9;
+    public const int MIN_NUMBER_OF_BONUS = 0;
+
     public const int MIN_NUMBER_OF_COIN = 0;
     public const int MAX_NUMBER_OF_COIN = 10000;
 
@@ -41,6 +46,8 @@ public class InGameService : MonoBehaviour
 
     public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_PREPARE = 0.33f;
     public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_BATTLE = 0.0f;
+
+    public const int DEFAULT_PAWN_ORDER_IN_LAYER = 1;
 
     /////////////////
     /// 시너지 리스트

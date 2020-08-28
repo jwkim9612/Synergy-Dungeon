@@ -3,9 +3,11 @@
 public class InGamePlayerState : MonoBehaviour
 {
     public delegate void OnCoinChangedDelegate();
+    public delegate void OnBonusCoinChangedDelegate();
     public delegate void OnExpChangedDelegate();
     public delegate void OnLevelUpDelegate();
     public OnCoinChangedDelegate OnCoinChanged { get; set; }
+    public OnBonusCoinChangedDelegate OnBonusCoinChanged { get; set; }
     public OnExpChangedDelegate OnExpChanged { get; set; }
     public OnLevelUpDelegate OnLevelUp { get; set; }
     
@@ -15,12 +17,10 @@ public class InGamePlayerState : MonoBehaviour
     public int SatisfyExp;
     public int numOfCanPlacedInBattleArea;
 
-    private InGameExpDataSheet inGameExpDataSheet;
+    public int currentBonusCoin { get; set; }
 
     public void Initialize()
     {
-        inGameExpDataSheet = DataBase.Instance.inGameExpDataSheet;
-
         if (SaveManager.Instance.IsLoadedData)
         {
             InitializeByInGameSaveData();
@@ -29,6 +29,8 @@ public class InGamePlayerState : MonoBehaviour
         {
             InitializeByDefault();
         }
+
+        currentBonusCoin = GetBonusCoin();
 
         InGameManager.instance.gameState.OnPrepare += IncreaseCoinByPrepare;
         InGameManager.instance.gameState.OnComplete += IncreaseExpByBattleWin;
@@ -39,7 +41,8 @@ public class InGamePlayerState : MonoBehaviour
     {
         coin = SaveManager.Instance.inGameSaveData.Coin;
         level = SaveManager.Instance.inGameSaveData.Level;
-
+        
+        var inGameExpDataSheet = DataBase.Instance.inGameExpDataSheet;
         if (inGameExpDataSheet.TryGetSatisfyExp(level, out var satisfyExp))
         {
             SatisfyExp = satisfyExp;
@@ -55,6 +58,7 @@ public class InGamePlayerState : MonoBehaviour
         coin = InGameService.DEFAULT_COIN;
         level = InGameService.DEFAULT_LEVEL;
 
+        var inGameExpDataSheet = DataBase.Instance.inGameExpDataSheet;
         if (inGameExpDataSheet.TryGetSatisfyExp(level, out var satisfyExp))
         {
             SatisfyExp = satisfyExp;
@@ -71,11 +75,14 @@ public class InGamePlayerState : MonoBehaviour
 
         // OnCoinChanged가 비어있는지 확인 후 실행
         OnCoinChanged?.Invoke();
+        UpdateBonusCoin();
     }
 
     // 준비 상태에 의한 코인 증가
     public void IncreaseCoinByPrepare()
     {
+        IncreaseCoinByBonus();
+
         int currentChapter = StageManager.Instance.currentChapter;
         int currentWave = StageManager.Instance.currentWave;
 
@@ -86,11 +93,21 @@ public class InGamePlayerState : MonoBehaviour
         }
     }
 
+    public void IncreaseCoinByBonus()
+    {
+        int bonusCoin = GetBonusCoin();
+        if (bonusCoin > 0)
+        {
+            IncreaseCoin(bonusCoin);
+        }
+    }
+
     // 코인 사용
     public void UseCoin(int usedValue)
     {
         coin = Mathf.Clamp(coin - usedValue, InGameService.MIN_NUMBER_OF_COIN, coin);
         OnCoinChanged();
+        UpdateBonusCoin();
     }
 
     // 경험치 증가
@@ -105,7 +122,8 @@ public class InGamePlayerState : MonoBehaviour
         {
             level += 1;
             exp -= SatisfyExp;
-            
+
+            var inGameExpDataSheet = DataBase.Instance.inGameExpDataSheet;
             if (inGameExpDataSheet.TryGetSatisfyExp(level, out var satisfyExp))
             {
                 SatisfyExp = satisfyExp;
@@ -151,5 +169,21 @@ public class InGamePlayerState : MonoBehaviour
         int maxLevelOfSatisfyExp = PlayerService.MAX_LEVEL_OF_SATISFY_EXP;
 
         return satisfyExp == maxLevelOfSatisfyExp ? true : false;
+    }
+
+    public int GetBonusCoin()
+    {
+        int bonusCoin = Mathf.Clamp((int)(coin * InGameService.CALCULATE_BONUS_VALUE), InGameService.MIN_NUMBER_OF_BONUS, InGameService.MAX_NUMBER_OF_BONUS);
+        return bonusCoin;
+    }
+
+    public void UpdateBonusCoin()
+    {
+        int bonusCoin = GetBonusCoin();
+        if (currentBonusCoin != bonusCoin)
+        {
+            currentBonusCoin = bonusCoin;
+            OnBonusCoinChanged();
+        }
     }
 }

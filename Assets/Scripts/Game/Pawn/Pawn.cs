@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pawn : MonoBehaviour
+public abstract class Pawn : MonoBehaviour
 {
     public delegate void OnAttackDelegate();
     public delegate void OnHitDelegate();
@@ -15,7 +15,8 @@ public class Pawn : MonoBehaviour
     public PawnType pawnType { get; set; }
     public bool isDead { get; set; }
     public AbilityData ability;
-    protected long currentHP;
+    protected int currentHP;
+    public Vector3 originPosition { get; set; }
     public Animator animator { get; set; }
     public SpriteRenderer spriteRenderer;
 
@@ -44,9 +45,31 @@ public class Pawn : MonoBehaviour
             return;
         }
 
-        StartCoroutine(Co_AttackAndAnimation());
+        if (HasAnimation())
+        {
+            AttackProcessing();
+        }
+        else
+        {
+            StartCoroutine(Co_AttackAndAnimation());
+        }
 
         //InGameManager.instance.battleLogService.AddBattleLog(name + "(이)가 " + target.name + "(이)에게 " + finalDamage + "데미지를 입혔습니다.");
+    }
+
+    // 애니메이터에서 사용
+    private void TeleportToTarget()
+    {
+        spriteRenderer.sortingOrder = InGameService.DEFAULT_PAWN_ORDER_IN_LAYER + 1;
+        originPosition = gameObject.transform.position;
+        gameObject.transform.position = target.gameObject.transform.position;
+    }
+
+    // 애니메이터에서 사용
+    private void BackToOriginPosition()
+    {
+        gameObject.transform.position = originPosition;
+        spriteRenderer.sortingOrder = InGameService.DEFAULT_PAWN_ORDER_IN_LAYER;
     }
 
     // 랜덤 공격
@@ -59,22 +82,22 @@ public class Pawn : MonoBehaviour
     /// </summary>
     /// <param name="damage">받은 데미지</param>
     /// <returns>최종적으로 입은 데미지</returns>
-    public long TakeDamage(long damage, bool isCritical)
+    public long TakeDamage(int damage, bool isCritical)
     {
-        long finalDamage;
+        int finalDamage;
 
         if (isCritical)
         {
-            finalDamage = Mathf.Clamp((int)(damage * 2) - (int)(ability.Defence), 1, (int)damage);
+            finalDamage = Mathf.Clamp((damage * 2) - (ability.Defence), 1, damage);
             PlayCriticalHitText(finalDamage);
         }
         else
         {
-            finalDamage = Mathf.Clamp((int)damage - (int)(ability.Defence), 1, (int)damage);
+            finalDamage = Mathf.Clamp(damage - (ability.Defence), 1, damage);
             PlayHitText(finalDamage);
         }
 
-        currentHP = Mathf.Clamp((int)(currentHP - finalDamage), 0, (int)currentHP);
+        currentHP = Mathf.Clamp((currentHP - finalDamage), 0, currentHP);
 
         if (currentHP <= 0)
         {
@@ -152,15 +175,35 @@ public class Pawn : MonoBehaviour
     }
 
     // 공격 애니메이션 시간을 반환
-    public virtual float GetAttackAnimationLength()
+    public float GetAttackAnimationLength()
     {
-        return 0.0f;
+        if (animator == null)
+        {
+            return 1.0f;
+        }
+
+        if (animator.runtimeAnimatorController != null)
+        {
+            RuntimeAnimatorController ac = animator.runtimeAnimatorController;
+            for (int i = 0; i < ac.animationClips.Length; i++)
+            {
+                if (ac.animationClips[i].name == "Attack")
+                {
+                    return ac.animationClips[i].length;
+                }
+            }
+        }
+        else
+        {
+            return 1.0f;
+        }
+
+        Debug.LogError("Error GetAttackAnimationLength");
+        return -1;
     }
 
     // 공격 애니메이션 실행
-    public virtual void PlayAttackAnimation()
-    {
-    }
+    public abstract void PlayAttackAnimationAndGetTarget();
 
     // 공격이 성공했는지 확인후 타겟에 데미지를 주는 공격 처리
     public void AttackProcessing()
@@ -278,7 +321,25 @@ public class Pawn : MonoBehaviour
             animator.SetTrigger("ChangeBattleIdle");
         }
     }
-       
+
+    // Attack 애니메이션에서 사용함.
+    private void AttackEnd()
+    {
+        animator.SetBool("Attack", false);
+    }
+
+    public bool HasAnimation()
+    {
+        if (animator != null)
+        {
+            if (animator.runtimeAnimatorController != null)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     public void OnShow()
     {

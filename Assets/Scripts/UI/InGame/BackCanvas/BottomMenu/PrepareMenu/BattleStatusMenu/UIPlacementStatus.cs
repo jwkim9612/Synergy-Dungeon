@@ -27,7 +27,7 @@ public class UIPlacementStatus : MonoBehaviour
 
         if(numOfCurrentPlacedCharacters == numOfCanPlacedInBattleArea)
         {
-            placementStatusText.color = Color.red - new Color(0, 0, 0, 0.2f);
+            placementStatusText.color = Color.gray - new Color(0, 0, 0, 0.2f);
         }
         else if(numOfCurrentPlacedCharacters < numOfCanPlacedInBattleArea)
         {

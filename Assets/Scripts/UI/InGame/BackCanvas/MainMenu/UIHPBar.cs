@@ -42,10 +42,6 @@ public class UIHPBar : MonoBehaviour
         {
             slider.value = controllingPawn.GetHPRatio();
         }
-        else
-        {
-            Debug.Log("Error Update HP Bar. ControllingPawn is null");
-        }
     }
 
     private IEnumerator PlayAfterImage()

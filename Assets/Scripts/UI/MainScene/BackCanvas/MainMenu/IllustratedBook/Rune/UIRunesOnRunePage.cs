@@ -118,8 +118,6 @@ public class UIRunesOnRunePage : MonoBehaviour
         {
             uiRuneListOnRunePage[i].transform.SetSiblingIndex(i);
         }
-
-        Debug.Log("size = " + uiRuneListOnRunePage.Count);
     }
 
     public void ChangeSortBy()
