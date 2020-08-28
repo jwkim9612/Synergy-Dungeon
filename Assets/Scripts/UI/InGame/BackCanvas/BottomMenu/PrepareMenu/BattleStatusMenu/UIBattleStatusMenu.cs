@@ -3,7 +3,6 @@
 public class UIBattleStatusMenu : MonoBehaviour
 {
     [SerializeField] private UILevelAndExp uiLevelAndExp = null;
-    [SerializeField] private UIAddExp uiAddExp = null;
     [SerializeField] private UICoin uiCoin = null;
     [SerializeField] private UITierProbability uiTierProbability = null;
     [SerializeField] private UIReload uiReload = null;
@@ -11,7 +10,6 @@ public class UIBattleStatusMenu : MonoBehaviour
     public void Initialize()
     {
         uiLevelAndExp.Initialize();
-        uiAddExp.Initialize();
         uiCoin.Initialize();
         uiTierProbability.Initialize();
         uiReload.Initialize();

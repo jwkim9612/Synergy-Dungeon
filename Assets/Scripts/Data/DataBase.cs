@@ -20,6 +20,8 @@
 
 	public void Initialize()
     {
+		CheckValidate();
+
 		tribeDataSheet.Initialize();
 		originDataSheet.Initialize();
 		characterDataSheet.Initialize();
@@ -41,6 +43,22 @@
 
 	public void CheckValidate()
 	{
-
+		tribeDataSheet.DataValidate();
+		originDataSheet.DataValidate();
+		characterDataSheet.DataValidate();
+		characterAbilityDataSheet.DataValidate();
+		chapterInfoDataSheet.DataValidate();
+		chapterDataSheet.DataValidate();
+		enemyDataSheet.DataValidate();
+		probabilityDataSheet.DataValidate();
+		runeDataSheet.DataValidate();
+		potionDataSheet.DataValidate();
+		goodsDataSheet.DataValidate();
+		runePurchaseableLevelDataSheet.DataValidate();
+		inGameEvent_ScenarioDataSheet.DataValidate();
+		runeCombinableNumDataSheet.DataValidate();
+		inGameExpDataSheet.DataValidate();
+		artifactDataSheet.DataValidate();
+		artifactPieceDataSheet.DataValidate();
 	}
 }
