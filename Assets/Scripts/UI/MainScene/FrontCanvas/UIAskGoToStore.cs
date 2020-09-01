@@ -7,9 +7,6 @@ public class UIAskGoToStore : UIControl
     [SerializeField] private Text contentText = null;
     [SerializeField] private Button goToStoreButton = null;
 
-    [SerializeField] private RectTransform goldGoods = null;
-    [SerializeField] private RectTransform diamondGoods = null;
-
     private PurchaseCurrency purchaseCurrency;
 
     public void Initialize()

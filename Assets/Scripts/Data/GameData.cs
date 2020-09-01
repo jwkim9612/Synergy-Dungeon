@@ -26,8 +26,7 @@ public enum Tier
     One,
     Two,
     Three,
-    Four,
-    Five
+    Four
 }
 
 public enum InGameState
@@ -76,20 +75,21 @@ public enum PurchaseCurrency
     Heart
 }
 
-
 public enum RewardCurrency
 { 
     None,
-    Gold,
-    Rune,
-    RandomRune,
-    RandomPotion,
-    Relic,
     Artifact,
     Coin,
-    Status,
-    RandomArtifactPiece,
+    Diamond,
+    Exp,
+    Gold,
     Heart,
+    RandomArtifactPiece,
+    RandomPotion,
+    RandomRune,
+    Relic,
+    Rune,
+    Status,
     Nothing
 }
 

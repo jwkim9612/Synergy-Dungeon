@@ -25,6 +25,6 @@ public class InGameFrontCanvas : MonoBehaviour
 
     public void ShowStageClear()
     {
-        uiStageClear.OnHide();
+        uiStageClear.OnShow();
     }
 }

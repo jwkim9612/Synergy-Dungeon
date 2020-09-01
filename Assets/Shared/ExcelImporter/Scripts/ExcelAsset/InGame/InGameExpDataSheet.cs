@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +5,15 @@ using UnityEngine;
 public class InGameExpDataSheet : ScriptableObject, IDataSheet
 {
 	public List<InGameExpExcelData> InGameExpExcelDatas;
-    private Dictionary<int, InGameExpData> InGameExpDatas;
+    private Dictionary<int, ExpData> InGameExpDatas;
 
-    public bool TryGetInGameExpData(int level, out InGameExpData data)
+    public bool TryGetInGameExpData(int level, out ExpData data)
     {
         data = null;
 
         if (InGameExpDatas.TryGetValue(level, out var inGameExpData))
         {
-            data = new InGameExpData(inGameExpData);
+            data = new ExpData(inGameExpData);
             return true;
         }
 
@@ -44,11 +42,11 @@ public class InGameExpDataSheet : ScriptableObject, IDataSheet
 
     private void GenerateData()
     {
-        InGameExpDatas = new Dictionary<int, InGameExpData>();
+        InGameExpDatas = new Dictionary<int, ExpData>();
 
         foreach (var inGameExpExcelData in InGameExpExcelDatas)
         {
-            InGameExpData inGameExpData = new InGameExpData(inGameExpExcelData);
+            var inGameExpData = new ExpData(inGameExpExcelData);
             InGameExpDatas.Add(inGameExpData.Level, inGameExpData);
         }
     }

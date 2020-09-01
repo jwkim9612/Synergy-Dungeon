@@ -3051,6 +3051,7 @@ MonoBehaviour:
   probabilityDataSheet: {fileID: 11400000, guid: 29315747a085c9c44aa10b46f2854d4b,
     type: 2}
   inGameExpDataSheet: {fileID: 11400000, guid: 01ca4b7cde88fb04f9f524d1a20da488, type: 2}
+  playerExpDataSheet: {fileID: 11400000, guid: 0bdba2a02aaa552449e3578dcef7df6a, type: 2}
   runeDataSheet: {fileID: 11400000, guid: b5fd6ea962aaf0b40b4b4e99e73c6e24, type: 2}
   potionDataSheet: {fileID: 11400000, guid: f1ae15498f14e5f419a07ceb39101114, type: 2}
   goodsDataSheet: {fileID: 11400000, guid: e00092dc774f97548a1929e8f9bea0d7, type: 2}

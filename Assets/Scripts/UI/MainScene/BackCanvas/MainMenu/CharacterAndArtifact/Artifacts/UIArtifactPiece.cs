@@ -3,8 +3,8 @@ using UnityEngine.UI;
 
 public class UIArtifactPiece : MonoBehaviour
 {
-    [SerializeField] private Button showInfoButton;
-    [SerializeField] private Image artifactImage;
+    [SerializeField] private Button showInfoButton = null;
+    [SerializeField] private Image artifactImage = null;
     public int id;
     public bool isOwned;
 

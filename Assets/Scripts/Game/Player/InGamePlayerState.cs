@@ -12,12 +12,12 @@ public class InGamePlayerState : MonoBehaviour
     public OnLevelUpDelegate OnLevelUp { get; set; }
     
     public int coin { get; set; }
-    public int level;
-    public int exp;
-    public int SatisfyExp;
-    public int numOfCanPlacedInBattleArea;
-
+    public int level { get; set; }
+    public int exp { get; set; }
+    public int SatisfyExp { get; set; }
+    public int numOfCanPlacedInBattleArea { get; set; }
     public int currentBonusCoin { get; set; }
+    public RewardList rewardList { get; set; }
 
     public void Initialize()
     {
@@ -31,9 +31,11 @@ public class InGamePlayerState : MonoBehaviour
         }
 
         currentBonusCoin = GetBonusCoin();
+        rewardList = new RewardList();
 
         InGameManager.instance.gameState.OnPrepare += IncreaseCoinByPrepare;
         InGameManager.instance.gameState.OnComplete += IncreaseExpByBattleWin;
+        InGameManager.instance.gameState.OnComplete += IncreaseRewardsByBattleWin;
     }
 
     // 인게임 세이브데이터로 초기화
@@ -184,6 +186,46 @@ public class InGamePlayerState : MonoBehaviour
         {
             currentBonusCoin = bonusCoin;
             OnBonusCoinChanged();
+        }
+    }
+
+    public void GetRewards()
+    {
+        foreach (var reward in rewardList)
+        {
+            switch (reward.rewardCurrency)
+            {
+                case RewardCurrency.Gold:
+                    PlayerDataManager.Instance.AddGold(reward.amount);
+                    break;
+                case RewardCurrency.Exp:
+                    PlayerDataManager.Instance.AddExp(reward.amount);
+                    break;
+            }
+        }
+    }
+
+    public void IncreaseRewardsByBattleWin()
+    {
+        var currentChapter = StageManager.Instance.currentChapter;
+        var currentWave = StageManager.Instance.currentWave;
+
+        if (!StageManager.Instance.IsFinalWave())
+        {
+            --currentWave;
+
+            if (currentWave == 0)
+                return;
+        }
+
+        var chapterInfoDataSheet = DataBase.Instance.chapterInfoDataSheet;
+        if (chapterInfoDataSheet.TryGetChapterInfoClearExpReward(currentChapter, currentWave, out var expRewardValue))
+        {
+            rewardList.AddReward(RewardCurrency.Exp, expRewardValue);
+        }
+        if (chapterInfoDataSheet.TryGetChapterInfoClearGoldReward(currentChapter, currentWave, out var goldRewardValue))
+        {
+            rewardList.AddReward(RewardCurrency.Gold, goldRewardValue);
         }
     }
 }

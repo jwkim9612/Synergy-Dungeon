@@ -38,6 +38,34 @@ public class ChapterInfoDataSheet : ScriptableObject, IDataSheet
 		return false;
 	}
 
+	public bool TryGetChapterInfoClearGoldReward(int chapterId, int waveId, out int rewardValue)
+	{
+		rewardValue = 0;
+
+		if (TryGetChapterInfoData(chapterId, waveId, out var chapterInfoData))
+		{
+			rewardValue = chapterInfoData.ClearGoldReward;
+			return true;
+		}
+
+		Debug.LogWarning($"Error TryGetChapterInfoClearGoldReward chapterId:{chapterId} waveId:{waveId}");
+		return false;
+	}
+
+	public bool TryGetChapterInfoClearExpReward(int chapterId, int waveId, out int rewardValue)
+	{
+		rewardValue = 0;
+
+		if (TryGetChapterInfoData(chapterId, waveId, out var chapterInfoData))
+		{
+			rewardValue = chapterInfoData.ClearExpReward;
+			return true;
+		}
+
+		Debug.LogWarning($"Error TryGetChapterInfoClearExpReward chapterId:{chapterId} waveId:{waveId}");
+		return false;
+	}
+
 	public bool TryGetChapterInfoData(int chapterId, int waveId, out ChapterInfoData data)
 	{
 		data = null;

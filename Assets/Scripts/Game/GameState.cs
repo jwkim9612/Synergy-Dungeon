@@ -9,7 +9,7 @@ public class GameState : MonoBehaviour
     public OnBattleDelegate OnBattle { get; set; }
     public OnCompleteDelegate OnComplete { get; set; }
 
-    public InGameState inGameState { get; set; } = InGameState.None;
+    public InGameState inGameState { get; set; }
 
     public bool isWaveClear { get; set; } = false;
     public bool isPlayerLose { get; set; } = false;
@@ -50,12 +50,12 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 OnComplete();
 
+
                 if (StageManager.Instance.IsFinalWave())
                 {
-                    PlayerDataManager.Instance.playerData.IncreasePlayableStage();
+                    PlayerDataManager.Instance.playerData.UpdatePlayableChapter();
                     PlayerDataManager.Instance.playerData.InitializeTopWave();
-                    PlayerDataManager.Instance.SavePlayerData();
-
+                    InGameManager.instance.playerState.GetRewards();
                     InGameManager.instance.frontCanvas.ShowStageClear();
                 }
                 else
@@ -79,9 +79,7 @@ public class GameState : MonoBehaviour
 
             case InGameState.Lose:
                 PlayerDataManager.Instance.playerData.TopWave = StageManager.Instance.currentWave - 1;
-                // 보상 주기.
-                PlayerDataManager.Instance.SavePlayerData();
-
+                InGameManager.instance.playerState.GetRewards();
                 InGameManager.instance.frontCanvas.ShowGameOver();
                 break;
         }

@@ -109,8 +109,6 @@ public class ChapterDataSheet : ScriptableObject, IDataSheet
 
         foreach (var chapterExcelData in ChapterExcelDatas)
         {
-			Debug.Log(chapterExcelData.Name);
-
             if (idList.Contains(chapterExcelData.Id))
             {
                 Debug.Log($"Chapter ø¢ºø µ•¿Ã≈Õ Id : {chapterExcelData.Id}∞™¿Ã ∞„ƒ®¥œ¥Ÿ.");
@@ -120,8 +118,5 @@ public class ChapterDataSheet : ScriptableObject, IDataSheet
 				idList.Add(chapterExcelData.Id);
 			}
         }
-
-
-
     }
 }

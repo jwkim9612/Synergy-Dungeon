@@ -43,15 +43,16 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                         var data = new PlayerData
                         {
                             Level = (int)scriptData.GetInt("PlayerLevel"),
+                            Exp = (int)scriptData.GetInt("PlayerExp"),
                             Diamond = (int)scriptData.GetInt("PlayerDiamond"),
                             Gold = (int)scriptData.GetInt("PlayerGold"),
-                            PlayableStage = (int)scriptData.GetInt("PlayerPlayableStage"),
+                            PlayableChapter = (int)scriptData.GetInt("PlayerPlayableChapter"),
                             TopWave = (int)scriptData.GetInt("PlayerTopWave")
                         };
 
                         playerData = data;
                         Debug.Log("Player Data Load Successfully !");
-                        Debug.Log($"Level : {playerData.Level}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableStage : {playerData.PlayableStage}, PlayerTopWave : {playerData.TopWave}");
+                        Debug.Log($"Level : {playerData.Level}, Exp : {playerData.Exp}, Gold : {playerData.Gold}, Diamond : {playerData.Diamond}, PlayableChapter : {playerData.PlayableChapter}, PlayerTopWave : {playerData.TopWave}");
                    
                         if(OnGoldChanged != null)
                         {
@@ -85,15 +86,18 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
         new LogEventRequest()
             .SetEventKey("SavePlayerData")
             .SetEventAttribute("Level", playerData.Level)
+            .SetEventAttribute("Exp", playerData.Exp)
             .SetEventAttribute("Diamond", playerData.Diamond)
             .SetEventAttribute("Gold", playerData.Gold)
-            .SetEventAttribute("PlayableStage", playerData.PlayableStage)
+            .SetEventAttribute("PlayableChapter", playerData.PlayableChapter)
             .SetEventAttribute("TopWave", playerData.TopWave)
             .Send((response) =>
             {
                 if (!response.HasErrors)
                 {
                     Debug.Log("Success Player Data Save !");
+                    // 밑에꺼 추가한거임.
+                    LoadPlayerData();
                 }
                 else
                 {
@@ -107,9 +111,10 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
         new LogEventRequest()
             .SetEventKey("SavePlayerData")
             .SetEventAttribute("Level", playerData.Level)
+            .SetEventAttribute("Exp", playerData.Exp)
             .SetEventAttribute("Diamond", playerData.Diamond)
             .SetEventAttribute("Gold", playerData.Gold)
-            .SetEventAttribute("PlayableStage", playerData.PlayableStage)
+            .SetEventAttribute("PlayableChapter", playerData.PlayableChapter)
             .SetEventAttribute("TopWave", playerData.TopWave)
             .Send((response) =>
             {
@@ -161,5 +166,57 @@ public class PlayerDataManager : MonoSingleton<PlayerDataManager>
                     Debug.Log("Error Initialize PlayerData !");
                 }
             });
+    }
+
+    public void AddGold(int value)
+    {
+        playerData.Gold += value;
+        SavePlayerData();
+    }
+
+    public void AddDiamond(int value)
+    {
+        playerData.Diamond += value;
+        SavePlayerData();
+    }
+
+    public void AddExp(int value)
+    {
+        playerData.Exp += value;
+
+        if(DataBase.Instance.playerExpDataSheet.TryGetSatisfyExp(playerData.Level, out var satisfyExp))
+        {
+            if (playerData.Exp >= satisfyExp)
+            {
+                playerData.Level += 1;
+                playerData.Exp = playerData.Exp - satisfyExp;
+            }
+        }
+
+        SavePlayerData();
+    }
+
+    public void GetReward()
+    {
+        var currentChapter = StageManager.Instance.currentChapter;
+        var currentWave = StageManager.Instance.currentWave;
+
+        if (!StageManager.Instance.IsFinalWave())
+        {
+            --currentWave;
+
+            if (currentWave == 0)
+                return;
+        }
+
+        var chapterInfoDataSheet = DataBase.Instance.chapterInfoDataSheet;
+        if (chapterInfoDataSheet.TryGetChapterInfoClearExpReward(currentChapter, currentWave, out var expRewardValue))
+        {
+            AddExp(expRewardValue);
+        }
+        if (chapterInfoDataSheet.TryGetChapterInfoClearGoldReward(currentChapter, currentWave, out var goldRewardValue))
+        {
+            AddGold(goldRewardValue);
+        }
     }
 }

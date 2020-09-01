@@ -9,6 +9,7 @@
 	public EnemyDataSheet enemyDataSheet;
 	public ProbabilityDataSheet probabilityDataSheet;
 	public InGameExpDataSheet inGameExpDataSheet;
+	public PlayerExpDataSheet playerExpDataSheet;
 	public RuneDataSheet runeDataSheet;
 	public PotionDataSheet potionDataSheet;
 	public GoodsDataSheet goodsDataSheet;
@@ -37,6 +38,7 @@
 		inGameEvent_ScenarioDataSheet.Initialize();
 		runeCombinableNumDataSheet.Initialize();
 		inGameExpDataSheet.Initialize();
+		playerExpDataSheet.Initialize();
 		artifactDataSheet.Initialize();
 		artifactPieceDataSheet.Initialize();
 	}
@@ -58,6 +60,7 @@
 		inGameEvent_ScenarioDataSheet.DataValidate();
 		runeCombinableNumDataSheet.DataValidate();
 		inGameExpDataSheet.DataValidate();
+		playerExpDataSheet.DataValidate();
 		artifactDataSheet.DataValidate();
 		artifactPieceDataSheet.DataValidate();
 	}

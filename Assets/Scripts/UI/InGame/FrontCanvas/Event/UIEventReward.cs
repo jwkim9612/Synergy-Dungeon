@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class UIReward : MonoBehaviour
+public class UIEventReward : MonoBehaviour
 {
-    [SerializeField] private Image rewardImage = null;
-    [SerializeField] private Text rewardText = null;
+    [SerializeField] private UIReward uiReward = null;
+    [SerializeField] private Text rewardDescriptionText = null;
     [SerializeField] private Button button = null;
 
-    private void Start()
+    public void Initialize()
+    {
+        SetHideSenarioEventButton();
+    }
+
+    private void SetHideSenarioEventButton()
     {
         button.onClick.AddListener(() =>
         {
@@ -15,7 +20,7 @@ public class UIReward : MonoBehaviour
             transform.parent.gameObject.SetActive(false);
         });
     }
-    
+
     public void SetReward(ScenarioData scenarioData)
     {
         switch (scenarioData.CurrencyType)
@@ -35,7 +40,7 @@ public class UIReward : MonoBehaviour
             case RewardCurrency.Artifact:
                 break;
             case RewardCurrency.Coin:
-                rewardImage.sprite = InGameService.COIN_IMAGE;
+                uiReward.SetImage(InGameService.COIN_IMAGE);
                 break;
             case RewardCurrency.Status:
                 break;
@@ -47,15 +52,8 @@ public class UIReward : MonoBehaviour
                 break;
         }
 
-
-        SetText(scenarioData.RewardDescription);
-    }
-
-    
-
-    private void SetText(string text)
-    {
-        rewardText.text = text;
+        uiReward.SetAmountText(scenarioData.Amount.ToString());
+        rewardDescriptionText.text = scenarioData.RewardDescription;
     }
 
     public void OnShow()

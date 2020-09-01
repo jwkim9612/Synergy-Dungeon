@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIBattleStart : MonoBehaviour
 {
-    [SerializeField] private Text textBattleStart;
+    [SerializeField] private Text textBattleStart = null;
 
     public float playTime;
 

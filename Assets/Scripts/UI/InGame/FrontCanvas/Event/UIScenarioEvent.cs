@@ -8,6 +8,7 @@ public class UIScenarioEvent : MonoBehaviour
     [SerializeField] private GameObject main = null;
     [SerializeField] private GameObject scenario = null;
     [SerializeField] private Text titleText = null;
+    [SerializeField] private UIEventReward uiEventReward = null;
     [SerializeField] private List<UIScenarioEventButton> selectButtonList = null;
     public ScenarioEvent scenarioEvent;
 
@@ -15,10 +16,13 @@ public class UIScenarioEvent : MonoBehaviour
     {
         scenarioEvent = new ScenarioEvent();
         scenarioEvent.Initialize();
+        uiEventReward.Initialize();
 
         foreach (var selectButton in selectButtonList)
         {
+            selectButton.Initialize();
             selectButton.scenarioEvent = this.scenarioEvent;
+            selectButton.uiEventReward = this.uiEventReward;
         }
 
         InGameManager.instance.gameState.OnPrepare += CheckScenarioDataAndSetScenarioEvent;

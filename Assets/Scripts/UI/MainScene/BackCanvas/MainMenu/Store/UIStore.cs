@@ -53,8 +53,9 @@ public class UIStore : MonoBehaviour
     {
         cheatGoldButton.onClick.AddListener(() =>
         {
-            PlayerDataManager.Instance.playerData.Gold += 1000;
-            PlayerDataManager.Instance.SavePlayerDataForCheat();
+            PlayerDataManager.Instance.AddGold(1000);
+            //PlayerDataManager.Instance.playerData.Gold += 1000;
+            //PlayerDataManager.Instance.SavePlayerDataForCheat();
         });
     }
 
@@ -62,8 +63,9 @@ public class UIStore : MonoBehaviour
     {
         cheatDiamondButton.onClick.AddListener(() =>
         {
-            PlayerDataManager.Instance.playerData.Diamond += 1000;
-            PlayerDataManager.Instance.SavePlayerDataForCheat();
+            PlayerDataManager.Instance.AddDiamond(1000);
+            //PlayerDataManager.Instance.playerData.Diamond += 1000;
+            //PlayerDataManager.Instance.SavePlayerDataForCheat();
         });
     }
 

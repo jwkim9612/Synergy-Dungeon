@@ -12,6 +12,8 @@ public class ChapterInfoData
         EnemyIds = chapterInfoExcelData.EnemyIds;
         FrontIds = chapterInfoExcelData.FrontIds;
         BackIds = chapterInfoExcelData.BackIds;
+        ClearGoldReward = chapterInfoExcelData.ClearGoldReward;
+        ClearExpReward = chapterInfoExcelData.ClearExpReward;
 
         InitializeEnemyIds();
         InitializeFrontIds();
@@ -26,6 +28,8 @@ public class ChapterInfoData
     public string EnemyIds;
     public string FrontIds;
     public string BackIds;
+    public int ClearGoldReward;
+    public int ClearExpReward;
 
     public List<int> EnemyIdList;
     public List<int> FrontIdList;

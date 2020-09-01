@@ -31,7 +31,6 @@ public class CharacterStockSystem
         CharacterStock twoTierStock = new CharacterStock();
         CharacterStock threeTierStock = new CharacterStock();
         CharacterStock fourTierStock = new CharacterStock();
-        CharacterStock fiveTierStock = new CharacterStock();
 
         if (characterDataSheet.TryGetCharacterDatas(out var characterDatas))
         {
@@ -53,9 +52,6 @@ public class CharacterStockSystem
                         case Tier.Four:
                             fourTierStock.characterIds.Add(characterData.Key);
                             break;
-                        case Tier.Five:
-                            fiveTierStock.characterIds.Add(characterData.Key);
-                            break;
                         default:
                             Debug.Log("Error InitializeStock");
                             break;
@@ -68,7 +64,6 @@ public class CharacterStockSystem
         Stocks.Add(Tier.Two, twoTierStock);
         Stocks.Add(Tier.Three, threeTierStock);
         Stocks.Add(Tier.Four, fourTierStock);
-        Stocks.Add(Tier.Five, fiveTierStock);
     }
 
     public void ClearAllStock()

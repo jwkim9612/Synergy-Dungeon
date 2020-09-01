@@ -9,7 +9,7 @@ public class UIAbilityEffectList : MonoBehaviour
     public List<UIAbilityEffect> uiAbilityEffectList;
     private bool isInBattle;
 
-    [SerializeField] private Camera cam;
+    [SerializeField] private Camera cam = null;
 
     public void Initialize()
     {

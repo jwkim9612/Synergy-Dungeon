@@ -7,7 +7,7 @@ public class UIBestWave : MonoBehaviour
 
     public void UpdateText(int selectedChapter)
     {
-        if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableStage)
+        if (selectedChapter < PlayerDataManager.Instance.playerData.PlayableChapter)
             bestWaveText.text = "챕터 클리어";
         else
         {

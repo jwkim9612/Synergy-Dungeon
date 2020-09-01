@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UIArtifactRecipeList : MonoBehaviour
 {
-    [SerializeField] private List<UIArtifactRecipe> uiArtifactRecipeList;
+    [SerializeField] private List<UIArtifactRecipe> uiArtifactRecipeList = null;
 
     public void SetArtifactRecipeList(int artifactPieceId)
     {

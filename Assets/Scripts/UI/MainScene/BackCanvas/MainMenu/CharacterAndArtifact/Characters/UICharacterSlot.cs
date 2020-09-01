@@ -10,7 +10,7 @@ public class UICharacterSlot : MonoBehaviour
     [SerializeField] private Text tribeText = null;
     [SerializeField] private Image originImage = null;
     [SerializeField] private Text originText = null;
-    [SerializeField] private Image costBorder = null;
+    [SerializeField] private Image tierFrameImage = null;
     
     public CharacterData characterData { get; set; }
 
@@ -24,7 +24,7 @@ public class UICharacterSlot : MonoBehaviour
         SetTribeText(characterData.Tribe);
         SetOriginImage(characterData.OriginData.Image);
         SetOriginText(characterData.Origin);
-        SetTierBorder(CardService.GetColorByTier(characterData.Tier));
+        SetTierFrameImage(CardService.GetFrameImageByTier(characterData.Tier));
     }
 
     public void SetName(string name)
@@ -87,9 +87,9 @@ public class UICharacterSlot : MonoBehaviour
         originText.text = originStr;
     }
 
-    public void SetTierBorder(Color color)
+    public void SetTierFrameImage(Sprite image)
     {
-        costBorder.color = color;
+        tierFrameImage.sprite = image;
     }
 
     public void OnClicked()

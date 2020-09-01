@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class UIArtifactRecipe : MonoBehaviour
 {
-    [SerializeField] private Image artifactImage;
-    [SerializeField] private List<Image> artifactPieceImageList;
+    [SerializeField] private Image artifactImage = null;
+    [SerializeField] private List<Image> artifactPieceImageList = null;
  
     public void SetArtifactRecipe(int artifactId)
     {

@@ -42,7 +42,7 @@ public class InGameService : MonoBehaviour
     public const float DOUBLE_SPEED = 2.0f;
 
     public const float ATTACK_DELAY = 1.0f;
-    public const float DEAD_DELAY = 1.0f;
+    public const float DEAD_DELAY = 0.5f;
 
     public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_PREPARE = 0.33f;
     public const float FIELD_BACKGROUND_Y_MIN_ANCHOR_IN_BATTLE = 0.0f;
@@ -70,5 +70,5 @@ public class InGameService : MonoBehaviour
     }
 
     public const string COIN_IMAGE_PATH = "Images/InGame/Coin";
-    public static Sprite COIN_IMAGE = Resources.Load<Sprite>(COIN_IMAGE_PATH);
+    public static readonly Sprite COIN_IMAGE = Resources.Load<Sprite>(COIN_IMAGE_PATH);
 }

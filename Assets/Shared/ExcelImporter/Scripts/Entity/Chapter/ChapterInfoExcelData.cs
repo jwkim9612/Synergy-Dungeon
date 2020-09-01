@@ -11,4 +11,6 @@ public class ChapterInfoExcelData
     public string EnemyIds;
     public string FrontIds;
     public string BackIds;
+    public int ClearGoldReward;
+    public int ClearExpReward;
 }

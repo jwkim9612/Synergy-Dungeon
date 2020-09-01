@@ -1,25 +1,27 @@
-﻿using GooglePlayGames.BasicApi.Multiplayer;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UIScenarioEventButton : MonoBehaviour
 {
     [SerializeField] private Button button = null;
     [SerializeField] private Text descriptionText = null;
-    [SerializeField] private UIReward uiReward = null;
+    public UIEventReward uiEventReward { get; set; }
+    public ScenarioEvent scenarioEvent { get; set; }
     private ScenarioData scenarioData;
-    public ScenarioEvent scenarioEvent;
 
-    private void Start()
+    public void Initialize()
+    {
+        SetButton();
+    }
+
+    private void SetButton()
     {
         button.onClick.AddListener(() =>
         {
             scenarioEvent.IncreaseProbability(scenarioData);
+            Debug.Log("Button Click");
 
-            if(EventProcessing())
+            if (EventProcessing())
             {
                 SetRewardAndShowReward();
             }
@@ -84,8 +86,8 @@ public class UIScenarioEventButton : MonoBehaviour
 
     public void SetRewardAndShowReward()
     {
-        uiReward.SetReward(scenarioData);
-        uiReward.OnShow();
+        uiEventReward.SetReward(scenarioData);
+        uiEventReward.OnShow();
     }
 
     /// <summary>

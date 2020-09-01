@@ -9,31 +9,39 @@ public class CardService
 
     public const string DEFAULT_IMAGE_NAME = "Empty";
 
-    public static Color GetColorByTier(Tier tier)
+    public const string TIER_1_FRAME_IMAGE_PATH = "Images/Character/Frame/Tier_1_Frame";
+    public const string TIER_2_FRAME_IMAGE_PATH = "Images/Character/Frame/Tier_2_Frame";
+    public const string TIER_3_FRAME_IMAGE_PATH = "Images/Character/Frame/Tier_3_Frame";
+    public const string TIER_4_FRAME_IMAGE_PATH = "Images/Character/Frame/Tier_4_Frame";
+
+    public readonly static Sprite TIER_1_FRAME_IMAGE = Resources.Load<Sprite>(TIER_1_FRAME_IMAGE_PATH);
+    public readonly static Sprite TIER_2_FRAME_IMAGE = Resources.Load<Sprite>(TIER_2_FRAME_IMAGE_PATH);
+    public readonly static Sprite TIER_3_FRAME_IMAGE = Resources.Load<Sprite>(TIER_3_FRAME_IMAGE_PATH);
+    public readonly static Sprite TIER_4_FRAME_IMAGE = Resources.Load<Sprite>(TIER_4_FRAME_IMAGE_PATH);
+
+    public static Sprite GetFrameImageByTier(Tier tier)
     {
-        Color color = new Color();
+        Sprite image = null;
         switch (tier)
         {
             case Tier.One:
-                color = Color.gray;
+                image = TIER_1_FRAME_IMAGE;
                 break;
             case Tier.Two:
-                color = Color.green;
+                image = TIER_2_FRAME_IMAGE;
                 break;
             case Tier.Three:
-                color = Color.blue;
+                image = TIER_3_FRAME_IMAGE;
                 break;
             case Tier.Four:
-                color = Color.red;
-                break;
-            case Tier.Five:
-                color = Color.yellow;
+                image = TIER_4_FRAME_IMAGE;
                 break;
             default:
-                Debug.Log("Error GetColorByTier");
+                Debug.Log("Error GetImageByTier");
                 break;
         }
-        return color;
+
+        return image;
     }
 
     public static int GetPriceByTier(Tier tier)
@@ -53,15 +61,10 @@ public class CardService
             case Tier.Four:
                 price = 4;
                 break;
-            case Tier.Five:
-                price = 5;
-                break;
             default:
                 Debug.Log("Error GetPriceByTier");
                 break;
         }
         return price;
     }
-
-
 }

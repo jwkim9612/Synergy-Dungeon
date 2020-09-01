@@ -10,7 +10,7 @@ public class UICharacterCard : MonoBehaviour
     [SerializeField] private Image originImage = null;
     [SerializeField] private Text originText = null;
     [SerializeField] private Text characterNameText = null;
-    [SerializeField] private Image tierBorderImage = null;
+    [SerializeField] private Image tierFrameImage = null;
     [SerializeField] private Button buyButton = null;
 
     public CharacterData characterData { get; set; }
@@ -75,7 +75,7 @@ public class UICharacterCard : MonoBehaviour
         SetOriginImage(characterData.OriginData.Image);
         SetOriginText(SynergyService.GetNameByOrigin(characterData.OriginData.Origin));
         SetCharacterNameText(characterData.Name);
-        SetTierBorderImage(CardService.GetColorByTier(characterData.Tier));
+        SetTierFrameImage(CardService.GetFrameImageByTier(characterData.Tier));
     }
 
     public void SetCharacterImage(Sprite sprite)
@@ -114,9 +114,9 @@ public class UICharacterCard : MonoBehaviour
     }
 
 
-    public void SetTierBorderImage(Color color)
+    public void SetTierFrameImage(Sprite image)
     {
-        tierBorderImage.color = color;
+        tierFrameImage.sprite = image;
     }
 
     public void OnHide()
