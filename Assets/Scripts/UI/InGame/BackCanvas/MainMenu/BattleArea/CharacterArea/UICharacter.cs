@@ -10,7 +10,7 @@ public class UICharacter : MonoBehaviour
     [SerializeField] private UIHPBar uiHPBar = null;
     public Character character;
     public bool isFightingOnBattlefield { get; set; }
-    public CharacterInfo characterInfo;
+    public CharacterInfo characterInfo { get; set; }
     public Image clickableImage = null;
 
     public void Initialize()
@@ -18,6 +18,16 @@ public class UICharacter : MonoBehaviour
         isFightingOnBattlefield = false;
 
         InitializeUIFloatingTextList();
+        character.Initialize();
+        character.OnIsDead += OnHide;
+        character.OnHit += PlayHitParticle;
+        character.OnHit += PlayShowHPBarForMoment;
+        character.SetUIFloatingTextList(uiFloatingTextList);
+        character.InitializeUIFloatingTextList();
+
+        uiHPBar.Initialize();
+        uiHPBar.controllingPawn = character;
+        uiHPBar.SetUpdateHPBarAndAfterImage();
     }
 
     private void InitializeUIFloatingTextList()
@@ -26,14 +36,50 @@ public class UICharacter : MonoBehaviour
         uiFloatingTextList = GetComponentsInChildren<UIFloatingText>(true).ToList();
     }
 
+    //public void SetCharacter(CharacterInfo newCharacterInfo)
+    //{
+    //    OnCanClick();
+    //    SetCharacterInfo(newCharacterInfo);
+
+
+    //    character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
+    //    character.Initialize();
+
+    //    var characterDataSheet = DataBase.Instance.characterDataSheet;
+    //    if (characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
+    //    {
+    //        character.SetImage(sprite);
+    //    }
+    //    if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
+    //    {
+    //        int Id = characterInfo.id;
+    //        int star = characterInfo.star;
+
+    //        var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+    //        if(characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
+    //        {
+    //            character.SetAbility(abilityData, origin);
+    //        }
+    //    }
+
+    //    character.OnIsDead += OnHide;
+    //    character.OnHit += PlayHitParticle;
+    //    character.OnHit += PlayShowHPBarForMoment;
+    //    character.SetUIFloatingTextList(uiFloatingTextList);
+    //    character.characterInfo = this.characterInfo;
+    //    character.InitializeUIFloatingTextList();
+
+    //    CharacterMoveToUICharacter();
+    //    uiHPBar.Initialize();
+    //    uiHPBar.controllingPawn = character;
+    //    uiHPBar.SetUpdateHPBarAndAfterImage();
+    //}
+
     public void SetCharacter(CharacterInfo newCharacterInfo)
     {
         OnCanClick();
-        SetCharacterInfo(newCharacterInfo);
-
-
-        character = Instantiate(InGameService.defaultCharacter, transform.root.parent);
-        character.Initialize();
+        characterInfo = newCharacterInfo;
+        character.characterInfo = newCharacterInfo;
 
         var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterImage(characterInfo.id, out var sprite))
@@ -46,23 +92,17 @@ public class UICharacter : MonoBehaviour
             int star = characterInfo.star;
 
             var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
-            if(characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
+            if (characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
             {
                 character.SetAbility(abilityData, origin);
             }
         }
 
-        character.OnIsDead += OnHide;
-        character.OnHit += PlayHitParticle;
-        character.OnHit += PlayShowHPBarForMoment;
-        character.SetUIFloatingTextList(uiFloatingTextList);
-        character.characterInfo = this.characterInfo;
-        character.InitializeUIFloatingTextList();
-
         CharacterMoveToUICharacter();
-        uiHPBar.Initialize();
-        uiHPBar.controllingPawn = character;
-        uiHPBar.SetUpdateHPBarAndAfterImage();
+        character.OnShow();
+        character.isOnBattlefield = false;
+
+        uiHPBar.UpdateHPBar();
     }
 
     public void SetDefaultImage()
@@ -84,11 +124,6 @@ public class UICharacter : MonoBehaviour
         }
     }
 
-    public void SetCharacterInfo(CharacterInfo newCharacterInfo)
-    {
-        characterInfo = newCharacterInfo;
-    }
-
     public CharacterInfo DeleteCharacterBySell()
     {
         CharacterInfo deletedCharacterInfo = characterInfo;
@@ -96,16 +131,15 @@ public class UICharacter : MonoBehaviour
         InGameManager.instance.playerState.IncreaseCoin(CharacterService.GetSalePrice(characterInfo));
         InGameManager.instance.characterStockSystem.AddCharacterId(characterInfo);
         InGameManager.instance.combinationSystem.SubCharacter(characterInfo);
-        DeleteCharacter();
+        DisableCharacter();
 
         return deletedCharacterInfo;
     }
 
-    public void DeleteCharacter()
+    public void DisableCharacter()
     {
-        Destroy(character.gameObject);
-        character = null;
         characterInfo = null;
+        character.OnHide();
 
         OnCanNotClick();
     }

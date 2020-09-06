@@ -17,8 +17,9 @@ public abstract class Pawn : MonoBehaviour
     public AbilityData ability;
     protected int currentHP;
     public Vector3 originPosition { get; set; }
-    public Animator animator { get; set; }
+    public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public bool isOnBattlefield { get; set; }
 
     public Pawn target { get; set; }
 
@@ -205,6 +206,8 @@ public abstract class Pawn : MonoBehaviour
     // 공격 애니메이션 실행
     public abstract void PlayAttackAnimationAndGetTarget();
 
+    public abstract bool IsActivated();
+
     // 공격이 성공했는지 확인후 타겟에 데미지를 주는 공격 처리
     public void AttackProcessing()
     {
@@ -262,6 +265,9 @@ public abstract class Pawn : MonoBehaviour
 
     private void SetInBattle()
     {
+        if (!isOnBattlefield)
+            return;
+
         if (animator.runtimeAnimatorController != null)
         {
             animator.SetBool("InBattle", true);

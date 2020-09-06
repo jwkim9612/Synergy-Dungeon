@@ -252,7 +252,7 @@ public class DraggableCentral : MonoBehaviour
                     }
                     else
                     {
-                        uiCharacter.DeleteCharacter();
+                        uiCharacter.DisableCharacter();
                     }
                 }
             }
@@ -342,7 +342,7 @@ public class DraggableCentral : MonoBehaviour
 
     private bool IsReplaceWithEmptySpace()
     {
-        return swappedCharacter.character == null ? true : false;
+        return swappedCharacter.characterInfo == null ? true : false;
     }
 
     private bool IsMoveFromPrepareAreaToBattleArea()
@@ -376,7 +376,7 @@ public class DraggableCentral : MonoBehaviour
     // 배치된 공간에 따라서 이미지를 바꿔줌
     private void SetCharacterImage(UICharacter uiCharacter)
     {
-        if (uiCharacter.character == null)
+        if (uiCharacter.characterInfo == null)
             return;
 
         if(uiCharacter.GetArea<UICharacterArea>() != null)

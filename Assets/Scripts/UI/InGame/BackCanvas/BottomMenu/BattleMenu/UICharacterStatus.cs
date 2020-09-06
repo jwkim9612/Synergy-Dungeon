@@ -32,6 +32,12 @@ public class UICharacterStatus : MonoBehaviour
             return;
         }
 
+        if(character.characterInfo == null)
+        {
+            Debug.Log($"{character} characterInfo is null!!");
+            return;
+        }
+
         ShowAll();
 
         var characterDataSheet = DataBase.Instance.characterDataSheet;

@@ -151,4 +151,9 @@ public class Character : Pawn
 
         return true;
     }
+
+    public override bool IsActivated()
+    {
+        return characterInfo == null ? false : true;
+    }
 }

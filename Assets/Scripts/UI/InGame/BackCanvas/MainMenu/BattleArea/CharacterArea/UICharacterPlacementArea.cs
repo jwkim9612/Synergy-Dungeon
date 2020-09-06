@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class UICharacterPlacementArea : Arranger
 {
@@ -58,7 +59,7 @@ public class UICharacterPlacementArea : Arranger
 
         foreach (var uiCharacter in uiCharacters)
         {
-            if(uiCharacter.character != null)
+            if(uiCharacter.characterInfo != null)
             {
                 characters.Add(uiCharacter.character);
             }
@@ -81,7 +82,7 @@ public class UICharacterPlacementArea : Arranger
 
         foreach (var uiCharacter in this.uiCharacters)
         {
-            if (uiCharacter.character != null)
+            if (uiCharacter.characterInfo != null)
             {
                 uiCharacters.Add(uiCharacter);
             }
@@ -101,7 +102,7 @@ public class UICharacterPlacementArea : Arranger
     {
         foreach (var uiCharacter in uiCharacters)
         {
-            if(uiCharacter.character != null)
+            if(uiCharacter.characterInfo != null)
             {
                 return false;
             }
@@ -113,7 +114,7 @@ public class UICharacterPlacementArea : Arranger
     {
         foreach (var uiCharacter in uiCharacters)
         {
-            if (uiCharacter.character == null)
+            if (uiCharacter.characterInfo == null)
                 continue;
 
             StartCoroutine(uiCharacter.Co_FollowCharacter());

@@ -83,7 +83,8 @@ public class UIRuneInfo : UIControl
         {
             EquipRuneAndSubsequentProcessing();
 
-            Destroy(uiRune.gameObject);
+            uiRune.gameObject.SetActive(false);
+            //Destroy(uiRune.gameObject);
 
             UIManager.Instance.HideAndShowPreview();
         });

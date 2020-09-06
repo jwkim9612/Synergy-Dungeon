@@ -38,7 +38,7 @@ public class UIHPBar : MonoBehaviour
 
     public void UpdateHPBar()
     {
-        if(controllingPawn.gameObject.activeSelf)
+        if(controllingPawn.IsActivated())
         {
             slider.value = controllingPawn.GetHPRatio();
         }

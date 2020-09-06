@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -7,13 +10,22 @@ public class UIStageClear : MonoBehaviour
     [SerializeField] private Button backToMenuButton = null;
     [SerializeField] private Text levelText = null;
     [SerializeField] private Slider expSlider = null;
+    [SerializeField] private List<UIReward> uiRewardList = null;
 
     public void Initialize()
+    {
+        SetBackToMenuButton();
+
+        uiRewardList = GetComponentsInChildren<UIReward>().ToList();
+    }
+
+    private void SetBackToMenuButton()
     {
         backToMenuButton.onClick.AddListener(() =>
         {
             SceneManager.LoadScene("MainScene");
         });
+
     }
 
     public void SetLevel(int level)
@@ -21,12 +33,8 @@ public class UIStageClear : MonoBehaviour
         levelText.text = level.ToString();
     }
 
-    public void SetExp()
+    public void SetExp(int level, int exp)
     {
-        var playerState = InGameManager.instance.playerState;
-        var level = playerState.level;
-        var exp = playerState.exp;
-
         if(DataBase.Instance.playerExpDataSheet.TryGetSatisfyExp(level, out var satisfyExp))
         {
             expSlider.value = (float)exp / satisfyExp;
@@ -41,5 +49,40 @@ public class UIStageClear : MonoBehaviour
     public void OnHide()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetStageClearScreen()
+    {
+        var playerData = PlayerDataManager.Instance.playerData;
+        var level = playerData.Level;
+        var exp = playerData.Exp;
+
+        SetLevel(level);
+        SetExp(level, exp);
+
+        var rewardList = InGameManager.instance.playerState.rewardList;
+
+        int index = 0;
+        foreach (var reward in rewardList)
+        {
+            switch (reward.rewardCurrency)
+            {
+                case RewardCurrency.Gold:
+                    uiRewardList[index].SetImage(GoodsService.GOLD_IMAGE);
+                    break;
+                case RewardCurrency.Exp:    continue;
+            }
+
+            uiRewardList[index].SetAmountText(reward.amount.ToString());
+            uiRewardList[index].OnShow();
+
+            ++index;
+
+        }
+
+        for (; index < uiRewardList.Count; ++index)
+        {
+            uiRewardList[index].OnHide();
+        }
     }
 }

@@ -71,7 +71,7 @@ public class UIPrepareArea : Arranger
     {
         foreach (var uiCharacter in uiCharacters)
         {
-            if (uiCharacter.character == null)
+            if (uiCharacter.characterInfo == null)
                 continue;
 
             uiCharacter.character.OnHide();
@@ -82,7 +82,7 @@ public class UIPrepareArea : Arranger
     {
         foreach (var uiCharacter in uiCharacters)
         {
-            if (uiCharacter.character == null)
+            if (uiCharacter.characterInfo == null)
                 continue;
 
             uiCharacter.character.OnShow();

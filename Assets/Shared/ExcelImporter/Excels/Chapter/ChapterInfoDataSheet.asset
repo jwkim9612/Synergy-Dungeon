@@ -78,7 +78,7 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,2,2
+    EnemyIds: 1,1,1,1,1
     FrontIds: 1,2,3
     BackIds: 2,3
     ClearGoldReward: 7
@@ -88,7 +88,7 @@ MonoBehaviour:
     StageId: 2
     GoldAmount: 3
     ExpAmount: 1
-    EnemyIds: 1,1,1,2,2,2
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 0,1,2
     BackIds: 0,1,2
     ClearGoldReward: 8
@@ -98,7 +98,7 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 1,1,2,2,2,2
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 2,3
     BackIds: 0,1,5,6
     ClearGoldReward: 9
@@ -108,7 +108,7 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 2,2,2,2,2,2
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 0,1,2
     BackIds: 0,1,2
     ClearGoldReward: 10
@@ -118,7 +118,7 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 2,2,2,2,2,2,2
+    EnemyIds: 1,1,1,1,1,1,1
     FrontIds: 
     BackIds: 0,1,2,3,4,5,6
     ClearGoldReward: 11
@@ -128,7 +128,7 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 3,3,3,3,3,3
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 0,1,2,3,4,5
     BackIds: 
     ClearGoldReward: 12
@@ -138,7 +138,7 @@ MonoBehaviour:
     StageId: 3
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 2,2,2,2,2,3,3
+    EnemyIds: 1,1,1,1,1,1,1
     FrontIds: 0,1,2,3,4
     BackIds: 1,4
     ClearGoldReward: 13
@@ -148,7 +148,7 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 2,2,2,2,3,3,3
+    EnemyIds: 1,1,1,1,1,1,1
     FrontIds: 1,2,3,4
     BackIds: 2,3,4
     ClearGoldReward: 14
@@ -158,7 +158,7 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 2,2,3,3,3,3
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 2,3
     BackIds: 0,1,5,6
     ClearGoldReward: 15
@@ -168,7 +168,7 @@ MonoBehaviour:
     StageId: 4
     GoldAmount: 4
     ExpAmount: 1
-    EnemyIds: 3,3,3,3,3,3
+    EnemyIds: 1,1,1,1,1,1
     FrontIds: 0,1,2,3,4,5
     BackIds: 
     ClearGoldReward: 16

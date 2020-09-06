@@ -31,7 +31,7 @@ MonoBehaviour:
     Name: "\uC2A4\uCEEC (\uD669)"
     Attack: 58
     MagicalAttack: 0
-    Health: 240
+    Health: 1
     Defence: 7
     MagicDefence: 7
     Shield: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
     Name: "\uC2A4\uCEEC (\uCCAD)"
     Attack: 66
     MagicalAttack: 0
-    Health: 280
+    Health: 1
     Defence: 9
     MagicDefence: 9
     Shield: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
     Name: "\uC2A4\uCEEC (\uC801)"
     Attack: 74
     MagicalAttack: 0
-    Health: 320
+    Health: 1
     Defence: 10
     MagicDefence: 10
     Shield: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     Name: "\uC2A4\uCEEC (\uC790\uC8FC)"
     Attack: 82
     MagicalAttack: 0
-    Health: 360
+    Health: 1
     Defence: 15
     MagicDefence: 15
     Shield: 0

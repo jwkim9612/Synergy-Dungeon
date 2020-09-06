@@ -6,6 +6,8 @@ public class Enemy : Pawn
     public Enemy()
     {
         pawnType = PawnType.Enemy;
+
+        isOnBattlefield = true;
     }
 
     public void SetAbility(EnemyData enemyData)
@@ -52,5 +54,10 @@ public class Enemy : Pawn
 
         var battleStatus = InGameManager.instance.backCanvas.uiMainMenu.uiBattleArea.battleStatus;
         target = battleStatus.GetRandomCharacter();
+    }
+
+    public override bool IsActivated()
+    {
+        return gameObject.activeSelf ? true : false; 
     }
 }

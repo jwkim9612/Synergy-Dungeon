@@ -39,7 +39,7 @@ public class InGameService : MonoBehaviour
 
     public const float PAUSE_SPEED = 0.0f;
     public const float DEFAULT_SPEED = 1.0f;
-    public const float DOUBLE_SPEED = 2.0f;
+    public const float DOUBLE_SPEED = 3.0f;
 
     public const float ATTACK_DELAY = 1.0f;
     public const float DEAD_DELAY = 0.5f;

@@ -50,12 +50,12 @@ public class GameState : MonoBehaviour
             case InGameState.Complete:
                 OnComplete();
 
-
                 if (StageManager.Instance.IsFinalWave())
                 {
                     PlayerDataManager.Instance.playerData.UpdatePlayableChapter();
                     PlayerDataManager.Instance.playerData.InitializeTopWave();
                     InGameManager.instance.playerState.GetRewards();
+                    InGameManager.instance.frontCanvas.uiStageClear.SetStageClearScreen();
                     InGameManager.instance.frontCanvas.ShowStageClear();
                 }
                 else
