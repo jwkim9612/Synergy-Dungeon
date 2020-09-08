@@ -3,8 +3,8 @@
 public class UIBattleArea : MonoBehaviour
 {
     [SerializeField] private UICharacterArea uiCharacterArea = null;
-    [SerializeField] private UIEnemyArea uiEnemyArea = null;
     [SerializeField] private UIPlacementStatus uiPlacementStatus = null;
+    public UIEnemyArea uiEnemyArea = null;
     public BattleStatus battleStatus = null;
 
     private bool isFirstTime;

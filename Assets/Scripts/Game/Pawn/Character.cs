@@ -4,18 +4,23 @@ using UnityEngine;
 public class Character : Pawn
 {
     public Origin origin;
+    public Tribe tribe;
     public CharacterInfo characterInfo { get; set; }
+    public CharacterAbilityData characterAbilityData;
 
     public Character()
     {
         pawnType = PawnType.Character;
     }
 
-    public void SetAbility(CharacterAbilityData characterAbilityData, Origin newOrigin)
+    public void SetAbility(CharacterAbilityData characterAbilityData, Origin origin, Tribe tribe)
     {
+        this.characterAbilityData = characterAbilityData;
+        this.origin = origin;
+        this.tribe = tribe;
+
         ability = new AbilityData();
-        ability.SetAbilityData(characterAbilityData);
-        origin = newOrigin;
+        ResetAbility();
 
         ///////////////////////////////////// 룬 능력치 + ///////////////////////////////////////////////
         Rune rune = RuneManager.Instance.GetEquippedRuneOfOrigin(origin);
@@ -25,10 +30,12 @@ public class Character : Pawn
             Debug.Log("어빌맅  더하기");
         }
         ///////////////////////////////////// ///////////// ///////////////////////////////////////////////
-
-
-
         currentHP = ability.Health;
+    }
+
+    public override void ResetAbility()
+    {
+        ability.SetAbilityData(characterAbilityData);
     }
 
     protected override IEnumerator Co_AttackAndAnimation()

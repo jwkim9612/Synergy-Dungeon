@@ -208,6 +208,8 @@ public abstract class Pawn : MonoBehaviour
 
     public abstract bool IsActivated();
 
+    public abstract void ResetAbility();
+
     // 공격이 성공했는지 확인후 타겟에 데미지를 주는 공격 처리
     public void AttackProcessing()
     {

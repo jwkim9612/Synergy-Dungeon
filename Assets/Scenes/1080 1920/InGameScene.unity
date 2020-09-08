@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 12408478}
   origin: 0
 --- !u!212 &12408478
@@ -656,6 +657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 23199480}
   origin: 0
 --- !u!212 &23199480
@@ -6107,6 +6109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 178019808}
 --- !u!212 &178019808
 SpriteRenderer:
@@ -6909,6 +6912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 192678924}
   origin: 0
 --- !u!212 &192678924
@@ -7451,6 +7455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 236186970}
   origin: 0
 --- !u!212 &236186970
@@ -12723,6 +12728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 402227669}
   origin: 0
 --- !u!212 &402227669
@@ -12912,6 +12918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 404553013}
   origin: 0
 --- !u!212 &404553013
@@ -15248,6 +15255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 478727500}
   origin: 0
 --- !u!212 &478727500
@@ -15955,6 +15963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 511052756}
 --- !u!212 &511052756
 SpriteRenderer:
@@ -17047,6 +17056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 549594245}
 --- !u!212 &549594245
 SpriteRenderer:
@@ -26410,6 +26420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 861632854}
 --- !u!212 &861632854
 SpriteRenderer:
@@ -27138,6 +27149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 878986306}
 --- !u!212 &878986306
 SpriteRenderer:
@@ -31446,6 +31458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1029948705}
   origin: 0
 --- !u!212 &1029948705
@@ -31562,6 +31575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1035292285}
 --- !u!212 &1035292285
 SpriteRenderer:
@@ -34982,6 +34996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1133456681}
   origin: 0
 --- !u!212 &1133456681
@@ -36041,6 +36056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1167800031}
   origin: 0
 --- !u!212 &1167800031
@@ -36794,6 +36810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1190376665}
 --- !u!212 &1190376665
 SpriteRenderer:
@@ -37350,8 +37367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.3, y: 1.205}
-  m_SizeDelta: {x: 30, y: 37.589996}
+  m_AnchoredPosition: {x: 42.7, y: 1.205}
+  m_SizeDelta: {x: 45.95, y: 37.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220358603
 MonoBehaviour:
@@ -37384,7 +37401,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 12
 --- !u!222 &1220358604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40122,6 +40139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1295799639}
   origin: 0
 --- !u!212 &1295799639
@@ -43307,6 +43325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1366337475}
   origin: 0
 --- !u!212 &1366337475
@@ -45189,6 +45208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1434174176}
   origin: 0
 --- !u!212 &1434174176
@@ -51197,6 +51217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1610303883}
 --- !u!212 &1610303883
 SpriteRenderer:
@@ -52696,6 +52717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1643147438}
 --- !u!212 &1643147438
 SpriteRenderer:
@@ -55322,6 +55344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1745012997}
   origin: 0
 --- !u!212 &1745012997
@@ -58005,6 +58028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1837402588}
 --- !u!212 &1837402588
 SpriteRenderer:
@@ -58634,6 +58658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1855134227}
 --- !u!212 &1855134227
 SpriteRenderer:
@@ -60054,6 +60079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 1888528772}
 --- !u!212 &1888528772
 SpriteRenderer:
@@ -64021,6 +64047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 2013793294}
   origin: 0
 --- !u!212 &2013793294
@@ -66092,6 +66119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b48ef1cb22b7f4095d7060533d92a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 2074292876}
   origin: 0
 --- !u!95 &2074292879
@@ -66982,6 +67010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e14543ba223e34e9d0730a6baa742b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   spriteRenderer: {fileID: 2112311619}
 --- !u!212 &2112311619
 SpriteRenderer:

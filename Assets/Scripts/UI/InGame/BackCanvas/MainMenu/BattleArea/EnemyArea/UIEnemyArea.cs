@@ -72,6 +72,15 @@ public class UIEnemyArea : MonoBehaviour
         return enemies;
     }
 
+    public void ResetAllEnemyAbility()
+    {
+        var enemyList = GetEnemyList();
+        foreach(var enemy in enemyList)
+        {
+            enemy.ResetAbility();
+        }
+    }
+
     public void InitializeEnemyPositions()
     {
         backArea.InitializeEnemyPositions();

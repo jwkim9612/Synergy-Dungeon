@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Enemy : Pawn
 {
+    public AbilityData abilityData;
+
     public Enemy()
     {
         pawnType = PawnType.Enemy;
@@ -12,10 +14,17 @@ public class Enemy : Pawn
 
     public void SetAbility(EnemyData enemyData)
     {
+        this.abilityData = enemyData.abilityData;
+
         ability = new AbilityData();
         ability = enemyData.abilityData;
 
         currentHP = ability.Health;
+    }
+
+    public override void ResetAbility()
+    {
+        ability.SetAbilityData(abilityData);
     }
 
     protected override IEnumerator Co_AttackAndAnimation()

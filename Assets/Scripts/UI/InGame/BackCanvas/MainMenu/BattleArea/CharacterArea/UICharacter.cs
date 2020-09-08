@@ -88,13 +88,16 @@ public class UICharacter : MonoBehaviour
         }
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
-            int Id = characterInfo.id;
-            int star = characterInfo.star;
-
-            var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
-            if (characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
+            if(characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
             {
-                character.SetAbility(abilityData, origin);
+                int Id = characterInfo.id;
+                int star = characterInfo.star;
+
+                var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+                if (characterAbilityDataSheet.TryGetCharacterAbilityData(Id, star, out var abilityData))
+                {
+                    character.SetAbility(abilityData, origin, tribe);
+                }
             }
         }
 
@@ -149,20 +152,23 @@ public class UICharacter : MonoBehaviour
         var characterDataSheet = DataBase.Instance.characterDataSheet;
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
-            characterInfo.IncreaseStar();
-
-            int id = characterInfo.id;
-            int star = characterInfo.star;
-
-            var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
-            if (characterAbilityDataSheet.TryGetCharacterAbilityData(id, star, out var abilityData))
+            if (characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
             {
-                character.SetAbility(abilityData, origin);
-            }
+                characterInfo.IncreaseStar();
 
-            InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
-            Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
-            // 파티클 재생 함수
+                int id = characterInfo.id;
+                int star = characterInfo.star;
+
+                var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+                if (characterAbilityDataSheet.TryGetCharacterAbilityData(id, star, out var abilityData))
+                {
+                    character.SetAbility(abilityData, origin, tribe);
+                }
+
+                InGameManager.instance.combinationSystem.AddCharacter(characterInfo);
+                Instantiate(GameManager.instance.particleService.upgradeParticle, transform);
+                // 파티클 재생 함수
+            }
         }
     }
 

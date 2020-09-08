@@ -111,6 +111,18 @@ public class UICharacterArea : MonoBehaviour
         return characters;
     }
 
+    public void ResetAllCharacterAbility()
+    {
+        var characterList = GetCharacterList();
+        if (characterList == null)
+            return;
+
+        foreach(var character in characterList)
+        {
+            character.ResetAbility();
+        }
+    }
+
     /// <summary>
     /// 캐릭터가 있는 UICharacter들을 반환
     /// </summary>

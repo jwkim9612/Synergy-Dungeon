@@ -90,6 +90,20 @@ public class AbilityData
         AttackSpeed = enemyExcelData.AttackSpeed;
     }
 
+    public void SetAbilityData(AbilityData abilityData)
+    {
+        Attack = abilityData.Attack;
+        MagicalAttack = abilityData.MagicalAttack;
+        Health = abilityData.Health;
+        Defence = abilityData.Defence;
+        MagicDefence = abilityData.MagicDefence;
+        Shield = abilityData.Shield;
+        Accuracy = abilityData.Accuracy;
+        Evasion = abilityData.Evasion;
+        Critical = abilityData.Critical;
+        AttackSpeed = abilityData.AttackSpeed;
+    }
+
     public void SetAbilityData(RuneExcelData runeExcelData)
     {
         Attack = runeExcelData.Attack;
@@ -116,5 +130,19 @@ public class AbilityData
         Evasion = artifactExcelData.Evasion;
         Critical = artifactExcelData.Critical;
         AttackSpeed = artifactExcelData.AttackSpeed;
+    }
+
+    public void AllAbilityUpByPercentage(int percentage)
+    {
+        Attack = (int)(Attack * (1 + (percentage * 0.01f)));
+        MagicalAttack = (int)(MagicalAttack * (1 + (percentage * 0.01f)));
+        Health = (int)(Health * (1 + (percentage * 0.01f)));
+        Defence = (int)(Defence * (1 + (percentage * 0.01f)));
+        MagicDefence = (int)(MagicDefence * (1 + (percentage * 0.01f)));
+        Shield = (int)(Shield * (1 + (percentage * 0.01f)));
+        Accuracy = (int)(Accuracy * (1 + (percentage * 0.01f)));
+        Evasion = (int)(Evasion * (1 + (percentage * 0.01f)));
+        Critical = (int)(Critical * (1 + (percentage * 0.01f)));
+        AttackSpeed = (int)(AttackSpeed * (1 + (percentage * 0.01f)));
     }
 }

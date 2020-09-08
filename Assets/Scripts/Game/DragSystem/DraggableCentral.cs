@@ -216,8 +216,8 @@ public class DraggableCentral : MonoBehaviour
             }
         }
 
-        UpdateSynergyService(uiCharacter);
         UpdateCurrentPlacedCharacters();
+        UpdateSynergyService(uiCharacter);
         SwapCharacters(invisibleCharacter, uiCharacter);
         SetCharacterImage(uiCharacter);
 

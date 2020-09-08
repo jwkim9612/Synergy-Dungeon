@@ -8,6 +8,7 @@
 public enum Ability
 { 
     None,
+    All,
     Attack,
     MagicalAttack,
     Health,
