@@ -93,6 +93,62 @@ public class UIBattleSynergyList : MonoBehaviour
         var tribes = synergySystem.appliedTribes;
         foreach(var tribe in tribes)
         {
+            switch (tribe.Key)
+            {
+                case Tribe.None:
+                    break;
+                case Tribe.Beast:
+                    if(tribe.Value <= 0)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Devil:
+                    if (tribe.Value <= 0)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Dragon:
+                    if (tribe.Value == 1 || tribe.Value == 4)
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    break;
+                case Tribe.Elemental:
+                    if (tribe.Value <= 1)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Elf:
+                    if (tribe.Value <= 1)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Human:
+                    if (tribe.Value <= 1)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Machine:
+                    if (tribe.Value <= 1)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                case Tribe.Undead:
+                    if (tribe.Value <= 0)
+                        uiTribes[tribeIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiTribes[tribeIndex].synergyImage.color = Color.white;
+                    break;
+                default:
+                    break;
+            }
+
             var tribeDataSheet = DataBase.Instance.tribeDataSheet;
             if (tribeDataSheet == null)
             {
@@ -123,6 +179,44 @@ public class UIBattleSynergyList : MonoBehaviour
         var origins = synergySystem.appliedOrigins;
         foreach (var origin in origins)
         {
+            switch (origin.Key)
+            {
+                case Origin.None:
+                    break;
+                case Origin.Archer:
+                    if (origin.Value <= 0)
+                        uiOrigins[originIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiOrigins[originIndex].synergyImage.color = Color.white;
+                    break;
+                case Origin.Paladin:
+                    if (origin.Value <= 1)
+                        uiOrigins[originIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiOrigins[originIndex].synergyImage.color = Color.white;
+                    break;
+                case Origin.Thief:
+                    if (origin.Value <= 1)
+                        uiOrigins[originIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiOrigins[originIndex].synergyImage.color = Color.white;
+                    break;
+                case Origin.Warrior:
+                    if (origin.Value <= 1)
+                        uiOrigins[originIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiOrigins[originIndex].synergyImage.color = Color.white;
+                    break;
+                case Origin.Wizard:
+                    if (origin.Value <= 1)
+                        uiOrigins[originIndex].synergyImage.color = Color.gray - new Color(0, 0, 0, 0.5f);
+                    else
+                        uiOrigins[originIndex].synergyImage.color = Color.white;
+                    break;
+                default:
+                    break;
+            }
+
             var originDataSheet = DataBase.Instance.originDataSheet;
             if(originDataSheet == null)
             {

@@ -133,6 +133,36 @@ public class CharacterDataSheet : ScriptableObject, IDataSheet
 		return false;
 	}
 
+	public List<CharacterData> GetCharacterDataListByTribe(Tribe tribe)
+	{
+		List<CharacterData> characterDataList = new List<CharacterData>();
+
+		foreach(var characterData in CharacterDatas)
+		{
+			if(characterData.Value.Tribe == tribe)
+			{
+				characterDataList.Add(characterData.Value);
+			}
+		}
+
+		return characterDataList;
+	}
+
+	public List<CharacterData> GetCharacterDataListByOrigin(Origin origin)
+	{
+		List<CharacterData> characterDataList = new List<CharacterData>();
+
+		foreach (var characterData in CharacterDatas)
+		{
+			if (characterData.Value.Origin == origin)
+			{
+				characterDataList.Add(characterData.Value);
+			}
+		}
+
+		return characterDataList;
+	}
+
 	public void Initialize()
 	{
 		GenerateData();

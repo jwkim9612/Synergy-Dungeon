@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 
 // 완성되면 설명 적기.
-public class SynergySystem
+public class SynergySystem : MonoBehaviour
 {
     public delegate void OnTribeChangedDelegate();
     public delegate void OnOriginChangedDelegate();
@@ -15,6 +15,10 @@ public class SynergySystem
     public Dictionary<OriginInfo, int> deployedOrigins;
     public Dictionary<Tribe, int> appliedTribes;
     public Dictionary<Origin, int> appliedOrigins;
+
+    private bool IsSubCharacter;
+    private Tribe currentAddTribe;
+    private Origin currentAddOrigin;
 
     private CharacterDataSheet characterDataSheet;
 
@@ -34,13 +38,18 @@ public class SynergySystem
             Debug.LogError("Error characterDataSheet is null");
             return;
         }
+
+        IsSubCharacter = false;
     }
 
     public void AddCharacter(CharacterInfo characterInfo)
     {
-        if(characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
+        IsSubCharacter = false;
+
+        if (characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
         {
             TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);
+            currentAddTribe = tribe;
 
             if (deployedTribes.ContainsKey(tribeInfo))
             {
@@ -56,6 +65,7 @@ public class SynergySystem
         if (characterDataSheet.TryGetCharacterOrigin(characterInfo.id, out var origin))
         {
             OriginInfo originInfo = new OriginInfo(origin, characterInfo.id);
+            currentAddOrigin = origin;
 
             if (deployedOrigins.ContainsKey(originInfo))
             {
@@ -67,10 +77,14 @@ public class SynergySystem
                 AddAppliedOrigin(originInfo.origin);
             }
         }
+
+        UpdateApplySynergy();
     }
 
     public void SubCharacter(CharacterInfo characterInfo)
     {
+        IsSubCharacter = true;
+
         if (characterDataSheet.TryGetCharacterTribe(characterInfo.id, out var tribe))
         {
             TribeInfo tribeInfo = new TribeInfo(tribe, characterInfo.id);
@@ -110,6 +124,8 @@ public class SynergySystem
                 Debug.Log("Error No Origins");
             }
         }
+
+        UpdateApplySynergy();
     }
 
     public void AddAppliedTribe(Tribe tribe)
@@ -124,11 +140,6 @@ public class SynergySystem
         }
 
         OnTribeChanged();
-
-        if (IsTribeChanged(tribe))
-        {
-            UpdateApplyTribeSynergy();
-        }
     }
 
     public void AddAppliedOrigin(Origin origin)
@@ -143,11 +154,6 @@ public class SynergySystem
         }
 
         OnOriginChanged();
-
-        if(IsOriginChanged(origin))
-        {
-            UpdateApplyOriginSynergy();
-        }
     }
 
 
@@ -168,11 +174,6 @@ public class SynergySystem
         }
 
         OnTribeChanged();
-
-        if (IsTribeChanged(tribe))
-        {
-            UpdateApplyTribeSynergy();
-        }
     }
 
     public void SubAppliedOrigin(Origin origin)
@@ -192,11 +193,6 @@ public class SynergySystem
         }
 
         OnOriginChanged();
-
-        if (IsOriginChanged(origin))
-        {
-            UpdateApplyOriginSynergy();
-        }
     }
 
     public void SubCharacterFromCombinations(UICharacter uiCharacter, bool isFirstCharacter)
@@ -208,136 +204,7 @@ public class SynergySystem
             InGameManager.instance.synergySystem.SubCharacter(uiCharacter.characterInfo);
     }
 
-    public void UpdateApplyOriginSynergy()
-    {
-        var uiCharacterArea = InGameManager.instance.draggableCentral.uiCharacterArea;
-        uiCharacterArea.ResetAllCharacterAbility();
-
-        var characterInFieldList = uiCharacterArea.GetCharacterList();
-        if (characterInFieldList == null)
-            return;
-
-        foreach (var appliedOrigin in appliedOrigins)
-        {
-            switch (appliedOrigin.Key)
-            {
-                case Origin.None:
-                    Debug.Log("Error UpdateApplyOriginSynergy");
-                    return;
-                case Origin.Archer:
-                    if(appliedOrigin.Value >= 5)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.Critical += 15;
-                        }
-                    }
-                    else if(appliedOrigin.Value >= 3)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            if(character.origin == Origin.Archer)
-                            {
-                                character.ability.Critical += 15;
-                            }
-                        }
-                    }
-                    else if(appliedOrigin.Value >= 1)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            if (character.origin == Origin.Archer)
-                            {
-                                character.ability.Critical += 7;
-                            }
-                        }
-                    }
-                    break;
-                case Origin.Paladin:
-                    if (appliedOrigin.Value >= 4)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.MagicDefence += 20;
-                        }
-                    }
-                    else if(appliedOrigin.Value >= 2)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.MagicDefence += 10;
-                        }
-                    }
-                    break;
-                case Origin.Thief:
-                    if (appliedOrigin.Value >= 4)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            if(character.origin == Origin.Thief)
-                            {
-                                character.ability.Attack = (int)(character.ability.Attack * 1.85);
-                            }
-                        }
-                    }
-                    else if (appliedOrigin.Value >= 2)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            if (character.origin == Origin.Thief)
-                            {
-                                character.ability.Attack = (int)(character.ability.Attack * 1.4);
-                            }
-                        }
-                    }
-                    break;
-                case Origin.Warrior:
-                    if (appliedOrigin.Value >= 4)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.Defence += 20;
-                        }
-                    }
-                    else if (appliedOrigin.Value >= 2)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.Defence += 10;
-                        }
-                    }
-                    break;
-                case Origin.Wizard:
-                    if (appliedOrigin.Value >= 6)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.MagicalAttack += 80;
-                        }
-                    }
-                    else if (appliedOrigin.Value >= 4)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.MagicalAttack += 45;
-                        }
-                    }
-                    else if (appliedOrigin.Value >= 2)
-                    {
-                        foreach (var character in characterInFieldList)
-                        {
-                            character.ability.MagicalAttack += 20;
-                        }
-                    }
-                    break;
-                default:
-                    Debug.Log("Error UpdateApplyOriginSynergy");
-                    return;
-            }
-        }
-    }
-
-    public void UpdateApplyTribeSynergy()
+    public void UpdateApplySynergy()
     {
         var uiCharacterArea = InGameManager.instance.draggableCentral.uiCharacterArea;
         var uiEnemyArea = InGameManager.instance.backCanvas.uiMainMenu.uiBattleArea.uiEnemyArea;
@@ -350,31 +217,200 @@ public class SynergySystem
 
         var EnemyList = uiEnemyArea.GetEnemyList();
 
+        foreach (var appliedOrigin in appliedOrigins)
+        {
+            bool isChangedOrigin = false;
+            if (currentAddOrigin == appliedOrigin.Key)
+                isChangedOrigin = true;
+
+            switch (appliedOrigin.Key)
+            {
+                case Origin.None:
+                    Debug.Log("Error UpdateApplyOriginSynergy");
+                    return;
+                case Origin.Archer:
+                    if (appliedOrigin.Value >= 5)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.Critical += 15;
+
+                            if(!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 3)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.origin == Origin.Archer)
+                            {
+                                character.ability.Critical += 15;
+
+                                if (!IsSubCharacter && isChangedOrigin)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 1)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.origin == Origin.Archer)
+                            {
+                                character.ability.Critical += 7;
+
+                                if (!IsSubCharacter && isChangedOrigin)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
+                        }
+                    }
+                    break;
+                case Origin.Paladin:
+                    if (appliedOrigin.Value >= 4)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.MagicDefence += 20;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 2)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.MagicDefence += 10;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    break;
+                case Origin.Thief:
+                    if (appliedOrigin.Value >= 4)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.origin == Origin.Thief)
+                            {
+                                character.ability.Attack = (int)(character.ability.Attack * 1.85);
+
+                                if (!IsSubCharacter && isChangedOrigin)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 2)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.origin == Origin.Thief)
+                            {
+                                character.ability.Attack = (int)(character.ability.Attack * 1.4);
+
+                                if (!IsSubCharacter && isChangedOrigin)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
+                        }
+                    }
+                    break;
+                case Origin.Warrior:
+                    if (appliedOrigin.Value >= 4)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.Defence += 20;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 2)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.Defence += 10;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    break;
+                case Origin.Wizard:
+                    if (appliedOrigin.Value >= 6)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.MagicalAttack += 80;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 4)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.MagicalAttack += 45;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    else if (appliedOrigin.Value >= 2)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            character.ability.MagicalAttack += 20;
+
+                            if (!IsSubCharacter && isChangedOrigin)
+                                PlayApplySynergyParticle(character.transform);
+                        }
+                    }
+                    break;
+                default:
+                    Debug.Log("Error UpdateApplyOriginSynergy");
+                    return;
+            }
+        }
+
         foreach (var appliedTribe in appliedTribes)
         {
+            bool isChangedTribe = false;
+            if (currentAddTribe == appliedTribe.Key)
+                isChangedTribe = true;
+
             switch (appliedTribe.Key)
             {
                 case Tribe.None:
                     Debug.Log("Error UpdateApplyTribeSynergy");
                     return;
                 case Tribe.Beast:
-                    if(appliedTribe.Value >= 3)
+                    if (appliedTribe.Value >= 3)
                     {
                         foreach (var character in characterInFieldList)
                         {
-                            if(character.tribe == Tribe.Beast)
+                            if (character.tribe == Tribe.Beast)
                             {
                                 character.ability.AttackSpeed += 70;
+
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
                             }
                         }
                     }
-                    else if(appliedTribe.Value >= 1)
+                    else if (appliedTribe.Value >= 1)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             if (character.tribe == Tribe.Beast)
                             {
                                 character.ability.AttackSpeed += 30;
+
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
                             }
                         }
                     }
@@ -396,12 +432,24 @@ public class SynergySystem
                             enemy.ability.MagicDefence = math.clamp(enemy.ability.MagicDefence - 16, 0, enemy.ability.MagicDefence);
                         }
                     }
-                    else if(appliedTribe.Value >= 1)
+                    else if (appliedTribe.Value >= 1)
                     {
                         foreach (var enemy in EnemyList)
                         {
                             enemy.ability.Defence = math.clamp(enemy.ability.Defence - 6, 0, enemy.ability.Defence);
                             enemy.ability.MagicDefence = math.clamp(enemy.ability.MagicDefence - 6, 0, enemy.ability.MagicDefence);
+                        }
+                    }
+
+                    if(appliedTribe.Value >= 1)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.tribe == Tribe.Devil)
+                            {
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
                         }
                     }
                     break;
@@ -411,6 +459,9 @@ public class SynergySystem
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.AllAbilityUpByPercentage(25);
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     else if (appliedTribe.Value == 1)
@@ -420,6 +471,9 @@ public class SynergySystem
                             if (character.tribe == Tribe.Dragon)
                             {
                                 character.ability.AllAbilityUpByPercentage(25);
+
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
                             }
                         }
                     }
@@ -430,6 +484,9 @@ public class SynergySystem
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Accuracy += 40;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     else if (appliedTribe.Value >= 2)
@@ -437,6 +494,9 @@ public class SynergySystem
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Accuracy += 20;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     break;
@@ -448,6 +508,9 @@ public class SynergySystem
                             if (character.tribe == Tribe.Elf)
                             {
                                 character.ability.Evasion += 40;
+
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
                             }
                         }
                     }
@@ -458,6 +521,9 @@ public class SynergySystem
                             if (character.tribe == Tribe.Elf)
                             {
                                 character.ability.Evasion += 20;
+
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
                             }
                         }
                     }
@@ -469,6 +535,9 @@ public class SynergySystem
                         {
                             character.ability.Attack += 25;
                             character.ability.MagicalAttack += 25;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     else if (appliedTribe.Value >= 3)
@@ -477,6 +546,9 @@ public class SynergySystem
                         {
                             character.ability.Attack += 10;
                             character.ability.MagicalAttack += 10;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     else if (appliedTribe.Value >= 2)
@@ -485,6 +557,9 @@ public class SynergySystem
                         {
                             character.ability.Attack += 5;
                             character.ability.MagicalAttack += 5;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     break;
@@ -494,6 +569,9 @@ public class SynergySystem
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Health += 450;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     else if (appliedTribe.Value >= 2)
@@ -501,6 +579,9 @@ public class SynergySystem
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Health += 250;
+
+                            if (!IsSubCharacter && isChangedTribe)
+                                PlayApplySynergyParticle(character.transform);
                         }
                     }
                     break;
@@ -529,6 +610,18 @@ public class SynergySystem
                             enemy.ability.MagicalAttack = math.clamp(enemy.ability.MagicalAttack - 6, 0, enemy.ability.MagicalAttack);
                         }
                     }
+
+                    if (appliedTribe.Value >= 1)
+                    {
+                        foreach (var character in characterInFieldList)
+                        {
+                            if (character.tribe == Tribe.Undead)
+                            {
+                                if (!IsSubCharacter && isChangedTribe)
+                                    PlayApplySynergyParticle(character.transform);
+                            }
+                        }
+                    }
                     break;
                 default:
                     Debug.Log("Error UpdateApplyTribeSynergy");
@@ -537,121 +630,9 @@ public class SynergySystem
         }
     }
 
-    public bool IsOriginChanged(Origin origin)
+    public void PlayApplySynergyParticle(Transform transform)
     {
-        if(!appliedOrigins.ContainsKey(origin))
-        {
-            return true;
-        }
-
-        switch (origin)
-        {
-            case Origin.None:
-                Debug.Log("Error IsOriginChanged");
-                break;
-            case Origin.Archer:
-                if (appliedOrigins[origin] == 1 || appliedOrigins[origin] == 3 || appliedOrigins[origin] == 5)
-                {
-                    return true;
-                }
-                break;
-            case Origin.Paladin:
-                if (appliedOrigins[origin] == 2 || appliedOrigins[origin] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Origin.Thief:
-                if (appliedOrigins[origin] == 2 || appliedOrigins[origin] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Origin.Warrior:
-                if (appliedOrigins[origin] == 2 || appliedOrigins[origin] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Origin.Wizard:
-                if (appliedOrigins[origin] == 2 || appliedOrigins[origin] == 4 || appliedOrigins[origin] == 6)
-                {
-                    return true;
-                }
-                break;
-            default:
-                Debug.Log("Error IsOriginChanged");
-                break;
-        }
-
-        return false;
-    }
-
-    public bool IsTribeChanged(Tribe tribe)
-    {
-        if(!appliedTribes.ContainsKey(tribe))
-        {
-            return true;
-        }
-
-        switch (tribe)
-        {
-            case Tribe.None:
-                Debug.Log("Error IsTribeChanged");
-                break;
-            case Tribe.Beast:
-                if(appliedTribes[tribe] == 1 || appliedTribes[tribe] == 3)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Devil:
-                if (appliedTribes[tribe] == 1 || appliedTribes[tribe] == 2 || appliedTribes[tribe] == 3)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Dragon:
-                if (appliedTribes[tribe] == 1 || appliedTribes[tribe] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Elemental:
-                if (appliedTribes[tribe] == 2 || appliedTribes[tribe] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Elf:
-                if (appliedTribes[tribe] == 2 || appliedTribes[tribe] == 4)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Human:
-                if (appliedTribes[tribe] == 2 || appliedTribes[tribe] == 3 || appliedTribes[tribe] == 5)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Machine:
-                if (appliedTribes[tribe] == 2 || appliedTribes[tribe] == 3)
-                {
-                    return true;
-                }
-                break;
-            case Tribe.Undead:
-                if (appliedTribes[tribe] == 1 || appliedTribes[tribe] == 2 || appliedTribes[tribe] == 3)
-                {
-                    return true;
-                }
-                break;
-            default:
-                Debug.Log("Error IsTribeChanged");
-                break;
-        }
-
-        return false;
+        var particle = Instantiate(GameManager.instance.particleService.SynergyParticle, transform);
+        particle.transform.Translate(new Vector3(0.0f, 0.0f, -1.0f));
     }
 }

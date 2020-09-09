@@ -310,6 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeParticle: {fileID: 19800008, guid: e3d819d8722fa1f47a3f68574b56dfb3, type: 3}
   hitParticle: {fileID: 19800000, guid: f06e78284f831ae469c74624ab5d513b, type: 3}
+  SynergyParticle: {fileID: 19800000, guid: 77ec3c4e07a36814fb3169ecef41b50a, type: 3}
 --- !u!1 &138270119
 GameObject:
   m_ObjectHideFlags: 0

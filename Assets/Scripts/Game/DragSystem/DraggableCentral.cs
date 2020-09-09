@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,8 @@ public class DraggableCentral : MonoBehaviour
     private CharacterInfo selledCharacterInfo;
     private bool isSelling;
     private bool isSwapped;
+    private bool isMoveFromBattleArea;
+    private bool isMovetoBattleArea;
 
     [SerializeField] private Camera cam;
     [SerializeField] private UIInGameCharacterInfo uiInGameCharacterInfo = null;
@@ -29,6 +32,7 @@ public class DraggableCentral : MonoBehaviour
 
         isSelling = false;
         isSwapped = false;
+        isMoveFromBattleArea = false;
         swappedCharacter = null;
         originalSize = 0.0f;
     }
@@ -104,6 +108,11 @@ public class DraggableCentral : MonoBehaviour
 
     private void BeginDrag(UICharacter uiCharacter)
     {
+        if (TransformService.ContainPos(uiCharacterArea.transform as RectTransform, uiCharacter.transform.position))
+            isMoveFromBattleArea = true;
+        else if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
+            isMoveFromBattleArea = false;
+
         parentWhenBeginDrag = uiCharacter.GetComponentInParent<UISlot>();
         SwapCharacters(invisibleCharacter, uiCharacter);
         uiCharacter.SetDefaultImage();
@@ -193,6 +202,11 @@ public class DraggableCentral : MonoBehaviour
 
     private void EndDrag(UICharacter uiCharacter)
     {
+        if (TransformService.ContainPos(uiCharacterArea.transform as RectTransform, uiCharacter.transform.position))
+            isMovetoBattleArea = true;
+        else if (TransformService.ContainPos(uiPrepareArea.transform as RectTransform, uiCharacter.transform.position))
+            isMovetoBattleArea = false;
+
         uiInGameCharacterInfo.OnHide();
         uiSellArea.OnHide();
 
@@ -217,8 +231,8 @@ public class DraggableCentral : MonoBehaviour
         }
 
         UpdateCurrentPlacedCharacters();
-        UpdateSynergyService(uiCharacter);
         SwapCharacters(invisibleCharacter, uiCharacter);
+        UpdateSynergyService(uiCharacter);
         SetCharacterImage(uiCharacter);
 
         isSwapped = false;
@@ -230,7 +244,6 @@ public class DraggableCentral : MonoBehaviour
     /// <param name="characterInfo"></param>
     public void CombinationCharacter(CharacterInfo characterInfo)
     {
-
         bool isFirstCharacter = true;
 
         foreach (var arranger in arrangers)
@@ -267,13 +280,13 @@ public class DraggableCentral : MonoBehaviour
     {
         var synergySystem = InGameManager.instance.synergySystem;
 
-        if (IsMoveToSell())
+        if(isSelling && isMoveFromBattleArea)
         {
             synergySystem.SubCharacter(selledCharacterInfo);
             return;
         }
 
-        if (IsNotChanged())
+        if (IsNotChanged() || isSelling) 
             return;
 
         if (IsMoveFromBattleAreaToPrepareArea())
@@ -305,7 +318,7 @@ public class DraggableCentral : MonoBehaviour
     /// </summary>
     public void UpdateCurrentPlacedCharacters()
     {
-        if (IsMoveToSell())
+        if (isSelling && isMoveFromBattleArea)
         {
             uiCharacterArea.SubCurrentPlacedCharacter();
             return;
@@ -349,22 +362,19 @@ public class DraggableCentral : MonoBehaviour
 
     private bool IsMoveFromPrepareAreaToBattleArea()
     {
-        return (invisibleCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null) ? true : false;
+        //return (invisibleCharacter.GetArea<UICharacterArea>() != null && swappedCharacter.GetArea<UIPrepareArea>() != null) ? true : false;
+        return (isMovetoBattleArea && !isMoveFromBattleArea) ? true : false;
     }
 
     private bool IsMoveFromBattleAreaToPrepareArea()
     {
-        return (invisibleCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null) ? true : false;
+        //return (invisibleCharacter.GetArea<UIPrepareArea>() != null && swappedCharacter.GetArea<UICharacterArea>() != null) ? true : false;
+        return (!isMovetoBattleArea && isMoveFromBattleArea) ? true : false;
     }
 
     private bool IsNotChanged()
     {
         return invisibleCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag ? true : false;
-    }
-
-    private bool IsMoveToSell()
-    {
-        return (invisibleCharacter.GetArea<UICharacterArea>() != null && isSelling) ? true : false;
     }
 
     private bool IsPlaceableSpaceFull()
