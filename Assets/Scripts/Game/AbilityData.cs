@@ -1,17 +1,53 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class AbilityData
+public class AbilityData : IEnumerable
 {
-    public int Attack;
-    public int MagicalAttack;
-    public int Health;
-    public int Defence;
-    public int MagicDefence;
-    public int Shield;
-    public int Accuracy;
-    public int Evasion;
-    public int Critical;
-    public int AttackSpeed;
+    private List<int> abilityList;
+
+    public int Attack { get { return abilityList[0]; } set { abilityList[0] = value; } }
+    public int MagicalAttack { get { return abilityList[1]; } set { abilityList[1] = value; } }
+    public int Health { get { return abilityList[2]; } set { abilityList[2] = value; } }
+    public int Defence { get { return abilityList[3]; } set { abilityList[3] = value; } }
+    public int MagicDefence { get { return abilityList[4]; } set { abilityList[4] = value; } }
+    public int Shield { get { return abilityList[5]; } set { abilityList[5] = value; } }
+    public int Accuracy { get { return abilityList[6]; } set { abilityList[6] = value; } }
+    public int Evasion { get { return abilityList[7]; } set { abilityList[7] = value; } }
+    public int Critical { get { return abilityList[8]; } set { abilityList[8] = value; } }
+    public int AttackSpeed { get { return abilityList[9]; } set { abilityList[9] = value; } }
+
+    public AbilityData()
+    {
+        abilityList = new List<int>(new int[10]);
+    }
+
+    public IEnumerator GetEnumerator()
+    {
+        return abilityList.GetEnumerator();
+    }
+
+    public int this[int index]
+    {
+        get
+        {
+            if (index < 0 || index >= abilityList.Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            else
+                return abilityList[index];
+        }
+        set
+        {
+            if (index < 0 || index >= abilityList.Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            else
+                abilityList[index] = value;
+        }
+    }
 
     public static AbilityData operator +(AbilityData ability1, AbilityData ability2)
     {
@@ -30,9 +66,9 @@ public class AbilityData
         return abilityData;
     }
 
-    public List<long> GetAbilityDataList()
+    public List<int> GetAbilityDataList()
     {
-        List<long> abilityDataList = new List<long>();
+        List<int> abilityDataList = new List<int>();
 
         abilityDataList.Add(Attack);
         abilityDataList.Add(MagicalAttack);

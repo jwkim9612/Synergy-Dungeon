@@ -278,6 +278,8 @@ public class DraggableCentral : MonoBehaviour
 
         if (IsMoveFromBattleAreaToPrepareArea())
         {
+            uiCharacter.character.ResetAbility();
+
             if (IsReplaceWithEmptySpace())
                 synergySystem.SubCharacter(uiCharacter.characterInfo);
             else

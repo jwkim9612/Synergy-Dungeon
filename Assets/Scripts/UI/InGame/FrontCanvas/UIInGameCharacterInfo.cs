@@ -11,16 +11,18 @@ public class UIInGameCharacterInfo : MonoBehaviour
     [SerializeField] private Image tribeImage = null;
     [SerializeField] private Image originImage = null;
 
-    [SerializeField] private Text textAttack = null;
-    [SerializeField] private Text textMagicalAttack = null;
-    [SerializeField] private Text textHealth = null;
-    [SerializeField] private Text textDefence = null;
-    [SerializeField] private Text textMagicDefence = null;
-    [SerializeField] private Text textShield = null;
-    [SerializeField] private Text textAccuracy = null;
-    [SerializeField] private Text textEvasion = null;
-    [SerializeField] private Text textCritical = null;
-    [SerializeField] private Text textAttackSpeed = null;
+    [SerializeField] private List<Text> abilityTextList;
+
+    //[SerializeField] private Text textAttack = null;
+    //[SerializeField] private Text textMagicalAttack = null;
+    //[SerializeField] private Text textHealth = null;
+    //[SerializeField] private Text textDefence = null;
+    //[SerializeField] private Text textMagicDefence = null;
+    //[SerializeField] private Text textShield = null;
+    //[SerializeField] private Text textAccuracy = null;
+    //[SerializeField] private Text textEvasion = null;
+    //[SerializeField] private Text textCritical = null;
+    //[SerializeField] private Text textAttackSpeed = null;
 
     [SerializeField] private HorizontalLayoutGroup stars = null;
     private List<Image> starList = null;
@@ -53,23 +55,71 @@ public class UIInGameCharacterInfo : MonoBehaviour
             SetNameText(characterData.Name);
             SetTribeImage(characterData.TribeData.Image);
             SetOriginImage(characterData.OriginData.Image);
-            SetCharacterAbilityText(uiCharacter.character.ability);
             SetStarGrade(uiCharacter.characterInfo.star);
+
+            var characterAbilityDataSheet = DataBase.Instance.characterAbilityDataSheet;
+            if(characterAbilityDataSheet.TryGetCharacterAbilityData(uiCharacter.characterInfo.id, uiCharacter.characterInfo.star, out var abilityData))
+            {
+                AbilityData defaultAbilityData = new AbilityData();
+                defaultAbilityData.SetAbilityData(abilityData);
+
+                SetCharacterAbilityText(defaultAbilityData, uiCharacter.character.ability);
+            }
         }
     }
 
-    private void SetCharacterAbilityText(AbilityData abilityData)
+    private void SetCharacterAbilityText(AbilityData defaultData, AbilityData currentData)
     {
-        textAttack.text = abilityData.Attack.ToString();
-        textMagicalAttack.text = abilityData.MagicalAttack.ToString();
-        textHealth.text = abilityData.Health.ToString();
-        textDefence.text = abilityData.Defence.ToString();
-        textMagicDefence.text = abilityData.MagicDefence.ToString();
-        textShield.text = abilityData.Shield.ToString();
-        textAccuracy.text = abilityData.Accuracy.ToString();
-        textEvasion.text = abilityData.Evasion.ToString();
-        textCritical.text = abilityData.Critical.ToString();
-        textAttackSpeed.text = abilityData.AttackSpeed.ToString();
+        for(int i = 0; i < abilityTextList.Count; ++i)
+        {
+            abilityTextList[i].text = defaultData[i].ToString();
+
+            if (defaultData[i] < currentData[i])
+                abilityTextList[i].text += $" <color=#008000ff>+ {currentData[i] - defaultData[i]}</color>";
+            else if (defaultData[i] > currentData[i])
+                abilityTextList[i].text += $" <color=#ff0000ff>- {defaultData[i] - currentData[i]}</color>";
+        }
+
+        //textAttack.text = defaultData.Attack.ToString();
+        //textMagicalAttack.text = defaultData.MagicalAttack.ToString();
+        //textHealth.text = defaultData.Health.ToString();
+        //textDefence.text = defaultData.Defence.ToString();
+        //textMagicDefence.text = defaultData.MagicDefence.ToString();
+        //textShield.text = defaultData.Shield.ToString();
+        //textAccuracy.text = defaultData.Accuracy.ToString();
+        //textEvasion.text = defaultData.Evasion.ToString();
+        //textCritical.text = defaultData.Critical.ToString();
+        //textAttackSpeed.text = defaultData.AttackSpeed.ToString();
+
+        //if(defaultData.Attack < currentData.Attack)
+        //    textAttack.text += $" + {currentData.Attack - defaultData.Attack}";
+        //else if(defaultData.Attack > currentData.Attack)
+        //    textAttack.text += $" - {defaultData.Attack - currentData.Attack}";
+
+        //if (defaultData.MagicalAttack < currentData.MagicalAttack)
+        //    textMagicalAttack.text += $" + {currentData.MagicalAttack - defaultData.MagicalAttack}";
+        //else if (defaultData.MagicalAttack > currentData.MagicalAttack)
+        //    textMagicalAttack.text += $" - {defaultData.MagicalAttack - currentData.MagicalAttack}";
+
+        //if (defaultData.Health < currentData.Health)
+        //    textHealth.text += $" + {currentData.Health - defaultData.Health}";
+        //else if (defaultData.Health > currentData.Health)
+        //    textHealth.text += $" - {defaultData.Health - currentData.Health}";
+
+        //if (defaultData.Defence < currentData.Defence)
+        //    textDefence.text += $" + {currentData.Defence - defaultData.Defence}";
+        //else if (defaultData.Defence > currentData.Defence)
+        //    textDefence.text += $" - {defaultData.Defence - currentData.Defence}";
+
+        //if (defaultData.MagicDefence < currentData.MagicDefence)
+        //    textMagicDefence.text += $" + {currentData.MagicDefence - defaultData.MagicDefence}";
+        //else if (defaultData.MagicDefence > currentData.MagicDefence)
+        //    textMagicDefence.text += $" - {defaultData.MagicDefence - currentData.MagicDefence}";
+
+        //if (defaultData.Attack < currentData.Attack)
+        //    textShield.text += $" + {currentData.Attack - defaultData.Attack}";
+        //else if (defaultData.Attack > currentData.Attack)
+        //    textShield.text += $" - {defaultData.Attack - currentData.Attack}";
     }
 
     private void SetStarGrade(int star)

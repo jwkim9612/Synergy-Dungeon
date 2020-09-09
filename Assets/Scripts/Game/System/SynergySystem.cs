@@ -254,14 +254,14 @@ public class SynergySystem
                     }
                     break;
                 case Origin.Paladin:
-                    if (appliedOrigin.Value <= 4)
+                    if (appliedOrigin.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.MagicDefence += 20;
                         }
                     }
-                    else if(appliedOrigin.Value <= 2)
+                    else if(appliedOrigin.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -270,7 +270,7 @@ public class SynergySystem
                     }
                     break;
                 case Origin.Thief:
-                    if (appliedOrigin.Value <= 4)
+                    if (appliedOrigin.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -280,7 +280,7 @@ public class SynergySystem
                             }
                         }
                     }
-                    else if (appliedOrigin.Value <= 2)
+                    else if (appliedOrigin.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -292,14 +292,14 @@ public class SynergySystem
                     }
                     break;
                 case Origin.Warrior:
-                    if (appliedOrigin.Value <= 4)
+                    if (appliedOrigin.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Defence += 20;
                         }
                     }
-                    else if (appliedOrigin.Value <= 2)
+                    else if (appliedOrigin.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -308,21 +308,21 @@ public class SynergySystem
                     }
                     break;
                 case Origin.Wizard:
-                    if (appliedOrigin.Value <= 6)
+                    if (appliedOrigin.Value >= 6)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.MagicalAttack += 80;
                         }
                     }
-                    else if (appliedOrigin.Value <= 4)
+                    else if (appliedOrigin.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.MagicalAttack += 45;
                         }
                     }
-                    else if (appliedOrigin.Value <= 2)
+                    else if (appliedOrigin.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -425,14 +425,14 @@ public class SynergySystem
                     }
                     break;
                 case Tribe.Elemental:
-                    if (appliedTribe.Value <= 4)
+                    if (appliedTribe.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Accuracy += 40;
                         }
                     }
-                    else if (appliedTribe.Value <= 2)
+                    else if (appliedTribe.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -441,7 +441,7 @@ public class SynergySystem
                     }
                     break;
                 case Tribe.Elf:
-                    if (appliedTribe.Value <= 4)
+                    if (appliedTribe.Value >= 4)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -451,7 +451,7 @@ public class SynergySystem
                             }
                         }
                     }
-                    else if (appliedTribe.Value <= 2)
+                    else if (appliedTribe.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -463,7 +463,7 @@ public class SynergySystem
                     }
                     break;
                 case Tribe.Human:
-                    if (appliedTribe.Value <= 5)
+                    if (appliedTribe.Value >= 5)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -471,7 +471,7 @@ public class SynergySystem
                             character.ability.MagicalAttack += 25;
                         }
                     }
-                    else if (appliedTribe.Value <= 3)
+                    else if (appliedTribe.Value >= 3)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -479,7 +479,7 @@ public class SynergySystem
                             character.ability.MagicalAttack += 10;
                         }
                     }
-                    else if (appliedTribe.Value <= 3)
+                    else if (appliedTribe.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
@@ -489,14 +489,14 @@ public class SynergySystem
                     }
                     break;
                 case Tribe.Machine:
-                    if (appliedTribe.Value <= 3)
+                    if (appliedTribe.Value >= 3)
                     {
                         foreach (var character in characterInFieldList)
                         {
                             character.ability.Health += 450;
                         }
                     }
-                    else if (appliedTribe.Value <= 2)
+                    else if (appliedTribe.Value >= 2)
                     {
                         foreach (var character in characterInFieldList)
                         {
