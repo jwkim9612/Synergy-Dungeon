@@ -216,22 +216,41 @@ public class DraggableCentral : MonoBehaviour
             uiSellArea.gameObject.GetComponent<Image>().color = Color.white;
         }
 
-        if(!IsNotChanged())
+        //if(!IsNotChanged())
+        //{
+        //    if (IsPlaceableSpaceFull())
+        //    {
+        //        if (IsMoveFromPrepareAreaToEmptyBattleArea())
+        //        {
+        //            SwapCharacters(invisibleCharacter, swappedCharacter);
+        //            SwapCharacters(invisibleCharacter, uiCharacter);
+        //            isSwapped = false;
+        //            return;
+        //        }
+        //    }
+        //}
+
+        //UpdateCurrentPlacedCharacters();
+        //SwapCharacters(invisibleCharacter, uiCharacter);
+        //UpdateSynergyService(uiCharacter);
+        //SetCharacterImage(uiCharacter);
+
+
+        if (IsPlaceableSpaceFull())
         {
-            if (IsPlaceableSpaceFull())
+            if (IsMoveFromPrepareAreaToEmptyBattleArea())
             {
-                if (IsMoveFromPrepareAreaToEmptyBattleArea())
-                {
-                    SwapCharacters(invisibleCharacter, swappedCharacter);
-                    SwapCharacters(invisibleCharacter, uiCharacter);
-                    isSwapped = false;
-                    return;
-                }
+                SwapCharacters(invisibleCharacter, swappedCharacter);
+                SwapCharacters(invisibleCharacter, uiCharacter);
+                isSwapped = false;
+
+                Debug.Log("In!!");
+                return;
             }
         }
 
-        UpdateCurrentPlacedCharacters();
         SwapCharacters(invisibleCharacter, uiCharacter);
+        UpdateCurrentPlacedCharacters(uiCharacter);
         UpdateSynergyService(uiCharacter);
         SetCharacterImage(uiCharacter);
 
@@ -286,7 +305,7 @@ public class DraggableCentral : MonoBehaviour
             return;
         }
 
-        if (IsNotChanged() || isSelling) 
+        if (IsNotChanged(uiCharacter) || isSelling) 
             return;
 
         if (IsMoveFromBattleAreaToPrepareArea())
@@ -316,7 +335,7 @@ public class DraggableCentral : MonoBehaviour
     /// <summary>
     /// 필드에 배치된 캐릭터 수 업데이트.
     /// </summary>
-    public void UpdateCurrentPlacedCharacters()
+    public void UpdateCurrentPlacedCharacters(UICharacter uiCharacter)
     {
         if (isSelling && isMoveFromBattleArea)
         {
@@ -324,7 +343,7 @@ public class DraggableCentral : MonoBehaviour
             return;
         }
 
-        if (IsNotChanged())
+        if (IsNotChanged(uiCharacter))
             return;
 
         if (IsMoveFromBattleAreaToEmptyPrepareArea())
@@ -372,9 +391,10 @@ public class DraggableCentral : MonoBehaviour
         return (!isMovetoBattleArea && isMoveFromBattleArea) ? true : false;
     }
 
-    private bool IsNotChanged()
+    private bool IsNotChanged(UICharacter uiCharacter)
     {
-        return invisibleCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag ? true : false;
+        //return invisibleCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag ? true : false;
+        return uiCharacter.GetComponentInParent<UISlot>() == parentWhenBeginDrag ? true : false;
     }
 
     private bool IsPlaceableSpaceFull()
